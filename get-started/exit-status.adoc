@@ -1,0 +1,639 @@
+---
+permalink: get-started/exit-status.html 
+sidebar: sidebar 
+keywords: exit, status 
+summary: 此表列出可能傳回的結束狀態、以及每個狀態的意義。 
+---
+= 結束狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+此表列出可能傳回的結束狀態、以及每個狀態的意義。
+
+[cols="3*"]
+|===
+| 狀態值 | 錯誤名稱 | 意義 
+
+
+ a| 
+0
+ a| 
+成功
+ a| 
+命令終止時沒有錯誤。
+
+
+
+ a| 
+1.
+ a| 
+無效的使用量
+ a| 
+命令終止時發生錯誤。也會顯示錯誤的相關資訊。
+
+
+
+ a| 
+2.
+ a| 
+指令碼檔案不存在
+ a| 
+指令碼檔案不存在。
+
+
+
+ a| 
+3.
+ a| 
+錯誤_Opening_output_file
+ a| 
+開啟輸出檔案時發生錯誤。
+
+
+
+ a| 
+4.
+ a| 
+no_storage陣列_at位址
+ a| 
+儲存陣列未位於指定的位址。
+
+
+
+ a| 
+5.
+ a| 
+addresss_specy_different_arraes
+ a| 
+位址會指定不同的儲存陣列。
+
+
+
+ a| 
+6.
+ a| 
+no_SANAME_for_host_agent_connect
+ a| 
+所連線的主機代理程式不存在儲存陣列名稱。
+
+
+
+ a| 
+7.
+ a| 
+SANAME_NON_AT_address
+ a| 
+儲存陣列名稱未位於指定的位址。
+
+
+
+ a| 
+8.
+ a| 
+SANAME_NON_UNIQUE
+ a| 
+儲存陣列名稱不唯一。
+
+
+
+ a| 
+9.
+ a| 
+SANAME_ON_IN_config_fil卻 是如此
+ a| 
+儲存陣列名稱不在組態檔中。
+
+
+
+ a| 
+10.
+ a| 
+no_management、class_for_SA
+ a| 
+儲存陣列不存在管理類別。
+
+
+
+ a| 
+11.
+ a| 
+找不到_SA_IN_config_file_found
+ a| 
+在組態檔中找不到儲存陣列。
+
+
+
+ a| 
+12.
+ a| 
+內部錯誤
+ a| 
+發生內部錯誤。此結束狀態表示您沒有權限從命令列執行CLI命令。您必須具有系統管理員權限、才能從命令列執行所有CLI命令。
+
+
+
+ a| 
+13.
+ a| 
+無效的指令碼語法
+ a| 
+找到無效的指令碼語法。
+
+
+
+ a| 
+14
+ a| 
+無法通訊
+ a| 
+控制器無法與儲存陣列通訊。
+
+
+
+ a| 
+15
+ a| 
+Duplice_argument
+ a| 
+輸入重複的引數。
+
+
+
+ a| 
+16
+ a| 
+執行錯誤
+ a| 
+發生執行錯誤。
+
+
+
+ a| 
+17
+ a| 
+no_host_AT_address
+ a| 
+主機未位於指定的位址。
+
+
+
+ a| 
+18
+ a| 
+WWNAM_NO_IN_CONFIG檔案
+ a| 
+WWID不在組態檔中。
+
+
+
+ a| 
+19
+ a| 
+WWNAM_NO_AT_address
+ a| 
+WWID不在該位址。
+
+
+
+ a| 
+20
+ a| 
+未知的IP
+ a| 
+指定了未知的IP位址。
+
+
+
+ a| 
+21
+ a| 
+pm_config_file_corrupted
+ a| 
+事件監視器組態檔已毀損。
+
+
+
+ a| 
+22
+ a| 
+無法_至_通訊_至_下午
+ a| 
+儲存陣列無法與事件監視器通訊。
+
+
+
+ a| 
+23
+ a| 
+NEXIST_ALERT
+ a| 
+控制器無法寫入警示設定。
+
+
+
+ a| 
+24
+ a| 
+錯誤的管理幫手節點
+ a| 
+指定了錯誤的管理器節點。
+
+
+
+ a| 
+25
+ a| 
+CMD_ON_可用
+ a| 
+命令無法使用。
+
+
+
+ a| 
+26
+ a| 
+DEVICE非IN_CONFIG檔案
+ a| 
+裝置不在組態檔中。
+
+
+
+ a| 
+27
+ a| 
+錯誤_正在更新_config_file
+ a| 
+更新組態檔時發生錯誤。
+
+
+
+ a| 
+28.28
+ a| 
+未知的主機錯誤
+ a| 
+發生不明的主機錯誤。
+
+
+
+ a| 
+29
+ a| 
+傳送者_聯絡人_檔案_找不到
+ a| 
+找不到寄件者聯絡資訊檔案。
+
+
+
+ a| 
+30
+ a| 
+read_senter_contact_file_f失敗
+ a| 
+無法讀取寄件者聯絡資訊檔案。
+
+
+
+ a| 
+31
+ a| 
+UserData_file_exists
+ a| 
+存在「userdata.txt"檔案。
+
+
+
+ a| 
+32
+ a| 
+bad電子郵件資訊_ to _include
+ a| 
+電子郵件警示通知中指定的「-I」值無效。
+
+
+
+ a| 
+33
+ a| 
+bad電子郵件頻率
+ a| 
+電子郵件警示通知中指定的「-f」值無效。
+
+
+
+ a| 
+34
+ a| 
+選項_已移除
+ a| 
+不再支援「-r」選項。
+
+
+
+ a| 
+35
+ a| 
+unknown_alert_priority
+ a| 
+指定的警示嚴重性無效。
+
+
+
+ a| 
+36
+ a| 
+密碼_必填
+ a| 
+此作業需要設定管理員或監控密碼。
+
+
+
+ a| 
+37
+ a| 
+無效的監控密碼
+ a| 
+無法完成此作業、因為輸入的監視器密碼無效。
+
+
+
+ a| 
+38
+ a| 
+無效的管理密碼
+ a| 
+無法完成此作業、因為輸入的管理員密碼無效。
+
+
+
+ a| 
+39
+ a| 
+已超過MAX_chars_for_password
+ a| 
+提供的密碼超過字元限制。
+
+
+
+ a| 
+40
+ a| 
+無效的_監 控權杖
+ a| 
+此陣列不支援「-R」監視器。請使用有效的角色、然後重試該作業。
+
+
+
+ a| 
+41.
+ a| 
+ASUP_config_error
+ a| 
+寫入AutoSupport 或讀取不正確的組態檔時發生錯誤。請再次重試此作業。
+
+
+
+ a| 
+42.
+ a| 
+mail_Server_unknown
+ a| 
+主機位址或郵件伺服器位址不正確。
+
+
+
+ a| 
+43.
+ a| 
+ASUP_SMTP_Reply_address_required
+ a| 
+嘗試ASUP組態測試時、未偵測到啟用ASUP的健全陣列。
+
+
+
+ a| 
+44
+ a| 
+未偵測到ASUP_array_detected.
+ a| 
+如果ASUP傳送類型為SMTP,則需要回覆電子郵件要求。
+
+
+
+ a| 
+45
+ a| 
+ASUP_INVALID_MAKER_RELAK_SERVER
+ a| 
+無法驗證ASUP郵件轉送伺服器。
+
+
+
+ a| 
+46
+ a| 
+ASUP_INVALID_USER_EMAIL
+ a| 
+您指定的寄件者電子郵件地址格式無效。
+
+
+
+ a| 
+47
+ a| 
+ASUP_INVALID_PAC_SCRIPT
+ a| 
+Proxy自動組態（PAC）指令碼檔案不是有效的URL。
+
+
+
+ a| 
+48
+ a| 
+ASUP_INVALID_PROxy_server_host_address
+ a| 
+找不到指定的主機位址、或其格式不正確。
+
+
+
+ a| 
+49
+ a| 
+ASUP_INVALID_PROxy_SERVER_port_Number
+ a| 
+您指定的連接埠號碼格式無效。
+
+
+
+ a| 
+50
+ a| 
+ASUP_INVALID_PROID_參 數字
+ a| 
+您指定的使用者名稱或密碼無效。
+
+
+
+ a| 
+51.
+ a| 
+ASUP_INVALID_每日_時間參數
+ a| 
+指定的每日時間參數無效。
+
+
+
+ a| 
+52.
+ a| 
+ASUP_INVALID_HON_AT_INU_US_INUP-參 數字
+ a| 
+輸入的「-DayOfWeek」參數無效。
+
+
+
+ a| 
+53.
+ a| 
+ASUP_INVALID_HUS_Time_參 數字
+ a| 
+每週時間參數無效。
+
+
+
+ a| 
+54
+ a| 
+ASUP_INVALID_schedule_剖析
+ a| 
+無法成功剖析所提供的排程資訊。
+
+
+
+ a| 
+55
+ a| 
+ASUP_INVALID_SA_specified
+ a| 
+提供的儲存陣列說明符無效。
+
+
+
+ a| 
+56
+ a| 
+ASUP_INVALID_INPUT_archive
+ a| 
+輸入的歸檔無效。輸入歸檔參數必須採用'-intutarchive=<n>',其中'-n'是介於0到5之間的整數。
+
+
+
+ a| 
+57
+ a| 
+ASUP_INVALID_output_log
+ a| 
+未指定有效的輸出記錄。
+
+
+
+ a| 
+58
+ a| 
+ASUP_Transmission檔案複製錯誤
+ a| 
+嘗試複製AutoSupport 此資訊傳輸記錄檔時發生錯誤。傳輸記錄不存在、或是嘗試複製其資料時發生IO錯誤。
+
+
+
+ a| 
+59
+ a| 
+ASUP_Duplice_Named_Array
+ a| 
+找到多個名稱相同的儲存陣列。請使用全球名稱參數「-w <WWID>」重試命令。
+
+
+
+ a| 
+60
+ a| 
+ASUP_NO指定陣列找到
+ a| 
+指定的儲存陣列搭配-n <storage system-name>參數不存在、或不支援此命令。
+
+
+
+ a| 
+61.
+ a| 
+ASUP_NO指定_WWID_found
+ a| 
+指定的儲存陣列搭配「-w <WWID>'參數不存在或不支援此命令。
+
+
+
+ a| 
+62.
+ a| 
+ASUP_已 篩選的傳輸記錄錯誤
+ a| 
+嘗試取得篩選後的傳輸記錄時發生不明錯誤。
+
+
+
+ a| 
+63.
+ a| 
+ASUP_Transmission、archive、do_not、exist
+ a| 
+使用`-intutarchive=<n>`s參數指定的「資料輸入歸檔」傳輸記錄不存在。AutoSupport
+
+
+
+ a| 
+64
+ a| 
+無有效的REST用戶端探索
+ a| 
+無法透過https與儲存陣列通訊。
+
+
+
+ a| 
+65
+ a| 
+無效的CLI版本
+ a| 
+用戶端CLI版本與儲存陣列上執行的CLI版本不相容。
+
+
+
+ a| 
+66
+ a| 
+無效的使用者名稱或密碼
+ a| 
+輸入的使用者名稱或密碼無效。
+
+
+
+ a| 
+67
+ a| 
+不信任的連線
+ a| 
+無法建立與儲存陣列的安全連線。
+
+
+
+ a| 
+68
+ a| 
+無效的密碼檔案
+ a| 
+找不到密碼檔案或無法讀取。
+
+|===

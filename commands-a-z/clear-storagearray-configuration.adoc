@@ -1,0 +1,143 @@
+---
+permalink: commands-a-z/clear-storagearray-configuration.html 
+sidebar: sidebar 
+keywords: clear, storage array, configuration 
+summary: 命令ClearstorageArray會清除整個儲存陣列組態或儲存陣列組態的一部分、或僅清除Volume群組和Volume組態。 
+---
+= 清除儲存陣列組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「ClearstorageArray configuration」命令會清除整個儲存陣列組態或儲存陣列組態的一部分、或僅清除Volume群組和Volume組態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+使用此命令執行下列其中一項作業：
+
+* 清除整個儲存陣列組態、並將其恢復至初始安裝狀態。
+* 清除組態、安全資訊和識別資訊除外。
+* 僅清除Volume群組組組態資訊和Volume組態資訊。
+
+
+[NOTE]
+====
+*可能會損壞儲存陣列組態*-只要執行此命令、就會刪除現有的儲存陣列組態。
+
+====
+
+
+== 語法
+
+[listing]
+----
+clear storageArray configuration (all | volumeGroups)
+----
+[listing]
+----
+clear storageArray configuration factoryReset
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+無
+ a| 
+如果您未輸入參數、此命令會移除儲存陣列的所有組態資訊、但與安全性和識別相關的資訊除外。
+
+
+
+ a| 
+全部
+ a| 
+移除儲存陣列整個組態的設定、包括安全性資訊和識別資訊。移除所有組態資訊後、儲存陣列將恢復至初始狀態。
+
+
+
+ a| 
+「Volume Groups」
+ a| 
+移除Volume組態和Volume群組組組態的設定。其餘的組態保持不變。
+
+
+
+ a| 
+「Facory重設」
+ a| 
+此設定會移除儲存陣列的整個組態（與「ALL」參數相同）、但也會重設網路組態和儲存在控制器中的任何密碼資訊。
+
+
+
+ a| 
+"upportReset"
+ a| 
+[NOTE]
+====
+此命令僅供技術支援使用。
+
+====
+此設定的行為類似於「factoryReset'參數、但也會清除所有套件金鑰。
+
+|===
+
+
+== 附註
+
+使用此命令、您可以以多種不同方式清除儲存陣列的組態。當您清除磁碟區群組的儲存陣列時、恢復模式會自動啟動。在恢復模式下、會保留內建（快取）備份（如果平台上有）。當儲存陣列處於恢復模式時、您可以選擇性地從主機型備份檔案或內建（快取）備份之一還原儲存陣列組態。
+
+此命令也會重設儲存陣列識別碼。任何啟用金鑰檔案的進階功能都會失效、而且必須建立並套用新的進階功能金鑰。聯絡技術支援。
+
+當您執行此命令時、儲存陣列將無回應、而且所有指令碼處理都會取消。您必須移除並重新新增儲存陣列、才能恢復與主機的通訊。若要移除無回應的儲存陣列、請使用以下SMcli包裝命令：
+
+[listing, subs="+macros"]
+----
+SMcli -X -n pass:quotes[_storageArrayName_]
+----
+「X」是唯一的SMcli終端機、必須為大寫。
+
+若要重新新增儲存陣列、請使用以下SMcli包裝命令：
+
+[listing, subs="+macros"]
+----
+SMcli -A -n pass:quotes[_storageArrayName_]
+----
+「A」是唯一的SMcli終端機、必須為大寫。
+
+
+
+== 最低韌體層級
+
+7.10新增下列參數：
+
+* 全部
+* 「Volume Groups」
+
+
+7.83新增恢復模式功能。
+
+11.41新增下列參數：
+
+* 「Facory重設」
+* "upportReset"
+

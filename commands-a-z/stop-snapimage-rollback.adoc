@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/stop-snapimage-rollback.html 
+sidebar: sidebar 
+keywords: stop, snapshot, image, rollback 
+summary: 停止SnapImage復原命令會停止由start SnapImage復原命令所啟動的快照映像復原作業。 
+---
+= 停止Snapshot映像復原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「停止SnapImage復原」命令會停止由「開始SnapImage復原」命令所啟動的快照映像復原作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+取消快照映像復原作業會使基礎磁碟區處於無法確定的狀態、且資料可能無效或不一致。相關的快照映像磁碟區會停用且無法使用。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop snapImage [_snapCGID:imageID_] rollback]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napImage」
+ a| 
+要停止復原作業的快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 快照群組的名稱
+* 快照群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、即快照群組中快照的順序編號。
+* 「最新」-如果您想要顯示快照群組中建立的最新快照映像、請使用此選項。
+* "OLDEST"（最舊）-如果您想要顯示快照群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱以雙引號（""）括在方括弧（[]）內。
+
+|===
+
+
+== 附註
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 快照群組的識別碼
+* 快照映像的識別碼
+
+
+例如、如果您想要停止快照映像12345在名稱為snapGroup1的快照群組中的復原作業、請使用下列命令：
+
+[listing]
+----
+stop snapImage ["snapGroup1:12345"] rollback;
+----
+若要停止快照群組中名稱為snapGroup1的最新快照映像的復原作業、請使用下列命令：
+
+[listing]
+----
+stop snapImage ["snapGroup1:newest"] rollback;
+----
+
+
+== 最低韌體層級
+
+7.83

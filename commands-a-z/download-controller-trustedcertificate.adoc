@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/download-controller-trustedcertificate.html 
+sidebar: sidebar 
+keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
+summary: 下載控制器信任憑證命令會在控制器的Web伺服器上安裝信任的CA憑證、以驗證LDAP伺服器簽署的憑證。 
+---
+= 安裝信任的CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「下載控制器信任憑證」命令會在控制器的Web伺服器上安裝信任的CA憑證、以驗證LDAP伺服器簽署的憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+只有在簽署憑證的CA不太知名或不常受信任時、才執行此動作。此命令會在兩個控制器上安裝CA憑證。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[download storageArray trustedCertificate [alias=_string_]] pass:quotes[file="_filename_"]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+別名
+ a| 
+可讓您指定別名來代表信任的CA憑證。此別名可用來查詢信任的CA憑證相關資訊、或是刪除這些憑證。別名與信任的憑證相關聯、且必須是唯一的。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定包含受信任CA憑證的檔案。可接受的副檔名為.pem、.cer、.crt和.der。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "download storageArray trustedCertificate alias="myAlias"
+   file="C:\rootCA1.cer";"
+SMcli -n Array1 -c "download storageArray trustedCertificate
+   file="C:\rootCA1.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

@@ -1,0 +1,148 @@
+---
+permalink: commands-a-z/start-controller.html 
+sidebar: sidebar 
+keywords: start, controller, trace 
+summary: start控制器命令會啟動一項作業、將偵錯追蹤資訊儲存至壓縮檔。 
+---
+= 啟動控制器追蹤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「開始控制器」命令會啟動一項作業、將偵錯追蹤資訊儲存至壓縮檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+技術支援人員可使用偵錯追蹤資訊來協助分析儲存陣列的執行狀況。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start controller [(a
+ | b
+ | both)] trace
+dataType=(current | flushed | currentFlushed | all)
+forceFlush=(TRUE | FALSE)
+pass:quotes[file="_fileName_]"
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+您要收集追蹤偵錯資訊的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器您也可以輸入「兩者」、同時收集兩個控制器的偵錯。將控制器識別碼括在方括弧（[]）內。如果未指定控制器、儲存管理軟體會傳回語法錯誤。
+
+
+
+ a| 
+「Data類型」
+ a| 
+您要收集的資料類型：
+
+* 「目前」-擷取目前的DQ追蹤資料
+* 「已排清」-擷取所有已排清的DQ追蹤
+* "currentFlushed（目前的Flushed）"-擷取目前的DQ追蹤和排清的DQ追蹤
+* 「All」（全部）-擷取目前的DQ追蹤、排清的DQ追蹤及所有平台DQ追蹤
+
+
+[NOTE]
+====
+如果出現「data類型=已排清」和「forceFlush=True」、則會傳回錯誤訊息、指出只有作用中的追蹤資料可在擷取時排清到緩衝區。
+
+====
+
+
+ a| 
+《* FORCEFLUS*》
+ a| 
+當擷取由「data Type」參數定義的DQ追蹤資訊時、將目前緩衝區中的DQ資訊移至已清空緩衝區的設定。若要啟用強制清除、請將此參數設為「true」。若要停用強制清除、請將此參數設為「假」。
+
+[NOTE]
+====
+如果出現「data類型=已排清」和「forceFlush=True」、則會傳回錯誤訊息、指出只有作用中的追蹤資料可在擷取時排清到緩衝區。
+
+====
+
+
+ a| 
+檔案
+ a| 
+您要儲存DQ追蹤資訊的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。
+
+如需命名檔案的相關資訊、請參閱「附註」一節。
+
+|===
+
+
+== 附註
+
+DQ追蹤資訊會寫入副檔名為.Zip的壓縮檔案。檔案名稱是使用者定義的檔案名稱與儲存陣列識別碼（據說）的組合。檔案名稱中也會新增「DQ」常量。完整的檔案名稱格式如下：
+
+[listing]
+----
+user_defined_file_name-SAID-dq.zip
+----
+壓縮檔案包含此表格中所列的資訊。
+
+[cols="3*"]
+|===
+| 檔案名稱 | 目錄 | 註解 
+
+
+ a| 
+「user_bided_file_name-sid-A.dq'」
+ a| 
+《輔助/時間戳記/》
+ a| 
+從控制器A擷取的DQ追蹤資料
+
+
+
+ a| 
+「user_bided_file_name-se-b.dQ」
+ a| 
+《輔助/時間戳記/》
+ a| 
+從控制器B擷取的DQ追蹤資料
+
+
+
+ a| 
+「user_bed_file_name-side-scale_description.xm」
+ a| 
+《輔助/時間戳記/》
+ a| 
+XML格式的描述檔、說明未來資料採礦的DQ檔案屬性。
+
+|===
+
+
+== 最低韌體層級
+
+7.75

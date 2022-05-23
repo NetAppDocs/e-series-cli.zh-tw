@@ -1,0 +1,40 @@
+---
+permalink: commands-a-z/clear-alldrivechannels-stats.html 
+sidebar: sidebar 
+keywords: clear, drive channel, statistics 
+summary: 清除allDriveChannel stats命令會重設所有磁碟機通道的統計資料。 
+---
+= 清除磁碟機通道統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「ClearallDriveChannel stats」命令會重設所有磁碟機通道的統計資料。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+clear allDriveChannels stats
+----
+
+
+== 參數
+
+無。

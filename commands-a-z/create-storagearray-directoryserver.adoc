@@ -1,0 +1,138 @@
+---
+permalink: commands-a-z/create-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: create, storage, array, directory server 
+summary: create storageArray directoryServer命令可讓您新增目錄伺服器、用於驗證及授權使用者。 
+---
+= 建立儲存陣列目錄伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create storageArray directoryServer」命令可讓您新增目錄伺服器、用於驗證及授權使用者。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+create storageArray directoryServer
+       [domainId=pass:quotes[_"domainId"_
+       domainNames=(_"domainName1"..."domainNameN"_)
+       serverUrl="_serverUrl"_]
+       [bindAccount=pass:quotes[_"username_" bindPassword="_password_"]]
+       searchBaseDN=pass:quotes[_"distinguishedName"_
+       usernameAttribute="_attributeName_"
+       groupAttributes=("_attrName1"..."attrNameN_")]
+        [skipConfigurationTest={true | false}]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"DomainId"
+ a| 
+可讓您為此網域指定唯一ID。如果未指定、則會產生唯一的GUID。
+
+
+
+ a| 
+《DomainNames》
+ a| 
+可讓您為目錄伺服器指定一或多個有效的網域名稱。如果輸入多個名稱、請以空格分隔值。
+
+
+
+ a| 
+《ErverUrl》
+ a| 
+可讓您指定URL、以LDAP[s]//HOSTADDRESS:port的形式存取LDAP伺服器。如果使用LDAPS傳輸協定、請確定使用憑證命令匯入用於驗證目錄伺服器簽署憑證的根/中繼憑證。
+
+
+
+ a| 
+「綁定帳戶」
+ a| 
+可讓您指定要用作繫結帳戶的使用者名稱或連結ID。
+
+
+
+ a| 
+「綁定密碼」
+ a| 
+可讓您指定要用作繫結密碼的密碼。
+
+
+
+ a| 
+"earchBaseDN"
+ a| 
+可讓您指定搜尋基礎辨別名稱、以搜尋LDAP使用者物件來判斷群組成員資格。
+
+
+
+ a| 
+"usernamnameAttributes"
+ a| 
+可讓您指定用於搜尋使用者物件以決定群組成員資格的屬性。如果指定、字串必須包含變數'+{uid}+'、該變數將被登入時使用的使用者名稱取代。範例：「+sAMAccountName={uid}+'
+
+
+
+ a| 
+《群組屬性》
+ a| 
+可讓您設定一或多個群組屬性、以用於尋找群組辨別名稱。辨別名稱是用來判斷角色對應的群組成員資格。
+
+[NOTE]
+====
+如果輸入多個群組、請以空格分隔值。
+
+====
+[NOTE]
+====
+使用此參數將清除現有群組。
+
+====
+
+
+ a| 
+「kipConfiguration Test」
+ a| 
+可讓您在儲存組態之前跳過組態測試。預設值為「假」。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+SMcli -n Array1 -c "create storageArray directoryServer
+domainNames=("company.com") serverUrl="ldap://hqldap.company.com:389"
+bindAccount="dummyBindDN" bindPassword="dummyPassword"
+searchBaseDN="OU=_Users,DC=hq, DC=company,DC=com"
+usernameAttributes="sAMAccountName={uid}" groupAttributes="memberOf";"
+
+SMcli completed successfully.
+----

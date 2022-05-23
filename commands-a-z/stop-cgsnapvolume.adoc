@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/stop-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: stop, consistency, group, snapshot, volume 
+summary: stop cgrSnapVolume命令會停止寫入時複製作業、以建立一致性群組快照磁碟區。 
+---
+= 停止一致性群組快照磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「shtop cSnapVolume」命令會停止寫入時複製作業、以建立一致性群組快照磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+若要重新啟動寫入時複製作業、請使用「推入cgrSnapVolume」命令。
+
+[NOTE]
+====
+此命令不會刪除一致性群組快照磁碟區。若要刪除一致性群組快照磁碟區、請使用「刪除cgrSnapVolume」命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop cgSnapVolume [_snapVolumeName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「cgrSnapVolume」
+ a| 
+要停止建立的一致性群組快照磁碟區名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

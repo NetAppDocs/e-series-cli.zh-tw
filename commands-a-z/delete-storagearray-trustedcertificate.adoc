@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/delete-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: delete, storage, array, trusted, certificate, command, remove, specified, installed, web, servers 
+summary: DELETE storageArray trustedCertificate命令會從陣列的Web伺服器移除指定的使用者安裝CA憑證。 
+---
+= 移除已安裝的信任CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除storageArray trustedCertificate」命令會從陣列的Web伺服器移除指定的使用者安裝CA憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[delete storageArray trustedCertificate [(allUserInstalled |
+aliases=("_alias1_" ... "_aliasN_]"))]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"allUserInstalled"
+ a| 
+可讓您指定移除所有使用者安裝的憑證。
+
+
+
+ a| 
+別名
+ a| 
+可讓您使用別名指定一或多個要刪除的CA憑證、或指定「全部」。別名可以來自任何控制器。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate allUserInstalled;"
+
+SMcli -n Array1 -c "delete storageArray trustedCertificate
+   aliases=("19527b38-8d26-44e5-8c7f-5bf2ca9db7cf" "04bf744c-413a-49f1-9666-88d74189591d");"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

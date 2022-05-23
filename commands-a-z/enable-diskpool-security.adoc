@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/enable-diskpool-security.html 
+sidebar: sidebar 
+keywords: enable, diskpool, security, command, convert, non secure, diskpool, support, arrays, role, context 
+summary: enable diskPool安全性命令會將非安全的磁碟集區轉換成安全的磁碟集區。 
+---
+= 啟用磁碟集區安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「enable diskPool Security」命令可將非安全的磁碟集區轉換成安全的磁碟集區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+組成磁碟集區的所有磁碟機都必須具備安全功能。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable diskPool [_diskPoolName_]] security
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DiskPool》
+ a| 
+您要置於「啟用安全性」狀態的磁碟集區名稱。將磁碟集區識別碼括在方括弧（[]）內。
+
+|===
+
+
+== 附註
+
+每個磁碟集區名稱都必須是唯一的。您可以使用任何字母數字字元、底線（_）、連字號（-）和井號（#）的組合作為使用者標籤。使用者標籤最多可有30個字元。
+
+
+
+== 最低韌體層級
+
+7.83

@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/suspend-ssdcache.html 
+sidebar: sidebar 
+keywords: suspend, ssd cache 
+summary: suspend ssdCache命令會暫時停止快取使用SSD快取的所有磁碟區。 
+---
+= 暫停SSD快取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用SSD快取的所有磁碟區、可使用「定存ssd快取」命令暫時停止快取。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 背景
+
+快取停止時、會從基礎磁碟區（而非SSD快取）來處理主機讀取。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[suspend ssdCache [_ssdCacheName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+SdCache
+ a| 
+您要暫停的SSD快取名稱。將SSD快取名稱括在方括弧（[]）內。如果SSD快取名稱包含特殊字元或數字、您必須在方括弧內以雙引號（""）括住SSD快取名稱。
+
+|===
+
+
+== 附註
+
+若要重新啟動快取、請使用「resume ssdCache」命令。
+
+
+
+== 最低韌體層級
+
+7.84

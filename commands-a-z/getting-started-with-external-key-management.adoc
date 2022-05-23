@@ -1,0 +1,43 @@
+---
+permalink: commands-a-z/getting-started-with-external-key-management.html 
+sidebar: sidebar 
+keywords: security, key, string, characters, shared, secure, drives, controllers, storage, array, external, management, maintain, server 
+summary: 安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用外部金鑰管理時、您可以在金鑰管理伺服器上建立及維護安全金鑰 
+---
+= 外部金鑰管理入門
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用外部金鑰管理時、您可以在金鑰管理伺服器上建立及維護安全金鑰
+
+如SANtricity 需使用外部金鑰管理伺服器和安全金鑰的概念資訊、請參閱《支援系統管理員》線上說明。
+
+以下是實作外部安全金鑰的基本工作流程：
+
+. *產生憑證簽署要求*
+. *從KMIP伺服器取得用戶端和伺服器憑證*
+. *安裝用戶端憑證*
+. *設定KMIP伺服器的IP位址和連接埠號碼*
+. *測試與KMIP伺服器的通訊*
+. *建立儲存陣列安全金鑰*
+. *驗證安全金鑰*
+
+
+
+
+== 工作流程步驟
+
+SANtricity11.40版本的新安全功能包括憑證管理和外部金鑰管理。若要開始使用、請使用下列基本步驟：
+
+. 使用「儲存陣列keyManagementClientCSR」命令產生憑證簽署要求。請參閱 xref:save-storagearray-keymanagementclientcsr.adoc[產生金鑰管理憑證簽署要求]。
+. 從KMIP伺服器要求用戶端和伺服器憑證。
+. 使用「download storageArray keyManagementCertificate」命令安裝用戶端憑證、並將「certicateType」參數設為「client」。請參閱 xref:download-storagearray-keymanagementcertificate.adoc[安裝儲存陣列外部金鑰管理憑證]。
+. 使用「download storageArray keyManagementCertificate」命令安裝伺服器憑證、並將「certicateType」參數設為「伺服器」。請參閱 xref:download-storagearray-keymanagementcertificate.adoc[安裝儲存陣列外部金鑰管理憑證]。
+. 使用「set storageArray externalKeyManagement」命令、設定金鑰管理伺服器的IP位址和連接埠號碼。請參閱 xref:set-storagearray-externalkeymanagement.adoc[設定外部金鑰管理設定]。
+. 使用「Start storageArray externalKeyManagement test」命令測試與外部金鑰管理伺服器的通訊。請參閱 xref:start-storagearray-externalkeymanagement-test.adoc[測試外部金鑰管理通訊]。
+. 使用「create storageArray SECURITY Key」命令建立安全金鑰。請參閱 xref:create-storagearray-securitykey.adoc[建立安全金鑰]。
+. 使用「validate storageArray securityKey」命令驗證安全金鑰。請參閱 xref:validate-storagearray-securitykey.adoc[驗證內部或外部安全金鑰]。
+

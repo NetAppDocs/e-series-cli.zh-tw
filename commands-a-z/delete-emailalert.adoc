@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/delete-emailalert.html 
+sidebar: sidebar 
+keywords: delete, email, alert, recipient 
+summary: 刪除emailAlert命令會從電子郵件警示組態中刪除收件者電子郵件地址。 
+---
+= 刪除電子郵件警示收件者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除電子郵件警示」命令會從電子郵件警示組態中刪除收件者電子郵件地址。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+delete emailAlert
+       (allEmailRecipients |
+        emailRecipients pass:quotes[[_emailAddress1 ... emailAddressN_]])
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allEmailRecipients》
+ a| 
+可讓您刪除所有電子郵件收件者。
+
+
+
+ a| 
+「電子郵件收件者」
+ a| 
+可讓您刪除收件者地址。將電子郵件地址括在方括弧（[]）內。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete emailAlert allEmailRecipients;"
+
+SMcli -n Array1 -c "delete emailAlert emailRecipients ["person1@email.domain.com" "person3@email.domain.com"];"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

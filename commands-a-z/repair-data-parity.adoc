@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/repair-data-parity.html 
+sidebar: sidebar 
+keywords: repair, data, parity 
+summary: 「修復資料同位元檢查」命令可修復資料同位元檢查錯誤。 
+---
+= 修復資料同位元檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「修復資料同位元檢查」命令可修復資料同位元檢查錯誤。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+在使用此命令之前、請諮詢NetApp支援部門、以取得受影響韌體、磁碟機和RAID等量磁碟區的相關指引。
+
+
+
+== 語法
+
+[listing]
+----
+repair volume[volumeName] parity
+   [startingLBA=LBAvalue]
+   [endingLBA=LBAvalue]
+   [repairMethods=(repairMethod . . . repairMethod)]
+           Space delimited list where possible repair methods are: reconstruct, unmap, updateP, updateQ, updateData, and writeZeros
+   [repairPI=(TRUE|FALSE)]
+   [suspectDrives=(trayID1,[drawerID1,]slotID1 . . . trayIDn,[drawerIDn,]slotIDn)]
+   [timeout=(0-65535)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要修復同位元檢查的磁碟區名稱。將磁碟區名稱括在方括弧中（[]）
+
+
+
+ a| 
+《tartingLBA》
+ a| 
+起始邏輯區塊位址。
+
+
+
+ a| 
+《endingLBA》（endingLBA）
+ a| 
+結束邏輯區塊位址。
+
+
+
+ a| 
+《配對方法》
+ a| 
+用於修復同位元檢查錯誤的方法。可用方法包括：
+
+* Reconstronstronstronstron..重新建構在「uspectDrives」參數下指定的磁碟機。
+* 取消對應：針對R5/R6 dulbe磁碟區、用於使R5/R6 RAID等量磁碟區不對應
+* updateP：用於修正資料同位元檢查不相符類型。
+* updateQ：用於修正資料同位元檢查不相符類型。
+* 更新資料：用於修正資料同位元檢查不相符類型。
+* 寫入Zeros：適用於R5/R6 dulbe磁碟區、當發現含有對應與未對應資料混合的非預期RAID5/6等量磁碟區時使用。取得等量磁碟區中未對應的區塊、並將零寫入其中、然後更新同位元檢查
+
+
+
+
+ a| 
+"REpairPI"
+ a| 
+設為true可在從startingLBA開始的範圍內修復PI。
+
+
+
+ a| 
+"uspectDrives"
+ a| 
+用於指定要重建的磁碟機。
+
+
+
+ a| 
+超時
+ a| 
+您要執行作業的時間長度（以分鐘為單位）。
+
+|===
+
+
+== 最低韌體層級
+
+8.63

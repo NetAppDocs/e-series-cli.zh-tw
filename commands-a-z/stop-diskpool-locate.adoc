@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-diskpool-locate.html 
+sidebar: sidebar 
+keywords: stop, disk pool, locate 
+summary: stop diskPool locate命令會關閉已由start diskPool locate命令開啟之磁碟機上的指示燈。 
+---
+= 停止磁碟集區定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「shtop diskPool locate」命令可關閉使用「Start diskPool locate」命令開啟之磁碟機上的指示燈。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+stop diskPool locate
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+7.83

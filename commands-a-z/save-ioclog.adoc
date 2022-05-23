@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/save-ioclog.html 
+sidebar: sidebar 
+keywords: save, input, output, controller, ioc, dump 
+summary: SAVE IOClog命令會將IOC傾印從儲存陣列中的控制器儲存至主機上的檔案。 
+---
+= 儲存輸入輸出控制器（IOC）傾印
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存IOCLog」命令可將IOC傾印從儲存陣列中的控制器儲存至主機上的檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save IOCLog [file=pass:quotes["_filename_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+儲存IOC傾印的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+[listing]
+----
+file="C:\Array Backups\IOCcoredump1.7z"
+----
+此命令會將資料儲存至壓縮檔案、並將副檔名「.7z」新增至儲存的檔案。儲存陣列中包含控制器IOC相關資料的檔案預設名稱、會使用儲存陣列的WWN。
+
+|===
+
+
+== 附註
+
+此命令會從兩個控制器擷取IOC傾印記錄資料和IOC傾印中繼資料。使用7Zip檔案格式、擷取的資料會歸檔並壓縮成單一檔案、並提供您選擇的檔案名稱。7Zip歸檔檔案包含下列項目：
+
+* Filename +"IOCLog"+[a|B].gz -從控制器A或控制器B擷取的IOC記錄（若有）
+* Filename +"IOCLogInfo"+[a|B].txt-- IOC會記錄從控制器A或控制器B擷取的中繼資料資訊。如果無法從控制器擷取IOC記錄資料、中繼資料.TXT檔案會包含錯誤條件和原因。
+
+
+以下是錯誤情況：
+
+* 控制器平台和HIC不支援IOC傾印。
+* 控制器尚未收集IOC傾印資料。
+
+
+壓縮的記錄檔不是人類可讀取的格式。您必須將記錄傳回技術支援部門以進行評估。
+
+
+
+== 最低韌體層級
+
+8.20

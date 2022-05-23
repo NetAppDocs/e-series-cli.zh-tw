@@ -1,0 +1,88 @@
+---
+permalink: commands-a-z/save-storage-array-diagnostic-data.html 
+sidebar: sidebar 
+keywords: save, storage, array, diagnostic, data 
+summary: SAVE storageArray診斷資料命令可將儲存陣列診斷資料從控制器或環境服務模組（ESSM）儲存至檔案。 
+---
+= 儲存儲存陣列診斷資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列診斷資料」命令可將儲存陣列診斷資料從控制器或環境服務模組（ESSM）儲存至檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以稍後檢閱檔案內容。您也可以將檔案傳送給技術支援部門以供進一步審查。
+
+儲存診斷資料之後、您可以重設內含診斷資料的NVSRAM-登錄、以便覆寫舊資料。使用「REset storageArray ticsData」命令重設診斷資料登錄。
+
+[NOTE]
+====
+只有在技術支援的協助下、才能執行此命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray diagnosticData [(controller | tray)]
+file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「診斷資料」
+ a| 
+此參數可讓您從控制器或ESMS下載診斷資料。
+
+
+
+ a| 
+檔案
+ a| 
+您要儲存儲存儲存陣列診斷資料的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\sadiag.Zip」
+
+此命令會自動將資料儲存至壓縮檔案、但此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定「.Zip」副檔名。
+
+|===
+
+
+== 附註
+
+在7.77之前的版本中、使用者選項是「esm」、而非「tray」。從7.77開始、「tray」取代了「esm」。雖然仍支援使用「ESM」、但為了與未來版本的最佳相容性、請將「ESM」換成「tray」。
+
+
+
+== 最低韌體層級
+
+6.16
+
+7.77「tray」取代了「esm」。

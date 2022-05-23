@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-emailalert-summary.html 
+sidebar: sidebar 
+keywords: show, email, alert, configuration 
+summary: show emailAlert摘要命令會顯示電子郵件警示組態資訊。 
+---
+= 顯示電子郵件警示組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show emailAlert Summary」命令會顯示電子郵件警示組態資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」或「儲存監控」角色。
+
+
+
+== 語法
+
+[listing]
+----
+show emailAlert summary
+----
+
+
+== 參數
+
+無。
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show emailAlert summary;"
+
+EMAIL ALERT SETTINGS
+   Mail server address: email@company.com
+   Mail server encryption: starttls
+   Mail server port: 587
+   Mail server user name: accountName
+   Mail server password: secret123
+   Email sender address: no-reply@company.com
+   Recipient Email
+      recipient@company.com
+      recipient-two@company.com
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40
+
+11.701新增參數、用於指定SMTP加密（無、SMTPS、ARTTLS）、SMTP連接埠和SMTP認證（使用者名稱和密碼）。

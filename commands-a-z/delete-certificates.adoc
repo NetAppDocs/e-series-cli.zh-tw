@@ -1,0 +1,48 @@
+---
+permalink: commands-a-z/delete-certificates.html 
+sidebar: sidebar 
+keywords: delete, certificates 
+summary: 「刪除憑證」命令可讓您從CLI套件信任存放區刪除憑證。 
+---
+= 刪除憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除憑證」命令可讓您從CLI套件信任存放區刪除憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於EF600和EF300儲存陣列。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+delete localCertificate all | alias pass:quotes[_alias_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+別名
+ a| 
+可讓您透過使用者定義的別名來指定憑證。
+
+|===
+
+
+== 最低韌體層級
+
+8.60

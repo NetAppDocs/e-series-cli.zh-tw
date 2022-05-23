@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-volumegroup.html 
+sidebar: sidebar 
+keywords: show, volume, group 
+summary: show volumeGroup命令會傳回磁碟區群組的相關資訊。 
+---
+= 顯示Volume群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volumeGroup」命令會傳回磁碟區群組的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+此命令會傳回有關Volume群組的資訊：
+
+* 狀態（線上或離線）
+* 容量
+* 當前擁有者（插槽A中的控制器或插槽B中的控制器）
+* RAID層級
+* 磁碟機媒體類型（HDD或SSD）
+* 磁碟機介面類型（Fibre Channel、iSCSI、InfiniBand、SAS）
+* 紙匣遺失保護（是或否）
+* 安全功能-指出Volume群組是否由所有具有安全功能的磁碟機組成。可安全使用的磁碟機可以是FDE磁碟機或FIPS磁碟機。
+* 安全-指出磁碟區群組是否已開啟磁碟機安全功能（這稱為安全功能已啟用）。
+* 相關的磁碟區和可用容量
+* 相關的磁碟機
+* 啟用Data Assurance的磁碟區具備資料保證功能與存在功能
+* 資源配置功能
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要顯示其資訊的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+此命令會傳回Volume群組資訊、如以下範例所示：
+
+[listing]
+----
+Name:              SecureGroup
+
+      Status:         Optimal
+      Capacity:       120.000 GB
+      Current owner: Controller in slot A
+
+      Quality of Service (QoS) Attributes
+
+         RAID level:                  5
+         Drive media type:            Hard Disk Drive
+         Drive interface type:        SAS
+         Shelf loss protection:       No
+         Secure Capable:              Yes
+         Secure:                      No
+         Data Assurance (DA) capable: Yes
+         DA enabled volume present:   No
+         Resource-provisioned:           Yes
+
+
+      Total Volumes:          1
+         Standard volumes:    1
+         Repository volumes:  0
+         Free Capacity:       110.000 GB
+
+      Associated drives - present (in piece order)
+      Total drives present: 5
+
+         Tray     Slot
+         99       1
+         99       2
+         99       3
+         99       4
+         99       5
+----
+
+
+== 最低韌體層級
+
+6.10.

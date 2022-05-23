@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/set-snmpsystemvariables.html 
+sidebar: sidebar 
+keywords: update, snmp, mib, system, group, variables 
+summary: Set SNMP變數命令會變更簡易網路管理傳輸協定（SNMP）的系統變數。 
+---
+= 更新SNMP mib II系統群組變數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set snmpSystemvariables'」命令可變更簡易網路管理傳輸協定（SNMP）的系統變數。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+下列系統變數會保留在管理資訊基礎II（MIB-II）資料庫中：
+
+* 系統名稱
+* 系統聯絡人名稱
+* 系統位置
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set snmpSystemVariables
+[sysName=pass:quotes[_newSystemName_]]
+[sysContact=pass:quotes[_contactName_]]
+[sysLocation=pass:quotes[_systemLocation_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「SysName」
+ a| 
+您要賦予SNMP系統的新名稱。系統名稱請使用標準SNMP和MIBS慣例。將SNMP系統名稱括在方括弧中（[]）。
+
+
+
+ a| 
+「聯絡人」
+ a| 
+受管理系統的聯絡人姓名、以及如何聯絡此人的相關資訊。將SNMP聯絡人名稱括在方括弧中（[]）。
+
+
+
+ a| 
+《重要位置》
+ a| 
+系統的實體位置、例如「3flr」。將SNMP系統位置括在方括弧（[]）內。
+
+|===
+
+
+== 最低韌體層級
+
+8.30

@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/save-alldrives-logfile.html 
+sidebar: sidebar 
+keywords: save, drive log 
+summary: Save allDrives logfile命令會將磁碟機記錄儲存至檔案。 
+---
+= 儲存磁碟機記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Save allDrives logfile」命令會將磁碟機記錄儲存到檔案中。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+磁碟機記錄資料由每個磁碟機的儲存陣列維護。
+
+[NOTE]
+====
+除非技術支援人員指示您執行此命令、否則請勿執行此命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save allDrives logFile=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+記錄檔*
+ a| 
+您要儲存磁碟機記錄的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\drive01.Zip」
+
+[NOTE]
+====
+此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定.zip副檔名。
+
+====
+|===
+
+
+== 最低韌體層級
+
+6.10.

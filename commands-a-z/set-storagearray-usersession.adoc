@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/set-storagearray-usersession.html 
+sidebar: sidebar 
+keywords: set, storage, array, user, session 
+summary: set storageArray userSession命令可讓您在System Manager中設定逾時時間、以便在指定時間後中斷使用者的非作用中工作階段連線。 
+---
+= 設定儲存陣列使用者工作階段
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「set storageArray userSession」命令、您可以在System Manager中設定逾時時間、讓使用者的非作用中工作階段在指定時間後中斷連線。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+使用此命令執行下列其中一項作業：
+
+* 設定使用者工作階段的逾時時間（以秒為單位）。最小逾時值為900秒（15分鐘）。
+* 將值設為0、以關閉工作階段逾時。
+
+
+
+
+== 參數
+
+無。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray userSession sessionTimeout=n
+----
+
+
+== 最低韌體層級
+
+8.41.

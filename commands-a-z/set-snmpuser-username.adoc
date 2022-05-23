@@ -1,0 +1,121 @@
+---
+permalink: commands-a-z/set-snmpuser-username.html 
+sidebar: sidebar 
+keywords: update, snmpv3, usm, user 
+summary: Set SNMP使用者名稱命令會更新現有的Simple Network Management Protocol（SNMP）USM使用者。如果只有一位使用者擁有使用者名稱、就會使用使用者名稱來識別要變更的USM使用者。如果有多個使用者具有相同的使用者名稱和不同的引擎ID、則使用者名稱和引擎ID來識別使用者。 
+---
+= 更新v3 USM使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set snmpUser UserName」命令會更新現有的Simple Network Management Protocol（SNMP）USM使用者。如果只有一位使用者擁有使用者名稱、就會使用使用者名稱來識別要變更的USM使用者。如果有多個使用者具有相同的使用者名稱和不同的引擎ID、則使用者名稱和引擎ID來識別使用者。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+set snmpUser userName="snmpUserName" [engineId=(local | engineId)]
+[newUserName="newSnmpUserName"] [newEngineId=(local | engineId)]
+[authProtocol=(none | sha | sha256 | sha512) authPassword="authPassword"]
+[privProtocol=(none | aes128) privPassword="privPassword"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《使用者名稱》
+ a| 
+您要更新的SNMP USM使用者名稱。將SNMP USM使用者名稱括在雙引號（""）內。
+
+
+
+ a| 
+"工程師Id"
+ a| 
+您要更新的SNMP USM使用者引擎ID。如果有多個使用者名稱相同的USM使用者、則引擎ID為必填欄位。此值可以是「本機」、以指定本機SNMP代理程式為驗證代理程式、或是用來指定遠端SNMP代理程式引擎ID的十六進位數字字串。
+
+
+
+ a| 
+「newSnmpUserName」
+ a| 
+您要賦予SNMP使用者的新名稱。將SNMP使用者名稱括在雙引號（""）內。預設值是使用者先前定義的使用者名稱。
+
+
+
+ a| 
+"newEngineId"
+ a| 
+新的工程師ID、做為使用者的驗證SNMP引擎ID識別碼。此值可以是「[.code]local」、以指定本機SNMP代理程式為驗證代理程式、或是指定遠端SNMP代理程式引擎ID的十六進位數字字串。預設值是使用者先前定義的引擎ID。
+
+
+
+ a| 
+"authProtocol（驗證協議）"
+ a| 
+使用者要使用的驗證傳輸協定（HMAC）。此值可能為下列其中一項：
+
+* 「NONE」（無）-無SNMP訊息驗證（預設）
+* 「SHA」- SHA-1驗證
+* 「S25256」- SHA-256驗證
+* 《S512》- SHA-512驗證
+
+
+預設值是使用者先前定義的驗證傳輸協定。
+
+
+
+ a| 
+「驗證密碼」
+ a| 
+用於驗證使用者的密碼。如果驗證傳輸協定是「sha」、「S25256」或「S25512」、則必須指定
+
+
+
+ a| 
+"privProtocol（私有協議）"
+ a| 
+使用者要使用的隱私權傳輸協定（加密）。此值可能為下列其中一項：
+
+* 「NONE」（無）-無SNMP訊息加密（預設）
+* 「AES128」- AES-18加密
+
+
+預設值是使用者先前定義的隱私權傳輸協定。
+
+
+
+ a| 
+「privPassword」
+ a| 
+用於使用者隱私權/加密的密碼。如果隱私權傳輸協定為「[.code]'AES128'」、則必須指定。
+
+|===
+
+
+== 最低韌體層級
+
+8.72.

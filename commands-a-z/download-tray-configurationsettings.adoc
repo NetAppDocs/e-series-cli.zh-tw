@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/download-tray-configurationsettings.html 
+sidebar: sidebar 
+keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
+summary: 「下載匣組態設定」命令會將原廠預設設定下載至儲存陣列中的所有磁碟機匣、或儲存陣列中的特定磁碟機匣。 
+---
+= 下載紙匣組態設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「下載匣組態設定」命令會將原廠預設設定下載到儲存陣列中的所有磁碟機匣、或儲存陣列中的特定磁碟機匣。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[download (allTrays | tray [_trayID_]] configurationSettings
+pass:quotes[file="_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allTrays》
+ a| 
+此參數會將新韌體下載至儲存陣列中的所有磁碟匣。
+
+
+
+ a| 
+"紙匣"
+ a| 
+包含要載入新韌體之ESM卡的磁碟機匣。紙匣ID值為0至99。將紙匣ID值括在方括弧（[]）內。
+
+
+
+ a| 
+檔案
+ a| 
+包含韌體映像之檔案的檔案路徑和檔案名稱。將韌體映像的檔案路徑和檔名括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/dnld\TraySet.dlp」
+
+有效的檔案名稱副檔名為「.dlp」。
+
+|===
+
+
+== 附註
+
+「tray」參數會將原廠預設組態設定下載到特定的磁碟機匣如果您需要將原廠預設組態設定下載到多個磁碟機匣、但不是所有的磁碟機匣、則必須針對每個磁碟機匣輸入此命令
+
+
+
+== 最低韌體層級
+
+7.75

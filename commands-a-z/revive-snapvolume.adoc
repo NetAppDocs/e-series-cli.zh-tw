@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/revive-snapvolume.html 
+sidebar: sidebar 
+keywords: revive, snapshot, volume 
+summary: revive snapVolume命令會強制指定的快照Volume達到最佳狀態。 
+---
+= 恢復Snapshot Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"Revive snapVolume"命令會強制指定的快照Volume達到最佳狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+快照磁碟區可以是下列其中一項：
+
+* 獨立式Snapshot Volume
+* 屬於一致性群組成員的快照磁碟區
+
+
+如果快照磁碟區未處於「故障」狀態、韌體會顯示錯誤訊息、且不會執行此命令。
+
+[NOTE]
+====
+您無法將此命令用於線上Volume複本中使用的快照磁碟區。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+revive snapVolume pass:quotes[[_snapVolumeName_]]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napVolume」
+ a| 
+您要設定為最佳狀態的快照磁碟區名稱。將快照磁碟區名稱括在方括弧（[]）內。如果快照磁碟區名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住快照磁碟區名稱。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+7.83

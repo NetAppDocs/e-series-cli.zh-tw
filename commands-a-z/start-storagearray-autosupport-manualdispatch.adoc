@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/start-storagearray-autosupport-manualdispatch.html 
+sidebar: sidebar 
+keywords: start, storage, array, autosupport, manual, dispatch 
+summary: start storageArray AutoSupport flexmanualdisch分派 命令會針對套件啟動完整的支援套件和ASUP派單。 
+---
+= 啟動Storage Array AutoSupport 《人工派遣》
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray AutoSupport SflexmanualDispatch」命令會啟動套裝組合的完整支援套裝組合和ASUP派單。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+由於完成的時間很長、因此如果命令可以啟動程序、就會傳回成功。
+
+
+
+== 語法
+
+[listing]
+----
+start storageArray autoSupport manualDispatch
+----
+
+
+== 參數
+
+無
+
+
+
+== 最低韌體層級
+
+8.63

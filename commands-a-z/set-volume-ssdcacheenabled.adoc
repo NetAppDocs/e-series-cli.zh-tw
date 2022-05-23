@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/set-volume-ssdcacheenabled.html 
+sidebar: sidebar 
+keywords: set, ssd, cache, volume 
+summary: 使用特定磁碟區的SSD快取功能、「Set Volume ssdCacheEnabled」命令可開啟或關閉快取。 
+---
+= 設定磁碟區的SSD快取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用SSD快取功能為特定磁碟區開啟或關閉快取。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 背景
+
+Volume可以是下列其中一種：
+
+* 標準磁碟區、以名稱或WWID識別
+* Snapshot Volume
+* 一致性群組快照磁碟區
+
+
+
+
+== 適用於標準Volume的語法
+
+[listing, subs="+macros"]
+----
+set volume (pass:quotes[[_volumeName_]] | <"WWID">) ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 適用於Snapshot Volume的語法
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 適用於一致性群組快照磁碟區的語法
+
+[listing, subs="+macros"]
+----
+set cgSnapVolume pass:quotes[["_cgSnapVolumeName_"]] ssdCacheEnabled=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要開啟或關閉SSD快取的標準磁碟區名稱。將磁碟區名稱括在方括弧（[]）內。如果磁碟區名稱含有特殊字元或數字、則必須在方括弧（[]）內以雙引號（""）括住磁碟區名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要開啟或關閉SSD快取之標準磁碟區的全球識別碼（WWID）。將WWID以雙引號（""）括在角括弧（<>）內。
+
+
+
+ a| 
+「napVolume」
+ a| 
+您要開啟或關閉SSD快取的快照磁碟區名稱。將快照磁碟區名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「cgrSnapVolume」
+ a| 
+要開啟或關閉SSD快取的一致性群組快照磁碟區名稱。將一致性群組快照磁碟區的名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「已啟用SDCache」
+ a| 
+若要開啟SSD快取、請將此參數設為「true」。若要關閉SSD快取、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+您一次只能開啟或關閉一個磁碟區的SSD快取。
+
+當您關閉某個磁碟區的SSD快取時、該磁碟區的SSD快取會被清除。
+
+
+
+== 最低韌體層級
+
+7.84

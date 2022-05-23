@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/delete-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: delete, initiator, command, specific, object, supported, array, role 
+summary: 刪除iscsiInitiator命令會刪除特定的iSCSI啟動器物件。 
+---
+= 刪除iSCSI啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除iscsiInitiator」命令會刪除特定的iSCSI啟動器物件。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+[IMPORTANT]
+====
+此命令已過時、並由取代 xref:delete-initiator.adoc[刪除啟動器] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+delete iscsiInitiator (<"iscsiID"> | ["name"])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《iscsiInitiator》
+ a| 
+您要刪除的iSCSI啟動器識別碼。iSCSI啟動器的識別碼可以是iSCSI ID或唯一名稱。
+
+將iSCSI ID以雙引號（""）括在尖括弧（<>）內。
+
+將名稱括在方括弧（[]）內的雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+7.10.
+
+8.41此命令已過時。

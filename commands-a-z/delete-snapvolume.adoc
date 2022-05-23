@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-snapvolume.html 
+sidebar: sidebar 
+keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
+summary: 刪除snapVolume命令會刪除快照磁碟區、並選擇性地刪除相關的快照儲存庫成員。 
+---
+= 刪除Snapshot Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除snapVolume」命令會刪除快照磁碟區、並選擇性地刪除相關的快照儲存庫成員。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+您無法將此命令用於線上磁碟區複本所涉及的快照映像。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapVolume ["_snapVolumeName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napVolume」
+ a| 
+您要刪除的快照磁碟區名稱。將快照磁碟區名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「刪除儲存成員」
+ a| 
+儲存或刪除儲存庫成員的參數。若要儲存儲存庫成員、請將此參數設為「假」。若要刪除儲存庫成員、請將此參數設為「true」。預設值為「true」。如果不使用此參數、儲存庫成員將自動刪除。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

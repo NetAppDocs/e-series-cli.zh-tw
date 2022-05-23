@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/diagnose-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
+summary: 「診斷同步鏡射群組」命令可測試本機儲存陣列與與非同步鏡射群組相關的遠端儲存陣列之間可能發生的通訊問題。 
+---
+= 測試非同步鏡射群組連線能力
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「診斷」asyncdMirrorGroup命令可測試本機儲存陣列與與非同步鏡射群組相關的遠端儲存陣列之間可能發生的通訊問題。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。
+
+====
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[diagnose asyncMirrorGroup [_asyncMirrorGroupName_]]
+testID=(all | connectivity | latency | bandwidth | portConnections)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要測試的現有非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須將非同步鏡射群組名稱以雙引號（""）括在方括弧內。
+
+
+
+ a| 
+《testID》
+ a| 
+您要執行之診斷測試的識別碼。識別碼及對應測試如下：
+
+* * All（全部）*-執行與此命令相關的所有測試。
+* *連線能力*：驗證兩個控制器是否有通訊路徑。連線測試會在儲存陣列之間傳送控制器間訊息、然後驗證遠端儲存陣列上的對應非同步鏡射群組是否存在。它也會驗證遠端系統上非同步鏡射群組的磁碟區成員是否符合本機系統上非同步鏡射群組的磁碟區成員。
+* *延遲*：將SCSI測試單元命令傳送至遠端儲存陣列上與非同步鏡射群組相關聯的每個磁碟區、以測試最小、平均和最大延遲。
+* *頻寬*：將兩個控制器間訊息傳送至遠端儲存陣列、以測試執行測試之控制器上連接埠的最小、平均和最大頻寬、以及協調的連結速度。
+* *連接埠連線*-顯示本機儲存陣列上用於鏡射的連接埠、以及在遠端儲存陣列上接收鏡射資料的連接埠。
+
+
+|===
+
+
+== 最低韌體層級
+
+7.84

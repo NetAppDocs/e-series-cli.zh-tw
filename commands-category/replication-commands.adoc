@@ -1,0 +1,145 @@
+---
+permalink: commands-category/replication-commands.html 
+sidebar: sidebar 
+keywords: replication, commands, consistency group, command, repository volume, 
+summary: 複寫命令 
+---
+= 複寫命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 一致性群組命令
+
+link:../commands-a-z/set-consistencygroup-addcgmembervolume.html["新增成員至一致性群組"]
+
+link:../commands-a-z/create-consistencygroup.html["建立一致性群組"]
+
+link:../commands-a-z/create-cgsnapimage-consistencygroup.html["建立一致性群組快照映像"]
+
+link:../commands-a-z/create-cgsnapvolume.html["建立一致性群組快照磁碟區"]
+
+link:../commands-a-z/create-mapping-cgsnapvolume.html["建立一致性群組快照磁碟區對應"]
+
+link:../commands-a-z/delete-consistencygroup.html["刪除一致性群組"]
+
+link:../commands-a-z/delete-cgsnapimage-consistencygroup.html["刪除一致性群組快照映像"]
+
+link:../commands-a-z/delete-sgsnapvolume.html["刪除一致性群組快照磁碟區"]
+
+link:../commands-a-z/remove-member-volume-from-consistency-group.html["從一致性群組中移除成員磁碟區"]
+
+link:../commands-a-z/resume-cgsnapvolume.html["恢復一致性群組快照磁碟區"]
+
+link:../commands-a-z/set-consistency-group-attributes.html["設定一致性群組屬性"]
+
+link:../commands-a-z/set-cgsnapvolume.html["設定一致性群組快照磁碟區"]
+
+link:../commands-a-z/show-consistencygroup.html["顯示一致性群組"]
+
+link:../commands-a-z/show-cgsnapimage.html["顯示一致性群組快照映像"]
+
+link:../commands-a-z/start-cgsnapimage-rollback.html["啟動一致性群組快照復原"]
+
+link:../commands-a-z/stop-cgsnapimage-rollback.html["停止一致性群組快照復原"]
+
+link:../commands-a-z/stop-cgsnapvolume.html["停止一致性群組快照磁碟區"]
+
+link:../commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html["停止一致性群組上的擱置快照映像"]
+
+
+
+== 儲存庫Volume分析命令
+
+link:../commands-a-z/check-repositoryconsistency.html["檢查儲存庫一致性"]
+
+
+
+== Snapshot群組命令
+
+link:../commands-a-z/create-snapgroup.html["建立Snapshot群組"]
+
+link:../commands-a-z/delete-snapvolume.html["刪除Snapshot Volume"]
+
+link:../commands-a-z/revive-snapgroup.html["恢復快照群組"]
+
+link:../commands-a-z/set-snapgroup.html["設定快照群組屬性"]
+
+link:../commands-a-z/set-snapgroup-mediascanenabled.html["設定Snapshot群組媒體掃描"]
+
+link:../commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html["設定Snapshot群組儲存庫Volume容量"]
+
+link:../commands-a-z/set-snapgroup-enableschedule.html["設定快照群組排程"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["設定磁碟區的SSD快取"]
+
+link:../commands-a-z/show-snapgroup.html["顯示Snapshot群組"]
+
+link:../commands-a-z/stop-pendingsnapimagecreation.html["停止快照群組待處理的快照映像"]
+
+
+
+== Snapshot映像命令
+
+link:../commands-a-z/create-snapimage.html["建立Snapshot映像"]
+
+link:../commands-a-z/delete-snapimage.html["刪除快照映像"]
+
+link:../commands-a-z/resume-snapimage-rollback.html["恢復Snapshot映像復原"]
+
+link:../commands-a-z/show-snapimage.html["顯示快照映像"]
+
+link:../commands-a-z/start-snapimage-rollback.html["開始Snapshot映像復原"]
+
+link:../commands-a-z/stop-snapimage-rollback.html["停止Snapshot映像復原"]
+
+
+
+== Snapshot Volume命令
+
+link:../commands-a-z/create-read-only-snapshot-volume.html["建立唯讀快照磁碟區"]
+
+link:../commands-a-z/create-snapshot-volume.html["建立Snapshot Volume"]
+
+link:../commands-a-z/delete-snapgroup.html["刪除快照群組"]
+
+link:../commands-a-z/set-snapvolume.html["重新命名Snapshot Volume"]
+
+link:../commands-a-z/resume-snapvolume.html["恢復Snapshot Volume"]
+
+link:../commands-a-z/revive-snapvolume.html["恢復Snapshot Volume"]
+
+link:../commands-a-z/set-snapvolume-converttoreadwrite.html["將唯讀快照磁碟區設定為讀取/寫入磁碟區"]
+
+link:../commands-a-z/set-snapvolume-mediascanenabled.html["設定Snapshot Volume媒體掃描"]
+
+link:../commands-a-z/set-snapvolume-increase-decreaserepositorycapacity.html["設定Snapshot Volume儲存庫Volume容量"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["設定磁碟區的SSD快取"]
+
+link:../commands-a-z/show-snapvolume.html["顯示快照磁碟區"]
+
+link:../commands-a-z/stop-snapvolume.html["停止Snapshot Volume"]
+
+
+
+== Volume複製命令
+
+link:../commands-a-z/create-volumecopy.html["建立Volume複本"]
+
+link:../commands-a-z/recopy-volumecopy-target.html["重新複製Volume複本"]
+
+link:../commands-a-z/remove-volumecopy-target.html["移除Volume複本"]
+
+link:../commands-a-z/set-volumecopy-target.html["設定Volume複本"]
+
+link:../commands-a-z/show-volumecopy.html["顯示Volume複本"]
+
+link:../commands-a-z/show-volumecopy-sourcecandidates.html["顯示Volume複製來源候選項目"]
+
+link:../commands-a-z/show-volumecopy-source-targetcandidates.html["顯示Volume複製目標候選對象"]
+
+link:../commands-a-z/stop-volumecopy-target-source.html["停止Volume複製"]

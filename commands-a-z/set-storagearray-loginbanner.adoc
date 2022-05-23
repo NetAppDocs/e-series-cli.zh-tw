@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: set, storage, array, login, banner 
+summary: set storageArray loginBanner命令可讓您上傳要用作登入橫幅的文字檔。橫幅文字可以包含建議事項通知和同意訊息、在使用SANtricity 者在執行命令之前、先向使用者顯示通知和同意訊息。 
+---
+= 設定儲存陣列登入橫幅
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray loginbanner」命令可讓您上傳要用作登入橫幅的文字檔。橫幅文字可以包含建議事項通知和同意訊息、在使用SANtricity 者在執行命令之前、先向使用者顯示通知和同意訊息。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray loginBanner file="path_to_login_banner"
+----
+
+
+== 背景
+
+載入文字檔之後、會將其儲存至儲存陣列。橫幅文字會出現在SANtricity 「更新系統管理程式」登入畫面之前或執行命令之前。
+
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+儲存登入橫幅文字檔的檔案路徑和檔案名稱。
+
+[NOTE]
+====
+登入橫幅檔案不可空白、且必須小於5 KB。
+
+====
+|===
+
+
+== 最低韌體層級
+
+8.41.

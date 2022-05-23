@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/set-storagearray-autosupportremotediag.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, remote, diagnostics, feature, individual, E2800, E5700, arrays 
+summary: set storageArray autosupSupportRemoteDiag命令會開啟或關閉AutoSupport 《支援不需更新的遠端診斷》功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。 
+---
+= 啟用或停用AutoSupport 「停止遠端診斷」功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray autosupSupportRemoteDiag」命令會開啟或關閉AutoSupport 「ESDEONDemand遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+啟用此功能之前、請先啟用AutoSupport 「支援功能」、然後在AutoSupport 儲存陣列上啟用「支援功能」。
+
+您必須依下列順序啟用三項功能：
+
+. 啟用AutoSupport 功能
+. 啟用AutoSupport 「隨選即用」
+. 啟用AutoSupport 「支援遠端診斷」
+
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray autoSupportRemoteDiag (enable | disable)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「啟用|停用」
+ a| 
+可讓使用者啟用或停用AutoSupport 「更新遠端診斷」功能。如果AutoSupport 停AutoSupport 用了「僅供支援」和「僅供支援之用」、則啟用動作將會出錯、並要求使用者先啟用。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportRemoteDiag enable;"
+
+SMcli completed successfully.
+----
+
+
+== 驗證
+
+使用「show storageArray AutoSupport sf2」命令查看您是否已啟用此功能。顯示輸出的開頭三行顯示AutoSupport 啟用功能狀態、接著AutoSupport 顯示「支援」功能、以及「支援」功能和AutoSupport 「支援」遠端診斷功能：
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+The AutoSupport OnDemand feature is enabled on this storage array.
+The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+----
+
+
+== 最低韌體層級
+
+8.40

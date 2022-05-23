@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/recreate-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: recreate, external, security key 
+summary: recurflexurestorageArray securityKey命令會重新產生儲存陣列安全金鑰、以搭配外部安全金鑰管理功能使用。 
+---
+= 重新建立外部安全金鑰
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「crecreate storageArray SECURITY Key」命令會重新產生儲存陣列安全金鑰、以便與外部安全金鑰管理功能搭配使用。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+recreate storageArray securityKey
+passPhrase=pass:quotes[_"passPhraseString"_
+file="_fileName"_]
+[deleteOldKey=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《通關密碼》
+ a| 
+加密安全金鑰的字元字串、以便將安全金鑰儲存在外部檔案中。將密碼括在雙引號（""）內。
+
+
+
+ a| 
+檔案
+ a| 
+具有安全金鑰的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+
+
+ a| 
+「刪除OldKey」
+ a| 
+將此參數設為「true」、可在建立新的安全金鑰之後、從外部金鑰管理伺服器刪除舊的安全金鑰。預設值為「假」。
+
+|===
+
+
+== 附註
+
+您的通關密碼必須符合下列條件：
+
+* 密碼長度必須介於8到32個字元之間。
+* 密碼必須包含至少一個大寫字母。
+* 密碼必須包含至少一個英文字母。
+* 密碼必須包含至少一個數字。
+* 密碼必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密碼不符合這些條件、您將會收到錯誤訊息。
+
+====
+
+
+== 最低韌體層級
+
+7.70
+
+11.73新增了「刪除OldKey」參數。

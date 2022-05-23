@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/set-storagearray-traypositions.html 
+sidebar: sidebar 
+keywords: set, storage, array, tray, positions 
+summary: set storageArray TrayPositionions命令可定義儲存陣列中的紙匣位置。輸入此命令時、您必須在儲存陣列中包含所有的磁碟匣。 
+---
+= 設定儲存陣列匣位置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray TrayPositionions」命令可定義磁碟匣在儲存陣列中的位置。輸入此命令時、您必須在儲存陣列中包含所有的磁碟匣。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray trayPositions=pass:quotes[(controller | _trayID_ ... _trayIDn_)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「TrayPositionions」
+ a| 
+所有紙匣ID的清單。清單中的磁碟匣ID順序定義了控制器匣和儲存陣列中磁碟機匣的位置。有效值為「0」至「99」。輸入以空格分隔的紙匣ID值。將紙匣ID值清單括在括弧中。對於控制器匣具有預先定義識別碼且不在有效匣位置值範圍內的儲存陣列、請使用「控制器」值。
+
+|===
+
+
+== 附註
+
+此命令可根據「TrayPositionions」（匣位置）清單中的匣ID位置來定義儲存陣列中的匣位置。例如、如果控制器匣的ID設為84、而磁碟機匣的ID設為1、12、 50個、「TrayPositions（磁碟匣位置）」順序（「84 1 12 50」）會將控制器匣置於第一個位置、磁碟機匣1置於第二個位置、磁碟機匣12置於第三個位置、而磁碟機匣50置於第四個位置。「TrayPositions（磁碟匣位置）」順序（「1 84 50 12」）會將控制器匣放在第二個位置、將磁碟機匣1放在第一個位置、將磁碟機匣50放在第三個位置、將磁碟機匣12放在第四個位置。
+
+[NOTE]
+====
+您必須在「TrayPositions」參數所定義的清單中、包含儲存陣列中的所有磁碟匣。如果清單中的紙匣數量與儲存陣列中的紙匣總數不符、則會出現錯誤訊息。
+
+====
+[NOTE]
+====
+管理軟體會以視覺方式顯示頂端的第一個位置、以及下方的其他位置、最後一個位置位於底部。
+
+====
+
+
+== 最低韌體層級
+
+6.10.
+
+對於6.14和6.16、「控制器」不是有效值。

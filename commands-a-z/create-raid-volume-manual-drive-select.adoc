@@ -1,0 +1,400 @@
+---
+permalink: commands-a-z/create-raid-volume-manual-drive-select.html 
+sidebar: sidebar 
+keywords: create, raid, volume, manual, drive, select 
+summary: create volume命令會建立新的Volume群組和Volume、並可讓您指定磁碟區的磁碟機。 
+---
+= 建立RAID Volume（手動選取磁碟機）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create volume」命令會建立新的Volume群組和Volume、並可讓您指定磁碟區的磁碟機。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create volume drives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_)]
+[volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+raidLevel=(0 | 1 | 3 | 5 | 6)
+userLabel=pass:quotes[_"volumeName"_]
+[capacity=pass:quotes[_volumeCapacity_]]
+[owner=(a|b)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[segmentSize=pass:quotes[_segmentSizeValue_]]
+[usageHint=(fileSystem | dataBase | multiMedia)]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dssPreAllocate=(TRUE | FALSE)]
+[securityType=(none | capable | enabled )]
+[dataAssurance=(none | enabled)]
+[resourceProvisioningCapable=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+create volume drives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1,_]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn_)]
+[volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+raidLevel=(0 | 1 | 5 | 6)
+userLabel=pass:quotes[_"volumeName"_]
+[capacity=pass:quotes[_volumeCapacity_]]
+[owner=(a|b)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[segmentSize=pass:quotes[_segmentSizeValue_]]
+[usageHint=(fileSystem | dataBase | multiMedia)]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dssPreAllocate=(TRUE | FALSE)]
+[securityType=(none | capable | enabled )]
+[dataAssurance=(none | enabled)]
+[resourceProvisioningCapable=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《發展》
+ a| 
+您要指派給您要建立之磁碟區的磁碟機。對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+
+
+ a| 
+「volumeGroupUserLabel」
+ a| 
+您要為新Volume群組指定的名稱。將Volume群組名稱括在雙引號（""）內。
+
+[NOTE]
+====
+如果您未指定磁碟區群組的使用者標籤、則控制器韌體會指派一個編號。
+
+====
+
+
+ a| 
+《raidLevel》
+ a| 
+包含磁碟區之磁碟區群組的RAID層級。有效值包括「0」、「1」、「3」、「5」或「6」。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要為新Volume命名的名稱。請以雙引號（""）括住新的Volume名稱。
+
+[NOTE]
+====
+此參數為必填欄位。
+
+====
+
+
+ a| 
+容量
+ a| 
+您要新增至儲存陣列的磁碟區大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+
+ a| 
+"老闆"
+ a| 
+擁有該磁碟區的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器如果您未指定擁有者、則控制器韌體會決定擁有者。
+
+
+
+ a| 
+「cacheReadPrefetch」
+ a| 
+開啟或關閉快取讀取預先擷取的設定。若要關閉快取讀取預先擷取、請將此參數設為「假」。若要開啟快取讀取預先擷取、請將此參數設為「true」。
+
+
+
+ a| 
+'大小'
+ a| 
+控制器在磁碟區中的單一磁碟機上寫入資料的資料量（以KB為單位）、然後再將資料寫入下一個磁碟機。有效值包括：'4（僅限SSD）'8、'16、'32、'64、'128、 "256"或"512"。
+
+
+
+ a| 
+「usageHint」
+ a| 
+將「cacheReadPrefetch」參數和「Size.」參數的設定設為預設值。預設值是根據使用磁碟區之應用程式的一般I/O使用模式而定。有效值包括「檔案系統」、「資料庫」或「多媒體」。
+
+
+
+ a| 
+「TrayLossProtect」
+ a| 
+在您建立儲存庫時、強制執行紙匣遺失保護的設定。若要強制執行紙匣遺失保護、請將此參數設為「true」。預設值為「假」。
+
+
+
+ a| 
+《DrawerLosProtect》
+ a| 
+當您建立鏡射儲存庫磁碟區時、強制保護藥櫃資料夾遺失的設定。若要強制執行藥櫃遺失保護、請將此參數設為「true」。預設值為「假」。
+
+
+
+ a| 
+「DssPreAllocate」
+ a| 
+此設定可確保保留容量已分配給未來的區段大小增加。此預設值為「true」。
+
+
+
+ a| 
+「生態類型」
+ a| 
+此設定可在建立磁碟區群組及所有相關磁碟區時、指定安全性層級。這些設定有效：
+
+* 「無」-磁碟區群組和磁碟區不安全。
+* 「Capable」（功能）：磁碟區群組和磁碟區可以設定安全性、但尚未啟用安全性。
+* 「已啟用」-磁碟區群組和磁碟區已啟用安全功能。
+
+
+
+
+ a| 
+"REsourceProvisioningCapable（資源配置資源可）"
+ a| 
+指定是否啟用資源資源配置功能的設定。若要停用資源資源配置、請將此參數設為「假」。預設值為「true」。
+
+|===
+
+
+== 附註
+
+「磁碟機」參數可同時支援大容量磁碟機匣和低容量磁碟機匣。大容量磁碟機匣具有可容納磁碟機的抽屜。從磁碟機匣中滑出抽取器、以便存取磁碟機。低容量磁碟機匣沒有抽屜。對於大容量磁碟機匣、您必須指定磁碟機匣的識別碼（ID）、匣的識別碼、以及磁碟機所在插槽的識別碼。對於低容量磁碟機匣、您只需要指定磁碟機匣的ID、以及磁碟機所在插槽的ID。對於低容量磁碟機匣、識別磁碟機位置的另一種方法是指定磁碟機匣的ID、將抽取匣的ID設為「0」、然後指定磁碟機所在插槽的ID。
+
+如果您將「RaidLevel」參數設定為RAID層級1：
+
+* 根據RAID 1定義、群組中有偶數個磁碟機
+* 群組的上半部分依所列順序（以及等量磁碟區順序）為主要磁碟機
+* 群組的下半部分依所列順序（以及等量磁碟區順序）為對應的鏡射磁碟機
+
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+「擁有者」參數可定義擁有該磁碟區的控制器。磁碟區的慣用控制器擁有權是目前擁有該磁碟區群組的控制器。
+
+如果您未使用「capacity」參數指定容量、則會使用Volume群組中可用的所有磁碟機容量。如果您未指定容量單位、則會使用「位元組」作為預設值。
+
+
+
+== 紙匣遺失保護和藥櫃遺失保護
+
+為了使紙匣遺失保護正常運作、您的組態必須遵循下列準則：
+
+|===
+| 層級 | 紙匣遺失保護的準則 | 所需的最小紙匣數量 
+
+
+ a| 
+"尖碑池"
+ a| 
+單一磁碟匣中的磁碟集區不含兩個以上的磁碟機
+ a| 
+6.
+
+
+
+ a| 
+《RAID 6》
+ a| 
+磁碟區群組在單一磁碟匣中不含兩個以上的磁碟機
+ a| 
+3.
+
+
+
+ a| 
+「RAID 3」或「RAID 5」
+ a| 
+磁碟區群組中的每個磁碟機都位於獨立的磁碟匣中
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1配對中的每個磁碟機都必須位於獨立的磁碟匣中
+ a| 
+2.
+
+
+
+ a| 
+"RAID 0"
+ a| 
+無法達到紙匣遺失保護。
+ a| 
+不適用
+
+|===
+為了確保藥櫃遺失保護功能正常運作（在高密度機箱環境中）、您的組態必須遵循下列準則：
+
+|===
+| 層級 | 藥櫃損失保護條件 | 所需的藥櫃數量下限 
+
+
+ a| 
+"尖碑池"
+ a| 
+此集區包含來自所有五個抽取器的磁碟機、每個抽取器中的磁碟機數量相同。如果磁碟集區包含15、20、25、30、35、 40、45、50、55或60個磁碟機。
+ a| 
+5.
+
+
+
+ a| 
+《RAID 6》
+ a| 
+磁碟區群組在單一藥櫃中不包含兩個以上的磁碟機。
+ a| 
+3.
+
+
+
+ a| 
+「RAID 3」或「RAID 5」
+ a| 
+磁碟區群組中的每個磁碟機都位於獨立的磁碟櫃中。
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+鏡射配對中的每個磁碟機都必須位於獨立的抽屜中。
+ a| 
+2.
+
+
+
+ a| 
+"RAID 0"
+ a| 
+無法達到藥櫃損失保護。
+ a| 
+不適用
+
+|===
+
+
+== 區段大小
+
+區段大小決定控制器在磁碟區中的單一磁碟機上寫入多少資料區塊、然後再將資料寫入下一個磁碟機。每個資料區塊儲存512個位元組的資料。資料區塊是最小的儲存單位。區段的大小決定其包含多少資料區塊。例如、8-KB區段可容納16個資料區塊。64 KB區段可容納128個資料區塊。
+
+當您輸入區段大小的值時、會對照控制器在執行時間提供的支援值來檢查該值。如果您輸入的值無效、控制器會傳回有效值清單。使用單一磁碟機進行單一要求時、其他磁碟機仍可同時處理其他要求。如果磁碟區位於單一使用者正在傳輸大量資料（例如多媒體）的環境中、則當單一資料傳輸要求以單一資料等量磁碟區來處理時、效能就會達到最大化。（資料等量磁碟區是區段大小乘以磁碟區群組中用於資料傳輸的磁碟機數量。） 在此情況下、多個磁碟機用於相同的要求、但每個磁碟機只能存取一次。
+
+若要在多使用者資料庫或檔案系統儲存環境中達到最佳效能、請設定區段大小、將滿足資料傳輸要求所需的磁碟機數量降至最低。
+
+
+
+== 使用提示
+
+[NOTE]
+====
+您不需要輸入「cacheReadPrefetch」參數或「Size」參數的值。如果不輸入值、控制器韌體會使用「usageHint」參數、並將「FileSystem」作為預設值。輸入「usageHint」參數的值、以及「cacheReadPrefetch」參數的值、或輸入「SizeDE」參數的值、都不會造成錯誤。您為「cacheReadPrefetch」參數或「Size」參數輸入的值優先於「usageHint」參數的值。下表顯示各種使用提示的區段大小和快取讀取預先擷取設定：
+
+====
+|===
+| 使用提示 | 區段大小設定 | 動態快取讀取預先擷取設定 
+
+
+ a| 
+檔案系統
+ a| 
+128 KB
+ a| 
+已啟用
+
+
+
+ a| 
+資料庫
+ a| 
+128 KB
+ a| 
+已啟用
+
+
+
+ a| 
+多媒體
+ a| 
+256 KB
+ a| 
+已啟用
+
+|===
+
+
+== 快取讀取預先擷取
+
+快取讀取預先擷取可讓控制器在控制器讀取及複製主機從磁碟機要求的資料區塊時、將其他資料區塊複製到快取中。此動作可增加日後從快取執行資料要求的機會。對於使用循序資料傳輸的多媒體應用程式而言、快取讀取預先擷取非常重要。「cacheReadPrefetch」參數的有效值為「true」或「假」。預設值為「true」。
+
+您不需要輸入「cacheReadPrefetch」參數或「Size」參數的值。如果不輸入值、控制器韌體會使用「usageHint」參數、並將「FileSystem」作為預設值。輸入「usageHint」參數的值、以及「cacheReadPrefetch」參數的值、或輸入「SizeDE」參數的值、都不會造成錯誤。您為「cacheReadPrefetch」參數或「Size」參數輸入的值優先於「usageHint」參數的值。
+
+
+
+== 安全類型
+
+使用「安全性類型」參數來指定儲存陣列的安全性設定。
+
+您必須先建立儲存陣列安全性金鑰、才能將「安全性類型」參數設定為「已啟用」。使用「create storageArray SECURITY Key」命令建立儲存陣列安全金鑰。這些命令與安全金鑰有關：
+
+* 「create storageArray securityKey」
+* 「匯出storageArray安全金鑰」
+* 「Import storageArray securityKey」
+* 「et storageArray安全性金鑰」
+* 「啟用volumeGroup [volumeGroupName]安全性」
+* 「啟用diskPool [diskPoolName] Security」
+
+
+
+
+== 最低韌體層級
+
+7.10新增RAID層級6功能和「dssPreAllocate」參數。
+
+7.50新增「最安全類型」參數。
+
+7.60新增_drawerID_使用者輸入和「drawerLosProtect」參數。
+
+7.75新增了「data Assurance」參數。
+
+8.63新增了「資源配置資源Capable」參數。

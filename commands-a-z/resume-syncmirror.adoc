@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/resume-syncmirror.html 
+sidebar: sidebar 
+keywords: resume, synchronous, mirroring 
+summary: RESUME SyncMirror RESUME命令會恢復暫停的同步鏡射作業。 
+---
+= 恢復同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「假定SyncMirror 還原」命令會恢復暫停的同步鏡射作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+resume syncMirror (primary pass:quotes[[_volumeName_]] |
+primaries pass:quotes[[_volumeName1 ... volumeNameN_]])
+[writeConsistency=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"一線"
+ a| 
+要恢復同步鏡射作業的主要Volume名稱。將主Volume名稱括在方括弧中（[]）。如果主Volume名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住主Volume名稱。
+
+
+
+ a| 
+「主管」
+ a| 
+您想要恢復同步鏡射作業的數個主要磁碟區名稱。使用下列規則輸入主要磁碟區的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果主要磁碟區名稱有特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+「寫入一致性」
+ a| 
+此設定可識別此命令中寫入一致性群組或是獨立的磁碟區。若要讓磁碟區位於同一個寫入一致性群組、請將此參數設為「true」。若要將磁碟區分開、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+如果您將「寫入一致性」參數設為「true」、則磁碟區必須位於寫入一致性群組（或群組）中。此命令會恢復包含磁碟區的所有寫入一致性群組。例如、如果磁碟區A、B和C位於寫入一致性群組中、且具有遠端對應的A、B、C、則「RE假定SyncMirror 的資料不一致」Volume（「A」）writeConsistency = true」命令會恢復A-A、B-B和C-C。
+
+
+
+== 最低韌體層級
+
+6.10.

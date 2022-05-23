@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/start-storagearray-controllerhealthimage-controller.html 
+sidebar: sidebar 
+keywords: start, storage, array, controller, health, image 
+summary: start storageArray controllerHealthImage控制器命令可在支援控制器健全狀況映像功能的儲存陣列上、產生儲存陣列控制器健全狀況映像。 
+---
+= 啟動儲存陣列控制器健全狀況映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray controllerHealthImage controller」命令可在支援控制器健全狀況映像功能的儲存陣列上產生儲存陣列控制器健全狀況映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+使用固件版本8.20時、「coredump」參數會取代為「controllerHealthImage」參數。
+
+====
+[NOTE]
+====
+請僅在技術支援的指導下使用此命令。
+
+====
+如果儲存陣列不支援控制器健全狀況映像功能、則命令會傳回錯誤。
+
+
+
+== 語法
+
+[listing]
+----
+start storageArray controllerHealthImage controller [(a|b)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+此參數指定產生控制器健全狀況映像的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。如果未指定控制器、儲存管理軟體會傳回語法錯誤。
+
+|===
+
+
+== 附註
+
+此命令會強制選取的控制器將其核心資料傾印至快取。使用「儲存陣列控制器HealthImage」命令、將快取資料的複本儲存到主機檔案。
+
+
+
+== 最低韌體層級
+
+7.83
+
+8.20將「coredump」參數取代為「controllerHealthImage」參數。

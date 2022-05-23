@@ -1,0 +1,100 @@
+---
+permalink: commands-a-z/show-storagearray-trustedcertificate-summary.html 
+sidebar: sidebar 
+keywords: show, installed, trusted, ca, certificates, summary 
+summary: show storageArray trustedCertificate摘要命令會顯示陣列中受信任的已安裝CA憑證摘要。在執行DELETE storageArray trustedCertificate命令之前、此命令非常實用、可讓您知道要刪除的憑證別名。 
+---
+= 顯示已安裝的信任CA憑證摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray trustedCertificate Summary」命令會顯示陣列中受信任的已安裝CA憑證摘要。在執行「刪除storageArray trustedCertificate」命令之前、此命令非常實用、可讓您知道要刪除的憑證別名。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+show storageArray trustedCertificate [all | allUserInstalled|
+ aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+全部
+ a| 
+可讓您指定擷取所有憑證、包括預先安裝和使用者安裝的憑證。
+
+
+
+ a| 
+"allUserInstalled"
+ a| 
+可讓您指定擷取所有使用者安裝的憑證。這是預設選項。
+
+
+
+ a| 
+別名
+ a| 
+可讓使用者指定要依別名擷取的預先安裝或使用者安裝信任的憑證。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+|===
+
+
+== 範例
+
+範例輸出可能與下圖有所不同。
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show storageArray trustedCertificate allUserInstalled summary;"
+============================
+Trusted Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Type:         Pre-installed | User installed
+Subject DN:   CN=Corp Issuing CA 1
+Issuer DN:    CN=Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

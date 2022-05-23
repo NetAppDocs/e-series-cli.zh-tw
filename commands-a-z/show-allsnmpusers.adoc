@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/show-allsnmpusers.html 
+sidebar: sidebar 
+keywords: show, snmpv3, usm, user 
+summary: show allsnmpUsers命令會傳回針對儲存陣列定義之Simple Network Management（SNMP）USM使用者的相關資訊。 
+---
+= 顯示v3 USM使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allsnmpUsers」命令會傳回針對儲存陣列定義之Simple Network Management（SNMP）USM使用者的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+show (allSnmpUsers |
+    snmpUser userName="snmpUsername" |
+    snmpUsers [snmpUserName1 ... snmpUserNameN])
+    [summary]
+----
+[NOTE]
+====
+此命令會傳回類似下列的SNMP使用者資訊
+
+[listing]
+----
+SNMP USERS------------------------------
+
+SUMMARY
+
+   Total SNMP Users: 2
+   Total SNMP Trap Destinations: 1
+
+DETAILS
+
+   SNMP User: TestUser1
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha
+   SNMP Privacy Protocol: aes128
+
+      Associated Trap Destination:
+
+      Trap Receiver IP Address  Send Authentication Failure Traps
+      10.113.173.133            false
+
+   SNMP User: TestUser2
+   SNMP Engine ID: local
+   SNMP Permission: Read Only
+   SNMP Authentication Protocol: sha256
+   SNMP Privacy Protocol: none
+
+      Associated Trap Destination:
+----
+====
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allSnmpUsers》
+ a| 
+此參數會傳回儲存陣列中所有SNMP使用者的相關資訊。
+
+
+
+ a| 
+《使用者名稱》
+ a| 
+您要擷取資訊的SNMP使用者名稱。將SNMP使用者名稱括在雙引號（""）內。
+
+
+
+ a| 
+「nmpUsers」
+ a| 
+您要擷取資訊的多個SNMP使用者名稱。使用下列規則輸入SNMP使用者的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數會傳回SNMP使用者總數和SNMP設陷目的地總數的清單。使用此參數時、會省略所有詳細資訊。
+
+|===
+
+
+== 最低韌體層級
+
+8.72.

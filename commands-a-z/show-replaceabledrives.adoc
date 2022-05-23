@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-replaceabledrives.html 
+sidebar: sidebar 
+keywords: show, replaceable, drives 
+summary: show replaceableDrives命令會顯示儲存陣列中的所有可更換磁碟機。 
+---
+= 顯示可更換的磁碟機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show replaceableDrives」命令會顯示儲存陣列中的所有可更換磁碟機。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+對於儲存陣列中的每個可更換磁碟機、此命令會傳回下列資訊：
+
+* 紙匣位置和插槽位置
+* 磁碟機所屬的磁碟區群組名稱
+* 全球名稱（WWN）
+* 磁碟機的狀態
+
+
+
+
+== 語法
+
+[listing]
+----
+show replaceableDrives
+----
+
+
+== 輸出範例
+
+[listing]
+----
+Replaceable drive at Tray 0, Slot 3
+                Volume group: 2
+                World-wide name: 5000c50028785aff0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 23
+                Volume group: 2
+                World-wide name: 5000c500095d46df0000000000000000
+                Status: Removed
+Replaceable drive at Tray 0, Slot 24
+                Volume group: 2
+                World-wide name: 5000c500287854d70000000000000000
+                Status: Removed
+----
+
+
+== 最低韌體層級
+
+7.10.

@@ -1,0 +1,211 @@
+---
+permalink: commands-category/volume-configuration-commands.html 
+sidebar: sidebar 
+keywords: volume, configuration, commands, diskpool, host topology, internet, storage, service, extension, group 
+summary: Volume組態命令 
+---
+= Volume組態命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 磁碟集區命令
+
+link:../commands-a-z/create-diskpool.html["建立磁碟集區"]
+
+link:../commands-a-z/delete-diskpool.html["刪除磁碟集區"]
+
+link:../commands-a-z/enable-diskpool-security.html["啟用磁碟集區安全性"]
+
+link:../commands-a-z/reduce-disk-pool-capacity.html["減少磁碟集區容量"]
+
+link:../commands-a-z/set-disk-pool.html["設定磁碟集區"]
+
+link:../commands-a-z/set-disk-pool-modify-disk-pool.html["設定磁碟集區（修改磁碟集區）"]
+
+link:../commands-a-z/show-diskpool.html["顯示磁碟集區"]
+
+link:../commands-a-z/start-diskpool-fullprovisioning.html["啟動磁碟集區完整資源配置"]
+
+link:../commands-a-z/start-diskpool-locate.html["啟動磁碟集區定位"]
+
+link:../commands-a-z/stop-diskpool-locate.html["停止磁碟集區定位"]
+
+
+
+== 主機拓撲命令
+
+link:../commands-a-z/create-host.html["建立主機"]
+
+link:../commands-a-z/create-hostgroup.html["建立主機群組"]
+
+link:../commands-a-z/create-hostport.html["建立主機連接埠"]
+
+link:../commands-a-z/delete-host.html["刪除主機"]
+
+link:../commands-a-z/delete-hostgroup.html["刪除主機群組"]
+
+link:../commands-a-z/delete-hostport.html["刪除主機連接埠"]
+
+link:../commands-a-z/set-host.html["設定主機"]
+
+link:../commands-a-z/set-hostchannel.html["設定主機通道"]
+
+link:../commands-a-z/set-hostgroup.html["設定主機群組"]
+
+link:../commands-a-z/set-hostport.html["設定主機連接埠"]
+
+link:../commands-a-z/show-allhostports.html["顯示主機連接埠"]
+
+link:../commands-a-z/show-storagearray-hosttopology.html["顯示儲存陣列主機拓撲"]
+
+
+
+== 網際網路儲存名稱服務（iSNS）命令
+
+link:../commands-a-z/set-storagearray.html["設定儲存陣列"]
+
+link:../commands-a-z/set-storagearray-isnsregistration.html["設定儲存陣列iSNS登錄"]
+
+link:../commands-a-z/set-storagearray-isnsipv4configurationmethod.html["設定儲存陣列iSNS伺服器的IPv4位址"]
+
+link:../commands-a-z/set-storagearray-isnsipv6address.html["設定儲存陣列iSNS伺服器IPv6位址"]
+
+link:../commands-a-z/set-storagearray-isnslisteningport.html["設定儲存陣列iSNS伺服器接聽連接埠"]
+
+link:../commands-a-z/set-storagearray-isnsserverrefresh.html["設定儲存陣列iSNS伺服器重新整理"]
+
+link:../commands-a-z/start-storagearray-isnsserverrefresh.html["啟動儲存陣列iSNS伺服器重新整理"]
+
+
+
+== RDMA（iSER）命令的iSCSI擴充
+
+link:../commands-a-z/reset-storagearray-iserstatsbaseline.html["重設儲存陣列iSER基準"]
+
+link:../commands-a-z/save-storagearray-iserstatistics.html["儲存儲存陣列iSER統計資料"]
+
+link:../commands-a-z/set-isertarget.html["設定iSER目標"]
+
+
+
+== iSCSI命令
+
+link:../commands-a-z/create-iscsiinitiator.html["建立iSCSI啟動器"]
+
+link:../commands-a-z/delete-iscsiinitiator.html["刪除iSCSI啟動器"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["診斷控制器iSCSI主機纜線"]
+
+link:../commands-a-z/reset-storagearray-iscsistatsbaseline.html["重設儲存陣列iSCSI基準"]
+
+link:../commands-a-z/diagnose-controller-iscsihostport.html["儲存儲存陣列iSCSI統計資料"]
+
+link:../commands-a-z/set-iscsiinitiator.html["設定iSCSI啟動器"]
+
+link:../commands-a-z/set-iscsitarget.html["設定iSCSI目標內容"]
+
+link:../commands-a-z/show-iscsisessions.html["顯示目前的iSCSI工作階段"]
+
+link:../commands-a-z/show-storagearray-iscsinegotiationdefaults.html["顯示儲存陣列交涉預設值"]
+
+link:../commands-a-z/show-storagearray-unconfigurediscsiinitiators.html["顯示未設定的儲存陣列iSCSI啟動器"]
+
+link:../commands-a-z/start-controller-iscsihostport-dhcprefresh.html["啟動iSCSI DHCP重新整理"]
+
+link:../commands-a-z/stop-storagearray-iscsisession.html["停止儲存陣列iSCSI工作階段"]
+
+
+
+== Volume命令
+
+link:../commands-a-z/check-volume-parity.html["檢查磁碟區同位元檢查"]
+
+link:../commands-a-z/create-mapping-volume.html["建立Volume對應"]
+
+link:../commands-a-z/clear-volume-reservations.html["清除Volume保留"]
+
+link:../commands-a-z/clear-volume-unreadablesectors.html["清除無法讀取的Volume磁碟區"]
+
+link:../commands-a-z/create-raid-volume-automatic-drive-select.html["建立RAID Volume（自動選取磁碟機）"]
+
+link:../commands-a-z/create-raid-volume-free-extent-based-select.html["建立RAID Volume（自由區型選擇）"]
+
+link:../commands-a-z/create-raid-volume-manual-drive-select.html["建立RAID Volume（手動選取磁碟機）"]
+
+link:../commands-a-z/create-volume-diskpool.html["在磁碟集區中建立磁碟區"]
+
+link:../commands-a-z/delete-volume.html["刪除Volume"]
+
+link:../commands-a-z/delete-volume-from-disk-pool.html["從磁碟集區刪除磁碟區"]
+
+link:../commands-a-z/start-increasevolumecapacity-volume.html["增加磁碟集區或磁碟區群組中的磁碟區容量..."]
+
+link:../commands-a-z/start-volume-initialize.html["初始化精簡磁碟區"]
+
+link:../commands-a-z/recover-volume.html["恢復RAID Volume"]
+
+link:../commands-a-z/remove-lunmapping.html["移除Volume LUN對應"]
+
+link:../commands-a-z/repair-volume-parity.html["修復磁碟區同位元檢查"]
+
+link:../commands-a-z/repair-data-parity.html["修復資料同位元檢查"]
+
+link:../commands-a-z/set-thin-volume-attributes.html["設定精簡磁碟區屬性"]
+
+link:../commands-a-z/set-volumes.html["設定磁碟集區中某個磁碟區的Volume屬性..."]
+
+link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["設定Volume群組中某個Volume的Volume屬性..."]
+
+link:../commands-a-z/set-volume-logicalunitnumber.html["設定Volume對應"]
+
+link:../commands-a-z/show-volume.html["顯示精簡Volume"]
+
+link:../commands-a-z/show-volume-summary.html["顯示Volume"]
+
+link:../commands-a-z/show-volume-actionprogress.html["顯示Volume動作進度"]
+
+link:../commands-a-z/show-volume-performancestats.html["顯示Volume效能統計資料"]
+
+link:../commands-a-z/show-volume-reservations.html["顯示Volume保留"]
+
+link:../commands-a-z/start-volume-initialization.html["啟動Volume初始化"]
+
+
+
+== Volume群組命令
+
+link:../commands-a-z/create-volumegroup.html["建立Volume群組"]
+
+link:../commands-a-z/delete-volumegroup.html["刪除Volume群組"]
+
+link:../commands-a-z/enable-volumegroup-security.html["啟用Volume群組安全性"]
+
+link:../commands-a-z/revive-volumegroup.html["恢復Volume群組"]
+
+link:../commands-a-z/set-volumegroup.html["設定Volume群組"]
+
+link:../commands-a-z/set-volumegroup-forcedstate.html["設定Volume群組強制狀態"]
+
+link:../commands-a-z/show-volumegroup.html["顯示Volume群組"]
+
+link:../commands-a-z/show-volumegroup-exportdependencies.html["顯示Volume群組匯出相依性"]
+
+link:../commands-a-z/show-volumegroup-importdependencies.html["顯示Volume群組匯入相依性"]
+
+link:../commands-a-z/start-volumegroup-defragment.html["啟動Volume群組重組"]
+
+link:../commands-a-z/start-volumegroup-export.html["開始Volume群組匯出"]
+
+link:../commands-a-z/start-volumegroup-fullprovisioning.html["啟動Volume Group完整資源配置"]
+
+link:learn-about-volume-group-migration.html["瞭解Volume群組移轉（僅限CLI）"]
+
+link:../commands-a-z/start-volumegroup-import.html["開始匯入Volume群組"]
+
+link:../commands-a-z/start-volumegroup-locate.html["啟動Volume群組定位"]
+
+link:../commands-a-z/stop-volumegroup-locate.html["停止Volume群組定位"]

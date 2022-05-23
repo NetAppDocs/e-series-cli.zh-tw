@@ -1,0 +1,24 @@
+---
+section: commands-category
+title: 命令（依類別）
+entries:
+- title: 系統管理員命令
+  url: "/commands-category/administrator-commands.html"
+- title: 警示組態命令
+  url: "/commands-category/alert-configuration-commands.html"
+- title: 陣列組態命令
+  url: "/commands-category/array-configuration-commands.html"
+- title: 自動支援命令
+  url: "/commands-category/auto-support-commands.html"
+- title: 鏡射命令
+  url: "/commands-category/mirroring-commands.html"
+- title: 效能調校命令
+  url: "/commands-category/performance-tuning-commands.html"
+- title: 複寫命令
+  url: "/commands-category/replication-commands.html"
+- title: 安全命令
+  url: "/commands-category/security-commands.html"
+- title: 儲存監控人員命令
+  url: "/commands-category/storage-monitor-personal-commands.html"
+- title: Volume組態命令
+  url: "/commands-category/volume-configuration-commands.html"

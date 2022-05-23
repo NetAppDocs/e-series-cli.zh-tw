@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/create-snmpuser-username.html 
+sidebar: sidebar 
+keywords: register, snmpv3 usm, user 
+summary: create SNMP使用者名稱命令會建立新的簡易網路管理傳輸協定（SNMP）使用者、並將新使用者登錄為SNMP代理程式的已知實體。任何以與現有使用者相同名稱和引擎ID登錄新使用者的嘗試都會遭到拒絕。 
+---
+= 登錄v3 USM使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create SNMP使用者名稱」命令會建立新的簡易網路管理傳輸協定（SNMP）使用者、並將新使用者登錄為SNMP代理程式的已知實體。任何以與現有使用者相同名稱和引擎ID登錄新使用者的嘗試都會遭到拒絕。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+create snmpUser userName="snmpUserName"
+    [engineId=(local | engineId)]
+    [authProtocol=(none | sha | sha256 | sha512) authPassword="authPassword"]
+    [privProtocol=(none | aes128) privPassword="privPassword"]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《使用者名稱》
+ a| 
+您要建立的SNMP USM使用者名稱。將SNMP USM使用者名稱括在雙引號（""）內。
+
+
+
+ a| 
+"工程師Id"
+ a| 
+使用者的驗證SNMP引擎ID識別碼。此值可以是「[.code]''local'」、以指定本機SNMP代理程式為驗證代理程式、或是指定遠端SNMP代理程式引擎ID的十六進位數字字串。預設值為「[.code]''locale'」。
+
+
+
+ a| 
+"authProtocol（驗證協議）"
+ a| 
+使用者要使用的驗證傳輸協定（HMAC）。此值可能為下列其中一項：
+
+* 「NONE」（無）-無SNMP訊息驗證（預設）
+* 「SHA」- SHA-1驗證
+* 「S25256」- SHA-256驗證
+* 《S512》- SHA-512驗證
+
+
+
+
+ a| 
+「驗證密碼」
+ a| 
+用於驗證使用者的密碼。如果驗證傳輸協定為「[.code]'sha'、「[.code]'s the S時 僅需指定「」或「[.code]'s s0 512」、則必須指定此驗證傳輸協定。
+
+
+
+ a| 
+"privProtocol（私有協議）"
+ a| 
+使用者要使用的隱私權傳輸協定（加密）。此值可能為下列其中一項：
+
+* 「NONE」（無）-無SNMP訊息加密（預設）
+* 「AES128」- AES-18加密
+
+
+
+
+ a| 
+「privPassword」
+ a| 
+用於使用者隱私權/加密的密碼。如果隱私權傳輸協定為「[.code]'aES128'」、則必須指定。
+
+|===
+
+
+== 最低韌體層級
+
+8.72.

@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/delete-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group, snapshot, image 
+summary: 刪除cgrpSnapImage Consistency Group命令會刪除一致性群組中的快照映像。 
+---
+= 刪除一致性群組快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除c命令SnapImage Consistency Group」命令會刪除一致性群組中的快照映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+delete cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+pass:quotes[[deleteCount=_numberOfSnapImages_]
+[retainCount=pass:quotes[_numberOfSnapImages_]
+[ignoreSnapVolume=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《抵抗集團》
+ a| 
+要從中刪除快照映像的一致性群組名稱。將一致性群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「刪除計數」
+ a| 
+要從一致性群組中刪除的快照映像數。使用整數值。
+
+此參數會先刪除最舊的快照映像、然後繼續刪除最舊的快照映像、直到達到您輸入的數字為止。
+
+
+
+ a| 
+《記錄數》
+ a| 
+要保留在一致性群組中的快照映像數目。使用整數值。
+
+此參數會將最新的快照映像保留在一致性群組中。
+
+
+
+ a| 
+「ignoreSnapVolume」
+ a| 
+決定是否保留或刪除相關的一致性群組快照磁碟區。此參數僅適用於一致性群組快照映像與一致性群組快照磁碟區相關聯的情況。若要保留快照磁碟區、請將此參數設為「true」。若要刪除快照磁碟區、請將此參數設為「假」。預設值為「假」。
+
+|===
+
+
+== 附註
+
+如果無法刪除一致性群組中所有相關成員磁碟區的快照映像、則作業會失敗、而且不會刪除任何快照映像。
+
+當您刪除與一致性群組快照Volume相關聯的一致性群組快照映像時、一致性群組快照Volume中的對應快照Volume成員會轉換為「已停止」狀態。處於「已停止」狀態的快照磁碟區成員、不再與已刪除快照映像的快照群組有任何關係。不過、處於「已停止」狀態的快照磁碟區成員、會維持其與一致性群組快照磁碟區的關係。
+
+
+
+== 最低韌體層級
+
+7.83

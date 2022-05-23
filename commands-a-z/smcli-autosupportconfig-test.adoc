@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-test.html 
+sidebar: sidebar 
+keywords: test, autosupport, configuration 
+summary: 使用SMcli -autosupSupportConfig測試命令AutoSupport 、傳送測試訊息來測試該支援組態。此命令可在管理網域上運作。儲存管理軟體會在管理網域中選擇具有自動支援功能的陣列、以便在測試訊息中加入範例資料。 
+---
+= 測試AutoSupport 該組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「Mcli -autosupSupportConfig test」命令AutoSupport 、傳送測試訊息來測試支援組態。此命令可在管理網域上運作。儲存管理軟體會在管理網域中選擇具有自動支援功能的陣列、以便在測試訊息中加入範例資料。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+[NOTE]
+====
+持續監控應在Management Station上執行、以傳送排程或事件觸發AutoSupport 的等字訊息。請先啟動服務、再使用此命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail<address>
+----
+
+
+== 參數
+
+下表列出傳送AutoSupport 功能不實測試訊息的參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+測試
+ a| 
+命令所需的參數。不需要任何價值。
+
+
+
+ a| 
+「電子郵件回寄」
+ a| 
+可讓使用者指定AutoSupport 回應電子郵件地址、以接收各種類型的消息。
+
+|===
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 使用HTTP / HTTPS傳輸進行測試的範例
+
+以下是使用HTTP或HTTPS傳輸類型時使用此命令的範例、您不會在其中指定要傳送的電子郵件地址。
+
+[listing]
+----
+SMcli -autoSupportConfig test
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+SMcli completed successfully.
+----
+
+
+== 使用SMTP傳輸進行測試的範例
+
+以下是使用此命令的範例。使用SMTP傳送方法時、您可以使用「立即寄送電子郵件」參數來指定目的地位址。
+
+[listing]
+----
+SMcli -autoSupportConfig test reply-toEmail:user@netapp.com
+The sample AutoSupport message was successfully sent to the ASUP gateway.
+
+An email has been sent to 'user@netapp.com', please check the mailbox
+for delivery confirmation.
+
+SMcli completed successfully.
+----

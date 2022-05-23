@@ -1,0 +1,141 @@
+---
+permalink: commands-a-z/create-volumecopy.html 
+sidebar: sidebar 
+keywords: create, volume, copy 
+summary: create volumeCopy命令會建立Volume複本、並啟動Volume複製作業。此命令適用於快照映像磁碟區複本配對。 
+---
+= 建立Volume複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create volumeCopy」命令會建立一個Volume複本、並啟動Volume複製作業。此命令適用於快照映像磁碟區複本配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+啟動Volume複製作業會覆寫目標磁碟區上的所有現有資料、將目標磁碟區設為主機唯讀、並使與目標磁碟區相關的所有快照映像磁碟區（若有）失效。如果您之前曾經將目標磁碟區當作複本、請確定您不再需要資料或已備份資料。
+
+====
+此命令會以兩種方式建立Volume複本：
+
+* 不含快照映像的Volume複本、也稱為_offline磁碟區複本
+* 使用快照映像進行Volume複本、也稱為「線上」Volume複本
+
+
+如果您使用沒有Snapshot映像的Volume複本、則在複製作業完成之前、無法寫入來源磁碟區。如果您想要在複製作業完成之前寫入來源磁碟區、請使用Volume copy搭配Snapshot映像。您可以透過命令語法中的選用參數、選取含有Snapshot映像的Volume複本。
+
+完成Volume複本並執行快照映像作業之後、快照映像就會刪除、快照磁碟區也會停用。
+
+[NOTE]
+====
+一次最多可有八個Volume複本在進行中。如果您嘗試一次建立八個以上的Volume複本、控制器會傳回「Pending（擱置）」狀態、直到其中一個進行中的Volume複本完成並傳回「Complete（完成）」狀態。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create volumeCopy source=pass:quotes[_"sourceName"_
+target="_targetName_"]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(offline | online)]
+[repositoryPercentOfBase=(20 | 40 | 60 | 120 | default)]
+[repositoryGroupPreference=(sameAsSource | otherThanSource | default)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《來源》
+ a| 
+要用作來源Volume的現有Volume名稱。將來源磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+《目標》
+ a| 
+要用作目標Volume的現有Volume名稱。將目標Volume名稱括在雙引號（""）內。
+
+
+
+ a| 
+「copyPriority」
+ a| 
+Volume複製相對於主機I/O活動的優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+
+
+ a| 
+"targetReadOnlyEnabled"
+ a| 
+此設定可讓您寫入目標磁碟區、或僅從目標磁碟區讀取。若要寫入目標Volume、請將此參數設為「假」。若要防止寫入目標Volume、請將此參數設為「true」。
+
+
+
+ a| 
+「copyType」
+ a| 
+使用此參數建立含有快照映像的Volume複本。使用快照映像建立Volume複本、可讓您在建立Volume複本時繼續寫入來源Volume。若要使用快照映像建立磁碟區複本、請將此參數設為「online（線上）」。若要建立不含快照映像的Volume複本、請將此參數設為「離線」。
+
+如果您不使用此參數、則會在建立磁碟區複本時不使用快照映像。
+
+
+
+ a| 
+"repositoryPercentOfBase"
+ a| 
+此參數可決定使用快照映像建立Volume複本時、快照映像的儲存庫磁碟區大小。儲存庫磁碟區的大小以來源磁碟區的百分比表示、也稱為基礎磁碟區。此參數的有效值為「20」、「40」、「60」、「120」及「預設」。預設值為20。如果您不使用此參數、韌體會使用20%的值。
+
+您必須將「copyType」參數與「repositoryPercentOfBase」參數搭配使用。
+
+
+
+ a| 
+"repositoryGroupPreferenc初期"
+ a| 
+此參數決定快照映像儲存庫磁碟區寫入哪個Volume群組。您有下列選擇：
+
+* "ameAsSource"（資源來源）-如果有可用空間、快照映像磁碟區會寫入與來源磁碟區相同的磁碟區群組。
+* "otherThaSource"——已過時的參數。請勿使用
+* 「預設」：快照映像儲存庫磁碟區會寫入任何有空間的磁碟區群組。
+
+
+若要獲得最佳效能、請使用「資源來源」選項。
+
+您必須使用帶有「repositoryGroupPreference」參數的「copyType」參數。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、事件和底線的任意組合來命名。名稱最多可包含30個字元。
+
+複製優先順序定義用於在來源Volume與Volume複製配對的目標Volume之間複製資料的系統資源量。如果您選取最高優先順序層級、則Volume複本會使用最多的系統資源來執行Volume複製、進而降低主機資料傳輸的效能。

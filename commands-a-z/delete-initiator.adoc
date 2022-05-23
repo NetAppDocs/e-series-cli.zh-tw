@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/delete-initiator.html 
+sidebar: sidebar 
+keywords: delete, initiator, command, object, supported, array, role 
+summary: 刪除啟動器命令會刪除啟動器物件。 
+---
+= 刪除啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除啟動器」命令會刪除啟動器物件。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[IMPORTANT]
+====
+此命令會取代過時的 xref:delete-iscsiinitiator.adoc[刪除iSCSI啟動器] 命令。
+
+====
+[NOTE]
+====
+此命令僅適用於iSCSI、iSER、NVMe over RoCE、NVMe over InfiniBand及NVMe over Fibre Channel。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+delete initiator (["initiatorName"] | <"initiatorQualifiedName">)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《啟動器》
+ a| 
+可讓您指定要刪除的啟動器識別碼。請將名稱括在雙引號（「」「」）內。如果值為合格名稱（例如iqn或nqn）、則您也必須以方括弧（[]）括住名稱（如果值為使用者標籤或尖括弧（<>））。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/resume-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: resume, consistency, group, snapshot, volume 
+summary: RESUME c吧！SnapVolume命令會重新啟動寫入時複製作業、以建立使用stop cgrSnapVolume命令停止的一致性群組快照磁碟區。 
+---
+= 恢復一致性群組快照磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「c管SnapVolume」命令會重新啟動寫入時複製作業、以建立您使用「stop cSnapVolume」命令停止的一致性群組快照磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+resume cgSnapVolume pass:quotes[[_"snapVolumeName"_]]
+cgSnapImage=pass:quotes[_"snapImageName"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「cgrSnapVolume」
+ a| 
+要恢復的一致性群組快照磁碟區名稱。將一致性群組快照磁碟區的名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+《cgrSnapImage》
+ a| 
+正在重新啟動之一致性群組中的快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 一致性群組的名稱
+* 一致性群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、是一致性群組中快照的順序編號。
+* 「最新」：如果您想要顯示在一致性群組中建立的最新快照映像、請使用此選項。
+* 「最舊」：如果您想要顯示在一致性群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 一致性群組的識別碼
+* 快照映像的識別碼
+
+
+例如、如果您要重新啟動快照映像12345的寫入時複製作業、快照映像位於名稱為snapVol1的一致性群組快照群組1中、請使用下列命令：
+
+[listing]
+----
+resume cgSnapVolume ["snapVol1"] cgSnapImage=["snapgroup1:12345"]
+----
+
+
+== 最低韌體層級
+
+7.83

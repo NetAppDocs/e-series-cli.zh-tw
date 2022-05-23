@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/show-volume-reservations.html 
+sidebar: sidebar 
+keywords: show, volume, reservations 
+summary: show volume Reservations命令會傳回具有持續保留之磁碟區的相關資訊。 
+---
+= 顯示Volume保留
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volume Reservations」命令會傳回具有持續保留之磁碟區的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]]) reservations
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+傳回儲存陣列中所有磁碟區效能統計資料的參數。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要擷取資訊的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要擷取資訊的多個磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 最低韌體層級
+
+5.40

@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/show-auditlog-configuration.html 
+sidebar: sidebar 
+keywords: show, audit log, configuration 
+summary: show Auditlog configuration命令會顯示儲存陣列的稽核記錄組態設定。 
+---
+= 顯示稽核記錄組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show Auditlog configuration」命令會顯示儲存陣列的稽核記錄組態設定。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+show auditLog configuration
+----
+
+
+== 參數
+
+無。
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show auditLog configuration;"
+
+Logging level: All
+Full policy: Overwrite
+Maximum records: 30,000 count
+Warning threshold: 90 percent
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

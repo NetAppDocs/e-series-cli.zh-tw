@@ -1,0 +1,150 @@
+---
+permalink: commands-a-z/set-syncmirror.html 
+sidebar: sidebar 
+keywords: set, synchronous, mirror 
+summary: set SyncMirror flexpcommand定義遠端鏡射配對的屬性。 
+---
+= 設定同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「SyncMirror show」命令可定義遠端鏡射配對的屬性。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set syncMirror (localVolume pass:quotes[[_volumeName_]] |
+localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
+[role=(primary | secondary)]
+[syncPriority=(highest | high | medium | low | lowest)]
+[autoResync=(enabled | disabled)]
+[writeOrder=(preserved | notPreserved)]
+[writeMode=(synchronous | asynchronous)]
+[force=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「localVolume」
+ a| 
+您要為其定義內容的本機Volume名稱。將主Volume名稱括在方括弧中（[]）。如果主Volume名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住主Volume名稱。
+
+
+
+ a| 
+《localVolumes》
+ a| 
+您要定義內容的數個本機磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱包含特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《角色》
+ a| 
+本機Volume做為主要Volume或次要Volume的設定。若要將Volume定義為主要Volume、請將此參數設為「primary」（主要）。若要將Volume定義為次要Volume、請將此參數設為「次要」。此參數僅適用於磁碟區屬於鏡射關係的一部分時。
+
+
+
+ a| 
+「yncd匯款」
+ a| 
+完整同步處理與主機I/O活動相關的優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+
+
+ a| 
+自動重新同步
+ a| 
+主磁碟區與遠端鏡射配對之次要磁碟區之間的自動重新同步設定。此參數具有下列值：
+
+* 「已啟用」-自動重新同步已開啟。您不需要進一步執行任何動作、就能重新同步主要Volume和次要Volume。
+* 「停用」—自動重新同步功能已關閉。若要重新同步主要磁碟區和次要磁碟區、您必須執行「RE假定SyncMirror 」命令。
+
+
+
+
+ a| 
+《寫字者》
+ a| 
+此參數定義主要Volume與次要Volume之間資料傳輸的寫入順序。有效值為「已保留」或「notPerved」。
+
+
+
+ a| 
+《寫入模式》
+ a| 
+此參數定義主要Volume如何寫入次要Volume。有效值為「同步」或「非同步」。
+
+
+
+ a| 
+《力量》
+ a| 
+如果儲存陣列之間的通訊連結中斷、而本機端的升級或降級導致雙重主要條件或雙重次要條件、則會強制角色反轉。若要強制角色反轉、請將此參數設為「true」。預設值為「假」。
+
+[NOTE]
+====
+僅當使用「role」參數時、才使用「force」參數。
+
+====
+|===
+
+
+== 附註
+
+使用此命令時、您可以指定一或多個選用參數。
+
+同步處理優先順序定義用於同步處理主要磁碟區與鏡射關係次要磁碟區之間資料的系統資源量。如果您選取最高優先順序層級、資料同步會使用最多的系統資源來執行完整同步、進而降低主機資料傳輸的效能。
+
+「寫入訂單」參數僅適用於非同步寫入模式、並使其成為一致性群組的一部分。將「writeOrder」參數設為「Preserved」、會使遠端鏡射配對以主機寫入主要Volume的相同順序、將資料從主要Volume傳輸至次要Volume。如果傳輸連結發生故障、資料會被緩衝、直到完全同步為止。此動作可能需要額外的系統負荷來維護緩衝資料、進而減緩作業速度。將"writeOrder"參數設為"notPreserved"可讓系統不必在緩衝區中維護資料、但必須強制進行完整同步、以確保次要Volume的資料與主要Volume相同。
+
+
+
+== 最低韌體層級
+
+6.10.

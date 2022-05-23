@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/smcli-autosupportlog.html 
+sidebar: sidebar 
+keywords: capture, view, autosupport, log 
+summary: SMcli -autosupSupportLog命令可讓您檢視AutoSupport 一個資訊記錄檔。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。 
+---
+= 擷AutoSupport 取或檢視一份資訊記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli -autosupSupportLog'」命令可讓您檢視AutoSupport 一個資訊記錄檔。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+此命令可讓您檢視兩種類型的記錄：
+
+* 目前記錄-檢視此時間點擷取的記錄。
+* 歸檔記錄-從歸檔檔案檢視記錄。
+
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
+pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]
+----
+
+
+== 參數
+
+下表列出命令參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+全部
+ a| 
+如果您想要為管理領域中所有AutoSupport 啟用了「支援功能」的儲存陣列建立傳輸記錄、請使用此參數AutoSupport 。
+
+
+
+ a| 
+？
+ a| 
+您要檢視AutoSupport 其資訊記錄的儲存陣列名稱。
+
+
+
+ a| 
+w_`
+ a| 
+您要檢視AutoSupport 其資訊記錄的儲存陣列的全球識別碼（WWID）。
+
+
+
+ a| 
+《intutArchive》（輸入檔案）
+ a| 
+可讓您指定歸檔AutoSupport 的Setfidlog、其中歸檔檔案為「_n_」、為0到5之間的整數。
+
+[NOTE]
+====
+省略此參數表示您選取目前AutoSupport 的版本資訊（此時擷取）。
+
+====
+
+
+ a| 
+「outputLog」
+ a| 
+可讓您指定輸出AutoSupport 的資訊檔名。
+
+[NOTE]
+====
+此參數為必填欄位。
+
+====
+|===
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 範例
+
+[listing]
+----
+SMcli -autosupportLog -n StorageArrayName inputArchive=0 outputLog=ASUPTransmissionLog
+----
+
+
+== 驗證
+
+檢視AutoSupport 您要求的資料檔記錄、該記錄檔位於安裝儲存管理軟體的用戶端目錄中。

@@ -1,0 +1,67 @@
+---
+permalink: commands-a-z/set-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: enable, disable, host, connectivity, report 
+summary: set storageArray hostConnectivityReporting命令可啟用或停用控制器上的主機連線報告功能。 
+---
+= 啟用或停用主機連線報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray hostConnectivityReports'命令可啟用或停用控制器上的主機連線報告功能。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray hostConnectivityReporting (enable | disable)
+----
+
+
+== 背景
+
+在儲存陣列上啟用主機連線報告時、儲存陣列會持續監控儲存陣列控制器與已設定主機之間的連線、並在連線因纜線鬆脫、毀損或遺失或主機發生其他問題而中斷時發出警示。如果儲存陣列上未正確指定主機類型（可能導致容錯移轉問題）、也會通知您。
+
+[NOTE]
+====
+若要停用主機連線報告、您必須先停用自動負載平衡。
+
+====
+[NOTE]
+====
+如果停用自動負載平衡、您可以保持啟用主機連線報告功能。
+
+====
+[NOTE]
+====
+僅在Linux DHALUA、Windows叢集式和VMware主機類型上、主機連線能力報告和自動負載平衡功能才適用。
+
+====
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.42新增命令參數。

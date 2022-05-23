@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/set-storagearray-managementinterface.html 
+sidebar: sidebar 
+keywords: set, storage, array, management, interface 
+summary: set storageArray managementInterface命令可變更控制器的管理介面。變更管理介面類型、以在儲存陣列與其管理軟體之間強制執行機密性、或存取外部工具。 
+---
+= 設定儲存陣列管理介面
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray managementInterface」命令可變更控制器的管理介面。變更管理介面類型、以在儲存陣列與其管理軟體之間強制執行機密性、或存取外部工具。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+set storageArray managementInterface restOnly={true | false}
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"REstOnly"
+ a| 
+設為「true」時、表示RESTful介面是唯一允許的管理介面。此介面可在儲存陣列與管理軟體之間強制執行加密連線。
+
+設為「假」時、表示儲存陣列與管理軟體之間允許使用舊介面。此介面未加密。
+
+除非SANtricity 將「REstOnly」參數設為「假」、否則某些直接與舊版管理介面通訊的工具OnCommand Insight （例如、支援VMware®支援中心或VMware®（OCI））將無法運作。如需詳細資訊、請聯絡技術支援部門。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray managementInterface restOnly=true;"
+
+SMcli completed successfully.
+----

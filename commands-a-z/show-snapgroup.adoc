@@ -1,0 +1,151 @@
+---
+permalink: commands-a-z/show-snapgroup.html 
+sidebar: sidebar 
+keywords: show, snapshot, group 
+summary: show snapGroup命令會傳回一或多個快照映像群組的相關資訊。 
+---
+= 顯示Snapshot群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapGroup」命令會傳回一或多個快照映像群組的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allSnapGroups | snapGroup pass:quotes[[_snapGroupName_]] |
+snapGroups pass:quotes[["_snapGroupName1_" ... "_snapGroupNamen_"]])
+[summary | schedule]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allSnapGroups》
+ a| 
+此參數可傳回儲存陣列中所有快照群組的相關資訊。
+
+
+
+ a| 
+「napGroup」
+ a| 
+您要擷取資訊的快照群組名稱。將快照群組名稱括在方括弧中（[]）。如果快照群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住快照群組名稱。
+
+
+
+ a| 
+《napGroups》（《napGroups》）
+ a| 
+您要擷取資訊的多個快照群組名稱。使用下列規則輸入快照群組的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果快照群組名稱包含特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數可傳回快照群組的相關資訊簡潔清單。
+
+
+
+ a| 
+「排程」
+ a| 
+此參數可傳回有關快照群組複製作業排程的簡明資訊清單。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+此命令會傳回快照群組資訊、如下列範例所示：
+
+[listing]
+----
+SNAPSHOT GROUP DETAILS
+
+SNAPSHOT GROUPS-----------------------------
+
+SUMMARY
+----
+[listing]
+----
+  Total Snapshot Groups: 1
+  Total Snapshot Images: 0
+  Enabled Snapshot Image Schedules: 0
+  Status: 1 Optimal, 0 Non Optimal
+
+  Name      Type       Status    Associated Base Volume
+  2_SG_01   Standard   Optimal   2
+  Total Repository Capacity  Available Repository Capacity  Snapshot Image Limit
+  10.318 GB                  10.318 GB (100%)               0
+
+  Snapshot Images   Scheduled
+  0                 No
+DETAILS
+
+  Snapshot Group "2_SG_01"
+
+   Status:  Optimal
+   Type:    Standard
+   Associated base volume: 2
+   Cluster size: 65,536 bytes
+
+   Repository
+
+    Total repository volumes: 3
+    Aggregate repository status: Optimal
+    Total repository capacity:   10.318 GB
+    Used capacity:           0.000 MB (0%)
+    Available repository capacity: 10.318 GB (100%)
+    Repository full policy:    Auto-purge Snapshot Images
+    Utilization alert threshold: 75%
+
+   Snapshot images
+
+    Total Snapshot images: 0
+    Auto-delete Snapshot images: Disabled
+    Snapshot image schedule:   Not Applicable
+----
+
+
+== 最低韌體層級
+
+7.83

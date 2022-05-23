@@ -1,0 +1,43 @@
+---
+permalink: commands-a-z/recover-disabled-driveports.html 
+sidebar: sidebar 
+keywords: recover, disable, drive ports 
+summary: 「恢復停用的磁碟機連接埠」命令可恢復停用的磁碟機連接埠。 
+---
+= 恢復停用的磁碟機連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"recf封面 停用的磁碟機連接埠"命令可恢復停用的磁碟機連接埠。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+recover disabled drivePorts;
+----
+
+
+== 範例
+
+[listing]
+----
+recover disabled drivePorts;
+----

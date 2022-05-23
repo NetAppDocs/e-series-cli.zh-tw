@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/clear-storagearray-eventlog.html 
+sidebar: sidebar 
+keywords: clear, storage array, event log 
+summary: 命令ClearstorageArray事件記錄會刪除事件記錄緩衝區中的資料、以清除儲存陣列中的事件記錄。 
+---
+= 清除儲存陣列事件記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「ClearstorageArray事件記錄」命令會刪除事件記錄緩衝區中的資料、以清除儲存陣列中的事件記錄。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+*可能會損壞儲存陣列組態*-一旦您執行此命令、儲存陣列中的現有事件記錄就會被刪除。
+
+====
+
+
+== 語法
+
+[listing]
+----
+clear storageArray eventLog
+----
+
+
+== 參數
+
+無。

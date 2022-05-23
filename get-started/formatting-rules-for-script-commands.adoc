@@ -1,0 +1,89 @@
+---
+permalink: get-started/formatting-rules-for-script-commands.html 
+sidebar: sidebar 
+keywords: format, rules, script, commands 
+summary: 每個指令碼命令說明結尾的「附註」區段會說明特定指令碼命令的專屬語法。 
+---
+= 指令碼命令的格式化規則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+每個指令碼命令說明結尾的「附註」區段會說明特定指令碼命令的專屬語法。
+
+*區分大小寫*-指令碼命令不區分大小寫。您可以用大小寫、大寫或混合大小寫輸入指令碼命令。（在下列命令說明中、混合大小寫可用來協助讀取命令名稱並瞭解命令用途。）
+
+* Spaces *：您必須在指令碼命令中輸入空格、如命令說明所示。
+
+*方括弧*-方括弧有兩種使用方式：
+
+* 做為命令語法的一部分。
+* 以表示參數為選用項目。每個參數的說明會告訴您是否需要將參數值括在方括弧中。
+
+
+*括弧*-命令語法中顯示的括弧會包含參數的特定選項。也就是、如果您要使用參數、必須輸入括弧中的其中一個值。一般而言、您不會在指令碼命令中加入括弧；不過、在某些情況下、當您輸入清單時、必須將清單括在括弧中。這類清單可能是紙匣ID值和插槽ID值的清單。每個參數的說明會告訴您是否需要將參數值括在括弧中。
+
+*垂直列*-指令碼命令中的垂直列表示「或」、並分隔參數的有效值。例如、命令說明中的「raidLevel」參數語法如下所示：
+
+[listing]
+----
+ raidLevel=(0 | 1 | 3 | 5 | 6)
+----
+若要使用「RaidLevel」參數設定RAID層級5、請輸入下列值：
+
+[listing]
+----
+ raidLevel=5
+----
+*磁碟機位置*-用於識別磁碟機位置的CLI命令、可同時支援大容量磁碟機匣和低容量磁碟機匣。大容量磁碟機匣具有可容納磁碟機的抽屜。從磁碟機匣中滑出抽取器、以便存取磁碟機。低容量磁碟機匣沒有抽屜。對於大容量磁碟機匣、您必須指定磁碟機匣的識別碼（ID）、匣的識別碼、以及磁碟機所在插槽的識別碼。對於低容量磁碟機匣、您只需要指定磁碟機匣的ID、以及磁碟機所在插槽的ID。對於低容量磁碟機匣、識別磁碟機位置的另一種方法是指定磁碟機匣的ID、將抽取匣的ID設為0、並指定磁碟機所在插槽的ID。以逗號分隔ID值。如果您輸入一組以上的ID值、請以空格分隔每組值。
+
+在CLI中指定磁碟機的慣例有兩種。您應該使用的慣例會在每個命令中指定。一個慣例使用等號和圓括弧：
+
+[listing]
+----
+
+        drive=\(trayID,[drawerID,]slotID\)
+----
+第二種慣例不使用等號、而是在指定磁碟機上使用一對大括弧：
+
+[listing]
+----
+
+        drive \[trayID,[drawerID,]slotID\]
+----
+以下是一些使用括弧的範例：
+
+[listing]
+----
+(1,1 1,2 1,3 1,4 2,1 2,2 2,3 2,4)
+----
+或者、對於大容量磁碟機匣、請參考以下範例：
+
+[listing]
+----
+(1,1,1 1,2,2 1,3,3 1,4,4 2,1,1 2,2,2 2,3,3 2,4,4)
+----
+*斜體字詞*-命令中斜體字詞表示您需要提供的值或資訊。例如、當您遇到斜體字詞時：
+
+[listing]
+----
+
+          *numberOfDrives*
+----
+將斜體字詞改為您要加入指令碼命令的磁碟機數目值。
+
+*分號*-指令碼命令必須以分號（「；」）結束。您可以在命令列或指令碼檔案中輸入多個指令碼命令。例如、會使用分號來分隔下列指令碼檔案中的每個指令碼命令。
+
+[listing]
+----
+create volume drives=(0,2 0,3 1,4 1,5 2,6 2,7) raidLevel=5 userLabel=”v1” capacity=2gb owner=a;
+create volume volumeGroup=2 userLabel=”v2” capacity=1gb owner=b;
+create volume volumeGroup=2 userLabel=”v3” capacity=1gb owner=a;
+----
+[listing]
+----
+create volume drives=(0,4 0,5 1,6 1,7 2,8 2,9) raidLevel=5 userLabel=”v4” capacity=2gb owner=b;
+create volume volumeGroup=3 userLabel=”v5” capacity=1gb owner=a;
+create volume volumeGroup=3 userLabel=”v6” capacity=1gb owner=b;
+----

@@ -1,0 +1,87 @@
+---
+permalink: commands-a-z/show-controller-nvsram.html 
+sidebar: sidebar 
+keywords: show, controller, nvsram 
+summary: show controller NVSRAM命令 會傳回關於NVSRAMB位元組值的資訊。 
+---
+= 顯示控制器的NVSRAM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show controller NVSRAM'命令會傳回關於NVSRAMB位元組值的資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令會傳回指定主機類型的NVSRAMB位元組值清單。如果您未輸入選用參數、此命令會傳回所有的NVSRAMB位元組值清單。
+
+此命令會傳回指定主機類型的NVSRAMB位元組值清單。如果您未輸入選用參數、此命令會傳回所有的NVSRAMB位元組值清單。
+
+此命令會傳回指定主機類型的NVSRAMB位元組值清單。如果您未輸入選用參數、此命令會傳回所有的NVSRAMB位元組值清單。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allControllers | controller [(a|b)])
+NVSRAM pass:quotes[[hostType=_hostTypeIndexLabel_ | host="_hostName_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"allControllers（所有控制器）"
+ a| 
+此設定可傳回儲存陣列中兩個控制器的相關資訊。
+
+
+
+ a| 
+"控制器"
+ a| 
+此設定可傳回儲存陣列中特定控制器的相關資訊。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+「hostType」
+ a| 
+主機類型的索引標籤或編號。使用「show storageArray hostTypeTable」命令來產生可用的主機類型識別碼清單。
+
+
+
+ a| 
+"主機"
+ a| 
+連接到控制器的主機名稱。將主機名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+使用「show controller NVSRAM'」命令顯示部分或全部的NVSRAM,然後再使用「show controller」命令來變更NVSRAM/Values。在對NVSRAM/進行 任何變更之前、請聯絡技術支援部門、以瞭解您可以修改哪些NVSRAM區域。

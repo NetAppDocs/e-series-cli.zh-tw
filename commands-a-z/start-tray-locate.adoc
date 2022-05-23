@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-tray-locate.html 
+sidebar: sidebar 
+keywords: start, tray, locate 
+summary: 「開始紙匣定位」命令會開啟指示燈、以定位紙匣。 
+---
+= 開始尋找紙匣
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start tray locate」命令會開啟指示燈、以找出紙匣。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+使用「最小號紙匣定位」命令來關閉該紙匣的指示燈
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start tray [_trayID_]] locate
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"紙匣"
+ a| 
+您要尋找的紙匣。紙匣ID值為0至99。將紙匣ID值括在方括弧（[]）內。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

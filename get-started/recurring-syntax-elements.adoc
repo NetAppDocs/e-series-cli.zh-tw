@@ -1,0 +1,638 @@
+---
+permalink: get-started/recurring-syntax-elements.html 
+sidebar: sidebar 
+keywords: recur, syntax, elements 
+summary: 循環語法元素是可在指令碼命令中使用的一般參數和選項類別。 
+---
+= 循環語法元素
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+循環語法元素是可在指令碼命令中使用的一般參數和選項類別。下表列出週期性語法元素所使用的慣例。
+
+[cols="2*"]
+|===
+| 慣例 | 定義 
+
+
+ a| 
+「* a | b*」
+ a| 
+替代（「a」或「b」）
+
+
+
+ a| 
+「斜體字」
+ a| 
+需要使用者輸入以完成參數（對變數的回應）
+
+
+
+ a| 
++[... ]+'（方括弧）
+ a| 
+零或一次發生（方括弧也會做為某些命令參數的分隔符號）
+
+
+
+ a| 
++`+{... （大花括號）
+ a| 
+零個或更多個事件
+
+
+
+ a| 
+（「* a | b | c*）」
+ a| 
+請只選擇其中一種替代方案
+
+|===
+下表列出週期性語法參數、以及可搭配週期性語法參數使用的值。
+
+[cols="2*"]
+|===
+| 重複語法 | 語法值 
+
+
+ a| 
+「_autosup-Volge-attr- value-list_」
+ a| 
+「_autosup-wlos-attr-value-Pair_」｛`_autosup-attr-value-Pair_｝
+
+
+
+ a| 
+「_autosup-Volge-attr- Value-Pair_」
+ a| 
+[listing]
+----
+driveType=drive-type | driveMediaType=drive-media-type |
+raidLevel=raid-level | volumeGroupWidth=integer-literal |
+volumeGroupCount=integer-literal | volumesPerGroupCount=integer-literal6|
+hotSpareCount=integer-literal | segmentSize=segment-size-spec | cacheReadPrefetch=(TRUE | FALSE)
+securityType=(none | capable | enabled)7| dataAssurance=(none | enabled)5
+----
+
+
+ a| 
+boole_
+ a| 
+[listing]
+----
+(TRUE | FALSE)
+----
+
+
+ a| 
+「快取-齊面-修改-設定_」
+ a| 
+[listing]
+----
+immediate, 0, .25, .5, .75, 1, 1.5, 2, 5, 10, 20, 60, 120, 300, 1200, 3600, infinite
+----
+
+
+ a| 
+容量規格
+ a| 
+「_integer-let__」（KB | MB | GB | TB |位元組）
+
+
+
+ a| 
+「以計數為基礎的儲存庫- spec_」
+ a| 
+[listing]
+----
+repositoryRAIDLevel =repository-raid-level repositoryDriveCount=integer-literal
+[repositoryVolumeGroupUserLabel =user-label] [driveType=drive-type4
+] [trayLossProtect=(TRUE | FALSE)1] | [drawerLossProtect=(TRUE | FALSE)2] |
+[dataAssurance=(none | enabled)5] |
+----
+
+
+ a| 
+創建-RAID-vol-attr- value-list_'
+ a| 
+「_cree-RAID-volume屬性-value-pair」｛`_crede-RAID-volume：attribute-value-pair？｝
+
+
+
+ a| 
+「_cree-RAID-volume - attribute-value-pair」
+ a| 
+[listing]
+----
+capacity=capacity-spec | owner=(a | b) |
+cacheReadPrefetch=(TRUE | FALSE) | segmentSize=integer-literal |
+usageHint=usage-hint-spec
+----
+
+
+ a| 
+「cree-volume複製屬性- value-list_」
+ a| 
+「_cree-volume複製-attr-value-pair」（建立磁碟區複製-複製-值配對）｝
+
+
+
+ a| 
+「_cree-volume複製屬性-值配對_」
+ a| 
+[listing]
+----
+copyPriority=(highest | high | medium | low | lowest) |
+targetReadOnlyEnabled=(TRUE | FALSE) | copyType=(offline | online) |
+repositoryPercentOfBase=(20 | 40 | 60 | 120 | default) |
+repositoryGroupPreference=(sameAsSource | otherThanSource | default)
+----
+
+
+ a| 
+磁碟機媒體類型_
+ a| 
+「（HDD | SSD | UNKNOKING | ALLMEDIA）」_HDD_表示硬碟。_SSD"表示固態磁碟。
+
+
+
+ a| 
+磁碟機規格_
+ a| 
+磁碟機定義為兩或三個以逗號分隔的整數值。低密度紙匣需要兩個值。高密度紙匣（具有抽取器的紙匣）需要三個值。
+
+
+
+ a| 
+磁碟機規格清單
+ a| 
+磁碟機規格_`_drive-spec_'
+
+
+
+ a| 
+「Dive-type」
+ a| 
+（光纖| SATA | SAS）
+
+[NOTE]
+====
+韌體版本7.86及更新版本僅支援SAS磁碟機。
+
+====
+
+
+ a| 
+「_error-action」
+ a| 
+（停止|繼續）
+
+
+
+ a| 
+「乙太網路-連接埠選項」
+ a| 
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+IPv6LocalAddress=ipv6-address | IPv6RoutableAddress=ipv6-address |
+IPv6RouterAddress=ipv6-address | IPv4Address=ip-address |
+IPv4ConfigurationMethod= (static | dhcp) | IPv4GatewayIP=ip-address |
+IPv4SubnetMask=ip-address | duplexMode=(TRUE | FALSE) | portSpeed=(autoNegotiate | 10 | 100 |
+1000)
+----
+
+
+ a| 
+「_feature-identifier_」
+ a| 
+[NOTE]
+====
+根據預設、所有功能均會啟用。SANtricity
+
+====
+
+
+ a| 
+文件名_
+ a| 
+「_stre-let__」
+
+
+
+ a| 
+」
+ a| 
+「_stre-let__」
+
+
+
+ a| 
+hex-lety_'
+ a| 
+範圍為0x00 - 0xFF的文字。
+
+
+
+ a| 
+「主機卡識別碼」
+ a| 
+（1 | 2 | 3 | 4）
+
+
+
+ a| 
+「主機類型」
+ a| 
+"tring-lit"（字型）|"integer-lit"（整型字型）
+
+
+
+ a| 
+以執行個體為基礎的儲存庫規格
+ a| 
+[listing]
+----
+(repositoryRAIDLevel =repository-raid-level repositoryDrives= (drive-spec-list)
+[repositoryVolumeGroupUserLabel =user-label] [trayLossProtect=(TRUE | FALSE)1]) |
+[drawerLossProtect=(TRUE | FALSE)2]) | (repositoryVolumeGroup=user-label
+[freeCapacityArea=integer-literal3])
+----
+使用「* repositoryDrives*」參數指定「* repositoryRAIDLevel *」參數。請勿指定RAID層級或磁碟機與磁碟區群組。指定Volume群組時、請勿設定「* TrayLosProtect *」參數的值。
+
+
+
+ a| 
+"_ip-address_"
+ a| 
+「*（0-255）.（0-255）.（0-255）.（0-255）*」
+
+
+
+ a| 
+「ipv6-address_」
+ a| 
+（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）*
+
+您必須輸入全部32個十六進位字元。
+
+
+
+ a| 
+「iSCSI主機連接埠」
+ a| 
+[listing]
+----
+(1 | 2 | 3 | 4)
+----
+視您使用的控制器類型而定、主機連接埠號碼可能是2、3或4。
+
+
+
+ a| 
+「iSCSI主機連接埠選項」
+ a| 
+[listing]
+----
+IPv4Address=ip-address | IPv6LocalAddress=ipv6-address |
+IPv6RoutableAddress=ipv6-address | IPv6RouterAddress=ipv6-address |
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) | enableIPv4Priority=(TRUE | FALSE) |
+enableIPv6Priority=(TRUE | FALSE) | IPv4ConfigurationMethod=(static | dhcp) |
+IPv6ConfigurationMethod= (static | auto) | IPv4GatewayIP=ip-address |
+IPv6HopLimit=integer | IPv6NdDetectDuplicateAddress=integer |
+IPv6NdReachableTime=time-interval | IPv6NdRetransmitTime=time-interval |
+IPv6NdTimeOut=time-interval | IPv4Priority=integer |
+IPv6Priority=integer | IPv4SubnetMask=ip-address |
+IPv4VlanId=integer | IPv6VlanId=integer |
+maxFramePayload=integer | tcpListeningPort=tcp-port-id |
+portSpeed=(autoNegotiate | 1 | 10)
+----
+
+
+ a| 
+「_iscsiSession」
+ a| 
+[listing]
+----
+[session-identifier]
+----
+
+
+ a| 
+nvsram-offset_`
+ a| 
+hex-lety_'
+
+
+
+ a| 
+nvsramBitSettingting_'
+ a| 
+nvsram-mask, nvsram-value_'=`_xidecadecimed_'|`_integer-let_'
+
+「_x hexadecimet_」值通常是從0x00到0xFF的值。
+
+
+
+ a| 
+nvsramByteSetting__
+ a| 
+nvsram-value_'=`_xexadecimed_'|`_integer-let_'
+
+「x十六進位」值通常是從0x00到0xFF的值。
+
+
+
+ a| 
+'連接埠ID_'
+ a| 
+[listing]
+----
+(0-127)
+----
+
+
+ a| 
+「RAID層級」
+ a| 
+[listing]
+----
+(0 | 1 | 3 | 5 | 6)
+----
+
+
+ a| 
+「recover-RAID-volume - attr- value-list_」
+ a| 
+復原-RAID-volume：attr-value-pair？'｛`_recover-RAID-volume：attr-value-pair？'｝
+
+
+
+ a| 
+「recover-RAID-volume - attr- value-pair」
+ a| 
+[listing]
+----
+owner=(a|b) |cacheReadPrefetch=(TRUE | FALSE) | dataAssurance=(none | enabled)
+----
+
+
+ a| 
+系統儲存庫-RAID-level
+ a| 
+[listing]
+----
+(1 | 3 | 5 | 6)
+----
+
+
+ a| 
+系統儲存庫-spec_'
+ a| 
+「執行個體型儲存庫規格」|「基於計數的儲存庫規格」
+
+
+
+ a| 
+「sege-size-spec_」
+ a| 
+「_integer-let__」-所有容量均為base 2。
+
+
+
+ a| 
+？？「_Serial-Number_」（序號_）
+ a| 
+[listing]
+----
+string-literal
+----
+
+
+ a| 
+_slotID_'
+ a| 
+對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+[listing]
+----
+(drive=\(trayID,[drawerID,]slotID\)|
+drives=\(trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn\) )
+----
+
+
+ a| 
+「test-devices_」
+ a| 
+[listing]
+----
+controller=(a|b)
+esms=(esm-spec-list)drives=(drive-spec-list)
+----
+
+
+ a| 
+「test-devices-list_」
+ a| 
+「test-devices_」（測試裝置）
+
+
+
+ a| 
+「時區規格」
+ a| 
+[listing]
+----
+(GMT+HH:MM | GMT-HH:MM) [dayLightSaving=HH:MM]
+----
+
+
+ a| 
+「_taid-list_」
+ a| 
+「_taid_'｛`_taid_'｝」
+
+
+
+ a| 
+「_usage-hint -spec_」
+ a| 
+[listing]
+----
+usageHint=(multiMedia | database | fileSystem)
+----
+控制器會使用該磁碟區的使用提示或預期的I/O特性來指出適當的預設磁碟區區段大小和動態快取讀取預先擷取。對於檔案系統和資料庫、會使用128 KB區段大小。對於多媒體、會使用256 KB區段大小。這三種使用提示都能啟用動態快取讀取預先擷取。
+
+
+
+ a| 
+「使用者標籤」
+ a| 
+「_stre-let__」
+
+有效字元為英數字元、破折號及底線。
+
+
+
+ a| 
+「使用者標籤清單」
+ a| 
+「_user-label_'｛`_user-label_'｝」
+
+
+
+ a| 
+volumeGroup-number_`
+ a| 
+「integer-let__」
+
+
+
+ a| 
+WWID_'
+ a| 
+「_stre-let__」
+
+|===
+1要使紙匣遺失保護功能正常運作、您的組態必須遵守下列準則：
+
+[cols="3*"]
+|===
+| 層級 | 紙匣遺失保護的準則 | 所需的最小紙匣數量 
+
+
+ a| 
+磁碟集區
+ a| 
+單一磁碟匣中的磁碟集區不含兩個以上的磁碟機
+ a| 
+6.
+
+
+
+ a| 
+RAID 6
+ a| 
+磁碟區群組在單一磁碟匣中不含兩個以上的磁碟機
+ a| 
+3.
+
+
+
+ a| 
+RAID 3或RAID 5
+ a| 
+磁碟區群組中的每個磁碟機都位於獨立的磁碟匣中
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+RAID 1配對中的每個磁碟機都必須位於獨立的磁碟匣中
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+無法達到紙匣遺失保護。
+ a| 
+不適用
+
+|===
+2為了確保藥櫃遺失保護正常運作、您的組態必須遵守下列準則：
+
+[cols="3*"]
+|===
+| 層級 | 藥櫃損失保護條件 | 所需的藥櫃數量下限 
+
+
+ a| 
+磁碟集區
+ a| 
+此集區包含來自所有五個抽取器的磁碟機、每個抽取器中的磁碟機數量相同。如果磁碟集區包含15、20、25、30、35、 40、45、50、55或60個磁碟機。
+ a| 
+5.
+
+
+
+ a| 
+RAID 6
+ a| 
+磁碟區群組在單一藥櫃中不包含兩個以上的磁碟機。
+ a| 
+3.
+
+
+
+ a| 
+RAID 3或RAID 5
+ a| 
+磁碟區群組中的每個磁碟機都位於獨立的磁碟櫃中。
+ a| 
+3.
+
+
+
+ a| 
+RAID 1
+ a| 
+鏡射配對中的每個磁碟機都必須位於獨立的抽屜中。
+ a| 
+2.
+
+
+
+ a| 
+RAID 0
+ a| 
+無法達到藥櫃損失保護。
+ a| 
+不適用
+
+|===
+如果您的儲存陣列組態中有一個磁碟區群組橫跨多個磁碟匣、則必須確定藥櫃遺失保護的設定與「磁碟匣遺失保護」的設定搭配使用。您可以在沒有紙匣遺失保護的情況下獲得藥櫃遺失保護。如果沒有藥櫃遺失保護、您就無法享有紙匣遺失保護。如果未將「* TrayLosProtect *」參數和「* drawerLosProtect *」參數設為相同的值、儲存陣列會傳回錯誤訊息、且不會建立儲存陣列組態。
+
+3若要判斷可用容量區域是否存在、請執行「show volumeGroup」命令。
+
+4預設磁碟機（磁碟機類型）為「AS」。
+
+如果儲存陣列中只有一種磁碟機類型、則不需要「* driveType *」參數。如果您使用「*磁碟類型*」參數、也必須使用「*熱磁碟區計數*」參數和「*磁碟區群組寬度*」參數。
+
+5「*資料保證*」參數與「資料保證（DA）」功能有關。
+
+資料保證（DA）功能可提升整個儲存系統的資料完整性。DA可讓儲存陣列檢查資料在主機和磁碟機之間移動時可能發生的錯誤。啟用此功能時、儲存陣列會將錯誤檢查代碼（也稱為循環備援檢查或CRC）附加到磁碟區中的每個資料區塊。資料區塊移動之後、儲存陣列會使用這些CRC代碼來判斷傳輸期間是否發生任何錯誤。可能毀損的資料既不會寫入磁碟、也不會傳回主機。
+
+如果您想要使用DA功能、請從僅包含支援DA磁碟機的集區或磁碟區群組開始。然後建立具有DA功能的磁碟區。最後、請使用能夠執行DA的I/O介面、將這些具有DA功能的磁碟區對應至主機。具備DA功能的I/O介面包括Fibre Channel、SAS和iSER over InfiniBand（適用於RDMA/IB的iSCSI擴充功能）。以太網iSCSI或InfiniBand上的SRP不支援DA。
+
+[NOTE]
+====
+當所有必要的硬體和I/O介面都具備DA功能時、您可以將「* dataAssurance *」參數設定為「啟用」、然後在特定作業中使用DA。例如、您可以建立包含具有DA功能磁碟機的磁碟區群組、然後在啟用DA的磁碟區群組中建立磁碟區。使用啟用DA的磁碟區的其他作業也有支援DA功能的選項。
+
+====
+6「*volumesPerGroupCount*」參數是指每個Volume群組容量相等的Volume數量。
+
+7「*安全性類型*」參數可讓您指定要建立之磁碟區群組的安全性設定。所有磁碟區也會設定為您選擇的安全性設定。設定安全性設定的可用選項包括：
+
+* 「無」-磁碟區群組不安全。
+* 「Capable」（功能）：磁碟區群組具備安全功能、但尚未啟用安全功能。
+* 「已啟用」-磁碟區群組已啟用安全功能。
+
+
+[NOTE]
+====
+如果您要設定「*安全性類型=已啟用*」、則必須為儲存陣列建立儲存陣列安全金鑰。（若要建立儲存陣列安全金鑰、請使用「create storageArray securityKey」命令。）
+
+====

@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/resume-snapvolume.html 
+sidebar: sidebar 
+keywords: resume, snapshot, volume 
+summary: resume snapVolume命令會恢復已停止的快照Volume作業。 
+---
+= 恢復Snapshot Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「fapsnapVolume」命令會恢復已停止的快照磁碟區作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+resume snapVolume pass:quotes[[_"snapVolumeName"_]] snapImage=pass:quotes[_"snapCGID:imageID"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napVolume」
+ a| 
+您要恢復其作業的快照磁碟區名稱。將快照磁碟區名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「napImage」
+ a| 
+您想要恢復快照Volume作業的快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 快照群組的名稱
+* 快照群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、即快照群組中快照的順序編號。
+* 「最新」：如果您想要顯示快照群組中建立的最新快照映像、請使用此選項。
+* 「最舊」：如果您想要顯示快照群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 快照群組的識別碼
+* 快照映像的識別碼
+
+
+例如、如果您想要在名稱為snapGroup1的快照群組中恢復Snapshot映像12345的快照磁碟區作業、請使用下列命令：
+
+[listing]
+----
+resume snapVolume ["snapVol1"] snapImage="snapGroup1:12345";
+----
+若要針對快照群組中名稱為snapGroup1的最新快照映像、繼續執行快照磁碟區作業、請使用下列命令：
+
+[listing]
+----
+resume snapVolume ["snapVol1"] snapImage="snapGroup1:newest";
+----
+
+
+== 最低韌體層級
+
+7.83

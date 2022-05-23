@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-volumecopy-source-targetcandidates.html 
+sidebar: sidebar 
+keywords: show, volume, copy, target, candidates 
+summary: show volumeCopy來源的targetCandidate命令會傳回候選磁碟區的相關資訊、您可以將這些候選磁碟區做為磁碟區複製作業的目標。此命令適用於Snapshot Volume複製配對。 
+---
+= 顯示Volume複製目標候選對象
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volumeCopy sarget選項」命令會傳回候選磁碟區的相關資訊、您可以將這些候選磁碟區當作磁碟區複製作業的目標。此命令適用於Snapshot Volume複製配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show volumeCopy source pass:quotes[["_sourceName_"]] targetCandidates
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《來源》
+ a| 
+您嘗試尋找候選目標Volume的來源Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+|===

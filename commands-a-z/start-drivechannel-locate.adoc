@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/start-drivechannel-locate.html 
+sidebar: sidebar 
+keywords: start, drive, channel, locate 
+summary: start driveChannel locate命令可開啟連接至磁碟機通道之磁碟機匣的指示燈、以識別連接至特定磁碟機通道的磁碟機匣。 
+---
+= 啟動磁碟機通道定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start driviveChannel locate」命令可開啟連接至磁碟機通道之磁碟機匣的指示燈、以識別連接至特定磁碟機通道的磁碟機匣。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+使用「shtop driviveChannel locate」命令關閉磁碟機匣上的指示燈
+
+
+
+== 語法
+
+[listing]
+----
+start driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)] locate
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「DiveChannel」
+ a| 
+您要尋找的磁碟機通道識別碼。磁碟機通道識別碼的有效值為「1」、「2」、「3」、「4」、「5」、 6、7或8。將磁碟機通道識別碼括在方括弧（[]）內。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.
+
+7.15新增磁碟機通道識別碼的更新。

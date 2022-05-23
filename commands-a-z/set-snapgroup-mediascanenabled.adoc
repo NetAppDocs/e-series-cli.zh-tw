@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/set-snapgroup-mediascanenabled.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, media, scan 
+summary: set snapGroup mediaScannEnabled命令會在快照群組上執行媒體掃描。 
+---
+= 設定Snapshot群組媒體掃描
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「s snapGroup mediaScannEnabled'」命令會在快照群組上執行媒體掃描。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+mediaScanEnabled=(TRUE | FALSE)
+redundancyCheckEnabled=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+您要在其中執行媒體掃描的快照群組名稱。將快照群組名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「已啟用的媒體掃描」
+ a| 
+用於開啟或關閉Volume的媒體掃描的設定。若要開啟媒體掃描、請將此參數設為「true」。若要關閉媒體掃描、請將此參數設為「假」。（如果在儲存陣列層級停用媒體掃描、此參數將不會生效。）
+
+
+
+ a| 
+「已啟用重複檢查」
+ a| 
+在媒體掃描期間開啟或關閉備援檢查的設定。若要開啟備援檢查、請將此參數設為「true」。若要關閉備援檢查、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+7.83

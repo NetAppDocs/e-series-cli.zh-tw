@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/delete-volumegroup.html 
+sidebar: sidebar 
+keywords: delete, volume, group, command, entire, associated, support, role 
+summary: 刪除volumeGroup命令會刪除整個Volume群組及其相關的Volume。 
+---
+= 刪除Volume群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除磁碟區群組」命令會刪除整個磁碟區群組及其相關的磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[IMPORTANT]
+====
+*可能會損壞儲存陣列組態*-當您執行此命令時、Volume群組中的所有資料都會遺失。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete volumeGroup [_volumeGroupName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+您要刪除的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

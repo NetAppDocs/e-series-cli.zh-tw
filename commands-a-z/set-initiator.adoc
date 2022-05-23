@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/set-initiator.html 
+sidebar: sidebar 
+keywords: set, initiator 
+summary: set啟動器命令會更新啟動器物件。 
+---
+= 設定啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「套用啟動器」命令會更新啟動器物件。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:set-iscsiinitiator.adoc[設定iSCSI啟動器] 命令。
+
+====
+[NOTE]
+====
+此命令僅適用於iSCSI、iSER、NVMe over RoCE、NVMe over InfiniBand及NVMe over Fibre Channel。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+set initiator (["initiatorName"] | <"initiatorQualifiedName">) ([userLabel="newInitiatorName"] |
+[host="newHostName"] | [chapSecret="newSecurityKey"])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《啟動器》
+ a| 
+可讓您指定要設定其內容的啟動器識別碼。請將名稱括在雙引號（「」「」）內。如果值為合格名稱（例如iqn或nqn）、則您也必須以方括弧（[]）括住名稱（如果值為使用者標籤或尖括弧（<>））。
+
+
+
+ a| 
+「userLabel」
+ a| 
+可讓您為啟動器物件輸入新的使用者標籤。將新的使用者標籤括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+可讓您輸入連接主機連接埠的新主機。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+《chapSecret》
+ a| 
+可讓您輸入新的安全金鑰、以用於驗證對等連線。將安全金鑰括在雙引號（""）內。此參數僅適用於「iSCSI」和「iSER」主機介面類型。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/save-storagearray-trustedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, trusted, ca, certificates 
+summary: SAVE storageArray信任憑證命令會擷取陣列已安裝的信任CA憑證。擷取的檔案中包含陣列Web伺服器所要求的任何CA憑證。 
+---
+= 擷取已安裝的信任CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列信任憑證」命令會擷取陣列已安裝的信任CA憑證。擷取的檔案中包含任何從陣列Web伺服器要求的CA憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save storageArray trustedCertificate [allUserInstalled |
+aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] path=pass:quotes["_fileLocation_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"allUserInstalled"
+ a| 
+可讓您指定擷取使用者安裝的憑證。如果您未指定任何別名、預設選項為「allUserInstalled」。
+
+
+
+ a| 
+別名
+ a| 
+可讓您指定要以別名擷取的使用者安裝信任的憑證。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+
+
+ a| 
+"路徑"
+ a| 
+可讓您指定儲存控制器信任憑證的本機位置。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray trustedCertificate allUserInstalled path="C:\";"
+
+SMcli -n Array1 -c "save storageArray trustedCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

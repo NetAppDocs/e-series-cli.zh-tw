@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/show-volumecopy-sourcecandidates.html 
+sidebar: sidebar 
+keywords: show, volume, copy, source, candidates 
+summary: show volumeCopy sourceCandides命令會傳回候選磁碟區的相關資訊、您可以將這些磁碟區做為磁碟區複製作業的來源。此命令適用於Snapshot Volume複製配對。 
+---
+= 顯示Volume複製來源候選項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volumeCopy sourceCandides」命令會傳回候選磁碟區的相關資訊、您可以將這些磁碟區當作磁碟區複製作業的來源。此命令適用於Snapshot Volume複製配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing]
+----
+show volumeCopy sourceCandidates
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+此命令會傳回本範例所示的Volume複製來源資訊。
+
+[listing]
+----
+Volume Name: finance
+   Capacity: 4.0 GB
+   Volume Group: 1
+Volume Name: engineering
+   Capacity: 4.0 GB
+   Volume Group: 2
+----

@@ -1,0 +1,545 @@
+---
+permalink: commands-a-z/set-storagearray.html 
+sidebar: sidebar 
+keywords: set, storage, array 
+summary: set storageArray命令可定義儲存陣列的內容。 
+---
+= 設定儲存陣列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray」命令可定義儲存陣列的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在韌體版本8.10中、「cacheFlushStop」參數已過時、將在未來的儲存管理軟體版本中移除。
+
+====
+
+
+== 語法
+
+[listing]
+----
+set storageArray
+([autoLoadBalancingEnable=(TRUE | FALSE)]|
+[autoSupportMaintenanceWindow AutoSupport Maintenance Window parameters]
+[autoSupport schedule AutoSupport Schedule Parameters]|
+[autoSupportConfig (enable | disable)]|
+[autoSupportOnDemand (enable | disable)]|
+[autoSupportRemoteDiag (enable |disable)]|
+[cacheBlockSize=cacheBlockSizeValue]|
+[cacheFlushStart=cacheFlushStartSize]|
+[cacheFlushStop=cacheFlushStopSize]|
+[cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
+[controllerHealthImageAllowOverWrite]|
+[defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
+[directoryServer directory server parameters]|
+[externalKeyManagement external key management parameters]|
+[failoverAlertDelay=delayValue]|
+[hostConnectivityReporting (enable | disable)]|
+[icmpPingResponse=(TRUE | FALSE)]|
+[isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
+[isnsIPv6Address=ipAddress]|
+[isnsListeningPort=listeningPortIPAddress]]|
+[isnsRegistration=(TRUE | FALSE)]|
+[learnCycleDate learn cycle parameters]|
+[localUsername=local user name parameters]|
+[loginBanner file="path_to_login_banner"]|
+[managementInterface restOnly={true | false}]|
+[mediaScanRate=(disabled | 1-30)]|
+[odxEnabled=(TRUE | FALSE)]|
+[password="password"]|
+[passwordLength=<INTEGER>]|
+[pqValidateOnReconstruct P/Q Validate on Reconstruct parameters]|
+[redundancyMode=(simplex | duplex)]|
+[revocationCheckSettings revocation check settings parameters]|
+[securityKey]|
+[symbol SYMbol user name and password parameters]|
+[syslog syslog parameters]|
+[time]|
+[trayPositions=(controller | trayID ... trayIDn)]|
+[unnamedDiscoverySession=(TRUE | FALSE)]|
+[userLabel="storageArrayName"]|
+[userSession sessionTimeout=n]|
+[vaaiEnabled=(TRUE | FALSE)])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「AutoLoadBalancingEnable」
+ a| 
+此參數可在控制器上啟用自動負載平衡。若要啟用此選項、請將此參數設為「true」。若要停用此選項、請將此參數設為「假」。
+
+[NOTE]
+====
+啟用「自動負載平衡」功能時、也會啟用「主機連線報告」功能。
+
+====
+
+
+ a| 
+《不排程》AutoSupport
+ a| 
+設定AutoSupport 每週和每日時間、以及每週傳送此類訊息的天數。
+
+
+
+ a| 
+「AutoSupportConfig」
+ a| 
+每次韌體偵測到重大MEL事件時、自動收集支援資料的設定。此參數具有下列值：
+
+* "enable（啟用）"：開啟支援資料的收集功能
+* 「停用」-關閉支援資料的收集
+
+
+僅在下列情況下使用此參數：
+
+* 儲存陣列無法使用此功能AutoSupport
+* 支援先前使用此參數之儲存陣列的組態
+
+
+[NOTE]
+====
+您無法將此參數搭配ASUP命令使用。
+
+====
+
+
+ a| 
+「自動支援維護視窗」
+ a| 
+開啟或關閉AutoSupport 「還原維護時間」功能、並設定功能。
+
+
+
+ a| 
+「cacheBlockSiz」
+ a| 
+控制器用來管理快取的快取區塊大小。有效值包括「4」（4 KB）、「8」（8 KB）、「16」（16 KB）或「32」（32 KB）。
+
+
+
+ a| 
+「cacheMirrorDataAssuranceChecksEnable」
+ a| 
+此參數可在控制器上啟用快取鏡射資料保證檢查。若要啟用此選項、請將此參數設為「true」。若要停用此選項、請將此參數設為「假」。
+
+
+
+ a| 
+「cacheFlushStart」
+ a| 
+快取中導致快取排清的未寫入資料百分比。使用從「0」到「100」的整數值來定義百分比。預設值為「80」。
+
+
+
+ a| 
+《cacheFlushStop》
+ a| 
+[NOTE]
+====
+此參數已過時、將在未來的版本中移除。
+
+====
+快取中停止快取排清的未寫入資料百分比。使用從「0」到「100」的整數值來定義百分比。此值必須小於「cacheFlushStart」參數的值。
+
+
+
+ a| 
+「controllerHealthImageAllowOverWrite」
+ a| 
+在控制器上設定旗標、允許新的控制器健全狀況映像覆寫支援控制器健全狀況映像功能的儲存陣列上現有的控制器健全狀況映像。
+
+
+
+ a| 
+「資料錯誤主機類型」
+ a| 
+控制器所連接之任何未設定主機連接埠的預設主機類型。若要產生儲存陣列的有效主機類型清單、請執行「show storageArray hostTypeTable」命令。主機類型是以名稱或數字索引來識別。將主機類型名稱括在雙引號（""）內。請勿以雙引號括住主機類型的數字識別碼。
+
+
+
+ a| 
+"DirecdirectoryServer"
+ a| 
+更新目錄伺服器組態、包括角色對應。
+
+
+
+ a| 
+《外部KeyManagement》
+ a| 
+設定外部金鑰管理伺服器位址和連接埠號碼
+
+
+
+ a| 
+「故障轉移警示延遲」
+ a| 
+容錯移轉警示延遲時間（以分鐘為單位）。延遲時間的有效值為「0」至「60」分鐘。預設值為「5」。
+
+
+
+ a| 
+《hostConnectivityReports》
+ a| 
+此參數可在控制器上啟用主機連線報告功能。若要啟用此選項、請將此參數設為「啟用」。若要停用此選項、請將此參數設為「停用」。
+
+[NOTE]
+====
+如果您在啟用自動負載平衡時嘗試停用主機連線報告、就會收到錯誤訊息。首先停用自動負載平衡功能、然後停用主機連線報告功能。
+
+====
+[NOTE]
+====
+停用「自動負載平衡」時、您可以保持啟用「主機連線報告」。
+
+====
+
+
+ a| 
+《icmpPingResponse"》
+ a| 
+此參數會開啟或關閉回應要求訊息。將參數設為「true」以開啟回應要求訊息。將參數設為「假」以關閉回應要求訊息。
+
+
+
+ a| 
+「isnslIPv6組態方法」
+ a| 
+您要用來定義iSNS伺服器組態的方法。您可以選取「靜態」來輸入IPv4 iSNS伺服器的IP位址。對於IPV4、您可以輸入「dhcps」、選擇讓動態主機組態傳輸協定（DHCP）伺服器選取iSNS伺服器IP位址。若要啟用DHCP、您必須將「isnsIPV4Address」參數設定為「0.00.0」。
+
+
+
+ a| 
+「isnsIPv6位址」
+ a| 
+要用於iSNS伺服器的IPv6位址。
+
+
+
+ a| 
+「isnslisteningPort」
+ a| 
+要用於iSNS伺服器接聽連接埠的IP位址。偵聽連接埠的值範圍為「49152」到「65535"。預設值為「53205」。
+
+偵聽連接埠位於伺服器上、並執行下列活動：
+
+* 監控傳入的用戶端連線要求
+* 管理伺服器的流量
+
+
+當用戶端要求與伺服器進行網路工作階段時、接聽程式會收到實際的要求。如果用戶端資訊與接聽程式資訊相符、則接聽程式會授與資料庫伺服器的連線。
+
+
+
+ a| 
+《isnstRegistration》
+ a| 
+此參數會將儲存陣列列為iSNS伺服器上的iSCSI目標。若要在iSNS伺服器上登錄儲存陣列、請將此參數設為「true」。若要從iSNS伺服器移除儲存陣列、請將此參數設為「假」。
+
+[NOTE]
+====
+執行「show storageArray」命令時、您無法將「isnRegistration」參數搭配任何其他參數使用。
+
+====
+如需有關iSNS登錄的詳細資訊、請參閱「set storageArray isnsRegistration」命令。
+
+
+
+ a| 
+「learnCyleDate」
+ a| 
+設定控制器電池記憶週期。
+
+
+
+ a| 
+「localUsername」
+ a| 
+可讓您為特定角色設定本機使用者名稱密碼或符號密碼。
+
+
+
+ a| 
+「登入橫幅」
+ a| 
+可讓您上傳要做為登入橫幅的文字檔。橫幅文字可以包含建議事項通知和同意訊息、在使用SANtricity 者在執行命令之前、先向使用者顯示通知和同意訊息
+
+
+
+ a| 
+《馬納加達介面》
+ a| 
+變更控制器的管理介面。變更管理介面類型、以在儲存陣列與其管理軟體之間強制執行機密性、或存取外部工具。
+
+
+
+ a| 
+《新知》
+ a| 
+執行媒體掃描的天數。有效值是關閉媒體掃描的「禁用」、或是「1」天到「30」天、其中「1」天是最快的掃描速度、而「30」天是最慢的掃描速度。除「停用」或「1」到「30」以外的值、不允許媒體掃描正常運作。
+
+
+
+ a| 
+「odxEnabled」
+ a| 
+開啟或關閉儲存陣列的卸載資料傳輸（ODX）。
+
+
+
+ a| 
+密碼
+ a| 
+儲存陣列的密碼。將密碼括在雙引號（""）內。
+
+[NOTE]
+====
+在8.40版本中、此參數已過時。改用「localUsername」或符號「symbol」參數、以及「password」或「adminpassword」參數。
+
+====
+
+
+ a| 
+「密碼長度」
+ a| 
+可讓您設定所有新密碼或更新密碼的最低長度要求。使用0到30之間的值。
+
+
+
+ a| 
+《pqValidateOnReconstructt》
+ a| 
+修改重建功能的P/Q驗證。
+
+
+
+ a| 
+"undancyMode"（重複模式）
+ a| 
+當您有單一控制器時、請使用「最簡單」模式。如果您有兩個控制器、請使用「duplex」模式。
+
+
+
+ a| 
+「REMationChecksettings」
+ a| 
+可讓您啟用或停用撤銷檢查、以及設定線上憑證狀態傳輸協定（OCSP）伺服器。
+
+
+
+ a| 
+「安全性金鑰」
+ a| 
+設定在整個儲存陣列中用來實作磁碟機安全功能的內部安全金鑰。
+
+[NOTE]
+====
+用於內部安全金鑰。使用外部金鑰管理伺服器時、請使用「create storageArray securityKey」命令。
+
+====
+
+
+ a| 
+「symbol」
+ a| 
+可讓您設定特定角色的符號密碼。
+
+
+
+ a| 
+"記錄檔"
+ a| 
+可讓您變更syslog伺服器位址、傳輸協定或連接埠號碼。
+
+
+
+ a| 
+《時間》
+ a| 
+將控制器時鐘與執行此命令的主機時鐘同步、以設定儲存陣列中兩個控制器的時鐘。
+
+
+
+ a| 
+「TrayPositionions」
+ a| 
+所有紙匣ID的清單。清單中的磁碟匣ID順序定義了控制器匣和儲存陣列中磁碟機匣的位置。有效值為「0」至「99」。輸入以空格分隔的紙匣ID值。將紙匣ID值清單括在括弧中。對於控制器匣具有預先定義識別碼且不在有效匣位置值範圍內的儲存陣列、請使用「控制器」值。
+
+[NOTE]
+====
+韌體版本6.14之後、「控制器」選項無效。
+
+====
+
+
+ a| 
+「UnnamedDiscoverySession」
+ a| 
+讓儲存陣列能夠參與未命名的探索工作階段。
+
+
+
+ a| 
+「userLabel」
+ a| 
+儲存陣列的名稱。將儲存陣列名稱括在雙引號（""）內。
+
+
+
+ a| 
+「userSession」
+ a| 
+可讓您在System Manager中設定逾時時間、以便在指定時間後中斷使用者的非作用中工作階段連線。
+
+
+
+ a| 
+「vaaiEnabled」
+ a| 
+開啟或關閉儲存陣列的VMware vStorage API Array Architecture（VAAI）
+
+|===
+
+
+== 附註
+
+除了「isnRegistration」之外、使用此命令時、您可以指定一或多個選用參數。
+
+
+
+== 自動支援資料
+
+[NOTE]
+====
+您無法將此參數搭配ASUP命令使用。
+
+====
+啟用時、「set storageArray autosupSupportConfig」命令會在每次偵測到重大事件記錄（MEL）事件時、傳回儲存陣列的所有組態和狀態資訊。組態和狀態資訊會以物件圖表的形式傳回。物件圖表包含儲存陣列的所有相關邏輯和實體物件及其相關狀態資訊。
+
+「set storageArray autoSupportConfig」命令會以下列方式收集組態和狀態資訊：
+
+* 每72小時會自動收集組態和狀態資訊。組態和狀態資訊會儲存至儲存陣列壓縮歸檔檔案。歸檔檔檔案有一個時間戳記、可用來管理歸檔檔案。
+* 每個儲存陣列都會維護兩個儲存陣列壓縮歸檔檔案。Zip歸檔檔案會保留在磁碟機上。超過72小時的時間段後、最舊的歸檔檔檔檔案會在新週期中一律覆寫。
+* 使用此命令啟用組態與狀態資訊的自動收集之後、會啟動初始資訊集合。在您發出命令後收集資訊、可確保有一個歸檔檔案可用、並開始時間戳記週期。
+
+
+您可以在多個儲存陣列上執行「set storageArray autoSupportConfig」命令。
+
+
+
+== 快取區塊大小
+
+當您定義快取區塊大小時、請針對需要I/O串流的儲存陣列使用4-KB快取區塊大小、這些串流通常是小型和隨機的。當大部分I/O串流大於4 KB但小於8 KB時、請使用8 KB快取區塊大小。對於需要大量資料傳輸、循序或高頻寬應用程式的儲存陣列、請使用16-KB快取區塊大小或32-KB快取區塊大小。
+
+「cacheBlockSizes」參數可定義儲存陣列中所有磁碟區所支援的快取區塊大小。並非所有的控制器類型都支援所有快取區塊大小。對於備援組態、此參數包括儲存陣列中兩個控制器所擁有的所有磁碟區。
+
+
+
+== 快取排清開始
+
+當您定義值來啟動快取排清時、值過低會增加主機讀取所需資料不在快取中的機率。低值也會增加維持快取層級所需的磁碟機寫入次數、進而增加系統負荷並降低效能。
+
+
+
+== 預設主機類型
+
+定義主機類型時、如果已啟用儲存分割、則預設主機類型僅會影響預設群組中對應的磁碟區。如果未啟用儲存分割、則所有附加至儲存陣列的主機都必須執行相同的作業系統、並與預設的主機類型相容。
+
+
+
+== 媒體掃描速率
+
+媒體掃描會在儲存陣列中狀態最佳、沒有進行修改作業、且已啟用「多媒體掃描」參數的所有磁碟區上執行。使用「show volume」命令來啟用或停用「mediaScarate」參數。
+
+
+
+== 密碼
+
+密碼會儲存在每個儲存陣列上。為了獲得最佳保護、密碼必須符合下列條件：
+
+* 密碼長度必須介於8到30個字元之間。
+* 密碼必須包含至少一個大寫字母。
+* 密碼必須包含至少一個英文字母。
+* 密碼必須包含至少一個數字。
+* 密碼必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您在儲存陣列中使用完整磁碟加密磁碟機、則必須將這些準則用於儲存陣列密碼。
+
+====
+[NOTE]
+====
+您必須先為儲存陣列設定密碼、才能為加密的完整磁碟加密磁碟機建立安全金鑰。
+
+====
+
+
+== 最低韌體層級
+
+5．00會新增「defaultHostType」參數。
+
+5.40新增「故障轉移警示延遲」參數。
+
+6.10新增「dundancyMode」、「TrayPositions」和「Time」參數。
+
+6.14新增「alarm」（警示）參數。
+
+7.10新增「icmpPingResponse"、「unnamedDiscoverySession」、「isnsIPv6位址」和「isnsIPv6組態方法」等參數。
+
+7.15新增更多快取區塊大小和「learnCyleDate」參數。
+
+7.86刪除不再使用的「alarm」參數、並新增「coreDumpAllowOverWrite」參數。
+
+8.10取代了「cacheFlushStop」參數。
+
+8.20新增「odxEnabled」和「vaaiEnabled」參數。
+
+8.20更新了"cacheBlockSize"參數、將"cacheBlockSizeValue"新增為4（4 KB）。
+
+8.20將「coreDumpAllowOverWrite」參數取代為「controllerHealthImageAllowOverWrite」參數。
+
+8.30會新增「AutoLoadBalancingEnable」參數。
+
+8.40新增「localusernamer」參數（與使用者名稱變數搭配使用、並使用「password」或「adminpassword」參數。此外還會新增「symbol」參數（與使用者名稱變數搭配使用、以及「password」或「adminpassword」參數使用）。
+
+8.40取代了「密碼」和「user勞力」獨立參數。
+
+8.40新增「managementInterface」參數。
+
+8.40新增「externalKeyManagement」參數。
+
+8.41新增了「cacheMirrorDataAssuranceChecksEnable」、「direcdirectoryServer」、「userSession」、「passwords長度」及「loginBanner」等參數。
+
+8.42新增了「pqValidateOnReconstructt」、「syslog」、「hostConnectivityReports」及「remoationChecksettings」等參數。

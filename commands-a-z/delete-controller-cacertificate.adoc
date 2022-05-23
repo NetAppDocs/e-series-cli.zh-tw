@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/delete-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: remove, install, root, intermediate, ca, certificates 
+summary: 刪除控制器caCertificate命令會從指定的控制器移除已安裝的根或中繼CA憑證。 
+---
+= 移除已安裝的根/中介CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除控制器caCertificate」命令會從指定的控制器移除已安裝的根/中繼CA憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+delete controller [(a|b)] caCertificate aliases=("alias1" ... "aliasN")
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓您指定要從中刪除簽署憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+別名
+ a| 
+可讓您使用別名指定一或多個要刪除的CA憑證、或指定「全部」。別名必須來自正在刪除憑證的控制器。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete controller[a] caCertificate aliases=("myAlias" "anotherAlias");"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

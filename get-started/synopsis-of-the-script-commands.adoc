@@ -1,0 +1,294 @@
+---
+permalink: get-started/synopsis-of-the-script-commands.html 
+sidebar: sidebar 
+keywords: synopsis, script commands 
+summary: 由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。 
+---
+= 指令碼命令摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。不過、這些命令屬於一般類別、當您套用命令來設定或維護儲存陣列時、就會重複使用這些命令。下表列出指令碼命令的一般格式及每個命令的定義。
+
+[cols="2*"]
+|===
+| 語法 | 說明 
+
+
+ a| 
+[listing]
+----
+accept object
+{statement-data}
+---- a| 
+執行擱置的作業。
+
+
+
+ a| 
+[listing]
+----
+activate object
+{statement-data}
+---- a| 
+設定環境、以便在環境已正確設定時執行作業或執行作業。
+
+
+
+ a| 
+[listing]
+----
+autoConfigure storageArray
+{statement-data}
+---- a| 
+自動建立以命令中指定參數為基礎的組態。
+
+
+
+ a| 
+[listing]
+----
+check object
+{statement-data}
+---- a| 
+啟動作業以報告物件中的錯誤、這是同步作業。
+
+
+
+ a| 
+[listing]
+----
+clear object
+{statement-data}
+---- a| 
+捨棄物件部分屬性的內容。此作業具有破壞性、無法回復。
+
+
+
+ a| 
+[listing]
+----
+create object
+{statement-data}
+---- a| 
+建立指定類型的物件。
+
+
+
+ a| 
+[listing]
+----
+deactivate object
+{statement-data}
+---- a| 
+移除作業環境。
+
+
+
+ a| 
+[listing]
+----
+delete object
+---- a| 
+刪除先前建立的物件。
+
+
+
+ a| 
+[listing]
+----
+diagnose object
+{statement-data}
+---- a| 
+執行測試並顯示結果。
+
+
+
+ a| 
+[listing]
+----
+disable object {statement-data}
+---- a| 
+防止功能運作。
+
+
+
+ a| 
+[listing]
+----
+download object
+{statement-data}
+---- a| 
+將資料傳輸至儲存陣列或與儲存陣列相關的硬體。
+
+
+
+ a| 
+[listing]
+----
+enable object
+{statement-data}
+---- a| 
+設定要操作的功能。
+
+
+
+ a| 
+[listing]
+----
+load object
+{statement-data}
+---- a| 
+將資料傳輸至儲存陣列或與儲存陣列相關的硬體。此命令在功能上與「download'」命令類似。
+
+
+
+ a| 
+[listing]
+----
+recopy object
+{statement-data}
+---- a| 
+使用現有的Volume複製配對重新啟動Volume複製作業。您可以在重新啟動作業之前變更參數。
+
+
+
+ a| 
+[listing]
+----
+recover object
+{statement-data}
+---- a| 
+從儲存的組態資料和陳述式參數重新建立物件。（此命令類似於「create」命令。）
+
+
+
+ a| 
+[listing]
+----
+remove object
+{statement-data}
+---- a| 
+移除物件之間的關聯。
+
+
+
+ a| 
+[listing]
+----
+repair object
+{statement-data}
+---- a| 
+修復由「Check」命令所發現的錯誤。
+
+
+
+ a| 
+[listing]
+----
+replace object
+{statement-data}
+---- a| 
+指定的物件會取代儲存陣列中的現有物件。
+
+
+
+ a| 
+[listing]
+----
+reset object
+{statement-data}
+---- a| 
+將硬體或物件恢復為初始狀態。
+
+
+
+ a| 
+[listing]
+----
+resume object
+---- a| 
+啟動暫停的作業。此作業會在暫停時從離開處開始。
+
+
+
+ a| 
+[listing]
+----
+revive object
+---- a| 
+強制物件從「失敗」狀態進入「最佳」狀態。此命令只能作為錯誤恢復程序的一部分使用。
+
+
+
+ a| 
+[listing]
+----
+save object
+{statement-data}
+---- a| 
+將物件的相關資訊寫入檔案。
+
+
+
+ a| 
+[listing]
+----
+set object
+{statement-data}
+---- a| 
+變更物件屬性。所有變更都會在命令傳回時完成。
+
+
+
+ a| 
+[listing]
+----
+show object
+{statement-data}
+---- a| 
+顯示物件的相關資訊。
+
+
+
+ a| 
+[listing]
+----
+start object
+{statement-data}
+---- a| 
+啟動非同步作業。您可以在某些作業啟動後停止。您可以查詢某些作業的進度。
+
+
+
+ a| 
+[listing]
+----
+stop object
+{statement-data}
+---- a| 
+停止非同步作業。
+
+
+
+ a| 
+[listing]
+----
+suspend object
+{statement-data}
+---- a| 
+停止作業。然後您可以重新啟動暫停的作業、並從暫停點繼續執行。
+
+
+
+ a| 
+[listing]
+----
+validate object
+{statement-data}
+---- a| 
+驗證安全金鑰。
+
+|===

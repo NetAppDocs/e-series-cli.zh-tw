@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/create-cgsnapimage-consistencygroup.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot image 
+summary: 他建立了cgrSnapImage Consistency Group命令、為每個基礎磁碟區建立一個新的快照映像、該磁碟區是Snapshot一致性群組的成員。 
+---
+= 建立一致性群組快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create cgrpSnapImage Consistency Group」命令會針對快照一致性群組的成員、為每個基礎磁碟區建立新的快照映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create cgSnapImage consistencyGroup=pass:quotes[_"consistencyGroupName"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《抵抗集團》
+ a| 
+您要為其建立Snapshot映像的一致性群組名稱。將一致性群組名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+此命令會在建立快照映像之前、將一致性群組成員之每個基礎磁碟區的所有擱置中I/O作業都排空並暫停。如果無法為所有一致性群組成員成功完成所有快照映像的建立、則作業將失敗、而且不會建立新的快照映像。
+
+通常、快照一致性群組的所有成員都有相同數量的快照映像。當您將新成員新增至快照一致性群組時、該新成員缺少先前在快照一致性群組的已建立成員上建立的快照映像。這不是錯誤狀況。只有快照一致性群組成員子集上存在的快照映像刪除或復原要求、只會影響指定快照映像實際存在的成員。
+
+
+
+== 最低韌體層級
+
+7.83

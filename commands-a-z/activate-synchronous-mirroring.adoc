@@ -1,0 +1,239 @@
+---
+permalink: commands-a-z/activate-synchronous-mirroring.html 
+sidebar: sidebar 
+keywords: activate, synchronous mirroring, supported arrays, roles, context, syntax, parameters, data assurance management, minimum firmware level 
+summary: activate storageArray feature命令會啟動同步鏡射功能、並建立鏡射儲存庫磁碟區。 
+---
+= 啟動同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「activate storageArray feature」命令會啟動同步鏡射功能、並建立鏡射儲存庫磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+使用此命令時、您可以使用下列三種方法之一來定義鏡射儲存庫磁碟區：
+
+* 使用者定義的磁碟機
+* 使用者定義的Volume群組
+* 使用者定義的磁碟機數量
+
+
+如果您選擇定義多個磁碟機、控制器韌體會選擇要用於鏡射儲存庫磁碟區的磁碟機。
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法（使用者定義的磁碟機）
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(0 |1 | 3 | 5 | 6)
+repositoryDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]pass:quotes[_slotID1 ... trayIDn_,pass:quotes[[_drawerIDn_,]pass:quotes[_slotIDn_
+[driveType=(fibre | SATA | SAS | NVMe4K)]
+)
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(0 |1 | 5 | 6)
+repositoryDrives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn)_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+
+
+== 語法（使用者定義的Volume群組）
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryVolumeGroup=pass:quotes[_volumeGroupName_]
+[freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
+----
+
+
+== 語法（使用者定義的磁碟機數量）
+
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(1 | 3 | 5 | 6)
+repositoryDriveCount=pass:quotes[_numberOfDrives_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+[listing, subs="+macros"]
+----
+activate storageArray feature=syncMirror
+repositoryRAIDLevel=(1 | 5 | 6)
+repositoryDriveCount=pass:quotes[_numberOfDrives_]
+[repositoryVolumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
+[trayLossProtect=(TRUE | FALSE)]
+[drawerLossProtect=(TRUE | FALSE)]
+[dataAssurance=(none | enabled)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"repositoryRAIDlevel"
+ a| 
+鏡射儲存庫磁碟區的RAID層級。有效值包括「0」、「1」、「3」、「5」或「6」。
+
+
+
+ a| 
+"repositoryDrives"
+ a| 
+鏡射儲存庫磁碟區的磁碟機。對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+
+
+ a| 
+「repositoryVolume GroupUserLabel」
+ a| 
+您要為鏡射儲存庫磁碟區所在的新Volume群組命名的名稱。將Volume群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「repositoryVolume Group」
+ a| 
+鏡射儲存庫磁碟區所在的鏡射儲存庫磁碟區群組名稱。（若要判斷儲存陣列中磁碟區群組的名稱、請執行「show storageArray profile」命令。）
+
+
+
+ a| 
+《FreeCapacityArea》
+ a| 
+您要用來建立鏡射儲存庫Volume之現有Volume群組中可用空間的索引編號。可用容量定義為磁碟區群組中現有磁碟區之間的可用容量。例如、Volume群組可能有下列區域：Volume 1、可用容量、Volume 2、可用容量、Volume 3、 可用容量：若要使用Volume 2以下的可用容量、請指定：
+
+[listing]
+----
+freeCapacityArea=2
+----
+執行「show volumeGroup」命令、判斷可用容量區域是否存在。
+
+
+
+ a| 
+"repositoryDriveCount"
+ a| 
+您要用於鏡射儲存庫磁碟區的未指派磁碟機數目。
+
+
+
+ a| 
+「DiveType」
+ a| 
+您要擷取資訊的磁碟機類型。您無法混用磁碟機類型。
+
+有效的磁碟機類型包括：
+
+* "光纖"
+* 《ATA》
+* 「as」
+* NVMe4K
+
+
+如果未指定磁碟機類型、則命令預設為All type（所有類型）。
+
+
+
+ a| 
+「TrayLossProtect」
+ a| 
+當您建立鏡射儲存庫磁碟區時、會強制執行磁碟匣遺失保護的設定。若要強制執行紙匣遺失保護、請將此參數設為「true」。預設值為「假」。
+
+
+
+ a| 
+《DrawerLosProtect》
+ a| 
+當您建立鏡射儲存庫磁碟區時、強制保護藥櫃資料夾遺失的設定。若要強制執行藥櫃遺失保護、請將此參數設為「true」。預設值為「假」。
+
+|===
+
+
+== 附註
+
+「repositoryDrives」參數同時支援大容量磁碟機匣和低容量磁碟機匣。大容量磁碟機匣具有可容納磁碟機的抽屜。從磁碟機匣中滑出抽取器、以便存取磁碟機。低容量磁碟機匣沒有抽屜。對於大容量磁碟機匣、您必須指定磁碟機匣的識別碼（ID）、匣的識別碼、以及磁碟機所在插槽的識別碼。對於低容量磁碟機匣、您只需要指定磁碟機匣的ID、以及磁碟機所在插槽的ID。對於低容量磁碟機匣、識別磁碟機位置的另一種方法是指定磁碟機匣的ID、將抽取匣的ID設為「0」、然後指定磁碟機所在插槽的ID。
+
+如果您為「repositoryDrives」參數選取的磁碟機與其他參數不相容（例如「repositoryRAIDLevel」參數）、指令碼命令會傳回錯誤、而同步鏡像不會啟動。錯誤會傳回鏡射儲存庫磁碟區所需的空間量。然後您可以重新輸入命令、並指定適當的空間量。
+
+如果您輸入的儲存庫儲存空間值對於鏡射儲存庫磁碟區而言太小、則控制器韌體會傳回錯誤訊息、提供鏡射儲存庫磁碟區所需的空間量。命令不會嘗試啟動同步鏡射。您可以使用儲存庫儲存空間值錯誤訊息中的值來重新輸入命令。
+
+當您指派磁碟機時、如果您將「TrayLossProtect」參數設為「true」、並從任何一個磁碟匣中選取多個磁碟機、則儲存陣列會傳回錯誤訊息。如果您將「TrayLosProtect」參數設為「假」、儲存陣列會執行作業、但您建立的磁碟區群組可能沒有磁碟匣遺失保護功能。
+
+當控制器韌體指派磁碟機時、如果您將「TrayLosProtect」參數設為「true」、則如果控制器韌體無法提供磁碟機、導致新的Volume群組具有磁碟匣遺失保護、則儲存陣列會傳回錯誤訊息。如果您將「TrayLosProtect」參數設為「假」、儲存陣列就會執行作業、即使這表示Volume群組可能沒有磁碟匣遺失保護功能。
+
+「drawerLosProtect」參數可決定當藥櫃故障時、是否可以存取磁碟區上的資料。指派磁碟機時、如果您將「drawerLosProtect」參數設為「true」、並從任一藥櫃中選取多個磁碟機、則儲存陣列會傳回錯誤。如果您將「drawerLosProtect」參數設為「假」、則儲存陣列會執行作業、但您所建立的Volume群組可能沒有藥櫃遺失保護。
+
+
+
+== 資料保證管理
+
+資料保證（DA）功能可提升整個儲存系統的資料完整性。DA可讓儲存陣列檢查資料在主機和磁碟機之間移動時可能發生的錯誤。啟用此功能時、儲存陣列會將錯誤檢查代碼（也稱為循環備援檢查或CRC）附加到磁碟區中的每個資料區塊。資料區塊移動之後、儲存陣列會使用這些CRC代碼來判斷傳輸期間是否發生任何錯誤。可能毀損的資料既不會寫入磁碟、也不會傳回主機。
+
+如果您想要使用DA功能、請從僅包含支援DA磁碟機的集區或磁碟區群組開始。然後建立具有DA功能的磁碟區。最後、請使用能夠執行DA的I/O介面、將這些具有DA功能的磁碟區對應至主機。具備DA功能的I/O介面包括Fibre Channel、SAS和iSER over InfiniBand（適用於RDMA/IB的iSCSI擴充功能）。以太網iSCSI或InfiniBand上的SRP不支援DA。
+
+[NOTE]
+====
+當所有磁碟機都具備DA功能時、您可以將「datAssurance」參數設定為「啟用」、然後在特定作業中使用DA。例如、您可以建立包含具有DA功能磁碟機的磁碟區群組、然後在啟用DA的磁碟區群組中建立磁碟區。使用啟用DA的磁碟區的其他作業也有支援DA功能的選項。
+
+====
+如果「data Assurance」參數設為「啟用」、則僅會考慮磁碟區候選磁碟機的資料保證功能；否則、將會考慮具備資料保證功能的磁碟機和不具備資料保證功能的磁碟機。如果只有可用的資料保證磁碟機、則會使用啟用的資料保證磁碟機來建立新的Volume群組。
+
+
+
+== 最低韌體層級
+
+7.10新增RAID層級6功能。
+
+7.60新增「drawerID」使用者輸入、「driveMediaType」參數及「drawerLosProtect」參數。
+
+7.75新增了「data Assurance」參數。
+
+8.10移除「driveMediaType」參數。
+
+8.60新增「driveType」參數。

@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/show-storagearray-autosupport.html 
+sidebar: sidebar 
+keywords: show, autosupport, configuration, e2800, e5700, storage, arrays 
+summary: show storageArray AutoSupport flexection命令會顯示AutoSupport 儲存陣列的「flexbund產品 組合」集合設定。 
+---
+= 顯示AutoSupport 錶面組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray AutoSupport fit2」命令會顯示AutoSupport 儲存陣列的「還原套裝組合」集合設定。
+
+
+
+== 支援的陣列
+
+此命令適用於E2800、E5700、EF600及EF300儲存陣列。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」或「儲存監控」角色。
+
+
+
+== 背景
+
+此命令的命令輸出顯示下列組態資訊：
+
+* 此管理網域AutoSupport 的啟用狀態為「更新功能」、AutoSupport 「更新功能」、「更新功能」及AutoSupport 「更新遠端診斷」功能
+* 取決於設定的交付方法的交付參數：
++
+** 傳送方法為電子郵件（SMTP）：顯示目的地電子郵件地址、郵件轉送伺服器和寄件者電子郵件地址
+** 交付方法為HTTP或HTTPS：
++
+*** 直接連線-顯示目的地IP位址
+*** Proxy伺服器連線：顯示主機位址、連接埠號碼及驗證詳細資料
+*** 自動Proxy組態指令碼（PAC）連線-顯示指令碼位置
+
+
+
+
+* 每日和每週偏好的時間範圍AutoSupport
+* 有關ASUP功能、機箱序號、以及已設定的每日和每週排程的資訊
+
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray autoSupport
+----
+
+
+== 參數
+
+無。
+
+
+
+=== 範例
+
+[listing]
+----
+
+   SMcli -n Array1 -c "show storageArray autoSupport;"
+
+   The AutoSupport feature is enabled on this storage array.
+   The AutoSupport OnDemand feature is enabled on this storage array.
+   The AutoSupport Remote Diagnostics feature is enabled on this storage array.
+
+   Delivery Method: Email (SMTP)
+     Destination email address: http://support.mycompany.com/put/AsupPut/
+     Mail relay server: ra.eng.netapp.com
+     Sender email address: user@netapp.com
+   -or-
+   Delivery Method: HTTP
+     Destination IP address: http://support.mycompany.com/put/AsupPut/
+     Connection: Direct
+         -or-
+     Connection: Proxy server
+      Host Address: 10.227.76.178
+       Port number: 8080
+       Authentication required: Yes
+        User name: admin
+        Password: ********
+         -or-
+     Connection: Automatic proxy configuration script (PAC)
+      Script location: http://esgweb.eng.mycompany.com/proxy.pac
+
+   The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+   The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+   AutoSupport Capable  AutoSupport OnDemand Capable  Chassis Serial Number  Daily Schedule  Weekly Schedule
+   Yes (enabled)        Yes                           SX94500434             12:55 AM        10:08 PM on Thursdays
+
+   SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

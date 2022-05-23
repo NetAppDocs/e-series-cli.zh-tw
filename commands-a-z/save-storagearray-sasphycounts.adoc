@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-storagearray-sasphycounts.html 
+sidebar: sidebar 
+keywords: save, storage, array, sas, phy, counts 
+summary: SAVE storageArray SASPHYCounts命令可將SAS實體層（SAS實體層）計數器儲存至檔案。 
+---
+= 儲存陣列SAS實體層數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列SASPHYCounts」命令可將SAS實體層（SAS實體層）計數器儲存至檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+若要重設SAS實體層計數器、請執行「重新設定storageArray SASPHYBasel配 準」命令。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray SASPHYCounts file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存SAS實體層計數器的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs/sasphe.csv"」
+
+包含SAS實體層錯誤統計資料的檔案預設名稱為「sas-phy-error-log.csv"。您可以使用任何檔案名稱、但必須使用「.csv"副檔名。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/start-storagearray-isnsserverrefresh.html 
+sidebar: sidebar 
+keywords: start, storage, array, isns, server, refresh 
+summary: start storageArray isnssServerRefresh命令會重新整理iSNS伺服器的網路位址資訊。 
+---
+= 啟動儲存陣列iSNS伺服器重新整理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray isnssServerRefresh」命令會重新整理iSNS伺服器的網路位址資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+如果DHCP伺服器不佳或無回應、則重新整理作業可能需要兩到三分鐘才能完成。
+
+[NOTE]
+====
+此命令僅適用於IPV4。
+
+====
+
+
+== 語法
+
+[listing]
+----
+start storageArray isnsServerRefresh
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+如果您使用「show storageArray isnslIPv6組態方法」命令來設定組態、但未將組態設定為DHCP、則執行「Start storageArray isnssServerRefresh」會傳回錯誤。
+
+
+
+== 最低韌體層級
+
+7.10.

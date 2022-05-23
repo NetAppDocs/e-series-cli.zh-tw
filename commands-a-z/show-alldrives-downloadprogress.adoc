@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/show-alldrives-downloadprogress.html 
+sidebar: sidebar 
+keywords: show, drive, download, progress 
+summary: show allDrives downloadProgress命令會傳回下載磁碟機韌體命令或downloading storageArray drive韌 體命令所針對磁碟機的韌體下載狀態。 
+---
+= 顯示磁碟機下載進度
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allDrives downloadProgress」命令會傳回以「download drive韌體」命令或「download storageArray driveFirmware」命令為目標之磁碟機的韌體下載狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+show allDrives downloadProgress
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+當所有韌體下載成功完成時、此命令會傳回「良好」狀態。如果任何韌體下載失敗、此命令會顯示每個目標磁碟機的韌體下載狀態。此命令會傳回此表格中顯示的狀態。
+
+[cols="2*"]
+|===
+| 狀態 | 定義 
+
+
+ a| 
+"成功"
+ a| 
+下載完成時沒有錯誤。
+
+
+
+ a| 
+"未嘗試"
+ a| 
+下載未開始。
+
+
+
+ a| 
+「部分下載」
+ a| 
+下載正在進行中。
+
+
+
+ a| 
+「失敗」
+ a| 
+下載完成時發生錯誤。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

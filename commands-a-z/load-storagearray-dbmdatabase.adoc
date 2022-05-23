@@ -1,0 +1,117 @@
+---
+permalink: commands-a-z/load-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: load, storage array, database, command, management 
+summary: load storageArray dbmDatabase命令可從檔案或快取中擷取映像、藉此還原資料庫管理（DBM）資料庫映像。 
+---
+= 載入儲存陣列DBM資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「load storageArray dbmDatabase」命令可從檔案或快取中擷取映像、藉此還原資料庫管理（DBM）映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+此命令會使用「儲存陣列dbmDatabase」命令、將儲存陣列的DBM資料庫還原至擷取資料庫映像時的確切組態。檔案中的資料包括RAID組態、磁碟區群組和磁碟集區的資料。
+
+在將此命令與「file」（檔案）選項搭配使用之前、您必須先從技術支援取得驗證程式字串（安全代碼）。若要取得驗證程式、請使用「儲存陣列dbmValidatorInfo」命令來產生包含驗證程式資訊的XML檔案。技術支援使用XML檔案來產生此命令所需的驗證器字串。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+load storageArray dbmDatabase
+pass:quotes[((file="_filename_" validator="_validatorValue_") | sourceLocation=onboard)]
+[controller [(a|b)]]
+[contentType= all]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要上傳之DBM資料庫的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C：\Array backups\DBMbackup_03302010.DBM」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定副檔名。
+
+
+
+ a| 
+《驗證者》
+ a| 
+將儲存陣列還原至現有組態所需的英數字元安全代碼。
+
+您必須取得技術支援的驗證程式。若要取得驗證程式、請執行「儲存陣列dbmValidatorInfo」命令、產生必要的驗證資訊XML檔案。驗證資訊XML檔案可用之後、請聯絡技術支援部門以取得驗證程式。
+
+將驗證器括在雙引號（""）內。
+
+
+
+ a| 
+'資訊位置'
+ a| 
+此參數指定擷取備份資料庫資訊的位置。參數必須包含在內、以確保一致性、但唯一允許的值是「OnBoard」。
+
+
+
+ a| 
+"控制器"
+ a| 
+此參數會指定將專門從哪個控制器擷取資料。將控制器識別碼括在方括弧（[]）內。如果未指定「控制器」參數、則可能會從任一控制器擷取資料。
+
+有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器
+
+
+
+ a| 
+「contentType」
+ a| 
+此參數指定要擷取之資料的內容類型。
+
+此參數預設設為「ALL」、以便擷取所有資料、包括磁碟集區組態資料。
+
+|===
+
+
+== 附註
+
+視資料庫映像的大小而定、還原資料庫可能需要30分鐘的時間。在控制器上完成所有載入資料庫映像的動作之後、主機軟體才會顯示控制器處於最佳狀態。
+
+
+
+== 最低韌體層級
+
+7.75
+
+7.83新增下列參數：
+
+* '資訊位置'
+* "控制器"
+* 「contentType」
+

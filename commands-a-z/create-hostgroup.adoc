@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/create-hostgroup.html 
+sidebar: sidebar 
+keywords: create, host group 
+summary: create hostGroup命令會建立新的主機群組。 
+---
+= 建立主機群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create hostGroup」命令會建立新的主機群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create hostGroup userLabel=pass:quotes[_"hostGroupName"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「userLabel」
+ a| 
+您要為所建立的主機群組命名的名稱。將主機群組名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+主機群組是選用的拓撲元素、您可以定義是否要指定共用相同磁碟區存取權的主機集合。主機群組是邏輯實體。只有當您有兩個或多個主機可以共用相同磁碟區的存取權時、才可定義主機群組。
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+5.20

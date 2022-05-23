@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/start-volumegroup-fullprovisioning.html 
+sidebar: sidebar 
+keywords: start, volume, group, full provision 
+summary: start volumeGroup FullProvisioning命令會在磁碟集區中的所有磁碟區上啟動完整資源配置作業、並選擇性地停用磁碟區群組上的資源配置。 
+---
+= 啟動Volume Group完整資源配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start volumeGroup FullProvisioning」命令會在磁碟集區中的所有磁碟區上啟動完整資源配置作業、並選擇性地停用磁碟區群組上的資源配置。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在EF600和EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+資源配置功能可將較大部分的磁碟區保留在未配置狀態、而非標準磁碟區、藉此改善SSD的耗損壽命並提升寫入效能。資源配置的磁碟區是SSD磁碟區群組或集區中的一個完整磁碟區、其中磁碟機容量已分配（指派給磁碟區）、但磁碟區區塊會在建立磁碟區期間取消分配（未對應）。視需要配置磁碟區塊、以完成主機寫入IOS。主機取消對應作業可將磁碟區塊恢復到未分配狀態。資源資源配置也可免除時間限制的背景初始化、讓大型磁碟區能夠快速初始化。
+
+資源配置的磁碟區僅支援SSD磁碟區群組和集區、群組或集區中的所有磁碟機都支援NVMe取消分配或未寫入的邏輯區塊錯誤啟用（DULBE）錯誤恢復功能。效能提升因各磁碟機型和容量而異。
+
+完整的資源配置格式可確保磁碟機上磁碟區群組中磁碟區所需的所有區塊都已完全對應。此命令僅適用於資源已配置的Volume群組。如果「disableResourceProvisioning」選項未設定為「假」、則磁碟區仍會進行資源配置、而在磁碟區群組中建立的新磁碟區將會進行資源配置。如果停用資源資源資源資源配置的選項設為「true」、則磁碟區將不再進行資源配置、而且在磁碟區群組上建立的新磁碟區將不會進行資源配置。
+
+
+
+== 語法
+
+[listing]
+----
+start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+您要開始完整資源配置作業的Volume群組。將Volume群組名稱括在方括弧（[]）中
+
+
+
+ a| 
+「顯示資源資源配置」
+ a| 
+此設定可指定在完整資源配置作業完成後、是否應停用資源配置。若要跳過停用資源資源資源配置、請將其設為「假」。預設值為「true」。
+
+[NOTE]
+====
+若要在磁碟區群組和所有相關磁碟區上重新啟用資源資源配置、請使用「Start Volume Group Resource Provisioning」命令。
+
+====
+|===
+
+
+== 最低韌體層級
+
+11.72

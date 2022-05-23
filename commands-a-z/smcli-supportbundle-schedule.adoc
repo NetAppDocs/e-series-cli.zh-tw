@@ -1,0 +1,388 @@
+---
+permalink: commands-a-z/smcli-supportbundle-schedule.html 
+sidebar: sidebar 
+keywords: schedule, automatic, support, bundle, collection, configuration 
+summary: SMcli -supportBundle排程命令可建立或移除將支援服務組合儲存在一或多個儲存陣列上的排程。您會收集支援套裝組合中的系統與組態資訊、將資訊傳送給技術支援部門以進行分析與診斷。 
+---
+= 排程自動支援服務組合集合組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli -supportBundle schedule」命令可建立或移除將支援服務組合儲存在一或多個儲存陣列上的排程。您會收集支援套裝組合中的系統與組態資訊、將資訊傳送給技術支援部門以進行分析與診斷。
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+您可以建立兩種排程類型：
+
+* 每日/每週：當您需要經常收集資料以監控新組態或疑難排解現有組態時、請使用此排程。
+* 每月/每年-當您收集資料以評估儲存陣列的長期運作時、請使用此排程。
+
+
+
+
+== 建立每日/每週排程的語法
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+daysOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+pass:quotes[data=_pathName_]
+----
+
+
+== 建立每月/每年排程的語法
+
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule enable
+pass:quotes[(all | _storageArrayName_)]
+pass:quotes[startTime=_HH:MM_]
+pass:quotes[startDate=_MM:DD:YYYY_]
+pass:quotes[endDate=_MM:DD:YYYY_]
+months=[January February March April May June July August September October
+November December]
+weekNumber=(First|Second|Third|Fourth|Last)
+dayOfWeek=(Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday)|
+onDays=[1-31] |
+pass:quotes[data=_pathName_]
+----
+
+
+== 移除排程的語法
+
+[NOTE]
+====
+此命令會完全移除儲存陣列的排程。若要再次儲存支援服務組合資訊、您需要建立新的排程。
+
+====
+[listing, subs="+macros"]
+----
+SMcli -supportBundle schedule disable
+pass:quotes[(all|_storageArrayName_)]
+----
+
+
+== 參數
+
+下表列出每日/每週排程的參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「啟用」
+ a| 
+偵測到重大MEL事件時、可自動收集支援服務組合。如果支援服務包資料已暫停、此參數會繼續收集。每當您建立新排程或修改現有排程時、都必須使用此參數。
+
+
+
+ a| 
+全部
+ a| 
+如果您要設定從主機偵測到的所有儲存陣列的收集排程、請使用此參數。
+
+
+
+ a| 
+_storageArrayName_`
+ a| 
+您要為其設定排程的特定儲存陣列名稱。
+
+
+
+ a| 
+「時間」
+ a| 
+您想要開始收集支援服務組合的時間。輸入時間的格式為hh：mm、其中hh是小時、公釐是小時的分鐘數。使用24小時時鐘。
+
+預設時間為00：00、午夜。如果您沒有輸入開始時間、而且已啟用支援服務組合集合、則會在午夜自動收集資料。
+
+
+
+ a| 
+「TartDate」
+ a| 
+您要開始收集支援服務組合資料的特定日期。輸入日期的格式為MM：DD：年。
+
+預設日期為目前日期。
+
+
+
+ a| 
+「結束日期」
+ a| 
+您想要停止收集支援服務組合資料的特定日期。輸入日期的格式為MM：DD：年。
+
+預設值為「無」。
+
+如果您使用此參數、則必須在開始日期之後至少一週、而且無法在過去發生。
+
+
+
+ a| 
+《週之日》
+ a| 
+您想要收集支援服務組合資料的特定日期或星期。如果您想要在一週中的一天或多天收集支援服務組合資料、請使用此參數。例如：
+
+[listing]
+----
+daysOfWeek=[Tuesday]
+----
+[listing]
+----
+daysOfWeek=[Monday Wednesday Friday]
+----
+以方括弧（[]）括住一週中的天數。如果您輸入的天數超過一天、請每天使用空格分隔。
+
+
+
+ a| 
+"DAAT"
+ a| 
+您要儲存支援服務包資料的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+您可以使用任何副檔名。
+
+====
+將檔案路徑和名稱括在雙引號（""）內。
+
+|===
+下表列出每月/每年排程的參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「啟用」
+ a| 
+偵測到重大MEL事件時、可自動收集支援服務組合。如果支援服務包資料已暫停、此參數會繼續收集。每當您建立新排程或修改現有排程時、都必須使用此參數。
+
+
+
+ a| 
+全部
+ a| 
+如果您要設定從主機偵測到的所有儲存陣列的收集排程、請使用此參數。
+
+
+
+ a| 
+"TorageArrayName"
+ a| 
+您要為其設定排程的特定儲存陣列名稱。
+
+
+
+ a| 
+「時間」
+ a| 
+一天中您希望開始收集支援服務組合的時間。輸入時間的格式為hh：mm、其中hh是小時、公釐是小時的分鐘數。使用24小時時鐘。
+
+預設時間為00：00、午夜。如果您沒有輸入開始時間、而且已啟用支援服務組合集合、則會在午夜自動收集資料。
+
+
+
+ a| 
+「TartDate」
+ a| 
+您要開始收集支援服務組合資料的特定日期。輸入日期的格式為MM：DD：年。
+
+預設日期為目前日期。
+
+
+
+ a| 
+「結束日期」
+ a| 
+您想要停止收集支援服務組合資料的特定日期。輸入日期的格式為MM：DD：年。
+
+預設值為「無」。
+
+
+
+ a| 
+《三個月》
+ a| 
+您想要收集支援服務組合資料的一年中特定月份或月份。如果您想要在一年中的一或多個月收集支援服務組合資料、請使用此參數。例如：
+
+[listing]
+----
+months=[June]
+----
+[listing]
+----
+months=[January April July October]
+----
+將月份括在方括弧中（[]）。如果您輸入一個月以上、請以空格分隔每個月。
+
+
+
+ a| 
+「週數」
+ a| 
+您想要收集支援服務組合資料的月份中的一週。例如：
+
+[listing]
+----
+weekNumber=first
+----
+
+
+ a| 
+《週之夜》
+ a| 
+您想要收集支援服務組合資料的一週中特定日期。如果您只想在一週中的一天收集支援服務組合資料、請使用此參數。例如：
+
+[listing]
+----
+dayOfWeek=Wednesday
+----
+
+
+ a| 
+《onDays》
+ a| 
+您想要收集支援服務組合資料的特定日期或月份天數。例如：
+
+[listing]
+----
+onDays=[15]
+----
+[listing]
+----
+onDays=[7 21]
+----
+將日期括在方括弧中（[]）。如果您輸入的天數超過一天、請每天使用空格分隔。
+
+[NOTE]
+====
+您不能將「* onDAYS*」參數與「*週期編號*」參數或「*天月日」參數搭配使用。
+
+====
+
+
+ a| 
+"DAAT"
+ a| 
+您要儲存支援服務包資料的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\data.txt"
+----
+[NOTE]
+====
+您可以使用任何副檔名。
+
+====
+將檔案路徑和名稱括在雙引號（""）內。
+
+|===
+下表列出移除排程的參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「禁用」
+ a| 
+停用自動收集支援服務組合、並立即刪除任何先前定義的排程。
+
+[NOTE]
+====
+停用排程也會刪除排程。
+
+====
+
+
+ a| 
+全部
+ a| 
+如果您要設定從主機偵測到的所有儲存陣列的收集排程、請使用此參數。
+
+
+
+ a| 
+"TorageArrayName"
+ a| 
+您要為其設定排程的特定儲存陣列名稱。
+
+|===
+
+
+== 附註
+
+當您使用「ALL」參數設定所有儲存陣列的通用排程時、個別儲存陣列的排程也會被刪除。如果為所有儲存陣列設定排程、則新發現的儲存陣列將遵循相同的排程。如果為所有儲存陣列設定排程、然後為單一儲存陣列設定排程、則新發現的儲存陣列將不會定義排程。
+
+以下是使用此命令的範例。第一個範例是每日/每週排程、符合下列收集支援服務組合資料的條件：
+
+* 儲存陣列名稱為DevKit4
+* 採樣開始時間為02：00（早上2：00）
+* 開始日期為2013年5月1日（2013年5月1日）
+* 資料將於每週的週一和週五收集
+* 此排程沒有結束日期、只能執行「Mcli -supportBundle schedule disable'」命令來停止
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable DevKit4 startTime=02:00
+startDate=05:01:2013 endDate=05:10:2014 daysOfWeek=[Monday Friday]
+----
+第二個範例是符合下列收集支援服務組合資料條件的每月/每年排程：
+
+* 儲存陣列名稱為eng_stor1
+* 採樣開始時間為04：00（上午4：00）
+* 開始日期為2013年5月1日（2013年5月1日）
+* 資料將於3月、4月、5月、6月和8月收集
+* 資料將於每月的第一天和第二十一天收集
+* 此排程沒有結束日期、只能執行「Mcli -supportBundle schedule disable'」命令來停止
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable eng_stor1 startTime=04:00
+startDate=05:01:2013 months=[March April May June August] onDays=[1 21]
+----
+第三個範例是符合下列收集支援服務組合資料條件的每月/每年排程：
+
+* 儲存陣列名稱為韌體2
+* 收集開始時間為22：00（夜間10：00）
+* 開始日期為2013年5月1日（2013年5月1日）
+* 資料將於3月、4月、5月、6月和8月收集
+* 資料將於每月第一週的星期五收集
+* 本排程將於2014年5月10日（2014年5月10日）5：10結束。
+
+
+[listing]
+----
+SMcli -supportBundle schedule enable firmware_2 startTime=22:00
+startDate=05:01:2013 endDate=05:10:2014 months=[March April May June August]
+weekNumber=First dayOfWeek=Friday
+----
+
+
+== 最低韌體層級
+
+7.83

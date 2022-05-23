@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-ibstatsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, infiniband, statistics, baseline 
+summary: 重設storageArray ibStatsBaseline.命令會將儲存陣列的InfiniBand統計資料基準重設為0。 
+---
+= 重設儲存陣列InfiniBand統計資料基準
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"REset storageArray ibStatsBaseline"命令會將儲存陣列的InfiniBand統計資料基準重設為0。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+[NOTE]
+====
+此命令已過時、並由取代 xref:reset-storagearray-hostportstatisticsbaseline.adoc[重設儲存陣列主機連接埠統計資料基準] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+reset storageArray ibStatsBaseline
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+此命令並不會實際重設硬體和韌體中所維護的原始計數。相反地、韌體會建立目前計數器值的快照、並使用這些值來報告擷取統計資料時計數的差異。新的基準時間會套用至兩個控制器、以便控制器計數彼此同步。如果一個控制器在未重設其他控制器的情況下重設、則計數器將不再同步。用戶端發現控制器並未同步、因為兩個控制器所報告的時間戳記資料與統計資料不同。
+
+
+
+== 最低韌體層級
+
+7.10.
+
+8.41此命令已過時。

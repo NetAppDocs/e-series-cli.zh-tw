@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-controller-diagnostic-status.html 
+sidebar: sidebar 
+keywords: show, controller, diagnostic, status 
+summary: show controller命令會傳回以start控制器診斷命令啟動的控制器診斷狀態。 
+---
+= 顯示控制器診斷狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show controller」命令會傳回以「Start Controller診斷」命令啟動的控制器診斷狀態。
+
+如果診斷已完成、則會顯示診斷測試的完整結果。如果診斷測試尚未完成、則只會顯示已完成測試的結果。測試結果會顯示在終端機上、您也可以將結果寫入檔案。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+此設定可傳回儲存陣列中特定控制器的相關資訊。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+檔案
+ a| 
+包含診斷測試結果的檔案名稱。此命令不會自動將副檔名附加至檔案名稱。輸入檔案名稱時、您必須新增副檔名。
+
+|===
+
+
+== 最低韌體層級
+
+7.70新增控制器診斷狀態功能。

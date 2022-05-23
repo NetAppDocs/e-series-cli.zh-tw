@@ -1,0 +1,85 @@
+---
+permalink: commands-category/alert-configuration-commands.html 
+sidebar: sidebar 
+keywords: configuration, commands, alert, embedded 
+summary: 警示組態命令 
+---
+= 警示組態命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 內嵌SNMP組態
+
+link:../commands-a-z/create-snmpcommunity.html["登錄SNMP社群"]
+
+link:../commands-a-z/create-snmptrapdestination.html["登錄SNMP設陷目的地"]
+
+link:../commands-a-z/show-allsnmpcommunities.html["顯示SNMP社群"]
+
+link:../commands-a-z/show-snmpsystemvariables.html["顯示SNMP mib II系統群組變數"]
+
+link:../commands-a-z/start-snmptrapdestination.html["測試SNMP設陷目的地"]
+
+link:../commands-a-z/delete-snmpcommunity.html["取消登錄SNMP社群"]
+
+link:../commands-a-z/delete-snmptrapdestination.html["取消登錄SNMP設陷目的地"]
+
+link:../commands-a-z/set-snmpcommunity.html["更新SNMP社群"]
+
+link:../commands-a-z/set-snmpsystemvariables.html["更新SNMP mib II系統群組變數"]
+
+link:../commands-a-z/set-snmptrapdestination-trapreceiverip.html["更新SNMP設陷目的地"]
+
+
+
+== 電子郵件警示組態- E2700或E5600陣列
+
+link:../commands-a-z/set-emailalert.html["設定電子郵件警示設定"]
+
+link:../commands-a-z/set-event-alert.html["設定事件警示篩選"]
+
+link:../commands-a-z/show-blockedeventalertlist.html["顯示封鎖的事件"]
+
+link:../commands-a-z/smcli-alerttest.html["測試警示"]
+
+
+
+== SSD快取命令
+
+link:../commands-a-z/clear-emailalert-configuration.html["清除電子郵件警示組態"]
+
+link:../commands-a-z/set-emailalert.html["設定電子郵件警示設定"]
+
+link:../commands-a-z/delete-emailalert.html["刪除電子郵件警示收件者"]
+
+link:../commands-a-z/show-emailalert-summary.html["顯示電子郵件警示組態"]
+
+link:../commands-a-z/start-emailalert-test.html["測試電子郵件警示組態"]
+
+
+
+== 系統記錄組態
+
+link:../commands-a-z/clear-syslog-configuration.html["清除系統記錄組態"]
+
+link:../commands-a-z/set-syslog.html["設定syslog設定"]
+
+link:../commands-a-z/create-storagearray-syslog.html["建立儲存陣列syslog組態"]
+
+link:../commands-a-z/delete-storagearray-syslog.html["刪除儲存陣列syslog組態"]
+
+link:../commands-a-z/delete-syslog.html["刪除syslog伺服器"]
+
+link:../commands-a-z/show-storagearray-syslog.html["顯示儲存陣列系統記錄組態"]
+
+link:../commands-a-z/show-syslog-summary.html["顯示syslog組態"]
+
+link:../commands-a-z/start-storagearray-syslog-test.html["開始儲存陣列系統記錄測試"]
+
+link:../commands-a-z/start-syslog-test.html["測試syslog組態"]
+
+link:../commands-a-z/set-storagearray-syslog.html["更新儲存陣列系統記錄組態"]

@@ -1,0 +1,567 @@
+---
+permalink: commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html 
+sidebar: sidebar 
+keywords: set, volume, attributes, group 
+summary: set volume命令可定義Volume群組中磁碟區的內容。 
+---
+= 設定Volume群組中某個Volume的Volume屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「設置Volume」命令可定義Volume群組中磁碟區的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以使用大多數參數來定義一個或多個磁碟區的內容。您也可以使用某些參數來定義一個Volume的內容。語法定義是分開的、以顯示哪些參數適用於多個Volume、哪些只適用於一個Volume。
+
+[NOTE]
+====
+在磁碟區群組包含超過32個磁碟區的組態中、此作業可能會導致主機I/O錯誤、或是由於作業完成前的逾時期間已到期而導致內部控制器重新開機。如果發生主機I/O錯誤或內部控制器重新開機、請停止主機I/O、然後再試一次作業。
+
+====
+
+
+== 適用於一或多個磁碟區的語法
+
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+preReadRedundancyCheck=(TRUE | FALSE)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[["_volumeName_"]] |
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+dataAssuranceDisabled=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+pass:quotes[cacheFlushModifier=_cacheFlushModifierValue_]
+cacheWithoutBatteryEnabled=(TRUE | FALSE)
+mediaScanEnabled=(TRUE | FALSE)
+mirrorCacheEnabled=(TRUE | FALSE)
+modificationPriority=(highest | high | medium | low | lowest)
+owner=(a|b)
+readCacheEnabled=(TRUE | FALSE)
+writeCacheEnabled=(TRUE | FALSE)
+cacheReadPrefetch=(TRUE | FALSE)
+reservedFutureOption1=(TRUE | FALSE)
+----
+
+
+== 僅適用於一個Volume的語法
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_ ... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[["_volumeName_"]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_drawerID1_,_slotID1_
+... _trayIDn_,_drawerIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <wwID>)
+pass:quotes[addCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_,_slotID1_ ... _trayIDn_,_slotIDn_)]]
+redundancyCheckEnabled=(TRUE | FALSE)
+pass:quotes[segmentSize=_segmentSizeValue_]
+pass:quotes[userLabel=_volumeName_]
+preReadRedundancyCheck=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數可設定儲存陣列中所有磁碟區的內容。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要定義其內容的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義內容之磁碟區的全球識別碼（WWID）。將WWID以雙引號（""）括在角括弧（<>）內。
+
+[NOTE]
+====
+執行此命令時、請勿在WWID中使用分號分隔符號。
+
+====
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義內容的數個Volume名稱。所有磁碟區都具有相同的內容。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+「cacheFlushModifier」
+ a| 
+磁碟區資料在資料排清到實體儲存設備之前、保留在快取中的最長時間。有效值列於「附註」區段。
+
+
+
+ a| 
+「cacheWithoutBatteryEnabled'」
+ a| 
+此設定可在不使用電池的情況下開啟或關閉快取。若要在不使用電池的情況下開啟快取、請將此參數設為「true」。若要在不使用電池的情況下關閉快取、請將此參數設為「假」。
+
+
+
+ a| 
+「已啟用的媒體掃描」
+ a| 
+用於開啟或關閉Volume的媒體掃描的設定。若要開啟媒體掃描、請將此參數設為「true」。若要關閉媒體掃描、請將此參數設為「假」。（如果在儲存陣列層級停用媒體掃描、此參數將不會生效。）
+
+
+
+ a| 
+「已啟用鏡像快取」
+ a| 
+開啟或關閉鏡射快取的設定。若要開啟鏡射快取、請將此參數設為「true」。若要關閉鏡射快取、請將此參數設為「假」。
+
+
+
+ a| 
+「虛製化優先順序」
+ a| 
+儲存陣列運作時、磁碟區修改的優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+
+
+ a| 
+"老闆"
+ a| 
+擁有該磁碟區的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器僅當您想要變更Volume擁有者時、才使用此參數。
+
+
+
+ a| 
+「preReadRedundancyCheck」
+ a| 
+開啟或關閉讀取前備援檢查的設定。開啟讀取前備援檢查、可驗證包含讀取資料之等量磁碟區的RAID備援資料是否一致。讀取前備援檢查只會在讀取作業上執行。若要開啟預先讀取備援檢查、請將此參數設為「true」。若要關閉預先讀取備援檢查、請將此參數設為「假」。
+
+[NOTE]
+====
+請勿在非備援磁碟區（例如RAID 0磁碟區）上使用此參數。
+
+====
+
+
+ a| 
+「已啟用快取」
+ a| 
+開啟或關閉讀取快取的設定。若要開啟讀取快取、請將此參數設為「true」。若要關閉讀取快取、請將此參數設為「假」。
+
+
+
+ a| 
+「已啟用寫入快取」
+ a| 
+開啟或關閉寫入快取的設定。若要開啟寫入快取、請將此參數設為「true」。若要關閉寫入快取、請將此參數設為「假」。
+
+
+
+ a| 
+「cacheReadPrefetch」
+ a| 
+開啟或關閉快取讀取預先擷取的設定。若要關閉快取讀取預先擷取、請將此參數設為「假」。若要開啟快取讀取預先擷取、請將此參數設為「true」。
+
+
+
+ a| 
+「Data AssuranceDisabled」
+ a| 
+此設定可關閉特定Volume的資料保證。
+
+若要讓此參數具有意義、您的Volume必須具備資料保證能力。此參數可將磁碟區從支援資料保證的磁碟區變更為無法支援資料保證的磁碟區。
+
+[NOTE]
+====
+此選項僅適用於磁碟機支援DA的啟用。
+
+====
+若要從支援資料保證的磁碟區移除資料保證、請將此參數設為「true」。
+
+[NOTE]
+====
+如果您從磁碟區移除資料保證、就無法重設該磁碟區的資料保證。
+
+====
+若要重設磁碟區上資料的資料保證、並從中移除資料保證、請執行下列步驟：
+
+. 從磁碟區移除資料。
+. 刪除Volume。
+. 使用刪除的磁碟區內容重新建立新的磁碟區。
+. 設定新磁碟區的資料保證。
+. 將資料移至新的Volume。
+
+
+
+
+ a| 
+《addCapacity》
+ a| 
+用於增加定義內容之磁碟區的儲存大小（容量）的設定。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。預設值為「位元組」。
+
+
+
+ a| 
+《附加磁碟機》
+ a| 
+對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+如果您需要指定額外的磁碟機來容納新的大小、請使用此參數搭配「addCapacity」參數。
+
+
+
+ a| 
+「已啟用重複檢查」
+ a| 
+在媒體掃描期間開啟或關閉備援檢查的設定。若要開啟備援檢查、請將此參數設為「true」。若要關閉備援檢查、請將此參數設為「假」。
+
+
+
+ a| 
+'大小'
+ a| 
+控制器在磁碟區中的單一磁碟機上寫入資料的資料量（以KB為單位）、然後再將資料寫入下一個磁碟機。有效值包括"8"、"16"、"32"、"64"、"128"、 "256"或"512"。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要為現有磁碟區指定的新名稱。請以雙引號（""）括住新的Volume名稱。
+
+
+
+ a| 
+「preReadRedundancyCheck」
+ a| 
+此設定可在讀取作業期間檢查等量磁碟區上RAID備援資料的一致性。請勿將此作業用於非備援磁碟區、例如RAID層級0。若要檢查備援一致性、請將此參數設為「true」。如果不進行等量磁碟區檢查、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+主機I/O錯誤可能會導致磁碟區群組超過32個磁碟區。這項作業也可能會導致內部控制器重新開機、因為在作業完成之前的逾時期間已到期。如果遇到此問題、請停止主機I/O、然後再試一次作業。
+
+使用此命令時、您可以指定一或多個選用參數。
+
+您一次只能將這些參數套用至一個Volume：
+
+* 《addCapacity》
+* '大小'
+* 「userLabel」
+* 「logicalUnitsNumber」
+
+
+
+
+== 新增容量、新增磁碟機和區段大小
+
+設定「addCapacity」參數、「addDrives」參數或「Size」參數、會啟動一項無法停止的長時間執行作業。這些長期執行的作業會在背景執行、不會妨礙您執行其他命令。若要顯示長期執行作業的進度、請使用「show volume actionProgress」命令。
+
+
+
+== 快取排清修改器
+
+此表列出快取齊面修正值的有效值。
+
+[cols="2*"]
+|===
+| 價值 | 說明 
+
+
+ a| 
+《立即》
+ a| 
+資料一旦放入快取、就會立即排清。
+
+
+
+ a| 
+".25"
+ a| 
+資料會在250毫秒後排清。
+
+
+
+ a| 
+".5"
+ a| 
+資料會在500毫秒後排清。
+
+
+
+ a| 
+".75"
+ a| 
+資料會在750毫秒後排清。
+
+
+
+ a| 
+第1名
+ a| 
+資料會在1秒後排清
+
+
+
+ a| 
+"1.5"
+ a| 
+資料會在1500毫秒後排清。
+
+
+
+ a| 
+2）
+ a| 
+資料會在2秒後排清
+
+
+
+ a| 
+《5》
+ a| 
+資料會在5秒後排清
+
+
+
+ a| 
+《10》
+ a| 
+資料會在10秒後排清
+
+
+
+ a| 
+20歲
+ a| 
+資料會在20秒後排清
+
+
+
+ a| 
+《60》
+ a| 
+資料會在60秒（1分鐘）後排清。
+
+
+
+ a| 
+"120"
+ a| 
+資料會在120秒（2分鐘）後排清。
+
+
+
+ a| 
+《300》
+ a| 
+資料會在300秒（5分鐘）後排清。
+
+
+
+ a| 
+"1200"
+ a| 
+資料會在1200秒（20分鐘）後排清。
+
+
+
+ a| 
+"3600"
+ a| 
+資料會在3、600秒（1小時）後排清。
+
+
+
+ a| 
+《無限大》
+ a| 
+快取中的資料不受任何年齡或時間限制的限制。資料會根據控制器管理的其他準則進行排清。
+
+|===
+[NOTE]
+====
+請勿將「cacheFlushModer」參數的值設為超過10秒。例外情況是為了測試目的。在執行任何設定「cacheFlushModer」參數值超過10秒的測試之後、將「cacheFlushModer」參數的值傳回10秒或更短的秒數。
+
+====
+
+
+== 未啟用電池的快取
+
+不含電池的寫入快取可在控制器電池完全耗盡、未充滿電或不存在時、繼續寫入快取。如果您將此參數設為「true」、但沒有不斷電系統（UPS）或其他備份電源、則儲存陣列的電力可能會中斷。如果停用寫入快取、此參數將不會生效。
+
+
+
+== 修改優先順序
+
+修改優先順序定義修改Volume內容時所使用的系統資源量。如果您選取最高優先順序層級、則磁碟區修改會使用最多的系統資源、進而降低主機資料傳輸的效能。
+
+
+
+== 快取讀取預先擷取
+
+「cacheReadPrefetch」參數可讓控制器將其他資料區塊複製到快取中、同時控制器讀取並複製主機從磁碟機要求的資料區塊到快取中。此動作可增加日後從快取執行資料要求的機會。對於使用循序資料傳輸的多媒體應用程式而言、快取讀取預先擷取非常重要。您使用的儲存陣列組態設定、會決定控制器讀取到快取的其他資料區塊數目。「cacheReadPrefetch」參數的有效值為「true」或「假」。
+
+
+
+== 區段大小
+
+區段大小決定控制器在磁碟區中的單一磁碟機上寫入多少資料區塊、然後再將資料寫入下一個磁碟機。每個資料區塊儲存512個位元組的資料。資料區塊是最小的儲存單位。區段的大小決定其包含多少資料區塊。例如、8-KB區段可容納16個資料區塊。64 KB區段可容納128個資料區塊。
+
+當您輸入區段大小的值時、會對照控制器在執行時間提供的支援值來檢查該值。如果您輸入的值無效、控制器會傳回有效值清單。使用單一磁碟機進行單一要求時、其他磁碟機仍可同時處理其他要求。
+
+如果磁碟區位於單一使用者正在傳輸大量資料（例如多媒體）的環境中、則當單一資料傳輸要求以單一資料等量磁碟區來處理時、效能就會達到最大化。（資料等量磁碟區是區段大小乘以磁碟區群組中用於資料傳輸的磁碟機數量。） 在此情況下、多個磁碟機用於相同的要求、但每個磁碟機只能存取一次。
+
+若要在多使用者資料庫或檔案系統儲存環境中達到最佳效能、請設定區段大小、將滿足資料傳輸要求所需的磁碟機數量降至最低。
+
+
+
+== 最低韌體層級
+
+5新增「addCapacity」參數。
+
+7.10新增「preReadRedundancyCheck」參數。
+
+7.60新增「drawerID」使用者輸入。
+
+7.75新增「data AssuranceDisabled」參數。
+
+8.10會修正快取排清表中的「cacheFlushModer」參數值。

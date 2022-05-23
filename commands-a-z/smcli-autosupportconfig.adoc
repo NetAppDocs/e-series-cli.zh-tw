@@ -1,0 +1,177 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig.html 
+sidebar: sidebar 
+keywords: specify, autosupport, delivery, method 
+summary: SMcli -autosupSupportConfig命令可設定傳送AutoSupport 功能、以傳送各種資訊。 
+---
+= 指定AutoSupport 供應功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli -autosupSupportConfig」命令可設定傳送AutoSupport 功能、以傳送各種資訊。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+您可以建立兩種主要的傳送方式來傳送AutoSupport 不含資訊的訊息：
+
+* SMTP-當您想要使用電子郵件作為傳送AutoSupport 功能來傳送不看的訊息時、請使用此方法。
+* HTTP / HTTPS -當您想AutoSupport 使用HTTP或HTTPS傳輸協定傳送不實訊息時、請使用此方法。如果您想要使用AutoSupport 「僅供參考」或AutoSupport 「僅供參考」遠端診斷功能、則需要使用HTTPS。
+
+
+
+
+== 「SMTP傳送方法」的語法
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=SMTP
+mailRelayServer=<mailRelayServerName> senderMail=<senderEmailAddress>
+----
+
+
+== 「SMTP傳送方法」的參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DeliveryMethod》
+ a| 
+可讓您指定AutoSupport 傳達資訊的方法。有效選擇為「SMTP」。如需使用HTTP或HTTPS的相關資訊、請參閱本主題的下一節、這些資訊同樣有效。
+
+
+
+ a| 
+《每日伺服器》
+ a| 
+可讓您指定AutoSupport 適用於此資訊的郵件轉送伺服器。
+
+
+
+ a| 
+「enderMail」
+ a| 
+可讓您為AutoSupport 不支援的訊息指定寄件者電子郵件地址。
+
+|===
+
+
+== HTTP / HTTPS傳遞方法的語法
+
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod={HTTP|HTTPS}
+ {direct|proxyConfigScript=<proxyConfigScript>| proxyServer
+hostAddress:<address>portNumber=<portNumber> [userName=<userName>password=<password>]}
+----
+
+
+== HTTP / HTTPS傳輸方法的參數
+
+下表列出了HTTP/HTTPS傳輸方法的參數。
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DeliveryMethod》
+ a| 
+可讓您指定AutoSupport 傳達資訊的方法。有效選項為HTTPS和HTTP（請參閱前一節中的「使用」、這也是有效的）。
+
+
+
+ a| 
+《直接》
+ a| 
+可讓您使用HTTPS或HTTP傳輸協定、直接連線至目的地技術支援系統。
+
+
+
+ a| 
+「proxyConfigScript」
+ a| 
+可讓您指定Proxy自動組態（PAC）指令碼檔案的位置。
+
+
+
+ a| 
+《ProxyServer》
+ a| 
+可讓您指定與目的地技術支援系統建立連線所需的HTTP Proxy伺服器詳細資料。
+
+
+
+ a| 
+《HOSTADDRESS》
+ a| 
+ProxyServer的主機IP位址。
+
+
+
+ a| 
+「portNumber」
+ a| 
+Proxy伺服器的連接埠號碼。使用ProxyServer參數時需要此參數。
+
+
+
+ a| 
+《使用者名稱》
+ a| 
+使用者名稱。此參數為必填欄位。
+
+
+
+ a| 
+密碼
+ a| 
+驗證密碼。此參數為必填欄位。
+
+|===
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 範例
+
+[listing]
+----
+SMcli –autoSupportConfig deliveryMethod=SMTP
+mailRelayServer:server.eng.netapp.com
+senderEmail:user@netapp.com
+----
+[listing]
+----
+SMcli -autoSupportConfig deliveryMethod=HTTPS
+proxyServer hostAddress:10.117.12.112 portNumber=8080
+userName=user password=0987654321
+----
+
+
+== 驗證
+
+使用「Mcli -autosupSupportConfig test」命令傳送測試訊息、確認您的交付方法設定正確。

@@ -1,0 +1,502 @@
+---
+permalink: get-started/changes-in-the-cli-and-script-commands-in-this-release.html 
+sidebar: sidebar 
+keywords: 'what"s new' 
+summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更新資訊。 
+---
+= 新增功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+本主題列出SANtricity 最新版的CLI命令和指令碼指令的更新資訊。
+
+[NOTE]
+====
+在命令提示字元中發出SMcli命令時、使用Windows OS時、輸入或輸出檔案的檔案路徑名稱中需要額外的反斜槓（`\）字元作為轉義字元。在安全的https模式下使用SMcli時、必須加上額外的反斜槓（`\）、方法是提供-u選項來指定角色型存取管理使用者。範例：「C：\目錄\\子目錄\檔案名稱」
+
+====
+[NOTE]
+====
+如果您目前使用SANtricity 的是版本不支援的版本、則無法SANtricity 透過舊版CLI升級至最新版本的版本。只能透過SMcli執行從Synops11.52升級SANtricity 到更新版本的升級。
+
+====
+
+
+== 零點11.70.3 SANtricity
+
+下表列出11.70.3版的CLI和指令碼命令變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/start-diskpool-resourceprovisioning.adoc[啟動磁碟資源池資源配置]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/start-volumegroup-resourceprovisioning.adoc[啟動Volume群組資源配置]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/start-diskpool-fullprovisioning.adoc[啟動磁碟集區完整資源配置]
+ a| 
+已更新「disableResource Provisioning」參數說明。
+
+
+
+ a| 
+xref:../commands-a-z/start-volumegroup-fullprovisioning.adoc[啟動Volume Group完整資源配置]
+ a| 
+已更新「disableResource Provisioning」參數說明。
+
+
+
+ a| 
+xref:../commands-a-z/recreate-storagearray-securitykey.html[重新建立外部安全金鑰]
+ a| 
+新增了「刪除OldKey」參數。
+
+
+
+ a| 
+xref:../commands-a-z/create-diskpool.html[建立磁碟集區]
+ a| 
+已更新「目錄計數」參數說明。
+
+|===
+
+
+== 零點11.70.2 SANtricity
+
+下表列出11.70.2版CLI和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/create-snmpuser-username.adoc[登錄v3 USM使用者]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/set-snmpuser-username.adoc[更新v3 USM使用者]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/show-allsnmpusers.adoc[顯示v3 USM使用者]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/delete-snmpuser-username.adoc[取消登錄v3 USM使用者]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/create-snmptrapdestination.adoc[登錄SNMP設陷目的地]
+ a| 
+新增了"username"和"engineid"參數。
+
+
+
+ a| 
+xref:../commands-a-z/set-snmptrapdestination-trapreceiverip.adoc[更新SNMP設陷目的地]
+ a| 
+新增了"username"和"engineid"參數。
+
+
+
+ a| 
+xref:../commands-a-z/start-snmptrapdestination.adoc[測試SNMP設陷目的地]
+ a| 
+新增了"username"和"engineid"參數。
+
+|===
+
+
+== 零點11.70.1 SANtricity
+
+下表列出11.70.1版的CLI和指令碼命令變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/start-drive-erase.adoc[開始磁碟機清除]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/import-storagearray-securitykey-file.adoc[匯入儲存陣列安全金鑰]
+ a| 
+新增了"forceOverwrite（取代）"參數。
+
+
+
+ a| 
+xref:../commands-a-z/set-controller-hostport.adoc[設定控制器主機連接埠內容]
+ a| 
+新增了fecMode參數。
+
+
+
+ a| 
+xref:../commands-a-z/show-syslog-summary.adoc[顯示syslog組態]
+ a| 
+新增了"syslogForm"參數。
+
+
+
+ a| 
+xref:../commands-a-z/set-syslog.adoc[設定syslog設定]
+ a| 
+新增了"syslogForm"參數。
+
+
+
+ a| 
+xref:../commands-a-z/set-emailalert.adoc[設定電子郵件警示設定]
+ a| 
+新增了「最密化」、「最密端口」、「最密的使用者名稱」和「最密的密碼」參數。
+
+
+
+ a| 
+xref:../commands-a-z/show-emailalert-summary.adoc[顯示電子郵件警示組態]
+ a| 
+新增「中期計劃」加密、連接埠及認證參數資料。
+
+
+
+ a| 
+xref:../commands-a-z/recover-volume.adoc[恢復RAID Volume]
+ a| 
+新增「區塊大小」參數。
+
+|===
+
+
+== 2011年11月70日SANtricity
+
+下表列出11.70版CLI和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/download-storagearray-firmware.adoc[下載儲存陣列韌體/NVSRAM]
+ a| 
+新增「healstChecksAttnOverride」參數。
+
+
+
+ a| 
+xref:../commands-a-z/create-volume-diskpool.adoc[在磁碟集區中建立磁碟區]
+ a| 
+新增了"raidlevel"參數。
+
+
+
+ a| 
+xref:../commands-a-z/enable-storagearray-externalkeymanagement-file.adoc[啟用外部安全金鑰管理]
+ a| 
+新增「SaveFile」參數。
+
+
+
+ a| 
+xref:../commands-a-z/disable-storagearray-externalkeymanagement-file.adoc[停用外部安全金鑰管理]
+ a| 
+新增「SaveFile」參數。
+
+
+
+ a| 
+xref:../commands-a-z/recover-volume.adoc[恢復RAID Volume]
+ a| 
+新增「hostUnmapEnabled」參數。
+
+|===
+
+
+== 零點11.63 SANtricity
+
+下表列出11.63版CLI和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/start-storagearray-autosupport-manualdispatch.adoc[啟動Storage Array AutoSupport 《人工派遣》]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/start-volumegroup-fullprovisioning.adoc[啟動Volume Group完整資源配置]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/start-diskpool-fullprovisioning.adoc[啟動磁碟集區完整資源配置]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/repair-data-parity.adoc[修復資料同位元檢查]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/set-storagearray-resourceprovisionedvolumes.adoc[設定儲存陣列資源已配置的Volume]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/create-mapping-volume.adoc[建立Volume對應]
+ a| 
+新增了"mapWaitPeriod"參數。
+
+
+
+ a| 
+xref:../commands-a-z/show-storagearray.adoc[顯示儲存陣列]
+ a| 
+在「profile」參數結果下新增「資源配置的Volume」項目。
+
+
+
+ a| 
+xref:../commands-a-z/create-diskpool.adoc[建立磁碟集區]
+ a| 
+新增了"REsourceProvisioningCapable（資源配置資源可）"參數。
+
+
+
+ a| 
+xref:../commands-a-z/create-volumegroup.adoc[建立Volume群組]
+ a| 
+新增了"REsourceProvisioningCapable（資源配置資源可）"參數。
+
+
+
+ a| 
+xref:../commands-a-z/show-volumegroup.adoc[顯示Volume群組]
+ a| 
+在命令結果中新增「資源已配置」資訊。
+
+
+
+ a| 
+xref:../commands-a-z/create-raid-volume-automatic-drive-select.adoc[建立RAID Volume（自動選取磁碟機）]
+ a| 
+新增了"REsourceProvisioningCapable（資源配置資源可）"參數。
+
+
+
+ a| 
+xref:../commands-a-z/create-raid-volume-manual-drive-select.adoc[建立RAID Volume（手動選取磁碟機）]
+ a| 
+新增了"REsourceProvisioningCapable（資源配置資源可）"參數。
+
+
+
+ a| 
+xref:../commands-a-z/show-diskpool.adoc[顯示磁碟集區]
+ a| 
+在命令結果中新增「資源已配置」資訊。
+
+|===
+
+
+== 2011年11月62日SANtricity
+
+下表列出11.62版CLI和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/set-controller-hostport.adoc[設定控制器主機連接埠內容]
+ a| 
+新增「Physical（實體）」和「Virtual（虛擬）」值作為「Host Port（主機連接埠）」參數。
+
+|===
+
+
+== 不小於11.61 SANtricity
+
+* 新增EF600平台作為適用命令的支援陣列。
+
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:../commands-a-z/save-storagearray-supportdata.adoc[儲存儲存陣列支援資料]
+ a| 
+新增了「object-bunder.json」資料類型。
+
+
+
+ a| 
+xref:../commands-a-z/show-alldrives.adoc[顯示磁碟機]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/activate-synchronous-mirroring.adoc[啟動同步鏡射]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/recreate-storagearray-mirrorrepository.adoc[重新建立同步鏡射儲存庫磁碟區]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/create-raid-volume-automatic-drive-select.adoc[建立RAID Volume（自動選取磁碟機）]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/show-storagearray-autoconfiguration.adoc[顯示儲存陣列自動組態]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/autoconfigure-storagearray.adoc[自動設定儲存陣列]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/create-diskpool.adoc[建立磁碟集區]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/create-volumegroup.adoc[建立Volume群組]
+ a| 
+新增NVMe4K相容性。
+
+
+
+ a| 
+xref:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.adoc[儲存自動負載平衡統計資料]
+ a| 
+新增「磁碟機遺失主要路徑」附註
+
+
+
+ a| 
+xref:../commands-a-z/set-storagearray-autoloadbalancingenable.adoc[設定儲存陣列以啟用或停用自動負載平衡]
+ a| 
+新增「磁碟機遺失主要路徑」附註
+
+
+
+ a| 
+xref:../commands-a-z/add-certificate-from-array.adoc[從陣列新增憑證]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/add-certificate-from-file.adoc[從檔案新增憑證]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/delete-certificates.adoc[刪除憑證]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/show-certificates.adoc[顯示憑證]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/add-array-label.adoc[新增陣列標籤]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/remove-array-label.adoc[移除陣列標籤]
+ a| 
+新增命令
+
+
+
+ a| 
+xref:../commands-a-z/show-array-label.adoc[顯示陣列標籤]
+ a| 
+新增命令
+
+|===

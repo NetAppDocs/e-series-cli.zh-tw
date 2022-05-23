@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/show-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: show, installed, root, intermediate, ca, certificates, summary 
+summary: show controller caCertificate命令會顯示來自指定控制器的已安裝CA憑證摘要。執行DELETE控制器caCertificate命令之前、此命令非常實用、可讓您知道要刪除的憑證別名。 
+---
+= 顯示安裝的根/中介CA憑證摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show controller caCertificate」命令會顯示來自指定控制器的已安裝CA憑證摘要。在執行「刪除控制器caCertificate」命令之前、此命令非常實用、可讓您知道要刪除的憑證別名。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show controller [(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]] summary
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓使用者指定要擷取根/中繼憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+全部
+ a| 
+可讓使用者指定擷取所有根/中繼憑證。
+
+
+
+ a| 
+別名
+ a| 
+可讓使用者指定要依別名擷取的根/中繼憑證。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+|===
+
+
+== 範例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "show controller[a] caCertificate all summary;"
+
+SMcli -n Array1 -c "show controller[b] caCertificate alias=("myAlias" "anotherAlias") summary;"
+============================
+Controller A Authority Certificates
+============================
+Alias:        19527b38-8d26-44e5-8c7f-5bf2ca9db7cf
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+---------------------
+Alias:        myAliasName
+Subject DN:   CN=My Corp Issuing CA 1
+Issuer DN:    CN=My Corp Root CA
+pass:quotes[Start:        _date_]
+pass:quotes[Expire:       _date_]
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

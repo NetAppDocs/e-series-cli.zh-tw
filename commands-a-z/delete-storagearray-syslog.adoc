@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/delete-storagearray-syslog.html 
+sidebar: sidebar 
+keywords: delete, storage, array, syslog, command, allow, delete, specified, configuration, storing, audit, logs, role 
+summary: 刪除storageArray syslog命令可讓您刪除用於儲存稽核記錄的指定syslog組態。 
+---
+= 刪除儲存陣列syslog組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除storageArray syslog」命令可讓您刪除用於儲存稽核記錄的指定syslog組態。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+delete storageArray syslog (allServers | id="<id>")
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"allServers"
+ a| 
+刪除所有系統記錄組態。
+
+
+
+ a| 
+"id"
+ a| 
+要刪除的syslog伺服器ID。您可以使用「show storageArray syslog」命令來取得ID。
+
+|===
+
+
+== 最低韌體層級
+
+8.42

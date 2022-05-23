@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-resourceprovisioning.html 
+sidebar: sidebar 
+keywords: start, volume, group, resource, provision 
+summary: start volumeGroup resourceProvisioning命令可在指定的Volume群組上啟用資源資源資源配置、並在Volume群組中的每個Volume上啟動資源配置啟用非同步作業。資源資源配置需要磁碟區群組中的所有磁碟機都支援NVMe的DULBE功能。 
+---
+= 啟動Volume群組資源配置
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start volumeGroup resourceProvisioning」命令可在指定的Volume群組上進行資源資源配置、並在Volume群組中的每個Volume上啟動資源配置功能非同步作業。資源資源配置要求Volume群組中的所有磁碟機都支援NVMe的DULBE功能。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在EF600和EF300儲存陣列上執行此命令、您必須具有儲存管理員或支援管理員角色。
+
+
+
+== 背景
+
+若要停用Volume群組上的資源資源資源配置、請使用完整資源配置命令搭配選項來停用資源配置。如果所有磁碟機都具備DULBE功能、而且儲存陣列的「資源配置磁碟區」設定為「真」、則建立磁碟區群組時、就會配置資源。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「volumeGroupName」
+ a| 
+您要啟用資源資源配置功能的Volume群組。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 最低韌體層級
+
+11.73

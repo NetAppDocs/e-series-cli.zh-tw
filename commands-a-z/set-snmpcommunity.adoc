@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/set-snmpcommunity.html 
+sidebar: sidebar 
+keywords: update, snmp, community 
+summary: Set SNMP社群命令會為現有的簡單網路管理傳輸協定（SNMP）社群建立新名稱。 
+---
+= 更新SNMP社群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set snmpCommunity」命令會為現有的簡單網路管理傳輸協定（SNMP）社群建立新名稱。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set snmpCommunity communityName=pass:quotes["_snmpCommunityName_"]
+newCommunityName=pass:quotes["_newSnmpCommunityName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《社區名稱》
+ a| 
+您要重新命名的現有SNMP社群名稱。將SNMP社群名稱括在雙引號（""）內。
+
+
+
+ a| 
+《新社群名稱》
+ a| 
+您要提供給SNMP社群的新名稱。將SNMP社群名稱括在雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+8.30

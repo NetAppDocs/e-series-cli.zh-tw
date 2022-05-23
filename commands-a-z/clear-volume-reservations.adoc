@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/clear-volume-reservations.html 
+sidebar: sidebar 
+keywords: clear, volume, reservations 
+summary: 「清除Volume保留」命令會清除持續的Volume保留。 
+---
+= 清除Volume保留
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「清除Volume Reservations」命令可清除持續的Volume保留。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+clear (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_"volumeName1" ... "volumeNameN"_]]) reservations
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此設定可清除儲存陣列中所有磁碟區的持續磁碟區保留。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要清除其持續保留的磁碟區名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要清除持續保留的多個磁碟區名稱。使用下列規則輸入成員磁碟區的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。

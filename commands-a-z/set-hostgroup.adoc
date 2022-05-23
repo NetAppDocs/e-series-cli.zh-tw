@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-hostgroup.html 
+sidebar: sidebar 
+keywords: set, host, group 
+summary: set hostGroup命令會重新命名主機群組。 
+---
+= 設定主機群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令"show hostGroup"可重命名主機組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set hostGroup pass:quotes[[_hostGroupName_]]
+userLabel=pass:quotes["_newHostGroupName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「主機群組」
+ a| 
+您要重新命名的主機群組名稱。將主機群組名稱括在方括弧中（[]）。如果主機群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住主機群組名稱。
+
+
+
+ a| 
+「userLabel」
+ a| 
+主機群組的新名稱。將新的主機群組名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+6.10.

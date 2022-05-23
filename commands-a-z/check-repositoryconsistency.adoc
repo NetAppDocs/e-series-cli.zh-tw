@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/check-repositoryconsistency.html 
+sidebar: sidebar 
+keywords: check, repository, consistency 
+summary: Check repositoryConsistency命令會根據指定物件基礎儲存庫Volume中的資料分析、產生報告。 
+---
+= 檢查儲存庫一致性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+Check repositoryConsistency命令會根據對指定物件基礎儲存庫Volume中資料的分析、產生報告。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+check (snapGroup pass:quotes[[_snapGroupName_]] repositoryConsistency |
+snapVolume pass:quotes[[_snapVolumeName_]] repositoryConsistency |
+volume pass:quotes[[_volumeName_]] repositoryConsistency |
+volumeCopy target pass:quotes[[_targetName_]] repositoryConsistency |
+asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+repositoryConsistency localVolume=pass:quotes[_"localVolumeName"_]]
+file=pass:quotes[_"filePath"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《保持一致性》
+ a| 
+指定檢查快照群組、快照磁碟區、磁碟區或非同步鏡射群組（視對應參數所指定的項目而定）的一致性。
+
+
+
+ a| 
+「napGroup」
+ a| 
+執行一致性檢查的快照群組名稱。將快照群組名稱括在方括弧中（[]）。如果快照群組名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+「napVolume」
+ a| 
+執行一致性檢查的快照磁碟區名稱。將快照磁碟區名稱括在方括弧（[]）內。如果快照磁碟區名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+執行一致性檢查的精簡磁碟區名稱。將精簡磁碟區名稱括在方括弧中（[]）。如果精簡磁碟區名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+「Volume Copy」
+ a| 
+指定檢查磁碟區複本關係的目標是否一致。
+
+
+
+ a| 
+《目標》
+ a| 
+請僅搭配「volumeCopy」參數使用、以指定Volume複製關係的目標磁碟區名稱。如果Volume名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+執行一致性檢查的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+「localVolume」
+ a| 
+只能搭配「asyncdMirrorGroup」參數使用、以指定參與鏡射關係的本機Volume名稱。您可以在鏡射關係中指定來源或目的地的本機Volume。將本機磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+檔案
+ a| 
+您要儲存報告的檔案路徑和檔案名稱、是因為一致性檢查而產生。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI\logs\repoConsistency．txt"」此參數必須在任一選用參數之後顯示為最後一個參數。
+
+|===
+
+
+== 附註
+
+此命令所產生的報告是供技術支援人員用來分析問題。
+
+
+
+== 最低韌體層級
+
+7.83

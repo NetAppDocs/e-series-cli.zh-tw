@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/show-volumegroup-importdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, import, dependencies 
+summary: show volumeGroup importDependencies命令會顯示您要從一個儲存陣列移至另一個儲存陣列之磁碟區群組中磁碟機的相依性清單。 
+---
+= 顯示Volume群組匯入相依性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volumeGroup importDependencies」命令會顯示您要從一個儲存陣列移至另一個儲存陣列之磁碟區群組中磁碟機的相依性清單。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] importDependencies
+[cancelImport=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要顯示其匯入相依性的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+
+
+ a| 
+「取消匯入」
+ a| 
+讀取磁碟區群組相依性後、將磁碟機重新調低的設定。若要減少磁碟機的磁碟機、請將此參數設為「true」。若要讓磁碟機保持旋轉、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+此命令會傳回特定Volume群組的相依性、該群組必須處於匯出狀態或強制狀態。如果決定保留所列的相依關係、則可強制使用「cancelImport」參數來將磁碟機還原。
+
+您必須先執行「show volumeGroup importDependencies」命令、再執行「Start volumeGroup imported」命令。
+
+
+
+== 最低韌體層級
+
+7.10.

@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/delete-snapimage.html 
+sidebar: sidebar 
+keywords: delete, snapimage, command, snapshot, images, group, support, array, roles 
+summary: 刪除SnapImage命令會從快照群組中刪除一或多個快照映像。 
+---
+= 刪除快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除SnapImage」命令會從快照群組中刪除一或多個快照映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snapImage (snapGroup="snapGroupName" |
+snapGroups=("_snapGroupName1"
+... "snapGroupNamen_"))]
+[deleteCount=numberOfSnapImages]
+[retainCount=numberOfSnapImages]
+[ignoreSnapVolume=(TRUE | FALSE)]
+[snapImageID=OLDEST]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+快照群組的名稱、其中包含您要刪除的快照映像。將快照群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+《napGroups》（《napGroups》）
+ a| 
+包含您要刪除之快照映像的多個快照群組名稱。使用下列規則輸入快照群組的名稱：
+
+* 將所有名稱括在括弧中。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+「刪除計數」
+ a| 
+您要從快照群組中刪除的快照映像數。使用整數值。
+
+此參數會先刪除最舊的快照映像、然後繼續刪除最舊的快照映像、直到達到您輸入的數字為止。
+
+如果您輸入的數字大於快照群組中所有快照映像的實際數目、則會刪除所有的快照映像。快照群組保留空白。
+
+
+
+ a| 
+《記錄數》
+ a| 
+您要保留在快照群組中的快照映像數目。使用整數值。
+
+此參數會將最新的快照映像保留在快照群組中、並刪除較舊的快照映像。
+
+如果快照群組中現有的快照映像數目少於您輸入的數目、則不會刪除任何快照映像。
+
+
+
+ a| 
+「ignoreSnapVolume」
+ a| 
+使用此參數可確保您不會刪除與快照映像相關聯的快照磁碟區映像。您可以使用下列其中一個值：
+
+* 「true」-使用此值刪除快照映像、即使快照映像具有關聯的快照磁碟區。
+* 「假」：當快照映像具有關聯的快照磁碟區時、請使用此值來保留快照映像。
+
+
+預設值為「true」。
+
+
+
+ a| 
+「napImageID」
+ a| 
+"scapImageID"參數只接受"OLDEST"選項。此參數會刪除建立的最早快照映像。
+
+|===
+
+
+== 附註
+
+您可以從快照群組儲存庫磁碟區刪除最舊的快照映像。您刪除的快照映像定義會從系統中移除。您從快照群組儲存庫磁碟區中刪除的快照映像所佔用的空間將會釋出、可供快照群組中的重複使用。
+
+如果您沒有使用任何其他參數搭配「napGroup」參數或「napGroups」參數、預設會刪除最舊的快照映像。
+
+刪除快照映像時、任何快照磁碟區都會轉換為「已停止」狀態。
+
+當控制器處於鎖定模式時、此命令將不會執行。
+
+
+
+== 最低韌體層級
+
+7.83

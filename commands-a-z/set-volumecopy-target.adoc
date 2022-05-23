@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/set-volumecopy-target.html 
+sidebar: sidebar 
+keywords: set, volume, copy 
+summary: set volumeCopy target命令可定義Volume複製配對的內容。 
+---
+= 設定Volume複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「套用volumeCopy target」命令可定義Volume複製配對的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在韌體版本7.83中、不再使用「copyType=（online | offline）」參數。
+
+====
+此命令適用於Snapshot Volume複製配對。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set volumeCopy target pass:quotes[[_targetName_]]
+source pass:quotes[[_sourceName_]]
+[copyPriority=(highest | high | medium | low | lowest)]
+[targetReadOnlyEnabled=(TRUE | FALSE)]
+[copyType=(online | offline)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《目標》
+ a| 
+要複製資料的磁碟區名稱。將目標Volume名稱括在方括弧（[]）內。如果目標Volume名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住目標Volume名稱。
+
+
+
+ a| 
+《來源》
+ a| 
+要從中複製資料的磁碟區名稱。將來源Volume名稱括在方括弧（[]）內。如果來源Volume名稱包含特殊字元或數字、您必須在方括弧內以雙引號（""）括住來源Volume名稱。
+
+
+
+ a| 
+「copyPriority」
+ a| 
+Volume複本相對於主機I/O活動的優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+
+
+ a| 
+"targetReadOnlyEnabled"
+ a| 
+此設定可讓您寫入目標磁碟區、或僅從目標磁碟區讀取。若要寫入目標Volume、請將此參數設為「假」。若要防止寫入目標Volume、請將此參數設為「true」。
+
+
+
+ a| 
+「copyType」
+ a| 
+[NOTE]
+====
+此參數已過時。
+
+====
+|===
+
+
+== 附註
+
+使用此命令時、您可以指定一或多個選用參數。
+
+
+
+== 最低韌體層級
+
+5.40
+
+7.83移除「copyType=（online | offline）」參數。

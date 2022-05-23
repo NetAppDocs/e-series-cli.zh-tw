@@ -1,0 +1,139 @@
+---
+permalink: get-started/cli-command-wrapper-syntax.html 
+sidebar: sidebar 
+keywords: cli, command, wrapper, syntax 
+summary: 本節列出CLI命令摘要的一般語法形式。 
+---
+= CLI命令包裝程式語法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+本節列出CLI命令摘要的一般語法形式。下表列出了CLI命令包裝程式語法中使用的慣例。
+
+[cols="2*"]
+|===
+| 慣例 | 定義 
+
+
+ a| 
+「A | b」
+ a| 
+替代（「a」或「b」）
+
+
+
+ a| 
+「斜體字_」
+ a| 
+需要使用者輸入以完成參數（對變數的回應）
+
+
+
+ a| 
++[... ]+'（方括弧）
+ a| 
+零或一次發生（方括弧也會做為某些命令參數的分隔符號）
+
+
+
+ a| 
++`+{... （大花括號）
+ a| 
+零個或更多個事件
+
+
+
+ a| 
+（a | b | c）
+ a| 
+請只選擇其中一種替代方案
+
+
+
+ a| 
+「a &」b
+ a| 
+和/或。當您可以搭配一個或兩個控制器IP位址使用時、這會用於https用戶端模式。如此一來、如果某個控制器沒有回應、SMcli就會使用替代的IP位址。這也涵蓋需要兩個IP位址的情況、例如韌體下載。
+
+|===
+[NOTE]
+====
+若要執行所有CLI命令、您必須擁有系統管理員權限。某些CLI命令會在沒有系統管理員權限的情況下執行。不過、許多命令都無法執行。如果CLI命令因為您沒有正確的權限而無法執行、CLI會傳回12的結束代碼。
+
+====
+
+
+== https用戶端模式的範例
+
+下列範例示範中所述的「https」用戶端模式命令列參數 xref:command-line-parameters.adoc[命令列參數]。
+
+[listing]
+----
+SMcli (Controller A host-name-or-IP-address&|
+Controller B host-name-or-IP-address)  -u username -p password -c "commands;" [-clientType (auto | https | symbol)]
+----
+[NOTE]
+====
+如果您未指定「clientType」、但包含「-u」選項和「username」變數、系統將使用「https」或「symbol」用戶端模式（取兩者中的可用模式）。
+
+====
+
+
+== 符號用戶端模式的範例
+
+以下範例說明中所述的「symbol」用戶端模式命令列參數 xref:command-line-parameters.adoc[命令列參數]。
+
+[listing]
+----
+SMcli **-a** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-I** information-to-include] [**-q** frequency] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700儲存陣列不支援「A」命令列選項。
+
+====
+[listing]
+----
+SMcli **-x** **email:** email-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700儲存陣列不支援「-x'」命令列選項。
+
+====
+[listing]
+----
+SMcli (**-a** | **-x**) **trap:** community, host-name-or-IP-address [host-name-or-IP-address1 [host-name-or-IP-address2]] [**-n** storage-system-name | **-w** wwID | **-h** host-name] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700儲存陣列不支援「A」和「x」命令列選項。
+
+====
+[listing]
+----
+SMcli **-d** [**-w**] [**-i**] [**-s**] [**-v**] [**-S**]
+----
+[NOTE]
+====
+E2800或E5700儲存陣列不支援「-s」命令列選項。
+
+====
+[listing]
+----
+SMcli host-name-or-IP-address **-F** email-address [**-g** contactInfoFile] [**-S**]
+----
+[listing]
+----
+SMcli **-A** [host-name-or-IP-address [host-name-or-IP-address]] [**-S**]
+----
+[listing]
+----
+SMcli **-X **(**-n** storage-system-name | **-w** wwID | **-h** host-name)
+----
+[listing]
+----
+SMcli **-?**
+----

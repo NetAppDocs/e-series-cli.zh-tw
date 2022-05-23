@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/suspend-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: suspend, asynchronous, mirror, group 
+summary: suspend asynMirrorGroup命令會在非同步鏡射群組層級暫停所有鏡射配對上的資料同步。 
+---
+= 暫停非同步鏡像群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「定製asyncdMirrorGroup」命令會在非同步鏡射群組層級暫停所有鏡射配對上的資料同步。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+此「usfPEND」命令可協助降低當本機儲存陣列上的任何變更資料複製到遠端儲存陣列時、可能對主機應用程式造成的任何效能影響。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[suspend asyncMirrorGroup [_asyncMirrorGroupName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+要暫停資料同步的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須將非同步鏡射群組名稱以雙引號（""）括在方括弧內。
+
+|===
+
+
+== 附註
+
+當非同步鏡像群組處於暫停狀態時、不會嘗試將資料從主要磁碟區複製到鏡射配對的次要磁碟區。對非同步鏡射群組主要端的任何寫入作業、都會持續記錄在其相關的鏡射儲存庫磁碟區中。在非同步鏡射群組恢復之後、只有主要磁碟區的修改區域會寫入次要磁碟區。
+
+
+
+== 最低韌體層級
+
+7.84

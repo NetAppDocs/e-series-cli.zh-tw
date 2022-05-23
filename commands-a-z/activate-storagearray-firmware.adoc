@@ -1,0 +1,47 @@
+---
+permalink: commands-a-z/activate-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
+summary: activate storageArray韌體命令會啟動您先前下載至儲存陣列控制器之擱置組態區域的韌體。 
+---
+= 啟動儲存陣列韌體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「activate storageArray韌體」命令會啟動您先前下載至儲存陣列控制器之擱置組態區域的韌體。
+
+
+
+== 語法
+
+[listing]
+----
+activate storageArray firmware
+[healthCheckMelOverride=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「healthChecksmeloverride」
+ a| 
+此設定可覆寫主要事件記錄（MEL）的健全狀況檢查結果。仍會進行MEL驗證、不會略過此驗證。如果MEL檢查失敗、您可以在執行命令時使用此參數來略過失敗。
+
+在進行任何啟動之前、控制器會檢查事件記錄、以判斷是否發生可能導致新控制器韌體無法成功啟動的事件。如果發生此類事件、控制器通常不會啟動新韌體。
+
+此參數強制控制器啟動新韌體。預設值為「假」。如果您要強制控制器啟動新的控制器韌體、請將此值設為「true」。
+
+|===
+
+
+== 最低韌體層級
+
+8.10新增「healthChecksMeloverride」參數。

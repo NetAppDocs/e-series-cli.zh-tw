@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/show-volumegroup-exportdependencies.html 
+sidebar: sidebar 
+keywords: show, volume, group, export, dependencies 
+summary: show volumeGroup exportDependencies命令會顯示您要從一個儲存陣列移至另一個儲存陣列之磁碟區群組中磁碟機的相依性清單。 
+---
+= 顯示Volume群組匯出相依性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volumeGroup exportDependencies」命令會顯示您要從一個儲存陣列移至另一個儲存陣列之磁碟區群組中磁碟機的相依性清單。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show volumeGroup [_volumeGroupName_]] exportDependencies
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要顯示其匯出相依性的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+此命令可將磁碟機在磁碟區群組中旋轉、讀取DACstore、並顯示磁碟區群組的匯入相依性清單。Volume群組必須處於匯出狀態或強制狀態。
+
+
+
+== 最低韌體層級
+
+7.10.

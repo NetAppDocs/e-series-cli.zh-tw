@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/save-storagearray-firmwareinventory.html 
+sidebar: sidebar 
+keywords: save, storage, array, firmware, inventory 
+summary: SAVE storageArray firmwareInventory命令會將報告儲存至儲存陣列上目前執行之所有韌體的檔案。 
+---
+= 儲存儲存陣列韌體庫存
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列firmwareInventory」命令會將報告儲存至儲存陣列上目前執行的所有韌體檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+報告會列出這些元件的韌體：
+
+* 控制器
+* 磁碟機
+* 藥櫃（若適用）
+* 環境服務模組（ESSM）
+* 電源供應器
+
+
+您可以使用此資訊來協助識別過時的韌體或與儲存陣列中其他韌體不相符的韌體。您也可以將報告傳送給技術支援部門、以供進一步審查。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray firmwareInventory file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存韌體詳細目錄的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\fwination.txt"」
+
+包含韌體庫存的檔案預設名稱為「韌體庫存」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定副檔名。
+
+|===
+
+
+== 最低韌體層級
+
+7.70

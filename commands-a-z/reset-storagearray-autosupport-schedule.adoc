@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/reset-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: 重設storageArray AutoSupport somesfschedule命令會重設AutoSupport 每日和每週時間、以及每週將資訊傳回管理軟體所產生的隨機值的天數。 
+---
+= 重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「RESset storageArray AutoSupport Sesfschedule」命令會重設AutoSupport 一週中每日和每週時間、以及將資訊傳回管理軟體所產生的隨機值的天數。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+* 管理軟體會隨機選取每日和每週訊息的時間、以及每週訊息的一天。
+* 管理軟體會嘗試確保管理網域內沒有兩個儲存陣列AutoSupport 同時傳送排程的更新訊息。
+
+
+
+
+== 語法
+
+[listing]
+----
+reset storageArray autoSupport schedule
+----
+
+
+== 參數
+
+無。
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset storageArray autoSupport schedule;"
+
+SMcli completed successfully.
+----
+
+
+== 驗證
+
+使用「show storageArray AutoSupport sf2」命令查看排程的變更結果。
+
+
+
+== 最低韌體層級
+
+8.40

@@ -1,0 +1,351 @@
+---
+permalink: commands-a-z/set-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: set, iscsi, initiator 
+summary: set iscsiInitiator命令可設定iSCSI啟動器的屬性。 
+---
+= 設定iSCSI啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set iscsiInitiator」命令可設定iSCSI啟動器的屬性。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+[NOTE]
+====
+此命令已過時、並由取代 xref:set-initiator.adoc[設定啟動器] 命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set iscsiInitiator (pass:quotes[["_initiatorUserLabel_"]] | <"_iscsiInitiatorName_">)
+(userLabel=pass:quotes["_newName_"] |
+host=pass:quotes["_newHostName_"] |
+chapSecret=pass:quotes["_newSecurityKey_"])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「initatorUserLabel」
+ a| 
+您要為其設定屬性的iSCSI啟動器之iSCSI啟動器使用者標籤。將iSCSI啟動器使用者標籤括在方括弧（[]）內的雙引號（""）內。
+
+[NOTE]
+====
+以主機連接埠所連接的主機名稱開頭啟動器使用者標籤。由於主機上可以有多個主機連接埠識別碼、因此請使用唯一的主機連接埠識別碼作為後置。如果主機名稱為「ICTM1590S02h1」、則啟動器標籤會顯示如下：
+
+====
+[listing]
+----
+set iscsiInitiator ["ICTM1590S02H1_AA"]
+----
+
+
+ a| 
+「iscsiInitiator名稱」
+ a| 
+您要為其設定屬性的啟動器名稱。將「iscsiInitialatorName」（iscsiInitiator名稱）括在雙引號（""）內角括弧（<>）。
+
+[NOTE]
+====
+「iscsiInitiator名稱」是iSCSI合格名稱（iqn）。範例：
+
+====
+[listing]
+----
+set iscsiInitiator <"iqn.2016-11.com.vmware.iscsi:ictm1509s02h1">
+----
+
+
+ a| 
+「userLabel」
+ a| 
+您要用於iSCSI啟動器的新使用者標籤。將新的使用者標籤括在雙引號（""）內。
+
+[NOTE]
+====
+最佳做法是以主機連接埠所連接的主機名稱開頭啟動器使用者標籤。由於主機上可以有多個主機連接埠識別碼、因此請使用唯一的主機連接埠識別碼作為後置。如果主機名稱為「ICTM1590S02h1」、則啟動器使用者標籤範例如下所示：
+
+====
+[listing]
+----
+set iscsiInitiator ["ICTM1590S02H1_AA"]
+----
+
+
+ a| 
+"主機"
+ a| 
+連接主機連接埠的新主機名稱。將主機名稱括在雙引號（""）內。範例如下所示：
+
+[listing]
+----
+["ICTM1590S02H2"]
+----
+
+
+ a| 
+《chapSecret》
+ a| 
+您要用來驗證對等連線的安全性金鑰。將安全金鑰括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+挑戰握手驗證傳輸協定（CHAP）是驗證連線對等端點的傳輸協定。CHAP是以共用_secret的對等端點為基礎。秘密是類似密碼的安全金鑰。
+
+使用「chapSecret」參數來設定需要相互驗證之啟動器的安全性金鑰。CHAP密碼必須介於12個字元與57個字元之間。此表列出有效字元。
+
+[cols="1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a"]
+|===
+
+
+ a| 
+空間
+ a| 
+！
+ a| 
+"
+ a| 
+#
+ a| 
+$
+ a| 
+%
+ a| 
+和
+ a| 
+'
+ a| 
+（
+ a| 
+）
+ a| 
+*
+ a| 
+
+
+
+ a| 
+、
+ a| 
+-
+ a| 
+。
+ a| 
+/
+ a| 
+0
+ a| 
+1.
+ a| 
+2.
+ a| 
+3.
+ a| 
+4.
+ a| 
+5.
+ a| 
+6.
+ a| 
+7.
+
+
+
+ a| 
+8.
+ a| 
+9.
+ a| 
+：
+ a| 
+；
+ a| 
+<
+ a| 
+=
+ a| 
+>
+ a| 
+？
+ a| 
+@
+ a| 
+答
+ a| 
+b
+ a| 
+c
+
+
+
+ a| 
+D
+ a| 
+e
+ a| 
+f
+ a| 
+G
+ a| 
+h
+ a| 
+我
+ a| 
+j
+ a| 
+K
+ a| 
+l
+ a| 
+m
+ a| 
+n
+ a| 
+O
+
+
+
+ a| 
+p
+ a| 
+問
+ a| 
+R
+ a| 
+S
+ a| 
+T
+ a| 
+U
+ a| 
+V
+ a| 
+w
+ a| 
+x
+ a| 
+是
+ a| 
+Z
+ a| 
+[
+
+
+
+ a| 
+\
+ a| 
+]
+ a| 
+更多的
+ a| 
+_
+ a| 
+'
+ a| 
+答
+ a| 
+b
+ a| 
+c
+ a| 
+D
+ a| 
+e
+ a| 
+f
+ a| 
+G
+
+
+
+ a| 
+h
+ a| 
+我
+ a| 
+j
+ a| 
+K
+ a| 
+l
+ a| 
+m
+ a| 
+n
+ a| 
+O
+ a| 
+p
+ a| 
+問
+ a| 
+R
+ a| 
+S
+
+
+
+ a| 
+T
+ a| 
+U
+ a| 
+V
+ a| 
+w
+ a| 
+x
+ a| 
+是
+ a| 
+Z
+ a| 
+｛
+ a| 
+|
+ a| 
+}
+ a| 
+~
+ a| 
+
+|===
+
+
+== 最低韌體層級
+
+7.10.
+
+8.41此命令已過時。

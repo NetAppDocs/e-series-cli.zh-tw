@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: reset, asynchronous, mirror group, statistics 
+summary: 「重設storageArray arvmStats asyncdMirrorGroup」命令會將非同步鏡像群組中一或多個成員磁碟區的同步統計資料重設為相對0。 
+---
+= 重設非同步鏡射群組統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「已重新設定storageArray arvmStats asyncdMirrorGroup」命令會將非同步鏡像群組中一或多個成員磁碟區的同步統計資料重設為相對0。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+reset storageArray arvmStats asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+volume=pass:quotes[_"volumeName"_] sampleType=(all | mostRecent | longestSyncTime | errors)
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要為其重設同步處理統計資料的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須將非同步鏡射群組名稱以雙引號（""）括在方括弧內。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+此參數為選用項目。非同步鏡射群組中您要重設同步統計資料的特定成員磁碟區名稱。如果未指定磁碟區、則會重設非同步鏡射鏡射群組中每個成員磁碟區的統計資料。
+
+將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+「取樣類型」
+ a| 
+此參數為選用項目。「最大取樣類型」的預設值為「ALL」。
+
+* 「All」-重設三種樣本類型的資料。
+* 「多數重新同步」-最近50個重新同步樣本的統計資料會重設。
+* 「longestSyncTime」-最近20個最長的重新同步樣本會重設統計資料。
+* 「errors」（錯誤）-針對最近20個失敗的重新同步樣本重設統計資料。
+
+
+|===
+
+
+== 附註
+
+系統會針對主要角色中的鏡射磁碟區重設統計資料。重設的統計資料包括下列資料：
+
+* 同步開始時間
+* 同步類型（手動或定期）
+* 同步處理持續時間
+* 傳送的位元組數
+* 最大和最短寫入時間（單一寫入）
+* 最大和最小同步資料速率
+* 總寫入時間
+* 儲存庫使用率（%）
+* 恢復點時間
+
+
+
+
+== 最低韌體層級
+
+7.84

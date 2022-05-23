@@ -1,0 +1,131 @@
+---
+permalink: commands-a-z/start-controller-iscsihostport-dhcprefresh.html 
+sidebar: sidebar 
+keywords: start, iscsi, dhcp, refresh 
+summary: start控制器iscsiHostPort DhcpRefresh命令會重新整理iSCSI介面的DHCP參數。 
+---
+= 啟動iSCSI DHCP重新整理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start Controller iscsiHostPort DhcpRefresh」命令會重新整理iSCSI介面的DHCP參數。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+如果介面的組態方法未設定為DHCP、則程序會傳回錯誤。
+
+
+
+== 語法
+
+[listing]
+----
+start controller [(a|b)] iscsiHostPort [portLabel] dhcpRefresh
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+具有iSCSI主機連接埠的控制器識別碼。有效的控制器識別碼值為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器
+
+
+
+ a| 
+「iscsiHostPort」
+ a| 
+要重新整理DHCP參數的主機連接埠標籤或iSCSI主機連接埠編號。
+
+如需詳細資訊、請參閱下列內容：
+
+<<Identifying an iSCSI host port label,"識別iSCSI主機連接埠標籤">>
+
+|===
+
+
+== 識別iSCSI主機連接埠標籤
+
+您必須指定主機連接埠的標籤。請依照下列步驟指定主機連接埠標籤：
+
+.步驟
+. 如果您不知道iSCSI主機連接埠的連接埠標籤、請執行「show controller」命令。
+. 在結果的「主機介面」區段中、找出您要選取的主機連接埠。
++
+[NOTE]
+====
+連接埠標籤是傳回「Port（連接埠）」欄位的完整值。
+
+====
+. 將連接埠標籤的整個值括在引號和方括弧中：["portlabel"。例如、如果連接埠標籤為「CH 2」、請如下指定iSCSI主機連接埠：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令列、且標籤包含管路（|）、則該字元應轉義（使用｛caret｝）；否則、該字元將會解譯為命令。例如、如果連接埠標籤為「e0b-0b」、請如下指定iSCSI主機連接埠：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+為了提供向下相容性、以大括弧[]括住的iscsiPortNumber（而非引號和大括弧["]）仍可用於E2700、E5600或EF560控制器（以及其他前幾代E系列或EF系列控制器）。對於這些控制器、iscsiPortNumber的有效值如下：
+
+* 對於具有整合式主機連接埠的控制器、編號為3、4、5或6。
+* 如果控制器的主機連接埠僅在主機介面卡上、則編號為1、2、3或4。
+
+
+先前的語法範例如下：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 附註
+
+此作業會結束入口網站的iSCSI連線、並暫時關閉入口網站。
+
+
+
+== 最低韌體層級
+
+7.10.
+
+8.10修改iSCSI主機連接埠的編號系統。
+
+8.30會修改E2800中iSCSI主機連接埠的識別方法。

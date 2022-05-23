@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-snapgroup.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, attributes 
+summary: set snapGroup命令可定義快照群組的內容。 
+---
+= 設定快照群組屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapGroup」命令可定義快照群組的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+[userLabel=pass:quotes["_snapGroupName_"]] |
+[repositoryFullPolicy=(failBaseWrites | purgeSnapImages) |
+[repositoryFullLimit=pass:quotes[_percentValue_] |
+[autoDeleteLimit=pass:quotes[_numberOfSnapImages_]] |
+[rollbackPriority=(lowest | low | medium | high | highest)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+您要為其設定內容的快照群組名稱。將快照群組名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要提供給快照群組的新名稱。當您想要重新命名快照群組時、請使用此參數。將新的快照群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「repositoryFullPolicy」
+ a| 
+如果快照映像群組的儲存庫磁碟區已滿、您要如何繼續快照映像處理。您可以選擇將寫入失敗寫入基礎磁碟區（「故障基礎寫入器」）、或刪除（清除）快照映像（「purgeSnapImages」）。預設動作為「pugeSnapImages」。
+
+
+
+ a| 
+「repositoryFullLimit」
+ a| 
+儲存庫磁碟區容量的百分比、您會在其中收到快照映像儲存庫磁碟區即將滿的警告。使用整數值。例如、值70表示70%。預設值為75。
+
+
+
+ a| 
+「自動刪除限制」
+ a| 
+如果您已選取清除儲存庫完整原則的快照映像、則想要自動刪除的最大快照映像數。使用整數值。預設值為32。
+
+
+
+ a| 
+「復原優先順序」
+ a| 
+使用此參數來判斷是否應將系統資源配置給復原作業、而犧牲系統效能。有效值為「最高」、「高」、「中等」、「低」或「最低」、「高」值、表示復原作業優先於所有其他主機I/O值「最低」表示復原作業應在對主機I/O影響最小的情況下執行
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+使用此命令時、您可以指定一或多個參數。不過、您不需要使用所有的參數。
+
+
+
+== 最低韌體層級
+
+7.83

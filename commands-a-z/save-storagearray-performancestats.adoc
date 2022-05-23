@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-storagearray-performancestats.html 
+sidebar: sidebar 
+keywords: save, storage, array, performance, statistics 
+summary: SAVE storageArray performanceStats命令可將效能統計資料儲存至檔案。 
+---
+= 儲存儲存陣列效能統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列效能統計資料」命令可將效能統計資料儲存至檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+在使用此命令之前、請先執行「set Session performanceMonitorInterval」命令和「show session performanceMonitorIterations」命令、以指定收集統計資料的頻率。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray performanceStats file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存效能統計資料的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs/sastat．csv"」
+
+包含效能統計資料的檔案預設名稱為「performanceStatistics.csv」。您可以使用任何檔案名稱、但必須使用「.csv"副檔名。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

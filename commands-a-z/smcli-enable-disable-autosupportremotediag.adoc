@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/smcli-enable-disable-autosupportremotediag.html 
+sidebar: sidebar 
+keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
+summary: SMcli enable |停用autosupportRemoteDiag命令會開啟或關閉AutoSupport 「支援遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。 
+---
+= 在AutoSupport EMW管理網域層級啟用或停用「支援不支援功能」（僅限SMcli）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「啟用Mcli |停用AutoSupportRemoteDiag」命令會開啟或關閉AutoSupport 「支援遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+[NOTE]
+====
+此命令會影響管理網域中所有具備ASUP功能的儲存陣列。
+
+====
+啟用此功能之前、請先啟用AutoSupport 管理AutoSupport 網域上的「支援功能」、然後再啟用「支援功能」。
+
+您必須依此順序啟用這三項功能。
+
+. *啟用AutoSupport 此功能*
+. *啟用AutoSupport 《支援此功能*》
+. *啟用AutoSupport 「更新遠端診斷」*
+
+
+
+
+== 語法
+
+[listing]
+----
+SMcli enable|disable autoSupportRemoteDiag
+----
+
+
+== 參數
+
+無。
+
+
+
+== 驗證
+
+使用「Mcli -autosupSupportConfig show」命令查看您是否已啟用此功能。顯示輸出的開頭三行顯示AutoSupport 啟用功能狀態、接著AutoSupport 顯示「支援」功能、接著顯示AutoSupport 「支援」功能、接著顯示「支援」功能的狀態：
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management
+station.
+The AutoSupport OnDemand feature is activated on this storage management
+station.
+The AutoSupport Remote Diagnostics feature is activated on this storage
+management station.
+----
+
+
+== 最低韌體層級
+
+8.25

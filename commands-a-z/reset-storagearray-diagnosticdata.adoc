@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/reset-storagearray-diagnosticdata.html 
+sidebar: sidebar 
+keywords: reset ,storage, array, diagnostic, data 
+summary: 重設storageArray診斷資料命令會重設內含儲存陣列診斷資料的NVSRAM. 
+---
+= 重設儲存陣列診斷資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「資源集storageArray診斷資料」命令會重設內含儲存陣列診斷資料的NVSRAM.
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令不會刪除診斷資料。此命令會以「診斷資料可用」狀態取代「需要注意」狀態。擷取新資料時、會自動重新寫入舊的診斷資料。控制器重新開機時、也會清除包含診斷資料的記憶體。重設診斷資料之前、請使用「儲存陣列診斷資料」命令將診斷資料儲存至檔案。
+
+[NOTE]
+====
+只有在技術支援的協助下、才能執行此命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+reset storageArray diagnosticData
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.16

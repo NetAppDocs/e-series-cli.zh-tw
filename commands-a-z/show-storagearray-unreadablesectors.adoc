@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/show-storagearray-unreadablesectors.html 
+sidebar: sidebar 
+keywords: show, storage, array, unreadable, sectors 
+summary: show storageArray unreadableSecors命令會傳回儲存陣列中無法讀取之所有磁區位址的表格。 
+---
+= 顯示儲存陣列無法讀取的磁區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray unreadableSecors」命令會傳回儲存陣列中所有無法讀取之磁區的位址表。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+傳回的表格會以下列資訊的欄標題加以組織：
+
+* Volume使用者標籤
+* 邏輯單元編號（LUN）
+* 可由（主機或主機群組）存取
+* 日期/時間
+* Volume相對邏輯區塊位址（十六進位格式- 0xnnnnnnnn）
+* 磁碟機位置（匣t、插槽s）
+* 磁碟機相對邏輯區塊位址（十六進位格式- 0xnnnnnn）
+* 故障類型
+
+
+資料會先依磁碟區使用者標籤排序、再依邏輯區塊位址（LBA）排序。表格中的每個項目對應一個區段。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray unreadableSectors
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.10.

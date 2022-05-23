@@ -1,0 +1,85 @@
+---
+permalink: commands-a-z/set-hostport.html 
+sidebar: sidebar 
+keywords: set, host, port 
+summary: set hostPort命令會變更主機連接埠的內容。 
+---
+= 設定主機連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show hostPort」命令可變更主機連接埠的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令無法在iSCSI環境中運作、因為主機連接埠被視為啟動器。請改用「show iscsiInitiator」命令。請參閱 xref:set-iscsiinitiator.adoc[設定iSCSI啟動器]。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set hostPort pass:quotes[[_portLabel_]] userLabel=pass:quotes[_newPortLabel_]
+[host=pass:quotes[_hostName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「主機連接埠」
+ a| 
+要變更主機類型或要建立新名稱的主機連接埠名稱。將主機連接埠名稱括在方括弧中（[]）。如果主機連接埠名稱包含特殊字元或數字、請將主機連接埠名稱以雙引號（""）括在方括弧內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要指定給主機連接埠的新名稱。將主機連接埠的新名稱以雙引號（""）括住。
+
+
+
+ a| 
+"主機"
+ a| 
+定義HBA或HCA主機連接埠的主機名稱。將主機名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用任何字母數字字元、連字號和底線的組合來表示使用者標籤。使用者標籤最多可有30個字元。
+
+
+
+== 最低韌體層級
+
+6.10.

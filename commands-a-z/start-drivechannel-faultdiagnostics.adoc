@@ -1,0 +1,145 @@
+---
+permalink: commands-a-z/start-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: start, drive channel, fault, isolation, diagnostics 
+summary: start driveChannel faultDiagnostics命令會執行磁碟機通道故障隔離診斷、並儲存結果。 
+---
+= 啟動磁碟機通道故障隔離診斷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start driviveChannel faultDiagnostics」命令會執行磁碟機通道故障隔離診斷、並儲存結果。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在韌體版本8.10中、「Start driviveChannel faultDiagnostics」命令已過時。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)]
+controller [(a|b)] faultDiagnostics
+testDevices=[all |
+controller=(a|b) |
+esms=pass:quotes[[_trayID1_ (left | right), ... , _trayIDN_] (left | right)] |
+drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]]
+|[dataPattern=(fixed | pseudoRandom) |
+patternNumber=[pass:quotes[(_0xhexadecimal_ | _number_)]] |
+pass:quotes[maxErrorCount=_integer_] |
+pass:quotes[testIterations=_integer_] |
+pass:quotes[timeout=_timeInterval_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「DiveChannel」
+ a| 
+您要尋找的磁碟機通道識別碼。磁碟機通道識別碼的有效值為「1」、「2」、「3」、「4」、「5」、 6、7或8。將磁碟機通道識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+"控制器"
+ a| 
+您要測試之控制器的識別碼。有效的控制器識別碼值為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+「testDevices」
+ a| 
+您要測試的裝置（控制器、環境服務模組[ESM]或磁碟機）識別碼。您可以指定「ALL」或輸入您要診斷的裝置的特定識別碼。「控制器」識別碼為「A」或「b」、其中「A」是插槽A中的RAID控制器模組、而「b」是插槽B中的RAID控制器模組
+
+「ESMS」識別碼為tray ID（匣ID）和左或右、其中tray ID為0到99之間的值、而左或右則是從背面檢視磁碟機匣時所決定的值。
+
+「資料匣」識別碼包括紙匣識別碼、紙匣有紙匣時的藥匣識別碼、以及插槽識別碼。
+
+對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+
+
+ a| 
+「Data模式」
+ a| 
+您要測試的重複性方法。
+
+
+
+ a| 
+「模式編號」
+ a| 
+您要用來執行測試的十六進位資料模式。此數字可以是介於「0000」到「FFFF」之間的任何十六進位數字。您必須將「0X」放在前面、以表示一個十六進位數字。
+
+
+
+ a| 
+"PaxErrorCount"
+ a| 
+終止測試之前您要接受的錯誤數。
+
+
+
+ a| 
+"測試迭代"
+ a| 
+您要重複測試的次數。
+
+
+
+ a| 
+超時
+ a| 
+您要執行測試的時間長度（以分鐘為單位）。
+
+|===
+
+
+== 附註
+
+您可以輸入多種裝置類型進行測試、也可以輸入多種測試類型來執行。
+
+使用「儲存磁碟機通道故障診斷」命令和「最新磁碟通道故障診斷」命令。需要這些命令、才能將診斷測試結果儲存至檔案並停止診斷測試。
+
+有效的「模式編號」項目範例包括「0xA5a5」、「0x33C」、「8787」和「1234"。
+
+您也可以隨時按下「Ctrl+C」來停止此命令。
+
+
+
+== 最低韌體層級
+
+7.15

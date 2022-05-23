@@ -1,0 +1,73 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, external, key management, certificate 
+summary: SAVE storageArray keyManagementCertificate命令會擷取已安裝的憑證。 
+---
+= 擷取已安裝的外部金鑰管理憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列keyManagementCertificate」命令會擷取已安裝的憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementCertificate certificateType=pass:quotes["_certificateType_"]
+file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「認證類型」
+ a| 
+可讓您指定要安裝的憑證類型。有效選項包括：「用戶端」或「伺服器」。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定簽署的憑證或伺服器CA憑證的檔名。
+
+|===
+
+
+== 最低韌體層級
+
+8.40

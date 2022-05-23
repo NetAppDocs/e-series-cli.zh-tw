@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/delete-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: delete, asynchronous, mirror group 
+summary: DELETE asyncdMirrorGroup命令會從本機儲存陣列和遠端儲存陣列刪除一或多個非同步鏡射群組。 
+---
+= 刪除非同步鏡射群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Delete asyncdMirrorGroup」命令會從本機儲存陣列和遠端儲存陣列刪除一或多個非同步鏡像群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+在成功刪除非同步鏡射群組之前、該群組必須是空的。使用此命令之前、您必須先從非同步鏡射群組移除所有非同步鏡射配對。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+delete (allAsyncMirrorGroups | asyncMirrorGrouppass:quotes[[_"asyncMirrorGroupName"_] |
+asyncMirrorGroups pass:quotes[[_"asyncMirrorGroupName_1" ... "asyncMirrorGroupName_n"_]])
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《所有同步鏡像群組》
+ a| 
+如果您要從本機儲存陣列和遠端儲存陣列移除所有非同步鏡射群組、請使用此參數。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要刪除的非同步鏡射群組名稱。將非同步鏡射群組名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+《非yncdMirrorGroups》
+ a| 
+您要刪除的數個非同步鏡射群組名稱。使用下列規則輸入非同步鏡射群組的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 最低韌體層級
+
+7.84

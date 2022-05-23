@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/set-storagearray-time.html 
+sidebar: sidebar 
+keywords: set, storage, array, time 
+summary: set storageArray time命令可將控制器時鐘與執行此命令的主機時鐘同步、以設定儲存陣列中兩個控制器的時鐘。 
+---
+= 設定儲存陣列時間
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray time」命令可將控制器時鐘與執行此命令的主機時鐘同步、以設定儲存陣列中兩個控制器的時鐘。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray time
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.10.

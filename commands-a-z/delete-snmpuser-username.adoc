@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/delete-snmpuser-username.html 
+sidebar: sidebar 
+keywords: delete, user, name, command, simple, network, management, protocol, create, register, effective, unregister, trap, destination, associate, remove 
+summary: 刪除snmpUser使用者名稱命令會刪除您先前使用「create snmpUser」命令建立及註冊的現有Simple Network Management Protocol（SNMP）USM使用者。刪除SNMP使用者可有效取消登錄使用者。也會移除與該使用者相關的任何設陷目的地。 
+---
+= 取消登錄v3 USM使用者
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+刪除「Delete SNMP使用者名稱」命令會刪除您先前使用「[.code]'createsnmpUser'」命令建立及註冊的現有Simple Network Management Protocol（SNMP）USM使用者。刪除SNMP使用者可有效取消登錄使用者。也會移除與該使用者相關的任何設陷目的地。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpUser userName="_snmpUserName_" [engineId=(local | engineId)]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《使用者名稱》
+ a| 
+您要刪除的SNMP USM使用者名稱。將SNMP USM使用者名稱括在雙引號（""）內。
+
+
+
+ a| 
+"工程師Id"
+ a| 
+您要更新的SNMP USM使用者引擎ID。如果有多個使用者名稱相同的USM使用者、則引擎ID為必填欄位。此值可以是「[.code]`_local_`」、以指定本機SNMP代理程式為驗證代理程式、或是指定遠端SNMP代理程式引擎ID的十六進位數字字串。
+
+|===
+
+
+== 最低韌體層級
+
+8.72.

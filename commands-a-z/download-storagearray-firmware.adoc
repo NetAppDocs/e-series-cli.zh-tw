@@ -1,0 +1,143 @@
+---
+permalink: commands-a-z/download-storagearray-firmware.html 
+sidebar: sidebar 
+keywords: download, storage, array, firmware, command, downloads, optionally, values, controllers, role, context, parameter 
+summary: Download storageArray韌體命令會下載儲存陣列控制器的韌體和（可選）NVSRAMs值。 
+---
+= 下載儲存陣列韌體/NVSRAM
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'download storageArray韌體'命令會下載儲存陣列控制器的韌體和（可選）NVSRAMs值。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+如果您只想下載NVSRAM/Values、請使用「download storageArray NVSRAM'命令。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+download storageArray firmware [, NVSRAM ]
+pass:quotes[file="_filename_" [, "_NVSRAM-filename_"]]
+[downgrade=(TRUE | FALSE)
+activateNow=(TRUE | FALSE)
+healthCheckMelOverride=(TRUE | FALSE)
+healthCheckNeedsAttnOverride=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《NVSRAM'》
+ a| 
+下載韌體檔案時、此參數會下載具有NVSRAMs值的檔案。此參數不可包含方括弧。在「韌體」參數後面加上一個英文字元。
+
+
+
+ a| 
+檔案
+ a| 
+此參數指定包含韌體的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/dnld\safrm.dlp」
+
+有效的檔案名稱副檔名為「.dlp」。
+
+
+
+ a| 
+"NVSRAM-Fil性"
+ a| 
+此參數指定包含NVSRAMs值的檔案路徑和檔案名稱。請以雙引號（""）括住NVSRAM.檔案名稱。例如：
+
+「file="C:\Program Files\CLI/dnld\safrm.dlp」有效檔案名稱的副檔名為「.dlp」。
+
+下載韌體和NVSRAM,請在檔案名稱前加上一個英文字元。
+
+
+
+ a| 
+"降級"
+ a| 
+[CAUTION]
+====
+*儲存陣列組態可能受損*-如果下載舊版的控制器韌體或NVSRAM不當、可能會導致控制器受損或資料存取遺失。使用此參數之前、請先聯絡技術支援部門。
+
+====
+此設定可載入舊版韌體。預設值為「假」。如果您要下載較早版本的韌體、請將「降級」參數設為「true」。
+
+[NOTE]
+====
+此參數在您只下載NVSRAM/R時無效。
+
+====
+
+
+ a| 
+《ActivateNow》
+ a| 
+此設定會啟動韌體映像和NVSRAM映 像。預設值為「true」。如果您將「activateNow」參數設為「假」、則必須執行「activate storageArray fact供 韌體」命令、以在稍後啟動韌體和NVSRAM.
+
+[NOTE]
+====
+此參數在您只下載了NVSRAM.時無效。
+
+====
+
+
+ a| 
+「healthChecksmeloverride」
+ a| 
+此設定會覆寫主要事件記錄（MEL）的健全狀況檢查結果。仍會進行MEL驗證、不會略過此驗證。如果MEL檢查失敗、您可以在執行命令時使用此參數來略過失敗。
+
+在下載之前、控制器會檢查事件記錄、以判斷是否發生可能導致新控制器韌體無法成功下載的事件。如果發生此類事件、控制器通常不會下載新韌體。
+
+此參數強制控制器下載新韌體。預設值為「假」。如果您要強制控制器下載新的控制器韌體、請將此值設為「true」。
+
+
+
+ a| 
+「healthChecksAttnOverride」
+ a| 
+此設定會覆寫特定需求注意條件集的健全狀況檢查結果。特定情況仍需要注意驗證、不會被忽略。如果Needs Attention Check失敗、您可以在執行命令時使用此參數來略過失敗。
+
+在下載之前、控制器會檢查一組特定的「需要注意」條件、以判斷是否發生故障、導致新的控制器韌體無法成功下載。如果發生此類事件、控制器通常不會下載新韌體。
+
+此參數強制控制器下載新韌體。預設值為「假」。如果您要強制控制器下載新的控制器韌體、請將此值設為「true」。
+
+|===
+
+
+== 最低韌體層級
+
+5.00
+
+8.10新增「* healthChecksMeloverrid*」參數。
+
+8.70新增「* healstChecksAttnoverrid*」參數。

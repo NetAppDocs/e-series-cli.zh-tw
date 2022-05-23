@@ -1,0 +1,67 @@
+---
+permalink: commands-a-z/set-storagearray-odxenabled.html 
+sidebar: sidebar 
+keywords: enable, disable, odx 
+summary: set storageArray odxEnabled命令可開啟或關閉儲存陣列的卸載資料傳輸（ODX）。 
+---
+= 啟用或停用ODX
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray odxEnabled」命令會開啟或關閉儲存陣列的卸載資料傳輸（ODX）。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+儲存陣列已開啟ODX。如果您不想執行ODX、或是ODX導致儲存陣列發生問題、請使用此命令來關閉ODX。唯一受影響的儲存陣列是執行命令的儲存陣列。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray odxEnabled=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「odxEnabled」
+ a| 
+開啟或關閉ODX的設定。若要開啟ODX、請將此參數設為「true」。若要關閉ODX、請將此參數設為「假」。預設設定為開啟ODX。
+
+|===
+
+
+== 附註
+
+ODX提供一種傳輸資料的方法、無需使用緩衝讀取和緩衝寫入作業、也不需要直接由主機參與資料傳輸作業。若未啟用ODX、資料會從來源儲存設備讀取至主機、然後從主機寫入目標儲存設備。啟用ODX後、資料傳輸作業會直接由儲存基礎架構管理。資料會直接從來源儲存設備移至目標儲存設備、而不會經過主機。
+
+
+
+== 最低韌體層級
+
+8.20

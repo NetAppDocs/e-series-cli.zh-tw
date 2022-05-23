@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/check-syncmirror.html 
+sidebar: sidebar 
+keywords: check, synchronous, mirroring status 
+summary: Check SyncMirror 流通命令會傳回遠端鏡射磁碟區的狀態。使用此命令可判斷遠端鏡射磁碟區的狀態何時變成最佳狀態。 
+---
+= 檢查同步鏡射狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Check SyncMirror 流通」命令會傳回遠端鏡射磁碟區的狀態。使用此命令可判斷遠端鏡射磁碟區的狀態何時變成最佳狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+check syncMirror localVolume pass:quotes[[_volumeName_]] optimalStatus timeout=pass:quotes[_timeoutValue_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「localVolume」
+ a| 
+任何遠端鏡射Volume的名稱。遠端鏡射Volume可以是遠端鏡射配對的主要Volume或次要Volume。將磁碟區名稱括在方括弧（[]）內。如果磁碟區名稱包含特殊字元、則必須以雙引號（""）括住磁碟區名稱。
+
+
+
+ a| 
+超時
+ a| 
+軟體可傳回遠端鏡射Volume狀態的時間間隔。逾時值以分鐘為單位。
+
+|===
+
+
+== 附註
+
+此命令會等到狀態變成最佳或逾時時間間隔過期為止。當您執行非同步同步鏡射公用程式時、請使用此命令。

@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/delete-storagearray-keymanagementcertificate.html 
+sidebar: sidebar 
+keywords: delete, storage, array, key, management, certificate, command, remove, install, external 
+summary: DELETE storageArray keyManagementCertificate命令會從儲存陣列移除已安裝的外部金鑰管理憑證。 
+---
+= 移除已安裝的外部金鑰管理憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除storageArray keyManagementCertificate」命令會從儲存陣列移除已安裝的外部金鑰管理憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[delete storageArray keyManagementCertificate certificateType=_certificate_type_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「認證類型」
+ a| 
+可讓您指定要刪除的憑證類型。有效選項包括：「用戶端」或「伺服器」。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+ SMcli -n Array1 -c "delete storageArray keyManagementCertificate certificateType="client";"
+
+   SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

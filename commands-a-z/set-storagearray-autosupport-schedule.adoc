@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/set-storagearray-autosupport-schedule.html 
+sidebar: sidebar 
+keywords: set, autosupport, message, collection, schedule, individual, E2800, E5700, arrays 
+summary: set storageArray AutoSupport sesfschedule命令會設定AutoSupport 每天和每週的時間、以及每週傳送此類訊息的天數。 
+---
+= 設定AutoSupport 資訊收集排程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray AutoSupport fesetschedule」命令可設定AutoSupport 一週中每天和每週傳送該訊息的時間和天數。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+* 如果啟用了「支援」功能、管理軟體就會同時傳送每日的「資訊」訊息和每週的「資訊」訊息。AutoSupport AutoSupport AutoSupport
+* 您可以指定每天傳送的時間範圍（小時層級精細度）、以及管理網域中儲存陣列每週傳送訊息的時間。
+* 針對每週排程、您可以選擇AutoSupport 一週中偏好的日期進行收集和傳輸。
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport schedule dailyTime=pass:quotes[_startTime-endTime_]
+ [dayOfWeek=(Sunday Monday Tuesday Wednesday Thursday Friday Saturday)]
+weeklyTime=pass:quotes[_startTime-endTime_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「每日時間」
+ a| 
+「intartTime>-<<'endTime'（時間）>指定您想要開始和結束AutoSupport 所有儲存陣列之收集的各種時候。開始時間和結束時間必須為24小時格式、以小時為準。例如、下午9：00應輸入21：00。
+
+
+
+ a| 
+《週之夜》
+ a| 
+（星期日|週一|週二|週三|週四|週五|週六）指定您要收集AutoSupport 此套件集合資料的偏好週數（週日至週六）。必須用圓括弧括住「dayOfWeek」參數、並以空格分隔。
+
+
+
+ a| 
+「週末時間」
+ a| 
+「intartTime>-」<「endTime'」>指定您想要開始和結束AutoSupport 選定一週中每一天收集的「資訊包」收集資料的時間。「最長時間」和「結束時間」的格式必須為hh：mm[am|pam]。
+
+|===
+
+
+=== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 weeklyTime=1:00-5:00;"
+
+SMcli -n Array1 -c "set storageArray autoSupport schedule dailyTime=14:00-15:00 dayOfWeek=(Monday Friday) weeklyTime=1:00-5:00;"
+
+SMcli completed successfully.
+----
+
+
+=== 驗證
+
+使用「show storageArray AutoSupport sf2」命令查看排程的變更結果。
+
+
+
+== 最低韌體層級
+
+8.40

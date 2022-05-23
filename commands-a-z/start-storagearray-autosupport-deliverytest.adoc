@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/start-storagearray-autosupport-deliverytest.html 
+sidebar: sidebar 
+keywords: test, autosupport, delivery, set, individual, E2800, E5700, arrays 
+summary: start storageArray AutoSupport riveryTest命令會傳送範例AutoSupport 消息以供您使用指定的交付參數來測試與目的地技術支援系統的連線。 
+---
+= 測試AutoSupport 供應設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray AutoSupport 現象傳送測試」命令會傳送範例AutoSupport 消息以供您使用指定的交付參數來測試與目的地技術支援系統的連線。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start storageArray autoSupport deliveryTest pass:quotes[[replyToEmail="_address_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「電子郵件」
+ a| 
+可讓使用者為AutoSupport 測試訊息指定回覆電子郵件地址。只有在將傳送方法設定為電子郵件時、才會使用/必要。
+
+|===
+
+
+=== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start storageArray autoSupport deliveryTest;"
+
+SMcli -n Array1 -c "start storageArray autoSupport deliveryTest replyToEmail=\"user@company.com\";"
+
+The sample AutoSupport message was successfully sent to the ASUP gateway server.
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

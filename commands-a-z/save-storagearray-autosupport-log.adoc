@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autosupport-log.html 
+sidebar: sidebar 
+keywords: retrieve, autosupport, log, individual, E2800, E5700, arrays 
+summary: 儲存storageArray AutoSupport flexlog命令可讓您檢視AutoSupport 一份flexlog檔案。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。 
+---
+= 擷AutoSupport 取一份資訊記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列AutoSupport 資訊記錄」命令可讓您檢視AutoSupport 一個資訊記錄檔。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+此命令可讓您檢視兩種類型的記錄：
+
+* 當前日誌--查看在此時間點擷取的日誌。
+* 歸檔日誌-從歸檔文件查看日誌。
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray autoSupport log [inputArchive=n]
+file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《intutArchive》（輸入檔案）
+ a| 
+可讓您指定歸檔AutoSupport 的資訊記錄、其中歸檔檔案為「n」、一個從0開始的整數。
+
+[NOTE]
+====
+省略此參數表示您選取目前AutoSupport 的版本資訊（此時擷取）。
+
+====
+
+
+ a| 
+檔案
+ a| 
+可讓您指定輸出ASUP傳輸記錄檔名。
+
+[NOTE]
+====
+此參數為必填欄位。
+
+====
+|===
+
+
+=== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save storageArray autoSupport log inputArchive=0 file=\"ASUPTransmissionLog\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

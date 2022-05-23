@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/set-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: set, internal, storage, array, security key 
+summary: set storageArray securityKey命令可設定整個儲存陣列用來實作磁碟機安全功能的安全金鑰。 
+---
+= 設定內部儲存陣列安全金鑰
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray SECURITY Key」命令可設定整個儲存陣列用來實作磁碟機安全功能的安全金鑰。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+當儲存陣列中任何具有安全功能的磁碟機指派給安全的磁碟區群組或磁碟集區時、該磁碟機將會使用安全金鑰啟用安全功能。您必須先使用「create storageArray SECURITY Key」命令建立安全金鑰、才能設定安全金鑰。
+
+[NOTE]
+====
+此命令僅適用於內部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing]
+----
+set storageArray securityKey
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+具備安全功能的磁碟機具備硬體、可加速密碼編譯處理、而且每個磁碟機都有獨特的磁碟機金鑰。具有安全功能的磁碟機在新增至安全磁碟區群組之前、會像任何其他磁碟機一樣運作、此時具有安全功能的磁碟機便會啟用安全功能。
+
+每當啟用安全功能的磁碟機開機時、它需要從控制器取得正確的安全金鑰、才能讀取或寫入資料。因此、啟用安全功能的磁碟機使用兩個金鑰：加密和解密資料的磁碟機金鑰、以及授權加密和解密程序的安全金鑰。「show storageArray securityKey」命令會將安全金鑰提交給儲存陣列中所有控制器和啟用安全功能的磁碟機。完整磁碟加密功能可確保在從儲存陣列實體移除具安全功能的磁碟機時、除非已知安全金鑰、否則其他任何裝置都無法讀取其資料。
+
+
+
+== 最低韌體層級
+
+7.50

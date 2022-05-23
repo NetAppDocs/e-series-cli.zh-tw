@@ -1,0 +1,50 @@
+---
+permalink: commands-a-z/show-array-label.html 
+sidebar: sidebar 
+keywords: show, array, label 
+summary: Show Array label命令會傳回儲存陣列標籤已定義或所有現有儲存陣列標籤的相關資訊。 
+---
+= 顯示陣列標籤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「How Array Label」命令會傳回儲存陣列標籤已定義或所有現有儲存陣列標籤的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於EF600儲存陣列。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show storageArrayLabel label _userDefinedString_]
+show storageArrayLabel all
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"userDefinedString"
+ a| 
+可讓您為儲存陣列指定使用者定義的標籤。
+
+|===
+
+
+== 最低韌體層級
+
+8.60

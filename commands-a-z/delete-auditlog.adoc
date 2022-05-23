@@ -1,0 +1,99 @@
+---
+permalink: commands-a-z/delete-auditlog.html 
+sidebar: sidebar 
+keywords: delete, audit, log, records 
+summary: 刪除稽核記錄命令會刪除稽核記錄中的部分或全部記錄。 
+---
+= 刪除稽核記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除稽核記錄」命令會刪除稽核記錄中的部分或全部記錄。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+delete auditLog (all | (endRecord=pass:quotes[_timestamp_ | endDate=_date_) |
+ (retentionCount=_integer_))]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+全部
+ a| 
+可讓您刪除所有稽核記錄。
+
+
+
+ a| 
+「endRecord」
+ a| 
+可讓您指定要刪除的結束記錄、從最舊的記錄開始。此值為整合值、代表上次稽核記錄的時間戳記（含）。
+
+
+
+ a| 
+「結束日期」
+ a| 
+可讓您指定要刪除的結束日期、從最舊的記錄開始。在用戶端時區中輸入日期的格式為mm:DD:YY。
+
+[NOTE]
+====
+稽核日誌記錄（包括指定的日期）將會刪除。
+
+====
+
+
+ a| 
+"EntentionCount"
+ a| 
+可讓您指定要保留的最新稽核記錄數目。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete auditLog all;"
+
+SMcli -n Array1 -c "delete auditLog endRecord=1493070393313;"
+
+SMcli -n Array1 -c "delete auditLog endDate=04:30:17;"
+
+SMcli -n Array1 -c "delete auditLog retentionCount=1000;"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

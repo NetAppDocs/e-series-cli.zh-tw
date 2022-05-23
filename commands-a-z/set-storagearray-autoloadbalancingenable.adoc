@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/set-storagearray-autoloadbalancingenable.html 
+sidebar: sidebar 
+keywords: set, storage, array, enable, disable, automatic, load, balance 
+summary: set storageArray autoLoadBalancingEnable命令可啟用或停用自動負載平衡功能。 
+---
+= 設定儲存陣列以啟用或停用自動負載平衡
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray autobanancingEnable」命令可啟用或停用「自動負載平衡」功能。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray autoLoadBalancingEnable=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「torageArray」
+ a| 
+表示此參數適用於儲存陣列。
+
+
+
+ a| 
+「AutoLoadBalancingEnable」
+ a| 
+此參數會開啟或關閉控制器上的自動負載平衡。將參數設為「true」以開啟「自動負載平衡」。將參數設為「假」以關閉自動負載平衡。
+
+|===
+
+
+== 什麼是自動負載平衡？
+
+「自動負載平衡」功能可動態回應一段時間內的負載變更、並自動調整Volume控制器擁有權、以修正工作負載在控制器之間移轉時發生的任何負載不平衡問題、進而改善I/O資源管理。
+
+每個控制器的工作負載都會持續受到監控、並可在主機上安裝多重路徑驅動程式的協助下、在必要時自動取得平衡。當工作負載在各個控制器之間自動重新平衡時、儲存管理員可免除手動調整Volume控制器所有權以因應儲存陣列負載變更的負擔。
+
+啟用「自動負載平衡」時、會執行下列功能：
+
+* 自動監控及平衡控制器資源使用率。
+* 視需要自動調整Volume控制器擁有權、藉此最佳化主機與儲存陣列之間的I/O頻寬。
+
+
+
+
+== 啟用和停用自動負載平衡
+
+自動負載平衡在所有隨SANtricity 附於作業系統（控制器軟體）8.30或更新版本的儲存陣列上預設為啟用。Linux、Windows及VMware多重路徑驅動程式可以使用自動負載平衡功能。如果您將控制器從SANtricity 作業系統（控制器軟體）8.25或更早版本升級至8.30或更新版本、則儲存陣列上的「自動負載平衡」預設為停用。
+
+基於下列原因、您可能想要停用儲存陣列上的自動負載平衡：
+
+* 您不想自動變更特定磁碟區的控制器擁有權、以平衡工作負載。
+* 您所在的環境經過高度調校、有針對性地設定負載分配、以便在控制器之間達成特定的分配。
+
+
+在「支援儲存管理程式」中、選取「*儲存陣列*>*組態*>*自動負載平衡*」功能表選項、以啟用或停用個別儲存陣列的「自動負載平衡」功能。SANtricity
+
+在「支援系統管理程式」中、選取「*設定*>*系統*」、向下捲動至「*其他設定*」區段、按一下「E**啟用/停用自動負載平衡」連結、然後選取「**啟用/停用自動負載平衡」核取方塊、以啟用或停用個別儲存陣列的功能。SANtricity
+
+
+
+== 範例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray autoLoadBalancingEnable=true;"
+
+SMcli completed successfully.
+----
+[NOTE]
+====
+作用中的「磁碟機遺失主要路徑」條件會導致自動負載平衡無法平衡工作負載。此條件必須處於非作用中狀態、才能確保工作負載透過自動負載平衡功能達到平衡。
+
+====
+
+
+== 最低韌體層級
+
+8.30

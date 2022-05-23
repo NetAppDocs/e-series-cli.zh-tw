@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/show-iscsisessions.html 
+sidebar: sidebar 
+keywords: show, current, iscsi, sessions 
+summary: show iscsiSessions命令會傳回iSCSI啟動器或iSCSI目標之iSCSI工作階段的相關資訊。 
+---
+= 顯示目前的iSCSI工作階段
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show iscsiSessions」命令會傳回iSCSI啟動器或iSCSI目標的iSCSI工作階段相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show iscsiInitiator pass:quotes[["_initiatorName_"] | <"iqn">] iscsiSessions
+----
+[listing, subs="+macros"]
+----
+show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《iscsiInitiator》
+ a| 
+您要取得其工作階段資訊的iSCSI啟動器名稱。
+
+如果iSCSI啟動器使用標籤或別名、請將iSCSI啟動器標籤或別名以雙引號（""）括在方括弧（[]）內。
+
+如果iSCSI啟動器使用iSCSI限定名稱（IQN）、請將IQN以雙引號（""）括在尖括弧（<>）內。
+
+
+
+ a| 
+「iscsiTarget」
+ a| 
+您要取得其工作階段資訊的iSCSI目標名稱。
+
+如果iSCSI目標使用標籤或別名、請將iSCSI目標標籤或別名以雙引號（""）括在方括弧（[]）內。
+
+如果iSCSI目標使用iSCSI限定名稱（IQN）、請將IQN以雙引號（""）括在尖括弧（<>）內。
+
+|===
+
+
+== 附註
+
+如果輸入此命令時未定義任何引數、此命令會傳回目前執行之所有iSCSI工作階段的相關資訊。下列命令會傳回所有目前iSCSI工作階段的相關資訊：
+
+[listing]
+----
+show iscsiSessions
+----
+若要限制傳回的資訊、請輸入特定iSCSI啟動器或特定iSCSI目標。然後、此命令只會傳回您命名之iSCSI啟動器或iSCSI目標的工作階段相關資訊。
+
+啟動器名稱可以是字母或數字字元的任意組合、長度為1到30個字元。IQN長度最多可達255個字元、格式如下：
+
+[listing]
+----
+iqn.yyyy-mm.naming-authority:unique name
+----
+
+
+== 最低韌體層級
+
+7.10.

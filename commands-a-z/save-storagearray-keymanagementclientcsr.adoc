@@ -1,0 +1,130 @@
+---
+permalink: commands-a-z/save-storagearray-keymanagementclientcsr.html 
+sidebar: sidebar 
+keywords: generate, key, management, certificate, sign, request, csr 
+summary: SAVE storageArray keyManagementClientCSR命令會要求儲存陣列產生CSR、以便儲存至檔案。 
+---
+= 產生金鑰管理憑證簽署要求（CSR）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列keyManagementClientCSR」命令會要求儲存陣列產生的CSR、以便儲存至檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save storageArray keyManagementClientCSR commonName=pass:quotes["_common_name_"]
+organization=pass:quotes["_organization_"]
+locality=pass:quotes["_locality_"]
+country=pass:quotes["_country_"]
+file=pass:quotes["_file_"]
+[organizationalUnit=pass:quotes["_organizational unit_"]]
+[stateProvince=pass:quotes["_state_province_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「commonName」
+ a| 
+為此參數輸入的值必須符合KMIP伺服器上定義的其中一個使用者名稱。
+
+
+
+ a| 
+《組織》
+ a| 
+可讓您指定儲存陣列所屬組織的完整合法名稱。請勿將其縮寫、並加入任何後置字詞、例如INC、Corp或LLC。
+
+
+
+ a| 
+《地方》
+ a| 
+可讓您指定儲存陣列所在的城市或位置、
+
+
+
+ a| 
+《國家》
+ a| 
+可讓您指定所在國家/地區的兩位數ISO（國際標準化組織）3166-1 ALPHA-2代碼、例如US。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定儲存控制器簽署憑證檔案的檔案和檔案位置。
+
+
+
+ a| 
+《組織單位》
+ a| 
+可讓您指定處理憑證的組織部門。
+
+
+
+ a| 
+《州省》
+ a| 
+可讓您指定儲存陣列所在的狀態或區域。這不應縮寫。
+
+|===
+
+
+== 範例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "save storageArray keyManagementClientCSR commonName=pass:quotes["_192.0.2.1_"]
+organization=pass:quotes["_Widgets Are Us_, _Inc_."]
+locality=pass:quotes["_sedgwick_"]
+country=pass:quotes["_US_"]
+file=pass:quotes["_latestCertificate_"]
+organizationalUnit=pass:quotes["_Products Unit_"]
+stateProvince=pass:quotes["_Kansas_"];"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

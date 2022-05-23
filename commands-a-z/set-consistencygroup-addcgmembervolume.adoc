@@ -1,0 +1,160 @@
+---
+permalink: commands-a-z/set-consistencygroup-addcgmembervolume.html 
+sidebar: sidebar 
+keywords: add, member, consistency, group 
+summary: Set Consistency Group addCGMemberVolume命令會將新的基礎磁碟區新增為現有一致性群組的成員。 
+---
+= 新增成員至一致性群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Set Consistency Group addCGMemberVolume」命令會將新的基礎Volume新增為現有一致性群組的成員。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以為新的一致性群組成員指定現有的儲存庫磁碟區、或建立新的儲存庫磁碟區。當您建立新的儲存庫Volume時、會識別您要儲存庫Volume的現有Volume群組或現有磁碟集區。
+
+
+
+== 與現有儲存庫Volume搭配使用的語法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup ["consistencyGroupName"]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes["_volumeGroupName_"]
+----
+
+
+== 在Volume群組中建立新儲存庫Volume時使用的語法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_volumeGroupName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== 在磁碟集區中建立新儲存庫磁碟區時使用的語法
+
+[listing, subs="+macros"]
+----
+
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+addCGMemberVolume=pass:quotes["_baseVolumeName_"]
+repositoryVolume=pass:quotes[("_diskPoolName_"] capacity=pass:quotes[_capacityValue_](KB|MB|GB|TB|bytes))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《抵抗集團》
+ a| 
+要新增成員磁碟區的一致性群組名稱。新成員磁碟區是快照作業的基礎磁碟區。將一致性群組名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+《AddCGMemberVolume》
+ a| 
+您要新增的基礎Volume名稱。將磁碟區名稱括在雙引號（""）內。
+
+如果指定的磁碟區是現有的儲存庫磁碟區或現有的快照磁碟區、則命令會失敗。
+
+
+
+ a| 
+「repositoryVolume」
+ a| 
+此參數執行兩項功能：
+
+* 在具有儲存庫Volume的現有一致性群組中、此參數可識別儲存庫Volume。
+* 建立新的儲存庫Volume時、此參數會識別要在其中建立新儲存庫Volume的磁碟區群組或磁碟集區。
+
+
+將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+容量
+ a| 
+磁碟區群組或磁碟集區中新儲存庫磁碟區的大小。大小的定義單位為位元組、KB、MB、GB或TB。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+一致性群組是基礎磁碟區的集合、這些磁碟區是快照的來源磁碟區。您會將基礎磁碟區收集在一致性群組中、以便在每個基礎磁碟區上執行相同的快照作業。在這個命令的內容中、術語_member_是指用於快照作業的基礎磁碟區。您可以透過批次樣式作業來處理與一致性群組成員相關的快照映像、同時維持快照映像之間的一致性。
+
+每個成員磁碟區都必須有對應的儲存庫磁碟區。您可以使用「repositoryVolume」參數來定義成員Volume與儲存庫Volume之間的關係。「repositoryVolume」參數可執行下列其中一項動作：
+
+* 識別已連線至一致性群組的現有儲存庫磁碟區。
+* 識別要在其中建立新儲存庫磁碟區的磁碟區群組或磁碟集區。
+
+
+將成員新增至具有現有儲存庫的一致性群組有兩個用途：
+
+* 您可以在不使用「repositoryVolume」參數的情況下執行命令、以建立全新的儲存庫Volume。當您在不使用「repositoryVolume」參數的情況下執行命令時、命令會在儲存所有其他儲存庫磁碟區的磁碟區群組或磁碟集區中建立新的儲存庫磁碟區。此命令使用的範例包括：
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+----
+* 如果儲存庫磁碟區是空的、且與其他成員磁碟區無關、您可以重複使用現有的儲存庫磁碟區。如果您想要維護儲存庫磁碟區的特定順序或關係、可以執行此動作。若要重複使用現有的空白儲存庫Volume、您必須知道儲存庫Volume的名稱。若要判斷儲存庫磁碟區的名稱、請使用「show allVolumes Summary」命令。所有儲存庫磁碟區名稱的格式均為「REpos_XXXX」、其中「XXXX」是儲存管理軟體所產生的唯一識別碼。此命令使用的範例包括：
++
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume="repos_0011"
+----
+
+
+您可以將儲存庫磁碟區放在所選的磁碟區群組或磁碟集區中。您不需要將儲存庫磁碟區放在與其他儲存庫磁碟區相同的位置。若要將儲存庫磁碟區放入您選擇的磁碟區群組或磁碟集區、請使用「repositoryVolume」參數、識別磁碟區群組或磁碟集區、以及儲存庫磁碟區的大小。此命令使用的範例包括：
+
+[listing]
+----
+
+set consistencyGroup ["First_Images"] addCGMemberVolume="Data_020212"
+repositoryVolume=("12" capacity=2 GB)
+----
+在此範例中、「[.code]'12'」是現有磁碟區群組或現有磁碟集區的名稱。capacity參數定義儲存庫Volume群組所需的大小。
+
+當您在磁碟區群組或磁碟集區中建立新的儲存庫磁碟區時、必須在磁碟區群組名稱和容量、或是磁碟集區名稱和容量中加上圓括弧。
+
+
+
+== 最低韌體層級
+
+7.83

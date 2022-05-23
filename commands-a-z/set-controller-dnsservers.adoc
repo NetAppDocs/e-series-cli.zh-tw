@@ -1,0 +1,102 @@
+---
+permalink: commands-a-z/set-controller-dnsservers.html 
+sidebar: sidebar 
+keywords: set, controller, dns 
+summary: set控制器DNSServers命令會更新控制器的網域名稱系統（DNS）設定。DNS用於解析控制器和網路時間傳輸協定（NTP）伺服器的完整網域名稱。 
+---
+= 設定控制器DNS設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'set控制器DNSServers'命令會更新控制器的網域名稱系統（DNS）設定。DNS用於解析控制器和網路時間傳輸協定（NTP）伺服器的完整網域名稱。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+開始之前、請確定：
+
+* 已設定DNS伺服器。
+* 您知道主DNS伺服器和備份DNS伺服器的位址、以防主DNS伺服器故障。這些位址可以是IPv4位址或IPv6位址。
+
+
+[NOTE]
+====
+您需要將此命令傳送給兩個控制器。此命令是控制器專屬的。
+
+====
+[NOTE]
+====
+如果您已使用DHCP設定陣列的管理連接埠（動態主機組態傳輸協定）、且有一或多個DNS或NTP伺服器與DHCP設定相關聯、則不需要手動設定DNS/NTP。在此情況下、陣列應該已自動取得DNS/NTP伺服器位址。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+set controller[a] DNSServers=(auto|(Address1 [Address2]))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「DNSServers」
+ a| 
+此參數可設定控制器的DNS伺服器。指定「自動」以使用DHCP提供的DNS伺服器。否則、請使用一個或兩個DNS伺服器的空白分隔清單。
+
+[NOTE]
+====
+陣列上的管理乙太網路連接埠可同時支援IPv4或IPv6傳輸協定。位址可以是IPV4位址或IPv6位址。如果指定多個位址、則不需要相符的位址類型。
+
+====
+如果指定多個位址、則會依照指定的順序使用（第一個為主要位址、第二個為備份）。
+
+
+
+ a| 
+《AddressX》（地址X）
+ a| 
+IPv6位址| IPv6位址
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+set controller[a] DNSServers=auto;
+set controller[a] DNSServers=(192.168.1.1);
+set controller[b] DNSServers=(192.168.1.1 192.168.1.105);
+set controller[b] DNSServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 192.168.1.1)
+----
+
+
+== 最低韌體層級
+
+8.25

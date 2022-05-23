@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-storagearray-ocspresponderurl-test.html 
+sidebar: sidebar 
+keywords: start, ocsp, server, url, test 
+summary: start storageArray ocspponderUrl測試命令會檢查連線至線上憑證狀態傳輸協定（OCSP）伺服器之指定URL的開放連線。 
+---
+= 啟動OCSP伺服器URL測試
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray ocspenderUrltest」命令會檢查是否有開啟連線至線上憑證狀態傳輸協定（OCSP）伺服器的指定URL。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"url"
+ a| 
+OCSP伺服器URL的字串。
+
+[NOTE]
+====
+如果您未指定URL、命令會使用憑證撤銷設定中的OCSP回應程式URL。
+
+====
+|===
+
+
+== 語法
+
+[listing]
+----
+start storageArray ocspResponderUrl test (url=stringLiteral)
+----
+
+
+== 最低韌體層級
+
+8.42

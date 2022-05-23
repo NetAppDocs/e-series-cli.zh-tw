@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/set-storagearray-isnsipv4configurationmethod.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, ipv4, address 
+summary: set storageArray isnslipv4Configuration方法命令可設定IPv4網際網路儲存名稱服務（iSNS）的組態方法和位址。 
+---
+= 設定儲存陣列iSNS伺服器的IPv4位址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray isnIPv6組態方法」命令可設定IPv4網際網路儲存名稱服務（SNSs）的組態方法和位址。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsIPv4ConfigurationMethod=(static | dhcp)
+isnsIPv4Address=pass:quotes[_ipAddress_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「isnslIPv6組態方法」
+ a| 
+您要用來定義iSNS伺服器組態的方法。您可以選取「靜態」來輸入IPv4 iSNS伺服器的IP位址。對於IPV4、您可以輸入「dhcps」、選擇讓動態主機組態傳輸協定（DHCP）伺服器選取iSNS伺服器IP位址。若要啟用DHCP、您必須將「isnsIPV4Address」參數設定為「0.00.0」。
+
+
+
+ a| 
+「isnsIPV4Address」
+ a| 
+要用於iSNS伺服器的IP位址。使用此參數搭配「最短」值以進行IPv4組態。如果您選擇讓DHCP伺服器設定IPV4網際網路isSNSs伺服器的IP位址、則必須將「* isnIPV4Address*」參數設定為「0.00.0」。
+
+|===
+
+
+== 附註
+
+透過iSNS傳輸協定、可在TCP/IP網路上自動探索、管理及設定iSCSI裝置和光纖通道裝置。與Fibre Channel網路中的儲存探索和管理服務相若的是、而這些服務可讓市售IP網路以與儲存區域網路類似的容量運作。此外、由於其能夠模擬Fibre Channel Fabric服務、並同時管理iSCSI裝置和Fibre Channel裝置、因此也能順暢整合IP網路和Fibre Channel網路。
+
+DHCP伺服器會將網路位址等組態參數傳遞給IP節點。DHCP可讓用戶端取得其運作所需的所有IP組態參數。DHCP可讓您自動分配可重複使用的網路位址。
+
+
+
+== 最低韌體層級
+
+7.10.

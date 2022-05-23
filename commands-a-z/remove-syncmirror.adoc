@@ -1,0 +1,82 @@
+---
+permalink: commands-a-z/remove-syncmirror.html 
+sidebar: sidebar 
+keywords: remove, synchronous, mirror 
+summary: 「移除SyncMirror 」功能可移除遠端鏡射配對中主要Volume與次要Volume之間的鏡射關係。 
+---
+= 移除同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「移除SyncMirror 效能不全」命令可移除遠端鏡射配對中主要Volume與次要Volume之間的鏡射關係。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+remove syncMirror (localVolume pass:quotes[[_volumeName_]] |
+localVolumes pass:quotes[[_volumeName1 ... volumeNameN_]])
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「localVolume」
+ a| 
+您要移除的主要Volume（本機儲存陣列上的Volume）名稱。將磁碟區名稱括在方括弧（[]）內。如果磁碟區名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住磁碟區名稱。
+
+
+
+ a| 
+《localVolumes》
+ a| 
+您要移除的數個主要磁碟區（本機儲存陣列上的磁碟區）名稱。使用下列規則輸入主要磁碟區的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果主要磁碟區名稱有特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-volume-summary.html 
+sidebar: sidebar 
+keywords: show, volume 
+summary: show volume Summary命令會傳回磁碟區的相關資訊。 
+---
+= 顯示Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volume Summary」命令會傳回磁碟區的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+對於儲存陣列中的磁碟區、此命令會傳回下列資訊：
+
+* 磁碟區數量
+* 名稱
+* 狀態
+* 容量
+* RAID層級
+* Volume所在的Volume群組
+* 詳細資料：
++
+** Volume ID
+** 子系統ID
+** 磁碟機類型（SAS）
+** 紙匣遺失保護
+** 偏好的擁有者
+** 目前擁有者
+** 區段大小
+** 修改優先順序
+** 讀取快取狀態（已啟用或已停用）
+** 寫入快取狀態（已啟用或已停用）
+** 無電池寫入快取狀態（已啟用或已停用）
+** 具有鏡射狀態的寫入快取（已啟用或已停用）
+** 一段時間後清除寫入快取
+** 快取讀取預先擷取設定（真或假）
+** 啟用背景媒體掃描狀態（啟用或停用）
+** 具有備援檢查狀態的媒體掃描（已啟用或已停用）
+
+
+* 鏡射儲存庫磁碟區
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]]) summary
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數會傳回儲存陣列中所有磁碟區的效能統計資料。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要擷取資訊的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要擷取資訊的多個磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此設定可傳回有關磁碟區的簡短資訊清單。
+
+|===

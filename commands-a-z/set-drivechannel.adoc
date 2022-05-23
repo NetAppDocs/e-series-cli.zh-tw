@@ -1,0 +1,71 @@
+---
+permalink: commands-a-z/set-drivechannel.html 
+sidebar: sidebar 
+keywords: set, drive, channel, status 
+summary: set driveChannel命令定義了磁碟機通道的執行方式。 
+---
+= 設定磁碟機通道狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show driveChannel」命令可定義磁碟機通道的運作方式。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+set driveChannel [(1 | 2 | 3 | 4 | 5 | 6 | 7 | 8)]
+status=(optimal | degraded)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「DiveChannel」
+ a| 
+您要設定其狀態之磁碟機通道的識別碼。有效的磁碟機通道值為「1」、「2」、「3」、「4」、「5」、 6、7或8。將磁碟機通道編號括在方括弧（[]）內。
+
+
+
+ a| 
+狀態
+ a| 
+磁碟機通道的狀況。您可以將磁碟機通道狀態設定為「最佳」或「降級」。
+
+|===
+
+
+== 附註
+
+使用「Optimal（最佳）」選項、將降級的磁碟機通道移回最佳狀態。當磁碟機通道發生問題時、請使用「降級」選項、而且儲存陣列需要額外的時間來傳輸資料。
+
+
+
+== 最低韌體層級
+
+6.10.
+
+7.15將更新新增至磁碟機通道識別碼。

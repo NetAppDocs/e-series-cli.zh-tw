@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/start-storagearray-configdbdiagnostic.html 
+sidebar: sidebar 
+keywords: start, storage, array, configuration, database, diagnostic 
+summary: start storageArray configDbDiagnostic命令會針對組態資料庫執行一致性檢查。 
+---
+= 啟動儲存陣列組態資料庫診斷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray configDbDiagnostic」命令會對組態資料庫執行一致性檢查。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+start storageArray configDbDiagnostic
+[sourceLocation=(disk | onboard) |
+diagnosticType=(fileSystem | mirror) |
+controller[(a|b)]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+'資訊位置'
+ a| 
+此參數指定資料庫的位置。
+
+* 「磁碟」表示資料直接來自磁碟機上的資料庫
+* 「OnBoard」表示資料來自RPA記憶體位置
+
+
+預設位置為「磁碟」。
+
+
+
+ a| 
+「診斷類型」
+ a| 
+您要在資料庫上執行的診斷測試層級。您可以執行下列其中一種測試等級：
+
+"FileSystem（檔案系統）"-此選項會檢查資料庫的結構完整性。
+
+「鏡射」-使用此選項執行的測試會根據「資源位置」參數的值而有所不同：
+
+* 當"*sourceLoc"*參數設定為"doise"時、對等控制器會啟動區塊檢查。
+* 當'*sourceLoc佳 位置*參數設定為「OnBoard」時、對等控制器會啟動記錄檢查。
+
+
+[NOTE]
+====
+您只能從命令列或指令碼編輯器執行「鏡射」選項。此選項無法透過儲存管理軟體GUI使用。「鏡射」選項會啟動無法停止的長時間執行作業。
+
+====
+預設值為「檔案系統」。
+
+
+
+ a| 
+"控制器"
+ a| 
+含有您要執行診斷測試之資料庫的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+|===
+
+
+== 附註
+
+此命令會針對組態資料庫執行一致性檢查。會檢查所有資料庫記錄。錯誤資料會自動寫入磁碟資料夾中的檔案。您不需要指定輸出檔案。
+
+[NOTE]
+====
+如果將「診斷類型」參數設為「鏡射」、並將「資源位置」參數設為「OnBoard」、則執行一致性檢查會導致作業長時間執行。這可能會對主機I/O處理造成不良影響。此作業只能在支援組織的指導下進行。
+
+====
+診斷測試完成後、控制器韌體會傳回下列其中一項結果：
+
+* 「不受限的工作已經完成、沒有錯誤。未建立郵遞區號檔案
+* 「診斷完成時有錯誤。請參閱以下網址建立的ZIP檔案
++
+'+...\Install_dir\data\FirmwareUpgradeReports\timestamp_buildNo.zip+'
+
+
+
+如果診斷測試偵測到組態資料庫不一致、控制器韌體就會執行下列動作：
+
+* 傳回不一致的說明
+* 儲存內含原始二進位資料的ZIP檔案
+
+
+控制器韌體會將ZIP檔案儲存至此位置：
+
+'+...\Install_dir\data\FirmwareUpgradeReports\timestamp_buildNo.zip+'
+
+您可以使用二進位資料來判斷問題的原因、也可以將包含二進位資料的檔案傳送給技術支援部門。
+
+若要停止資料庫組態診斷測試、請使用「stop storageArray configDbDiagnostic」命令。
+
+此外、您也可以透過儲存管理軟體GUI來啟動資料庫組態診斷測試、不過您無法透過儲存管理軟體GUI來停止資料庫組態診斷測試。如果要停止執行中的診斷測試、您必須使用「stop storageArray configDbDiagnostic」命令。
+
+
+
+== 最低韌體層級
+
+7.75
+
+7.83新增下列參數：
+
+* '資訊位置'
+* 「診斷類型」
+* "控制器"
+

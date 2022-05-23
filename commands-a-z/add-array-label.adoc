@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/add-array-label.html 
+sidebar: sidebar 
+keywords: add array label, supported, syntax, parameters, minimum firmware level 
+summary: Add Array label命令可讓您使用使用者定義的標籤、將儲存陣列新增至組態。這可讓稍後的命令依照使用者定義的標籤、而非IP位址或主機名稱來位址儲存陣列。 
+---
+= 新增陣列標籤
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Add Array label」命令可讓您使用使用使用者定義的標籤、將儲存陣列新增至組態。這可讓稍後的命令依照使用者定義的標籤、而非IP位址或主機名稱來位址儲存陣列。
+
+
+
+== 支援的陣列
+
+[NOTE]
+====
+提供的使用者定義標籤不需要符合System Manager中顯示的儲存陣列名稱。這是本機標籤、僅用於從CLI參考儲存陣列。
+
+====
+此命令適用於EF600和EF300儲存陣列。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「地址」
+ a| 
+可讓您指定儲存陣列的IP位址（IPv4或IPv6）或完整主機名稱。
+
+[NOTE]
+====
+「Address2」值為選用值。
+
+====
+
+
+ a| 
+"userDefinedString"
+ a| 
+可讓您指定儲存陣列的標籤。
+
+|===
+
+
+== 最低韌體層級
+
+8.60

@@ -1,0 +1,92 @@
+---
+permalink: commands-a-z/create-mapping-volume.html 
+sidebar: sidebar 
+keywords: create, volume, map 
+summary: create mapping volume命令會建立從磁碟區到主機或主機群組的邏輯對應。 
+---
+= 建立Volume對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create mapping volume」命令會建立從磁碟區到主機或主機群組的邏輯對應。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create mapping volume=pass:quotes[_"VolumeName"_
+(host="_hostName_" | hostGroup=("_hostGroupName_"] | defaultGroup))
+logicalUnitNumber=lun
+mapWaitPeriod=mapWaitPeriodValue
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要為其建立邏輯對應的磁碟區名稱。將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+要建立邏輯對應的主機名稱。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+「主機群組」
+ a| 
+要建立邏輯對應的主機群組名稱。將主機群組名稱括在雙引號（""）內。如果您使用「資料管理群組」關鍵字、請勿以引號括住。
+
+
+
+ a| 
+「logicalUnitsNumber」
+ a| 
+您要用來對應至特定主機的邏輯編號或命名空間ID。此參數也會將主機指派給主機群組。
+
+[NOTE]
+====
+您指定的邏輯單元編號或命名空間ID不得已在使用中、且必須在主機作業系統支援的範圍內。如果將磁碟區對應至主機不支援的邏輯單元編號或命名空間ID、則不會發生錯誤、但主機將無法存取磁碟區。
+
+====
+
+
+ a| 
+《等待時段》
+ a| 
+封鎖對應、直到它能夠完成命令或逾時、才不會影響互動。如果未輸入值、則預設行為是在無法立即對應磁碟區時、使動作失敗。
+
+|===
+
+
+== 最低韌體層級
+
+7.83
+
+8.63新增mapWaitPeriod參數。

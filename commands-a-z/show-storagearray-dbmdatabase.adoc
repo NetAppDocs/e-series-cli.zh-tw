@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/show-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: show, storage, array, dbm, database 
+summary: show storageArray dbmDatabase命令可擷取及顯示儲存陣列內建備份位置的中繼資料。當有多個備份位置時、會顯示每個位置的中繼資料。 
+---
+= 顯示儲存陣列DBM資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray dbmDatabase」命令會擷取並顯示儲存陣列內建備份位置的中繼資料。當有多個備份位置時、會顯示每個位置的中繼資料。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray dbmDatabase
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+此命令會以類似本範例的格式傳回組態資料庫資訊。
+
+「組態資料庫中繼資料主機備份：<日期戳記>」
+
+[cols="7*"]
+|===
+| CTL | 位置 | 修訂版 | ID | 世代編號 | 狀態 | 存取模式 
+
+
+ a| 
+答
+ a| 
+快取
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+右/右
+ a| 
+最佳化
+
+
+
+ a| 
+b
+ a| 
+快取
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+右/右
+ a| 
+最佳化
+
+
+
+ a| 
+不適用
+ a| 
+磁碟
+ a| 
+x.y
+ a| 
+999999
+ a| 
+999999
+ a| 
+右/右
+ a| 
+最佳化
+
+|===
+
+
+== 最低韌體層級
+
+7.83

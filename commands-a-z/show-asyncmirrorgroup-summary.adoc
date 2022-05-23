@@ -1,0 +1,98 @@
+---
+permalink: commands-a-z/show-asyncmirrorgroup-summary.html 
+sidebar: sidebar 
+keywords: show, asynchronous, mirror, groups 
+summary: show asyncdMirrorGroup摘要命令會顯示一或多個非同步鏡射群組的組態資訊。 
+---
+= 顯示非同步鏡射群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show asyncdMirrorGroup Summary」命令會顯示一或多個非同步鏡射群組的組態資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+此命令也會顯示與每個非同步鏡射群組相關的非同步鏡射配對、包括不完整的非同步鏡射配對。
+
+您也可以使用此命令來顯示非同步鏡射鏡射群組中所有鏡射配對的週期性資料同步進度。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allAsyncMirrorGroups |
+asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]] |
+asyncMirrorGroups pass:quotes[[_asyncMirrorGroupName1_ ... _asyncMirrorGroupNameN_]])
+[summary]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《所有同步鏡像群組》
+ a| 
+如果您要顯示所有非同步鏡射群組的內容、請使用此參數。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您想要顯示組態資訊的非同步鏡射群組名稱、以及週期性資料同步的進度。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須將非同步鏡射群組名稱以雙引號（""）括在方括弧內。
+
+
+
+ a| 
+《非yncdMirrorGroups》
+ a| 
+您要擷取資訊的數個非同步鏡射群組名稱。使用下列規則輸入非同步鏡射群組的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果非同步鏡射群組名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數會顯示一或多個非同步鏡射群組同步處理進度的簡要資訊清單。
+
+|===
+
+
+== 最低韌體層級
+
+7.84

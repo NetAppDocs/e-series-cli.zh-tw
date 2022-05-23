@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/show-storagearray-lunmappings.html 
+sidebar: sidebar 
+keywords: show, storage, array, lun, map 
+summary: show storageArray lunMappings命令會從儲存陣列設定檔傳回有關儲存陣列中邏輯單元編號（LUN）或命名空間ID（NSID）對應的資訊。 
+---
+= 顯示儲存陣列LUN對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray lunMappings」命令會從儲存陣列設定檔傳回有關儲存陣列中邏輯單元編號（LUN）或命名空間ID（NSID）對應的資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+永遠顯示預設群組LUN或NSID對應。如果您在沒有任何參數的情況下執行此命令、此命令會傳回所有LUN或NSID對應。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show storageArray lunMappings (host pass:quotes[["_hostName_"]] |
+hostgroup pass:quotes[["_hostGroupName_"]])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"主機"
+ a| 
+您要查看其LUN或NSID對應的特定主機名稱。將主機名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「主機群組」
+ a| 
+您要查看其LUN或NSID對應的特定主機群組名稱。將主機群組名稱括在方括弧（[]）內的雙引號（""）內。
+
+|===
+
+
+== 附註
+
+此命令會傳回與此範例類似的主機拓撲資訊。
+
+[listing]
+----
+MAPPINGS (Storage Partitioning - Enabled (0 of 16 used))
+VOLUME NAME  LUN  CONTROLLER  ACCESSIBLE BY  VOLUME STATUS
+Access Volume 7   A,B         Default Group  Optimal
+21           21   B           Default Group  Optimal
+22           22   B           Default Group  Optimal
+----
+
+
+== 最低韌體層級
+
+6.10.

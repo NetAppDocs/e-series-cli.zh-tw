@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/show-certificates.html 
+sidebar: sidebar 
+keywords: show, certificates 
+summary: 「顯示憑證」命令可讓您檢視安裝在CLI套件信任存放區上的憑證。 
+---
+= 顯示憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「How certificates」命令可讓您檢視安裝在CLI套件信任存放區上的憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於EF600儲存陣列。
+
+
+
+== 語法
+
+[listing]
+----
+show localCertificate all | alias alias
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+別名
+ a| 
+可讓您透過使用者定義的別名來指定憑證。
+
+|===
+
+
+== 最低韌體層級
+
+8.60

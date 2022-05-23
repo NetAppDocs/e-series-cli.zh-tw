@@ -1,0 +1,95 @@
+---
+permalink: commands-a-z/save-storagearray-dbmvalidatorinfo.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, validator, information, file 
+summary: SAVE storageArray dBmValidatorInfo命令會將儲存陣列的資料庫管理（DBM）驗證資訊儲存在XML檔案中。 
+---
+= 儲存儲存陣列DBM驗證程式資訊檔案
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「shave storageArray dbmValidatorInfo」命令會將儲存陣列的資料庫管理（DBM）驗證資訊儲存在XML檔案中。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+技術支援人員可以使用此XML檔案來產生驗證程式字串（安全碼）。將儲存陣列還原為預先存在的組態時、驗證器字串必須包含在「load storageArray dbmDatabase」命令中。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray dbmValidatorInfo file=pass:quotes["_filename_"] dbmDatabase=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+技術支援所需的檔案路徑和DBM驗證器檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C：\Array備份\DBMvalidator.xml」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定.xml副檔名。
+
+
+
+ a| 
+「DbmDatabase」
+ a| 
+您要從中產生XML資訊檔案的DBM資料庫檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「DbmDatabase.C：\Array備份\DBMbackup_03302010.DBM」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定.DBM副檔名。
+
+|===
+
+
+== 附註
+
+如果您要產生XML資訊檔案以取得驗證程式字串、則必須在連線至要還原資料庫的控制器時執行此命令。下列範例顯示XML檔案的格式：
+
+[listing]
+----
+<?xml version="1.0" encoding="utf-8"?>
+<DbmImageMetadata>
+<Controllers>
+<A>1IT0nnnnnnnnnABCD</A>
+<B>1T0nnnnnnnnnABCD</B>
+</Controllers>
+<Header>
+<ImageVersion>1</ImageVersion>
+<TimeStamp>1269388283</TimeStamp>
+</Header>
+<Trailer>
+<CRC>nnnnnnnnnn</CRC><
+/Trailer>
+</DbmImageMetadata>
+----
+
+
+== 最低韌體層級
+
+7.75

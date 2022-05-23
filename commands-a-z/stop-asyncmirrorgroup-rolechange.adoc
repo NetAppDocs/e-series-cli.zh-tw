@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/stop-asyncmirrorgroup-rolechange.html 
+sidebar: sidebar 
+keywords: cancel, asynchronous, mirror, group, role, reversal 
+summary: stop asyncdMirrorGroup rolechge命令會取消非同步鏡射群組之間的擱置角色反轉作業。 
+---
+= 取消非同步鏡射群組角色反轉
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「shtop asyncdMirrorGroup rolechege」命令可取消非同步鏡像群組之間的擱置角色反轉作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[stop asyncMirrorGroup [_asyncMirrorGroupName_]] rolechange
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您想要取消擱置角色反轉作業的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+|===
+
+
+== 最低韌體層級
+
+7.84

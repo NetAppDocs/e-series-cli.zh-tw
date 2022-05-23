@@ -1,0 +1,52 @@
+---
+section: get-started
+title: 開始使用
+entries:
+- title: 新增功能
+  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
+- title: 命令格式化
+  entries:
+  - title: 總覽
+    url: "/get-started/overview-format-commands.html"
+  - title: CLI架構
+    entries:
+    - title: CLI命令的結構
+      url: "/get-started/structure-of-a-cli-command.html"
+    - title: 互動模式
+      url: "/get-started/interactive-mode.html"
+    - title: CLI包裝程式語法
+      url: "/get-started/cli-command-wrapper-syntax.html"
+    - title: CLI參數
+      url: "/get-started/command-line-parameters.html"
+  - title: 指令碼命令結構
+    entries:
+    - title: 指令碼命令的結構
+      url: "/get-started/structure-of-a-script-command.html"
+    - title: 指令碼命令摘要
+      url: "/get-started/synopsis-of-the-script-commands.html"
+    - title: 循環語法元素
+      url: "/get-started/recurring-syntax-elements.html"
+  - title: 命名慣例
+    url: "/get-started/naming-conventions.html"
+  - title: 格式化規則
+    entries:
+    - title: CLI命令
+      url: "/get-started/formatting-cli-commands.html"
+    - title: 指令碼命令
+      url: "/get-started/formatting-rules-for-script-commands.html"
+    - title: Windows PowerShell
+      url: "/get-started/formatting-cli-commands-in-windows-powershell.html"
+  - title: 詳細的錯誤報告
+    url: "/get-started/detailed-error-reporting.html"
+  - title: 結束狀態
+    url: "/get-started/exit-status.html"
+  - title: 新增註解至指令碼檔案
+    url: "/get-started/adding-comments-to-a-script-file.html"
+  - title: 指令碼命令準則
+    url: "/get-started/usage-guidelines.html"
+  - title: 韌體相容性層級
+    url: "/get-started/firmware-compatibility-levels.html"
+- title: SMcli https模式
+  url: "/get-started/new-https-mode.html"
+- title: Volume群組移轉
+  url: "/get-started/learn-about-volume-group-migration.html"

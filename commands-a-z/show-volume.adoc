@@ -1,0 +1,146 @@
+---
+permalink: commands-a-z/show-volume.html 
+sidebar: sidebar 
+keywords: show, thin, volume 
+summary: show volume命令會傳回指定精簡磁碟區或磁碟區的擴充歷程記錄或耗用容量。 
+---
+= 顯示精簡Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volume」命令會傳回指定精簡磁碟區或磁碟區的擴充歷程記錄或已用容量。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]])
+(consumedCapacity |
+(expansionHistory pass:quotes[[file=_fileName_]]))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數會傳回儲存陣列中所有精簡磁碟區的相關資訊。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+擷取資訊的精簡磁碟區名稱。將精簡磁碟區名稱括在方括弧中（[]）。如果精簡磁碟區名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住精簡磁碟區名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要擷取資訊的數個精簡磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《consugedCapacity》
+ a| 
+此設定會傳回精簡清單、列出精簡磁碟區的已用容量資訊。
+
+
+
+ a| 
+《擴張歷史》
+ a| 
+此設定可傳回精簡型磁碟區擴充記錄的相關資訊清單。
+
+
+
+ a| 
+檔案
+ a| 
+「file」參數會指定一個檔案來記錄「擴張歷史記錄」參數的輸出。只有在使用「擴張歷史記錄」參數時、「檔案」才有效。無效的檔案名稱會導致命令失敗。
+
+|===
+
+
+== 附註
+
+使用「擴張歷史記錄」參數、命令會傳回類似下列範例的資訊。
+
+「Thin Volume Name：Volume名稱儲存庫Volume Name：Repos_n分」
+
+[cols="4*"]
+|===
+| 記錄時間 | 擴充類型 | 開始容量 | 終止容量 
+
+
+ a| 
+月/日/年、小時：分：秒
+ a| 
+手冊|自動
+ a| 
+nnnnnnnn位元組
+ a| 
+nnnnnnnn位元組
+
+|===
+使用「consuedCapacity」參數、命令會傳回類似下列範例的資訊。
+
+[cols="5*"]
+|===
+| Volume | 已配置的容量 | 消耗容量 | 配額 | 使用率% 
+
+
+ a| 
+「Volume Name」
+ a| 
+500.000 GB
+ a| 
+230.000 GB
+ a| 
+700.000 GB
+ a| 
+46%
+
+|===
+
+
+== 最低韌體層級
+
+7.83

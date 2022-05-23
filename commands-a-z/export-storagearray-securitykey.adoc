@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/export-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: export, storage, array, security, key, command, save, drive, securitykey, file, context, role 
+summary: 匯出storageArray SECURITY Key命令會將磁碟機安全金鑰儲存至檔案。 
+---
+= 匯出儲存陣列安全金鑰
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「匯出storageArray SECURITY Key」命令會將磁碟機安全金鑰儲存至檔案。
+
+
+
+== 支援的陣列
+
+如果啟用外部金鑰管理、則此命令僅適用於E2800、E5700、EF600及EF300陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+當金鑰檔從一個儲存陣列匯出時、該金鑰可匯入另一個儲存陣列。這可讓您在儲存陣列之間移動具有安全功能的磁碟機。
+
+[NOTE]
+====
+此命令同時適用於內部和外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+export storageArray securityKey
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[file="_fileName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《通關密碼》
+ a| 
+加密安全金鑰的字元字串、以便將安全金鑰儲存在外部檔案中。將密碼括在雙引號（""）內。
+
+
+
+ a| 
+檔案
+ a| 
+您要儲存安全性金鑰的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+|===
+
+
+== 附註
+
+您要將磁碟機移至的儲存陣列必須具有容量等於或大於您要匯入磁碟機的磁碟機。
+
+控制器韌體會建立一個鎖定、限制存取完整磁碟加密（FDE）磁碟機。FDE磁碟機的狀態稱為「安全功能」。當您建立安全金鑰時、狀態會設為「啟用安全性」、這會限制存取儲存陣列內所有FDE磁碟機。
+
+您的通關密碼必須符合下列條件：
+
+* 長度必須介於8到32個字元之間。
+* 不得包含空白。
+* 必須包含至少一個大寫字母。
+* 必須包含至少一個英文字母。
+* 必須包含至少一個數字。
+* 必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密碼不符合這些條件、您將會收到錯誤訊息、並會要求您重試命令。
+
+====
+
+
+== 最低韌體層級
+
+7.40

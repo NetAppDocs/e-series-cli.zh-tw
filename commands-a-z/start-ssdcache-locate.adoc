@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-ssdcache-locate.html 
+sidebar: sidebar 
+keywords: start, ssd, cache, locate 
+summary: start ssdCache locate命令會在SSD上的指示燈閃亮時、識別以邏輯方式群組在一起的固態磁碟（SSD）、以形成SSD快取。 
+---
+= 啟動SSD快取定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start ssdCache locate」命令會在SSD上的指示燈閃亮時、識別以邏輯方式分組的固態磁碟（SSD）、以形成SSD快取。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 背景
+
+使用「shtop ssdCache locate」命令關閉磁碟機上的指示燈。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start ssdCache pass:quotes[[_ssdCacheName_]] locate
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+SdCache
+ a| 
+您要尋找的SSD快取名稱。將SSD快取名稱括在方括弧（[]）內。如果SSD快取名稱包含特殊字元或僅包含數字、您必須在方括弧內以雙引號（""）括住SSD快取名稱。
+
+|===
+
+
+== 最低韌體層級
+
+7.84

@@ -1,0 +1,80 @@
+---
+permalink: commands-a-z/set-storagearray-revocationchecksettings.html 
+sidebar: sidebar 
+keywords: set, certificate, revocation, check, set 
+summary: set storageArray revocation Checking Settings命令可讓您啟用或停用撤銷檢查、以及設定線上憑證狀態傳輸協定（OCSP）伺服器。 
+---
+= 設定憑證撤銷檢查設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray revitationChecksettings」命令可讓您啟用或停用撤銷檢查、以及設定線上憑證狀態傳輸協定（OCSP）伺服器。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+OCSP伺服器會檢查是否有任何憑證授權單位（CA）在排定到期日之前撤銷的憑證。當CA未適當核發憑證或私密金鑰遭入侵時、您可能會想要啟用撤銷檢查。
+
+[NOTE]
+====
+請確定兩個控制器上都已設定DNS伺服器、以便您使用OCSP伺服器的完整網域名稱。
+
+====
+啟用撤銷檢查之後、儲存陣列會拒絕嘗試連線至具有撤銷憑證的伺服器。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray revocationCheckSettings ([revocationCheckEnable = boolean] &| [ocspResponderUrl=stringLiteral])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「重複檢查啟用」
+ a| 
+設為「true」以啟用憑證撤銷檢查。
+
+
+
+ a| 
+《ocspResponderUrl》
+ a| 
+用於憑證撤銷檢查的OCSP回應程式伺服器URL。
+
+[NOTE]
+====
+指定OCSP回應程式位址會覆寫在憑證檔案中找到的OCSP位址。
+
+====
+|===
+
+
+== 最低韌體層級
+
+8.42

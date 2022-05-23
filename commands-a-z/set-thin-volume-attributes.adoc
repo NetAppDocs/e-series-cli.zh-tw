@@ -1,0 +1,202 @@
+---
+permalink: commands-a-z/set-thin-volume-attributes.html 
+sidebar: sidebar 
+keywords: set, thin, volume, attributes 
+summary: set volume命令可定義精簡磁碟區的內容。 
+---
+= 設定精簡磁碟區屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「套Volume」命令可定義精簡磁碟區的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以使用參數來定義一或多個精簡磁碟區的內容。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
+[newCapacity=pass:quotes[_capacityValue_]]
+[repositoryMaxCapacity=pass:quotes[_capacityValue_]]
+[repositoryExpansionPolicy=(automatic|manual)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[addRepositoryCapacity=capacity-spec][hostReportingPolicy=(standard | thin)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要定義其內容的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義內容之磁碟區的全球識別碼（WWID）。將WWID以雙引號（""）括在角括弧（<>）內。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義內容的數個Volume名稱。所有磁碟區都具有相同的內容。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱包含特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《新容量》
+ a| 
+此參數可增加精簡磁碟區的虛擬容量。虛擬容量是指該磁碟區將報告給對應至該磁碟區之主機的值。小於或等於現有容量的值會導致錯誤。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+最小虛擬容量為32 MB。
+
+最大虛擬容量為63 TB。
+
+
+
+ a| 
+"repositoryMaxCapacity *
+ a| 
+此參數可設定儲存庫Volume的最大容量。此值不得小於儲存庫磁碟區的實體容量。如果新值導致容量減至低於警告臨界值的層級、則命令會產生錯誤。
+
+[NOTE]
+====
+命令「repositoryMaxCapacity」可與「repositoryExpandationPolicy=automatic」搭配使用。
+
+====
+
+
+ a| 
+"repositoryExpandionPolic*（保存擴充策略*）"
+ a| 
+此參數會將擴充原則設定為「自動」或「手動」。當您將原則從「自動」變更為「手動」時、儲存庫Volume的實體容量上限值（配額）會變更。
+
+
+
+ a| 
+《warningTholholdPercent
+ a| 
+當精簡磁碟區容量即將滿時、您會收到警示的超小磁碟區容量百分比。使用整數值。例如、值70表示70%。
+
+有效值為1到100。
+
+將此參數設為100會停用警告警示。
+
+
+
+ a| 
+《addrepositoryCapacity》
+ a| 
+此參數會從磁碟集區的可用範圍配置容量。如果可用空間不足、命令就會失敗。
+
+[NOTE]
+====
+命令"addrepositoryCapacity（addrepositoryCapacity）"與"repositoryExpandationPolicy=manual（repositoryExpandationPolicy=manual）"一起使用
+
+====
+
+
+ a| 
+《主機報告政策》*
+ a| 
+此參數會變更精簡磁碟區報告給主機的方式。有效值為「標準」或「精簡」。
+
+|===
+
+
+== 附註
+
+使用此命令時、您可以指定一或多個選用參數。
+
+下表列出精簡磁碟區的容量限制。
+
+[cols="2*"]
+|===
+| 容量類型 | 尺寸 
+
+
+ a| 
+最小虛擬容量
+ a| 
+32 MB
+
+
+
+ a| 
+最大虛擬容量
+ a| 
+63 TB
+
+
+
+ a| 
+最小實體容量
+ a| 
+4 GB
+
+
+
+ a| 
+最大實體容量
+ a| 
+64 TB
+
+|===
+精簡磁碟區支援標準磁碟區執行的所有作業、但有下列例外：
+
+* 您無法變更精簡磁碟區的區段大小。
+* 您無法啟用精簡磁碟區的預先讀取備援檢查。
+* 您無法在Volume複本中使用精簡磁碟區做為目標磁碟區。
+* 您無法在同步鏡射作業中使用精簡磁碟區。
+
+
+如果您想要將精簡磁碟區變更為標準磁碟區、請使用Volume複製作業來建立精簡磁碟區的複本。Volume複本的目標永遠是標準Volume。
+
+
+
+== 最低韌體層級
+
+7.83

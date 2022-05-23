@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/download-storagearray-drivefirmware-file.html 
+sidebar: sidebar 
+keywords: download, storage, array, drive, firmware, command, images, roles, supported 
+summary: Download storageArray drive韌 體檔案命令會將韌體映像下載至儲存陣列中的所有磁碟機。 
+---
+= 下載儲存陣列磁碟機韌體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'download storageArray driveFirmwarefile'命令會將韌體映像下載到儲存陣列中的所有磁碟機。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[download storageArray driveFirmware file="_filename_"]
+pass:quotes[[file="_filename2_"... file="_filenameN_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+包含韌體映像之檔案的檔案路徑和檔案名稱。將韌體映像的檔案路徑和檔名括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/dnld\sadrvfrm.dlp」
+
+有效的檔案名稱副檔名為「.dlp」。
+
+|===
+
+
+== 附註
+
+執行此命令時、您可以將多個韌體映像檔下載到儲存陣列中的磁碟機。您可以下載的韌體映像檔數量取決於儲存陣列。如果您嘗試下載的韌體映像檔數量超過儲存陣列所能接受的數量、儲存管理軟體將會傳回錯誤訊息。
+
+您可以同時排程多個磁碟機的下載、包括備援磁碟區群組中的多個磁碟機。每個韌體映像檔都包含執行韌體映像之磁碟機類型的相關資訊。指定的韌體映像只能下載至相容的磁碟機。使用「Download Drive韌體」命令、將韌體映像下載到特定磁碟機。
+
+「download storageArray driveFirmware'命令會封鎖所有I/O活動、直到針對每個候選磁碟機進行下載嘗試、或是執行「最短儲存陣列downloadDriveFirmware'命令為止。當「download storageArray driveFirmware'命令完成韌體映像的下載時、每個候選磁碟機都會顯示每個磁碟機的下載狀態。傳回下列其中一種狀態：
+
+* 成功
+* 不成功、原因不明
+* 從未嘗試過、但有理由
+
+
+
+
+== 最低韌體層級
+
+5.20

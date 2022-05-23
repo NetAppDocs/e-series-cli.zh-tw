@@ -1,0 +1,121 @@
+---
+permalink: commands-a-z/show-allsnmpcommunities.html 
+sidebar: sidebar 
+keywords: show, snmp, communities 
+summary: show allSnmpCommunities命令會傳回針對儲存陣列定義的簡單網路管理傳輸協定（SNMP）社群相關資訊。SNMP社群是裝置的集合、例如路由器、交換器、印表機、儲存設備、 集中管理及監控裝置。 
+---
+= 顯示SNMP社群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allSnmpcommunity」命令會傳回針對儲存陣列定義的簡單網路管理傳輸協定（SNMP）社群資訊。SNMP社群是裝置的集合、例如路由器、交換器、印表機、儲存設備、 集中管理及監控裝置。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」或「儲存監控」角色。
+
+
+
+== 背景
+
+傳回的資訊包括：
+
+* 社群總數
+* 設陷目的地總數
+* SNMP社群的名稱
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show pass:quotes[(allSnmpCommunities |
+snmpCommunity communityName="_snmpCommunityName_"] |
+snmpCommunities pass:quotes[[_snmpCommunityName1_ ... _snmpCommunityNameN_]])
+[summary]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allSnmpCommunities》
+ a| 
+此參數會傳回儲存陣列中所有SNMP社群的相關資訊。
+
+
+
+ a| 
+《社區名稱》
+ a| 
+要擷取資訊的SNMP社群名稱。將SNMP社群名稱括在雙引號（""）內。
+
+
+
+ a| 
+《通訊》
+ a| 
+您要擷取資訊的數個SNMP社群名稱。使用下列規則輸入SNMP社群的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數會傳回SNMP社群總數和SNMP設陷目的地總數的清單。使用此參數時、會省略所有詳細資訊。
+
+|===
+
+
+== 附註
+
+SNMP支援一或多個管理人員和託管裝置所屬的_社群_。SNMP要求在透過網路傳送的資料封包中包含_社群字串_、作為粗密碼。SNMP代理程式可以拒絕取得或設定具有無法辨識之社群字串的要求。也會在代理程式傳送給經理的陷阱通知中加入社群字串。
+
+內嵌的SNMP代理程式同時支援IPV4和IPV6。
+
+此命令會傳回類似本範例的SNMP社群資訊。
+
+[listing]
+----
+SNMP COMMUNITIES------------------------------
+SUMMARY
+   Total SNMP Communities: 2
+   Total SNMP Trap Destinations: 1
+DETAILS
+   SNMP Community: TestComm1
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+      Trap Receiver IP Address: 10.113.173.133
+      Send Authentication Failure Traps: true
+   SNMP Community: Test2
+   SNMP Permission: Read Only
+      Associated Trap Destination:
+----
+
+
+== 最低韌體層級
+
+8.30

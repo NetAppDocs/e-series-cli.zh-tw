@@ -1,0 +1,116 @@
+---
+permalink: commands-a-z/set-syslog.html 
+sidebar: sidebar 
+keywords: configure, syslog, set 
+summary: set syslog命令可設定syslog警示資訊。您可以設定事件監視器、以便在發生警示事件時、將警示傳送至syslog伺服器。 
+---
+= 設定syslog設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show」命令可設定系統記錄警示資訊。您可以設定事件監視器、以便在發生警示事件時、將警示傳送至syslog伺服器。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+* 系統記錄伺服器位址必須可用。此位址可以是完整網域名稱、IPv4位址或IPv6位址。
+* 系統記錄伺服器的udp連接埠號碼必須可用。此連接埠通常為514。
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set syslog [defaultFacility=pass:quotes[_facilityNumber_]]
+| [defaultTag=pass:quotes[_defaultTag_]]
+| [syslogFormat=pass:quotes[_rfc3164_|_rfc5424_]]
+| (serverAddresses=pass:quotes[(_serverAddress:portNumber ... serverAddress:portNumber_)]
+| addServerAddresses=pass:quotes[(_serverAddress:portNumber ... serverAddress:portNumber_))]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《資料管理設施》
+ a| 
+選用。可讓您指定預設的醫事機構編號。預設機構必須是介於0和23之間的數值。
+
+
+
+ a| 
+'資料標籤'
+ a| 
+選用。可讓您指定預設標記。將字串括在引號中。
+
+
+
+ a| 
+《日誌格式》
+ a| 
+用於系統記錄訊息的訊息格式。此值可能為下列其中一項：
+
+* 「rfc3164」-符合RFC 3164標準的格式
+* 「rfc5424」-符合RFC 5424的格式
+
+
+
+
+ a| 
+《地址》
+ a| 
+可讓您設定一個或多個含有相關連接埠號碼的syslog伺服器位址。使用此設定選項可清除現有的伺服器位址。系統記錄伺服器位址可以是完整網域名稱、IPv4位址或IPv6位址。udp連接埠必須是介於0和65535.之間的數值。通常、syslog的udp連接埠為514。請將所有位址括在括弧中。如果您輸入多個位址、請以空格分隔。
+
+
+
+ a| 
+《附加伺服器地址》
+ a| 
+可讓您新增一個或多個含有相關連接埠號碼的syslog伺服器位址。使用此設定選項不會清除現有的伺服器位址。系統記錄伺服器位址可以是完整網域名稱、IPv4位址或IPv6位址。udp連接埠必須是介於0和65535.之間的數值。通常、syslog的udp連接埠為514。請將所有位址括在括弧中。如果您輸入多個位址、請以空格分隔。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set syslog serverAddresses=("ICTM1402S02H2.company.com:22");"
+
+SMcli -n Array1 -c "set syslog addServerAddresses=("serverName1.company.com:514"
+"serverName2.company.com:514");"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40
+
+11.70.1新增了「最新格式」參數、以指定Syslog訊息格式。

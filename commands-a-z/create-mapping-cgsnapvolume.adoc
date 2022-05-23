@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/create-mapping-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency, group, snapshot, volume, map 
+summary: create mapping cgrSnapVolume命令會建立從一致性群組快照磁碟區到主機或主機群組的邏輯對應。 
+---
+= 建立一致性群組快照磁碟區對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create mapping cgrSnapVolume」命令可建立從一致性群組快照磁碟區到主機或主機群組的邏輯對應。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create mapping cgSnapVolume=pass:quotes[_"snapVolumeName"_
+(host="_hostName_" | hostGroup=("_hostGroupName_" | defaultGroup))]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「cgrSnapVolume」
+ a| 
+要為其建立邏輯對應的一致性群組快照磁碟區名稱。將一致性群組快照磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+要建立邏輯對應的主機名稱。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+「主機群組」
+ a| 
+要建立邏輯對應的主機群組名稱。將主機群組名稱括在雙引號（""）內。如果您使用「資料管理群組」關鍵字、請勿以引號括住。
+
+|===
+
+
+== 附註
+
+主機是連接至儲存陣列的電腦、可透過主機連接埠存取儲存陣列上的磁碟區。您可以定義個別主機的特定對應。您也可以將主機指派給共用一或多個磁碟區存取權的主機群組。
+
+主機群組是選用的拓撲元素、您可以定義是否要指定共用相同磁碟區存取權的主機集合。主機群組是邏輯實體。只有當您有兩個以上的主機共用相同磁碟區的存取權時、才可定義主機群組。
+
+
+
+== 最低韌體層級
+
+7.83

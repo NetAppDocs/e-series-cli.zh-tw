@@ -1,0 +1,166 @@
+---
+permalink: commands-a-z/create-syncmirror.html 
+sidebar: sidebar 
+keywords: create, synchronous, mirroring 
+summary: create SyncMirror 過程不只是建立主磁碟區、也會建立同步遠端鏡射配對的次要磁碟區。此命令也會設定寫入模式（同步寫入模式或非同步寫入模式）和同步處理優先順序。 
+---
+= 建立同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create SyncMirror 流通」命令可同時建立主要磁碟區和次要磁碟區、以供同步遠端鏡射配對使用。此命令也會設定寫入模式（同步寫入模式或非同步寫入模式）和同步處理優先順序。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。
+
+====
+
+
+== 角色
+
+若要在E2800或E5700storage陣列上執行此命令、您必須具有Storage Admin角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create syncMirror primary=pass:quotes[_"primaryVolumeName_"
+secondary="_secondaryVolumeName_"
+(remoteStorageArrayName="_storageArrayName_" |
+remoteStorageArrayWwn="_wwID_")]
+[remotePassword="password"]
+[syncPriority=(highest | high | medium | low | lowest)]
+[autoResync=(enabled | disabled)]
+[writeOrder=(preserved | notPreserved)]
+[writeMode=(synchronous | asynchronous)]
+[role=(primary | secondary)]
+[force=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"一線"
+ a| 
+您要用於主要磁碟區之本機儲存陣列上現有磁碟區的名稱。請以雙引號（""）括住主磁碟區名稱。
+
+
+
+ a| 
+《第二年》
+ a| 
+您要用於次要Volume的遠端儲存陣列上現有磁碟區名稱。請以雙引號（""）括住次要Volume名稱。
+
+
+
+ a| 
+"REmoteStorageArrayName"
+ a| 
+遠端儲存陣列的名稱。將遠端儲存陣列名稱以雙引號（""）括住。
+
+
+
+ a| 
+"REmoteStorageArrayWwww"
+ a| 
+遠端儲存陣列的全球識別碼（WWID）。將WWID括在雙引號（""）內。
+
+
+
+ a| 
+「即時密碼」
+ a| 
+遠端儲存陣列的密碼。當遠端儲存陣列受到密碼保護時、請使用此參數。將密碼括在雙引號（""）內。
+
+
+
+ a| 
+「yncd匯款」
+ a| 
+完整同步處理與主機I/O活動相關的優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+
+
+ a| 
+自動重新同步
+ a| 
+主磁碟區與遠端鏡射配對之次要磁碟區之間的自動重新同步設定。此參數具有下列值：
+
+* 「已啟用」-自動重新同步已開啟。您不需要進一步執行任何動作、就能重新同步主要Volume和次要Volume。
+* 「停用」—自動重新同步功能已關閉。若要重新同步主磁碟區和次磁碟區、您必須執行「RE假定SyncMirror 」命令。
+
+
+
+
+ a| 
+《寫字者》
+ a| 
+主磁碟區與次要磁碟區之間的資料傳輸寫入順序。有效值為「已保留」或「notPerved」。
+
+
+
+ a| 
+《寫入模式》
+ a| 
+主磁碟區如何寫入次要磁碟區。有效值為「同步」或「非同步」。
+
+
+
+ a| 
+《角色》
+ a| 
+使用此參數可將非同步鏡射群組升級為主要角色、或將非同步鏡射群組降級為次要角色。若要將非同步鏡射群組定義為主要角色、請將此參數設為「primary」。若要將非同步鏡射群組定義為次要角色、請將此參數設為「次要」。
+
+
+
+ a| 
+《力量》
+ a| 
+如果儲存陣列之間的通訊連結中斷、而本機端的升級或降級導致雙重主要條件或雙重次要條件、則會強制角色反轉。若要強制角色反轉、請將此參數設為「true」。預設值為「假」。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+當您選擇主要Volume和次要Volume時、次要Volume的大小必須等於或大於主要Volume。次要磁碟區的RAID層級不一定要與主要磁碟區相同。
+
+密碼會儲存在管理網域中的每個儲存陣列上。如果先前未設定密碼、則不需要密碼。密碼可以是字母數字字元的任意組合、最多30個字元。（您可以使用「set storageArray」命令來定義儲存陣列密碼。）
+
+同步處理優先順序定義用於同步處理主要Volume與鏡射關係次要Volume之間資料的系統資源量。如果您選取最高優先順序層級、資料同步會使用最多的系統資源來執行完整同步、進而降低主機資料傳輸的效能。
+
+「寫入訂單」參數僅適用於非同步寫入模式、因此鏡射配對是一致性群組的一部分。將「寫入訂單」參數設定為「保留」、會使遠端鏡射配對以與主機寫入主要Volume相同的順序、將資料從主要Volume傳輸至次要Volume。如果傳輸連結發生故障、資料會被緩衝、直到完全同步為止。此動作可能需要額外的系統負荷來維護緩衝資料、進而減緩作業速度。將"writeOrder"參數設為"notPreserved"可讓系統不必在緩衝區中維護資料、但必須強制進行完整同步、以確保次要Volume的資料與主要Volume相同。
+
+
+
+== 最低韌體層級
+
+6.10.

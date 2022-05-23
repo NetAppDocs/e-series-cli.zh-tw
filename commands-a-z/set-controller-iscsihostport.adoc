@@ -1,0 +1,488 @@
+---
+permalink: commands-a-z/set-controller-iscsihostport.html 
+sidebar: sidebar 
+keywords: set, iscsi, host, port, network, properties 
+summary: set控制器iscsiHostPort命令會變更主機連接埠的網路內容、包括IPv4和IPv6內容、連接埠速度和最大框架有效負載。 
+---
+= 設定iSCSI主機連接埠網路內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set控制器iscsiHostPort」命令會變更主機連接埠的網路內容、包括IPv4和IPv6內容、連接埠速度和最大框架有效負載。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+[NOTE]
+====
+此命令已過時、並由取代 xref:set-controller-hostport.adoc[設定控制器主機連接埠內容] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+set controller [(a|b)]
+iscsiHostPort [portLabel]
+----
+[listing]
+----
+([IPv4Address=(0-255).(0-255).(0-255).(0-255) ]|
+----
+[listing]
+----
+[IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF)] |
+----
+[listing]
+----
+[IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
+----
+[listing]
+----
+[enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE)] |
+----
+[listing]
+----
+[enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) ]|
+----
+[listing]
+----
+[IPv4ConfigurationMethod=(static | dhcp) ]|
+----
+[listing]
+----
+[IPv6ConfigurationMethod=(static | auto)] |
+----
+[listing]
+----
+[IPv4GatewayIP=(TRUE | FALSE)] |
+----
+[listing]
+----
+[IPv6HopLimit=[0-255] ]|
+----
+[listing]
+----
+[IPv6NdDetectDuplicateAddress=[0-256] ]|
+----
+[listing]
+----
+[IPv6NdReachableTime=[0-65535] ]|
+----
+[listing]
+----
+[IPv6NdRetransmitTime=[0-65535]] |
+----
+[listing]
+----
+[IPv6NdTimeOut=[0-65535] ]|
+----
+[listing]
+----
+[IPv4Priority=[0-7] | IPv6Priority=[0-7] ]|
+----
+[listing]
+----
+[IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255)] |
+----
+[listing]
+----
+[IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094]] |
+----
+[listing]
+----
+[maxFramePayload=[*frameSize*]] |
+----
+[listing]
+----
+[tcpListeningPort=[3260, 49152-65536] ]|
+----
+[listing]
+----
+[portSpeed=[(10 | 25)])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「enableIPV4」
+ a| 
+可用選項包括：
+
+* 是的
+* 錯
+
+
+
+
+ a| 
+「enableIPV4優先順序」
+ a| 
+選取此選項可啟用決定存取網路優先順序的參數。使用滑桿選取1到7之間的優先順序。
+
+在共享區域網路（LAN）環境（例如乙太網路）中、許多站台可能會爭用網路存取權。存取權以先到先得的方式提供。兩個站台可能會同時嘗試存取網路、這會導致兩個站台都關機並等待、然後再試一次。交換式乙太網路只有一個站台連接到交換器連接埠、此程序就會最小化。
+
+可用選項包括：
+
+* 是的
+* 錯
+
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「enableIPV4Vlan」
+ a| 
+VLAN是一種邏輯網路、其運作方式類似於實體獨立於其他實體和虛擬區域網路（LAN）、這些區域網路由相同的交換器、相同的路由器或兩者支援。可用選項包括：
+
+* 是的
+* 錯
+
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「enableIPV6」
+ a| 
+IPv6位址空間為128位元。它由八個以分號分隔的16位元十六進位區塊來表示。
+
+可用選項包括：
+
+* 是的
+* 錯
+
+
+
+
+ a| 
+「enableIPV6優先順序」
+ a| 
+選取此選項可啟用決定存取網路優先順序的參數。使用滑桿選取1到7之間的優先順序。
+
+在共享區域網路（LAN）環境（例如乙太網路）中、許多站台可能會爭用網路存取權。存取權以先到先得的方式提供。兩個站台可能會同時嘗試存取網路、這會導致兩個站台都關機並等待、然後再試一次。交換式乙太網路只有一個站台連接到交換器連接埠、此程序就會最小化。
+
+可用選項包括：
+
+* 是的
+* 錯
+
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「enableIPV6Vlan」
+ a| 
+VLAN是一種邏輯網路、其運作方式類似於實體獨立於其他實體和虛擬區域網路（LAN）、這些區域網路由相同的交換器、相同的路由器或兩者支援。
+
+可用選項包括：
+
+* 是的
+* 錯
+
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「IPV4Address」
+ a| 
+請以下列格式輸入地址：（0-255）。（0-255）。（0-255）。（0-255）。（0-255）
+
+
+
+ a| 
+「IPV4Configuration方法」
+ a| 
+可用選項包括：
+
+* 靜態
+* DHCP
+
+
+
+
+ a| 
+《IPV4GatewayIP》
+ a| 
+可用選項包括：
+
+* 是的
+* 錯
+
+
+
+
+ a| 
+「IPV4優先順序」
+ a| 
+輸入介於0和7之間的值。
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「IPV4SubnetMask
+ a| 
+請以下列格式輸入子網路遮罩：（0-255）。（0-255）。（0-255）。（0-255）
+
+
+
+ a| 
+"IPV4VlanId"
+ a| 
+輸入介於1和4094之間的值。
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「IPV6組態方法」
+ a| 
+可用選項包括：
+
+* 靜態
+* 自動
+
+
+
+
+ a| 
+《IPV6合上極限》
+ a| 
+此選項可設定IPv6封包可經過的躍點數目上限。
+
+預設值為「64」。
+
+
+
+ a| 
+「IPV6LocalAddress」
+ a| 
+輸入位址的格式如下：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）
+
+
+
+ a| 
+"IPV6NdDetectDuplicatedAddress"
+ a| 
+輸入介於0和256之間的值。
+
+
+
+ a| 
+「IPV6NdReachableTime」
+ a| 
+此選項可設定將遠端IPv6模式視為可連線的時間量。指定介於0到65535.之間的值（以毫秒為單位）。
+
+預設值為「30000」毫秒。
+
+
+
+ a| 
+「IPV6NdRetrr勒索 時間」
+ a| 
+此選項可設定繼續將封包重新傳輸至IPv6節點的時間量。指定介於0到65535.之間的值（以毫秒為單位）。
+
+預設值為「1000毫秒」。
+
+
+
+ a| 
+「IPV6NdTimOut」
+ a| 
+此選項可設定IPv6節點的逾時值。指定介於0到65535.之間的值（以毫秒為單位）。
+
+預設值為「30000」毫秒。
+
+
+
+ a| 
+「IPV6優先順序」
+ a| 
+輸入介於0和7之間的值。
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+「IPV6RoutableAddress」
+ a| 
+輸入位址的格式如下：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）
+
+
+
+ a| 
+「IPV6RouterAddress」
+ a| 
+輸入位址的格式如下：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）
+
+
+
+ a| 
+"IPV6VlanId"
+ a| 
+輸入介於1和4094之間的值。
+
+[NOTE]
+====
+NVMe over RoCE環境不支援此參數。
+
+====
+
+
+ a| 
+《MaxFramePayload》
+ a| 
+「maxFramePayload」選項可在IPv4和IPv6之間共享、是網路中可傳送的最大封包或框架。標準乙太網路框架的有效負載部分設為「1500」、而巨型乙太網路框架則設為「9000」。使用巨型框架時、網路路徑中的所有裝置都應該能夠處理較大的框架大小。
+
+預設值為每個框架1500位元組。您必須輸入介於1500和9000之間的值。
+
+
+
+ a| 
+'連接埠速度'
+ a| 
+可用選項包括：
+
+* 10.
+* 25
+
+
+[NOTE]
+====
+此選項僅適用於25Gb/s乙太網路主機介面卡。變更單一連接埠的速度會變更卡上所有四個連接埠的速度。
+
+====
+[NOTE]
+====
+「iscsiHostPort」參數的「portSpeed」（連接埠速度）選項的值為兆位元/秒（MB /秒）。
+
+====
+
+
+ a| 
+「tcplisteningPort」
+ a| 
+接聽連接埠是控制器用來接聽來自主機iSCSI啟動器之iSCSI登入的TCP連接埠號碼。預設的接聽連接埠為3260。您必須輸入3260或49152到65535.之間的值。
+
+|===
+
+
+== 識別iSCSI主機連接埠標籤
+
+您必須指定主機連接埠的標籤。請依照下列步驟指定主機連接埠標籤：
+
+. 如果您不知道iSCSI主機連接埠的連接埠標籤、請執行「show controller」命令。
+. 在結果的「主機介面」區段中、找出您要選取的主機連接埠。
++
+[NOTE]
+====
+連接埠標籤是傳回「Port（連接埠）」欄位的完整值。
+
+====
+. 將連接埠標籤的整個值括在引號和方括弧中：["portlabel"。例如、如果連接埠標籤為「CH 2」、請如下指定iSCSI主機連接埠：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令列、且標籤包含管路（|）、則該字元應轉義（使用｛caret｝）；否則、該字元將會解譯為命令。例如、如果連接埠標籤為「e0b-0b」、請如下指定iSCSI主機連接埠：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+為了提供向下相容性、以大括弧[]括住的iscsiPortNumber（而非引號和大括弧["]）仍可用於E2700、E5600或EF560控制器（以及其他前幾代E系列或EF系列控制器）。對於這些控制器、iscsiPortNumber的有效值如下：
+
+* 對於具有整合式主機連接埠的控制器、編號為3、4、5或6。
+* 如果控制器的主機連接埠僅在主機介面卡上、則編號為1、2、3或4。
+
+
+先前的語法範例如下：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== 最低韌體層級
+
+7.15新增iSCSI主機連接埠選項。
+
+7.60新增「portSpeed」選項。
+
+8.10修改iSCSI主機連接埠的識別方法。
+
+8.40將「iscsiHostPort」參數的「portSpeed」選項改為「portSpeed」選項、以瞭解此選項僅適用於25Gb/s乙太網路主機介面卡、而且變更一個連接埠的速度會變更卡上所有四個連接埠的速度。
+
+8.41此命令已過時。

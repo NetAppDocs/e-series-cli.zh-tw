@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/validate-storagearray-securitykey.html 
+sidebar: sidebar 
+keywords: validate, storage array, security key 
+summary: validate storageArray SECURITY Key命令會驗證具有安全功能磁碟機的儲存陣列的安全金鑰、以確保備份安全金鑰檔案未毀損。 
+---
+= 驗證儲存陣列安全金鑰
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「validate storageArray SECURITY Key」命令會驗證具有安全功能磁碟機的儲存陣列的安全金鑰、以確保備份安全金鑰檔案未毀損。
+
+
+
+== 支援的陣列
+
+如果啟用外部金鑰管理、則此命令僅適用於E2800和E5700陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+安全性金鑰驗證會使用密碼來產生檔案以解密金鑰、並將其與控制器記憶體（內部金鑰）或外部伺服器（外部金鑰）中所保留的值配對。
+
+[NOTE]
+====
+此命令同時適用於內部和外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[validate storageArray securityKey file="_fileName_" passPhrase="_passPhraseString_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+具有安全金鑰的檔案路徑和檔案名稱。請以雙引號（""）括住檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+
+
+ a| 
+《通關密碼》
+ a| 
+加密安全金鑰的字元字串、以便將安全金鑰儲存在外部檔案中。將密碼括在雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+7.70

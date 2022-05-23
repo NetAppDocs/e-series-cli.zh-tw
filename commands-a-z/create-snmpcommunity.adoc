@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/create-snmpcommunity.html 
+sidebar: sidebar 
+keywords: register, snmp, community 
+summary: create snmpCommunity命令會建立新的Simple Network Management Protocol（SNMP）社群、社群名稱字串、並將新社群登錄為SNMP代理程式的已知實體。任何以現有社群相同名稱登錄新社群的嘗試都會遭到拒絕、而且韌體會傳回錯誤訊息。 
+---
+= 登錄SNMP社群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create snmpCommunity」命令會建立新的簡易網路管理傳輸協定（SNMP）社群、社群名稱字串、並將新社群登錄為SNMP代理程式的已知實體。任何以現有社群相同名稱登錄新社群的嘗試都會遭到拒絕、而且韌體會傳回錯誤訊息。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create snmpCommunity communityName=pass:quotes[_"snmpCommunityName"_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《社區名稱》
+ a| 
+您要建立的SNMP社群名稱。將SNMP社群名稱括在雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+8.30

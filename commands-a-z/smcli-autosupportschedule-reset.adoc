@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-reset.html 
+sidebar: sidebar 
+keywords: reset, autosupport, message, collection, schedule 
+summary: SMcli autosupport排程重設命令會重設AutoSupport 一週中每日和每週傳送此訊息的時間和天數。您可以接受管理軟體產生的預設隨機值、也可以使用此命令來指定值。 
+---
+= 重設AutoSupport 資訊收集排程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli autosupport排程重設」命令會重設AutoSupport 一週中每天和每週傳送此訊息的時間和天數。您可以接受管理軟體產生的預設隨機值、也可以使用此命令來指定值。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+* 如果啟用了「支援」功能、管理軟體就會同時傳送每日的「資訊」訊息和每週的「資訊」訊息。AutoSupport AutoSupport AutoSupport
+* 管理軟體會隨機選取每日和每週訊息的時間、以及每週訊息的一天。管理軟體會盡一切努力、確保管理網域內沒有兩個儲存陣列同時傳送排程AutoSupport 的效益分析訊息。
+* 您可以指定每天傳送的時間範圍（小時層級精細度）、以及管理網域中儲存陣列每週傳送訊息的時間。
+* 針對每週排程、您可以選擇AutoSupport 一週中偏好的日期進行收集和傳輸。
+
+
+
+
+== 語法
+
+[listing]
+----
+SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
+   dayOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]
+   weeklyTime=<startTime>-<endTime>)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「設定」
+ a| 
+使用24小時、7天、週（星期日至週六）時間間隔重設並產生新的排程。
+
+
+
+ a| 
+「每日時間」
+ a| 
+「intartTime>-<<'endTime'（時間）>指定您想要開始和結束AutoSupport 所有儲存陣列之收集的各種時候。開始時間和結束時間必須為hh：mm[am|pm]。
+
+
+
+ a| 
+《週之夜》
+ a| 
+[星期日|週一|週二|週三|週四|週五|週六]指定您想要收集AutoSupport 所有儲存陣列之用套件集合資料的偏好週數（週日至週六）。"_DayOfWeek_"參數必須以括弧括住、並以空格分隔。
+
+
+
+ a| 
+「週末時間」
+ a| 
+「intartTime>-」<「endTime'」>指定您想要開始和結束AutoSupport 選定一週中每一天收集的「資訊包」收集資料的時間。「_startTime_」和「_endTime_」的格式必須為「hh：mm[am|pam]」。
+
+|===
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 範例
+
+[listing]
+----
+ SMcli -autoSupportSchedule dailyTime=10:00am-11:00am
+dayOfWeek=[Monday Thursday Friday] weeklyTime=2:00am-3:00am
+----
+「Mcli -autosupport排 程每天時間=上午10：00至上午11：00 dayOfWeek =（週四週五）週末時間=上午2：00至下午3：00」
+
+
+
+== 驗證
+
+使用「Mcli -autosupport排程show」命令查看管理網域中排程的變更結果。

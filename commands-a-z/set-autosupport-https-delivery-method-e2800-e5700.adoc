@@ -1,0 +1,147 @@
+---
+permalink: commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html 
+sidebar: sidebar 
+keywords: 'Specify AutoSupport HTTP(S) delivery method (for individual E2800 or E5700 arrays)' 
+summary: set storageArray AutoSupport SesfeliveryMethods命令可設定傳送方法、將AutoSupport 資訊傳送至HTTP（S）。 
+---
+= 指定AutoSupport 功能完善的HTTP（S）交付方法（適用於個別E2800或E5700陣列）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray AutoSupport SesfeliveryMethods」命令可設定傳送方式、將AutoSupport 不實訊息傳送至HTTP（S）。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set storageArray autoSupport deliveryMethod={HTTP | HTTPS}
+   {direct | proxyConfigScript=pass:quotes["_proxyConfigScriptUrl_"] |
+proxyServer hostAddress=pass:quotes[_address_] portNumber=pass:quotes[_portNumber_]
+ [userName=pass:quotes["_username_"] password=pass:quotes["_password_"]]}
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DeliveryMethod》
+ a| 
+可讓使用者指定AutoSupport 進行不收集資訊的交付方法。有效選項包括：
+
+* 電子郵件
+* HTTP
+* HTTPS
+
+
+[NOTE]
+====
+如果已設定電子郵件方法、AutoSupport 則會停用「僅此即用功能」和「遠端診斷」。
+
+====
+
+
+ a| 
+《直接》
+ a| 
+可讓使用者使用HTTP或HTTPS傳輸協定直接連線至目的地技術支援系統。
+
+
+
+ a| 
+「proxyConfigScript」
+ a| 
+可讓使用者指定Proxy自動組態（PAC）指令碼檔案的位置
+
+
+
+ a| 
+《ProxyServer》
+ a| 
+可讓使用者指定與目的地技術支援系統建立連線所需的HTTP（S）Proxy伺服器詳細資料。
+
+
+
+ a| 
+《HOSTADDRESS》
+ a| 
+可讓使用者指定Proxy伺服器的主機位址。使用ProxyServer時需要。
+
+
+
+ a| 
+「portNumber」
+ a| 
+可讓使用者指定Proxy伺服器的連接埠號碼。使用ProxyServer時需要。
+
+
+
+ a| 
+《使用者名稱》
+ a| 
+允許使用者指定Proxy伺服器的使用者名稱（若已設定）。
+
+
+
+ a| 
+密碼
+ a| 
+允許使用者指定Proxy伺服器的密碼（若已設定）。
+
+|===
+
+
+== 最低韌體層級
+
+8.40
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP direct;"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTP
+proxyConfigScript=\"http://company.com/~username/proxy.pac\";"
+
+SMcli -n Array1 -c "set storageArray autoSupport deliveryMethod=HTTPS
+proxyServer hostAddress=10.117.12.112 portNumber=8080 userName=\"tracyt\" password=\"1234456\";"
+
+SMcli completed successfully.
+----
+
+
+== 驗證
+
+使用「Start storageArray AutoSupport 現象測試」命令傳送測試訊息、確認您的交付方法設定正確。
+
+
+
+== 最低韌體層級
+
+8.40

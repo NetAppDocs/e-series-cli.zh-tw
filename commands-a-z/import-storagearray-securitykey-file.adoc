@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/import-storagearray-securitykey-file.html 
+sidebar: sidebar 
+keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
+summary: Import storageArray securityKey file命令可解除鎖定已從一個儲存陣列移至另一個儲存陣列的一或多個完整磁碟加密（FDE）磁碟機。 
+---
+= 匯入儲存陣列安全金鑰
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Import storageArray securityKey file」（匯入storageArray安全金鑰檔案）命令可解除鎖定您從一個儲存陣列移至另一個儲存陣列的一或多個完整磁碟加密（FDE）磁碟機。
+
+
+
+== 支援的陣列
+
+如果啟用外部金鑰管理、則此命令僅適用於E2800、E5700、EF600或EF300陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+只有具有相符安全金鑰的磁碟機才會解除鎖定。解除鎖定之後、就會套用新儲存陣列的安全金鑰。
+
+[NOTE]
+====
+此命令同時適用於內部和外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing]
+----
+import storageArray securityKey file="fileName"
+passPhrase="passPhraseString"
+[forceOverwrite=(TRUE|FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+具有匯入FDE磁碟機原始安全金鑰的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+
+
+ a| 
+《通關密碼》
+ a| 
+提供安全金鑰驗證的字元字串。
+
+
+
+ a| 
+《FORCE覆 寫》
+ a| 
+如果此參數設為「true」、則匯入會在通常不允許匯入時強制覆寫FDE金鑰、例如當某個控制器不在或故障時。根據預設、強制覆寫參數設為假。
+
+|===
+
+
+== 附註
+
+控制器韌體會建立一個鎖定、限制FDE磁碟機的存取。FDE磁碟機的狀態稱為「安全功能」。當您建立安全金鑰時、狀態會設為「啟用安全性」、這會限制存取儲存陣列內所有FDE磁碟機。
+
+您的通關密碼必須符合下列條件：
+
+* 長度必須介於8到32個字元之間。
+* 必須包含至少一個大寫字母。
+* 必須包含至少一個英文字母。
+* 必須包含至少一個數字。
+* 必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密碼不符合這些條件、您將會收到錯誤訊息、並會要求您重試命令。
+
+====
+
+
+== 最低韌體層級
+
+7.40
+
+8.40新增匯入外部儲存陣列安全金鑰的功能
+
+11.70.1新增了「forceOverwrite」參數。

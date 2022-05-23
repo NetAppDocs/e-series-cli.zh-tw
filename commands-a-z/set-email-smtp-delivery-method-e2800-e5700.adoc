@@ -1,0 +1,97 @@
+---
+permalink: commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html 
+sidebar: sidebar 
+keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
+summary: set storageArray AutoSupport ferreseliveryMethods命令可設定傳送方法、以便將AutoSupport 不實訊息傳送至電子郵件（SMTP）。 
+---
+= 指定電子郵件（SMTP）傳送方法
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray AutoSupport feliveryMethods」命令可設定傳送方式、將AutoSupport 資訊傳送至電子郵件（SMTP）。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray autoSupport deliveryMethod=email
+mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DeliveryMethod》
+ a| 
+可讓使用者指定AutoSupport 進行不收集資訊的交付方法。有效選項包括：
+
+* 電子郵件
+* HTTP
+* HTTPS
+
+
+[NOTE]
+====
+如果已設定電子郵件方法、AutoSupport 則會停用「僅此即用功能」和「遠端診斷」。
+
+====
+
+
+ a| 
+《每日伺服器》
+ a| 
+可讓使用者指定用於AutoSupport 收集資訊的郵件轉送伺服器。
+
+
+
+ a| 
+「電子郵件」
+ a| 
+可讓使用者為AutoSupport 該功能集指定傳送電子郵件地址。
+
+|===
+
+
+=== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray autoSupportConfig deliveryMethod=email mailRelayServer=\"mailserver.company.com\" senderEmail=\"user@company.com\";"
+
+SMcli completed successfully.
+----
+
+
+=== 驗證
+
+使用「_start storageArray AutoSupport SfeliveryTest_」命令傳送測試訊息、確認您的交付方法設定正確。
+
+
+
+== 最低韌體層級
+
+8.40

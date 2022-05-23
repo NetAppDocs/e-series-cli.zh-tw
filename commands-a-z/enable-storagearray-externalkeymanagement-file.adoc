@@ -1,0 +1,110 @@
+---
+permalink: commands-a-z/enable-storagearray-externalkeymanagement-file.html 
+sidebar: sidebar 
+keywords: enable, storage, array, external, key, management, file, command, security, disk, encryption, initial, roles, context, support 
+summary: enable storageArray externalKeyManagement file命令可為具有完整磁碟加密磁碟機的儲存陣列、啟用外部安全金鑰管理、並建立初始磁碟機安全金鑰。 
+---
+= 啟用外部安全金鑰管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「enable storageArray externalKeyManagement file」命令可讓具有完整磁碟加密磁碟機的儲存陣列進行外部安全金鑰管理、並建立初始磁碟機安全金鑰。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+enable storageArray externalKeyManagement
+pass:quotes[file="_fileName_"]
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[saveFile=_(TRUE | FALSE)_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+儲存新安全性金鑰的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[NOTE]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+
+
+ a| 
+《通關密碼》
+ a| 
+加密安全金鑰的字元字串、以便將安全金鑰儲存在外部檔案中。將密碼字元字串括在雙引號（""）內。
+
+
+
+ a| 
+「另存檔案」
+ a| 
+驗證安全金鑰並將其儲存至檔案。設為「假」、以不儲存及驗證檔案的安全金鑰。預設值為「true」。
+
+|===
+
+
+== 附註
+
+您的通關密碼必須符合下列條件：
+
+* 長度必須介於8到32個字元之間。
+* 必須包含至少一個大寫字母。
+* 必須包含至少一個英文字母。
+* 必須包含至少一個數字。
+* 必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密碼不符合這些條件、您將會收到錯誤訊息。
+
+====
+
+
+== 最低韌體層級
+
+8.40
+
+8.70新增了"_SaveFile_"參數。

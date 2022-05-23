@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-volumegroup-forcedstate.html 
+sidebar: sidebar 
+keywords: set, volume, group, forced, state 
+summary: set volumeGroup forcedState命令可將Volume群組移至強制狀態。 
+---
+= 設定Volume群組強制狀態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令"show volumeGroup forcedState"可將Volume群組移至強制狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+如果「開始磁碟區群組匯入」命令未將磁碟區群組移至「已匯入」狀態、或匯入作業因硬體錯誤而無法運作、請使用此命令。在強制狀態下、可以匯入Volume群組、然後識別硬體錯誤。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set volumeGroup pass:quotes[[_volumeGroupName_]] forcedState
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要置於強制狀態的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+您可以將組成磁碟區群組的磁碟機從一個儲存陣列移至另一個儲存陣列。CLI提供三個命令、可讓您移動磁碟機。命令包括「Start volumeGroup匯出」、「Start volumeGroup匯入」和「show volumeGroup forcedState」。
+
+在強制狀態下、您可以對磁碟區群組執行匯入作業。
+
+
+
+== 最低韌體層級
+
+7.10.

@@ -1,0 +1,89 @@
+---
+permalink: commands-a-z/establish-asyncmirror-volume.html 
+sidebar: sidebar 
+keywords: establish, asynmirror, volume, asynchronous, mirrored, remote, storage, array, secondary, existing 
+summary: 透過將次要Volume新增至現有的非同步鏡射鏡射群組、「建立同步鏡射Volume」命令可在遠端儲存陣列上完成非同步鏡射配對。 
+---
+= 建立非同步鏡射配對
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「建立同步鏡射磁碟區」命令會將次要磁碟區新增至現有的非同步鏡射鏡射群組、以完成遠端儲存陣列上的非同步鏡射配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+在執行此命令之前、非同步鏡射群組必須存在、而且主要磁碟區必須存在於非同步鏡射群組中。此命令成功完成之後、主要磁碟區與次要磁碟區之間就會啟動非同步鏡射。
+
+組成非同步鏡射配對的兩個磁碟區、可作為單一實體運作。建立非同步鏡射配對可讓您在整個鏡射配對與兩個個別磁碟區之間執行動作。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[establish asyncMirror volume="_secondaryVolumeName_"]
+pass:quotes[asyncMirrorGroup="_asyncMirrorGroupName_"]
+pass:quotes[primaryVolume="_primaryVolumeName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要用於次要Volume的遠端儲存陣列上現有磁碟區名稱。將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要用來包含非同步鏡射配對的現有非同步鏡射群組名稱。將非同步鏡射群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「primaryVolume」
+ a| 
+您要用於主要磁碟區之本機儲存陣列上現有磁碟區的名稱。將磁碟區名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+非同步鏡射配對由兩個磁碟區組成、一個是主磁碟區、另一個是次要磁碟區、其中包含相同資料的相同複本。鏡射配對是非同步鏡射群組的一部分、可讓鏡射配對與非同步鏡射鏡射群組中的任何其他鏡射配對同時進行同步。
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+當您選擇主要Volume和次要Volume時、次要Volume的大小必須等於或大於主要Volume。次要磁碟區的RAID層級不一定要與主要磁碟區相同。
+
+
+
+== 最低韌體層級
+
+7.84

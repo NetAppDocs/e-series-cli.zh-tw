@@ -1,0 +1,59 @@
+---
+permalink: commands-a-z/reset-storagearray-sasphybaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, sas, phy, baseline 
+summary: 重設storageArray SASPHYBasel命令會重設所有裝置的SAS實體層（SAS實體層）基準、並從.csv檔案中移除錯誤清單。 
+---
+= 重設儲存陣列SAS實體層基準
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「RESset storageArray SASPHYBaseline'命令會重設所有裝置的SAS實體層（SAS實體層）基準、並從「.csv'檔案中移除錯誤清單。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+當您執行「儲存陣列SASPHYCounts」命令時、就會產生「.csv"檔案。
+
+[NOTE]
+====
+先前發行的「資源陣列SASPHYBaseline'」命令、已清除磁碟機以外所有裝置的錯誤計數。現在、「RESset storageArray SASPHYBaseline'命令會重設磁碟機和其他裝置的SAS實體層基準。所有錯誤都會從「.csv'」檔案中刪除。
+
+====
+
+
+== 語法
+
+[listing]
+----
+reset storageArray SASPHYBaseline
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.10.
+
+7.83重設磁碟機的SAS實體層基準。

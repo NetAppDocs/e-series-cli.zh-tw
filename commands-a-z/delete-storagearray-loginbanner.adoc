@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/delete-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: delete, storage, array, loginbanner, command, allow, login, banner, text, file, upload, save, role 
+summary: 刪除storageArray loginBanner命令可讓您刪除先前上傳並儲存的登入橫幅文字檔案。 
+---
+= 刪除儲存陣列登入橫幅
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用「刪除storageArray loginBanner」命令刪除先前上傳並儲存的登入橫幅文字檔。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+delete storageArray loginBanner
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.41.

@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/remove-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: remove, storage array, directory, server, role, mapping 
+summary: remove storageArray directoryServer命令會移除指定目錄伺服器的定義角色對應。 
+---
+= 移除儲存陣列目錄伺服器角色對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「移除storageArray directoryServer」命令會移除指定目錄伺服器的定義角色對應。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+remove storageArray directoryServer pass:quotes[[_domainId_]]
+    (allGroupDNs | groupDNs=pass:quotes[(_groupDN1 ... groupDNN_))]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"DirecdirectoryServer"
+ a| 
+可讓您使用網域ID來指定要移除對應的網域。
+
+
+
+ a| 
+《allGroupDNs》
+ a| 
+可讓您從網域移除所有群組辨別名稱對應。
+
+
+
+ a| 
+《GroupDNs》
+ a| 
+可讓您指定要移除的群組辨別名稱（DN）。
+
+[NOTE]
+====
+如果輸入多個群組、請以空格分隔值。
+
+====
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    groupDNs=("CN=company-distlist,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com");"
+
+SMcli -n Array1 -c "remove storageArray directoryServer ["domain1"]
+                    allGroupDNs;"
+
+SMcli completed successfully.
+----

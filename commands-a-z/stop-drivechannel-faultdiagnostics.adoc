@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/stop-drivechannel-faultdiagnostics.html 
+sidebar: sidebar 
+keywords: stop, drive, channel, fault, isolation, diagnostics 
+summary: Stop driveChannel faultDiagnostics命令會停止磁碟機通道故障隔離診斷、此診斷會在完成前停止start磁碟機通道故障隔離診斷命令。 
+---
+= 停止磁碟機通道故障隔離診斷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「停止磁碟機通道故障診斷」命令會停止磁碟機通道故障隔離診斷、此診斷會在完成之前停止執行「開始磁碟機通道故障隔離診斷」命令。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在韌體版本8.10中、不再使用「最上層磁碟機通道故障診斷」命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+stop driveChannel faultDiagnostics
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+使用「Start driviveChannel faultDiagnostics」命令和「Save driveChannel faultDiagnostics」命令搭配「stop driveChannel faultDiagnostics」命令。需要這些命令來啟動診斷測試、並將診斷測試結果儲存至檔案。
+
+您也可以隨時按下「Ctrl+C」來停止「Start driviveChannel faultDiagnostics」命令。
+
+
+
+== 最低韌體層級
+
+7.15

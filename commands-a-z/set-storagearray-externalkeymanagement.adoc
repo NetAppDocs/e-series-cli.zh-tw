@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/set-storagearray-externalkeymanagement.html 
+sidebar: sidebar 
+keywords: set, external, key, management, set 
+summary: set storageArray externalKeyManagement命令可設定外部金鑰管理伺服器位址和連接埠號碼。 
+---
+= 設定外部金鑰管理設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set storageArray externalKeyManagement」命令可設定外部金鑰管理伺服器位址和連接埠號碼。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set storageArray externalKeyManagement serverAddress=pass:quotes[_serverAddress_]
+serverPort=pass:quotes[_portNumber_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「erverAddress」
+ a| 
+可讓您指定外部金鑰管理伺服器位址。伺服器位址可以是完整網域名稱、IPv4位址或IPv6位址。
+
+
+
+ a| 
+「erverPort」
+ a| 
+可讓您指定外部金鑰管理伺服器的連接埠號碼。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray externalKeyManagement serverAddress=192.0.2.1 serverPort=8081;"
+
+   SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

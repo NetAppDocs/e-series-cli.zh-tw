@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/stop-pendingsnapimagecreation.html 
+sidebar: sidebar 
+keywords: stop, snapshot, group, snapshot, images 
+summary: Stop pendingSnapImageCreation命令會取消快照或快照一致性群組上要建立的所有擱置中快照映像。 
+---
+= 停止快照群組待處理的快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「shtop pendingSnapImageCreation」命令會取消所有待處理的快照映像、這些快照映像將建立在快照或快照一致性群組中。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+如果快照群組沒有任何擱置中的快照映像、韌體會顯示錯誤訊息、而且不會執行命令。您可以在快照群組或快照一致性群組上執行此命令。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+stop (snapGroup pass:quotes[[_snapGroupName_]] |
+consistencyGroup pass:quotes[[_snapConsistencyGroupName_]])
+pendingSnapImageCreation
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+您想要停止其擱置快照映像的快照群組名稱。將快照群組名稱括在方括弧中（[]）。如果快照群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住快照群組名稱。
+
+
+
+ a| 
+《抵抗集團》
+ a| 
+您想要停止擱置的快照映像之快照一致性群組的名稱。將快照一致性群組名稱括在方括弧中（[]）。如果快照一致性群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住快照群組名稱。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

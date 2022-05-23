@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/smcli-alerttest.html 
+sidebar: sidebar 
+keywords: test, alerts 
+summary: SMcli alertTest命令會傳送測試警示給Windows事件記錄和所有已設定的syslog接收器。 
+---
+= 測試警示
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli alertTest」命令會傳送測試警示給Windows事件記錄和所有已設定的syslog接收器。
+
+
+
+== 支援的陣列
+
+此命令僅適用於E2700和E5600儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令
+
+====
+
+
+== 語法
+
+[listing]
+----
+SMcli -alertTest
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+7.83

@@ -1,0 +1,161 @@
+---
+permalink: get-started/structure-of-a-script-command.html 
+sidebar: sidebar 
+keywords: structure, script command 
+summary: 所有指令碼命令都有下列結構。 
+---
+= 指令碼命令的結構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+所有指令碼命令都有下列結構：
+
+[listing]
+----
+
+      *command operand-data* (*statement-data*)
+----
+* 「command」表示要執行的動作。
+* 「操作數資料」代表您要設定或管理的儲存陣列相關物件。
+* 「陳述資料」提供執行命令所需的資訊。
+
+
+"_操作 數-資料_"的語法具有下列結構：
+
+[listing]
+----
+(*object-type* | all *object-types* | [*qualifier*] (*object-type* [*identifier*] (*object-type* [*identifier*] | *object-types* [*identifier-list*])))
+----
+物件的識別方式有四種：
+
+* 物件類型-當命令未參照特定物件時使用。
+* 「* all*」參數前置詞-當命令參照儲存陣列中指定類型的所有物件時使用（例如、「* allVolumes *」）。
+* 方括弧-在特定物件上執行命令時使用、以識別物件（例如、「* Volume [工程]*」）。
+* 識別項清單-用於指定物件子集。將物件識別碼括在方括弧內（例如：「* Volume [銷售工程行銷]*」）。
+
+
+如果您想要包含說明物件的其他資訊、則必須提供辨識符號。
+
+此表列出與每種物件類型相關聯的物件類型和識別碼。
+
+[cols="2*"]
+|===
+| 物件類型 | 識別碼 
+
+
+ a| 
+‘*控制器*’
+ a| 
+a或b
+
+
+
+ a| 
+磁碟機*
+ a| 
+對於附有藥櫃的機箱、請使用紙匣ID、藥櫃ID和插槽ID。或者、只要紙匣ID和插槽ID即可。
+
+
+
+ a| 
+"* replacementDrive*
+ a| 
+對於附有藥櫃的機箱、請使用紙匣ID、藥櫃ID和插槽ID。或者、只要紙匣ID和插槽ID即可。
+
+
+
+ a| 
+「* driviveChannel*」
+ a| 
+磁碟機通道識別碼
+
+
+
+ a| 
+‘*主機*’
+ a| 
+使用者標籤
+
+
+
+ a| 
+「主機通道*」
+ a| 
+主機通道識別碼
+
+
+
+ a| 
+《*主機組*》
+ a| 
+使用者標籤
+
+
+
+ a| 
+「主機連接埠*」
+ a| 
+使用者標籤
+
+
+
+ a| 
+‘* iscsiInitiator *’
+ a| 
+使用者標籤或iSCSI合格名稱（IQN）
+
+
+
+ a| 
+「iscsiTarget *」
+ a| 
+使用者標籤或IQN
+
+
+
+ a| 
+《* storageArray*》
+ a| 
+不適用
+
+
+
+ a| 
+‘* tray *’
+ a| 
+紙匣ID
+
+
+
+ a| 
+’* Volume *’
+ a| 
+Volume使用者標籤或Volume全球識別碼（WWID）（僅限「設」命令）
+
+
+
+ a| 
+「* Volume Copy*」
+ a| 
+目標Volume使用者標籤、以及來源Volume使用者標籤（選用）
+
+
+
+ a| 
+’* Volume Group*
+ a| 
+使用者標籤
+
+有效字元為英數字元、連字號及底線。
+
+|===
+聲明資料的形式如下：
+
+* 參數=值（例如「* raidlevel=5*」）
+* 參數名稱（例如「*電池安裝日期*」）
+* 作業名稱（例如「*多餘檢查*」）
+
+
+使用者定義的項目（例如使用者標籤）稱為變數。在語法中、它會以斜體顯示（例如「TrayID」或「volumeGroupName」）。

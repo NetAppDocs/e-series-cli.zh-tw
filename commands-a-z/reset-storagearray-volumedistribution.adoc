@@ -1,0 +1,54 @@
+---
+permalink: commands-a-z/reset-storagearray-volumedistribution.html 
+sidebar: sidebar 
+keywords: reset, storage array, volume, distribution 
+summary: 重設storageArray volumeDistribution命令會將所有磁碟區重新分配（移動）至其偏好的控制器。 
+---
+= 重設儲存陣列磁碟區發佈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「reset storageArray volumeDistribution」命令會將所有磁碟區重新分配（移動）至其偏好的控制器。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+reset storageArray volumeDistribution
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+如果您在沒有多重路徑驅動程式的主機上使用此命令、則必須停止磁碟區的I/O作業、直到此命令完成為止、以避免應用程式發生錯誤。
+
+在某些主機作業系統環境下、您可能需要重新設定多重路徑主機驅動程式。您可能還需要修改作業系統、才能辨識磁碟區的新I/O路徑。
+
+
+
+== 最低韌體層級
+
+5.20

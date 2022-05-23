@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/smcli-autosupportschedule-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, message, collection, schedule 
+summary: SMcli -autosupport排程show命令會顯示每日AutoSupport 和每週收集及處理各種資訊訊息的排程。 
+---
+= 顯示AutoSupport 資訊收集排程
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli -autosupport排程show」命令會顯示每日AutoSupport 及每週收集及處理各種資訊的排程。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+請注意下列關於自動支援產品組合集合排程的事項：
+
+* 如果啟用了「支援」功能、管理軟體就會同時傳送每日的「資訊」訊息和每週的「資訊」訊息。AutoSupport AutoSupport AutoSupport
+* 管理軟體會隨機選取每日和每週訊息的時間、以及每週訊息的一天。
+* 管理軟體會嘗試確保管理網域內沒有兩個儲存陣列AutoSupport 同時傳送排程的更新訊息。
+* 使用「Mcli -autosupport排程重設」命令、您可以指定偏好的時間範圍（小時層級精細度）、以便針對管理網域中的儲存陣列傳送每日和每週訊息。針對每週訊息排程、您可以使用命令來選取偏好的一週天數。
+
+
+
+
+== 語法
+
+[listing]
+----
+SMcli -autoSupportSchedule show
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 範例
+
+輸出會同時顯示偏好的時間範圍、接著顯示每日和每週排程。
+
+[NOTE]
+====
+如果您未同時選取排程和一週偏好的日期的偏好時間範圍、則此命令會顯示儲存管理軟體隨機挑選的每日排程和每週排程。
+
+====
+[listing]
+----
+SMcli -autoSupportSchedule show
+The AutoSupport daily schedule preferred time range is from 12:00 AM to 01:00 AM.
+The AutoSupport weekly schedule preferred time range is from 10:00 PM to 11:00 PM on Thursday, Saturday.
+
+Name           Daily Schedule         Weekly Schedule
+Accounting     12:55 AM               10:08 PM on Thursdays
+Finance        12:02 AM               10:30 PM on Saturdays
+
+SMcli completed successfully.
+----

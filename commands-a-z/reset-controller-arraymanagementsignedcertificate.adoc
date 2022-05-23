@@ -1,0 +1,66 @@
+---
+permalink: commands-a-z/reset-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: reset, installed, signed, certificate 
+summary: 「重設控制器陣列管理簽署憑證」命令會重設控制器上已安裝的簽署憑證和根/中繼憑證。所有的根和中繼憑證以及任何簽署的憑證都會被單一自我簽署的憑證所取代。 
+---
+= 重設已安裝的簽署憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「重新設定控制器陣列管理簽署憑證」命令會重設控制器上已安裝的簽署憑證和根/中繼憑證。所有的根和中繼憑證以及任何簽署的憑證都會被單一自我簽署的憑證所取代。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+reset controller [(a|b)] arrayManagementSignedCertificate
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓使用者指定要擷取根/中繼憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "reset controller [a] arrayManagementSignedCertificate;"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

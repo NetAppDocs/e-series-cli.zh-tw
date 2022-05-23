@@ -1,0 +1,53 @@
+---
+permalink: commands-category/performance-tuning-commands.html 
+sidebar: sidebar 
+keywords: performance, tuning, commands, automatic, load balance, cache commands 
+summary: 效能調校命令 
+---
+= 效能調校命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 自動負載平衡命令
+
+link:../commands-a-z/save-storagearray-autoloadbalancestatistics-file.html["儲存自動負載平衡統計資料"]
+
+link:../commands-a-z/set-storagearray-autoloadbalancingenable.html["設定儲存陣列以啟用或停用自動負載平衡"]
+
+
+
+== SSD快取命令
+
+link:../commands-a-z/add-drives-to-ssd-cache.html["將磁碟機新增至SSD快取"]
+
+link:../commands-a-z/change-ssd-cache-application-type.html["變更SSD快取應用程式類型"]
+
+link:../commands-a-z/create-ssdcache.html["建立SSD快取"]
+
+link:../commands-a-z/delete-ssdcache.html["刪除SSD快取"]
+
+link:../commands-a-z/remove-drives-from-ssd-cache.html["從SSD快取中移除磁碟機"]
+
+link:../commands-a-z/rename-ssd-cache.html["重新命名SSD快取"]
+
+link:../commands-a-z/resume-ssdcache.html["恢復SSD快取"]
+
+link:../commands-a-z/set-volume-ssdcacheenabled.html["設定磁碟區的SSD快取"]
+
+link:../commands-a-z/show-ssd-cache.html["顯示SSD快取"]
+
+link:../commands-a-z/show-ssd-cache-statistics.html["顯示SSD快取統計資料"]
+
+link:../commands-a-z/start-ssdcache-locate.html["啟動SSD快取定位"]
+
+link:../commands-a-z/start-ssdcache-performancemodeling.html["開始建立SSD快取效能建模"]
+
+link:../commands-a-z/stop-ssdcache-locate.html["停止SSD快取定位"]
+
+link:../commands-a-z/stop-ssdcache-performancemodeling.html["停止SSD快取效能建模"]
+
+link:../commands-a-z/suspend-ssdcache.html["暫停SSD快取"]

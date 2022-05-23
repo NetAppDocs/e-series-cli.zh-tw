@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementsignedcertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, server, certificate 
+summary: Save Controller arrayManagementSignedCertificate命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。 
+---
+= 擷取已安裝的伺服器憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存控制器陣列管理SignedCertificate」命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementSignedCertificate
+     file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓您指定要從中下載簽署憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定儲存控制器簽署憑證檔案的檔案。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementSignedCertificate
+   file="C:\controllerAcertificate.cer";"
+
+SMcli -n Array1 -c "save controller [b] arrayManagementSignedCertificate
+   file="C:\controllerBcertificate.cer";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

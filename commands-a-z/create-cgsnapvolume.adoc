@@ -1,0 +1,229 @@
+---
+permalink: commands-a-z/create-cgsnapvolume.html 
+sidebar: sidebar 
+keywords: create, consistency group, snapshot, volume 
+summary: create cgrSnapVolume命令會在一致性群組的基礎磁碟區中、建立特定映像的快照磁碟區。 
+---
+= 建立一致性群組快照磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create cgrSnapVolume」命令會在一致性群組的基礎磁碟區中、建立特定映像的快照磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以從一致性群組中選取一個基礎磁碟區或多個基礎磁碟區、以納入快照磁碟區。當您建立一致性群組的快照磁碟區時、會建立含有可檢視內容的磁碟區。
+
+
+
+== 使用者指定基礎Volume的語法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX ... baseVolumen:repos_YYYY)_]
+----
+
+
+== 將一致性群組快照磁碟區設定為唯讀時的語法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+readOnly
+----
+
+
+== 設定儲存庫完整限制時的語法
+
+[listing, subs="+macros"]
+----
+create cgSnapVolume userLabel=pass:quotes[_"cgVolumeName"_]
+cgSnapImageID=pass:quotes[_"snapCGID:imageID"_]
+members=pass:quotes[_(baseVolume1:repos_XXXX_] |
+baseVolume1: (pass:quotes[_volumeGroupName_] pass:quotes[[_capacity=capacityValue_])] |
+(baseVolume1:pass:quotes[_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+... baseVolumen:repos_YYYY |
+baseVolumen: (pass:quotes[_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]]) |
+baseVolumen: (pass:quotes[_diskPoolName_] [capacity=pass:quotes{_capacityValue_]]))
+repositoryFullLimit=pass:quotes[_percentValue_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「userLabel」
+ a| 
+您要為所建立的一致性群組快照磁碟區指定的名稱。將一致性群組快照磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+「cscSnapImageID」
+ a| 
+一致性群組中的快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 一致性群組的名稱
+* 一致性群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 「最新」：如果您想要顯示在一致性群組中建立的最新快照映像、請使用此選項。
+* 「最舊」：如果您想要顯示在一致性群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱括在雙引號（""）內。
+
+您可以輸入多個快照映像名稱或序號。將所有快照映像名稱括在括弧內。以空格分隔每個快照映像名稱。
+
+
+
+ a| 
+《我的人》
+ a| 
+您要新增的一個基礎Volume或多個基礎Volume的識別碼。成員識別碼由基礎Volume名稱與儲存庫Volume名稱串聯而成。您必須在兩個名稱之間使用一個分號（：）。將所有成員識別碼括在括弧中。如果您輸入多個成員、則會以空格分隔成員。
+
+如果不使用成員參數、所有成員都會自動新增至新的一致性群組快照磁碟區。
+
+
+
+ a| 
+「repositoryVolume」
+ a| 
+將包含一致性群組成員磁碟區的儲存庫磁碟區名稱。
+
+您有兩個選項可以定義儲存庫Volume的名稱：
+
+* 使用現有的儲存庫Volume：名稱
+* 執行此命令時、請建立新的儲存庫Volume
+
+
+現有儲存庫磁碟區的名稱由兩部分組成：
+
+* 「錯誤」一詞
+* 儲存管理軟體指派給儲存庫Volume名稱的四位數數字識別碼
+
+
+將現有儲存庫磁碟區的名稱以雙引號（""）括住。
+
+如果您想要在執行此命令時建立新的儲存庫Volume、則必須輸入要儲存庫Volume的Volume群組或磁碟集區名稱。或者、您也可以定義儲存庫Volume的容量。如果您想要定義容量、可以使用下列值：
+
+* 整數值、代表基本Volume容量的百分比
+* 表示基本Volume容量百分比的小數位值
+* 儲存庫磁碟區的特定大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+如果您不使用容量選項、儲存管理軟體會將容量設定為基礎Volume容量的20%。
+
+當您執行此命令時、儲存管理軟體會為快照Volume建立儲存庫磁碟區。
+
+
+
+ a| 
+「repositoryFullLimit」
+ a| 
+一致性群組快照儲存庫磁碟區即將滿的儲存庫容量百分比。使用整數值。例如、值70表示70%。
+
+
+
+ a| 
+"REadOnly"
+ a| 
+此設定可決定您是否可以寫入快照磁碟區、或只從快照磁碟區讀取。若要寫入快照磁碟區、請勿包含此參數。若要防止寫入快照磁碟區、請加入此參數。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 快照群組的識別碼
+* 快照映像的識別碼
+
+
+如果您未指定「repositoryVolume Type」或「readOnly」參數、儲存管理軟體會選取一致性群組快照磁碟區的儲存庫。如果基礎磁碟區所在的磁碟區群組或磁碟集區沒有足夠的空間、則此命令會失敗。
+
+「create cgrSnapVolume」命令有獨特的格式、請參考以下範例：
+
+* 在名為「snapCg1」的快照一致性群組上建立讀寫一致性群組快照磁碟區、其中有三個成員：cdm1、cgm2和cdm3。儲存庫磁碟區已存在、且由使用者在此命令中選取。
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume1"
+cgSnapImageID="snapCG1:oldest"
+members=(cgm1:repos_0010 cgm2:repos_0011 cgm3:repos_0007);
+----
++
+請注意、在要納入一致性群組快照磁碟區的快照映像名稱中使用的分號（：）。分號是分隔符號、用於分隔快照磁碟區名稱與您可能想要使用的特定快照映像。您可以使用下列其中一個選項來追蹤結腸：
+
++
+** 整數值、即快照映像的實際序號。
+** 「最新」：如果您想要顯示最新的一致性群組快照映像、請使用此選項。
+** 「最舊」：如果您想要顯示建立的最早快照映像、請使用此選項。使用以快照一致性群組成員名稱為開頭的分號、可定義成員與儲存庫磁碟區之間的對應關係。例如、在「cdm1：repos_10」中、成員cdm1會對應至儲存庫Volume repos_0010。
+
+
+* 在名為「snapCg1」的Snapshot一致性群組上建立讀寫一致性群組快照磁碟區、僅限成員cdm1和cdm2：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume2"
+cgSnapImageID="snapCG1:14214"
+members=(cgm1:repos_1000 cgm2:repos_1001);
+----
+* 在快照一致性群組SnapCg1上建立唯讀的一致性群組快照磁碟區、其中有三個成員：cdm1、cdm2和cdm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest" readOnly;
+----
+* 在名為SnapCg1的Snapshot一致性群組中、建立儲存庫完整限制為60%的一致性群組快照磁碟區、其中有三個成員：cdm1、cgm2和cdm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume3"
+cgSnapImageID="snapCG1:oldest"
+repositoryFullLimit=60;
+----
+* 在快照一致性群組SnapCg1上建立讀寫一致性群組快照磁碟區、並在其中自動選取儲存庫、其中有三個成員：cdm1、cgm2和cdm3：
++
+[listing]
+----
+create cgSnapVolume userLabel="cgSnapVolume4"
+cgSnapImageID="snapCG1:oldest";
+----
+
+
+
+
+== 最低韌體層級
+
+7.83

@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/stop-volumecopy-target-source.html 
+sidebar: sidebar 
+keywords: stop, volume, copy 
+summary: stop volumeCopy target source命令會停止Volume複製作業。此命令適用於Snapshot Volume複製配對。 
+---
+= 停止Volume複製
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「最大磁碟區複製目標來源」命令會停止磁碟區複製作業。此命令適用於Snapshot Volume複製配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+pass:quotes[stop volumeCopy target [_targetName_]] source pass:quotes[[_sourceName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《目標》
+ a| 
+您要停止Volume複製作業的目標Volume名稱。將目標Volume名稱括在方括弧（[]）內。如果目標Volume名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住目標Volume名稱。
+
+
+
+ a| 
+《來源》
+ a| 
+要停止Volume複製作業的來源Volume名稱。將來源Volume名稱括在方括弧（[]）內。如果來源Volume名稱包含特殊字元或數字、您必須在方括弧內以雙引號（""）括住來源Volume名稱。
+
+|===

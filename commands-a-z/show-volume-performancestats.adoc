@@ -1,0 +1,132 @@
+---
+permalink: commands-a-z/show-volume-performancestats.html 
+sidebar: sidebar 
+keywords: show, volume, performance, statistics 
+summary: show volume performanceStats命令會傳回磁碟區效能的相關資訊。 
+---
+= 顯示Volume效能統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show volume performanceStats」命令會傳回Volume效能的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+對於儲存陣列中的每個Volume、此命令會傳回下列資訊：
+
+* 儲存陣列
+* IOS總容量
+* 讀取%
+* 主要讀取快取命中率
+* 主要寫入快取命中率
+* SSD快取命中率
+* 目前的MB/s
+* 最大MB/s
+* 目前的IOS/s
+* 最大IOS/s
+* 最低IOS/s
+* 平均每秒IOS
+* 最低MB/s
+* 平均每秒MB數
+* 目前IO延遲
+* 最大IO延遲
+* 最低IO延遲
+* 平均IO延遲
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allVolumes | volume pass:quotes[["_volumeName_"]]
+volumes pass:quotes[["_volumeName1_" ... "_volumeNameN_"]]) performanceStats
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+傳回儲存陣列中所有磁碟區效能統計資料的參數。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要擷取資訊的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要擷取資訊的多個磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 附註
+
+在您執行「show volume performanceStat」命令之前、請先執行「show session performanceMonitorInterval'命令和「show session performanceMonitor迭 代」命令、以定義收集統計資料的頻率。
+
+「show volume performanceStat」命令會傳回Volume效能統計資料、如下列範例所示：
+
+[listing]
+----
+Performance Monitor Statistics for Storage Array: Tyler -
+Date/Time: 11/6/12 10:00: 34 AM - Polling interval in seconds: 5
+
+
+"Storage Arrays","Total IOs","Read %","Primary Read Cache Hit %",
+"Primary Write Cache Hit %","SSD Read Cache Hit %","Current MBs/sec",
+"Maximum MBs/sec","Current IOs/sec","Maximum IOs/sec","Minimum IOs/sec",
+"Average IOs/sec","Minimum MBs/sec","Average MBs/sec","Current IO Latency",
+"Maximum IO Latency","Minimum IO Latency","Average IO Latency"
+
+"Capture Iteration: 1","","","","","","","","","","","","","","","","",""
+"Date/Time: 11/6/12 10:00:34 AM","","","","","","","","","","","","","","",
+   "","","""Volume Unnamed","0.0","","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0",
+   "0.0","0.0","0.0","0.0","0.0","0.0","0.0"
+----
+
+
+== 最低韌體層級
+
+6.10.

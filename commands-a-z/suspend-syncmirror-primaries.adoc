@@ -1,0 +1,110 @@
+---
+permalink: commands-a-z/suspend-syncmirror-primaries.html 
+sidebar: sidebar 
+keywords: suspend, synchronous, mirror 
+summary: suspend SyncMirror 等主節點命令會暫停同步鏡射作業。 
+---
+= 暫停同步鏡射
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「shusbendszprimarys' SyncMirror 」命令會暫停同步鏡射作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+suspend syncMirror (primary pass:quotes[[_primaryVolumeName_]]
+primaries pass:quotes[[_primaryVolumeName1_ ... _primaryVolumeNameN_])]
+[writeConsistency=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"一線"
+ a| 
+要暫停作業的主要Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+「主管」
+ a| 
+要暫停作業的數個主要磁碟區名稱。所有磁碟區都具有相同的內容。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱有特殊字元或數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+「寫入一致性」
+ a| 
+此參數定義此命令中識別的磁碟區是位於寫入一致性群組中、還是屬於獨立磁碟區。對於同一寫入一致性群組中的磁碟區、請將此參數設為「true」。對於獨立的磁碟區、請將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+如果您將「寫入一致性」參數設為「true」、則磁碟區必須位於寫入一致性群組（或群組）中。此命令會暫停包含磁碟區的所有寫入一致性群組。例如、如果磁碟區A、B和C位於寫入一致性群組中、而且它們有遠端對應的A、B、C、則命令：
+
+[listing]
+----
+suspend syncMirror volume ["A"] writeConsistency=TRUE
+----
+暫停A-A、B-B和C-C。如果您有寫入一致性群組1={A、B、C}和寫入一致性群組2={D、E、F}、則命令：
+
+[listing]
+----
+suspend syncMirror volumes ["A" "D"] writeConsistency=TRUE
+----
+暫停兩個寫入一致性群組。
+
+
+
+== 最低韌體層級
+
+6.10.

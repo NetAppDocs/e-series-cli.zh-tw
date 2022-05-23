@@ -1,0 +1,118 @@
+---
+permalink: commands-a-z/show-snapvolume.html 
+sidebar: sidebar 
+keywords: show, snapshot, volumes 
+summary: show snapVolume命令會傳回一或多個Snapshot Volume的相關資訊。 
+---
+= 顯示快照磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapVolume」命令會傳回一或多個快照磁碟區的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show (allSnapVolumes | snapVolume pass:quotes[["_snapVolumeName_"]] |
+snapVolumes pass:quotes[["_snapVolumeName1_" ... "_snapVolumeNamen_"]])
+[summary]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allSnapVolumes》
+ a| 
+傳回儲存陣列中所有快照磁碟區資訊的參數。
+
+
+
+ a| 
+「napVolume」
+ a| 
+您要擷取其資訊的快照磁碟區名稱。將快照磁碟區名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+《napVolumes》
+ a| 
+您要擷取資訊的數個快照磁碟區名稱。使用下列規則輸入快照磁碟區的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數可傳回快照磁碟區的簡短資訊清單。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+此命令會傳回快照磁碟區資訊、如下列範例所示：
+
+[listing]
+----
+SNAPSHOT VOLUME (SNAPSHOT-IMAGE BASED) SUMMARY
+----
+[listing]
+----
+SUMMARY
+
+ Total Snapshot Volumes: 1
+   Most Recent Snapshot Volume: Day month date hh:mm:ss yyyy
+   Status: 1 Optimal, 0 Non Optimal
+
+   Name        Type       Status     Capacity    Associated Base Volume
+   2_SV_0001   Standard   Optimal    3.000 GB    2
+----
+[listing]
+----
+   Snapshot Volume Timestamp   Snapshot Image Timestamp    Mode
+   1/23/12 6:44:31 PM IST      1/23/12 6:27:36 PM IST      Read Write
+----
+[listing]
+----
+   Total Repository Capacity   Available Repository Capacity
+   1.199 GB                    0.125 MB (0%)
+----
+監視器的大小決定資訊的包裝方式、並影響資訊的顯示方式。
+
+
+
+== 最低韌體層級
+
+7.83

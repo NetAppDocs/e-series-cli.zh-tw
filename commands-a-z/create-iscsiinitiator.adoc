@@ -1,0 +1,93 @@
+---
+permalink: commands-a-z/create-iscsiinitiator.html 
+sidebar: sidebar 
+keywords: create, iscsi, initiator 
+summary: create iscsiInitiator命令會建立新的iSCSI啟動器物件。 
+---
+= 建立iSCSI啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create iscsiInitiator」命令會建立新的iSCSI啟動器物件。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+[NOTE]
+====
+此命令已過時、並由取代 xref:create-initiator.adoc[建立啟動器] 命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create iscsiInitiator iscsiName=pass:quotes[_"iscsiID"_
+userLabel="_name_"
+host="_hostName"_]
+[chapSecret=pass:quotes[_"securityKey"_]]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「iscsiName」
+ a| 
+iSCSI啟動器的預設識別碼。將識別碼括在雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+要用於iSCSI啟動器的名稱。將名稱括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+安裝iSCSI啟動器的主機名稱。將名稱括在雙引號（""）內。
+
+
+
+ a| 
+《chapSecret》
+ a| 
+您要用來驗證對等連線的安全性金鑰。將安全金鑰括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+挑戰握手驗證傳輸協定（CHAP）是驗證連線對等端點的傳輸協定。CHAP是以共用_secret的對等端點為基礎。秘密是類似密碼的安全金鑰。
+
+使用「chapSecret」參數來設定需要相互驗證之啟動器的安全性金鑰。
+
+
+
+== 最低韌體層級
+
+7.10.
+
+8.41此命令已過時。

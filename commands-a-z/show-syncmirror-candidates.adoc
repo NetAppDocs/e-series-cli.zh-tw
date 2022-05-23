@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/show-syncmirror-candidates.html 
+sidebar: sidebar 
+keywords: show, synchronous, mirror, volume, candidates 
+summary: show SyncMirror flex候 選命令會傳回遠端儲存陣列上候選磁碟區的相關資訊、以便在同步鏡射組態中作為次要磁碟區使用。 
+---
+= 顯示同步鏡射磁碟區候選項目
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show SyncMirror fit候選人」命令會傳回遠端儲存陣列上候選磁碟區的相關資訊、以便在同步鏡射組態中作為次要磁碟區使用。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。
+
+====
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[show syncMirror candidates primary="_volumeName_"
+remoteStorageArrayName="_storageArrayName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"一線"
+ a| 
+遠端鏡射配對中主要Volume所需的本機Volume名稱。請以雙引號（""）括住主磁碟區名稱。
+
+
+
+ a| 
+"REmoteStorageArrayName"
+ a| 
+遠端儲存陣列、其中包含次要Volume的可能磁碟區。如果遠端儲存陣列名稱含有特殊字元、您也必須以雙引號（""）括住遠端儲存陣列名稱。
+
+|===
+
+
+== 最低韌體層級
+
+5.40

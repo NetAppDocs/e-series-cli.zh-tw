@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/save-storagearray-autoloadbalancestatistics-file.html 
+sidebar: sidebar 
+keywords: save, auto-load, balance, statistics 
+summary: SAVE storageArray autoLoadBalanceStatistics檔案命令可提供自動I/O工作負載平衡功能、確保來自主機的傳入I/O流量能在兩個控制器之間動態管理及平衡。 
+---
+= 儲存自動負載平衡統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列自動負載平衡統計檔案」命令可提供自動I/O工作負載平衡、確保來自主機的傳入I/O流量在兩個控制器之間都能動態管理和平衡。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令會將儲存陣列的自動負載平衡統計資料儲存至檔案。這些統計資料顯示陣列中每個磁碟區的所有權變更歷程記錄。
+
+[NOTE]
+====
+請將此檔案傳送給技術支援人員以進行解譯。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+ save storageArray autoLoadBalanceStatistics file=pass:quotes["_filename_"]
+(numberOfDays=pass:quotes[_numberOfDays_]);
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「torageArray」
+ a| 
+指定此命令適用於儲存陣列。
+
+
+
+ a| 
+檔案
+ a| 
+您要儲存自動負載平衡統計資料的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。
+
+
+
+ a| 
+《數字日》
+ a| 
+要儲存的統計資料天數。此參數為選用參數、預設值為0、表示所有可用資料。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+SMcli -n Array1 -c "save storageArray autoLoadBalanceStatistics file="filename" numberOfDays=30;"
+----
+[NOTE]
+====
+作用中的「磁碟機遺失主要路徑」條件會導致自動負載平衡無法平衡工作負載。此條件必須處於非作用中狀態、才能確保工作負載透過自動負載平衡功能達到平衡。
+
+====
+
+
+== 最低韌體層級
+
+8.30

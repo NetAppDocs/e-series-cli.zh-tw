@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/show-storagearray-iscsinegotiationdefaults.html 
+sidebar: sidebar 
+keywords: show, storage, array, negotiation, defaults 
+summary: show storageArray iscsiNegotiationDefaults命令會傳回受啟動器目標交涉規範之連線層級設定的相關資訊。 
+---
+= 顯示儲存陣列交涉預設值
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray iscsiNegotiationDefaults」命令會傳回受啟動器目標交涉影響之連線層級設定的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray iscsiNegotiationDefaults
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+傳回的資訊包括控制器匣的預設設定（即協商的起點設定）和目前作用中的設定。
+
+
+
+== 最低韌體層級
+
+7.10.

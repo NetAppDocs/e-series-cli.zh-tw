@@ -1,0 +1,27 @@
+---
+permalink: commands-a-z/getting-started-with-authentication.html 
+sidebar: sidebar 
+keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
+summary: 驗證需要使用者以指派的登入認證來存取系統。每個使用者登入都會與包含特定角色和存取權限的使用者設定檔建立關聯。 
+---
+= 驗證入門
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+驗證需要使用者以指派的登入認證來存取系統。每個使用者登入都會與包含特定角色和存取權限的使用者設定檔建立關聯。
+
+系統管理員可實作系統驗證、如下所示：
+
+* 使用儲存陣列中強制執行的RBAC（角色型存取控制）功能、包括預先定義的使用者和角色。
+* 連線至LDAP（輕量型目錄存取傳輸協定）伺服器和目錄服務（例如Microsoft的Active Directory）、然後將LDAP使用者對應至儲存陣列的內嵌角色。
+* 使用安全聲明標記語言（SAML）2.0與身分識別供應商（IDP）連線、然後將使用者對應至儲存陣列的內嵌角色。
++
+[NOTE]
+====
+SAML是儲存陣列的內嵌功能（韌體層級8.42及更新版本）、只能從SANtricity 「支援系統管理程式」使用者介面進行設定。
+
+====
+

@@ -1,0 +1,260 @@
+---
+permalink: commands-a-z/create-volume-diskpool.html 
+sidebar: sidebar 
+keywords: create, volume, disk pool 
+summary: create volume diskPool命令會在現有磁碟集區中建立新的標準RAID Volume或精簡磁碟區。 
+---
+= 在磁碟集區中建立磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create volume diskPool」命令會在現有磁碟集區中建立新的標準RAID Volume或精簡磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在磁碟區群組中建立標準RAID磁碟區的部分參數、與在磁碟集區中建立任何類型的磁碟區不相容。使用舊版指令碼在磁碟集區中建立磁碟區時、請確定所有參數都適用於磁碟集區。無效的參數會使指令碼無法正確執行、並導致錯誤張貼。
+
+====
+
+
+== 建立標準Volume的語法
+
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[dataAssurance=(none|enabled)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[raidLevel=(1 | 6)]
+----
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[raidLevel=(1 | 6)]
+----
+
+
+== 建立精簡配置Volume的語法
+
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[dataAssurance=(none|enabled)]
+[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
+[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
+[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
+[repositoryExpansionPolicy=(automatic|manual)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+create volume diskPool=pass:quotes[_"diskPoolName"_
+userLabel="_volumeName_"
+capacity=_volumeCapacity_]
+[thinProvisioned=(TRUE | FALSE)]
+[owner=(a|b)]
+[mapping=(none|default)]
+[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
+[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
+[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
+[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[repositoryExpansionPolicy=(automatic|manual)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《DiskPool》
+ a| 
+要在其中建立新磁碟區的磁碟集區名稱。將磁碟集區名稱括在雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要為新Volume命名的名稱。將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+容量
+ a| 
+您所建立的Volume大小。
+
+對於標準RAID Volume、將分配給該磁碟區的容量。
+
+對於精簡磁碟區、精簡磁碟區將會顯示的虛擬容量值。
+
+大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。以下是語法範例：
+
+* 容量=500MB
+* 容量=2GB
+
+
+
+
+ a| 
+《資源配置精簡》
+ a| 
+此參數可為新磁碟區啟用精簡配置。若要使用精簡配置、請將此參數設為「true」。如果您不想進行精簡配置、請將此參數設為「假」。
+
+
+
+ a| 
+"老闆"
+ a| 
+擁有該磁碟區的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器如果您未指定擁有者、則控制器韌體會決定擁有者。
+
+
+
+ a| 
+「拍」
+ a| 
+此參數可讓您將磁碟區對應至主機。如果您想要稍後對應、請將此參數設為「無」。如果要立即對應、請將此參數設為「預設」。磁碟區會對應至所有可存取儲存資源池的主機。
+
+預設值為「無」。
+
+
+
+ a| 
+「現有的儲存庫標籤」
+ a| 
+此參數可識別精簡磁碟區的現有儲存庫。儲存庫磁碟區具有精簡磁碟區的實體容量。此參數僅適用於精簡配置。如果您使用「istingrepositoryLabel」參數、則不得使用「newrepositoryCapacity」參數。
+
+
+
+ a| 
+《newrepositoryCapacity》
+ a| 
+此參數會為精簡磁碟區建立新的儲存庫。儲存庫磁碟區具有精簡磁碟區的實體容量。僅當您將「thinProvision曲線」參數的值設定為「true」時、才可使用此參數。
+
+大小的定義單位為「MB」、「GB」或「TB」。以下是語法範例：
+
+* 容量=500MB
+* 容量=2GB
+
+
+預設值為虛擬容量的50%。
+
+
+
+ a| 
+"repositoryMaxCapacity」
+ a| 
+此參數定義精簡磁碟區儲存庫的最大容量。僅當您將「thinProvision曲線」參數的值設定為「true」時、才可使用此參數。
+
+大小的定義單位為「MB」、「GB」或「TB」。以下是語法範例：
+
+* 容量=500MB
+* 容量=2GB
+
+
+
+
+ a| 
+《warningTholholdPercent
+ a| 
+當精簡磁碟區容量即將滿時、您會收到警示的超小磁碟區容量百分比。使用整數值。例如、值70表示70%。
+
+有效值為1到100。
+
+將此參數設為100會停用警告警示。
+
+
+
+ a| 
+「repositoryExpandionPolicy」
+ a| 
+此參數會將擴充原則設定為「自動」或「手動」。當您將原則從「自動」變更為「手動」時、儲存庫磁碟區的最大容量值（配額）會變更為實體容量。
+
+
+
+ a| 
+「cacheReadPrefetch」
+ a| 
+開啟或關閉快取讀取預先擷取的設定。若要關閉快取讀取預先擷取、請將此參數設為「假」。若要開啟快取讀取預先擷取、請將此參數設為「true」。
+
+
+
+ a| 
+《raidLevel》
+ a| 
+設定要在磁碟集區中建立之磁碟區的RAID層級。若要指定RAID1、請設定為「1」。若要指定RAID6、請設定為「6」。如果未設定RAID層級、則預設會將RAID6用於磁碟集區。
+
+|===
+
+
+== 附註
+
+每個Volume名稱都必須是唯一的。您可以使用任何字母數字字元、底線（_）、連字號（-）和井號（#）的組合作為使用者標籤。使用者標籤最多可有30個字元。
+
+對於精簡磁碟區、「capacuituas」參數會指定磁碟區的虛擬容量、而「repositoryCapacity」參數則會指定建立為儲存庫磁碟區的磁碟區容量。使用「現有儲存空間標籤」參數來指定現有的未使用儲存庫磁碟區、而非建立新的磁碟區。
+
+若要在建立精簡磁碟區時獲得最佳結果、儲存庫磁碟區必須已經存在、或必須在現有的磁碟集區中建立。如果您在建立精簡磁碟區時未指定某些選用參數、儲存管理軟體將會嘗試建立儲存庫磁碟區。最理想的候選磁碟區是已存在且符合大小需求的儲存庫磁碟區。下一個最理想的候選磁碟區是在磁碟集區可用範圍中建立的新儲存庫磁碟區。
+
+無法在Volume群組中建立精簡磁碟區的儲存庫磁碟區。
+
+
+
+== 資料保證管理
+
+資料保證（DA）功能可提升整個儲存系統的資料完整性。DA可讓儲存陣列檢查資料在主機和磁碟機之間移動時可能發生的錯誤。啟用此功能時、儲存陣列會將錯誤檢查代碼（也稱為循環備援檢查或CRC）附加到磁碟區中的每個資料區塊。資料區塊移動之後、儲存陣列會使用這些CRC代碼來判斷傳輸期間是否發生任何錯誤。可能毀損的資料既不會寫入磁碟、也不會傳回主機。
+
+如果您想要使用DA功能、請從僅包含支援DA磁碟機的集區或磁碟區群組開始。然後建立具有DA功能的磁碟區。最後、請使用能夠執行DA的I/O介面、將這些具有DA功能的磁碟區對應至主機。具備DA功能的I/O介面包括Fibre Channel、SAS和iSER over InfiniBand（適用於RDMA/IB的iSCSI擴充功能）。以太網iSCSI或InfiniBand上的SRP不支援DA。
+
+[NOTE]
+====
+當所有磁碟機都具備DA功能時、您可以將「datAssurance」參數設定為「啟用」、然後在特定作業中使用DA。例如、您可以建立包含具有DA功能磁碟機的磁碟區群組、然後在啟用DA的磁碟區群組中建立磁碟區。使用啟用DA的磁碟區的其他作業也有支援DA功能的選項。
+
+====
+如果將「data Assurance」參數設為「啟用」、則僅會考量磁碟區候選磁碟機的資料保證能力、否則將會考量資料保證能力和非資料保證能力的磁碟機。如果只有可用的資料保證磁碟機、則會使用啟用的資料保證磁碟機來建立新的磁碟區。
+
+
+
+== 最低韌體層級
+
+7.83
+
+8.70新增了「_raidlevel_'參數。

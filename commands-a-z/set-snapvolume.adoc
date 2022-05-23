@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-snapvolume.html 
+sidebar: sidebar 
+keywords: rename, snapshot, volume 
+summary: set snapVolume命令會重新命名現有的Snapshot Volume。 
+---
+= 重新命名Snapshot Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+命令show snapVolume可重命名現有的快照Volume。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set snapVolume pass:quotes[["_snapVolumeName_"]] userLabel=pass:quotes["_snapImageVolumeName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napVolume」
+ a| 
+您要重新命名的快照磁碟區名稱。將快照磁碟區名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要為快照磁碟區指定的新名稱。將新的快照磁碟區名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+7.83

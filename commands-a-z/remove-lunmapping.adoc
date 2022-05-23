@@ -1,0 +1,127 @@
+---
+permalink: commands-a-z/remove-lunmapping.html 
+sidebar: sidebar 
+keywords: remove, volume, lun map 
+summary: 移除lunMapping命令 會從一個或多個磁碟區移除邏輯單元編號（LUN）或命名空間ID（NSID）對應。 
+---
+= 移除Volume LUN對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"remove lunMapping"命令會從一個或多個磁碟區移除邏輯單元號碼（LUN）或命名空間ID（NSID）對應。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+remove (volume pass:quotes[[_"volumeName"_]] | accessVolume) lunMapping
+(host=pass:quotes[_"hostName_" | hostGroup=(_"hostGroupName"_] | defaultGroup)
+----
+
+
+== 從多個Volume LUN或NSID對應移除LUN或NSID對應的語法
+
+[listing, subs="+macros"]
+----
+remove (allVolumes | volumes pass:quotes[[_volumeName1 ... volumeNameN_]])
+lunMapping
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要從中移除LUN或NSID對應的磁碟區名稱。將磁碟區名稱加上雙引號（""）、置於方括弧（[]）內。
+
+
+
+ a| 
+《存取磁碟區》
+ a| 
+此參數會移除存取Volume。
+
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數會從所有磁碟區移除LUN對應。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要從中移除LUN或NSID對應的多個磁碟區名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱包含特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+"主機"
+ a| 
+磁碟區對應的主機名稱。將主機名稱括在雙引號（""）內。
+
+此參數僅適用於從一個磁碟區移除LUN或NSID對應時。
+
+
+
+ a| 
+「主機群組」
+ a| 
+包含磁碟區對應主機的主機群組名稱。將主機群組名稱括在雙引號（""）內。「資料管理群組」值是指包含磁碟區對應主機的主機群組。
+
+此參數僅適用於從一個磁碟區移除LUN或NSID對應時。
+
+|===
+
+
+== 附註
+
+存取磁碟區是SAN環境中的磁碟區、用於儲存管理軟體與儲存陣列控制器之間的通訊。存取磁碟區使用LUN或NSID位址、並會耗用20 MB的儲存空間、這些空間無法用於應用程式資料儲存設備。只有頻內託管儲存陣列才需要存取磁碟區。
+
+[NOTE]
+====
+*移除存取磁碟區可能會損壞組態*：代理程式會使用存取磁碟區與儲存陣列通訊。如果從執行代理程式的主機移除儲存陣列的存取磁碟區對應、則儲存管理軟體將無法再透過代理程式管理儲存陣列。
+
+====
+指定非存取磁碟區或存取磁碟區時、您必須使用「host」參數和「hostGroup」參數。當您使用「allVolumes」參數或「Volumes」參數時、指令碼引擎會忽略「host」參數或「hostGroup」參數。
+
+
+
+== 最低韌體層級
+
+6.10.

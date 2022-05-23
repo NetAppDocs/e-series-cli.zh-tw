@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/set-auditlog.html 
+sidebar: sidebar 
+keywords: set, audit log 
+summary: 「設定稽核記錄」命令會設定稽核記錄設定。 
+---
+= 設定稽核日誌設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「設置稽核日誌」命令可設定稽核日誌設定。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set auditLog (logLevel={all | writeOnly} |
+    fullPolicy={overwrite | preventSystemAccess} |
+    pass:quotes[maxRecords=_n_] | pass:quotes[warningThreshold=_n_)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+記錄層級
+ a| 
+可讓您指定記錄層級。有效的選擇包括：「ALL」（全部）和「writeOnly」（僅限寫入）。預設值為「writeOnly」。
+
+
+
+ a| 
+《全政策》
+ a| 
+可讓您在記錄檔已滿時指定原則。有效選項包括：「Overwrite」（覆寫）和「preentSystemAccess」（預防系統存取）。
+
+
+
+ a| 
+《記錄》
+ a| 
+可讓使用者指定要儲存的最大記錄數、其中「n」是從30000開始、以50000結束的整數。
+
+
+
+ a| 
+「warningThreshold」
+ a| 
+可讓您指定當完整原則設定為「preentSystemAccess」時、警示將傳送至稽核記錄檔的百分比、以指出稽核記錄檔即將滿。使用介於0到100之間的整數值。將此參數設為0（零）會停用警告警示。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set auditLog logLevel=writeOnly fullPolicy=preventSystemAccess maxRecords=40000 warningThreshold=90;"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

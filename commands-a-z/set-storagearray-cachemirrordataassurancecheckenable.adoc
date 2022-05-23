@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/set-storagearray-cachemirrordataassurancecheckenable.html 
+sidebar: sidebar 
+keywords: set, storage, array, enable, disable, cache, mirror, data, assurance, check 
+summary: set storageArray cacheMirrorDataAssuranceChecksEnable命令可讓您啟用或停用快取鏡射資料保證檢查。 
+---
+= 設定儲存陣列以啟用或停用快取鏡射資料保證檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「set storageArray cacheMirrorDataAssuranceChecksEnable」命令、您可以啟用或停用快取鏡射資料保證檢查。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.41新命令參數。

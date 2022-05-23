@@ -1,0 +1,98 @@
+---
+permalink: commands-a-z/create-initiator.html 
+sidebar: sidebar 
+keywords: create, initiator 
+summary: create啟動器命令會建立啟動器物件。 
+---
+= 建立啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create initiator」命令會建立啟動器物件。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:create-iscsiinitiator.adoc[建立iSCSI啟動器] 命令。
+
+====
+[NOTE]
+====
+此命令僅適用於iSCSI、iSER、NVMe over RoCE、NVMe over InfiniBand及NVMe over Fibre Channel。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+create initiator identifier="initiatorQualifiedName" userLabel="initiatorName" host="hostName"
+interfaceType=(iscsi | iser | nvmeof) [chapSecret="securityKey"]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"識別碼"
+ a| 
+可讓您指定識別碼合格名稱（例如iqn或nqn）以建立啟動器。將識別碼括在雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+可讓您指定啟動器的使用者標籤。將名稱括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+可讓您指定安裝啟動器的主機名稱。將名稱括在雙引號（""）內。
+
+
+
+ a| 
+「介面類型」
+ a| 
+可讓您指定啟動器的介面類型。有效選項包括：iSCSI、iser或nvmeof。
+
+
+
+ a| 
+《chapSecret》
+ a| 
+可讓您輸入要用來驗證對等連線的安全性金鑰。將安全金鑰括在雙引號（""）內。此參數僅適用於iSCSI和iSER主機介面類型。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

@@ -1,0 +1,142 @@
+---
+permalink: commands-a-z/smcli-autosupportconfig-show.html 
+sidebar: sidebar 
+keywords: display, autosupport, bundle, collection, set 
+summary: SMcli -autosupSupportConfig show命令會顯示AutoSupport 管理網域的「套裝組合」集合設定。這些設定適用於管理網域中已啟用AutoSupport 此功能的所有儲存陣列。 
+---
+= 顯示AutoSupport 套裝組合集合設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Mcli -autosupSupportConfig show」命令會顯示AutoSupport 管理網域的套裝組合集合設定。這些設定適用於管理網域中已啟用AutoSupport 此功能的所有儲存陣列。
+
+
+
+== 支援的陣列
+
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+
+
+== 背景
+
+此命令的命令輸出顯示下列組態資訊：
+
+* 此管理網域AutoSupport 的啟用狀態為「更新功能」、AutoSupport 「更新功能」、「更新功能」及AutoSupport 「更新遠端診斷」功能
+* 取決於設定的交付方法的交付參數：
++
+** 傳送方法為：顯示目的地電子郵件地址、郵件轉送伺服器和寄件者電子郵件地址
+** 交付方法為HTTP或HTTPS：
++
+*** 直接連線-顯示目的地IP位址
+*** Proxy伺服器連線：顯示主機位址、連接埠號碼及驗證詳細資料
+*** 自動Proxy組態指令碼（PAC）連線-顯示指令碼位置
+
+
+
+
+* 此表格列出每個儲存陣列的陣列名稱、陣列名稱、是否為具備ASUP功能的陣列、機箱序號、以及陣列中控制器的IP位址
+
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+[NOTE]
+====
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+
+====
+
+
+== 語法
+
+[listing]
+----
+SMcli -autoSupportConfig show
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.25
+
+
+
+== 啟動狀態的輸出範例
+
+[listing]
+----
+The AutoSupport feature is activated on this storage management station.
+The AutoSupport OnDemand feature is de-activated on this storage management station.
+The AutoSupport Remote Diagnostics feature is de-activated on this storage management station.
+----
+
+
+== 範例：SMTP傳輸方法的輸出
+
+[listing]
+----
+Delivery method: SMTP
+Destination email address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Mail relay server: server.eng.netapp.com
+Sender email address:  user@netapp.com
+----
+
+
+== 具有直接連線的HTTP或HTTPS傳輸方法輸出範例
+
+[listing]
+----
+Delivery method:  HTTP
+Destination IP address:  http://asupserver.corp.netapp.com/put/AsupPut/
+Connection:  Direct
+----
+
+
+== 使用Proxy連線的HTTP傳輸方法輸出範例
+
+[listing]
+----
+Connection:  Proxy server
+Host Address:  10.227.76.123
+Port number: 8080
+Authentication required: Yes
+User name: admin
+Password: **********
+----
+
+
+== 使用自動Proxy組態指令碼（PAC）的HTTP傳輸方法輸出範例
+
+[listing]
+----
+Connection: Automatic proxy configuration script (PAC)
+Script location: http://esgweb.eng.netapp.com/~user/proxy.pac
+----
+
+
+== 陣列表輸出範例（所有交付方法）
+
+[listing]
+----
+
+Name  AutoSupport Capable   Chassis Serial Number   IP Address
+SA_1  Yes (enabled)         SX94500434              10.113.173.123, 10.113.173.456
+SA_2  Yes (disabled)        SX94607107              10.113.174.789, 10.113.174.345
+SA_3  No                    Not available           10.113.59.58, 10.113.59.59
+----

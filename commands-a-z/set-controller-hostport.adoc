@@ -1,0 +1,605 @@
+---
+permalink: commands-a-z/set-controller-hostport.html 
+sidebar: sidebar 
+keywords: set, controller, host, port, properties 
+summary: set控制器hostPort命令會變更下列類型主機連接埠的網路內容：iSCSI、iSER、InfiniBand上的NVMe、以及RoCE。內容變更包括：IPv4和IPv6內容、連接埠速度和最大框架有效負載。 
+---
+= 設定控制器主機連接埠內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show controller hostPort」命令可變更下列主機連接埠類型的網路內容：iSCSI、iSER、NVMe over InfiniBand和NVMe over RoCE。內容變更包括：IPv4和IPv6內容、連接埠速度和最大框架有效負載。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:set-controller-iscsihostport.adoc[設定iSCSI主機連接埠網路內容] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
+    (IPV4Address=(0-255).(0-255).(0-255).(0-255) |
+    IPv6LocalAddress=(FE80):(0000):(0000):(0000):(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+    enableIPv4=(TRUE | FALSE) |
+    enableIPv6=(TRUE | FALSE) |
+    enableIPv4Vlan=(TRUE | FALSE) |
+    enableIPv6Vlan=(TRUE | FALSE) |
+    enableIPv4Priority=(TRUE | FALSE) |
+    enableIPv6Priority=(TRUE | FALSE) |
+    fecMode=(auto:none:reedSolomon:fireCode) |
+    IPv4ConfigurationMethod=(static | dhcp) |
+    IPv6ConfigurationMethod=(static | auto) |
+    IPv4GatewayIP=(0-255).(0-255).(0-255).(0-255) |
+    IPv6HopLimit=[0-255] |
+    IPv6NdDetectDuplicateAddress=[0-255] |
+    IPv6NdReachableTime=[0-65535] |
+    IPv6NdRetransmitTime=[0-65535] |
+    IPv6NdTimeOut=[0-65535] |
+    IPv4Priority=[0-7] |
+    IPv6Priority=[0-7] |
+    IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+    IPv4VlanId=[1-4094] |
+    IPv6VlanId=[1-4094] |
+    maxFramePayload=[1500-9000] |
+    tcpListeningPort=(3260 | [49152-65535]) |
+    portSpeed=(autoNegotiate | 10 | 25 | 40 | 50 | 100))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓您指定要定義內容的控制器。
+
+
+
+ a| 
+「主機連接埠」
+ a| 
+可讓您指定要定義內容的主機連接埠標籤。僅限200 GB主機連接埠、您可以將「實體」或「虛擬」指定為參數。
+
+[NOTE]
+====
+如果您未指定200 GB主機連接埠連線的值、預設會設定「實體」參數。
+
+====
+
+
+ a| 
+「IPV4Address」
+ a| 
+可讓您以下列格式輸入位址：（0-255）。（0-255）。（0-255）。（0-255）。（0-255）。
+
+
+
+ a| 
+「IPV6LocalAddress」
+ a| 
+可讓您以下列格式輸入位址：（fe80）：（0000）：（0000）：（0000）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+「IPv6 RoutableAddress」
+ a| 
+可讓您以下列格式輸入位址：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+「IPV6RouterAddress」
+ a| 
+可讓您以下列格式輸入位址：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）：（0-FFFF）。
+
+
+
+ a| 
+「enableIPV4」
+ a| 
+可讓您啟用IPV4。
+
+
+
+ a| 
+「enableIPV6」
+ a| 
+可讓您啟用IPv6。IPv6位址空間為128位元。它由八個以分號分隔的16位元十六進位區塊來表示。
+
+
+
+ a| 
+「enableIPv6 Vlan」
+ a| 
+可讓您啟用IPV4 VLAN。VLAN是一種邏輯網路、其運作方式類似於實體獨立於其他實體和虛擬區域網路（LAN）、這些區域網路由相同的交換器、相同的路由器或兩者支援。
+
+
+
+ a| 
+「enableIPv6 Vlan」
+ a| 
+可讓您啟用IPv6 VLAN。VLAN是一種邏輯網路、其運作方式類似於實體獨立於其他實體和虛擬區域網路（LAN）、這些區域網路由相同的交換器、相同的路由器或兩者支援。
+
+
+
+ a| 
+「enableIPv6優先順序」
+ a| 
+可讓您啟用決定存取網路優先順序的參數。在共享區域網路（LAN）環境（例如乙太網路）中、許多站台可能會爭用網路存取權。存取權以先到先得的方式提供。兩個站台可能會同時嘗試存取網路、這會導致兩個站台都關機並等待、然後再試一次。交換式乙太網路只有一個站台連接到交換器連接埠、此程序就會最小化。
+
+
+
+ a| 
+「enableIPv6優先順序」
+ a| 
+可讓您啟用決定存取網路優先順序的參數。在共享區域網路（LAN）環境（例如乙太網路）中、許多站台可能會爭用網路存取權。存取權以先到先得的方式提供。兩個站台可能會同時嘗試存取網路、這會導致兩個站台都關機並等待、然後再試一次。交換式乙太網路只有一個站台連接到交換器連接埠、此程序就會最小化。
+
+
+
+ a| 
+FecMode（FecMode）
+ a| 
+可讓您將主機連接埠的FEC模式設定為下列其中一個選項：
+
+* 「自動」
+* 無
+* 《REedSolomon》
+* 《消防守則》
+
+
+
+
+ a| 
+「IPv6組態方法」
+ a| 
+可讓您設定IPv4靜態或DHCP定址。
+
+
+
+ a| 
+「IPv6組態方法」
+ a| 
+可讓您設定IPv6靜態或DHCP定址。
+
+
+
+ a| 
+《IPv6網關》
+ a| 
+可讓您以下列格式輸入閘道位址：（0-255）。（0-255）。（0-255）。（0-255）。（0-255）。
+
+
+
+ a| 
+《IPv6合上限制》
+ a| 
+可讓您設定IPv6封包可經過的躍點數目上限。預設值為64。
+
+
+
+ a| 
+《IPv6詳細地址》
+ a| 
+可讓您設定嘗試判斷IP位址唯一性時要傳送的鄰近請求訊息數目。
+
+
+
+ a| 
+《IPv6重新獲取時間》
+ a| 
+可讓您設定遠端IPv6節點被視為可連線的時間量（以毫秒為單位）。預設值為30000毫秒。
+
+
+
+ a| 
+《IPv6重新傳入時間》
+ a| 
+可讓您設定繼續將封包重新傳輸至IPv6節點的時間量（以毫秒為單位）。預設值為1000毫秒。
+
+
+
+ a| 
+《IPv6無時間去話》
+ a| 
+可讓您設定IPv6節點的逾時值（以毫秒為單位）。預設值為30000毫秒。
+
+
+
+ a| 
+「IPv6優先順序」
+ a| 
+可讓您設定IPV4封包的優先順序指派。
+
+
+
+ a| 
+「IPv6優先順序」
+ a| 
+可讓您設定IPv6封包的優先順序指派。
+
+
+
+ a| 
+《IPv6子網路遮罩》
+ a| 
+可讓您以下列格式輸入子網路遮罩位址：（0-255）。（0-255）。（0-255）。（0-255）。
+
+
+
+ a| 
+《IPv6 VlanId》
+ a| 
+可讓您設定IPV4 VLAN ID。
+
+
+
+ a| 
+《IPv6 VlanId》
+ a| 
+可讓您設定IPv6 VLAN ID。
+
+
+
+ a| 
+《MaxFramePayload》
+ a| 
+可讓您設定在網路中傳送的封包或框架大小上限。標準乙太網路框架的有效負載部分設為1500、巨型乙太網路框架則設為9000。使用巨型框架時、網路路徑中的所有裝置都應該能夠處理較大的框架大小。預設值為每個框架1500位元組。
+
+[NOTE]
+====
+若要確保NVMe over RoCE環境的最佳效能、請將影格大小設定為4200。
+
+====
+
+
+ a| 
+「tcplisteningPort」
+ a| 
+可讓您設定TCP連接埠號碼、以便偵聽來自啟動器的iSCSI登入。預設連接埠為3260。
+
+
+
+ a| 
+'連接埠速度'
+ a| 
+可讓您設定連接埠應進行通訊的速度、單位為兆位元/秒（MB/s）。
+
+[NOTE]
+====
+此參數僅支援25 Gbps iSCSI主機介面卡和100 Gbps乙太網路主機介面卡。若為25 Gbps iSCSI主機介面卡、變更一個連接埠的速度會變更卡上所有四個連接埠的速度。在此情況下、允許的選項為10或25。對於8.50版新推出的100 Gbps乙太網路主機介面卡、變更一個連接埠的速度並不會影響卡上的其他連接埠。後一種情況下允許的選項包括自動協商、10、25、40、50、 或100GbE。
+
+====
+|===
+
+
+== 主機連接埠類型的參數支援
+
+參數支援依主機連接埠類型（iSCSI、iSER、NVMe over InfiniBand或NVMe over Roce）而異、如下表所述：
+
+[cols="5*"]
+|===
+| 參數 | iSCSI | 商用 | NVMe over InfiniBand | NVMe over RoCE 
+
+
+ a| 
+「IPV4Address」
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+ a| 
+是的
+
+
+
+ a| 
+「IPV6LocalAddress」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「IPv6 RoutableAddress」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「IPV6RouterAddress」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「enableIPV4」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「enableIPV6」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「enableIPv6 Vlan」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+「enableIPv6 Vlan」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+「enableIPv6優先順序」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+「enableIPv6優先順序」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+「IPv6組態方法」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「IPv6組態方法」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+《IPv6網關》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+《IPv6合上限制》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+《IPv6詳細地址》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+《IPv6重新獲取時間》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+《IPv6重新傳入時間》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+《IPv6無時間去話》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+「IPv6優先順序」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+「IPv6優先順序」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+《IPv6子網路遮罩》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+《IPv6 VlanId》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+《IPv6 VlanId》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+否
+
+
+
+ a| 
+《MaxFramePayload》
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+
+
+ a| 
+「tcplisteningPort」
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+'連接埠速度'
+ a| 
+是的
+ a| 
+ a| 
+ a| 
+是的
+
+|===
+
+
+== 最低韌體層級
+
+8.41.
+
+8.50 -新增NVMe over RoCE環境的相關資訊。
+
+11.70.1新增「fecMode」參數。

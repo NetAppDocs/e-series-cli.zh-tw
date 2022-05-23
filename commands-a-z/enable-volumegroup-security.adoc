@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/enable-volumegroup-security.html 
+sidebar: sidebar 
+keywords: enable, volumegroup, security, command, non secure, volume, group 
+summary: 啟用volumeGroup安全性命令會將非安全的Volume群組轉換成安全的Volume群組。 
+---
+= 啟用Volume群組安全性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「啟用volumeGroup安全性」命令會將非安全的Volume群組轉換成安全的Volume群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable volumeGroup [_volumeGroupName_]] security
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要置於「啟用安全性」狀態的磁碟區群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+必須符合這些條件、才能成功執行此命令。
+
+* Volume群組中的所有磁碟機都必須是完整磁碟加密磁碟機。
+* 必須啟用磁碟機安全功能。
+* 必須設定儲存陣列安全金鑰。
+* Volume群組是最佳的、而且沒有儲存庫磁碟區。
+
+
+控制器韌體會建立一個鎖定、限制FDE磁碟機的存取。FDE磁碟機的狀態稱為「安全功能」。當您建立安全金鑰時、狀態會設為「啟用安全性」、這會限制存取儲存陣列內所有FDE磁碟機。
+
+
+
+== 最低韌體層級
+
+7.40

@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/show-allhostports.html 
+sidebar: sidebar 
+keywords: show, host, ports 
+summary: show allHostPortes命令會傳回已設定主機連接埠的相關資訊。 
+---
+= 顯示主機連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show allHostPortes」命令會傳回已設定主機連接埠的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+對於連接至儲存陣列的所有主機連接埠、此命令會傳回下列資訊：
+
+* 主機連接埠識別碼
+* 主機連接埠名稱
+* 主機類型
+
+
+
+
+== 語法
+
+[listing]
+----
+show allHostPorts
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+此命令會傳回與此範例類似的HBA主機連接埠資訊。
+
+[listing]
+----
+HOST PORT IDENTIFIER     HOST PORT NAME  HOST TYPE
+12:34:56:54:33:22:22:22  Jupiter1        Solaris
+12:34:56:78:98:98:88:88  Pluto1          Windows 2000/Server 2003 Clustered
+54:32:12:34:34:55:65:66  Undefined       Undefined
+----
+
+
+== 最低韌體層級
+
+5.40

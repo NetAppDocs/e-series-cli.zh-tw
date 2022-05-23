@@ -1,0 +1,90 @@
+---
+permalink: commands-a-z/create-host.html 
+sidebar: sidebar 
+keywords: create, host 
+summary: create host命令會建立新的主機。 
+---
+= 建立主機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create host」命令會建立新的主機。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+對於E2700和E5600儲存陣列、如果您未指定要在其中建立新主機的主機群組、則會在預設群組中建立新主機。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create host userLabel=pass:quotes[_"hostName"_]
+[hostGroup=pass:quotes[(_"hostGroupName"_] | defaultGroup)]
+[hostType=(hostTypeIndexLabel | hostTypeIndexNumber)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「userLabel」
+ a| 
+您要為正在建立的主機命名的名稱。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+「主機群組」
+ a| 
+要在其中建立新主機的主機群組名稱。將主機群組名稱括在雙引號（""）內。（如果主機群組不存在、您可以使用「create hostGroup」命令來建立新的主機群組。） 「資料管理群組」選項是包含磁碟區對應主機的主機群組。
+
+
+
+ a| 
+「hostType」
+ a| 
+識別主機類型的索引標籤或索引編號。使用「show storageArray hostTypeTable」命令來產生可用的主機類型識別碼清單。如果主機類型有特殊字元、請將主機類型括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+主機是連接至儲存陣列的電腦、可透過主機連接埠存取儲存陣列上的磁碟區。您可以定義個別主機的特定對應。您也可以將主機指派給共用一或多個磁碟區存取權的主機群組。
+
+主機群組是選用的拓撲元素、您可以定義是否要指定共用相同磁碟區存取權的主機集合。主機群組是邏輯實體。只有當您有兩個以上的主機共用相同磁碟區的存取權時、才可定義主機群組。
+
+如果您未指定要放置所建立主機的主機群組、則新定義的主機屬於預設主機群組。
+
+
+
+== 最低韌體層級
+
+5.20
+
+7.10新增「hostType」參數。

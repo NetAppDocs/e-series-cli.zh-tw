@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/start-volumegroup-locate.html 
+sidebar: sidebar 
+keywords: start, volume, group, locate 
+summary: start volumeGroup locate命令可藉由在磁碟機上的指示燈閃亮、識別邏輯群組在一起的磁碟機、以形成指定的磁碟區群組。 
+---
+= 啟動Volume群組定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start volumeGroup locate」命令可藉由在磁碟機上的指示燈閃亮、識別邏輯上組合在一起的磁碟機、以形成指定的Volume群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+使用「最大磁碟區群組定位」命令來關閉磁碟機上的指示燈。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] locate
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+您要找到屬於該磁碟區群組之磁碟機的磁碟區群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 最低韌體層級
+
+6.16

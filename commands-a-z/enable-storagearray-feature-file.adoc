@@ -1,0 +1,96 @@
+---
+permalink: commands-a-z/enable-storagearray-feature-file.html 
+sidebar: sidebar 
+keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
+summary: enable storageArray feature file命令可讓您永久升級至儲存陣列或試用期間。 
+---
+= 啟用儲存陣列功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「enable storageArray feature file」命令可讓您永久升級至儲存陣列或試用期間。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+此命令會執行下列其中一項動作：
+
+* 啟用功能金鑰以永久升級功能
+* 啟用功能金鑰、以永久升級功能套件
+* 在試用期間啟用功能
+
+
+功能套件是一組預先定義的功能、例如儲存分割區和同步鏡像。為了方便使用者使用、這些功能都是結合在一起的。使用者安裝功能套件時、會同時安裝功能套件中的所有功能。
+
+每項功能均由針對特定功能或功能套件及特定儲存陣列所產生的授權金鑰來管理。授權金鑰會以您執行的檔案形式提供、以套用該功能的授權。
+
+若要判斷儲存陣列上載入的功能、請執行「show storageArray features」命令。「show storageArray features」命令會列出儲存陣列上安裝的所有功能、這些功能可在試用期間進行評估、哪些功能已啟用、以及哪些功能已停用。
+
+
+
+== 啟用功能金鑰的語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature file="_filename_"]
+----
+「檔案」參數可識別有效功能金鑰檔案的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrkey.key"
+----
+功能金鑰檔的有效檔案名稱以「.key」副檔名結尾。
+
+您需要針對每個要啟用的功能提供功能金鑰檔案。
+
+
+
+== 啟用功能套件的語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray featurePack file="_filename_"]
+----
+「檔案」參數可識別有效功能套件檔案的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\dnld\ftrpk.key"
+----
+功能金鑰檔的有效檔案名稱以「.key」副檔名結尾。
+
+
+
+== 用於在試用期間啟用功能的語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[enable storageArray feature=_featureAttributeList_]
+----
+若要評估試用期間的功能、您可以為「featureAttributeList」輸入下列一或多個屬性值。如果輸入多個屬性值、請以空格分隔值。
+
+* 「DiveSecurity」
+
+
+
+
+== 最低韌體層級
+
+8.25會移除所有不再有效的屬性。

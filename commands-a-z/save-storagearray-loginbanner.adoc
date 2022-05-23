@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/save-storagearray-loginbanner.html 
+sidebar: sidebar 
+keywords: save, storage, array, login, banner 
+summary: SAVE storageArray loginBanner命令可讓您將登入橫幅儲存至本機機器。橫幅文字可以包含建議事項通知和同意訊息、在使用者建立工作階段之前、會先向他們顯示。 
+---
+= 儲存儲存陣列登入橫幅
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列loginbanner」命令可讓您將登入橫幅儲存到本機機器。橫幅文字可以包含建議事項通知和同意訊息、在使用者建立工作階段之前、會先向他們顯示。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+具有任何角色的使用者可以執行此命令。
+
+
+
+== 語法
+
+[listing]
+----
+save storageArray loginBanner file="file_name"
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+登入橫幅檔案的名稱。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

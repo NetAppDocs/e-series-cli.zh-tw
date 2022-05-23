@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/create-snapimage.html 
+sidebar: sidebar 
+keywords: create, snapshot, image 
+summary: create SnapImage命令會在一個或多個現有的快照群組中建立新的快照映像。 
+---
+= 建立Snapshot映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create SnapImage」命令會在一個或多個現有的快照群組中建立新的快照映像。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+在建立快照映像之前、您必須先擁有至少一個快照群組、以便放置快照映像。若要建立快照群組、請使用「create snapGroup」命令。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create snapImage (snapGroup=pass:quotes[_"snapGroupName" |
+snapGroups=("_snapGroupName1"... "snapGroupNamen_"))]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+將包含快照映像的快照群組名稱。將快照群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+《napGroups》（《napGroups》）
+ a| 
+將包含快照映像的多個快照群組名稱。使用下列規則輸入快照群組的名稱：
+
+* 將所有名稱括在括弧中。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+快照映像是關聯_base磁碟區內容的邏輯時間點映像。此時會立即建立快照映像、並記錄基礎磁碟區的狀態。每個快照映像都是在同一個_snapshot group _的內容中建立。Snapshot群組是相關基礎Volume的一系列快照映像。快照群組有一個_repository volume（儲存庫磁碟區）用於儲存快照映像中的所有資料。快照群組中的快照映像有特定順序。快照映像的特定順序可讓您管理快照映像、例如將特定的快照映像還原至基礎磁碟區、或刪除不再需要的快照映像。
+
+建立一致性群組快照映像的結果、是一致性群組中每個成員磁碟區的快照映像。
+
+
+
+== 最低韌體層級
+
+7.83

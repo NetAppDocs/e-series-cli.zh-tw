@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/start-storagearray-locate.html 
+sidebar: sidebar 
+keywords: start, storage, array, locate 
+summary: start storageArray locate命令會開啟儲存陣列的指示燈、以尋找儲存陣列。 
+---
+= 啟動儲存陣列定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start storageArray locate」命令會開啟儲存陣列的指示燈、以找出儲存陣列。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+使用「shtop storageArray locate」命令關閉儲存陣列的指示燈。
+
+
+
+== 語法
+
+[listing]
+----
+start storageArray locate
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.10.

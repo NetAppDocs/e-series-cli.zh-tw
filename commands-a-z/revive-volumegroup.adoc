@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/revive-volumegroup.html 
+sidebar: sidebar 
+keywords: revive, volume, group 
+summary: 「恢復磁碟區群組」命令會強制指定的磁碟區群組及其相關的故障磁碟機達到最佳狀態。 
+---
+= 恢復Volume群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"revive volumeGroup"命令會強制指定的Volume群組及其相關的故障磁碟機達到最佳狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+*可能會遺失資料存取*-正確使用此命令取決於磁碟區群組中所有磁碟機的資料組態。除非您受到技術支援的監督、否則請勿嘗試恢復磁碟機。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+revive volumeGroup pass:quotes[[_volumeGroupName_]]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要設定為最佳狀態的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

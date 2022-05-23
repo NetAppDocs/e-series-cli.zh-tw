@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/disable-storagearray.html 
+sidebar: sidebar 
+keywords: disable, storage, array, command, storage, feature 
+summary: disablestorageArray命令會停用儲存陣列功能。 
+---
+= 停用儲存陣列功能
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「停用storageArray」命令會停用儲存陣列功能。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+執行「show storageArray」命令、顯示儲存陣列中所有已啟用功能的功能識別碼清單。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[disable storageArray (featurePack | feature=_featureAttributeList_)]
+----
+pass: quotes [`_featureAttributeList_`]可以是其中一個或多個屬性值。如果輸入多個屬性值、請以空格分隔值。
+
+* 「DiveSecurity」
+
+
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.20會新增「driveSecurity」屬性、並移除所有其他屬性。

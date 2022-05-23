@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/delete-snmpcommunity.html 
+sidebar: sidebar 
+keywords: delete, snmpcommunity, command, existing, simple, network, management, protocol, community, previously, create, effective, unregister, trap, destination, associate, remove 
+summary: DELETE SNMP社群命令會刪除您先前使用create SNMP命令建立及註冊的現有簡易網路管理傳輸協定（SNMP）社群。刪除SNMP社群可有效取消登錄社群。也會移除與該社群相關聯的任何設陷目的地。 
+---
+= 取消登錄SNMP社群
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Delete SNMP Community」命令會刪除您先前使用「create SNMP Community」命令建立及註冊的現有簡單網路管理傳輸協定（SNMP）社群。刪除SNMP社群可有效取消登錄社群。也會移除與該社群相關聯的任何設陷目的地。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete snmpCommunity communityName="_snmpCommunityName_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《社區名稱》
+ a| 
+您要刪除的SNMP社群名稱。將SNMP社群名稱括在雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+8.30

@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/create-ssdcache.html 
+sidebar: sidebar 
+keywords: create, ssd, cache 
+summary: create ssdCache命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。 
+---
+= 建立SSD快取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create ssdCache」命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 背景
+
+使用高效能SSD快取讀取資料、可改善應用程式I/O效能和回應時間、並在不同的工作負載之間持續提升效能、尤其是高IOP工作負載。SSD快取可充分運用昂貴的快速SSD。SSD快取除了控制器DRAM中的主要快取外、也能運作。使用控制器快取時、資料會在主機讀取後儲存在DRAM中。有了SSD快取、資料會從使用者指定的基礎磁碟區複製、然後快取到SSD。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create ssdCache userLabel=pass:quotes[_"ssdCacheName"_]
+drives=pass:quotes[_(trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn,[drawerIDn,_]]pass:quotes[_slotIDn_)]
+[updateExistingVolumes=(TRUE|FALSE)]
+[securityType=(none|capable|enabled)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「userLabel」
+ a| 
+您要命名新SSD快取的名稱。將SSD快取名稱括在雙引號（""）內。
+
+
+
+ a| 
+《發展》
+ a| 
+您要用來建立SSD快取的磁碟機。對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+
+
+ a| 
+「updateExistingVolumes」
+ a| 
+此選用參數可指定是否應為儲存陣列中的所有現有磁碟區啟用SSD快取。若要啟用所有現有磁碟區的SSD快取、請將此參數設為「true」。如果稍後要啟用個別磁碟區的SSD快取、請將此參數設為「假」。預設值為「true」。
+
+
+
+ a| 
+「生態類型」
+ a| 
+此選用參數可指定建立SSD快取時的安全層級。這些設定有效：
+
+* 「無」- SSD快取不安全。
+* 「Capable」（能力）：SSD快取能夠設定安全性、但尚未啟用安全性。
+* 「啟用」：SSD快取已啟用安全功能。
+
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+儲存陣列只能有一個SSD快取。
+
+只有使用硬碟建立的磁碟區才能使用SSD快取。您無法在快照映像上啟用SSD快取。
+
+如果SSD快取中的所有SSD都具備資料保證（DA）功能、而且已啟用DA功能、則會自動啟用SSD快取的DA、而且無法停用。此外、您無法將不支援DA的SSD新增至啟用DA的SSD快取。
+
+
+
+== 最低韌體層級
+
+7.84
+
+8.20_M3 -現在支援FDE磁碟機。新增「最安全類型」參數。

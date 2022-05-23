@@ -1,0 +1,161 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server 
+summary: set storageArray directoryServer命令會更新目錄伺服器組態。 
+---
+= 設定儲存陣列目錄伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray directoryServer」命令會更新目錄伺服器組態。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer ["domainId"]
+    (domainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     addDomainNames=pass:quotes[("_domainName1_"..."_domainNameN_")] |
+     serverUrl=pass:quotes["_serverUrl_"] |
+     bindAccount=pass:quotes["_username_"] bindPassword=pass:quotes["_password_"] |
+     searchBaseDN=pass:quotes["_distinguishedName_"] |
+     usernameAttribute=pass:quotes["_attributeName_"] |
+     groupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_")] |
+     addGroupAttributes=pass:quotes[("_attrName1_"..."_attrNameN_"))]
+    [skipConfigurationTest={true | false}]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"DirecdirectoryServer"
+ a| 
+可讓您指定網域ID來更新設定。
+
+
+
+ a| 
+《DomainNames》
+ a| 
+可讓您為目錄伺服器設定一或多個有效的網域名稱。如果輸入多個名稱、請以空格分隔值。使用此設定選項可清除現有的網域名稱。
+
+
+
+ a| 
+《AddDomain Names》
+ a| 
+可讓您為目錄伺服器新增一或多個有效的網域名稱。如果輸入多個名稱、請以空格分隔值。
+
+
+
+ a| 
+《ErverUrl》
+ a| 
+可讓您指定伺服器URL。
+
+
+
+ a| 
+「綁定帳戶」
+ a| 
+可讓您指定要用作繫結帳戶的使用者名稱。
+
+
+
+ a| 
+「綁定密碼」
+ a| 
+可讓您指定要用作繫結密碼的密碼。
+
+
+
+ a| 
+"earchBaseDN"
+ a| 
+可讓您指定搜尋基礎辨別名稱、以搜尋LDAP使用者物件來判斷群組成員資格。
+
+
+
+ a| 
+"usernamnameAttributes"
+ a| 
+可讓您指定用於搜尋使用者物件以決定群組成員資格的屬性。如果指定、字串必須包含變數'+{uid}+'、該變數將被登入時使用的使用者名稱取代。範例：「+sAMAccountName={uid}+'
+
+
+
+ a| 
+《群組屬性》
+ a| 
+可讓您設定一或多個群組屬性、以用於尋找群組辨別名稱。辨別名稱是用來判斷角色對應的群組成員資格。
+
+[NOTE]
+====
+如果輸入多個群組、請以空格分隔值。
+
+====
+[NOTE]
+====
+使用此參數將清除現有群組。
+
+====
+
+
+ a| 
+"addGroupAttributes"
+ a| 
+可讓您新增一或多個群組屬性、以用於尋找群組辨別名稱。辨別名稱用於判斷群組成員資格、以利角色對應。
+
+[NOTE]
+====
+如果輸入多個群組、請以空格分隔值。
+
+====
+
+
+ a| 
+「kipConfiguration Test」
+ a| 
+可讓您在儲存組態之前跳過組態測試。預設值為「假」。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+     serverUrl="ldaps://hqldap.eng.mycompany.com:636";"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    bindAccount="bindDN2" bindPassword="thePassword2"
+                    searchBaseDN="OU=_Users,DC=hq,DC=mycompany,DC=com"
+                    usernameAttribute="sAMAccountName" groupAttributes=("memberOf");"
+
+SMcli completed successfully.
+----

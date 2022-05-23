@@ -1,0 +1,77 @@
+---
+permalink: commands-a-z/start-snmptrapdestination.html 
+sidebar: sidebar 
+keywords: test, snmp, trap, destination 
+summary: start snmpTrap目的地 命令會測試特定簡單網路管理傳輸協定（SNMP）社群或使用者的陷阱接收器連線和識別。此命令會傳送設陷訊息給設陷接收器、以測試設陷目的地。 
+---
+= 測試SNMP設陷目的地
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start SNMP TrapDEST目的地」命令可測試特定簡單網路管理傳輸協定（SNMP）社群或使用者的陷阱接收器連線和識別。此命令會傳送設陷訊息給設陷接收器、以測試設陷目的地。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start snmpTrapDestination trapReceiverIP=ipAddress
+    pass:quotes[(communityName="_communityName_" | (userName="_userName_"] [engineId=(local | engineId)]))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「trapReceiverIP」
+ a| 
+您要傳送陷阱訊息的SNMP管理程式IP位址。
+
+
+
+ a| 
+《社區名稱》
+ a| 
+要傳送陷阱訊息的SNMP社群名稱。
+
+
+
+ a| 
+《使用者名稱》
+ a| 
+您要傳送陷阱訊息的SNMP使用者名稱。
+
+
+
+ a| 
+"工程師Id"
+ a| 
+您要傳送陷阱訊息之SNMP使用者的引擎ID。如果有多個使用者名稱相同的USM使用者、則引擎ID為必填欄位。此值可以是「[.code]''locale'」、以指定本機SNMP代理程式為驗證代理程式、或是指定遠端SNMP代理程式引擎ID的十六進位數字字串。
+
+|===
+
+
+== 最低韌體層級
+
+8.30

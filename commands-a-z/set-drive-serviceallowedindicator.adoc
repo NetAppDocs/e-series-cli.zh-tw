@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/set-drive-serviceallowedindicator.html 
+sidebar: sidebar 
+keywords: set, drive, service, action, allowed, indicator 
+summary: Set磁碟機服務Allowedindicator命令會開啟或關閉磁碟機匣中支援「允許服務動作」指示燈功能的磁碟機或磁碟機上的「允許服務動作」指示燈。 
+---
+= 設定允許的磁碟機服務動作指示燈
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set磁碟機服務Allowedindicator」命令會開啟或關閉磁碟機匣中支援「允許服務動作」指示燈功能的磁碟機或磁碟機上的「允許服務動作」指示燈。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+如果儲存陣列不支援「允許服務動作」指示燈功能、此命令會傳回錯誤。如果儲存陣列支援該命令、但無法開啟或關閉指示燈、則此命令會傳回錯誤訊息。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set (drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]])
+serviceAllowedIndicator=(on | off)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Dive」或「Drives」
+ a| 
+對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+
+
+ a| 
+「服務指標」
+ a| 
+用於開啟或關閉「允許服務動作」指示燈的設定。若要開啟「允許維修操作」指示燈、請將此參數設為「開啟」。若要關閉「允許維修操作」指示燈、請將此參數設為「關閉」。
+
+|===
+
+
+== 附註
+
+"driv"參數同時支援大容量磁碟機匣和低容量磁碟機匣。大容量磁碟機匣具有可容納磁碟機的抽屜。從磁碟機匣中滑出抽取器、以便存取磁碟機。低容量磁碟機匣沒有抽屜。對於大容量磁碟機匣、您必須指定磁碟機匣的識別碼（ID）、匣的識別碼、以及磁碟機所在插槽的識別碼。對於低容量磁碟機匣、您只需要指定磁碟機匣的ID、以及磁碟機所在插槽的ID。對於低容量磁碟機匣、識別磁碟機位置的另一種方法是指定磁碟機匣的ID、將抽取匣的ID設為「0」、然後指定磁碟機所在插槽的ID。
+
+
+
+== 最低韌體層級
+
+6.16
+
+7.60新增「drawerID」使用者輸入。

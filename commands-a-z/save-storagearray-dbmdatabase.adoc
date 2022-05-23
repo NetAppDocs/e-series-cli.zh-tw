@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-dbmdatabase.html 
+sidebar: sidebar 
+keywords: save, storage, array, dbm, database 
+summary: SAVE storageArray dbmDatabase命令會將RAID組態資料或所有資料備份至主機上的檔案。您可以指定多個資料位置和控制器。 
+---
+= 儲存儲存陣列DBM資料庫
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列dbmDatabase」命令會將RAID組態資料或所有資料備份到主機上的檔案。您可以指定多個資料位置和控制器。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+save storageArray dbmDatabase
+[sourceLocation=(disk | onboard)]
+[controller [(a|b)]]
+[contentType= all]
+ file="fileName"
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存資料庫的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\dbmsdata.Zip」
+
+此參數必須顯示在任何選用參數之後的最後一個。
+
+此命令會建立一個.Zip檔案、您不需要指定副檔名。
+
+
+
+ a| 
+'資訊位置'
+ a| 
+此參數指定從哪個位置取得備份資料庫資訊。
+
+* 「磁碟」表示資料直接來自磁碟機上的資料庫
+* 「OnBoard」表示資料來自RPA記憶體位置
+
+
+預設位置為「OnBoard」。
+
+
+
+ a| 
+"控制器"
+ a| 
+此參數指定如果將「資源位置」設定為「內建」、則會專門從哪個控制器擷取資料。如果未指定「控制器」參數、則可能會從任一控制器擷取資料。
+
+有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器
+
+
+
+ a| 
+「contentType」
+ a| 
+此參數指定要擷取之資料的內容類型。
+
+此參數預設設為「ALL」、以便擷取所有資料、包括磁碟集區組態資料。
+
+|===
+
+
+== 附註
+
+使用此命令儲存至主機的資料、可視需要還原至控制器。不過、從主機上的檔案還原資料需要驗證程式。
+
+
+
+== 最低韌體層級
+
+7.75
+
+7.83新增下列參數：
+
+* '資訊位置'
+* "控制器"
+* 「contentType」
+

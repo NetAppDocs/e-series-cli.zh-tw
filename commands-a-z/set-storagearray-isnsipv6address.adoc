@@ -1,0 +1,61 @@
+---
+permalink: commands-a-z/set-storagearray-isnsipv6address.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, ipv6, address 
+summary: set storageArray isnsIPv6位址命令可設定iSNS伺服器的IPv6位址。 
+---
+= 設定儲存陣列iSNS伺服器IPv6位址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray isnIPv6位址」命令可設定iSNS伺服器的IPv6位址。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsIPv6Address=pass:quotes[_ipAddress_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「isnsIPv6位址」
+ a| 
+要用於iSNS伺服器的IPv6位址。
+
+|===
+
+
+== 附註
+
+透過iSNS傳輸協定、可在TCP/IP網路上自動探索、管理及設定iSCSI裝置和光纖通道裝置。與光纖通道網路中的智慧型儲存探索與管理服務相若、因此市售IP網路的功能與儲存區域網路的功能相似。此外、由於其能夠模擬Fibre Channel Fabric服務、以及同時管理iSCSI裝置和Fibre Channel裝置、因此也能順暢整合IP網路和Fibre Channel網路。在任何具有iSCSI裝置、光纖通道裝置或任何組合的儲存網路中、皆可透過iSNS提供價值。
+
+
+
+== 最低韌體層級
+
+7.10.

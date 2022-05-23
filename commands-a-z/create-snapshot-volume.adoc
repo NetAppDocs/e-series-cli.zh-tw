@@ -1,0 +1,149 @@
+---
+permalink: commands-a-z/create-snapshot-volume.html 
+sidebar: sidebar 
+keywords: create, snapshot, volume 
+summary: create snapVolume命令可建立具有讀寫功能的快照磁碟區、以供基礎磁碟區的快照映像使用。 
+---
+= 建立Snapshot Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create snapVolume」命令可建立具有讀寫功能的快照磁碟區、以供基礎磁碟區的快照映像使用。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您可以將快照磁碟區對應至主機、且所有的主機寫入作業都位於與快照磁碟區相關聯的儲存庫磁碟區中。您可以將新的快照磁碟區指派給現有的儲存庫磁碟區、也可以在磁碟區群組或磁碟集區中建立新的儲存庫磁碟區。
+
+[NOTE]
+====
+您無法將此命令用於線上Volume複本中使用的快照映像。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create snapVolume userLabel=pass:quotes[_"snapVolumeName_" snapImageID="_snapCGID:imageID_"]
+[(repositoryVolume="repos_xxxx"]
+[repositoryVolume=pass:quotes[_(volumeGroupName_]pass:quotes[[capacity=_capacityValue_]]]
+[repositoryVolume=pass:quotes[(_diskPoolName_]pass:quotes[[capacity=_capacityValue_])]]
+[repositoryFullLimit=pass:quotes[_percentValue_]]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「userLabel」
+ a| 
+您要指定給快照磁碟區的名稱。將快照磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+「napImageID」
+ a| 
+您要新增至新快照磁碟區之快照映像的英數字元識別碼。快照映像的識別碼由兩部分組成：
+
+* 快照群組的名稱
+* 快照群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、即快照群組中快照的順序編號。
+* 「最新」：如果您想要顯示快照群組中建立的最新快照映像、請使用此選項。
+* 「最舊」：如果您想要顯示快照群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱括在雙引號（""）內。
+
+
+
+ a| 
+「repositoryVolume」
+ a| 
+儲存來自快照映像之變更資料的儲存庫磁碟區名稱。
+
+您有兩個選項可以定義儲存庫Volume的名稱：
+
+* 使用現有的儲存庫Volume名稱
+* 執行此命令時、請建立新的儲存庫Volume
+
+
+現有儲存庫磁碟區的名稱由兩部分組成：
+
+* 「錯誤」一詞
+* 儲存管理軟體指派給儲存庫Volume名稱的四位數數字識別碼
+
+
+將現有儲存庫磁碟區的名稱以雙引號（""）括住。
+
+若要在執行此命令時建立新的儲存庫磁碟區、您必須輸入要儲存庫磁碟區的磁碟區群組或磁碟集區名稱。或者、您也可以定義儲存庫Volume的容量。如果您想要定義容量、可以使用下列值：
+
+* 整數值、代表基本Volume容量的百分比
+* 表示基本Volume容量百分比的小數位值
+* 儲存庫磁碟區的特定大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+如果您不使用容量選項、儲存管理軟體會將容量設定為基礎Volume容量的20%。
+
+當您執行此命令時、儲存管理軟體會為快照Volume建立儲存庫磁碟區。
+
+
+
+ a| 
+「repositoryFullLimit」
+ a| 
+您收到快照儲存庫磁碟區即將滿警示的儲存庫容量百分比。使用整數值。例如、值70表示70%。預設值為75。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+快照映像的識別碼有兩個部分以分號分隔（：）：
+
+* 快照群組的名稱
+* 快照映像的識別碼
+
+
+例如、如果您想要使用快照群組中最新的快照映像來建立名為snapData1的快照磁碟區、且儲存庫磁碟區的最大填滿限制為80%、則可使用此命令：
+
+[listing]
+----
+create snapVolume userLabel="snapData1" snapImageID="snapGroup1:newest"
+repositoryVolume="repos_1234" repositoryFullLimit=80;
+----
+建立新的快照群組時、儲存管理軟體和韌體會自動建立儲存庫Volume識別碼。您無法重新命名儲存庫磁碟區、因為重新命名儲存庫磁碟區會中斷與快照映像的連結。
+
+
+
+== 最低韌體層級
+
+7.83

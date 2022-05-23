@@ -1,0 +1,153 @@
+---
+permalink: commands-a-z/save-controller-arraymanagementcsr.html 
+sidebar: sidebar 
+keywords: generate, web server, certificate, sign, request, csr 
+summary: SAVE控制器arrayManagementCSR命令會為控制器產生憑證簽署要求（CSR）。 
+---
+= 產生Web伺服器憑證簽署要求（CSR）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「最大控制器陣列管理CSR」命令會為控制器產生憑證簽署要求（CSR）。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 背景
+
+CSR必須由憑證授權單位（CA）簽署。產生的簽署憑證會安裝在控制器的Web伺服器上、以便瀏覽器在嘗試管理陣列時、能夠自動信任控制器的Web伺服器。針對每個控制器執行此動作。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save controller [(a|b)] arrayManagementCSR
+     commonName=pass:quotes["_ipOrDnsName_"]
+     [alternateIPAddresses=pass:quotes[(_ipvX1_..._ipvXN_)]]
+     [alternateDnsNames=pass:quotes[("_dnsName1_"..."_dnsNameN_")]]
+     organization=pass:quotes["_organizationName_"]
+     [organizationalUnit=pass:quotes["_organizationalUnitName_"]]
+     locality=pass:quotes["_cityOrLocality_"]
+     [stateProvince=pass:quotes["_stateOrRegion_"]]
+     country=pass:quotes["_string_"]
+     file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓您指定要在其上建立CSR的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+「commonName」
+ a| 
+可讓您指定控制器的IP位址或DNS名稱。這必須完全符合在瀏覽器中輸入的內容、才能存取System Manager（請勿包含http：//或https：//）、否則會出現名稱不符的錯誤。
+
+
+
+ a| 
+《AlternateIPAddresses》（《替代IP地址》）
+ a| 
+可讓您指定控制器的其他IP位址或別名。將所有IP位址括在括弧中。如果輸入多個IP位址、請以空格分隔。
+
+
+
+ a| 
+《alternateDnssames》
+ a| 
+可讓您指定控制器的其他DNS名稱。將所有DNS名稱括在括弧中。如果您輸入多個名稱、請以空格分隔。
+
+
+
+ a| 
+《組織》
+ a| 
+可讓您指定儲存陣列所屬組織的完整合法名稱。請勿將其縮寫、並加入任何後置字詞、例如INC、Corp或LLC。
+
+
+
+ a| 
+《組織單位》
+ a| 
+可讓使用者指定處理憑證的組織部門。
+
+
+
+ a| 
+《地方》
+ a| 
+可讓您指定儲存陣列所在的城市或位置。
+
+
+
+ a| 
+《州省》
+ a| 
+可讓您指定儲存陣列所在的狀態或區域。這不應縮寫。
+
+
+
+ a| 
+《國家》
+ a| 
+可讓您指定國家/地區的兩位數ISO（國際標準化組織）代碼、例如US。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定儲存控制器CSR檔案的檔案。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller [a] arrayManagementCSR
+   commonName="ictd0702s05c01-a.ict.englab.xyz.com"
+   alternateIPAddresses=(10.113.174.190 10.113.174.191)
+   alternateDnsNames=("ictd0702s05c01-b.ict.englab.xyz.com")
+   organization="Company"
+   locality="Wichita"
+   stateProvince="Kansas"
+   country="US"
+   file="C:\storage_array_csr.csr";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

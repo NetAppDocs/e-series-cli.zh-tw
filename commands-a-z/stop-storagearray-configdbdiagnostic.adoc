@@ -1,0 +1,58 @@
+---
+permalink: commands-a-z/stop-storagearray-configdbdiagnostic.html 
+sidebar: sidebar 
+keywords: stop, storage, array, configuration, database, diagnostic 
+summary: stop storageArray configDbDiagnostic命令會停止診斷測試、以驗證以start storageArray configDb診斷 命令啟動之控制器韌體中的組態資料庫。 
+---
+= 停止儲存陣列組態資料庫診斷
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「stop storageArray configDbDiagnostic」命令會停止診斷測試、以驗證以「Start storageArray configDbDiagnostic」命令啟動之控制器韌體中的組態資料庫。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+stop storageArray configDbDiagnostic
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+控制器韌體會傳回診斷測試已取消的確認訊息。
+
+此外、您也可以透過儲存管理軟體GUI來啟動資料庫組態診斷測試、不過您無法透過儲存管理軟體GUI來停止資料庫組態診斷測試。如果要停止執行中的診斷測試、您必須使用「stop storageArray configDbDiagnostic」命令。
+
+如果在驗證完儲存陣列組態之後、嘗試使用「stop storageArray configDbDiagnostic」命令、您將不會收到驗證完成的任何訊息。這是預期的行為。
+
+
+
+== 最低韌體層級
+
+7.75
+
+7.77精簡使用量。

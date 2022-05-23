@@ -1,0 +1,105 @@
+---
+permalink: commands-a-z/clear-asyncmirrorfault.html 
+sidebar: sidebar 
+keywords: clear, asynchronous mirroring, fault 
+summary: ClearasyncdMirrorFault命令可從一或多個非同步鏡射群組、以及一個或多個非同步鏡射群組成員磁碟區、清除非同步鏡射「ticky」故障。 
+---
+= 清除非同步鏡射故障
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「ClearasyncdMirrorFault」命令可從一或多個非同步鏡像群組和一或多個非同步鏡射群組成員磁碟區、清除非同步鏡射「sticky」故障。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+非同步鏡射群組及其成員磁碟區可能會遇到非同步鏡射「黏著」故障、這種故障發生在單一時間點、但不會影響鏡射的功能。必須審查這些類型的故障、但可能不需要變更組態。
+
+非同步鏡射群組及其成員磁碟區可能有或可能有多個相關的Sticky Fault。此命令會清除與非同步鏡射群組及其成員磁碟區相關的所有故障。但是、如果非同步鏡射群組發生故障、且其中一個成員磁碟區發生故障、則清除非同步鏡射群組上的故障並不會清除其成員磁碟區上的故障。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+clear asyncMirrorFault(all |
+asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]] |
+asyncMirrorGroups pass:quotes[[_"asyncMirrorGroupName1"
+... "asyncMirrorGroupNameN"_]] |
+volume pass:quotes[[_volumeName_]] |
+volumes pass:quotes[[_"volumeName1" ... "volumeNameN"_]])
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+全部
+ a| 
+如果您想要清除所有非同步鏡射群組和所有非同步鏡射群組成員磁碟區的所有非同步鏡射故障、請使用此參數。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要從中清除非同步鏡射故障的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《非yncdMirrorGroups》
+ a| 
+您想要清除非同步鏡射故障的數個非同步鏡射群組名稱。使用下列規則輸入非同步鏡射群組的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要從中清除非同步鏡射故障的特定成員磁碟區名稱（在非同步鏡射群組中）。將成員Volume名稱括在方括弧（[]）內。如果Volume名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您想要清除非同步鏡射故障的多個成員磁碟區（在非同步鏡射群組中）名稱。使用下列規則輸入成員磁碟區的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+|===
+
+
+== 最低韌體層級
+
+7.84

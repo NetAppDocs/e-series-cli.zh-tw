@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/reset-storagearray-hostportstatisticsbaseline.html 
+sidebar: sidebar 
+keywords: reset, storage array, host, port, statistics, baseline 
+summary: 重設storageArray hostPortStatisticsBaselisticsBaseline命令會重設儲存陣列主機連接埠統計資料基準。 
+---
+= 重設儲存陣列主機連接埠統計資料基準
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+"REset storageArray hostPortStatisticsBaselicesBaseline"命令會重設儲存陣列主機連接埠統計資料基準。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:reset-storagearray-ibstatsbaseline.adoc[重設儲存陣列InfiniBand統計資料基準]、 xref:reset-storagearray-iscsistatsbaseline.adoc[重設儲存陣列iSCSI基準]和 xref:reset-storagearray-iserstatsbaseline.adoc[重設儲存陣列iSER基準] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+reset storageArray hostPortStatisticsBaseline type=(ISCSI| ISER | SRP | NVMEOF)
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+類型
+ a| 
+可讓您指出要收集的統計資料類型。有效選擇包括：「iSCSI」、「iser」、「RP」和「NVMEOF」。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

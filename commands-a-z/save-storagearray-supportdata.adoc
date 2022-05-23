@@ -1,0 +1,527 @@
+---
+permalink: commands-a-z/save-storagearray-supportdata.html 
+sidebar: sidebar 
+keywords: save, storage, array, support, data 
+summary: SAVE storageArray supportData命令會將儲存陣列的支援相關資訊儲存到檔案中。 
+---
+= 儲存儲存陣列支援資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列supportData」命令會將儲存陣列的支援相關資訊儲存到檔案中。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+下表列出您可以收集的支援資料類型。
+
+[cols="2*"]
+|===
+| 資料類型 | 檔案名稱與說明 
+
+
+ a| 
+自動負載平衡統計資料
+ a| 
+「alb統計資料-A.txt」
+
+《ALB-統計資料》
+
+此檔案為每個控制器一個、可指定與自動負載平衡功能相關的各種統計資料、以便透過離線分析工具進行進一步分析。
+
+
+
+ a| 
+核心傾印中繼資料
+ a| 
+「all-coredume.xml」
+
+此檔案包含陣列的核心傾印中繼資料。
+
+[NOTE]
+====
+從8.25版開始、core-dump-info.xml已重新命名為all-coredume.xml。
+
+====
+
+
+ a| 
+系統狀態AutoSupport
+ a| 
+"autosupsupport.xml
+
+此檔案會指定特定陣列的ASUP目前狀態。
+
+
+
+ a| 
+這個歷史檔案AutoSupport
+ a| 
+「autosup-histore.xml」
+
+此檔案會針對AutoSupport 指定陣列指定所有ASUP訊息、包括標準訊息和不必要訊息。表格中的每個項目都對應於目前位於特定陣列其中一個儲存庫中的ASUP訊息。
+
+
+
+ a| 
+資訊記錄AutoSupport
+ a| 
+「asup傳輸記錄」
+
+此檔案包含所有傳輸AutoSupport 的資訊不全訊息。
+
+
+
+ a| 
+Web伺服器用戶端資訊
+ a| 
+「client-info.txt」
+
+此檔案會指定各種Web服務用戶端資訊。
+
+[NOTE]
+====
+此參數不適用於E2700和E5600陣列。
+
+====
+
+
+ a| 
+磁碟機纜線拓撲
+ a| 
+「connection.txt"此檔案包含磁碟機匣環境服務模組（ESM）與控制器配對之間的連線資訊。
+
+
+
+ a| 
+累積統計資料套裝組合
+ a| 
+「cumulative drive-vol-stats.xml」
+
+此檔案包含控制器的累積統計資料。
+
+
+
+ a| 
+磁碟機記錄功能不正常
+ a| 
+「控制器磁碟機錯誤事件記錄」
+
+此檔案包含儲存陣列控制器磁碟機端的錯誤和事件記錄訊息。
+
+
+
+ a| 
+控制器健全狀況映像中繼資料
+ a| 
+「all-coredume.xml」
+
+此檔案包含DPL控制器健全狀況映像資訊。
+
+[NOTE]
+====
+從8.25版開始、core-dump-info.xml已重新命名為all-coredume.xml。
+
+====
+
+
+ a| 
+控制器A的Domino 0日誌檔（僅限E2800或E5700）
+ a| 
+「Dom0-完整 日誌-A.7z」
+
+此檔案每個控制器一個、包含詳細的Linux系統記錄。這包括Linux套件的記錄、以及標準Linux公用程式和服務。
+
+
+
+ a| 
+控制器B的Domino 0日誌檔（僅限E2800或E5700）
+ a| 
+《Dom0-完整 日誌》
+
+此檔案每個控制器一個、包含詳細的Linux系統記錄。這包括Linux套件的記錄、以及標準Linux公用程式和服務。
+
+
+
+ a| 
+控制器A的其他DOM 0記錄檔（僅限E2800或E5700）
+ a| 
+「Dom0-misc-logs-A.7z」
+
+此檔案為每個控制器一個、包含日誌中無法包含的系統記錄。其中包括RAID應用程式的序列記錄檔、以及Hypervisor的偵錯記錄檔。
+
+
+
+ a| 
+控制器B的其他DOM 0記錄檔（僅限E2800或E5700）
+ a| 
+「Dom0-misc-logs-B.7z」
+
+此檔案為每個控制器一個、包含日誌中無法包含的系統記錄。其中包括RAID應用程式的序列記錄檔、以及Hypervisor的偵錯記錄檔。
+
+
+
+ a| 
+磁碟機命令逾時值
+ a| 
+「Drive-command-老化-timeout.txt'此檔案包含每個磁碟機命令逾時欄位的預設值和目前值。
+
+
+
+ a| 
+磁碟機健全狀況記錄
+ a| 
+「Drive-heite-data.bin」此檔案包含與磁碟機健全狀況相關的各種磁碟機資訊。
+
+[NOTE]
+====
+此檔案為二進位檔案、需要離線剖析器才能轉換為人類可讀取的格式。
+
+====
+
+
+ a| 
+磁碟機效能分析器資料
+ a| 
+「Drive-formation-log.txt」
+
+此檔案包含磁碟機效能資料、可協助您識別任何效能低於預期的磁碟機。
+
+
+
+ a| 
+企業管理視窗組態
+ a| 
+《emwdata_v04.bin》
+
+此檔案包含EMW組態資料儲存區檔案。
+
+[NOTE]
+====
+在E2800和E5700的支援套裝組合中、此檔案不存在。
+
+====
+
+
+ a| 
+匣事件記錄
+ a| 
+「Expansite-ter-log.txt」
+
+ESM事件記錄。
+
+
+
+ a| 
+儲存庫分析失敗
+ a| 
+「故障儲存庫分析」
+
+此檔案包含失敗的儲存庫分析資訊。
+
+
+
+ a| 
+儲存陣列的功能
+ a| 
+「feature-bunder.txt」此檔案包含儲存陣列中允許的磁碟區、磁碟機和磁碟機匣數量清單、以及可用功能及其限制的清單。
+
+
+
+ a| 
+韌體庫存
+ a| 
+「韌體庫存」。此檔案包含儲存陣列中所有元件的所有韌體版本清單。
+
+
+
+ a| 
+InfiniBand介面統計資料（僅限InfiniBand）
+ a| 
+《IB-Statistics》（IB統計資料）
+
+此檔案包含InfiniBand介面統計資料。
+
+
+
+ a| 
+I/O路徑統計資料
+ a| 
+「IO-path-Statistics .7z」此檔案包含每個控制器的原始效能資料、可用來分析應用程式效能問題。
+
+
+
+ a| 
+主機介面晶片的IOC傾印資訊
+ a| 
+「IOC-dump資訊」此檔案包含主機介面晶片的IOC傾印資訊。
+
+
+
+ a| 
+主機介面晶片的IOC傾印記錄檔
+ a| 
+「IOC-dump。gz」此檔案包含控制器主機介面晶片的記錄傾印。檔案會以gz格式壓縮。壓縮檔會儲存為客戶支援產品組合內的檔案。
+
+
+
+ a| 
+iSCSI連線（僅限iSCSI）
+ a| 
+「iscso-site-connections。」此檔案包含目前所有iSCSI工作階段的清單。
+
+
+
+ a| 
+iSCSI統計資料（僅限iSCSI）
+ a| 
+「iSCSI-Statistics」（iSCSI統計資料）。此檔案包含乙太網路媒體存取控制（MAC）、乙太網路傳輸控制傳輸協定（TCP）/網際網路傳輸協定（IP）和iSCSI目標的統計資料。
+
+
+
+ a| 
+iser介面統計資料（僅適用於InfiniBand上的iSER）
+ a| 
+「iser統計資料」。此檔案包含在InfiniBand上執行iSER的主機介面卡統計資料。
+
+
+
+ a| 
+主要事件記錄
+ a| 
+「major EVEN-log.txt'此檔案包含儲存陣列上發生的事件詳細清單。此清單儲存在儲存陣列磁碟上的保留區中。清單會記錄儲存陣列中的組態事件和元件故障。
+
+
+
+ a| 
+資訊清單檔案
+ a| 
+"Marifest.xml
+
+此檔案包含一個表格、說明歸檔檔案中包含的檔案、以及每個檔案的收集狀態。
+
+
+
+ a| 
+儲存管理軟體執行時間資訊
+ a| 
+「mSW-rime-info.txt」
+
+此檔案包含儲存管理軟體應用程式執行時間資訊。包含儲存管理軟體目前使用的JRE版本。
+
+
+
+ a| 
+NVMe統計資料
+ a| 
+「nvme-o統計 資料」
+
+此檔案包含統計資料清單、包括NVMe控制器統計資料、NVMe佇列統計資料、以及傳輸傳輸傳輸傳輸傳輸傳輸傳輸傳輸協定（例如InfiniBand）的介面統計資料。
+
+
+
+ a| 
+NVSRAM.資料
+ a| 
+nvsram-data.txt'此控制器檔案會指定控制器的預設設定。
+
+
+
+ a| 
+物件套裝組合
+ a| 
+「物件搭售」。bin'object-bunde'.json
+
+此套裝組合包含儲存陣列及其元件狀態的詳細說明、在產生檔案時有效。
+
+
+
+ a| 
+摘要效能統計資料
+ a| 
+"perf-stat-dite-ap概要-a.csv""perf-stat-dite-sape-b.csv"
+
+此檔案包含各種控制器效能統計資料、每個控制器一個檔案。
+
+
+
+ a| 
+持續保留與登錄
+ a| 
+"永久性 保留區.txt"此檔案包含儲存陣列上的詳細磁碟區清單、其中包含持續保留和登錄。
+
+
+
+ a| 
+儲存管理軟體使用者偏好
+ a| 
+「pref-01.bin」
+
+此檔案包含使用者偏好設定的持續資料存放區。
+
+[NOTE]
+====
+在E2800或E5700的支援套裝組合中、此檔案不存在。
+
+====
+
+
+ a| 
+恢復大師程序
+ a| 
+「recure-gurer-Procedures。html」此檔案包含所有針對儲存陣列偵測到的問題而發行的恢復大師主題的詳細清單。對於E2800和E5700陣列、此檔案僅包含Recovery guru詳細資料、而非HTML檔案。
+
+
+
+ a| 
+恢復設定檔
+ a| 
+「recovery設定檔」。此檔案包含最新恢復設定檔記錄和歷史資料的詳細說明。
+
+
+
+ a| 
+SAS實體層錯誤記錄
+ a| 
+「as、phy、error-logs.csv"
+
+此檔案包含SAS實體層的錯誤資訊。
+
+
+
+ a| 
+狀態擷取資料
+ a| 
+「tate-capte-data.txt」此檔案包含儲存陣列目前狀態的詳細說明。
+
+
+
+ a| 
+儲存陣列組態
+ a| 
+「torage-array-configuration．cfg」此檔案包含儲存陣列上邏輯組態的詳細說明。
+
+
+
+ a| 
+儲存陣列設定檔
+ a| 
+「torage-array-profile」。此檔案包含儲存陣列所有元件和內容的說明。
+
+
+
+ a| 
+追蹤緩衝區內容
+ a| 
+"trace-buffer.7z"此檔案包含用於記錄偵錯資訊的控制器追蹤緩衝區內容。
+
+
+
+ a| 
+匣擷取資料
+ a| 
+「紙匣元件狀態擷取.7z」如果您的紙匣含有藥櫃、診斷資料會歸檔在此壓縮檔案中。Zip檔案包含每個包含抽屜的匣的個別文字檔。Zip檔案會儲存為客戶支援產品組合內的檔案。
+
+
+
+ a| 
+無法讀取的磁區
+ a| 
+「Unread-sectors.txt」此檔案包含已記錄至儲存陣列之所有無法讀取磁區的詳細清單。
+
+
+
+ a| 
+Web服務追蹤記錄（僅限E2800或E5700）
+ a| 
+「web-server-trace-log-A.7z」
+
+《web-server-trace-log-B.7z》
+
+此檔案每個控制器一個、包含用於記錄偵錯資訊的Web服務追蹤緩衝區。
+
+
+
+ a| 
+工作負載擷取分析記錄檔
+ a| 
+《WLC分析》（WLC分析）-a.lz4》（WLC分析）-b.lz4
+
+此檔案為每個控制器一個、包含計算後的主要工作負載特性、例如LBA長條圖、讀寫比率、以及所有作用中磁碟區的I/O處理量。
+
+
+
+ a| 
+X-header資料檔案
+ a| 
+「x-heit-data.txt" AutoSupport 此資訊標題由純文字金鑰值配對組成、其中包含陣列和訊息類型的相關資訊。
+
+|===
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray supportData file=pass:quotes["_filename_"] [force=(TRUE | FALSE)]
+----
+[listing, subs="+macros"]
+----
+save storageArray supportData file=pass:quotes["_filename_"]
+[force=(TRUE | FALSE) |
+csbSubsetid=(basic | weekly | event | daily | complete) |
+csbTimeStamp=pass:quotes[_hh:mm_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存儲存儲存陣列支援相關資料的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\supdat.7z"」
+
+
+
+ a| 
+《力量》
+ a| 
+如果控制器作業上的鎖定有任何故障、此參數會強制收集支援資料。若要強制收集支援資料、請將此參數設為「true」。預設值為「假」。
+
+|===
+
+
+== 附註
+
+從韌體層級7.86開始、在執行Windows的系統上、副檔名必須為「.7z」。如果您在Windows系統上執行的韌體版本早於7.86、則副檔名必須為「.Zip」。在未執行Windows的系統上、您可以使用適用於您系統的任何副檔名。
+
+
+
+== 最低韌體層級
+
+7.80新增「force」參數。
+
+8.30新增E2800儲存陣列的資訊。

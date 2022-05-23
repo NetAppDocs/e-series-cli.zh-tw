@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/add-volume-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: add volume, asynchronous, mirror group, supported arrays, roles, context, syntax, parameter, minimum firmware level 
+summary: add volume asyncdMirrorGroup命令會將主磁碟區新增至非同步鏡射群組。 
+---
+= 將Volume新增至非同步鏡射群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「add volume asyncdMirrorGroup」命令會將主要磁碟區新增至非同步鏡射群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。
+
+====
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+此命令僅在包含要新增主要Volume之非同步鏡射群組的本機儲存陣列上有效。非同步鏡射群組具有儲存庫磁碟區、可用來儲存非同步鏡射群組中所有時間點映像的資料。非同步鏡射群組中的每個主要磁碟區都在遠端儲存陣列上具有對應的鏡射磁碟區。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[add volume="_volumeName_" asyncMirrorGroup="_asyncMirrorGroupName_"
+remotePassword="_password_"
+(repositoryVolume="repos_xxxx" |
+repositoryVolume=(_volumeGroupName_ ]pass:quotes[[capacity=_capacityValue_])]
+repositoryVolume=pass:quotes[(_diskPoolName_] pass:quotes[[capacity=_capacityValue_]))
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+要新增至非同步鏡射群組的主要Volume名稱。將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+非同步鏡射群組的名稱、該群組將包含您要新增的主要磁碟區。將非同步鏡射群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「即時密碼」
+ a| 
+此參數為選用項目。當遠端儲存陣列受到密碼保護時、請使用此參數。將密碼括在雙引號（""）內。
+
+
+
+ a| 
+「repositoryVolume」
+ a| 
+儲存庫磁碟區的名稱、該磁碟區將包含從主要磁碟區所變更的資料。
+
+您有兩個選項可以定義儲存庫Volume的名稱：
+
+* 使用現有的儲存庫Volume：名稱。
+* 執行此命令時、請建立新的儲存庫Volume。
+
+
+現有儲存庫磁碟區的名稱由兩部分組成：
+
+* 詞彙錯誤
+* 儲存管理軟體指派給儲存庫Volume名稱的四位數數字識別碼。
+
+
+將現有儲存庫磁碟區的名稱以雙引號（""）括住。
+
+若要在執行此命令時建立新的儲存庫磁碟區、您必須輸入要儲存庫磁碟區的磁碟區群組或磁碟集區名稱。或者、您也可以定義儲存庫Volume的容量。如果您想要定義容量、可以使用下列值：
+
+* 整數值、代表基本Volume容量的百分比。
+* 表示基本Volume容量百分比的小數位值。
+* 儲存庫磁碟區的特定大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+如果您未定義容量、儲存管理軟體會將容量設定為主Volume容量的20%。
+
+儲存管理軟體會建立儲存庫磁碟區、並將儲存庫磁碟區連結至主要磁碟區。
+
+|===
+
+
+== 附註
+
+* 非同步鏡射功能必須在將用於鏡射活動的本機和遠端儲存陣列上啟用和啟動。
+* 本機與遠端儲存陣列必須透過適當的光纖通道架構或iSCSI介面來連接。
+* 遠端儲存陣列的容量必須大於或等於本機儲存陣列上主要磁碟區的容量。遠端儲存陣列上的磁碟區將作為鏡射磁碟區使用。
+
+
+
+
+== 最低韌體層級
+
+7.84

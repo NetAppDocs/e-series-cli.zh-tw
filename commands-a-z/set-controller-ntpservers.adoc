@@ -1,0 +1,135 @@
+---
+permalink: commands-a-z/set-controller-ntpservers.html 
+sidebar: sidebar 
+keywords: set, controller, ntp 
+summary: set控制器NTPServers命令會設定控制器的NTP設定、以便控制器使用SNTP（簡易網路時間傳輸協定）、自動將時鐘與外部主機同步。 
+---
+= 設定控制器NTP設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Set Controller NTPServers」（設定控制器NTPServers）命令可設定控制器的NTP設定、讓控制器能夠使用SNTP（簡易網路時間傳輸協定）、自動將時鐘與外部主機同步。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+啟用此功能時、控制器會定期查詢已設定的NTP伺服器、然後使用結果來更新其內部時間時鐘。如果只有一個控制器啟用NTP、則替代控制器會定期與啟用NTP的控制器同步時鐘。如果兩個控制器都未啟用NTP、則控制器會定期同步時鐘。
+
+[NOTE]
+====
+此命令是控制器專屬的。不需要在兩個控制器上設定NTP、但這樣做可改善陣列在硬體或通訊故障時保持同步的能力。
+
+====
+[NOTE]
+====
+如果您使用完整網域名稱來設定NTP、您也必須在這些控制器上設定DNS、才能成功執行此作業。請參閱 xref:set-controller-dnsservers.adoc[設定控制器DNS設定] 以取得更多資訊。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+您要變更NTP設定的控制器。有效的控制器識別碼為a或b.
+
+
+
+ a| 
+《NTPServers》（NTPServers）
+ a| 
+此參數可設定控制器的NTP伺服器。
+
+* 指定「停用」以關閉NTP支援。
+* 指定「自動」以使用DHCP伺服器提供的NTP伺服器位址。
++
+[NOTE]
+====
+僅當控制器上至少有一個管理連接埠設定為透過DHCP取得介面參數、且DHCP伺服器上至少設定了一個NTP伺服器時、才應使用此選項。
+
+====
+* 否則、請指定一個或兩個NTP伺服器的空白分隔清單。位址可以是網域名稱、IPv4位址或IPv6位址。如果指定多個位址、則不需要相符的位址類型。如果指定多個位址、則會依照指定的順序使用（第一個為主要位址、第二個為備份）。
+
+
+[NOTE]
+====
+以引號括住NTP伺服器名稱、如範例一節所示。
+
+====
+
+
+ a| 
+「地址」
+ a| 
+「網域名稱」| IPv6位址| IPv6位址
+
+[NOTE]
+====
+如果指定網域名稱、則DNS伺服器也必須設定為允許控制器解析伺服器IP位址。
+
+====
+
+
+ a| 
+"KeyIdentifier"（金鑰識別碼）
+
+《通關密碼》
+ a| 
+或者、這些參數會提供用於啟用NTP驗證的金鑰認證：
+
+* 「金鑰識別碼」是介於0到65535.之間的整數。
+* 「KeyType」是下列其中一項：「NONE」、「sha1」、「sh224」、「sh256」、「sh384」或「sh512」。
+* 「通關密碼」可為六進位數字（0-9、允許使用a-f）、長度恰好40位元的字串型、或長達20個位元組的英數字元字串。
+
+
+|===
+
+
+== 範例
+
+[listing]
+----
+set controller[a] NTPServers=disabled;
+set controller[a] NTPServers=auto;
+set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+----
+
+
+== 最低韌體層級
+
+8.25
+
+8.42新增NTP驗證的金鑰認證參數。

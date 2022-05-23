@@ -1,0 +1,49 @@
+---
+permalink: commands-a-z/clear-storagearray-firmwarependingarea.html 
+sidebar: sidebar 
+keywords: clear, storage array, firmware, pending, area 
+summary: ClearstorageArray firmwarePendingArea命令會刪除先前從擱置區域緩衝區下載的韌體映像或NVSRAM數值。 
+---
+= 清除儲存陣列韌體擱置區域
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「ClearstorageArray firmwarePendingArea」命令會刪除先前從擱置區域緩衝區下載的韌體映像或NVSRAM數值。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+*可能會損壞儲存陣列組態*：執行此命令後、儲存陣列中現有擱置區域的內容即會刪除。
+
+====
+
+
+== 語法
+
+[listing]
+----
+clear storageArray firmwarePendingArea
+----
+
+
+== 參數
+
+無。

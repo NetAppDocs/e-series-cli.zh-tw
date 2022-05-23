@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/show-storagearray-directoryservices-summary.html 
+sidebar: sidebar 
+keywords: show, storage, array, directory, services, summary 
+summary: show storageArray directoryServices摘要命令會顯示目錄服務組態摘要。 
+---
+= 顯示儲存陣列目錄服務摘要
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray Directory Services Summary」命令會顯示目錄服務組態摘要。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+show storageArray directoryServices summary
+----
+
+
+== 參數
+
+無。
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "show storageArray directoryServices summary;"
+
+Directory Servers:
+  DomainId1
+    Domain name(s): company.com, name2, name3
+    Server URL: ldaps://hqldap.test.eng.company.com:636
+    Bind account: CN=prnldap,OU=securedsvcaccounts,OU=systemaccounts,DC=hq,DC=company,DC=com
+    Bind password: ******
+    Login base: %s@company.com
+    Search base DN: OU=_Users,DC=hq,DC=company,DC=com
+    Username attribute: sAMAccountName
+    Group attribute(s): memberOf, attributeX
+    Default role: Monitor
+    Roles Mapping
+      Group DN
+      CN=ng-hsg-bc-madridsecurity,OU=Managed,OU=CompanyGroups,DC=hq,DC=company,DC=com
+        Roles
+        storage.monitor, security.admin, storage.admin
+      Group DN
+      OU=Managed,OU=CompanyGroups,DC=hq,DC=company,DC=com
+        Roles
+        storage.monitor
+  DomainId2
+    Domain name(s): aj.MadridSecurity
+    Server URL: ldap://10.113.90.166:389
+    Search base DN: CN=Users,DC=aj,DC=madridsecurity
+    Username attribute: sAMAccountName
+    Group attribute(s): memberOf
+    Default role: None
+    Roles Mapping
+      Group DN
+      CN=Administrators,CN=Builtin,DC=aj,DC=MadridSecurity
+        Roles
+        storage.monitor, storage.admin
+
+SMcli completed successfully.
+----

@@ -1,0 +1,122 @@
+---
+permalink: commands-a-z/delete-volume.html 
+sidebar: sidebar 
+keywords: delete, volume, command, one, standard, volume, supported, array, role 
+summary: 刪除Volume命令會刪除一或多個標準Volume。 
+---
+= 刪除Volume
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除Volume」命令會刪除一或多個標準磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+*可能會損壞儲存陣列組態*-當您執行此命令時、磁碟區中的所有資料都會遺失。
+
+====
+[NOTE]
+====
+當磁碟區超過指定大小（目前為128 TB）時、會在背景執行刪除、且可用空間可能無法立即使用。
+
+====
+
+
+== 語法
+
+[listing]
+----
+delete (allVolumes) |
+volume [volumeName] |
+volumes [volumeName1 ... volumeNameN]
+[removeVolumeGroup=(TRUE | FALSE)]
+[force=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數會刪除儲存陣列中的所有磁碟區。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要刪除的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果磁碟區名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住磁碟區名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要刪除的多個Volume名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+如果磁碟區名稱包含特殊字元或僅包含數字、請使用下列規則輸入名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+「實作Volume Group」
+ a| 
+刪除Volume群組中的最後一個Volume並不會刪除Volume群組。您可以擁有獨立的Volume群組（減去任何Volume）。若要移除獨立的Volume群組、請將此參數設為「true」。若要保持獨立Volume群組不變、請將此參數設為「假」。
+
+
+
+ a| 
+《力量》
+ a| 
+使用此參數可強制立即刪除磁碟區、即使控制器正在執行其他作業。若要立即強制刪除Volume、請將此參數設為「true」。若要等到控制器完成其他作業、請勿使用此參數或將此參數設為「假」。
+
+|===
+
+
+== 附註
+
+當您使用「allVolumes」參數時、此命令會刪除磁碟區、直到移除所有磁碟區或發生錯誤為止。如果發生錯誤、此命令不會嘗試刪除剩餘的磁碟區。可以從不同的Volume群組刪除Volume。如果您將「恢復Volume Group」參數設為「true」、則會刪除變成空白的所有Volume群組。
+
+如果要刪除整個Volume群組、也可以使用「刪除volumeGroup」命令。
+
+
+
+== 最低韌體層級
+
+6.10.
+
+7.10新增了「移至Volume Group」參數。

@@ -1,0 +1,154 @@
+---
+permalink: get-started/new-https-mode.html 
+sidebar: sidebar 
+keywords: new, smcli, https mode 
+summary: 新的SMcli可在https模式下運作、提供額外的安全功能。 
+---
+= SMcli https模式
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+SMcli可在提供額外安全功能的「* https *」模式下運作。
+
+[NOTE]
+====
+如果您目前使用SANtricity 的是版本不支援的版本、則無法SANtricity 透過舊版CLI升級至最新版本的版本。只能透過SMcli執行從Synops11.52升級SANtricity 到更新版本的升級。
+
+====
+當您使用11.42版的CLI時、指令碼引擎會以下列其中一種模式建立：
+
+* 「https」是指建立以REST為基礎的指令碼引擎、並提供額外的安全功能。
+* '* symbol *（*符號*）-建立符號型指令碼引擎。
+
+
+「* https *」用戶端提供的新安全功能：
+
+* 進階安全性需要使用信任的憑證來驗證憑證。您可以使用「-k」選項來使用自我簽署的憑證、並在不安全模式下執行命令。
+* 您可以使用角色型存取管理、並將不同的安全權限指派給不同的角色。使用「-u」選項來執行含有使用者名稱引數的命令。
+* 先前以「*符號*」模式提供的密碼引數、也可在「* https *」模式中使用、以指定特定使用者角色的密碼。"-p"選項用於指定命令列上的密碼、或是"-P"選項可從檔案或"stin"讀取密碼。
+
+
+本主題中有幾個範例可協助說明新的命令列參數：
+
+
+
+== 需要密碼、https用戶端模式、信任憑證的作業會安裝在陣列上
+
+在下列範例中、會同時提供使用者名稱和密碼選項、而且陣列上會安裝信任的憑證。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 需要密碼、https用戶端模式、且陣列上未安裝信任的憑證的作業
+
+在下列範例中、使用者名稱和密碼選項都會提供、但陣列上並未安裝信任的憑證、而且不會使用「-k」選項。範例顯示傳回的輸出。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;"
+
+Unable to establish a secure connection to the storage array as we were unable to confirm the connection is secure.
+Please configure the storage array to use a trusted security certificate. If the problem persists, contact Technical Support.
+
+SMcli failed.
+----
+
+
+== 作業需要密碼、https用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證
+
+在下列範例中、如同前述範例、會同時提供使用者名稱和密碼選項、但陣列上不會安裝信任的憑證。但是在這種情況下、使用「-k」選項來使用自我簽署的憑證。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "set storageArray cacheBlockSize=4;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+----
+在此範例中、使用「*符號*」用戶端模式時、只需輸入密碼選項、即可成功完成命令。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -p adminPassword -c "set storageArray cacheBlockSize=4;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 唯讀作業、符號用戶端模式
+
+在此範例中、在「* symbol *」用戶端模式中、不會提供使用者名稱或密碼。只有在唯讀作業中才能成功完成此作業。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1  -c "show allVolumes;"
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+STANDARD/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----
+
+
+== 唯讀作業、http用戶端模式
+
+在以下範例中、也使用唯讀作業、但在「* https *」用戶端模式中、使用者名稱和密碼都是必要的、並提供「-k」來接受自我簽署的憑證。「* https *」用戶端模式即使是唯讀作業也需要密碼。
+
+[listing]
+----
+C:\Program Files\StorageManager\client>SMcli -n Array1 -u admin@local -p adminPassword -c "show allVolumes;" -k
+Performing syntax check...
+
+Syntax check complete.
+
+Executing script...
+
+THICK/THIN VOLUMES------------------------------
+
+   Number of volumes: 0
+Missing Volumes
+
+   Number of missing volumes: 0
+
+
+Script execution complete.
+
+SMcli completed successfully.
+----

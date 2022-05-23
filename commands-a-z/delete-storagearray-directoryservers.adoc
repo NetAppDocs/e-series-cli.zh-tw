@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/delete-storagearray-directoryservers.html 
+sidebar: sidebar 
+keywords: delete, storage, array, directory, servers, command, allow, directory, role 
+summary: 刪除storageArray directoryServers命令可讓您刪除一或多個目錄伺服器。 
+---
+= 刪除儲存陣列目錄伺服器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+您可以使用「刪除storageArray directoryServers」命令刪除一或多個目錄伺服器。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete storageArray (allDirectoryServers |
+ directoryServers ["_domainId1_" ... "_domainIdN_"])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"alldirectoryServers"
+ a| 
+可讓您刪除所有目錄伺服器。
+
+
+
+ a| 
+《DirecdirectoryServers》（目錄伺服器）
+ a| 
+可讓您指定一或多個要刪除的目錄伺服器、每個伺服器都以網域ID識別。
+
+[NOTE]
+====
+將ID括在方括弧中（[]）。如果您提供多個、請用空格分隔。
+
+====
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "delete storageArray directoryServers ["domain1" "domain3"];"
+
+SMcli -n Array1 -c "delete storageArray allDirectoryServers;"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40新增命令。

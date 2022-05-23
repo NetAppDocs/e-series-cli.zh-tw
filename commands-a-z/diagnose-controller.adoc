@@ -1,0 +1,121 @@
+---
+permalink: commands-a-z/diagnose-controller.html 
+sidebar: sidebar 
+keywords: diagnose, controller, command, run, diagnostic, tests, arrays, roles, context 
+summary: 診斷控制器命令會在控制器上執行診斷測試。 
+---
+= 診斷控制器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「診斷控制器」命令會在控制器上執行診斷測試。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+診斷測試包含回送測試、其中資料會寫入磁碟機並從磁碟機讀取。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+diagnose controller [(a| b)]
+loopbackDriveChannel=(allchannels | (1 | 2 | 3 | 4 | 5 | 6 | 7 | 8))
+testID=(1 | 2 | 3 | discreteLines)
+pass:quotes[[patternFile="_filename_"]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+您要在其中執行診斷測試的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。如果未指定控制器、儲存管理軟體會傳回語法錯誤。
+
+
+
+ a| 
+「LoobackDriveChannel」
+ a| 
+您要執行診斷測試的磁碟機通道。您可以選擇在所有通道上執行診斷、或是選擇要執行診斷的特定通道。如果您選擇特定通道、磁碟機通道的有效值為「1」、「2」、「3」、「4」、「5」、 6、7或8。
+
+
+
+ a| 
+《testID》
+ a| 
+您要執行之診斷測試的識別碼。識別碼及對應測試如下：
+
+* 「1」——讀取測試
+* 「2」—寫入測試
+* 「3」—資料迴圈測試
+* 「Discrete Lines」——獨立線路診斷測試
+
+
+
+
+ a| 
+「模式檔案」
+ a| 
+檔案路徑和檔案名稱、其中包含您要做為測試資料的資料模式。將資料模式的檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/sup\patfile.txt"」
+
+|===
+
+
+== 附註
+
+執行資料迴圈測試時、您可以選擇性地指定包含資料模式的檔案。如果您未指定檔案、控制器韌體會提供預設模式。
+
+獨立線路是控制器匣中兩個控制器之間連接的控制線路和狀態列獨立線路診斷測試可讓每個控制器檢查控制訊號轉換是否可在備用控制器的控制輸入處觀察。每次關機循環或每次控制器重設後、獨立線路診斷測試都會自動執行。您可以在更換未通過初始獨立線路診斷測試的元件之後、執行獨立線路診斷測試。獨立線路診斷測試會傳回下列其中一項訊息：
+
+* 當獨立線路診斷測試成功執行時、會出現以下訊息：
++
+[listing]
+----
+The controller discrete lines successfully passed the diagnostic
+test. No failures were detected.
+----
+* 如果獨立線路診斷測試失敗、則會顯示以下訊息：
++
+[listing]
+----
+One or more controller discrete lines failed the diagnostic test.
+----
+* 如果CLI無法執行獨立線路診斷測試、CLI會傳回錯誤270、表示無法啟動或完成分離線路診斷測試。
+
+
+
+
+== 最低韌體層級
+
+6.10新增讀取測試、寫入測試及資料迴圈測試。
+
+6.14新增獨立線路診斷測試。
+
+7.30新增更新的磁碟機通道識別碼。

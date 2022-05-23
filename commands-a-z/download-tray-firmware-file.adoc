@@ -1,0 +1,94 @@
+---
+permalink: commands-a-z/download-tray-firmware-file.html 
+sidebar: sidebar 
+keywords: download, tray, firmware, file, command, environmental, service, module, array, role, context 
+summary: 下載匣韌體檔案命令會下載環境服務模組（ESM）韌體。 
+---
+= 下載環境卡韌體
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+'Downloading tray flex韌 體file'命令會下載環境服務模組（ESM）韌體。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 背景
+
+[IMPORTANT]
+====
+在由System Manager管理的雙工系統（例如E2800）上、控制器上執行的IOM自動同步服務會自動將IOM韌體與SANtricity 載入控制器之更新版本（包含在更新套件中的版本）同步。如果您不想要還原IOM韌體、使其與控制器上載入的版本相符、則必須停用此服務。IOM自動同步服務可使用System Manager或REST API暫停。暫停此服務時、請注意保持啟用自動同步功能、可確保IOM韌體保持在最新狀態。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+download (allTrays | tray [trayID])
+pass:quotes[firmware file="_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allTrays》
+ a| 
+此參數會將新韌體下載至儲存陣列中的所有相容磁碟匣。您選取的韌體套件會決定哪些紙匣相容。跳過不相容的紙匣。未顯示關於不相容的紙匣的錯誤訊息。
+
+
+
+ a| 
+"紙匣"
+ a| 
+包含要載入新韌體之ESM卡的磁碟機匣。紙匣ID值為0至99。將紙匣ID值括在方括弧（[]）內。
+
+[NOTE]
+====
+紙匣ID中不能有前置零。例如、如果顯示的紙匣ID為「02」、則此命令會要求將其指定為「2」、而非「02」。
+
+====
+
+
+ a| 
+檔案
+ a| 
+包含韌體映像之檔案的檔案路徑和檔案名稱。將韌體映像的檔案路徑和檔名括在雙引號（""）內。例如：
+
+「file=」C:\Program Files\CLi\dnld\esmfrm.esm"`
+
+有效的檔案名稱副檔名為「.ESm」。
+
+|===
+
+
+== 附註
+
+「tray」參數會將新韌體下載至特定的磁碟機匣如果您需要將新韌體下載到多個磁碟機匣、但不是所有的磁碟機匣、則必須針對每個磁碟機匣輸入此命令
+
+
+
+== 最低韌體層級
+
+5.20

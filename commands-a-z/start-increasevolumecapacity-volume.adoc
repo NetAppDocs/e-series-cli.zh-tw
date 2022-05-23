@@ -1,0 +1,101 @@
+---
+permalink: commands-a-z/start-increasevolumecapacity-volume.html 
+sidebar: sidebar 
+keywords: increase, capacity, volume, disk pool, volume, group 
+summary: 「增加磁碟容量」命令可增加磁碟集區或磁碟區群組中標準磁碟區或儲存庫磁碟區的容量。 
+---
+= 增加磁碟集區或磁碟區群組中的磁碟區容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「最大容量Volume」命令可增加磁碟集區或磁碟區群組中標準磁碟區或儲存庫磁碟區的容量。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+在此命令中、標準Volume也稱為厚Volume。
+
+[NOTE]
+====
+您無法使用此命令來增加精簡磁碟區的容量。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start increaseVolumeCapacity volume="_volumeName_"
+incrementalCapacity=_volumeCapacity_]
+[addDrives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_)]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+磁碟集區或磁碟區群組中要增加容量的磁碟區名稱。將磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+《Incred思維 能力》
+ a| 
+用於增加磁碟區儲存大小（容量）的設定。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。預設值為「位元組」。
+
+
+
+ a| 
+《附加磁碟機》
+ a| 
+將新磁碟機新增至磁碟區的設定。對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
+
+所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800和E5700控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。
+
+將紙匣ID值、藥櫃ID值和插槽ID值括在方括弧（[]）中。
+
+[NOTE]
+====
+「addDrives」參數只能用來增加磁碟區群組的容量。此參數無法用於增加磁碟集區的容量。
+
+====
+|===
+
+
+== 附註
+
+在某些情況下、命令語法的「drive」參數可能會顯示為有效輸入。不過、您無法使用這個命令的「drive」參數。
+
+設定「IncredationCapacity」參數時、會啟動一項無法停止的長時間執行作業。長時間執行的作業會在背景執行、不會妨礙您執行其他命令。若要顯示長期執行作業的進度、請使用「show volume actionProgress」命令。
+
+「addDrives」參數同時支援大容量磁碟機匣和低容量磁碟機匣。大容量磁碟機匣具有可容納磁碟機的抽屜。從磁碟機匣中滑出抽取器、以便存取磁碟機。低容量磁碟機匣沒有抽屜。對於大容量磁碟機匣、您必須指定磁碟機匣的識別碼（ID）、匣的識別碼、以及磁碟機所在插槽的識別碼。對於低容量磁碟機匣、您只需要指定磁碟機匣的ID、以及磁碟機所在插槽的ID。對於低容量磁碟機匣、識別磁碟機位置的另一種方法是指定磁碟機匣的ID、將抽取匣的ID設為「0」、然後指定磁碟機所在插槽的ID。
+
+
+
+== 最低韌體層級
+
+7.83

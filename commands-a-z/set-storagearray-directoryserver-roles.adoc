@@ -1,0 +1,103 @@
+---
+permalink: commands-a-z/set-storagearray-directoryserver-roles.html 
+sidebar: sidebar 
+keywords: set, storage, array, directory, server, role, map 
+summary: set storageArray directoryServer role命令可讓您定義指定目錄伺服器的角色對應。這些角色對應用於驗證嘗試執行各種SMcli命令的使用者。 
+---
+= 設定儲存陣列目錄伺服器角色對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「show storageArray directoryServer role」命令、您可以定義指定目錄伺服器的角色對應。這些角色對應用於驗證嘗試執行各種SMcli命令的使用者。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 您的需求
+
+下列角色可供對應：
+
+* *儲存設備管理*-對儲存物件（例如磁碟區和磁碟集區）的完整讀寫存取權、但無法存取安全性組態。
+* *安全管理*：存取存取管理、憑證管理、稽核記錄管理中的安全組態、以及開啟或關閉舊版管理介面（符號）的功能。
+* *支援admin*：存取儲存陣列上的所有硬體資源、故障資料、MEL事件及控制器韌體升級。無法存取儲存物件或安全性組態。
+* *監控*-對所有儲存物件的唯讀存取、但無法存取安全性組態。
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set storageArray directoryServer pass:quotes[["_domainId_"]]
+    groupDN=pass:quotes["_groupDistinguishedName_"] roles=pass:quotes[("_role1_"..."_roleN_")]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"DirecdirectoryServer"
+ a| 
+可讓您依網域的ID來指定要設定其角色對應的網域。
+
+
+
+ a| 
+"GroupDN"
+ a| 
+可讓您指定要新增至對應清單的群組辨別名稱（DN）。
+
+
+
+ a| 
+角色
+ a| 
+可讓您為已定義群組中的使用者指定一或多個角色。如果輸入多個角色、請以空格分隔值。有效選項包括：
+
+* "torage.monitor"
+* "torage.admin"
+* 「安全管理」
+* 「upport.admin」
+
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-hsg-bc-madridsecurity,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("storage.monitor" "security.admin" "storage.admin");"
+
+SMcli -n Array1 -c "set storageArray directoryServer ["domain1"]
+                    groupDN="CN=ng-epg-engr-manageability,OU=Managed,
+                    OU=MyCompanyGroups,DC=hq,DC=mycompany,DC=com"
+                    roles=("support.admin");"
+
+SMcli completed successfully.
+----

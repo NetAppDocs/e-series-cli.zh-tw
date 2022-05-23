@@ -1,0 +1,148 @@
+---
+permalink: commands-a-z/set-emailalert.html 
+sidebar: sidebar 
+keywords: configure, email, alert, set 
+summary: set emailAlert命令可設定電子郵件、將電子郵件傳送至指定的技術支援或組織。電子郵件警示包含事件摘要、受影響儲存設備的詳細資訊、以及客戶聯絡資訊。 
+---
+= 設定電子郵件警示設定
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「電子郵件警示」命令可設定電子郵件傳送電子郵件給指定的技術支援或組織。電子郵件警示包含事件摘要、受影響儲存設備的詳細資訊、以及客戶聯絡資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於E2800、E5700、EF600及EF300儲存陣列。不過、您可以將命令當成SMcli命令、而非指令碼命令、用於E2700或E5600陣列。在此情況下、命令會套用至管理網域中的所有陣列。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+set emailAlert
+    serverAddress=pass:quotes["_serverAddress_"] |
+    serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]
+    serverPort=pass:quotes[_port value_] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+    senderAddress=pass:quotes["_emailAddress_"] |
+    additionalContactInfo=pass:quotes["_filename_"]  |
+    (recipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_")] |
+ addRecipientAddresses=pass:quotes[("_emailAddress1_" ... "_emailAddressN_"))]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「erverAddress」
+ a| 
+可讓您設定電子郵件伺服器位址。電子郵件伺服器位址可以是完整網域名稱、IPv4位址或IPv6位址。
+
+
+
+ a| 
+「erverEncryption」
+ a| 
+用於與伺服器通訊的加密。此值可能為下列其中一項：
+
+* 「_none_」-無加密
+* `_SMTLS_'-建立SSL/TLS連線（內含TLS）
+* 「_StartTLS_」-建立未加密的連線、然後建立SSL/TLS工作階段（明確TLS）
+
+
+
+
+ a| 
+「erverPort」
+ a| 
+用於連線至伺服器的TCP連接埠。預設值取決於加密類型。
+
+* 「_none_」-預設為連接埠25
+* 「_SMTPS」-預設為連接埠465
+* 「_StartTLS_」-預設為連接埠587
+
+
+
+
+ a| 
+「erver使用 者名稱」
+ a| 
+提供驗證認證給伺服器的使用者名稱。如果指定了使用者名稱、也必須指定密碼。
+
+
+
+ a| 
+「erverPassword」
+ a| 
+提供驗證認證給伺服器的密碼。如果已指定密碼、也必須指定使用者名稱。
+
+
+
+ a| 
+「enderAddress」
+ a| 
+可讓您設定寄件者的電子郵件地址。
+
+
+
+ a| 
+「其他聯絡資訊」
+ a| 
+可讓您提供檔案名稱、其中包含電子郵件警示中要使用的其他聯絡資訊。
+
+
+
+ a| 
+《兒童地址》
+ a| 
+可讓您設定一或多個收件者電子郵件地址。使用此設定選項可清除現有的電子郵件地址。將所有名稱括在括弧中。將每個名稱括在雙引號（""）內。以空格分隔每個名稱。
+
+
+
+ a| 
+《地址》
+ a| 
+可讓您將一或多個收件者電子郵件地址新增至現有清單。將所有名稱括在括弧中。將每個名稱括在雙引號（""）內。以空格分隔每個名稱。
+
+|===
+
+
+== 範例
+
+[listing, subs="+macros"]
+----
+
+SMcli -n Array1 -c "set emailAlert
+   serverAddress="email.server.domain.com"
+    serverEncryption=pass:quotes[("_smtps_")] |
+    serverPort=pass:quotes["_smtps_"] |
+    serverUsername=pass:quotes["_username_"] |
+    serverPassword=pass:quotes["_password_"] |
+   senderAddress=\no-reply@server.domain.com
+   additionalContactInfo="C:\additionalInfo.txt"
+   recipientAddresses=("\person1@email.domain.com" "\person2@email.domain.com");"
+
+SMcli -n Array1 -c "set emailAlert addRecipientAddresses=("\person3@netapp.com");"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40
+
+11.70.1會新增「最密化」、「最密端口」、「最密的使用者名稱」和「最密的密碼」參數。

@@ -1,0 +1,136 @@
+---
+permalink: commands-a-z/save-storagearray-hostportstatistics.html 
+sidebar: sidebar 
+keywords: save, storage, array, host, port, statistics 
+summary: SAVE storageArray hostPortStatistics命令可儲存儲存陣列主機連接埠統計資料。 
+---
+= 儲存儲存陣列主機連接埠統計資料
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列hostPortStatistics」命令可儲存儲存陣列主機連接埠統計資料。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員或安全管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:save-storagearray-iscsistatistics.adoc[儲存儲存陣列iSCSI統計資料]、 xref:save-storagearray-iserstatistics.adoc[儲存儲存陣列iSER統計資料]和 xref:save-storagearray-ibstats.adoc[儲存儲存陣列InfiniBand統計資料] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+save storageArray hostPortStatistics [(raw | baseline)] type=(ISCSI| ISER | SRP | NVMEOF) file="filename"
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「原始」
+ a| 
+可讓您從一天開始擷取收集的統計資料。將參數括在方括弧中（[]）。
+
+
+
+ a| 
+《基準線》
+ a| 
+可讓您從控制器的基準重設為零時擷取所收集的統計資料。將參數括在方括弧中（[]）。
+
+
+
+ a| 
+類型
+ a| 
+可讓您指出要收集的統計資料類型。有效選擇包括：「iSCSI」、「iser」、「RP」和「NVMEOF」。
+
+
+
+ a| 
+檔案
+ a| 
+可讓您指定要儲存統計資料的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。使用任何副檔名為「.csv'的檔案名稱。
+
+|===
+[cols="6*"]
+|===
+| 類型 | 乙太網路MAC、乙太網路TCP/IP、本機啟動器（傳輸協定）、DCBX作業狀態、LLDP TLV、 DCBX TLV | 目標（傳輸協定） | InfiniBand介面 | NVMe子系統 | ASUP檔案名稱 
+
+
+ a| 
+iSCSI
+ a| 
+x
+ a| 
+x
+ a| 
+ a| 
+ a| 
+
+
+
+ a| 
+《啤酒》
+ a| 
+ a| 
+x
+ a| 
+x
+ a| 
+ a| 
+
+
+
+ a| 
+」
+ a| 
+ a| 
+ a| 
+x
+ a| 
+ a| 
+
+
+
+ a| 
+《nvmeyof》
+ a| 
+ a| 
+ a| 
+x
+ a| 
+x
+ a| 
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

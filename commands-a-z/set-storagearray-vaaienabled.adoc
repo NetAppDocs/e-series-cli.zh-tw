@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-vaaienabled.html 
+sidebar: sidebar 
+keywords: enable, disable, vaai 
+summary: set storageArray vaaiEnabled命令會開啟或關閉儲存陣列的VMware vStorage API Array Architecture（VAAI）。 
+---
+= 啟用或停用VAAI
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray vaaiEnabled'」命令可開啟或關閉儲存陣列的VMware vStorage API Array Architecture（VAAI）。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+儲存陣列已開啟VAAI功能。如果您不想執行VAAI、或VAAI導致儲存陣列發生問題、請使用此命令關閉VAAI。唯一受影響的儲存陣列是執行命令的儲存陣列。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray vaaiEnabled=(TRUE | FALSE)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「vaaiEnabled」
+ a| 
+開啟或關閉VAAI的設定。若要開啟VAAI、請將此參數設為「true」。若要關閉VAAI、請將此參數設為「假」。預設設定為開啟VAAI。
+
+|===
+
+
+== 附註
+
+[NOTE]
+====
+VAAI可將部分儲存工作從伺服器硬體卸載到儲存陣列。將儲存工作卸載到儲存陣列、可減少主機必須執行的工作、進而提升主機效能。
+
+====
+[NOTE]
+====
+使用「show storageArray odxSeting」名稱檢視VAAI設定。
+
+====
+
+
+== 最低韌體層級
+
+8.20

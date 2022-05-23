@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/show-storagearray-hostconnectivityreporting.html 
+sidebar: sidebar 
+keywords: show, storage, array, host, connectivity, report 
+summary: show storageArray hostConnectivityReporting命令會傳回主機連線報告功能的啟用狀態。 
+---
+= 顯示儲存陣列主機連線報告
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray hostConnectivityReporting」命令會傳回主機連線報告功能的啟用狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray hostConnectivityReporting
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.42新增命令參數。

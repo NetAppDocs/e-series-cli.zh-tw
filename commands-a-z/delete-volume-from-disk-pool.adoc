@@ -1,0 +1,115 @@
+---
+permalink: commands-a-z/delete-volume-from-disk-pool.html 
+sidebar: sidebar 
+keywords: delete, volume, command, normal, thin, disk pool, roles, support 
+summary: 刪除Volume命令會從磁碟集區刪除一般或精簡磁碟區。 
+---
+= 從磁碟集區刪除磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除磁碟區」命令會從磁碟集區刪除一般或精簡磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您也可以使用此命令來刪除任何與磁碟區相關的排程。刪除排程時、不會刪除磁碟區。
+
+====
+*可能會損壞儲存陣列組態*-當您執行此命令時、磁碟區中的所有資料都會遺失。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+delete (allVolumes |
+volume [volumeName] |
+pass:quotes[volumes ["_volumeName1_" ... "_volumeNameN_"]]
+[force=(TRUE | FALSE)]
+[schedule]
+[retainRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allVolumes》
+ a| 
+此參數會刪除磁碟集區上的所有磁碟區。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要刪除的特定Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要刪除的多個Volume名稱。使用下列規則輸入磁碟區名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《力量》
+ a| 
+使用此參數可強制立即刪除磁碟區、即使控制器正在執行其他作業。若要立即強制刪除Volume、請將此參數設為「true」。若要等到控制器完成其他作業、請勿使用此參數或將此參數設為「假」。
+
+
+
+ a| 
+「排程」
+ a| 
+此參數會刪除與特定磁碟集區磁碟區相關的任何排程。只會刪除排程、磁碟集區磁碟區仍會保留。
+
+
+
+ a| 
+《reitrepositoryMemges》（《保存成員》）
+ a| 
+刪除精簡磁碟區時、相關的儲存庫磁碟區預設會刪除。但是當將「reitoryMemges」設為「true」時、儲存庫磁碟區將會保留。對於正常磁碟區、此參數無效。
+
+|===
+
+
+== 附註
+
+當您使用「allVolumes」參數時、此命令會刪除磁碟區、直到移除所有磁碟區或發生錯誤為止。如果發生錯誤、此命令不會嘗試刪除剩餘的磁碟區。可以從不同的Volume群組刪除Volume。如果您將「恢復Volume Group」參數設為「true」、則會刪除變成空白的所有Volume群組。
+
+
+
+== 最低韌體層級
+
+7.83

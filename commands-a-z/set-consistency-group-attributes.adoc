@@ -1,0 +1,111 @@
+---
+permalink: commands-a-z/set-consistency-group-attributes.html 
+sidebar: sidebar 
+keywords: set, consistency, group, attributes 
+summary: Set Consistency Group命令可定義快照一致性群組的內容。 
+---
+= 設定一致性群組屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Set Consistency Group」命令可定義快照一致性群組的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set consistencyGroup pass:quotes[["_consistencyGroupName_"]]
+[userLabel=pass:quotes["_consistencyGroupName_"]]
+[repositoryFullPolicy=(failBaseWrites | purgeSnapImages)]
+[repositoryFullLimit=pass:quotes[_percentValue_]]
+[autoDeleteLimit=pass:quotes[_numberOfSnapImages_]]
+[rollbackPriority=(lowest | low | medium | high | highest)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「一致的GroupName」
+ a| 
+您要設定內容的一致性群組名稱。將一致性群組名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要提供給快照一致性群組的新名稱。將新的一致性群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「repositoryFullPolicy」
+ a| 
+如果快照儲存庫磁碟區已滿、您要如何繼續快照處理。您可以選擇將寫入失敗寫入基礎磁碟區（「故障基礎寫入器」）、或刪除（清除）快照映像（「purgeSnapImages」）。預設動作為「pugeSnapImages」。
+
+
+
+ a| 
+「repositoryFullLimit」
+ a| 
+您收到快照儲存庫磁碟區即將滿警示的儲存庫容量百分比。使用整數值。例如、值70表示70%。預設值為75。
+
+
+
+ a| 
+「自動刪除限制」
+ a| 
+每個一致性群組均可設定為自動刪除其快照映像、以將快照群組中的快照映像總數維持在指定層級或以下。啟用此選項後、每當在快照群組中建立新的快照映像時、系統會自動刪除群組中最舊的快照映像、以符合限制值。此動作可釋出儲存庫容量、以便用於滿足後續快照映像的寫入時複製需求。
+
+
+
+ a| 
+「復原優先順序」
+ a| 
+在儲存陣列運作期間、一致性群組的復原作業優先順序。有效值包括「最高」、「高」、「中等」、「低」或「最低」。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+使用此命令時、您可以指定一或多個參數。不過、您不需要使用所有的參數。
+
+復原優先順序會定義應分配給復原作業的系統資源量、而犧牲系統效能。值「高」表示復原作業的優先順序高於所有其他主機I/O值「low」表示復原作業應在對主機I/O影響最小的情況下執行
+
+
+
+== 自動刪除
+
+您可以將每個快照群組設定為自動刪除其快照映像、使快照群組中的快照映像總數維持在或低於最大映像數。當快照群組中的快照映像數目達到上限時、「AutoDelete限制」參數會在快照群組中建立新的快照映像時、自動刪除快照映像。「AutoDelete限制」參數會刪除快照群組中最舊的快照映像、直到符合使用參數定義的最大影像數為止。以這種方式刪除快照映像可釋出儲存庫容量、以便用於滿足剩餘快照映像的持續寫入時複製需求。
+
+
+
+== 最低韌體層級
+
+7.83

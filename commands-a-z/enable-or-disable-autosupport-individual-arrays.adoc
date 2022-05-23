@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/enable-or-disable-autosupport-individual-arrays.html 
+sidebar: sidebar 
+keywords: command, enable, disable, autosupport, feature, storage, array, possible, transit, messages, technical, support, site, capable, automatically, prepare, collect, data, remote, troubleshooting, problem, analysis 
+summary: 此命令可啟用或停用AutoSupport 儲存陣列的Sesf（ASUP）功能、並可將訊息傳輸至技術支援網站。啟用ASUP功能之後、具備ASUP功能的儲存陣列會自動準備好收集支援相關資料、並將其傳送給技術支援部門。然後、這些資料可用於遠端疑難排解和問題分析。 
+---
+= 啟用或停用AutoSupport 功能不全（所有個別陣列）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+此命令可啟用或停用AutoSupport 儲存陣列的Sesf（ASUP）功能、並可將訊息傳輸至技術支援網站。啟用ASUP功能之後、具備ASUP功能的儲存陣列會自動準備好收集支援相關資料、並將其傳送給技術支援部門。然後、這些資料可用於遠端疑難排解和問題分析。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+啟用此功能之後、您可以接著啟用AutoSupport 「支援不支援即用功能」（如有需要）、然後啟用AutoSupport 「支援不支援功能」（如有需要）。
+
+您必須依此順序啟用三項功能：
+
+. *啟用AutoSupport 此功能*
+. *啟用AutoSupport 《支援此功能*》
+. *啟用AutoSupport 「更新遠端診斷」*
+
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray autoSupport (enable | disable)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「啟用|停用」
+ a| 
+可讓您啟用或停用AutoSupport 資訊穩定功能。如果已啟用隨需與遠端診斷功能、則停用動作也會關閉隨需與遠端診斷功能。
+
+|===
+
+
+=== 範例
+
+[listing]
+----
+
+   SMcli -n Array1 -c "set storageArray autoSupport enable;"
+
+   SMcli completed successfully.
+----
+
+
+== 驗證
+
+使用「show storageArray AutoSupport sf2」命令查看您是否已啟用此功能。顯示輸出的初始行顯示啟用狀態：
+
+[listing]
+----
+The AutoSupport feature is enabled on this storage array.
+----
+
+
+== 最低韌體層級
+
+7.86 -新增命令、適用於所有儲存陣列、直到型號E2700和E5600
+
+8.40 -增加對E2800和E5700的支援

@@ -1,0 +1,120 @@
+---
+permalink: commands-a-z/set-session-erroraction.html 
+sidebar: sidebar 
+keywords: set, session 
+summary: set Session errorAction命令可定義您要如何執行目前的指令碼引擎工作階段。 
+---
+= 設定工作階段
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set工作階段errorAction」命令會定義您要如何執行目前的指令碼引擎工作階段。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須擁有「儲存管理員」、「支援管理員」、「安全管理員」或「儲存監控」角色。
+
+
+
+== 背景
+
+就本命令而言、工作階段是命令執行的持續時間。此命令不會永久設定儲存陣列的參數。
+
+
+
+== 語法
+
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+[listing]
+----
+set session errorAction=(stop | continue)
+password="storageArrayPassword"
+userRole=(admin | monitor)
+performanceMonitorInterval=intervalValue
+performanceMonitorIterations=iterationValue
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《錯誤行動》
+ a| 
+處理期間發生錯誤時、工作階段的回應方式。您可以選擇在發生錯誤時停止工作階段、或是在發生錯誤後繼續工作階段。預設值為「shtop」。（此參數定義執行錯誤的動作、而非語法錯誤。某些錯誤情況可能會覆寫「Continue（繼續）」值。）
+
+
+
+ a| 
+密碼
+ a| 
+儲存陣列的密碼。將密碼括在雙引號（""）內。
+
+[NOTE]
+====
+當用戶端類型設定為「https」時、此參數會過時。在執行CLI命令指令碼之前、必須先指定密碼、而且無法在指令碼的中間進行變更。
+
+====
+
+
+ a| 
+《效能監控間隔》
+ a| 
+收集效能資料的頻率。輸入您要擷取資料的輪詢時間間隔整數值（以秒為單位）。數值範圍為「3」到「3」、即「3」到「3、600」秒。預設值為「5」秒。
+
+[NOTE]
+====
+當用戶端類型設定為「https」時、此參數會過時。若要變更預設的時間間隔值、請將此參數搭配個別受影響的命令使用。命令有「儲存陣列效能統計資料」和「磁碟機效能統計資料」。
+
+====
+
+
+ a| 
+效能監控迭代
+ a| 
+要擷取的樣本數。輸入整數值。擷取樣本的值範圍為「1」至「3、600」。預設值為「5」。
+
+[NOTE]
+====
+當用戶端類型設定為「https」時、此參數會過時。若要變更預設的迭代值、請將此參數搭配個別受影響的命令使用。命令有「儲存陣列效能統計資料」和「磁碟機效能統計資料」。
+
+====
+|===
+
+
+== 附註
+
+使用此命令時、您可以指定一或多個選用參數。
+
+密碼會儲存在管理網域中的每個儲存陣列上。如果先前未設定密碼、則不需要密碼。密碼可以是字母數字字元的任意組合、最多30個字元。（您可以使用「set storageArray」命令來定義儲存陣列密碼。）
+
+輪詢時間間隔和您指定的迭代次數會一直有效、直到您結束工作階段為止。結束工作階段之後、輪詢時間間隔和迭代次數會恢復為預設值。
+
+
+
+== 最低韌體層級
+
+5.20
+
+8.40-當用戶端類型設定為「https」時、會淘汰「password」、「user勞力」、「performanceMonitorInterval」及「performanceMonitor迭 代」等參數。

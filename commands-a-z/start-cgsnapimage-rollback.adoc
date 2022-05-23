@@ -1,0 +1,112 @@
+---
+permalink: commands-a-z/start-cgsnapimage-rollback.html 
+sidebar: sidebar 
+keywords: start, consistency, group, snapshot, rollback 
+summary: start cgrpSnapImage復原命令會啟動對快照一致性群組中成員基礎磁碟區的復原作業。 
+---
+= 啟動一致性群組快照復原
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start（開始）cgrpSnapImage復原」命令會啟動對快照一致性群組中成員基礎磁碟區的復原作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+基礎磁碟區的內容會立即變更、以符合一致性群組快照磁碟區的時間點內容。成功完成復原作業後、基礎磁碟區立即可供讀取/寫入要求使用。
+
+與一致性群組快照磁碟區相關聯的儲存庫磁碟區會繼續追蹤在復原作業完成後、基礎磁碟區與一致性群組快照磁碟區之間所發生的任何新變更。
+
+若要停止對成員基礎磁碟區的復原作業、請使用「shtop cSnapImage復原」命令。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start cgSnapImage pass:quotes[["_snapCGID:imageID_"]] rollback
+memberVolumeSet pass:quotes[("_memberVolumeName1_" ... "_memberVolumeNameN_")]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《cgrSnapImage》
+ a| 
+您要開始復原作業的一致性群組快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 快照群組的名稱
+* 快照群組中快照映像的識別碼。
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、即快照群組中快照的順序編號。
+* 「最新」-如果您想要顯示快照群組中建立的最新快照映像、請使用此選項。
+* "OLDEST"（最舊）-如果您想要顯示快照群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+《磁碟集》
+ a| 
+要復原之一致性群組中的一個或多個成員基礎磁碟區名稱。將每個成員基礎磁碟區名稱以雙引號（""）括在括弧內。
+
+您可以輸入多個Volume名稱。將所有的Volume名稱括在一組方括弧（[]）內。將每個Volume名稱括在雙引號（""）內。以空格分隔每個Volume名稱。
+
+未使用「memberVolume Set」參數時、復原程序會套用至一致性群組的所有成員磁碟區。
+
+|===
+
+
+== 附註
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 快照群組的識別碼
+* 快照映像的識別碼
+
+
+例如、如果您想要針對名稱為Cg1的整個一致性群組中最新的快照映像、開始復原作業、請使用下列命令：
+
+[listing]
+----
+start cgSnapImage ["CG1:newest"] rollback;
+----
+若要在名稱為CG2的一致性群組中、針對基礎磁碟區成員memVol1、memVol2和memVol3啟動快照映像12345的復原作業、請使用下列命令：
+
+[listing]
+----
+start cgSnapImage ["CG2:12345"] rollback memberVolumeset=("memVol1 memVol2 memVol3");
+----
+
+
+== 最低韌體層級
+
+7.83

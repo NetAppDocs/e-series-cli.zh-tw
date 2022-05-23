@@ -1,0 +1,83 @@
+---
+permalink: commands-a-z/show-ssd-cache.html 
+sidebar: sidebar 
+keywords: show, ssd, cache 
+summary: show ssdCache命令會顯示SSD快取的相關資訊。 
+---
+= 顯示SSD快取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show ssdCache」命令會顯示SSD快取的相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+show ssdCache pass:quotes[[_ssdCacheName_]]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+SdCache
+ a| 
+您要擷取資訊的SSD快取名稱。將SSD快取名稱括在方括弧（[]）內。如果SSD快取名稱包含特殊字元或數字、您必須在方括弧內以雙引號（""）括住SSD快取名稱。
+
+|===
+
+
+== 附註
+
+此命令會傳回類似本範例的SSD快取資訊。
+
+[listing]
+----
+SSD Cache name: my_cache
+
+Status:                              Optimal
+Type:                                Read Only
+I/O characteristic type:             File System
+Maximum capacity allowed:            1,862.645 GB
+Current capacity:                    557.792 GB
+Additional capacity allowed          1,304.852 GB
+Drive capacities:                    All 278.896 GB
+Quality of Service (QoS) Attributes
+   Security capable:                 No
+   Secure:                           No
+   Data Assurance (DA) capable:      No
+Associated drives:
+
+Tray     Slot
+0        4
+0        11
+Volumes using SSD cache:             volume_test
+----
+
+
+== 最低韌體層級
+
+7.84

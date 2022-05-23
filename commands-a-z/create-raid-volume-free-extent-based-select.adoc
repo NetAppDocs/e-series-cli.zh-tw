@@ -1,0 +1,235 @@
+---
+permalink: commands-a-z/create-raid-volume-free-extent-based-select.html 
+sidebar: sidebar 
+keywords: create, raid, volume, free, extent, based, select 
+summary: create volume命令會在Volume群組的可用空間中建立磁碟區。 
+---
+= 建立RAID Volume（自由區型選擇）
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create volume」命令會在磁碟區群組的可用空間中建立磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create volume volumeGroup=pass:quotes[_"volumeGroupName"_
+userLabel="_volumeName"_]
+[freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
+[capacity=pass:quotes[_volumeCapacity_]]
+[owner=(a|b)]
+[cacheReadPrefetch=(TRUE | FALSE)]
+[segmentSize=pass:quotes[_segmentSizeValue_]]
+[usageHint=(fileSystem | dataBase | multiMedia)]
+[dssPreAllocate=(TRUE | FALSE)]
+[securityType=(none | capable | enabled)]
+[dataAssurance=(none | enabled)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+儲存陣列中特定Volume群組的名稱。將Volume群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要為新Volume命名的名稱。請以雙引號（""）括住新的Volume名稱。
+
+[NOTE]
+====
+此參數為必填欄位。
+
+====
+
+
+ a| 
+《FreeCapacityArea》
+ a| 
+您要用來建立新Volume的現有Volume群組中可用空間的索引編號。可用容量定義為磁碟區群組中現有磁碟區之間的可用容量。例如、Volume群組可能有下列區域：Volume 1、可用容量、Volume 2、可用容量、Volume 3、 可用容量：若要使用Volume 2以下的可用容量、請輸入此索引編號：
+
+'乾式電容Area=2'
+
+[NOTE]
+====
+執行「show volumeGroup」命令、判斷可用容量區域是否存在。
+
+====
+[NOTE]
+====
+如果未指定此參數、則會在編號最低的可用容量區域中建立磁碟區、並為磁碟區提供足夠的容量。
+
+====
+
+
+ a| 
+容量
+ a| 
+您要新增至儲存陣列的磁碟區大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+
+ a| 
+"老闆"
+ a| 
+擁有該磁碟區的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器如果您未指定擁有者、則控制器韌體會決定擁有者。
+
+
+
+ a| 
+「cacheReadPrefetch」
+ a| 
+開啟或關閉快取讀取預先擷取的設定。若要開啟快取讀取預先擷取、請將此參數設為「true」。若要關閉快取讀取預先擷取、請將此參數設為「假」。
+
+
+
+ a| 
+'大小'
+ a| 
+控制器在磁碟區中的單一磁碟機上寫入資料的資料量（以KB為單位）、然後再將資料寫入下一個磁碟機。有效值包括"8"、"16"、"32"、"64"、"128"、 "256"或"512"。
+
+
+
+ a| 
+「usageHint」
+ a| 
+將「cacheReadPrefetch」參數和「Size.」參數的設定設為預設值。預設值是根據使用磁碟區之應用程式的一般I/O使用模式而定。有效值包括「檔案系統」、「資料庫」或「多媒體」。
+
+
+
+ a| 
+「DssPreAllocate」
+ a| 
+此設定可確保保留容量已分配給未來的區段大小增加。預設值為「true」。
+
+
+
+ a| 
+「生態類型」
+ a| 
+此設定可在建立磁碟區群組及所有相關磁碟區時、指定安全性層級。這些設定有效：
+
+「無」-磁碟區群組和磁碟區不安全。
+
+「Capable」（功能）：磁碟區群組和磁碟區可以設定安全性、但尚未啟用安全性。
+
+「已啟用」-磁碟區群組和磁碟區已啟用安全功能。
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+「擁有者」參數可定義擁有該磁碟區的控制器。磁碟區的慣用控制器擁有權是目前擁有該磁碟區群組的控制器。
+
+如果您未使用「capacity」參數指定容量、則會使用Volume群組可用容量區域中的所有可用容量。如果您未指定容量單位、則會使用「位元組」作為預設值。
+
+
+
+== 區段大小
+
+區段大小決定控制器在磁碟區中的單一磁碟機上寫入多少資料區塊、然後再將資料寫入下一個磁碟機。每個資料區塊儲存512個位元組的資料。資料區塊是最小的儲存單位。區段的大小決定其包含多少資料區塊。例如、8-KB區段可容納16個資料區塊。64 KB區段可容納128個資料區塊。
+
+當您輸入區段大小的值時、會對照控制器在執行時間提供的支援值來檢查該值。如果您輸入的值無效、控制器會傳回有效值清單。使用單一磁碟機進行單一要求時、其他磁碟機仍可同時處理其他要求。如果磁碟區位於單一使用者正在傳輸大量資料（例如多媒體）的環境中、則當單一資料傳輸要求以單一資料等量磁碟區來處理時、效能就會達到最大化。（資料等量磁碟區是區段大小乘以磁碟區群組中用於資料傳輸的磁碟機數量。） 在此情況下、多個磁碟機用於相同的要求、但每個磁碟機只能存取一次。
+
+若要在多使用者資料庫或檔案系統儲存環境中達到最佳效能、請設定區段大小、將滿足資料傳輸要求所需的磁碟機數量降至最低。
+
+
+
+== 使用提示
+
+[NOTE]
+====
+您不需要輸入「cacheReadPrefetch」參數或「Size」參數的值。如果不輸入值、控制器韌體會使用「usageHint」參數、並將「FileSystem」作為預設值。輸入「usageHint」參數的值、以及「cacheReadPrefetch」參數的值、或輸入「SizeDE」參數的值、都不會造成錯誤。您為「cacheReadPrefetch」參數或「Size」參數輸入的值優先於「usageHint」參數的值。下表顯示各種使用提示的區段大小和快取讀取預先擷取設定：
+
+====
+|===
+| 使用提示 | 區段大小設定 | 動態快取讀取預先擷取設定 
+
+
+ a| 
+檔案系統
+ a| 
+128 KB
+ a| 
+已啟用
+
+
+
+ a| 
+資料庫
+ a| 
+128 KB
+ a| 
+已啟用
+
+
+
+ a| 
+多媒體
+ a| 
+256 KB
+ a| 
+已啟用
+
+|===
+
+
+== 快取讀取預先擷取
+
+快取讀取預先擷取可讓控制器在控制器讀取及複製主機從磁碟機要求的資料區塊時、將其他資料區塊複製到快取中。此動作可增加日後從快取執行資料要求的機會。對於使用循序資料傳輸的多媒體應用程式而言、快取讀取預先擷取非常重要。「cacheReadPrefetch」參數的有效值為「true」或「假」。預設值為「true」。
+
+
+
+== 安全類型
+
+使用「安全性類型」參數來指定儲存陣列的安全性設定。
+
+您必須先建立儲存陣列安全性金鑰、才能將「安全性類型」參數設定為「已啟用」。使用「create storageArray SECURITY Key」命令建立儲存陣列安全金鑰。這些命令與安全金鑰有關：
+
+* 「create storageArray securityKey」
+* 「匯出storageArray安全金鑰」
+* 「Import storageArray securityKey」
+* 「et storageArray安全性金鑰」
+* 「啟用volumeGroup [volumeGroupName]安全性」
+* 「啟用diskPool [diskPoolName] Security」
+
+
+
+
+== 最低韌體層級
+
+7.10新增「dssPreAllocate」參數。
+
+7.50新增「最安全類型」參數。
+
+7.75新增了「data Assurance」參數。

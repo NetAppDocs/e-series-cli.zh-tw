@@ -1,0 +1,124 @@
+---
+permalink: commands-a-z/show-snapimage.html 
+sidebar: sidebar 
+keywords: show, snapshot, image 
+summary: show SnapImage命令會傳回使用者先前建立的快照映像相關資訊。 
+---
+= 顯示快照映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show SnapImage」命令會傳回使用者先前建立的快照映像相關資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 顯示特定快照映像的語法
+
+[listing, subs="+macros"]
+----
+show (allSnapImages | snapImage pass:quotes[["_snapImageName_"]] |
+snapImages pass:quotes[["_snapImageName1_" ... "_snapImageNamen_"]])
+[summary]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《allSnapImages》
+ a| 
+此參數可傳回儲存陣列中所有快照映像的相關資訊。
+
+
+
+ a| 
+「napImage」
+ a| 
+您要擷取資訊的快照映像名稱。快照映像的名稱由兩部分組成：
+
+* 快照群組的名稱
+* 快照群組中快照映像的識別碼
+
+
+快照映像的識別碼可以是下列其中一項：
+
+* 整數值、即快照群組中快照的順序編號。
+* 「最新」-如果您想要顯示快照群組中建立的最新快照映像、請使用此選項。
+* "OLDEST"（最舊）-如果您想要顯示快照群組中建立的最早快照映像、請使用此選項。
+
+
+將快照映像名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「napimages」
+ a| 
+您要擷取資訊的多個快照映像名稱。使用下列規則輸入快照映像的名稱：
+
+* 將所有名稱括在方括弧中（[]）。
+* 將每個名稱括在雙引號（""）內。
+* 以空格分隔每個名稱。
+
+
+
+
+ a| 
+《摘要》
+ a| 
+此參數會傳回有關快照映像的簡短資訊清單。
+
+|===
+
+
+== 附註
+
+快照映像的名稱有兩個部分以分號分隔（：）：
+
+* 快照群組的識別碼
+* 快照映像的識別碼
+
+
+例如、如果您想要在名稱為snapGroup1的快照群組中顯示快照映像12345、請使用下列命令：
+
+[listing]
+----
+show snapImage ["snapGroup1:12345"];
+----
+若要在名稱為snapGroup1的快照群組中顯示最新的快照映像、請使用下列命令：
+
+[listing]
+----
+show snapImage ["snapGroup1:newest"];
+----
+若要在多個名稱為snapGroup1、snapGroup2和snapGroup3的快照一致性群組中顯示快照映像、請使用下列命令：
+
+[listing]
+----
+show snapImages ["snapGroup1:12345 snapGroup2:newest snapGroup3:oldest"];
+----
+
+
+== 最低韌體層級
+
+7.83

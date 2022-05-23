@@ -1,0 +1,65 @@
+---
+permalink: commands-a-z/save-alltrays-logfile.html 
+sidebar: sidebar 
+keywords: save, tray log 
+summary: SAVE allTrays logfile命令會將記錄感應資料儲存至檔案。 
+---
+= 儲存紙匣記錄
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Save allTrays logfile」命令會將記錄感應資料儲存至檔案。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+記錄感應資料由每個匣的環境卡維護並非所有的環境卡都包含記錄感應資料。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save allTrays logFile=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+記錄檔*
+ a| 
+您要儲存記錄感應資料的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\Traylogdat.txt"」
+
+此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定副檔名。
+
+|===
+
+
+== 最低韌體層級
+
+6.50

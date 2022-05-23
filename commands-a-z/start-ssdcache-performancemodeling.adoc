@@ -1,0 +1,78 @@
+---
+permalink: commands-a-z/start-ssdcache-performancemodeling.html 
+sidebar: sidebar 
+keywords: start, ssd, cache, performance, model 
+summary: start ssdCache performanceModeling命令會啟動SSD快取的效能建模。 
+---
+= 開始建立SSD快取效能建模
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start ssdCache performanceModeling」命令會開始建立SSD快取的效能模型。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。
+
+
+
+== 背景
+
+效能建模可監控及測量一段時間內的I/O活動、並預估各種SSD快取大小的效能。效能是使用兩種指標來估計：快取命中率和平均回應時間。效能建模資料只有在您使用「最短的ssdCache performanceModeling」命令停止作業之後才能使用。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start ssdCache pass:quotes[[_ssdCacheName_]] performanceModeling
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+SdCache
+ a| 
+您要為其建構效能的SSD快取名稱。將SSD快取名稱括在方括弧（[]）內。如果SSD快取名稱包含特殊字元或僅包含數字、您必須在方括弧內以雙引號（""）括住SSD快取名稱。
+
+|===
+
+
+== 附註
+
+當發生下列任一情況時、效能建模即告結束、並提供效能建模資料：
+
+* 執行「shtop ssdCache performanceModeling」命令。
+* 使用儲存管理軟體擷取效能建模資料。
+
+
+效能建模結束、但發生下列其中一種情況時、無法取得資料：
+
+* 重新啟動控制器。
+* 您可以對SSD快取組態進行任何變更。
+* SSD快取狀態會變更。
+
+
+
+
+== 最低韌體層級
+
+7.84

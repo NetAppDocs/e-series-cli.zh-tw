@@ -1,0 +1,311 @@
+---
+permalink: commands-a-z/set-isertarget.html 
+sidebar: sidebar 
+keywords: set, iser, target 
+summary: Set iserTarget命令可定義iSER目標的內容。 
+---
+= 設定iSER目標
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「套用iserTarget」命令可定義iSER目標的內容。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+[NOTE]
+====
+此命令已過時、並由取代 xref:set-target.adoc[設定目標內容] 命令。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set iserTarget pass:quotes[["_userLabel_"]]
+authenticationMethod=(none | chap) |
+chapSecret=pass:quotes[_securityKey_] |
+targetAlias=pass:quotes["_userLabel_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「iserTarget」
+ a| 
+您要設定其內容的iSER目標。將「_userLabel」括在雙引號（""）內。如果使用者標籤是目標別名或尖括弧（<>）、且使用者標籤是iSCSI合格名稱（IQN）、也必須將「_userLabel」括在方括弧（[]）中。
+
+
+
+ a| 
+《驗證方法》
+ a| 
+驗證iSCSI工作階段的方法。
+
+
+
+ a| 
+《chapSecret》
+ a| 
+您要用來驗證對等連線的安全性金鑰。
+
+
+
+ a| 
+「目標別名」
+ a| 
+您要用於目標的新名稱。將名稱括在雙引號（""）內。
+
+|===
+
+
+== 附註
+
+挑戰握手驗證傳輸協定（CHAP）是驗證連線對等端點的傳輸協定。CHAP是以共用_secret的對等端點為基礎。秘密是類似密碼的安全金鑰。
+
+使用「chapSecret」參數來設定需要相互驗證之啟動器的安全性金鑰。CHAP密碼必須介於12個字元與57個字元之間。此表列出有效字元。
+
+[cols="1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a,1a"]
+|===
+
+
+ a| 
+空間
+ a| 
+！
+ a| 
+"
+ a| 
+#
+ a| 
+$
+ a| 
+%
+ a| 
+和
+ a| 
+'
+ a| 
+（
+ a| 
+）
+ a| 
+*
+ a| 
+
+
+
+ a| 
+、
+ a| 
+-
+ a| 
+。
+ a| 
+/
+ a| 
+0
+ a| 
+1.
+ a| 
+2.
+ a| 
+3.
+ a| 
+4.
+ a| 
+5.
+ a| 
+6.
+ a| 
+7.
+
+
+
+ a| 
+8.
+ a| 
+9.
+ a| 
+：
+ a| 
+；
+ a| 
+<
+ a| 
+=
+ a| 
+>
+ a| 
+？
+ a| 
+@
+ a| 
+答
+ a| 
+b
+ a| 
+c
+
+
+
+ a| 
+D
+ a| 
+e
+ a| 
+f
+ a| 
+G
+ a| 
+h
+ a| 
+我
+ a| 
+j
+ a| 
+K
+ a| 
+l
+ a| 
+m
+ a| 
+n
+ a| 
+O
+
+
+
+ a| 
+p
+ a| 
+問
+ a| 
+R
+ a| 
+S
+ a| 
+T
+ a| 
+U
+ a| 
+V
+ a| 
+w
+ a| 
+x
+ a| 
+是
+ a| 
+Z
+ a| 
+[
+
+
+
+ a| 
+\
+ a| 
+]
+ a| 
+更多的
+ a| 
+_
+ a| 
+'
+ a| 
+答
+ a| 
+b
+ a| 
+c
+ a| 
+D
+ a| 
+e
+ a| 
+f
+ a| 
+G
+
+
+
+ a| 
+h
+ a| 
+我
+ a| 
+j
+ a| 
+K
+ a| 
+l
+ a| 
+m
+ a| 
+n
+ a| 
+O
+ a| 
+p
+ a| 
+問
+ a| 
+R
+ a| 
+S
+
+
+
+ a| 
+T
+ a| 
+U
+ a| 
+V
+ a| 
+w
+ a| 
+x
+ a| 
+是
+ a| 
+Z
+ a| 
+｛
+ a| 
+|
+ a| 
+}
+ a| 
+~
+ a| 
+
+|===
+
+
+== 最低韌體層級
+
+8.20
+
+8.41此命令已過時。

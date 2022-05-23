@@ -1,0 +1,125 @@
+---
+permalink: commands-a-z/set-snapgroup-increase-decreaserepositorycapacity.html 
+sidebar: sidebar 
+keywords: set, snapshot, group, repository, volume, capacity 
+summary: set snapGroup repositoryCapacity命令會增加或減少快照群組儲存庫磁碟區的容量。 
+---
+= 設定Snapshot群組儲存庫Volume容量
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show snapGroup repositoryCapacity」命令可增加或減少快照群組儲存庫磁碟區的容量。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 增加容量的語法
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]] increaseRepositoryCapacity
+(repositoryVolumes="repos_xxxx" | repositoryVolumes=pass:quotes[((_volumeGroupName_]
+pass:quotes[[capacity=_capacityValue_]])) | repositoryVolumes=pass:quotes[((_diskPoolName_]
+pass:quotes[[capacity=_capacityValue_]])))
+----
+
+
+== 降低容量的語法
+
+[listing, subs="+macros"]
+----
+set snapGroup pass:quotes[["_snapGroupName_"]]
+decreaseRepositoryCapacity
+count=pass:quotes[_numberOfVolumes_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「napGroup」
+ a| 
+您想要增加容量或減少容量的快照群組名稱。將快照群組名稱括在方括弧（[]）內的雙引號（""）內。
+
+
+
+ a| 
+「repositoryVolume」
+ a| 
+要增加容量的儲存庫Volume名稱。系統會將可用的標準磁碟區新增至儲存庫磁碟區、以增加儲存庫磁碟區的容量。
+
+您有兩個選項可以定義儲存庫Volume的名稱：
+
+* 使用現有的儲存庫Volume：名稱
+* 執行此命令時、請建立新的儲存庫Volume
+
+
+現有儲存庫磁碟區的名稱包含兩個部分：
+
+* 「錯誤」一詞
+* 儲存管理軟體指派給儲存庫Volume名稱的四位數數字識別碼
+
+
+將現有儲存庫磁碟區的名稱以雙引號（""）括住。
+
+若要在執行此命令時建立新的儲存庫磁碟區、您必須輸入要儲存庫磁碟區的磁碟區群組或磁碟集區名稱。或者、您也可以定義儲存庫Volume的容量。如果您想要定義容量、可以使用下列值：
+
+* 整數值、代表基本Volume容量的百分比
+* 表示基本Volume容量百分比的小數位值
+* 儲存庫磁碟區的特定大小。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。
+
+
+如果您不使用容量選項、儲存管理軟體會將容量設定為基礎Volume容量的20%。
+
+當您執行此命令時、儲存管理軟體會為快照Volume建立儲存庫磁碟區。
+
+
+
+ a| 
+《數》
+ a| 
+要從快照群組中移除的儲存庫磁碟區數目。使用整數值。
+
+|===
+
+
+== 附註
+
+您可以使用任何字母數字字元、底線（_）、連字號（-）和井號（#）的組合作為使用者標籤。使用者標籤最多可有30個字元。
+
+建立新的快照群組時、儲存管理軟體和韌體會自動建立儲存庫磁碟區名稱。您無法重新命名儲存庫磁碟區、因為重新命名儲存庫磁碟區會中斷與快照映像的連結。
+
+Snapshot群組儲存庫Volume是可擴充的Volume、其結構是最多16個標準Volume實體的串聯集合。一開始、可擴充的儲存庫磁碟區只有一個元素。可擴充儲存庫磁碟區的容量與單一元素的容量完全相同。您可以附加額外的標準磁碟區、以增加可擴充儲存庫磁碟區的容量。然後、複合式可擴充儲存庫的Volume容量會成為所有串聯標準磁碟區容量的總和。
+
+快照群組儲存庫磁碟區必須滿足下列總和的最低容量需求：
+
+* 32 MB、可支援快照群組和寫入時複製處理的固定負荷。
+* 復原處理的容量、是基礎Volume容量的1/5000。
+
+
+控制器韌體和儲存管理軟體會強制執行最小容量。
+
+
+
+== 最低韌體層級
+
+7.83

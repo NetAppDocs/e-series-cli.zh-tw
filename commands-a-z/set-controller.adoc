@@ -1,0 +1,353 @@
+---
+permalink: commands-a-z/set-controller.html 
+sidebar: sidebar 
+keywords: set, controller 
+summary: set控制器命令定義控制器的屬性。 
+---
+= 設定控制器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「套控制器」命令可定義控制器的屬性。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+set controller [(a|b)]
+[availability=(online | offline | serviceMode)]
+[ethernetPort [(1| 2)] ethernetPortOptions]
+[globalNVSRAMByte [nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[hostNVSRAMByte [hostType, nvsramOffset]=(nvsramByteSetting | nvsramBitSetting)]
+[IPv4GatewayIP=ipAddress]
+[IPv6RouterAddress=ipv6Address]
+[iscsiHostPort [portLabel] iscsiHostPortOptions]
+[rloginEnabled=(TRUE | FALSE)]
+[serviceAllowedIndicator=(on | off)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+您要為其定義內容的控制器。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器將控制器的識別碼括在方括弧（[]）內。如果未指定控制器、則控制器的韌體會傳回語法錯誤。
+
+
+
+ a| 
+可用度
+ a| 
+控制器的模式、您可以設定為「online（線上）」、「offline（離線）」或「sherviceMode（服務）」。
+
+
+
+ a| 
+「ethernetPort」
+ a| 
+管理乙太網路連接埠的屬性（選項）。下列語法元素對帳單資料表中列出支援此參數的項目。有許多設定是可行的、包括設定IP位址、閘道位址和子網路遮罩位址。
+
+
+
+ a| 
+《globalNVSRAMByte》
+ a| 
+控制器的部分NVSRAM.使用區域內的起始位元組偏移量、以及要儲存至NVSRAM之 新資料的位元組值或位元值、來指定要修改的區域。
+
+
+
+ a| 
+「hostNVSRAMByte」
+ a| 
+特定主機區域的NVSRAM.此設定會指定特定主機的主機索引、區域內的起始偏移量、位元組數、以及要儲存至NVSRAM的 新資料位元組值或位元值。
+
+
+
+ a| 
+《IPv6網關》
+ a| 
+提供網路介面的節點IP位址。IPV4閘道的位址格式為*（0-255）。（0-255）。（0-255）。（0-255）*
+
+
+
+ a| 
+「IPv6路由器位址」
+ a| 
+連接兩個或多個邏輯子網路的IPv6路由器IP位址。IPv6路由器的位址格式為「（0–FFFF）：（0–FFFF）：（0–FFFF）：（0–FFFF）：（0–FFFF）：（0–FFFF）：（0–FFFF）：（0–FFFF）」。
+
+
+
+ a| 
+「iscsiHostPort」
+ a| 
+此參數可讓您設定控制器上iSCSI連接埠的選項。輸入iSCSI連接埠標籤或編號、然後選取該連接埠的選項。
+
+如需詳細資訊、請參閱下方的_識別iSCSI主機連接埠標籤_一節。
+
+
+
+ a| 
+「rloginEnabled」
+ a| 
+用於開啟或關閉遠端登入功能的設定。若要開啟遠端登入功能、請將此參數設為「true」。若要關閉遠端登入功能、請將此參數設為「假」。
+
+
+
+ a| 
+「服務指標」
+ a| 
+設定是否開啟或關閉「允許服務動作」指示燈。若要開啟「允許維修操作」指示燈、請將此參數設為「開啟」。若要關閉「允許維修操作」指示燈、請將此參數設為「關閉」。
+
+|===
+
+
+== 識別iSCSI主機連接埠標籤
+
+您必須指定主機連接埠的標籤。請依照下列步驟指定主機連接埠標籤：
+
+. 如果您不知道iSCSI主機連接埠的連接埠標籤、請執行「show controller」命令。
+. 在結果的「主機介面」區段中、找出您要選取的主機連接埠。
++
+[NOTE]
+====
+連接埠標籤是傳回「Port（連接埠）」欄位的完整值。
+
+====
+. 將連接埠標籤的整個值括在引號和方括弧中：["portlabel"。例如、如果連接埠標籤為「CH 2」、請如下指定iSCSI主機連接埠：
++
+[listing]
+----
+iscsiHostPort[\"ch 2\"]
+----
++
+[NOTE]
+====
+如果您使用的是Windows命令列、且標籤包含管路（|）、則該字元應轉義（使用｛caret｝）；否則、該字元將會解譯為命令。例如、如果連接埠標籤為「e0b-0b」、請如下指定iSCSI主機連接埠：
+
+====
++
+[listing]
+----
+iscsiHostPort[\"e0b^|0b\"]
+----
+
+
+[NOTE]
+====
+為了提供向下相容性、以大括弧[]括住的iscsiPortNumber（而非引號和大括弧["]）仍可用於E2700、E5600或EF560控制器（以及其他前幾代E系列或EF系列控制器）。對於這些控制器、iscsiPortNumber的有效值如下：
+
+* 對於具有整合式主機連接埠的控制器、編號為3、4、5或6。
+* 如果控制器的主機連接埠僅在主機介面卡上、則編號為1、2、3或4。
+
+
+先前的語法範例如下：
+
+[listing]
+----
+iscsiHostPort[3]
+----
+====
+
+
+== ethernetPort參數的選項
+
+[listing]
+----
+enableIPv4=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=[(static | dhcp)] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+duplexMode=(TRUE | FALSE) |
+----
+[listing]
+----
+portSpeed=[(autoNegotiate | 10 | 100 | 1000)]
+----
+
+
+== iSCSIHostPort參數的選項
+
+[listing]
+----
+IPv4Address=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |
+----
+[listing]
+----
+enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE) |
+----
+[listing]
+----
+enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv4ConfigurationMethod=(static | dhcp) |
+----
+[listing]
+----
+IPv6ConfigurationMethod=(static | auto) |
+----
+[listing]
+----
+IPv4GatewayIP=(TRUE | FALSE) |
+----
+[listing]
+----
+IPv6HopLimit=[0-255] |
+----
+[listing]
+----
+IPv6NdDetectDuplicateAddress=[0-256] |
+----
+[listing]
+----
+IPv6NdReachableTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdRetransmitTime=[0-65535] |
+----
+[listing]
+----
+IPv6NdTimeOut=[0-65535] |
+----
+[listing]
+----
+IPv4Priority=[0-7] | IPv6Priority=[0-7] |
+----
+[listing]
+----
+IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255) |
+----
+[listing]
+----
+IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094] |
+----
+[listing]
+----
+maxFramePayload=[*frameSize*] |
+----
+[listing]
+----
+tcpListeningPort=[3260, 49152-65536] |
+----
+[listing]
+----
+portSpeed=[( 10 | 25)]
+----
+
+
+== 附註
+
+[NOTE]
+====
+在固件版本7.75之前、「set控制器」命令支援「NVSRAMByte」參數。NVSRAMByte參數已過時、必須以「hostNVSRAMByte」參數或「globalNVSRAMByte」參數取代。
+
+====
+使用此命令時、您可以指定一或多個參數。您不需要使用所有參數。
+
+將「可用度」參數設定為「服務模式」、會使替代控制器取得所有磁碟區的所有權。指定的控制器不再擁有任何磁碟區、而且拒絕取得任何其他磁碟區的所有權。服務模式會持續執行重設週期和電源循環、直到「可用度」參數設定為「線上」為止。
+
+使用「show controller NVSRAM'」命令來顯示NVSRAM.資訊。在對NVSRAM/進行 任何變更之前、請聯絡技術支援部門、以瞭解您可以修改哪些NVSRAM區域。
+
+當「duplexMode」選項設定為「true」時、選取的乙太網路連接埠會設定為全雙工。預設值為半雙工（「duplexMode」參數設為「假」）。
+
+若要確定已套用了IPV4設定或IPv6設定、您必須設定下列「iscsiHostPort」選項：
+
+* 「enableIPV4.x =」「true」
+* 「enableIPV6 =」「true」
+
+
+IPv6位址空間為128位元。它由八個以分號分隔的16位元十六進位區塊來表示。
+
+「maxFramePayload」選項可在IPv4和IPv6之間共享。標準乙太網路框架的有效負載部分設為「1500」、而巨型乙太網路框架則設為「9000」。使用巨型框架時、網路路徑中的所有裝置都應該能夠處理較大的框架大小。
+
+「portSpeed」（連接埠速度）選項以百萬位元/秒（MB/s）表示。
+
+「iscsiHostPort」參數的「portSpeed」（連接埠速度）選項的值為兆位元/秒（MB /秒）。
+
+下列值為「iscsiHostOptions」的預設值：
+
+* "IPv6合上限制"選項是"64"。
+* "IPv6備份時間"選項是"30000"毫秒。
+* 「IPv6重新傳入時間」選項為「1000毫秒」。
+* "IPv6 NDTimezout"選項是"30000毫秒"。
+* "tcplisteningPort"選項是"3260"。
+
+
+
+
+== 最低韌體層級
+
+7.15移除「bootp」參數、並新增新的乙太網路連接埠選項和新的iSCSI主機連接埠選項。
+
+7.50將「IPV4Gateway」參數和「IPV6RouterAddress」參數從iSCSI主機連接埠選項移至命令。
+
+7.60新增「iscsiHostPort」參數的「portSpeed」選項。
+
+7.75取代了「NVSRAMByte」參數。
+
+8.10修改iSCSI主機連接埠的識別方法。

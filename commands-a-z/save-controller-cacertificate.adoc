@@ -1,0 +1,91 @@
+---
+permalink: commands-a-z/save-controller-cacertificate.html 
+sidebar: sidebar 
+keywords: retrieve, installed, ca, certificates 
+summary: 「儲存控制器caCertificate」命令會從指定的控制器擷取已安裝的CA憑證。擷取的憑證中包含控制器Web伺服器所要求的任何CA憑證。 
+---
+= 擷取已安裝的CA憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存控制器caCertificate」命令會從指定的控制器擷取已安裝的CA憑證。擷取的憑證中包含任何從控制器Web伺服器要求的CA憑證。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+
+save controller[(a|b)] caCertificate [all | aliases=pass:quotes[("_alias1_" ... "_aliasN_")]]
+ path="fileLocation"
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"控制器"
+ a| 
+可讓您指定要擷取根/中繼憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。
+
+
+
+ a| 
+全部
+ a| 
+可讓您指定擷取所有匯入的憑證、以解析簽署的憑證鏈結。使用者安裝的憑證包括金鑰管理憑證。
+
+
+
+ a| 
+別名
+ a| 
+可讓您指定要依別名擷取的使用者安裝根/中繼憑證。將所有別名括在括弧中。如果輸入多個別名、請以空格分隔。
+
+
+
+ a| 
+"路徑"
+ a| 
+可讓您指定本機位置以儲存控制器的根/中繼憑證。
+
+|===
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "save controller[a] caCertificate all path="C:\";"
+
+SMcli -n Array1 -c "save controller[b] caCertificate aliases=("myAlias" "anotherAlias") path="C:\";"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

@@ -1,0 +1,46 @@
+---
+permalink: commands-a-z/stop-drive-locate.html 
+sidebar: sidebar 
+keywords: stop, drive, locate 
+summary: stop磁碟機locate命令會關閉以start磁碟機locate命令開啟之磁碟機上的指示燈。 
+---
+= 停止磁碟機定位
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+使用「Start drive locate」命令可關閉磁碟機上的指示燈、該指示燈是由「Start drive locate」命令開啟的。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+stop drive locate
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+6.10.

@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/set-target.html 
+sidebar: sidebar 
+keywords: set, target, properties 
+summary: set target命令會變更iSCSI/iSER目標的內容、包括驗證方法和別名。 
+---
+= 設定目標內容
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「設置目標」命令可變更iSCSI/iSER目標的內容、包括驗證方法和別名。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令會取代過時的 xref:set-isertarget.adoc[設定iSER目標] 和 xref:set-iscsitarget.adoc[設定iSCSI目標內容] 命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+
+set target (["targetAliasName"] | <"targetQualifiedName">) (authenticationMethod=(none | chap chapSecret="newSecurityKey") | targetAlias="newAliasName")
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《目標》
+ a| 
+可讓您指定要設定的目標。您可以指定目標的別名或合格名稱（例如iqn）。將目標識別碼括在雙引號（""）內。如果識別碼為別名或尖括弧（<>）、則必須以方括弧（[]）括住識別碼（如果為合格名稱）。
+
+
+
+ a| 
+《驗證方法》
+ a| 
+可讓您設定驗證工作階段的方法。有效的選擇包括：「無」或「chap」。
+
+
+
+ a| 
+《chapSecret》
+ a| 
+可讓您輸入安全金鑰來驗證對等連線。這僅適用於「驗證方法」設定為「chap」時。
+
+
+
+ a| 
+「目標別名」
+ a| 
+可讓您指定目標的新別名。將名稱括在雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+8.41.

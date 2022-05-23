@@ -1,0 +1,57 @@
+---
+permalink: commands-a-z/set-tray-attribute.html 
+sidebar: sidebar 
+keywords: set, tray, attribute 
+summary: Set tray命令可設定紙匣的使用者定義屬性 
+---
+= 設定紙匣屬性
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Set tray」命令可設定紙匣的使用者定義屬性
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"紙匣"
+ a| 
+識別要為其設定屬性的特定紙匣。紙匣ID值為0至99。您必須在機箱ID值加上方括弧（[]）。
+
+
+
+ a| 
+《chassisName》
+ a| 
+提供新機箱的機箱名稱或編號。機箱名稱可以是字母數字字元的任意組合、最大長度為32個字元。字母字元可以是大寫或小寫。您也可以使用底線字元（_）和連字號（-）字元。您不能在機箱名稱中使用空格。您必須在機箱名稱中加上引號（""）。
+
+
+
+ a| 
+"AssETTAG"
+ a| 
+提供新機箱的資產標籤名稱或編號。資產標籤可以是字母數字字元的任意組合、長度上限為10個字元。字母字元可以是大寫或小寫。您也可以使用底線字元（_）和連字號（-）字元。您不能在資產標籤名稱中使用空格。您必須在資產標籤名稱前後加上引號（""）。
+
+|===
+
+
+== 最低韌體層級
+
+6.16

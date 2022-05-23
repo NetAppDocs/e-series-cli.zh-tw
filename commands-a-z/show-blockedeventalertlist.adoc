@@ -1,0 +1,62 @@
+---
+permalink: commands-a-z/show-blockedeventalertlist.html 
+sidebar: sidebar 
+keywords: show, blocked, events 
+summary: show blockedEventAlertList命令會傳回目前被set blockEventAlert命令封鎖的事件清單。此清單中的事件是不會傳送您使用警示終端機和參數設定的任何通知的事件、也就是電子郵件、系統記錄和陷阱通知。 
+---
+= 顯示封鎖的事件
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show blockedEventAlertList」命令會傳回目前由「show blockedEventAlert」命令封鎖的事件清單。此清單中的事件是不會傳送您使用警示終端機和參數設定的任何通知的事件、也就是電子郵件、系統記錄和陷阱通知。
+
+
+
+== 支援的陣列
+
+此命令僅適用於E2700和E5600儲存陣列。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令是SMcli命令、而非指令碼命令。您必須從命令列執行此命令。您無法從儲存管理軟體的指令碼編輯器執行此命令。
+
+====
+
+
+== 語法
+
+[listing]
+----
+show blockedEventAlertList
+----
+
+
+== 範例
+
+輸出中每個被封鎖的事件各有一行、以十六進位格式列出事件類型、然後再列出事件說明。以下是輸出範例：
+
+[listing]
+----
+Executing Script...
+0x280D Enclosure Failure
+0x282B Tray Redundancy Lost
+Script execution complete.
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.10.

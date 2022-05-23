@@ -1,0 +1,116 @@
+---
+permalink: commands-a-z/disable-storagearray-externalkeymanagement-file.html 
+sidebar: sidebar 
+keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
+summary: 停用storageArray externalKeyManagement檔案命令會停用具有完整磁碟加密磁碟機之儲存陣列的外部安全金鑰管理。 
+---
+= 停用外部安全金鑰管理
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「停用storageArray externalKeyManagement file」命令會停用具有完整磁碟加密磁碟機之儲存陣列的外部安全金鑰管理。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+disable storageArray externalKeyManagement
+pass:quotes[file="_fileName_"]
+pass:quotes[passPhrase="_passPhraseString_"]
+pass:quotes[saveFile=(_TRUE_ | _FALSE_)]
+----
+
+
+== 背景
+
+[NOTE]
+====
+此命令可將內部金鑰管理作為磁碟機安全性的替代形式。
+
+====
+[NOTE]
+====
+此命令僅適用於外部金鑰管理。
+
+====
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+儲存內部安全金鑰檔案的檔案路徑和檔案名稱。例如：
+
+[listing]
+----
+file="C:\Program Files\CLI\sup\drivesecurity.slk"
+----
+[IMPORTANT]
+====
+檔案名稱的副檔名必須為「.slk」。
+
+====
+
+
+ a| 
+《通關密碼》
+ a| 
+加密安全金鑰的字元字串、以便將安全金鑰儲存在外部檔案中。
+
+
+
+ a| 
+「另存檔案」
+ a| 
+驗證安全金鑰並將其儲存至檔案。設為「假」、以不儲存及驗證檔案的安全金鑰。預設值為「true」。
+
+|===
+
+
+== 附註
+
+您的通關密碼必須符合下列條件：
+
+* 長度必須介於8到32個字元之間。
+* 無空白。
+* 必須包含至少一個大寫字母。
+* 必須包含至少一個英文字母。
+* 必須包含至少一個數字。
+* 必須包含至少一個非英數字元、例如<>@+。
+
+
+[NOTE]
+====
+如果您的密碼不符合這些條件、您將會收到錯誤訊息。
+
+====
+
+
+== 最低韌體層級
+
+8.40
+
+8.70新增「SaveFile」參數。

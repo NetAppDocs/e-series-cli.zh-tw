@@ -1,0 +1,70 @@
+---
+permalink: commands-a-z/start-volumegroup-defragment.html 
+sidebar: sidebar 
+keywords: start, volume, group, defragment 
+summary: start volumeGroup重組命令會在指定的Volume群組上啟動重組作業。 
+---
+= 啟動Volume群組重組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start volumeGroup defragment」命令會在指定的Volume群組上啟動重組作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+對磁碟區群組進行重組會啟動一項無法停止的長時間執行作業。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] defragment
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+要進行重組的磁碟區群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+主機I/O錯誤可能會導致磁碟區群組超過32個磁碟區。此作業也可能導致內部控制器重新開機、因為逾時期間會在設定磁碟區群組定義之前結束。如果遇到此問題、請停止主機I/O作業、然後再試一次命令。
+
+
+
+== 最低韌體層級
+
+6.10.

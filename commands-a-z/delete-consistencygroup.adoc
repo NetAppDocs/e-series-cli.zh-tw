@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-consistencygroup.html 
+sidebar: sidebar 
+keywords: delete, consistency, group 
+summary: 刪除一致性群組命令會刪除快照一致性群組。 
+---
+= 刪除一致性群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除一致性群組」命令會刪除快照一致性群組。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令的運作方式有兩種：
+
+* 您可以同時刪除一致性群組和一致性群組所包含的儲存庫磁碟區。
+* 您只能刪除一致性群組、並保留一致性群組所包含的儲存庫磁碟區不變。
+
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+delete consistencyGroup pass:quotes[[_"consistencyGroupName"_]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《抵抗集團》
+ a| 
+您要刪除的快照一致性群組名稱。將快照一致性群組名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「刪除儲存成員」
+ a| 
+要刪除或保留儲存庫磁碟區的設定。若要刪除儲存庫磁碟區、請將此參數設為「true」。若要保留儲存庫磁碟區、請將此參數設為「假」。預設設定為「假」。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

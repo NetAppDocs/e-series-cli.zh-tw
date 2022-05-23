@@ -1,0 +1,74 @@
+---
+permalink: commands-a-z/remove-volumecopy-target.html 
+sidebar: sidebar 
+keywords: remove, volume, copy 
+summary: 移除volumeCopy target命令會移除Volume複製配對。 
+---
+= 移除Volume複本
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「移除Volume Copy target」命令會移除Volume複製配對。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令適用於Snapshot Volume複製配對。
+
+[NOTE]
+====
+在韌體版本7.83中、不再使用「copyType=（online | offline）」參數。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+remove volumeCopy target pass:quotes[[_targetName_]] [source pass:quotes[[_sourceName_]]]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《目標》
+ a| 
+您要移除的目標Volume名稱。將目標Volume名稱括在方括弧（[]）內。如果目標Volume名稱包含特殊字元或僅包含數字、則必須在方括弧內以雙引號（""）括住目標Volume名稱。
+
+
+
+ a| 
+《來源》
+ a| 
+您要移除的來源Volume名稱。將來源Volume名稱括在方括弧（[]）內。如果來源Volume名稱包含特殊字元或僅包含數字、您必須在方括弧內以雙引號（""）括住來源Volume名稱。
+
+|===
+
+
+== 最低韌體層級
+
+5.40
+
+7.83移除「copyType=（online | offline）」參數。

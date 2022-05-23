@@ -1,0 +1,48 @@
+---
+permalink: commands-a-z/show-storagearray-unconfiguredinitiators.html 
+sidebar: sidebar 
+keywords: show, unconfigured, initiators 
+summary: show storageArray unconfiguredInitiator命令會傳回儲存陣列偵測到但尚未設定至儲存陣列拓撲的啟動器清單。 
+---
+= 顯示未設定的啟動器
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray unconfiguredInitiator」命令會傳回儲存陣列偵測到但尚未設定至儲存陣列拓撲的啟動器清單。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+此命令會取代 link:show-storagearray-unconfigurediscsiinitiators.html["show storageArray unconfiguredIscsiInitiator"] 命令。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray unconfiguredInitiators
+----
+
+
+== 參數
+
+無。
+
+
+
+== 最低韌體層級
+
+8.50

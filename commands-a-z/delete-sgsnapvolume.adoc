@@ -1,0 +1,63 @@
+---
+permalink: commands-a-z/delete-sgsnapvolume.html 
+sidebar: sidebar 
+keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
+summary: 刪除sgSnapVolume命令會刪除一致性群組的快照磁碟區。或者、您也可以刪除儲存庫成員。 
+---
+= 刪除一致性群組快照磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除sgSnapVolume」命令會刪除一致性群組的快照磁碟區。或者、您也可以刪除儲存庫成員。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[delete cgSnapVolume ["_snapVolumeName_"]]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「cgrSnapVolume」
+ a| 
+要刪除的一致性群組快照磁碟區名稱。將一致性群組快照磁碟區的名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+「刪除儲存成員」
+ a| 
+儲存或刪除成員磁碟區的參數。若要儲存成員磁碟區、請將此參數設為「true」。若要刪除成員磁碟區、請將此參數設為「假」。預設值為「true」。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

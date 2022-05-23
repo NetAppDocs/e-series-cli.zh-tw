@@ -1,0 +1,104 @@
+---
+permalink: commands-a-z/set-storagearray-pqvalidateonreconstruct.html 
+sidebar: sidebar 
+keywords: set, storage, array, pq validation, reconstruct 
+summary: set storageArray pqValidateOnReconstructt命令可在重建時設定儲存陣列P/Q驗證狀態。啟用此功能時、會使用data+P和data+Q來重建資料、並檢查結果是否一致、然後再決定如何繼續進行。 
+---
+= 在重建時設定儲存陣列PQ驗證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray pqValidateOnReconstructt」命令可設定重建時的儲存陣列P/Q驗證狀態。啟用此功能時、會使用data+P和data+Q來重建資料、並檢查結果是否一致、然後再決定如何繼續進行。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此功能適用於具有雙同位元檢查的磁碟集區和RAID 6磁碟區群組。在這種情況下、磁碟機故障時、磁碟區群組或磁碟集區中仍有備援、因此在重建期間可以檢查資料和同位元檢查一致性。如果在重建期間發現不一致的情況、且已啟用磁碟區的Data Assurance、則可能會識別不一致的來源、以便使用剩餘的磁碟機來重建資料。如果啟用此功能、且未針對磁碟區啟用Data Assurance、或無法將不一致性隔離到單一磁碟機、則重建的區塊會標示為不可讀取。
+
+驗證可能會增加SSD磁碟機的重建時間、因此可根據媒體類型啟用或停用此功能。如果已針對特定媒體類型啟用此功能、則此功能會套用至使用該媒體類型的所有集區和RAID 6 Volume群組。
+
+
+
+== 語法
+
+[listing]
+----
+set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd | ssd | allMedia)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《pqValidateOnReconstructt》
+ a| 
+修改重建功能的P/Q驗證。
+
+
+
+ a| 
+「啟用」或「停用」
+ a| 
+啟用或停用重建時的P/Q驗證。
+
+
+
+ a| 
+「DiveMediaType」
+ a| 
+設定P/Q驗證重建功能的磁碟機媒體類型。支援下列磁碟機媒體類型：
+
+* 「HDD」表示您要設定硬碟機的驗證狀態
+* 「SD」表示您要在固態磁碟上設定驗證狀態
+* 「ALLMEDIA」表示您想要在儲存陣列中的所有媒體上設定驗證狀態。
+
+
+|===
+
+
+== 指定為硬碟機的磁碟機媒體類型範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct enable driveMediaType=hdd;"
+
+SMcli completed successfully.
+----
+
+
+== 指定為固態磁碟機的磁碟機媒體類型範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "set storageArray pqValidateOnReconstruct disable driveMediaType=ssd;"
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.42

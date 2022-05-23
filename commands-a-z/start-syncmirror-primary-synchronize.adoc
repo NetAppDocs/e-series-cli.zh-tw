@@ -1,0 +1,64 @@
+---
+permalink: commands-a-z/start-syncmirror-primary-synchronize.html 
+sidebar: sidebar 
+keywords: start, synchronous, mirror, synchronization 
+summary: start SyncMirror flexprimary sSynchronize命令會啟動同步鏡射同步。 
+---
+= 啟動同步鏡射同步
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start SyncMirror （開始）」「flexprimary Synchronize（更新）」命令會啟動同步鏡射同步。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在此命令的早期版本中、功能識別碼為「即時鏡射」。此功能識別碼不再有效、改為SyncMirror 「樣」。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start syncMirror primary ["_volumeName_"]] synchronize
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+"一線"
+ a| 
+要開始同步的主要Volume名稱。將主Volume名稱括在方括弧（[]）內的雙引號（""）內。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

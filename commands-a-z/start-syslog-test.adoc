@@ -1,0 +1,60 @@
+---
+permalink: commands-a-z/start-syslog-test.html 
+sidebar: sidebar 
+keywords: test, syslog, configuration 
+summary: start syslog測試命令會傳送範例訊息來測試syslog組態。 
+---
+= 測試syslog組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start syslog test」命令會傳送範例訊息來測試syslog組態。
+
+
+
+== 支援的陣列
+
+此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+
+
+
+== 語法
+
+[listing]
+----
+
+start syslog test
+----
+
+
+== 參數
+
+無。
+
+
+
+== 範例
+
+[listing]
+----
+
+SMcli -n Array1 -c "start syslog test;"
+
+The sample alert message was successfully sent to the syslog servers.
+
+SMcli completed successfully.
+----
+
+
+== 最低韌體層級
+
+8.40

@@ -1,0 +1,55 @@
+---
+permalink: commands-a-z/add-certificate-from-file.html 
+sidebar: sidebar 
+keywords: add certificate file, supported arrays, syntax, parameters, minimum firmware level 
+summary: Add Certificate from file命令可讓您從檔案取得憑證、並將其新增至CLI套件的信任存放區。新增的憑證僅會由CLI套件使用。 
+---
+= 從檔案新增憑證
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Add Certificate from file」（從檔案新增憑證）命令可讓您從檔案取得憑證、並將其新增至CLI套件的信任存放區。新增的憑證僅會由CLI套件使用。
+
+
+
+== 支援的陣列
+
+此命令適用於EF600和EF300儲存陣列。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案名稱
+ a| 
+可讓您指定包含憑證的檔案名稱。
+
+
+
+ a| 
+使用者指定的別名
+ a| 
+可讓您透過使用者定義的別名來指定憑證。
+
+|===
+
+
+== 最低韌體層級
+
+8.60

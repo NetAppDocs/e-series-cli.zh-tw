@@ -1,0 +1,35 @@
+---
+permalink: get-started/structure-of-a-cli-command.html 
+sidebar: sidebar 
+keywords: structure, cli, commands 
+summary: CLI命令的形式是命令包裝函式和內嵌在包裝函式中的元素。 
+---
+= CLI命令的結構
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+CLI命令的形式是命令包裝函式和內嵌在包裝函式中的元素。CLI命令包含下列元素：
+
+* 用術語「Mcli」識別的命令包裝函式
+* 儲存陣列識別碼
+* 定義要執行之作業的終端機
+* 指令碼命令
+
+
+CLI命令包裝是一種Shell、可識別儲存陣列控制器、內嵌作業終端機、內嵌指令碼命令、並將這些值傳遞給指令碼引擎。
+
+所有CLI命令都具有下列結構：
+
+[listing]
+----
+SMcli *storageArray terminal script-commands*;
+----
+* 「Mcli」會叫用命令列介面。
+* 「儲存陣列」是儲存陣列的名稱或IP位址。
+* 「終端」是定義環境及命令用途的CLI值。
+* 「c指令 碼」是一或多個指令碼命令、或是包含指令碼命令的指令碼檔案名稱。（指令碼命令會設定及管理儲存陣列。）
+
+
+如果輸入的「Mcli」字串不完整或不正確、而且語法、參數名稱、選項或終端機不正確、指令碼引擎會傳回使用資訊。

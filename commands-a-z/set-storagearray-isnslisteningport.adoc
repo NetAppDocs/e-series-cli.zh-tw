@@ -1,0 +1,75 @@
+---
+permalink: commands-a-z/set-storagearray-isnslisteningport.html 
+sidebar: sidebar 
+keywords: set, storage, array, isns, server, listen, port 
+summary: set storageArray isnslisteningPort命令可設定iSNS伺服器接聽連接埠。 
+---
+= 設定儲存陣列iSNS伺服器接聽連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray isnslisteningPort」命令可設定iSNS伺服器接聽連接埠。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set storageArray isnsListeningPort=pass:quotes[_listeningPortIPAddress_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「isnslisteningPort」
+ a| 
+要用於iSNS伺服器接聽連接埠的IP位址。偵聽連接埠的值範圍為「49152」到「65535"。預設值為「53205」。
+
+偵聽連接埠位於伺服器上、並執行下列活動：
+
+* 監控傳入的用戶端連線要求
+* 管理伺服器的流量
+
+
+當用戶端要求與伺服器進行網路工作階段時、接聽程式會收到實際的要求。如果用戶端資訊與接聽程式資訊相符、則接聽程式會授與資料庫伺服器的連線。
+
+|===
+
+
+== 附註
+
+偵聽連接埠位於資料庫伺服器上、負責下列活動：
+
+* 偵聽（監控）傳入用戶端連線要求
+* 管理伺服器的流量
+
+
+當用戶端要求與伺服器進行網路工作階段時、接聽程式會收到實際的要求。如果用戶端資訊與接聽程式資訊相符、則接聽程式會授與資料庫伺服器的連線。
+
+
+
+== 最低韌體層級
+
+7.10.

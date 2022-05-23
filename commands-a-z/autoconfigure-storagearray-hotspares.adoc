@@ -1,0 +1,52 @@
+---
+permalink: commands-a-z/autoconfigure-storagearray-hotspares.html 
+sidebar: sidebar 
+keywords: autoconfigure, storage, array, hot spares, supported, roles, syntax, parameters, minimum firmware level 
+summary: AutoConfigure storageArray hotSpares命令會自動定義及設定儲存陣列中的熱備援磁碟機。您可以隨時執行此命令。此命令可為儲存陣列提供最佳的熱備援涵蓋範圍。 
+---
+= 自動設定儲存陣列熱備援磁碟機
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「autoconfigure storageArray hotfosup」命令會自動定義及設定儲存陣列中的熱備援磁碟機。您可以隨時執行此命令。此命令可為儲存陣列提供最佳的熱備援涵蓋範圍。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing]
+----
+autoConfigure storageArray hotSpares
+----
+
+
+== 參數
+
+無。
+
+
+
+== 附註
+
+當您執行「autoconfigure storageArray hotSposes」命令時、控制器韌體會根據儲存陣列中的磁碟機總數和類型、決定要建立的熱備援磁碟機數目。對於SAS磁碟機、控制器韌體會為儲存陣列建立一個熱備援磁碟機、並為儲存陣列中的每60個磁碟機建立一個額外的熱備援磁碟機。
+
+
+
+== 最低韌體層級
+
+6.10.

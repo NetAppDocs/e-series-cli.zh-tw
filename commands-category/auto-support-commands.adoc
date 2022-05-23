@@ -1,0 +1,67 @@
+---
+permalink: commands-category/auto-support-commands.html 
+sidebar: sidebar 
+keywords: support, commands, bundle, collection, autosupport 
+summary: 自動支援命令 
+---
+= 自動支援命令
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== E2700和E5600的套裝組合集合命令AutoSupport
+
+link:../commands-a-z/smcli-autosupportlog.html["擷AutoSupport 取或檢視一份資訊記錄"]
+
+link:../commands-a-z/smcli-autosupportconfig-show.html["顯示AutoSupport 套裝組合集合設定"]
+
+link:../commands-a-z/smcli-autosupportschedule-show.html["顯示AutoSupport 資訊收集排程"]
+
+link:../commands-a-z/smcli-enable-autosupportfeature.html["在AutoSupport EMW管理網域層級啟用或停用支援功能..."]
+
+link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["在AutoSupport EMW管理網域層級啟用或停用「僅限SMcli」功能。"]
+
+link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["啟用或停用AutoSupport 位於...的「支援不支援不支援的」遠端診斷功能。"]
+
+link:../commands-a-z/smcli-autosupportschedule-reset.html["重設AutoSupport 資訊收集排程"]
+
+link:../commands-a-z/smcli-supportbundle-schedule.html["排程自動支援服務組合集合組態"]
+
+link:../commands-a-z/smcli-autosupportconfig.html["指定AutoSupport 供應功能"]
+
+link:../commands-a-z/smcli-autosupportconfig-test.html["測試AutoSupport 該組態"]
+
+
+
+== 所有儲存陣列的指令AutoSupport
+
+link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["啟用或停用AutoSupport 功能（僅適用於E2800、E5700陣列的個別陣列）"]
+
+link:../commands-a-z/save-storagearray-supportdata.html["儲存儲存陣列支援資料"]
+
+
+
+== E2800、E5700的指令AutoSupport
+
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["啟用或停用AutoSupport 「還原維護」視窗（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/set-storagearray-autosupportondemand.html["啟用或停用AutoSupport 「根據需求提供支援」功能（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["啟用或停用AutoSupport 「停止執行功能」（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/save-storagearray-autosupport-log.html["擷取AutoSupport 一份資料檔（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/show-storagearray-autosupport.html["顯示AutoSupport 僅供E2800或E5700儲存陣列使用的組態"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["設定AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["指定AutoSupport 功能完善的HTTP（S）交付方法（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["指定電子郵件（SMTP）交付方法（適用於個別E2800或E5700陣列）"]
+
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["測試AutoSupport 供應設定（適用於個別E2800或E5700陣列）"]

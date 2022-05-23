@@ -1,0 +1,152 @@
+---
+permalink: commands-a-z/set-asyncmirrorgroup.html 
+sidebar: sidebar 
+keywords: set, asynchronous, mirror, group 
+summary: Set asyncdMirrorGroup命令會變更同步處理設定和警告臨界值、而非同步鏡射群組主要端的控制器擁有者會在執行初始同步或重新同步時使用這些設定和臨界值。 
+---
+= 設定非同步鏡射群組
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set asyncdMirrorGroup」命令會變更同步處理設定和警告臨界值、而非同步鏡射群組主要端的控制器擁有者會在執行初始同步或重新同步時使用這些設定和臨界值。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員或支援管理員角色。
+
+
+
+== 背景
+
+變更同步設定會影響非同步鏡射群組中所有鏡射配對的同步作業。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
+[volume="repos_xxxx" increaseRepositoryCapacity (repositoryVolume=("repos_xxxx")]
+[syncInterval=pass:quotes[_integer_] (minutes | hours | days)]
+[warningSyncThreshold=pass:quotes[_integer_] (minutes | hours | days)]
+[warningRecoveryThreshold=integer (minutes | hours | days)]
+[userLabel=pass:quotes["_New_asyncMirrorGroupName_"]]
+[warningThresholdPercent=pass:quotes[_percentValue_]]
+[role=(primary | secondary)]
+[autoResync=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《非yncdMirrorGroup》（英文）
+ a| 
+您要修改的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您想要增加容量的非同步鏡射群組儲存庫磁碟區名稱。
+
+儲存庫磁碟區的名稱由兩部分組成：
+
+* 「錯誤」一詞
+* 儲存管理軟體指派給儲存庫Volume名稱的四位數數字識別碼
+
+
+將儲存庫磁碟區名稱括在雙引號（""）內。
+
+
+
+ a| 
+《yncdal區間》
+ a| 
+指定從本機儲存陣列自動傳送修改資料更新至遠端儲存陣列之間的時間長度。您可以指定時間長度（以分鐘、小時或天為單位）。
+
+
+
+ a| 
+《warningSyncThreshold》
+ a| 
+指定在非同步鏡射群組中所有磁碟區的同步處理時間超過所定義時間的情況下、等待警示觸發的時間長度。您可以指定時間長度（以分鐘、小時或天為單位）。
+
+
+
+ a| 
+《warningRecoveryThreshold》（警告恢復臨界值）
+ a| 
+指定當遠端儲存陣列上時間點映像的自動資料更新時間早於定義的時間時、等待警示觸發的時間長度。定義從上次更新結束的臨界值。您可以指定時間長度（以分鐘、小時或天為單位）。
+
+[NOTE]
+====
+您必須將恢復點臨界值設定為同步處理時間間隔臨界值的兩倍。
+
+====
+
+
+ a| 
+「userLabel」
+ a| 
+您要指定給非同步鏡射群組的新名稱。當您想要重新命名非同步鏡射群組時、請使用此參數。將新的非同步鏡射群組名稱以雙引號（""）括住。
+
+
+
+ a| 
+《warningTholholdPercent
+ a| 
+指定當鏡射儲存庫磁碟區的容量達到定義的百分比時、決定何時觸發警告的百分比值。依剩餘容量百分比（%）定義臨界值。
+
+
+
+ a| 
+《角色》
+ a| 
+使用此參數可將非同步鏡射群組升級為主要角色、或將非同步鏡射群組降級為次要角色。若要將非同步鏡射群組定義為主要角色、請將此參數設為「primary」。若要將非同步鏡射群組定義為次要角色、請將此參數設為「次要」。
+
+
+
+ a| 
+自動重新同步
+ a| 
+在非同步鏡射群組中、自動重新同步主要磁碟區與非同步鏡射配對的次要磁碟區的設定。此參數具有下列值：
+
+* 「已啟用」-自動重新同步已開啟。您不需要進一步執行任何動作、就能重新同步主要Volume和次要Volume。
+* 「停用」—自動重新同步功能已關閉。若要重新同步主磁碟區和次磁碟區、您必須執行「Start（開始）asyncdMirrorGroup（同步鏡像群組）」命令。
+
+
+|===
+
+
+== 附註
+
+您可以使用字母數字字元、底線（_）、連字號（-）和井號（#）的任意組合來命名。名稱最多可包含30個字元。
+
+使用此命令時、您可以指定一或多個參數。不過、您不需要使用所有的參數。
+
+非同步鏡射群組儲存庫磁碟區是可擴充的磁碟區、結構化為最多16個標準Volume實體的串聯集合。一開始、可擴充的儲存庫磁碟區只有一個磁碟區。可擴充儲存庫磁碟區的容量與單一磁碟區的容量完全相同。您可以將其他未使用的儲存庫磁碟區附加至可擴充儲存庫磁碟區、以增加其容量。然後、複合式可擴充儲存庫的Volume容量會成為所有串聯標準磁碟區容量的總和。
+
+
+
+== 最低韌體層級
+
+7.84

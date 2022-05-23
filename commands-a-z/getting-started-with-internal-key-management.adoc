@@ -1,0 +1,34 @@
+---
+permalink: commands-a-z/getting-started-with-internal-key-management.html 
+sidebar: sidebar 
+keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
+summary: 安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用內部金鑰管理時、您可以在控制器的持續記憶體上建立及維護安全金鑰。 
+---
+= 內部金鑰管理入門
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用內部金鑰管理時、您可以在控制器的持續記憶體上建立及維護安全金鑰。
+
+如SANtricity 需使用內部安全金鑰的概念性資訊、請參閱《支援系統管理員》線上說明。
+
+以下是使用內部安全金鑰的基本工作流程：
+
+. *建立安全金鑰*
+. *設定安全金鑰*
+. *驗證安全金鑰*
+
+
+
+
+== 工作流程步驟
+
+下列命令可讓您開始使用內部安全金鑰：
+
+. 使用「create storageArray SECURITY Key」命令建立儲存陣列安全金鑰。請參閱 xref:create-storagearray-securitykey.adoc[建立儲存陣列安全金鑰]。
+. 使用「set storageArray SECURITY Key」命令設定儲存陣列安全金鑰。請參閱 xref:set-storagearray-securitykey.adoc[設定儲存陣列安全金鑰]。
+. 使用「validate storageArray securityKey」命令驗證安全金鑰。請參閱 xref:validate-storagearray-securitykey.adoc[驗證儲存陣列安全金鑰]。
+

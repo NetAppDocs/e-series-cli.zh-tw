@@ -1,0 +1,113 @@
+---
+permalink: commands-a-z/save-storagearray-configuration.html 
+sidebar: sidebar 
+keywords: save, storage, array, configuration 
+summary: 儲存storageArray組態命令會建立指令碼檔案、您可以使用該檔案來重新建立目前的儲存陣列Volume組態。 
+---
+= 儲存儲存陣列組態
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列組態」命令會建立指令碼檔案、供您用來重新建立目前的儲存陣列磁碟區組態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。不過、此命令搭配LDAP參數的使用僅限於具有安全性管理角色的使用者。
+
+
+
+== 背景
+
+[NOTE]
+====
+此命令不會將目前儲存陣列上的遠端鏡像或磁碟區複製組態資料儲存到檔案中。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray configuration file=pass:quotes["_filename_"]
+(allconfig|[globalSettings=(TRUE | FALSE)]
+[volumeConfigAndSettings=(TRUE | FALSE)]
+[hostTopology=(TRUE | FALSE)]
+[lunMappings=(TRUE | FALSE)])
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存組態設定的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\saconf.cf"」
+
+包含組態設定的檔案預設名稱為「sectorage-array-configuration．cfg」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定副檔名。
+
+
+
+ a| 
+"allConfig"
+ a| 
+將所有組態值儲存至檔案的設定。（如果您選擇此參數、所有組態參數都會設為「true」。）
+
+
+
+ a| 
+「globalSettings」
+ a| 
+將全域設定儲存至檔案的設定。若要儲存全域設定、請將此參數設為「true」。若要避免儲存全域設定、請將此參數設為「假」。預設值為「true」。
+
+
+
+ a| 
+「volumeConfigAndSettings」
+ a| 
+將Volume組態設定和所有全域設定儲存至檔案的設定。若要儲存Volume組態設定和全域設定、請將此參數設為「true」。若要避免儲存Volume組態設定和全域設定、請將此參數設為「假」。預設值為「true」。
+
+
+
+ a| 
+《主機拓撲》
+ a| 
+將主機拓撲儲存至檔案的設定。若要儲存主機拓撲、請將此參數設為「true」。若要避免儲存主機拓撲、請將此參數設為「假」。預設值為「假」。
+
+
+
+ a| 
+《lunMappings》
+ a| 
+將LUN或NSID對應儲存至檔案的設定。若要儲存LUN或NSID對應、請將此參數設為「true」。若要避免儲存LUN或NSID對應、請將此參數設為「假」。預設值為「假」。
+
+|===
+
+
+== 附註
+
+使用此命令時、您可以指定全域設定、Volume組態設定、主機拓撲或LUN對應的任何參數組合。如果您要輸入所有設定、請使用「allConfig」參數。您必須使用「allConfig」參數、或是其他四個參數中的一個或多個。
+
+
+
+== 最低韌體層級
+
+6.10.

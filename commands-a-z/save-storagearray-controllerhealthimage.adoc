@@ -1,0 +1,109 @@
+---
+permalink: commands-a-z/save-storagearray-controllerhealthimage.html 
+sidebar: sidebar 
+keywords: save, storage, array, controller, health, image 
+summary: SAVE storageArray controllerHealthImage命令可將控制器健全狀況映像儲存至主機上的指定檔案、以供支援控制器健全狀況映像功能的儲存陣列使用。 
+---
+= 儲存儲存陣列控制器健全狀況映像
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「最大儲存陣列控制器HealthImage」命令可將控制器健全狀況映像儲存至主機上的指定檔案、以供支援控制器健全狀況映像功能的儲存陣列使用。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[NOTE]
+====
+在固件版本8.20中、「coredump」參數會由「controllerHealthImage」參數取代。
+
+====
+如果儲存陣列不支援控制器健全狀況映像功能、則命令會傳回錯誤。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray controllerHealthImage file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+儲存控制器健全狀況映像的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+[listing]
+----
+file="C:\Array Backups\DBMbackup_03302010.core"
+----
+|===
+
+
+== 附註
+
+控制器健全狀況映像檔的大小可能是1到2 GB、需要幾分鐘的時間才能儲存。除了儲存控制器健全狀況映像本身、此命令也會根據控制器健全狀況映像中繼資料來產生XML描述元檔案。此描述元檔案會以ZIP檔案格式儲存至與控制器健全狀況映像相同的路徑。以下範例顯示描述元檔案的XML格式。
+
+[listing]
+----
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+- <DPLcontrollerHealthImageInfo>
+<dplcontrollerHealthImageTag>sometag#</dplcontrollerHealthImageTag>
+<captureTime>12/22/10 3:58:53 PM IST</captureTime>
+- <StorageArrayData>
+<ArraySAID>600a0b80006e006a000000004c65efc1</ArraySAID>
+<ManagementApiVersion>devmgr.v1083api01.Manager</ManagementApiVersion>
+<fwVersion>07.83.01.00</fwVersion>
+<platformType>7091</platformType>
+</StorageArrayData>
+<fullcontrollerHealthImageCtlr>controllerserialNumber1
+     </fullcontrollerHealthImageCtlr>
+<fullcontrollerHealthImageSize>fullCaptureSize</fullcontrollerHealthImageSize>
+<altcontrollerHealthImageCtlr>controllerserialNumber2</altcontrollerHealthImage
+     Ctlr>
+<altcontrollerHealthImageSize>altCaptureSize</altcontrollerHealthImageSize>
+<triggerReason>Exception</triggerReason>-<DPLcontrollerHealthImageDetail>
+<dplcontrollerHealthImageReason>DPLcontrollerHealthImageReason
+     </dplcontrollerHealthImageReason>
+- <fwLocation >
+<filename>filename</filename>
+<lineNumber>line#</lineNumber>
+</fwLocation >
+<panicReason>panicString</panicReason>
+</DPLcontrollerHealthImageDetail>
+</DPLcontrollerHealthImageInfo>
+----
+當您從控制器快取擷取控制器健全狀況映像到主機時、控制器上會設定一個旗標、指出不需要擷取控制器健全狀況映像。此設定持續48小時。如果在此期間發生新的控制器健全狀況映像、新的控制器健全狀況映像會儲存到控制器快取、並覆寫快取中任何先前的控制器健全狀況映像資料。
+
+
+
+== 最低韌體層級
+
+7.83
+
+8.20將「coredump」參數取代為「controllerHealthImage」參數。

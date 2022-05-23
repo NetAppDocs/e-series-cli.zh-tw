@@ -1,0 +1,107 @@
+---
+permalink: commands-a-z/create-hostport.html 
+sidebar: sidebar 
+keywords: create, host, port 
+summary: create hostPort命令會在主機匯流排介面卡（HBA）或主機通道介面卡（HCA）上建立新的主機連接埠識別。 
+---
+= 建立主機連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「create hostPort」命令會在主機匯流排介面卡（HBA）或主機通道介面卡（HCA）上建立新的主機連接埠識別。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+主機連接埠識別是代表控制器實體HBA或HCA主機連接埠的軟體值。如果沒有正確的主機連接埠識別、控制器就無法從主機連接埠接收指令或資料。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+create hostPort identifier=pass:quotes[_("wwID"_ | "_gid"_)
+userLabel="_portLabel"_]
+[host=pass:quotes[_"hostName"_]]
+[interfaceType=(FC | SAS | IB)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"識別碼"
+ a| 
+HBA或HCA主機連接埠的8位元組全球識別碼（WWID）或16位元組群組識別碼（GID）。請將WWID或GID括在雙引號（""）內。
+
+
+
+ a| 
+「userLabel」
+ a| 
+您要指定給新HBA或HCA主機連接埠的名稱。將主機連接埠標籤括在雙引號（""）內。
+
+
+
+ a| 
+"主機"
+ a| 
+定義HBA或HCA主機連接埠的主機名稱。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+「介面類型」
+ a| 
+主機連接埠的介面類型識別碼。
+
+主機連接埠介面類型的選項包括：
+
+* 「FC」-光纖通道
+* 「AS」-序列連接SCSI
+* 「IB」- InfiniBand
+
+
+FC或SAS選擇需要8位元組的WWID。IB選擇需要16位元組識別碼（GID）。
+
+如果未指定介面類型、則會使用「FC」作為主機連接埠的預設介面。
+
+|===
+
+
+== 附註
+
+HBA主機連接埠或HCA主機連接埠是位於主機匯流排介面卡或位於主機電腦主機通道介面卡上的實體連線。HBA主機連接埠或HCA主機連接埠可讓主機存取儲存陣列中的磁碟區。如果HBA或HCA只有一個實體連線（一個主機連接埠）、則主機連接埠和主機匯流排介面卡或主機通道介面卡等詞是同義詞。
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+
+
+== 最低韌體層級
+
+5.20
+
+7.10取代了「hostType」參數。已將「hostType」參數新增至「create host」命令。
+
+7.32新增「介面類型」參數。

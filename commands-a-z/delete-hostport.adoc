@@ -1,0 +1,72 @@
+---
+permalink: commands-a-z/delete-hostport.html 
+sidebar: sidebar 
+keywords: delete, hostport, command, host, port, identification 
+summary: 刪除hostPort命令會刪除主機連接埠識別碼。 
+---
+= 刪除主機連接埠
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「刪除hostPort」命令會刪除主機連接埠識別碼。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+識別碼是代表控制器實體主機連接埠的軟體值。刪除識別碼後、控制器就無法再辨識主機連接埠的指令和資料。
+
+[IMPORTANT]
+====
+此命令無法在iSCSI環境中運作、因為主機連接埠被視為啟動器。而是使用「刪除iscsiInitiator」命令。請參閱 xref:delete-iscsiinitiator.adoc[刪除iSCSI啟動器]。
+
+====
+
+
+== 語法
+
+[listing]
+----
+delete hostPort [hostPortName]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「主機連接埠」
+ a| 
+您要刪除的主機連接埠名稱。將主機連接埠名稱括在方括弧（[]）內。如果主機連接埠名稱包含特殊字元或僅包含數字、您也必須在方括弧內以雙引號（""）括住名稱。
+
+|===
+
+
+== 附註
+
+主機連接埠是位於主機電腦內之主機介面卡上的實體連線。主機連接埠可讓主機存取儲存陣列中的磁碟區。
+
+
+
+== 最低韌體層級
+
+5.20

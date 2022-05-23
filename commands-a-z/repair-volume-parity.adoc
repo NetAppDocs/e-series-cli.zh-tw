@@ -1,0 +1,86 @@
+---
+permalink: commands-a-z/repair-volume-parity.html 
+sidebar: sidebar 
+keywords: repair, volume, parity 
+summary: 修復Volume同位元檢查命令可修復磁碟區上的同位元檢查錯誤。 
+---
+= 修復磁碟區同位元檢查
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「REPair volume同位元檢查」命令可修復磁碟區上的同位元檢查錯誤。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+[CAUTION]
+====
+如果磁碟區同位元檢查與磁碟區資料不相符、則磁碟區資料可能有瑕疵、而非磁碟區同位元檢查。如有必要、修復磁碟區同位元會破壞修復故障磁碟區資料的能力。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+repair volume pass:quotes[[_volumeName_]] parity
+parityErrorFile=pass:quotes[_"filename"_]
+[verbose=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要修復同位元檢查的磁碟區名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+「parityErrorFile」
+ a| 
+檔案路徑和檔案名稱、其中包含用於修復錯誤的同位元檢查錯誤資訊。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/sup\parfile.txt"」
+
+[NOTE]
+====
+「parityErrorFile」是先前「檢查磁碟區同位元檢查」作業的結果。
+
+====
+
+
+ a| 
+「詳細」
+ a| 
+此設定可擷取進度詳細資料（例如完成百分比）、並在修復磁碟區同位元時顯示資訊。若要擷取進度詳細資料、請將此參數設為「true」。若要避免擷取進度詳細資料、請將此參數設為「假」。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.

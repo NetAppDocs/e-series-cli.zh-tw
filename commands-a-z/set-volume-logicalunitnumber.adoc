@@ -1,0 +1,119 @@
+---
+permalink: commands-a-z/set-volume-logicalunitnumber.html 
+sidebar: sidebar 
+keywords: set, volume, map 
+summary: set volume logicalunitNumber命令可定義磁碟區與主機或主機群組之間的邏輯單元編號（LUN）或命名空間ID（NSID）對應。 
+---
+= 設定Volume對應
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「set volume logicalunitNumber」命令可定義磁碟區與主機或主機群組之間的邏輯單元編號（LUN）或命名空間ID（NSID）對應。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+此命令適用於磁碟區群組或磁碟集區中的磁碟區。
+
+[NOTE]
+====
+您無法將此命令用於線上Volume複本中使用的快照磁碟區。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set (volume pass:quotes[[_volumeName_]] | volume <"wwID"> | accessVolume)
+pass:quotes[logicalUnitNumber=_lun_]
+pass:quotes[(host="_hostName_"] |
+hostGroup=pass:quotes[("_hostGroupName_"] | defaultGroup)
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義其邏輯單元編號的Volume名稱。將磁碟區名稱括在方括弧（[]）內。如果Volume名稱含有特殊字元或數字、則必須在方括弧內以雙引號（""）括住Volume名稱。
+
+
+
+ a| 
+《Volume》（Volume）
+ a| 
+您要定義其邏輯單元編號之Volume的全球識別碼（WWID）。將WWID以雙引號（""）括在角括弧（<>）內。
+
+
+
+ a| 
+《存取磁碟區》
+ a| 
+存取磁碟區的邏輯單元編號。邏輯單元編號是您唯一可以為存取磁碟區設定的屬性。
+
+
+
+ a| 
+「logicalUnitsNumber」
+ a| 
+您要用來對應至特定主機的邏輯單元編號或命名空間ID。此參數也會將主機指派給主機群組。
+
+[NOTE]
+====
+您指定的邏輯單元編號或命名空間ID不得已在使用中、且必須在主機作業系統支援的範圍內。如果將磁碟區對應至主機不支援的邏輯單元編號或命名空間ID、則不會發生錯誤、但主機將無法存取磁碟區。
+
+====
+
+
+ a| 
+"主機"
+ a| 
+磁碟區對應的主機名稱。將主機名稱括在雙引號（""）內。
+
+
+
+ a| 
+「主機群組」
+ a| 
+磁碟區對應的主機群組名稱。將主機群組名稱括在雙引號（""）內。「資料管理群組」是包含磁碟區對應主機的主機群組。
+
+|===
+
+
+== 附註
+
+主機群組是選用的拓撲元素、您可以定義是否要指定共用相同磁碟區存取權的主機集合。主機群組是邏輯實體。只有當您有兩個或多個主機可以共用相同磁碟區的存取權時、才可定義主機群組。
+
+您可以使用字母數字字元、連字號和底線的任意組合來命名。名稱最多可包含30個字元。
+
+存取磁碟區是SAN環境中的磁碟區、用於儲存管理軟體與儲存陣列控制器之間的頻內通訊。此磁碟區使用LUN或NSID位址、會耗用20 MB的儲存空間、無法用於應用程式資料儲存。只有頻內託管儲存陣列才需要存取磁碟區。如果指定"accessVolume"參數、唯一可以設定的屬性就是"logicalUnicalUnityNumber"參數。
+
+
+
+== 最低韌體層級
+
+7.83新增磁碟集區的Snapshot Volume。

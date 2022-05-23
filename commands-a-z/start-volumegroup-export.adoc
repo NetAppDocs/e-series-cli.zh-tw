@@ -1,0 +1,81 @@
+---
+permalink: commands-a-z/start-volumegroup-export.html 
+sidebar: sidebar 
+keywords: start, volume, group, export 
+summary: start volumeGroup匯出命令會將Volume群組移至匯出狀態。 
+---
+= 開始Volume群組匯出
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Start volumeGroup export'」命令可將Volume群組移至匯出狀態。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+然後您可以移除組成磁碟區群組的磁碟機、並在不同的儲存陣列中重新安裝磁碟機。
+
+[CAUTION]
+====
+請勿在未執行中所列步驟的情況下執行這些步驟 xref:../commands-category/learn-about-volume-group-migration.adoc[深入瞭解Volume群組移轉。]
+
+====
+[NOTE]
+====
+在Volume群組中、您無法將與某個儲存陣列功能相關聯的磁碟區、移至另一個儲存陣列。
+
+====
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+pass:quotes[start volumeGroup [_volumeGroupName_]] export
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「Volume Group」
+ a| 
+您要匯出的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。
+
+|===
+
+
+== 附註
+
+當此命令成功時、您可以執行「Start volumeGroup import」命令、以完成將Volume群組移至完整狀態、使Volume群組可供新的儲存陣列使用。
+
+如果此命令因硬體問題而無法完成匯出、請使用「設為volumeGroup forceState」命令。「s volumeGroup forceState」命令可讓您使用「Start volumeGroup import」命令匯入Volume群組。
+
+在Volume群組處於匯出狀態或強制狀態之後、您可以從儲存陣列中移除組成Volume群組的磁碟機。您可以在不同的儲存陣列中重新安裝磁碟機。
+
+
+
+== 最低韌體層級
+
+7.10.

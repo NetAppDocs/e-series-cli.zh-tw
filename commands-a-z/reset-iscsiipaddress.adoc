@@ -1,0 +1,79 @@
+---
+permalink: commands-a-z/reset-iscsiipaddress.html 
+sidebar: sidebar 
+keywords: reset, iscsi, ip address 
+summary: 重設iscsiIpAddress命令會重設遠端儲存陣列的IP位址、以重新建立與本機儲存陣列的連線。 
+---
+= 重設iSCSI IP位址
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「reset iscsiipAddress」命令會重設遠端儲存陣列的IP位址、以重新建立與本機儲存陣列的連線。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。
+
+[NOTE]
+====
+如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。
+
+====
+
+
+== 角色
+
+若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+
+
+
+== 背景
+
+您可以使用此命令通知本機儲存陣列遠端儲存陣列的iSCSI IP位址已變更、需要更新。
+
+在與iSCSI連線建立非同步鏡射關係時、本機和遠端儲存陣列都會在非同步鏡射組態中儲存遠端儲存陣列IP位址的記錄。如果iSCSI連接埠的IP位址變更、則嘗試使用該連接埠的遠端儲存陣列會發生通訊錯誤。
+
+具有變更IP位址的儲存陣列會傳送訊息給每個與非同步鏡射群組相關聯的遠端儲存陣列、這些群組已設定為透過iSCSI連線鏡射。接收此訊息的儲存陣列會自動更新遠端目標IP位址。
+
+如果IP位址變更的儲存陣列無法將控制器間訊息傳送至遠端儲存陣列、系統會傳送連線問題警示給您。使用「reset」命令重新建立與本機儲存陣列的連線。
+
+
+
+== 語法
+
+[listing]
+----
+reset (remoteStorageArrayName="storageArrayName" | remoteStorageArrayWwid=<wwID>)
+iscsiIpAddress
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+"REmoteStorageArrayName"
+ a| 
+您要為其重設iSCSI IP位址的遠端儲存陣列名稱。將儲存陣列名稱括在雙引號（""）內。
+
+
+
+ a| 
+"REmoteStorageArrayWwide"
+ a| 
+您要為其重設iSCSI IP位址的儲存陣列的全球識別碼（WWID）。您可以使用WWID而非儲存陣列名稱來識別儲存陣列。將WWID括在尖括弧內（<>）。
+
+|===
+
+
+== 最低韌體層級
+
+7.84

@@ -1,0 +1,61 @@
+---
+permalink: get-started/formatting-cli-commands.html 
+sidebar: sidebar 
+keywords: format, rules, cli, commands 
+summary: 當您在Windows、Linux或Solaris作業系統上執行CLI命令和指令碼命令時、作為名稱或標籤一部分的雙引號需要特別考量。 
+---
+= CLI命令的格式化規則
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+當您在Windows、Linux或Solaris作業系統上執行CLI命令和指令碼命令時、作為名稱或標籤一部分的雙引號（""）需要特別考量。
+
+當雙引號（""）是名稱或值的一部分時、您必須在每個雙引號字元之前插入反斜槓（\）。
+
+例如：
+
+[listing]
+----
+-c "set storageArray userLabel=\"Engineering\";"
+----
+在此範例中、「Engineering」是儲存陣列名稱。
+
+第二個例子是：
+
+[listing]
+----
+-n \"My\"_Array
+----
+在此範例中、「My」_Array是儲存陣列的名稱。
+
+您不能在指令碼命令中使用雙引號（""）做為字元字串（也稱為字串文字）的一部分。例如、您無法輸入下列字串、將儲存陣列名稱設為「Finance" Array：
+
+[listing]
+----
+-c "set storageArray userLabel=\"\"Finance\"Array\";"
+----
+在Windows作業系統中、如果您未在名稱前後使用雙引號（""）、則必須在每個特殊指令碼字元之前插入一個插入號（{caret}）。特殊字元為｛caret｝、|、<和>。
+
+在每個特殊指令碼字元之前插入一個插入符號、用於端子「-n」、「-o」、「-f」及「-p」。例如、若要指定儲存陣列CLI/Client、請輸入下列字串：
+
+[listing]
+----
+-n CLI^>CLIENT
+----
+在指令碼命令的字串文字中使用時、請在每個特殊指令碼字元之前插入一個插入號（｛caret｝）。例如、若要將儲存陣列的名稱變更為財務_|_d薪 資、請輸入下列字串：
+
+[listing]
+----
+-c "set storageArray userLabel=\"FINANCE_^|_PAYROLL\";"
+----
+[NOTE]
+====
+在命令提示字元中發出SMcli命令時、使用Windows OS時、輸入或輸出檔案的檔案路徑名稱中需要額外的反斜槓（`\）字元作為轉義字元。在安全的https模式下使用SMcli時、必須加上額外的反斜槓（`\）、方法是提供-u選項來指定角色型存取管理使用者。*範例：*
+
+[listing]
+----
+C:\\dir\\subdir\\filename
+----
+====

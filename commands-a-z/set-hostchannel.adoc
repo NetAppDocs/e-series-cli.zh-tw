@@ -1,0 +1,69 @@
+---
+permalink: commands-a-z/set-hostchannel.html 
+sidebar: sidebar 
+keywords: set, host, channel 
+summary: set hostChannel命令可定義主機通道的迴圈ID。 
+---
+= 設定主機通道
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show hostChannel」命令可定義主機通道的迴圈ID。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set hostChannel pass:quotes[[_hostChannelNumber_]]
+preferredID=pass:quotes[_portID_]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「主機通道」
+ a| 
+要設定迴圈ID的主機通道識別碼。將主機通道識別碼括在方括弧（[]）內。
+
+使用適合您特定控制器機型的主機通道值。控制器匣可支援一個主機通道或最多八個主機通道。有效的主機通道值為「A1」、「A2」、「A3」、「A4」、「a5」、 《A6》、《A7》、《A8》、《B1》、《B2》、 b3、b4、b5、b6、b7、 或「b8」。
+
+
+
+ a| 
+首選ID
+ a| 
+指定主機通道的連接埠識別碼。連接埠ID值為0至127。
+
+|===
+
+
+== 最低韌體層級
+
+6.10.
+
+6.14新增更新至主機通道識別碼。
+
+7.15新增更新至主機通道識別碼。

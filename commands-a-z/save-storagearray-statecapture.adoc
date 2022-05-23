@@ -1,0 +1,56 @@
+---
+permalink: commands-a-z/save-storagearray-statecapture.html 
+sidebar: sidebar 
+keywords: save, storage, array, state, capture 
+summary: SAVE storageArray stateCapture命令會將儲存陣列的狀態擷取儲存到檔案中。 
+---
+= 儲存陣列狀態擷取
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「儲存陣列stateCapture」命令會將儲存陣列的狀態擷取儲存到檔案中。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+save storageArray stateCapture file=pass:quotes["_filename_"]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+檔案
+ a| 
+您要儲存狀態擷取的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：
+
+「file="C:\Program Files\CLI/logs\state．txt"」
+
+您可以使用任何檔案名稱、但必須使用「.txt"副檔名。
+
+包含狀態擷取的檔案預設名稱為「state-capt-data.txt」。此命令不會自動將副檔名附加至儲存的檔案。輸入檔案名稱時、您必須指定副檔名。
+
+|===

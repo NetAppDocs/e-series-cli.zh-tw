@@ -1,0 +1,76 @@
+---
+permalink: commands-a-z/remove-member-volume-from-consistency-group.html 
+sidebar: sidebar 
+keywords: remove, member, volume, consistency group 
+summary: Set Consistency Group命令會從現有的Snapshot一致性群組中移除成員磁碟區。 
+---
+= 從一致性群組中移除成員磁碟區
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「Set Consistency Group」命令會從現有的快照一致性群組中移除成員磁碟區。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 背景
+
+您也可以從一致性群組中刪除儲存庫磁碟區成員。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+set consistencyGroup pass:quotes[[_"consistencyGroupName"_]]
+removeCGMemberVolume=pass:quotes["_memberVolumeName_"]
+[deleteRepositoryMembers=(TRUE | FALSE)]
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+「一致的GroupName」
+ a| 
+要從中移除成員的一致性群組名稱。將一致性群組名稱以雙引號（""）括在方括弧（[]）內。
+
+
+
+ a| 
+《實作CGMemberVolume》
+ a| 
+您要移除的成員Volume名稱。將成員群組名稱括在雙引號（""）內。
+
+
+
+ a| 
+「刪除儲存成員」
+ a| 
+決定是否從一致性群組中移除所有儲存庫成員。
+
+|===
+
+
+== 最低韌體層級
+
+7.83

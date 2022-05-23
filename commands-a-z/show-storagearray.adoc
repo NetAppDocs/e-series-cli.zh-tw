@@ -1,0 +1,407 @@
+---
+permalink: commands-a-z/show-storagearray.html 
+sidebar: sidebar 
+keywords: show, storage, array 
+summary: show storageArray命令會傳回儲存陣列的組態資訊。 
+---
+= 顯示儲存陣列
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+「show storageArray」命令會傳回儲存陣列的組態資訊。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+
+
+
+== 背景
+
+這些參數會傳回儲存陣列中元件和功能的值清單。您可以使用單一參數或多個參數來輸入命令。如果您輸入的命令沒有任何參數、則會顯示整個儲存陣列設定檔（此資訊與您輸入「*設定檔*」參數的資訊相同）。
+
+
+
+== 語法
+
+[listing]
+----
+show storageArray
+[autoSupport| autoSupportConfig | profile |
+batteryAge | connections | defaultHostType | healthStatus |
+hostTypeTable | hotSpareCoverage | features | time |
+volumeDistribution | longRunningOperations | summary | preferredVolumeOwners |
+iscsiNegotiationDefaults | unconfiguredIscsiInitiators | autoLoadBalancingEnable |
+cacheMirrorDataAssuranceCheckEnable | hostConnectivityReporting]
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+「AutoLoadBalancingEnable」
+ a| 
+傳回自動負載平衡功能啟用狀態的參數。
+
+[NOTE]
+====
+啟用「自動負載平衡」功能時、也會啟用「主機連線報告」功能。
+
+====
+
+
+ a| 
+《不一樣》AutoSupport
+ a| 
+[NOTE]
+====
+此參數僅適用於以「https」用戶端類型執行的E2800或E5700儲存陣列。對於以用戶端類型執行的E2800或E5700儲存陣列、請使用「autosupSupportConfig」參數。
+
+====
+
+
+ a| 
+「AutoSupportConfig」
+ a| 
+此參數會傳回有關作業目前狀態的資訊、以自動收集支援資料。傳回下列資訊：
+
+* 是啟用還是停用該作業
+* 支援資料檔案所在資料夾的位置
+
+
+[NOTE]
+====
+此參數僅適用於以「symbol」用戶端類型執行的E2800或E5700儲存陣列。對於以https用戶端類型執行的E2800或E5700儲存陣列、請使用「* AutoSupport 」參數。
+
+====
+
+
+ a| 
+《電池》
+ a| 
+顯示狀態、電池壽命（以天計）以及電池需要更換前的天數的參數。顯示兩個電池的相關資訊。
+
+
+
+ a| 
+「cacheMirrorDataAssuranceChecksEnable」
+ a| 
+傳回快取鏡射資料保證功能啟用狀態的參數。
+
+
+
+ a| 
+連線
+ a| 
+顯示磁碟機通道連接埠所在位置和磁碟機通道連接位置清單的參數。
+
+
+
+ a| 
+「資料錯誤主機類型」
+ a| 
+顯示預設主機類型和主機類型索引的參數。
+
+
+
+ a| 
+功能
+ a| 
+顯示儲存陣列功能組態的參數。
+
+
+
+ a| 
+「健康狀態」
+ a| 
+顯示儲存陣列健全狀況、邏輯內容和實體元件內容的參數。
+
+
+
+ a| 
+《hostConnectivityReports》
+ a| 
+傳回主機連線報告功能啟用狀態的參數。
+
+
+
+ a| 
+「hostTypeTable」
+ a| 
+顯示控制器已知所有主機類型的表格。表格中的每一列都會顯示主機類型索引、以及主機類型索引所代表的平台。
+
+
+
+ a| 
+「熱SpareCoverage」
+ a| 
+顯示哪些儲存陣列磁碟區具有熱備援涵蓋範圍、哪些磁碟區沒有的相關資訊。
+
+
+
+ a| 
+《iscsiNegotiationDefaults》（iscsiNegotiationDefaults）
+ a| 
+此參數可傳回受啟動器目標交涉規範之連線層級設定的相關資訊。
+
+
+
+ a| 
+《長期執行作業》
+ a| 
+顯示儲存陣列中每個磁碟區群組和每個磁碟區長期執行作業的參數。
+
+「longRunningOperation」參數會傳回下列資訊：
+
+* Volume群組或Volume的名稱
+* 長時間執行作業
+* 狀態
+* %完成
+* 剩餘時間
+
+
+
+
+ a| 
+《preferredVolume Owners》
+ a| 
+顯示儲存陣列中每個磁碟區的慣用控制器擁有者參數。
+
+
+
+ a| 
+《設定檔》
+ a| 
+此參數可顯示邏輯元件的所有內容、以及組成儲存陣列的實體元件。資訊會出現在數個畫面中。
+
+[NOTE]
+====
+profile參數會傳回儲存陣列的詳細資訊。此資訊涵蓋顯示器上的數個畫面。您可能需要增加顯示緩衝區的大小、才能查看所有資訊。由於此資訊如此詳細、您可能會想要將此參數的輸出儲存到檔案中。
+
+====
+使用下列命令將設定檔輸出儲存至檔案：
+
+[listing]
+----
+c:\...\smX\client>smcli 123.45.67.88
+123.45.67.89 -c "show storagearray profile;"
+-o "c:\folder\storagearray
+profile.txt"
+----
+
+
+ a| 
+《摘要》
+ a| 
+顯示儲存陣列組態資訊簡潔清單的參數。
+
+
+
+ a| 
+《時間》
+ a| 
+顯示儲存陣列中兩個控制器設定的目前時間的參數。
+
+
+
+ a| 
+「UnconfiguredIscsiInitiator」
+ a| 
+此參數可傳回儲存陣列偵測到但尚未設定為儲存陣列拓撲的啟動器清單。
+
+
+
+ a| 
+「Volume Distribution」
+ a| 
+顯示儲存陣列中每個磁碟區目前控制器擁有者的參數。
+
+|===
+
+
+== 附註
+
+「profile」參數顯示儲存陣列的詳細資訊。資訊會顯示在顯示器的數個畫面上。您可能需要增加顯示緩衝區的大小、才能查看所有資訊。由於此資訊如此詳細、您可能會想要將此參數的輸出儲存到檔案中。若要將輸出儲存至檔案、請執行此範例所示的「show storageArray」命令。
+
+[listing]
+----
+-c "show storageArray profile;" -o "c:\\folder\\storageArrayProfile.txt"
+----
+先前的命令語法適用於執行Windows作業系統的主機。實際語法視您的作業系統而定。
+
+將資訊儲存至檔案時、您可以將資訊當作組態的記錄、並在還原期間做為輔助工具。
+
+[NOTE]
+====
+雖然儲存陣列設定檔會傳回大量清楚標示的資料、但8.41版的新功能是E2800或E5700儲存陣列中SSD磁碟機的額外耗損報告資訊。雖然先前的「耗損壽命」報告包含平均清除數和剩餘區塊的資訊、但現在卻包含使用的持久度百分比。「使用的持久度百分比」是指迄今寫入SSD磁碟機的資料量、除以磁碟機的理論寫入總限制。
+
+====
+「電池」參數會傳回此格式的資訊。
+
+[listing]
+----
+Battery status: Optimal
+    Age: 1 day(s)
+    Days until replacement: 718 day(s)
+----
+較新的控制器匣不支援「電池」參數。
+
+「defaultHostType」參數會傳回此格式的資訊。
+
+[listing]
+----
+Default host type: Linux (Host type index 6)
+----
+「healthStatus」參數會傳回此格式的資訊。
+
+[listing]
+----
+Storage array health status = optimal.
+----
+「hostTypeTable」參數會傳回此格式的資訊。
+
+[listing]
+----
+NVSRAM HOST TYPE INDEX DEFINITIONS
+HOST TYPE                         ALUA/AVT STATUS   ASSOCIATED INDEXS
+AIX MPIO                          Disabled          9
+AVT_4M                            Enabled           5
+Factory Default                   Disabled          0
+HP-UX                             Enabled           15
+Linux (ATTO)                      Enabled           24
+Linux (DM-MP)                     Disabled          6
+Linux (Pathmanager)               Enabled           25
+Mac OS                            Enabled           22
+ONTAP                             Disabled          4
+SVC                               Enabled           18
+Solaris (v11 or Later)            Enabled           17
+Solaris (version 10 or earlier)   Disabled          2
+VMWare                            Enabled           10 (Default)
+Windows                           Enabled           1
+----
+「hotSpareCoverage」參數會傳回此格式的資訊。
+
+[listing]
+----
+The following volume groups are not protected: 2, 1
+Total hot spare drives: 0
+   Standby: 0
+   In use: 0
+----
+「features」參數會傳回顯示哪些功能已啟用、停用、評估及可供安裝的資訊。此命令會以類似如下的格式傳回功能資訊：
+
+[listing]
+----
+PREMIUM FEATURE           STATUS
+
+asyncMirror               Trial available
+syncMirror                Trial available/Deactivated
+thinProvisioning          Trial available
+driveSlotLimit            Enabled (12 of 192 used)
+snapImage                 Enabled (0 of 512 used) - Trial version expires m/d/y
+snapshot                  Enabled (1 of 4 used)
+storagePartition          Enabled (0 of 2 used)
+volumeCopy                Enabled (1 of 511 used)
+SSDSupport                Disabled (0 of 192 used) - Feature Key required
+driveSecurity             Disabled - Feature Key required
+enterpriseSecurityKeyMgr  Disabled - Feature Key required
+highPerformanceTier       Disabled - Feature Key required
+----
+「Time」參數會傳回此格式的資訊。
+
+[listing]
+----
+Controller in Slot A
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+Controller in Slot B
+
+Date/Time: Thu Jun 03 14:54:55 MDT 2004
+----
+「longRunningOperations」參數會傳回下列形式的資訊：
+
+[listing]
+----
+LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
+Volume-2         Volume Disk Copy  10% COMPLETED  5 min
+----
+沒錯。
+
+「longRunningOperations」參數傳回的資訊欄位具有下列意義：
+
+* 「名稱」是目前正在執行長時間作業的磁碟區名稱。Volume名稱必須以「Volume」為前置詞。
+* 「operation」（作業）會列出正在磁碟區群組或磁碟區上執行的作業。
+* 「*%完成*」顯示執行作業的時間長度。
+* 「狀態（status）
++
+** 掛起-長時間執行的作業尚未啟動、但會在目前作業完成後啟動。
+** 進行中：長時間執行的作業已啟動、並會一直執行直到使用者要求完成或停止為止。
+
+
+* 「剩餘時間」表示完成目前的長時間執行作業的剩餘時間。時間格式為「小時分鐘」。如果剩餘時間少於一小時、則只會顯示分鐘數。如果剩餘時間不到一分鐘、則會顯示訊息「[.code]'less a minute'（不超過一分鐘）」。
+
+
+「volumeDistribution」參數會傳回此格式的資訊。
+
+[listing]
+----
+volume name: 10
+     Current owner is controller in slot: A
+
+volume name: CTL 0 Mirror Repository
+     Current owner is controller in slot: A
+
+volume name: Mirror Repository 1
+     Current owner is controller in slot:A
+
+volume name: 20
+     Current owner is controller in slot:A
+
+volume name: JCG_Remote_MirrorMenuTests
+     Current owner is controller in slot:A
+----
+
+
+== 最低韌體層級
+
+5．00會新增「defaultHostType」參數。
+
+5.43新增「摘要」參數。
+
+6.10新增「volumeDistribution」參數。
+
+6.14新增「connections」參數。
+
+7.10新增「autosupport Config」參數。
+
+7.77新增「longRunningOperations」參數。
+
+7.83會傳回包含支援10.83版儲存管理軟體中新功能的資訊。此外、傳回的資訊也已展開、以顯示儲存陣列中的功能狀態。
+
+8.30會新增「AutoLoadBalancingEnable」參數。
+
+8.40新增「AutoSupport 不全」參數。
+
+8.40取代以https用戶端類型執行之E2800或E5700儲存陣列的「AutoSupportConfig」參數。
+
+8.41將SSD磁碟機的耗損壽命監控功能新增至儲存陣列設定檔。此資訊僅適用於E2800與E5700儲存陣列。
+
+8.42新增了「hostConnectivityReports...」參數。
+
+8.63在「profile」參數結果下新增資源配置的Volumes項目。
