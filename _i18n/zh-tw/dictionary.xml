@@ -6876,7 +6876,6 @@
   <block id="3b49d1bf2c9b6022d810bf6d4c40f088" category="section-title">Volume命令</block>
   <block id="ff98b80edd257d08a0d558e326ed8b57" category="section-title">Volume群組命令</block>
   <block id="9f61ae210539dc7fc2f252c32c96e10b" category="inline-link-macro">瞭解Volume群組移轉（僅限CLI）</block>
-  <block id="4a19f1beb6dc3115a2db8a5603b4195d" category="paragraph"><block ref="4a19f1beb6dc3115a2db8a5603b4195d" category="inline-link-macro-rx"></block></block>
   <block id="6c665c00105271cb97bd2b583047bbbc" category="summary">複寫命令</block>
   <block id="1b0d81199257145655a5b898552f768d" category="section-title">一致性群組命令</block>
   <block id="403b2b2c29ab0c8dbbbe3bd1c15e2b34" category="section-title">儲存庫Volume分析命令</block>
@@ -7437,4 +7436,5 @@
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">驗證storageArray安全金鑰</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">命令（依類別）</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">請勿在未執行中所列步驟的情況下執行這些步驟 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
+  <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
 </blocks>

@@ -202,7 +202,7 @@ link:../commands-a-z/start-volumegroup-export.html["開始Volume群組匯出"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["啟動Volume Group完整資源配置"]
 
-link:learn-about-volume-group-migration.html["瞭解Volume群組移轉（僅限CLI）"]
+link:../get-started/learn-about-volume-group-migration.html["瞭解Volume群組移轉（僅限CLI）"]
 
 link:../commands-a-z/start-volumegroup-import.html["開始匯入Volume群組"]
 
