@@ -3642,7 +3642,6 @@
   <block id="8e61c506c79e13d071037f231e80c38c" category="paragraph">「Start volumeGroup export'」命令可將Volume群組移至匯出狀態。</block>
   <block id="f8e1a2f2bb89d0e20261b9118cc2babb" category="paragraph">然後您可以移除組成磁碟區群組的磁碟機、並在不同的儲存陣列中重新安裝磁碟機。</block>
   <block id="2ac0da7167150cceb962c2e130608bdb" category="inline-xref-macro">深入瞭解Volume群組移轉。</block>
-  <block id="0146caa36736a1cce0c481ebc7b5851b" category="paragraph">請勿在未執行中所列步驟的情況下執行這些步驟 <block ref="2e35a658a01f1c02ff017d67706a89f8" category="inline-xref-macro-rx"></block></block>
   <block id="e1704c8c0969c15a2f512b9f0dc8f7d9" category="paragraph">在Volume群組中、您無法將與某個儲存陣列功能相關聯的磁碟區、移至另一個儲存陣列。</block>
   <block id="10b695519051adb6cbf9a8849bbf4456" category="paragraph">您要匯出的Volume群組名稱。將Volume群組名稱括在方括弧中（[]）。</block>
   <block id="068f0ca48bb4cd301b90287f7031ed63" category="paragraph">當此命令成功時、您可以執行「Start volumeGroup import」命令、以完成將Volume群組移至完整狀態、使Volume群組可供新的儲存陣列使用。</block>
@@ -7437,4 +7436,5 @@
   <block id="2d30e328ae4f6dcf3d38d3968d0319a6" category="sidebar">暫停SyncMirror 主節點</block>
   <block id="16c09c2705a79763c9682b2f80400d1a" category="sidebar">驗證storageArray安全金鑰</block>
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">命令（依類別）</block>
+  <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">請勿在未執行中所列步驟的情況下執行這些步驟 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
 </blocks>

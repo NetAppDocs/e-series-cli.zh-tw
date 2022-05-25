@@ -33,7 +33,7 @@ summary: start volumeGroup匯出命令會將Volume群組移至匯出狀態。
 
 [CAUTION]
 ====
-請勿在未執行中所列步驟的情況下執行這些步驟 xref:../commands-category/learn-about-volume-group-migration.adoc[深入瞭解Volume群組移轉。]
+請勿在未執行中所列步驟的情況下執行這些步驟 xref:../get-started/learn-about-volume-group-migration.html[深入瞭解Volume群組移轉。]
 
 ====
 [NOTE]
