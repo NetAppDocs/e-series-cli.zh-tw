@@ -1,0 +1,279 @@
+---
+permalink: get-started/downloadable-smcli-parameters.html 
+sidebar: sidebar 
+keywords: downloadable, smcli, command line, parameters 
+summary: 發行版的作業系統11.60包含直接透過「支援系統管理程式」下載及安裝http型CLI（也稱為「安全CLI」或「SMcli」）的功能。SANtricity SANtricity 
+---
+= 可下載的SMcli命令列參數
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+
+
+== 11.60及更新版本的可下載SMcli命令列參數
+
+支援此作業系統11.60版本的功能、可直接透過《支援系統管理程式》下載及安裝http版本的CLI（也稱為「安全CLI」或SMcli）SANtricity SANtricity 。可下載的SMcli版本可在EF600、EF300、E5700、EF570、E2800、 和EF280控制器。要在SANtricity 《S161eSystem Manager》中下載SMcli、請選擇*設定*>*系統*和*附加元件*>*命令列介面*。
+
+
+NOTE: 您必須在打算執行CLI命令的管理系統上提供Java執行時間環境（JRE）版本8及更新版本。
+
+如同先前版本的SMcli、可透過SANtricity 「支援系統管理程式」下載的SMcli有一組獨特的參數。如需有關使用指令行參數以利SANtricity 更新OS 11.53和舊版的資訊、請參閱 xref:./get-started/command-line-parameters.adoc[舊版命令列參數]
+
+
+
+=== 多因素驗證
+
+如果已啟用SAML（安全性聲明標記語言）、則只能將存取權杖用於CLI。如果未啟用SAML、則可使用使用者名稱/密碼或存取權杖。存取權杖可透過SANtricity 「系統管理程式」產生。
+
+[cols="2*"]
+|===
+| 參數 | 定義 
+
+
+ a| 
+`-t`
+ a| 
+定義要用於儲存陣列驗證的存取權杖。存取權杖可取代提供使用者名稱和密碼。
+
+
+
+ a| 
+`-T` （大寫）
+ a| 
+此引數需要兩個引數之一：
+
+* `access_token-file` -包含用於驗證的存取權杖
+* `-(dash)` -從stdin讀取存取權杖
+
+
+
+
+ a| 
+「-u」
+ a| 
+請依照此參數執行 `_username_` 變動。若未使用存取權杖、則必須使用此參數。
+
+
+
+ a| 
+「-p」
+ a| 
+定義您要在其中執行命令的儲存陣列密碼。在下列情況下、不需要密碼：
+
+* 尚未在儲存陣列上設定密碼。
+* 密碼是在您執行的指令碼檔案中指定。
+
+
+
+
+ a| 
+`-P` （大寫）
+ a| 
+此引數需要兩個引數之一：
+
+* 「_password_file_」-包含用於驗證的密碼。
+* （短破折號）-從「stin」讀取密碼。
+
+
+|===
+
+
+=== 一般https模式命令列參數
+
+可下載的SMcli僅支援https模式。以下是https模式常用的命令列參數。
+
+[cols="2*"]
+|===
+| 參數 | 定義 
+
+
+ a| 
+「主機名稱或IP位址」
+ a| 
+指定主機名稱或網際網路傳輸協定（IP）位址 (`_xxx.xxx.xxx.xxx_`）頻外託管儲存陣列。
+
+透過每個控制器上的乙太網路連線來管理頻外儲存管理時、您必須指定 `_host-name-or-IP-address_` 控制器。
+
+
+
+ a| 
+「-k」
+ a| 
+此選用引數允許 `*https*` 用戶端以不安全模式運作。這表示不會驗證儲存陣列的憑證。依預設、如果省略、將會執行適當的驗證。
+
+
+NOTE: 如需管理儲存陣列憑證的其他資訊、請參閱 ,管理儲存的憑證命令列參數。
+
+
+
+ a| 
+「-e」
+ a| 
+在不執行語法檢查的情況下執行命令。
+
+
+
+ a| 
+`-L` （大寫）
+ a| 
+顯示可下載SMcli的法律聲明。
+
+
+
+ a| 
+「-n'」
+ a| 
+指定您要在其中執行指令碼命令的本機儲存標籤。使用時可選用此選項 `_host-name-or-IP-address_`。需要本機儲存的標籤 `_host-name-or-IP-address_` 未使用。
+
+
+NOTE: 如需使用本機儲存標籤來管理儲存陣列的其他資訊、請參閱 ,管理儲存的陣列命令列參數。
+
+
+
+ a| 
+「-o'」
+ a| 
+指定執行指令碼命令所產生之所有輸出文字的檔案名稱。使用「-o'參數搭配下列參數：
+
+* -c'
+* 「-f'」
+
+
+如果您未指定輸出檔案、輸出文字會轉至標準輸出  `stdout`）。所有來自非指令碼命令的命令輸出都會傳送至 `stdout`（無論是否設定此參數）。
+
+
+
+ a| 
+「-S」（大寫）
+ a| 
+隱藏資訊訊息、說明執行指令碼命令時所顯示的命令進度。（隱藏資訊訊息也稱為無聲模式。） 此參數會隱藏下列訊息：
+
+* 執行語法檢查
+* 完成同步檢查
+* 執行指令碼
+* 完成記錄執行
+* 「Mcli completed Successfully」（已成功完成Mcl
+
+
+
+
+ a| 
+`-version`
+ a| 
+顯示可下載的SMcli版本
+
+
+
+ a| 
+」
+ a| 
+顯示有關CLI命令的使用資訊。
+
+|===
+
+
+=== 管理儲存的陣列
+
+下列命令列參數可讓您透過本機儲存的標籤來管理儲存的陣列。
+
+
+NOTE: 本機儲存的標籤可能與SANtricity 顯示在「系統管理程式」下的實際儲存陣列名稱不符。
+
+[cols="2*"]
+|===
+| 參數 | 定義 
+
+
+ a| 
+`SMcli storageArrayLabel show all`
+ a| 
+顯示所有本機儲存的標籤及其相關位址
+
+
+
+ a| 
+`SMcli storageArrayLabel show label <LABEL>`
+ a| 
+顯示與本機儲存標籤相關聯的位址、名稱為 `<LABEL>`
+
+
+
+ a| 
+`SMcli storageArrayLabel delete all`
+ a| 
+刪除所有本機儲存的標籤
+
+
+
+ a| 
+`SMcli storageArrayLabel delete label <LABEL>`
+ a| 
+刪除本機儲存的命名標籤 `<LABEL>`
+
+
+
+ a| 
+`SMcli <host-name-or-IP-address> [host-name-or-IP-address] storageArrayLabel add label <LABEL>`
+ a| 
+* 新增本機儲存的名稱標籤 `<LABEL>` 包含提供的位址
+* 不直接支援更新。若要更新、請刪除標籤、然後重新新增。
+
+
+
+NOTE: 新增本機儲存的標籤時、SMcli不會聯絡儲存陣列。
+
+|===
+[cols="2*"]
+|===
+| 參數 | 定義 
+
+
+ a| 
+`SMcli localCertificate show all`
+ a| 
+顯示儲存在本機的所有信任憑證
+
+
+
+ a| 
+`SMcli localCertificate show alias <ALIAS>`
+ a| 
+顯示本機儲存的信任憑證及別名 `<ALIAS>`
+
+
+
+ a| 
+`SMcli localCertificate delete all`
+ a| 
+刪除本機儲存的所有信任憑證
+
+
+
+ a| 
+`SMcli localCertificate delete alias <ALIAS>`
+ a| 
+刪除具有別名的本機儲存信任憑證 `<ALIAS>`
+
+
+
+ a| 
+`SMcli localCertificate trust file <CERT_FILE> alias <ALIAS>`
+ a| 
+* 儲存要以別名信任的憑證 `<ALIAS>`
+* 要信任的憑證會從控制器下載、並進行個別作業、例如使用網頁瀏覽器
+
+
+
+
+ a| 
+`SMcli <host-name-or-IP-address> [host-name-or-IP-address] localCertificate trust`
+ a| 
+* 連線至每個位址、並將傳回的憑證儲存到信任的憑證存放區
+* 指定的主機名稱或IP位址會做為以此方式儲存之每個憑證的別名
+* 使用者在執行此命令之前、應先確認控制器上的憑證是否值得信任
+* 為了達到最高的安全性、應使用取得檔案的信任命令來確保憑證不會在使用者驗證和執行此命令之間變更
+
+
+|===

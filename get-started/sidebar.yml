@@ -2,8 +2,6 @@
 section: get-started
 title: 開始使用
 entries:
-- title: 新增功能
-  url: "/get-started/changes-in-the-cli-and-script-commands-in-this-release.html"
 - title: 命令格式化
   entries:
   - title: 總覽
@@ -16,7 +14,9 @@ entries:
       url: "/get-started/interactive-mode.html"
     - title: CLI包裝程式語法
       url: "/get-started/cli-command-wrapper-syntax.html"
-    - title: CLI參數
+    - title: Downloadble SMcli參數
+      url: "/get-started/downloadable-smcli-parameters.html"
+    - title: 舊版CLI參數
       url: "/get-started/command-line-parameters.html"
   - title: 指令碼命令結構
     entries:

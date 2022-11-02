@@ -6,6 +6,7 @@ settings:
   prod:
     pdf_enabled: true
     harmony_enabled: false
+  rss_page: whats-new.html
   pdf:
     zip-level: 1
     zip-filename: santricity-commands.zip
@@ -14,6 +15,8 @@ sidebar:
   entries:
   - title: CLI文件SANtricity
     url: "/index.html"
+  - title: 新增功能
+    url: "/whats-new.html"
   - section: get-started
   - section: commands-category
   - section: commands-a-z
@@ -23,8 +26,6 @@ homepage:
   tiles:
   - title: 開始使用
     links:
-    - title: 新增功能
-      url: get-started/changes-in-the-cli-and-script-commands-in-this-release.html
     - title: CLI總覽
       url: get-started/overview-format-commands.html
     - title: CLI命令結構

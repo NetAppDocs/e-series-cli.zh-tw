@@ -62,7 +62,7 @@ clear storageArray configuration factoryReset
 
 
  a| 
-無
+*無*
  a| 
 如果您未輸入參數、此命令會移除儲存陣列的所有組態資訊、但與安全性和識別相關的資訊除外。
 

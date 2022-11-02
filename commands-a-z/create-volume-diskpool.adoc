@@ -49,17 +49,7 @@ capacity=_volumeCapacity_]
 [dataAssurance=(none|enabled)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [raidLevel=(1 | 6)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[raidLevel=(1 | 6)]
+[blockSize=requestedBlockSizeValue]
 ----
 
 
@@ -139,6 +129,9 @@ capacity=_volumeCapacity_]
 《資源配置精簡》
  a| 
 此參數可為新磁碟區啟用精簡配置。若要使用精簡配置、請將此參數設為「true」。如果您不想進行精簡配置、請將此參數設為「假」。
+
+
+NOTE: RAID 1層級磁碟區無法使用精簡配置。
 
 
 
@@ -223,6 +216,13 @@ capacity=_volumeCapacity_]
  a| 
 設定要在磁碟集區中建立之磁碟區的RAID層級。若要指定RAID1、請設定為「1」。若要指定RAID6、請設定為「6」。如果未設定RAID層級、則預設會將RAID6用於磁碟集區。
 
+
+
+ a| 
+「區塊大小」
+ a| 
+此參數可設定所建立Volume的區塊大小。的值 `0` 或者、未設定的參數會使用預設區塊大小。
+
 |===
 
 
@@ -257,4 +257,4 @@ capacity=_volumeCapacity_]
 
 7.83
 
-8.70新增了「_raidlevel_'參數。
+8.70新增 `_raidLevel_` 和 `_blockSize` 參數。

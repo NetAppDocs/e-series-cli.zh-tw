@@ -37,6 +37,7 @@ raidLevel=(0 | 1 | 3 | 5 | 6)
 userLabel=pass:quotes[_"volumeName"_]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -46,6 +47,8 @@ userLabel=pass:quotes[_"volumeName"_]
 [securityType=(none | capable | enabled )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
+
 ----
 [listing, subs="+macros"]
 ----
@@ -55,6 +58,7 @@ raidLevel=(0 | 1 | 5 | 6)
 userLabel=pass:quotes[_"volumeName"_]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
@@ -64,6 +68,7 @@ userLabel=pass:quotes[_"volumeName"_]
 [securityType=(none | capable | enabled )]
 [dataAssurance=(none | enabled)]
 [resourceProvisioningCapable=(TRUE | FALSE)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -187,6 +192,20 @@ userLabel=pass:quotes[_"volumeName"_]
 "REsourceProvisioningCapable（資源配置資源可）"
  a| 
 指定是否啟用資源資源配置功能的設定。若要停用資源資源配置、請將此參數設為「假」。預設值為「true」。
+
+
+
+ a| 
+「拍」
+ a| 
+此參數可讓您將磁碟區對應至主機。如果您想要稍後對應、請將此參數設為 `none`。若要立即對應、請將此參數設為 `default`。磁碟區會對應至所有可存取儲存資源池的主機。預設值為 `none`。
+
+
+
+ a| 
+「區塊大小」
+ a| 
+此參數可設定所建立Volume的區塊大小。值0或參數未設定使用預設區塊大小。
 
 |===
 
@@ -398,3 +417,5 @@ RAID 1
 7.75新增了「data Assurance」參數。
 
 8.63新增了「資源配置資源Capable」參數。
+
+11.70新增 `blockSize` 參數。

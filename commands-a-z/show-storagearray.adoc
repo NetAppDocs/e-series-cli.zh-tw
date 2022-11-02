@@ -341,8 +341,6 @@ Date/Time: Thu Jun 03 14:54:55 MDT 2004
 LOGICAL DEVICES  OPERATION         STATUS        TIME REMAINING
 Volume-2         Volume Disk Copy  10% COMPLETED  5 min
 ----
-沒錯。
-
 「longRunningOperations」參數傳回的資訊欄位具有下列意義：
 
 * 「名稱」是目前正在執行長時間作業的磁碟區名稱。Volume名稱必須以「Volume」為前置詞。

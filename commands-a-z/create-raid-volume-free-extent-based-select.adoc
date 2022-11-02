@@ -36,12 +36,14 @@ userLabel="_volumeName"_]
 [freeCapacityArea=pass:quotes[_freeCapacityIndexNumber_]]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]
+[mapping=(none | default)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 [segmentSize=pass:quotes[_segmentSizeValue_]]
 [usageHint=(fileSystem | dataBase | multiMedia)]
 [dssPreAllocate=(TRUE | FALSE)]
 [securityType=(none | capable | enabled)]
 [dataAssurance=(none | enabled)]
+[blockSize=blockSizeValue]
 ----
 
 
@@ -142,6 +144,20 @@ userLabel="_volumeName"_]
 
 「已啟用」-磁碟區群組和磁碟區已啟用安全功能。
 
+
+
+ a| 
+「拍」
+ a| 
+此參數可讓您將磁碟區對應至主機。如果您想要稍後對應、請將此參數設為 `none`。若要立即對應、請將此參數設為 `default`。磁碟區會對應至所有可存取儲存資源池的主機。預設值為 `none`。
+
+
+
+ a| 
+「區塊大小」
+ a| 
+此參數可設定所建立Volume的區塊大小。值0或參數未設定使用預設區塊大小。
+
 |===
 
 
@@ -233,3 +249,5 @@ userLabel="_volumeName"_]
 7.50新增「最安全類型」參數。
 
 7.75新增了「data Assurance」參數。
+
+11.70新增 `blockSize` 參數。
