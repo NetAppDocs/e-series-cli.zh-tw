@@ -10,7 +10,7 @@ settings:
   pdf:
     zip-level: 1
     zip-filename: santricity-commands.zip
-  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr
+  langs: zh-tw,us-en,ja-jp,zh-cn,ko-kr,fr-fr,de-de
 sidebar:
   entries:
   - title: CLI文件SANtricity
