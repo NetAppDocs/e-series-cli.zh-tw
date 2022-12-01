@@ -31,7 +31,7 @@ summary: set ssdCache命令會變更SSD快取的名稱。
 
 [listing, subs="+macros"]
 ----
-set ssdCache pass:quotes[[_old_ssdCacheName_] userLabel=pass:quotes[_"new_ssdCacheName_"]
+set ssdCache pass:quotes[[_old_ssdCacheName_]] userLabel=pass:quotes[_"new_ssdCacheName_"]
 ----
 
 
