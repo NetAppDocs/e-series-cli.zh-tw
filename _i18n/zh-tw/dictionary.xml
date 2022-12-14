@@ -219,14 +219,10 @@
   <block id="b28de08f5f84620a8d9387e4bc82c145" category="list-text">您可以使用角色型存取管理、並將不同的安全權限指派給不同的角色。使用「-u」選項來執行含有使用者名稱引數的命令。</block>
   <block id="31c49cbd47495cd0283671d9f563a6d0" category="list-text">先前以「*符號*」模式提供的密碼引數、也可在「* https *」模式中使用、以指定特定使用者角色的密碼。"-p"選項用於指定命令列上的密碼、或是"-P"選項可從檔案或"stin"讀取密碼。</block>
   <block id="a6531c9cca5e8e900e3ca0277d431ca8" category="paragraph">本主題中有幾個範例可協助說明新的命令列參數：</block>
-  <block id="c908ce368d4fe8339cba1bf1e4ea861a" category="section-title">需要密碼、https用戶端模式、信任憑證的作業會安裝在陣列上</block>
   <block id="16c398a12b24b49ad8fd9d8cf71bd34d" category="paragraph">在下列範例中、會同時提供使用者名稱和密碼選項、而且陣列上會安裝信任的憑證。</block>
-  <block id="fa78d93e0beeed4f5375cf768e7a0381" category="section-title">需要密碼、https用戶端模式、且陣列上未安裝信任的憑證的作業</block>
   <block id="57bccb659e7be24e1b2bfe3acd2728ae" category="paragraph">在下列範例中、使用者名稱和密碼選項都會提供、但陣列上並未安裝信任的憑證、而且不會使用「-k」選項。範例顯示傳回的輸出。</block>
-  <block id="c063d79f0e133e1256a7a93c57688060" category="section-title">作業需要密碼、https用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證</block>
   <block id="945538cd7afe8709efac27b96915389d" category="paragraph">在下列範例中、如同前述範例、會同時提供使用者名稱和密碼選項、但陣列上不會安裝信任的憑證。但是在這種情況下、使用「-k」選項來使用自我簽署的憑證。</block>
   <block id="22d5e376747f8800631977368e13fe8a" category="paragraph">在此範例中、使用「*符號*」用戶端模式時、只需輸入密碼選項、即可成功完成命令。</block>
-  <block id="350c6ef338d6ab3369b1b85476ddb126" category="section-title">唯讀作業、符號用戶端模式</block>
   <block id="8407b004173192880cab6c17030bbd4e" category="paragraph">在此範例中、在「* symbol *」用戶端模式中、不會提供使用者名稱或密碼。只有在唯讀作業中才能成功完成此作業。</block>
   <block id="e09eb504f4a302a718a04fda53bbcb8c" category="section-title">唯讀作業、http用戶端模式</block>
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">在以下範例中、也使用唯讀作業、但在「* https *」用戶端模式中、使用者名稱和密碼都是必要的、並提供「-k」來接受自我簽署的憑證。「* https *」用戶端模式即使是唯讀作業也需要密碼。</block>
@@ -4642,7 +4638,6 @@
   <block id="1f6350121cc6be42467adde5ceda9948" category="summary">set storageArray directoryServer role命令可讓您定義指定目錄伺服器的角色對應。這些角色對應用於驗證嘗試執行各種SMcli命令的使用者。</block>
   <block id="ba82f0e46ee4e71332f094495a7ef046" category="doc">設定儲存陣列目錄伺服器角色對應</block>
   <block id="2ce33a36c7495d35412356b5df7429aa" category="paragraph">使用「show storageArray directoryServer role」命令、您可以定義指定目錄伺服器的角色對應。這些角色對應用於驗證嘗試執行各種SMcli命令的使用者。</block>
-  <block id="eed5ddc8f738970611f01ee16f2a17e5" category="section-title">您的需求</block>
   <block id="9423165348dbe1106dd8519c5f376e8a" category="paragraph">下列角色可供對應：</block>
   <block id="b146be7830b865aa772d4dd25fca1a78" category="list-text">*儲存設備管理*-對儲存物件（例如磁碟區和磁碟集區）的完整讀寫存取權、但無法存取安全性組態。</block>
   <block id="892ec2709f7a0ff6e883205b45a6d6a5" category="list-text">*安全管理*：存取存取管理、憑證管理、稽核記錄管理中的安全組態、以及開啟或關閉舊版管理介面（符號）的功能。</block>
@@ -7508,4 +7503,9 @@
   <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
   <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">Downloadble SMcli參數</block>
   <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">舊版CLI參數</block>
+  <block id="bc968b5475454c32c0accb20e0fffbde" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、信任的憑證會安裝在陣列上</block>
+  <block id="7738c732553fe92af1f9ad5d112e48db" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、陣列上未安裝任何信任的憑證</block>
+  <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證</block>
+  <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">唯讀作業、<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 用戶端模式</block>
+  <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">您需要的產品</block>
 </blocks>
