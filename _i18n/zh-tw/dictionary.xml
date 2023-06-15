@@ -7508,4 +7508,6 @@
   <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證</block>
   <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">唯讀作業、<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 用戶端模式</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">您需要的產品</block>
+  <block id="4d73148eba8bbf93563afef1a810a39e" category="section-title">SANtricity 11.70.5</block>
+  <block id="a1b47df4de15fbd87aeeb6fd140013ca" category="paragraph">11.70.5 版沒有 CLI 或指令碼命令變更。</block>
 </blocks>

@@ -25,6 +25,12 @@ summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更
 ====
 
 
+== SANtricity 11.70.5
+
+11.70.5 版沒有 CLI 或指令碼命令變更。
+
+
+
 == 零點11.70.4 SANtricity
 
 下表列出11.70.4版的CLI和指令碼命令變更。
