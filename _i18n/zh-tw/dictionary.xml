@@ -7460,7 +7460,6 @@
   <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證</block>
   <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">唯讀作業、<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 用戶端模式</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">您需要的產品</block>
-  <block id="a1b47df4de15fbd87aeeb6fd140013ca" category="paragraph">11.70.5 版沒有 CLI 或指令碼命令變更。</block>
   <block id="b97310209803fdc9ec050e8c5c8d93ba" category="paragraph"><block ref="b97310209803fdc9ec050e8c5c8d93ba" category="inline-link-macro-rx"></block></block>
   <block id="1b9c994f5747c133d89fc34ba261d7ba" category="paragraph"><block ref="1b9c994f5747c133d89fc34ba261d7ba" category="inline-link-macro-rx"></block></block>
   <block id="7b45f8f8ff130a8fa0d8063e75b1e838" category="paragraph"><block ref="7b45f8f8ff130a8fa0d8063e75b1e838" category="inline-link-macro-rx"></block></block>
@@ -7490,12 +7489,6 @@
   <block id="84b6254e1011f96e6fb4b9cee656d730" category="paragraph">新增<block ref="ab1f19425d80842e646857a8f89eeecb" prefix=" " category="inline-code"></block> 參數。</block>
   <block id="a74eb5af8064272ba51d646a8d151084" category="paragraph"><block ref="a74eb5af8064272ba51d646a8d151084" category="inline-xref-macro-rx"></block></block>
   <block id="138fadba8fa114a89807217041227cdc" category="paragraph">過時的命令。</block>
-  <block id="3dedaa7cf415b3360432eef09568c523" category="paragraph">= SANtricity 11.70.5</block>
-  <block id="e55ad5000b4d4a51d8ccc3424997ec08" category="paragraph">= SANtricity 11.70.4</block>
-  <block id="6088d4dbc3d83010beb562a6aa463823" category="paragraph">= SANtricity 11.70.3</block>
-  <block id="c1a02b1fca86aca7666380fa2eef3d9f" category="paragraph">= SANtricity 11.70.2</block>
-  <block id="b35f09e5780fa9c288e3717362d54062" category="paragraph">= SANtricity 11.70.1</block>
-  <block id="d26b558d85ae05626c16f88bd78ab67b" category="paragraph">= SANtricity 11.70</block>
   <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。</block>
   <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">若要在 E2800 、 E5700 、 EF600 或 EF300 儲存陣列上執行此命令、您必須具有「支援管理員」角色。</block>
   <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80 新增 EF600 和 EF300 陣列支援</block>
@@ -7541,4 +7534,5 @@
   <block id="892bb8e3c297dc4bbfaa485b428ef7c7" category="sidebar">顯示檢查 Volume 同位檢查工作</block>
   <block id="26ff9cf33d84624073951cbdf4a00a9f" category="sidebar">開始檢查 Volume 同位檢查工作</block>
   <block id="e375a2dea1356a7fa1ccb75cb2608251" category="sidebar">停止檢查 Volume 同位檢查工作</block>
+  <block id="92b7fece7bb38ec7e732ddbfaadf63f3" category="paragraph">11.70.5 版沒有 CLI 和指令碼命令變更。</block>
 </blocks>

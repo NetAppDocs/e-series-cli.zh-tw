@@ -89,13 +89,15 @@ xref:./commands-a-z/check-volume-parity.adoc[檢查磁碟區同位元檢查]
 過時的命令。
 
 |===
-[]
-====
-= SANtricity 11.70.5
 
-11.70.5 版沒有 CLI 或指令碼命令變更。
 
-= SANtricity 11.70.4
+== 4d73148eba8bbf93563afef1a810a39e
+
+11.70.5 版沒有 CLI 和指令碼命令變更。
+
+
+
+== 06d2539958ee4762f25ee6e06e44b9f1
 
 下表列出11.70.4版的CLI和指令碼命令變更。
 
@@ -110,7 +112,9 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令列
 新增 `-t` 和 `-T` 多因素驗證的存取權杖參數說明。
 
 |===
-= SANtricity 11.70.3
+
+
+== e5b376b9bdbfe1612d578d30462ed6ff
 
 下表列出11.70.3版的CLI和指令碼命令變更。
 
@@ -160,7 +164,9 @@ xref:./commands-a-z/create-diskpool.html[建立磁碟集區]
 已更新「目錄計數」參數說明。
 
 |===
-= SANtricity 11.70.2
+
+
+== 3cffe633df330392f4d88b8478c9390b
 
 下表列出11.70.2版CLI和指令碼命令的變更。
 
@@ -217,7 +223,9 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[測試SNMP設陷目的地]
 新增了"username"和"engineid"參數。
 
 |===
-= SANtricity 11.70.1
+
+
+== cfafd61e53ff8b90ff59654a31683d33
 
 下表列出11.70.1版的CLI和指令碼命令變更。
 
@@ -281,7 +289,9 @@ xref:./commands-a-z/recover-volume.adoc[恢復RAID Volume]
 新增「區塊大小」參數。
 
 |===
-= SANtricity 11.70
+
+
+== 474034f7e02f357e3878ae2514a2b3fd
 
 下表列出11.70版CLI和指令碼命令的變更。
 
@@ -324,4 +334,3 @@ xref:./commands-a-z/recover-volume.adoc[恢復RAID Volume]
 新增「hostUnmapEnabled」參數。
 
 |===
-====
