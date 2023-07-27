@@ -774,6 +774,8 @@ link:../commands-a-z/recover-sasport-miswire.html["恢復SAS連接埠連線錯�
 
 link:../commands-a-z/create-snmpcommunity.html["登錄SNMP社群"]
 
+link:../commands-a-z/create-snmpuser-username.html["登錄v3 USM使用者"]
+
 link:../commands-a-z/create-snmptrapdestination.html["登錄SNMP設陷目的地"]
 
 link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
@@ -816,6 +818,8 @@ link:../commands-a-z/show-allsnmpcommunities.html["顯示SNMP社群"]
 
 link:../commands-a-z/show-snmpsystemvariables.html["顯示SNMP mib II系統群組變數"]
 
+link:../commands-a-z/show-allsnmpusers.html["顯示v3 USM使用者"]
+
 link:../commands-a-z/show-syslog-summary.html["顯示syslog組態"]
 
 link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["指定電子郵件（SMTP）交付方法（適用於個別E2800或E5700陣列）"]
@@ -830,7 +834,11 @@ link:../commands-a-z/start-snmptrapdestination.html["測試SNMP設陷目的地"]
 
 link:../commands-a-z/start-syslog-test.html["測試syslog組態"]
 
+link:../commands-a-z/delete-snmpuser-username.html["取消登錄v3 USM使用者"]
+
 link:../commands-a-z/set-snmpcommunity.html["更新SNMP社群"]
+
+link:../commands-a-z/set-snmpuser-username.html["更新v3 USM使用者"]
 
 link:../commands-a-z/set-snmpsystemvariables.html["更新SNMP mib II系統群組變數"]
 

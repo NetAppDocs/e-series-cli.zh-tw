@@ -51,6 +51,7 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 [securityType=(none | capable | enabled)]
 [secureDrives=(fips | fde)]
 [dataAssurance=(none | enabled)]
+[blockSize=(512 | 4096)]
 ----
 
 
@@ -178,6 +179,13 @@ pass:quotes[[readAheadMultiplier=_multiplierValue_]]
 請搭配使用此參數與「安全性類型」參數。如果您為「安全性類型」參數指定「無」、則會忽略「RecureDrives」參數的值、因為不安全的磁碟區群組不需要指定安全磁碟機類型。
 
 ====
+
+
+ a| 
+「區塊大小」
+ a| 
+已建立磁碟區的區塊大小（以位元組為單位）。支援的值為 `512` 和 `4096`。
+
 |===
 
 

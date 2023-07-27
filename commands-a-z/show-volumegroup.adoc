@@ -31,7 +31,7 @@ summary: show volumeGroup命令會傳回磁碟區群組的相關資訊。
 
 此命令會傳回有關Volume群組的資訊：
 
-* 狀態（線上或離線）
+* 狀態（例如 Optimal 、 Degraded 、 Failed 、 missing ）
 * 容量
 * 當前擁有者（插槽A中的控制器或插槽B中的控制器）
 * RAID層級

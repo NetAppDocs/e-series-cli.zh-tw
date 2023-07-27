@@ -346,6 +346,13 @@ set session password=password
 
 
  a| 
+`-useLegacyTransferPort`
+ a| 
+用於將傳輸連接埠設定為 `8443` 而非預設值 `443`。
+
+
+
+ a| 
 -`-v'
  a| 
 顯示組態檔中已知裝置與「-d」參數搭配使用時的目前全域狀態。

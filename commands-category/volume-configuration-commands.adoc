@@ -30,6 +30,8 @@ link:../commands-a-z/show-diskpool.html["顯示磁碟集區"]
 
 link:../commands-a-z/start-diskpool-fullprovisioning.html["啟動磁碟集區完整資源配置"]
 
+link:../commands-a-z/start-diskpool-resourceprovisioning.html["啟動磁碟資源池資源配置"]
+
 link:../commands-a-z/start-diskpool-locate.html["啟動磁碟集區定位"]
 
 link:../commands-a-z/stop-diskpool-locate.html["停止磁碟集區定位"]
@@ -154,6 +156,8 @@ link:../commands-a-z/repair-volume-parity.html["修復磁碟區同位元檢查"]
 
 link:../commands-a-z/repair-data-parity.html["修復資料同位元檢查"]
 
+link:../commands-a-z/save-check-vol-parity-job-errors.html["儲存檢查 Volume 同位檢查工作同位檢查錯誤"]
+
 link:../commands-a-z/set-thin-volume-attributes.html["設定精簡磁碟區屬性"]
 
 link:../commands-a-z/set-volumes.html["設定磁碟集區中某個磁碟區的Volume屬性..."]
@@ -161,6 +165,8 @@ link:../commands-a-z/set-volumes.html["設定磁碟集區中某個磁碟區的Vo
 link:../commands-a-z/set-volume-group-attributes-for-volume-in-a-volume-group.html["設定Volume群組中某個Volume的Volume屬性..."]
 
 link:../commands-a-z/set-volume-logicalunitnumber.html["設定Volume對應"]
+
+link:../commands-a-z/show-check-vol-parity-jobs.html["顯示檢查 Volume 同位檢查工作"]
 
 link:../commands-a-z/show-volume.html["顯示精簡Volume"]
 
@@ -172,7 +178,11 @@ link:../commands-a-z/show-volume-performancestats.html["顯示Volume效能統計
 
 link:../commands-a-z/show-volume-reservations.html["顯示Volume保留"]
 
+link:../commands-a-z/start-check-vol-parity-job.html["開始檢查 Volume 同位檢查工作"]
+
 link:../commands-a-z/start-volume-initialization.html["啟動Volume初始化"]
+
+link:../commands-a-z/stop-check-vol-parity-job.html["停止檢查 Volume 同位檢查工作"]
 
 
 
@@ -201,6 +211,8 @@ link:../commands-a-z/start-volumegroup-defragment.html["啟動Volume群組重組
 link:../commands-a-z/start-volumegroup-export.html["開始Volume群組匯出"]
 
 link:../commands-a-z/start-volumegroup-fullprovisioning.html["啟動Volume Group完整資源配置"]
+
+link:../commands-a-z/start-volumegroup-resourceprovisioning.html["啟動Volume群組資源配置"]
 
 link:../get-started/learn-about-volume-group-migration.html["瞭解Volume群組移轉（僅限CLI）"]
 

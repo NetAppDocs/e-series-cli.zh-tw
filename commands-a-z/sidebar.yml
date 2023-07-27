@@ -352,6 +352,8 @@ entries:
       url: "/commands-a-z/save-alltrays-logfile.html"
     - title: 儲存稽核記錄
       url: "/commands-a-z/save-auditlog.html"
+    - title: 儲存檢查磁碟區同位檢查工作同位元檢查錯誤
+      url: "/commands-a-z/save-check-vol-parity-job-errors.html"
     - title: 儲存控制器陣列管理csr
       url: "/commands-a-z/save-controller-arraymanagementcsr.html"
     - title: 儲存控制器陣列管理登入憑證
@@ -632,6 +634,8 @@ entries:
       url: "/commands-a-z/show-certificates.html"
     - title: 顯示cgrsnapimage
       url: "/commands-a-z/show-cgsnapimage.html"
+    - title: 顯示檢查 Volume 同位檢查工作
+      url: "/commands-a-z/show-check-vol-parity-jobs.html"
     - title: 顯示一致群組
       url: "/commands-a-z/show-consistencygroup.html"
     - title: 顯示控制器陣列管理登入憑證摘要
@@ -766,6 +770,8 @@ entries:
       url: "/commands-a-z/start-asyncmirrorgroup-synchronize.html"
     - title: 啟動csnapimage復原
       url: "/commands-a-z/start-cgsnapimage-rollback.html"
+    - title: 開始檢查 Volume 同位檢查工作
+      url: "/commands-a-z/start-check-vol-parity-job.html"
     - title: 啟動控制器iscsihostport dcpprFresh
       url: "/commands-a-z/start-controller-iscsihostport-dhcprefresh.html"
     - title: 啟動控制器
@@ -854,6 +860,8 @@ entries:
       url: "/commands-a-z/stop-cgsnapimage-rollback.html"
     - title: 停止csnapvolume
       url: "/commands-a-z/stop-cgsnapvolume.html"
+    - title: 停止檢查 Volume 同位檢查工作
+      url: "/commands-a-z/stop-check-vol-parity-job.html"
     - title: 停止狀態群組暫停快照影像管理
       url: "/commands-a-z/stop-consistencygroup-pendingsnapimagecreation.html"
     - title: 停止磁碟集區定位

@@ -750,7 +750,6 @@
   <block id="4f606061cc4499e411135fef4c307053" category="paragraph">E2800或E5700儲存陣列不支援「A」和「x」命令列選項。</block>
   <block id="223bbafe2f1dac423520e791e763e6f5" category="paragraph">E2800或E5700儲存陣列不支援「-s」命令列選項。</block>
   <block id="40bca54aff18bd6b61ab776afa82b445" category="summary">本主題列出SANtricity 最新版的CLI命令和指令碼指令的更新資訊。</block>
-  <block id="e5b376b9bdbfe1612d578d30462ed6ff" category="section-title">零點11.70.3 SANtricity</block>
   <block id="ee97be03cb04119af45014d815621ce1" category="cell">命令</block>
   <block id="cabd3dec14f47181e4af36eb550db0ea" category="cell">變更說明</block>
   <block id="2095fd6c65341ab93c351699ae64c34e" category="inline-xref-macro">啟動磁碟資源池資源配置</block>
@@ -763,7 +762,6 @@
   <block id="8240d06183810907de9b280dfee9a05e" category="paragraph">新增了「刪除OldKey」參數。</block>
   <block id="ed6c4c5587cae9b7857a4c212c8b34da" category="inline-xref-macro">建立磁碟集區</block>
   <block id="6f716bfd4057a5bb2f73f7b626fff002" category="paragraph">已更新「目錄計數」參數說明。</block>
-  <block id="3cffe633df330392f4d88b8478c9390b" category="section-title">零點11.70.2 SANtricity</block>
   <block id="326299687f74c312b7aaa299887c7d36" category="inline-xref-macro">登錄v3 USM使用者</block>
   <block id="e1eeac0853bd4af8dbcb7863b475271f" category="inline-xref-macro">更新v3 USM使用者</block>
   <block id="b41c0c310da974a918bce8d5adf0c364" category="inline-xref-macro">顯示v3 USM使用者</block>
@@ -772,7 +770,6 @@
   <block id="a2c9974b236ee81969b25e3fb9ab1358" category="paragraph">新增了"username"和"engineid"參數。</block>
   <block id="db81528e982d687f579b76a74b0366f1" category="inline-xref-macro">更新SNMP設陷目的地</block>
   <block id="35c629434ff0892b4189c42464b27f1b" category="inline-xref-macro">測試SNMP設陷目的地</block>
-  <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">零點11.70.1 SANtricity</block>
   <block id="5e1960d53d0e67e3cd307a126a8f75ac" category="inline-xref-macro">開始磁碟機清除</block>
   <block id="11b1a1e2c28e878f48cf799cce8aa812" category="inline-xref-macro">匯入儲存陣列安全金鑰</block>
   <block id="c8dcef2f4d406da39ebba027f0ad429b" category="paragraph">新增了"forceOverwrite（取代）"參數。</block>
@@ -787,7 +784,6 @@
   <block id="5739d7add341e0326107e029f52ef372" category="paragraph">新增「中期計劃」加密、連接埠及認證參數資料。</block>
   <block id="3b5d6c04848b808e88bd30603defae1c" category="inline-xref-macro">恢復RAID Volume</block>
   <block id="b38477e0ffa079ffe6db9ea9609c7c0c" category="paragraph">新增「區塊大小」參數。</block>
-  <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">2011年11月70日SANtricity</block>
   <block id="8630f953448efd3164d45bd4733963c9" category="inline-xref-macro">下載儲存陣列韌體/NVSRAM</block>
   <block id="ddc948fd2b779667ef8ac6b9fa14e17c" category="paragraph">新增「healstChecksAttnOverride」參數。</block>
   <block id="60aecce41e2696a961f6c03c42d6fefc" category="inline-xref-macro">在磁碟集區中建立磁碟區</block>
@@ -796,36 +792,23 @@
   <block id="4d926e7d603a8be98a85dd68645636bc" category="paragraph">新增「SaveFile」參數。</block>
   <block id="52d53af59b45ed76c374ea97831a2113" category="inline-xref-macro">停用外部安全金鑰管理</block>
   <block id="dd62ecca79626b0abf30ba505a8993ef" category="paragraph">新增「hostUnmapEnabled」參數。</block>
-  <block id="89009756cb3faf02b7f235c5a54cf270" category="section-title">零點11.63 SANtricity</block>
-  <block id="facc1a9ea58302b0eaf856a4b4dc50f5" category="paragraph">下表列出11.63版CLI和指令碼命令的變更。</block>
   <block id="ae6ca176a200036f0702de4f88af28de" category="inline-xref-macro">啟動Storage Array AutoSupport 《人工派遣》</block>
   <block id="7e75d738e10ff67d5851ae5bca9dab0c" category="inline-xref-macro">修復資料同位元檢查</block>
   <block id="fd20a97395d72662264f2bfac37873a6" category="inline-xref-macro">設定儲存陣列資源已配置的Volume</block>
   <block id="5fb337c5d1b8204f9a719a390633fbdd" category="inline-xref-macro">建立Volume對應</block>
-  <block id="35f524b6f8efa87c84a9936f8afa6ce1" category="paragraph">新增了"mapWaitPeriod"參數。</block>
   <block id="a08dfe2f4f0ed8cb0e4ecd537093ea76" category="inline-xref-macro">顯示儲存陣列</block>
-  <block id="0ea2489c97700044a62ec015cbfea8cb" category="paragraph">在「profile」參數結果下新增「資源配置的Volume」項目。</block>
-  <block id="a7dcd6b31c24cfb3a203758b09c31835" category="paragraph">新增了"REsourceProvisioningCapable（資源配置資源可）"參數。</block>
   <block id="ecd5b19e377ea09681cc3033516727ef" category="inline-xref-macro">建立Volume群組</block>
   <block id="6bbb966265ea9783d25006b17718e5c1" category="inline-xref-macro">顯示Volume群組</block>
-  <block id="feb2059d63d5e46b9d607e1e6c9f4005" category="paragraph">在命令結果中新增「資源已配置」資訊。</block>
   <block id="57b9042e61e804be9d7f7eb21f903bd2" category="inline-xref-macro">建立RAID Volume（自動選取磁碟機）</block>
   <block id="8bc7153babd734a7e9bcb2a8ae0a52a2" category="inline-xref-macro">建立RAID Volume（手動選取磁碟機）</block>
   <block id="9ef63d358bdc217e43dcb0fc830b0afa" category="inline-xref-macro">顯示磁碟集區</block>
-  <block id="54f27706dd97a6e4af870a74b6d36046" category="section-title">2011年11月62日SANtricity</block>
-  <block id="bbc33257024b79e4fd9ad85a4d1e5402" category="paragraph">新增「Physical（實體）」和「Virtual（虛擬）」值作為「Host Port（主機連接埠）」參數。</block>
-  <block id="92ebf9c09deafce375aa7192c5ffc460" category="section-title">不小於11.61 SANtricity</block>
-  <block id="e4c60892daa50d0e069f9aaacd2b3e74" category="list-text">新增EF600平台作為適用命令的支援陣列。</block>
   <block id="64a2ce0969644ae2fb0f841ab7d4781b" category="inline-xref-macro">儲存儲存陣列支援資料</block>
-  <block id="41598ebadd139da8827dc3df7cd355cf" category="paragraph">新增了「object-bunder.json」資料類型。</block>
   <block id="53fa78337dd74557902d76128f25d718" category="inline-xref-macro">顯示磁碟機</block>
-  <block id="7706dccc3fd27017e7e31f08d81ce0ca" category="paragraph">新增NVMe4K相容性。</block>
   <block id="58df588da257807d5f7cbd9390db8785" category="inline-xref-macro">啟動同步鏡射</block>
   <block id="afdba758a33212a451d426e382ffffa6" category="inline-xref-macro">重新建立同步鏡射儲存庫磁碟區</block>
   <block id="bf6829a2035da1ee3f5c0ae93652732c" category="inline-xref-macro">顯示儲存陣列自動組態</block>
   <block id="e0a196896c0583bda51daf508bf2e9b3" category="inline-xref-macro">自動設定儲存陣列</block>
   <block id="724ce6411c4e487216d71dfe6ca49cdf" category="inline-xref-macro">儲存自動負載平衡統計資料</block>
-  <block id="9064185bbc267e27fe8336512ff6fb89" category="paragraph">新增「磁碟機遺失主要路徑」附註</block>
   <block id="799587ec57d3ccaff63b5aeba6541ba1" category="inline-xref-macro">設定儲存陣列以啟用或停用自動負載平衡</block>
   <block id="a524a99cfdf07f411dee8bf72266b7e5" category="inline-xref-macro">從陣列新增憑證</block>
   <block id="901711e6beac98bf77c83f0abcd06cc7" category="inline-xref-macro">從檔案新增憑證</block>
@@ -860,7 +843,6 @@
   <block id="7a8ba517b2b0f774908c695321c7c150" category="doc">建立SSD快取</block>
   <block id="c56514971eec0f014ec1b676aab5b36f" category="paragraph">「create ssdCache」命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。</block>
   <block id="c967c152924962a32a94352f0b12487e" category="paragraph">此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、</block>
-  <block id="d24a85231044845c23be2998d29a2c91" category="paragraph">若要在E2800或E5700儲存陣列上執行此命令、您必須擁有「支援管理員」角色。</block>
   <block id="ad4e206408c1c59bfb8a057ba7857446" category="section-title">背景</block>
   <block id="5af36353908bc330d9b5fb13a131f0f6" category="paragraph">使用高效能SSD快取讀取資料、可改善應用程式I/O效能和回應時間、並在不同的工作負載之間持續提升效能、尤其是高IOP工作負載。SSD快取可充分運用昂貴的快速SSD。SSD快取除了控制器DRAM中的主要快取外、也能運作。使用控制器快取時、資料會在主機讀取後儲存在DRAM中。有了SSD快取、資料會從使用者指定的基礎磁碟區複製、然後快取到SSD。</block>
   <block id="3a5d58c890db51012b65be2246beb6e4" category="paragraph">「userLabel」</block>
@@ -2447,7 +2429,6 @@
   <block id="deed60dd5930ffa4c4aa40e45d046c69" category="summary">重設iscsiIpAddress命令會重設遠端儲存陣列的IP位址、以重新建立與本機儲存陣列的連線。</block>
   <block id="7069484f63adc568cc1ae0857c37aca1" category="doc">重設iSCSI IP位址</block>
   <block id="6ebd3d3d6290579fda08e91cb365e148" category="paragraph">「reset iscsiipAddress」命令會重設遠端儲存陣列的IP位址、以重新建立與本機儲存陣列的連線。</block>
-  <block id="3fd819ef2f4ad34931e3c5ff7c16558d" category="paragraph">如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。</block>
   <block id="9e0f49298f001edc2901614bd34976ad" category="paragraph">您可以使用此命令通知本機儲存陣列遠端儲存陣列的iSCSI IP位址已變更、需要更新。</block>
   <block id="fd6fd032baf66907fa006af6877faa89" category="paragraph">在與iSCSI連線建立非同步鏡射關係時、本機和遠端儲存陣列都會在非同步鏡射組態中儲存遠端儲存陣列IP位址的記錄。如果iSCSI連接埠的IP位址變更、則嘗試使用該連接埠的遠端儲存陣列會發生通訊錯誤。</block>
   <block id="aa27ef8a51c244ed1771232e3e14ab2f" category="paragraph">具有變更IP位址的儲存陣列會傳送訊息給每個與非同步鏡射群組相關聯的遠端儲存陣列、這些群組已設定為透過iSCSI連線鏡射。接收此訊息的儲存陣列會自動更新遠端目標IP位址。</block>
@@ -3909,7 +3890,6 @@
   <block id="5f8a89b5343a845dbad6de0b124d1b59" category="paragraph">您要儲存儲存儲存陣列支援相關資料的檔案路徑和檔案名稱。將檔案路徑和檔案名稱括在雙引號（""）內。例如：</block>
   <block id="816647081b41d87eb98c65dc0339fbd5" category="paragraph">「file="C:\Program Files\CLI/logs\supdat.7z"」</block>
   <block id="5460db65a06abfbe2f06d0abbb49be5b" category="paragraph">如果控制器作業上的鎖定有任何故障、此參數會強制收集支援資料。若要強制收集支援資料、請將此參數設為「true」。預設值為「假」。</block>
-  <block id="964a586cd5cc36b6fd2ab29833213673" category="paragraph">從韌體層級7.86開始、在執行Windows的系統上、副檔名必須為「.7z」。如果您在Windows系統上執行的韌體版本早於7.86、則副檔名必須為「.Zip」。在未執行Windows的系統上、您可以使用適用於您系統的任何副檔名。</block>
   <block id="9b474f4f03efbc0e06b8664b35dca364" category="paragraph">7.80新增「force」參數。</block>
   <block id="98bc8a76c30f367ceaec2706ac60d5c6" category="paragraph">8.30新增E2800儲存陣列的資訊。</block>
   <block id="ce10ae6c4675d29977fe3be99b246385" category="summary">更換磁碟機更換磁碟機命令會取代磁碟區群組中的磁碟機。</block>
@@ -3977,7 +3957,6 @@
   <block id="4f0bf867026e0ecf3a0cc3561bafe3ab" category="summary">show diskPool命令會傳回磁碟集區的相關資訊。</block>
   <block id="54cc32b178ac45024f346ea073fe9a28" category="paragraph">「show diskPool」命令會傳回磁碟集區的相關資訊。</block>
   <block id="cfbfb0a7091eeae23528d0e4f1277a69" category="paragraph">此命令會傳回磁碟集區的相關資訊：</block>
-  <block id="a4d625a9a6e3d7702b6ab1e595957ee6" category="list-text">狀態（例如Optimal（最佳）、Online（線上）、offline（離線））</block>
   <block id="5a1254af269407ce6329e7035c3b1041" category="list-text">總容量</block>
   <block id="899286562b9965acb592007d01535de8" category="list-text">保留容量、可用容量和不可用容量</block>
   <block id="d4cc0fc2fdefffaffa7456e1a7eb61da" category="list-text">已用容量、可用容量和已滿百分比</block>
@@ -7440,7 +7419,6 @@
   <block id="d015a34de96d3f92372df94da0f629a7" category="paragraph">*無*</block>
   <block id="490414e0366b091220802d406e52c076" category="doc">新功能</block>
   <block id="951c6ae7fff0668a89aef7dc85bf76d0" category="paragraph">在命令提示字元下發出SMcli命令時、您必須輸入其他反斜槓 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>）使用Windows作業系統時、輸入或輸出檔案的檔案路徑名稱中的轉義字元。額外的反斜槓 <block ref="28d397e87306b8631f3ed80d858d35f0" prefix="(" category="inline-code"></block>）在安全的https模式下使用SMcli時必須包含在內、方法是提供-u選項來指定角色型存取管理使用者。範例：<block ref="1c05e98ca61c10b2b98fcdccf3f101eb" prefix=" " category="inline-code"></block></block>
-  <block id="06d2539958ee4762f25ee6e06e44b9f1" category="section-title">零點11.70.4 SANtricity</block>
   <block id="88f7095a6da86281dee41ca1973b59da" category="paragraph">下表列出11.70.4版的CLI和指令碼命令變更。</block>
   <block id="3c81bd0a1f22910d21ddab30497f0cad" category="inline-xref-macro">Downloadble SMcli命令列參數</block>
   <block id="26f5c6a358189222507298d61acc474c" category="paragraph"><block ref="26f5c6a358189222507298d61acc474c" category="inline-xref-macro-rx"></block></block>
@@ -7474,33 +7452,7 @@
   <block id="9ad23fd2db795292952203f1e70f5cf4" category="paragraph"><block ref="9ad23fd2db795292952203f1e70f5cf4" category="inline-xref-macro-rx"></block></block>
   <block id="f89d3e2c717672dd2cae630c3229fe43" category="paragraph"><block ref="f89d3e2c717672dd2cae630c3229fe43" category="inline-xref-macro-rx"></block></block>
   <block id="8ab3987f5e11278960924053c1c48603" category="paragraph"><block ref="8ab3987f5e11278960924053c1c48603" category="inline-xref-macro-rx"></block></block>
-  <block id="3c4554618d02db0aef828e22246c6b59" category="paragraph"><block ref="3c4554618d02db0aef828e22246c6b59" category="inline-xref-macro-rx"></block></block>
-  <block id="c18cced0b91c7306eba8aa95974d5d73" category="paragraph"><block ref="c18cced0b91c7306eba8aa95974d5d73" category="inline-xref-macro-rx"></block></block>
-  <block id="8dc0796d131f84b22d35084484e6f712" category="paragraph"><block ref="8dc0796d131f84b22d35084484e6f712" category="inline-xref-macro-rx"></block></block>
-  <block id="94ac69661c2d717315d8018624ebbe85" category="paragraph"><block ref="94ac69661c2d717315d8018624ebbe85" category="inline-xref-macro-rx"></block></block>
-  <block id="f7c28deada4fce505c370bfe9336570b" category="paragraph"><block ref="f7c28deada4fce505c370bfe9336570b" category="inline-xref-macro-rx"></block></block>
-  <block id="9e0e2266a81338fbfaf354427a1629c8" category="paragraph"><block ref="9e0e2266a81338fbfaf354427a1629c8" category="inline-xref-macro-rx"></block></block>
-  <block id="9b609f7e87918bf9211f6e0e9f22fa5a" category="paragraph"><block ref="9b609f7e87918bf9211f6e0e9f22fa5a" category="inline-xref-macro-rx"></block></block>
-  <block id="40b41041d07ac7993f03456611c81f15" category="paragraph"><block ref="40b41041d07ac7993f03456611c81f15" category="inline-xref-macro-rx"></block></block>
-  <block id="480576ccaea5bc0e0e8ae41d4a033c1b" category="paragraph"><block ref="480576ccaea5bc0e0e8ae41d4a033c1b" category="inline-xref-macro-rx"></block></block>
-  <block id="c9b3eea1b5f6b5ad2989b197b28eedce" category="paragraph"><block ref="c9b3eea1b5f6b5ad2989b197b28eedce" category="inline-xref-macro-rx"></block></block>
-  <block id="4ad59273ade530447003d676a301cc73" category="paragraph"><block ref="4ad59273ade530447003d676a301cc73" category="inline-xref-macro-rx"></block></block>
-  <block id="fd83f34fd47d642e467d2796b016b097" category="paragraph">下表列出11.62版CLI和指令碼命令的變更。</block>
-  <block id="f37b13e86f97e59ee48d67277e240520" category="paragraph"><block ref="f37b13e86f97e59ee48d67277e240520" category="inline-xref-macro-rx"></block></block>
-  <block id="a26ca5d017415a1eef700afbebf2489d" category="paragraph"><block ref="a26ca5d017415a1eef700afbebf2489d" category="inline-xref-macro-rx"></block></block>
-  <block id="3529e34205440babbcc2a342fff713bd" category="paragraph"><block ref="3529e34205440babbcc2a342fff713bd" category="inline-xref-macro-rx"></block></block>
-  <block id="579c3e6c53c24b3c13e14718b192a91c" category="paragraph"><block ref="579c3e6c53c24b3c13e14718b192a91c" category="inline-xref-macro-rx"></block></block>
-  <block id="adeab83c7aebbd6a5921e03b39ae3692" category="paragraph"><block ref="adeab83c7aebbd6a5921e03b39ae3692" category="inline-xref-macro-rx"></block></block>
   <block id="e9b46bd45d89b563069e32b2ab8efeec" category="paragraph"><block ref="e9b46bd45d89b563069e32b2ab8efeec" category="inline-xref-macro-rx"></block></block>
-  <block id="6e0478ffff0b3c1332c63ff8e7b14b09" category="paragraph"><block ref="6e0478ffff0b3c1332c63ff8e7b14b09" category="inline-xref-macro-rx"></block></block>
-  <block id="d90e4abdd3ee227c0579661d5d24cef3" category="paragraph"><block ref="d90e4abdd3ee227c0579661d5d24cef3" category="inline-xref-macro-rx"></block></block>
-  <block id="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="paragraph"><block ref="98f0ea9a8f189ba8cb3b4e0f6aad5027" category="inline-xref-macro-rx"></block></block>
-  <block id="d45145e28afa4b36a26e000619d7782f" category="paragraph"><block ref="d45145e28afa4b36a26e000619d7782f" category="inline-xref-macro-rx"></block></block>
-  <block id="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="paragraph"><block ref="0ce9ea5c4824c57f4a47b87c1c3d0a25" category="inline-xref-macro-rx"></block></block>
-  <block id="5a73a4d3914ce0c6f82c2c6d8225421d" category="paragraph"><block ref="5a73a4d3914ce0c6f82c2c6d8225421d" category="inline-xref-macro-rx"></block></block>
-  <block id="98104774738b4d9c0bba90497a5272b7" category="paragraph"><block ref="98104774738b4d9c0bba90497a5272b7" category="inline-xref-macro-rx"></block></block>
-  <block id="2ce1112caa707f16f23146b202be4be9" category="paragraph"><block ref="2ce1112caa707f16f23146b202be4be9" category="inline-xref-macro-rx"></block></block>
-  <block id="7a18d8afc4de5a81e7b0321efd958d8c" category="paragraph"><block ref="7a18d8afc4de5a81e7b0321efd958d8c" category="inline-xref-macro-rx"></block></block>
   <block id="a17f26ca71a4bb33276e3037806eea2c" category="sidebar">Downloadble SMcli參數</block>
   <block id="a87e14eaf99b0ce7290927262e7cb91a" category="sidebar">舊版CLI參數</block>
   <block id="bc968b5475454c32c0accb20e0fffbde" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、信任的憑證會安裝在陣列上</block>
@@ -7508,6 +7460,85 @@
   <block id="54ae93e7b9eb6723cc6c1599cf7e1572" category="section-title">需要密碼的作業、<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block> 用戶端模式、未安裝信任的憑證、但使用-k作為自我簽署的憑證</block>
   <block id="9ccc3ce7d13f58c471a7befa5d7ad4bd" category="section-title">唯讀作業、<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block> 用戶端模式</block>
   <block id="d59db7846bd10b6d60d21543df9faa9e" category="section-title">您需要的產品</block>
-  <block id="4d73148eba8bbf93563afef1a810a39e" category="section-title">SANtricity 11.70.5</block>
   <block id="a1b47df4de15fbd87aeeb6fd140013ca" category="paragraph">11.70.5 版沒有 CLI 或指令碼命令變更。</block>
+  <block id="b97310209803fdc9ec050e8c5c8d93ba" category="paragraph"><block ref="b97310209803fdc9ec050e8c5c8d93ba" category="inline-link-macro-rx"></block></block>
+  <block id="1b9c994f5747c133d89fc34ba261d7ba" category="paragraph"><block ref="1b9c994f5747c133d89fc34ba261d7ba" category="inline-link-macro-rx"></block></block>
+  <block id="7b45f8f8ff130a8fa0d8063e75b1e838" category="paragraph"><block ref="7b45f8f8ff130a8fa0d8063e75b1e838" category="inline-link-macro-rx"></block></block>
+  <block id="54e1edf6f95294f62c7bacdaf6bd3342" category="paragraph"><block ref="54e1edf6f95294f62c7bacdaf6bd3342" category="inline-link-macro-rx"></block></block>
+  <block id="142fd8f59bb8370e7a1e3f59d9222388" category="paragraph"><block ref="142fd8f59bb8370e7a1e3f59d9222388" category="inline-link-macro-rx"></block></block>
+  <block id="974c39615a30eb12263edf94ca8b50a1" category="inline-link-macro">儲存檢查 Volume 同位檢查工作同位檢查錯誤</block>
+  <block id="133fba1f812cada0c7b9feb43526fffc" category="paragraph"><block ref="133fba1f812cada0c7b9feb43526fffc" category="inline-link-macro-rx"></block></block>
+  <block id="a913a4f2a05c2c75cf27237242cc5ce5" category="inline-link-macro">顯示檢查 Volume 同位檢查工作</block>
+  <block id="6752d22f8e0c2b7fadbf03092d48e8dc" category="paragraph"><block ref="6752d22f8e0c2b7fadbf03092d48e8dc" category="inline-link-macro-rx"></block></block>
+  <block id="19a44391940469dc830474bf5c98724a" category="inline-link-macro">開始檢查 Volume 同位檢查工作</block>
+  <block id="a8b2140d67c28203565fcc17acca3749" category="paragraph"><block ref="a8b2140d67c28203565fcc17acca3749" category="inline-link-macro-rx"></block></block>
+  <block id="7607bf5e58c096bde56f286de6f07317" category="inline-link-macro">停止檢查 Volume 同位檢查工作</block>
+  <block id="14abf2f164eb8cf61e71ff65e43085e7" category="paragraph"><block ref="14abf2f164eb8cf61e71ff65e43085e7" category="inline-link-macro-rx"></block></block>
+  <block id="026a94a62949aee5d60c432cd25ffe01" category="paragraph"><block ref="026a94a62949aee5d60c432cd25ffe01" category="inline-link-macro-rx"></block></block>
+  <block id="5cc95b76fb76374efd724d73f3bc96c1" category="section-title">SANtricity 11.80</block>
+  <block id="76ef75e53e9f3900484d89f765e447d8" category="paragraph">下表列出 11.80 版 CLI 和指令碼命令的變更。</block>
+  <block id="1d1b21291be65507e066fd926b610856" category="inline-xref-macro">儲存檢查磁碟區健全性工作同位檢查錯誤</block>
+  <block id="ec3e4abd08eb33f880d24807c8824890" category="paragraph"><block ref="ec3e4abd08eb33f880d24807c8824890" category="inline-xref-macro-rx"></block></block>
+  <block id="1c934ca6d783f9f52ca805e994bce393" category="paragraph"><block ref="1c934ca6d783f9f52ca805e994bce393" category="inline-xref-macro-rx"></block></block>
+  <block id="a8b3143da5c7097d03191bc288da4b72" category="inline-xref-macro">顯示檢查 Volume 同位檢查工作</block>
+  <block id="ae69c6007e0eb7a9fe101aadf79026a2" category="paragraph"><block ref="ae69c6007e0eb7a9fe101aadf79026a2" category="inline-xref-macro-rx"></block></block>
+  <block id="4ffe7669db62b58d2632f6047da1c113" category="inline-xref-macro">顯示檢查 Volume 同位檢查工作</block>
+  <block id="d78face51c8f5dff6bafb9879c9bbbb4" category="paragraph"><block ref="d78face51c8f5dff6bafb9879c9bbbb4" category="inline-xref-macro-rx"></block></block>
+  <block id="3fc6c33101584c7bde9838ff559f7748" category="inline-xref-macro">停止檢查 Volume 同位檢查工作</block>
+  <block id="ccb61bda1ba5395e375edd331ea21dee" category="paragraph"><block ref="ccb61bda1ba5395e375edd331ea21dee" category="inline-xref-macro-rx"></block></block>
+  <block id="55493e98e602a03e07f56f1acb2fb353" category="paragraph"><block ref="55493e98e602a03e07f56f1acb2fb353" category="inline-xref-macro-rx"></block></block>
+  <block id="84b6254e1011f96e6fb4b9cee656d730" category="paragraph">新增<block ref="ab1f19425d80842e646857a8f89eeecb" prefix=" " category="inline-code"></block> 參數。</block>
+  <block id="a74eb5af8064272ba51d646a8d151084" category="paragraph"><block ref="a74eb5af8064272ba51d646a8d151084" category="inline-xref-macro-rx"></block></block>
+  <block id="138fadba8fa114a89807217041227cdc" category="paragraph">過時的命令。</block>
+  <block id="3dedaa7cf415b3360432eef09568c523" category="paragraph">= SANtricity 11.70.5</block>
+  <block id="e55ad5000b4d4a51d8ccc3424997ec08" category="paragraph">= SANtricity 11.70.4</block>
+  <block id="6088d4dbc3d83010beb562a6aa463823" category="paragraph">= SANtricity 11.70.3</block>
+  <block id="c1a02b1fca86aca7666380fa2eef3d9f" category="paragraph">= SANtricity 11.70.2</block>
+  <block id="b35f09e5780fa9c288e3717362d54062" category="paragraph">= SANtricity 11.70.1</block>
+  <block id="d26b558d85ae05626c16f88bd78ab67b" category="paragraph">= SANtricity 11.70</block>
+  <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。</block>
+  <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">若要在 E2800 、 E5700 、 EF600 或 EF300 儲存陣列上執行此命令、您必須具有「支援管理員」角色。</block>
+  <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80 新增 EF600 和 EF300 陣列支援</block>
+  <block id="a477516db1bcb6e305b3dcf84ce294c2" category="paragraph">如果您在 E2800 、 E5700 、 EF600 或 EF300 陣列上執行命令、則用戶端類型必須設為<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果用戶端類型設為、則不會執行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
+  <block id="b5686fd94e2c11d0beb5597a3520313c" category="summary">show check Volume 同位檢查工作命令會顯示指定的檢查 Volume 同位檢查工作和工作狀態。</block>
+  <block id="dd6daf5faf9779e778db769f3be87c3e" category="paragraph">。<block ref="444d9d2a89ab0f7e0925c167387212b0" prefix=" " category="inline-code"></block> 命令會顯示指定的檢查磁碟區同位檢查工作和工作狀態。</block>
+  <block id="26dd5ebc9516419ec6866f88343d77bc" category="paragraph"><block ref="7143244908eefa9a01f826fcd8ecb03d" prefix="" category="inline-code"></block></block>
+  <block id="0210ca6c57a6f1ebc9350f7961a1630e" category="paragraph">Check Volume 同位檢查工作 ID 。此值為必填。</block>
+  <block id="8ebe5bb4f19a0865e0dca0fc02a8ad6a" category="paragraph">11.80</block>
+  <block id="8fe6e97510e09ec53b4d8934ee3aa8d2" category="paragraph">EF300 或 EF600 不支援精簡配置的磁碟區。</block>
+  <block id="7d4fdfb752f88986444792e93b73869f" category="paragraph">已建立磁碟區的區塊大小（以位元組為單位）。支援的值為<block ref="10a7cdd970fe135cf4f7bb55c0e3b59f" prefix=" " category="inline-code"></block> 和<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>。</block>
+  <block id="43553b7327b1a67ac5cd1a8f34257215" category="paragraph">所有插槽ID上限為24。插槽ID值的開頭為0或1、視紙匣機型而定。與E2800、E5700、EF600和EF300控制器相容的磁碟機匣具有從0開始的插槽ID編號。與E2700和E5600控制器相容的磁碟機匣具有插槽ID編號、從1開始。</block>
+  <block id="08117640ccc49245e4b0a9cfe59d3d24" category="summary">show check volume 同位檢查工作命令會顯示所有檢查 Volume 同位檢查工作及其狀態。</block>
+  <block id="5419272dcf0119b1498b0ee6cd83a7d7" category="paragraph">。<block ref="892bb8e3c297dc4bbfaa485b428ef7c7" prefix=" " category="inline-code"></block> 命令會顯示所有檢查 Volume 同位檢查工作及其狀態。</block>
+  <block id="697582c632d5495c3bdf4f125d6e44ad" category="list-text">狀態（例如 Optimal 、 Degraded 、 Failed 、 missing ）</block>
+  <block id="7b3de16c9afd0104d287ad63852f3582" category="paragraph">從韌體層級 7.86 開始、副檔名必須是<block ref="e795c338d1095de382d06049d8de4ddc" prefix=" " category="inline-code"></block>。如果您執行的韌體版本早於 7.86 、則檔案副檔名必須為<block ref="daf4de58883c030f033f07e61debf025" prefix=" " category="inline-code"></block>。</block>
+  <block id="fc5c266cb6f96079b69c331a8c58e99b" category="summary">「儲存檢查磁碟區同位檢查工作同位檢查錯誤」命令會將檢查磁碟區同位檢查工作所記錄的同位檢查錯誤儲存至指定的檔案。</block>
+  <block id="20a43b7f4af8035ddcbe0a2510381d6d" category="doc">儲存檢查磁碟區同位檢查工作同位元檢查錯誤</block>
+  <block id="c7bd3caec6027c755f14662ba61e171e" category="paragraph">。<block ref="5a726fa69132fec2b565c201f259a2b6" prefix=" " category="inline-code"></block> 命令會將檢查 Volume 同位檢查工作所記錄的同位檢查錯誤儲存至指定的檔案。輸出檔案的寫入格式與過時的檢查 Volume 同位元檢查命令相同、因此可用來做為現有修復 Volume 同位元檢查命令的輸入。</block>
+  <block id="039eafa34dfe9090ee2439418ba00ba3" category="paragraph">用於擷取及儲存記錄的同位元檢查錯誤的工作 ID 。此值為必填。</block>
+  <block id="858ba3ba3c6cb8647feb46cf7e1984f3" category="paragraph">使用者指定的檔案、用於指出應儲存記錄同位元檢查錯誤的位置。此值為必填。</block>
+  <block id="47c80eab32112d40d0ee9b1401add46f" category="summary">start check Volume 同位檢查工作命令會在指定的磁碟區上啟動新的檢查磁碟區同位檢查作業。</block>
+  <block id="8550240ace19de7d9a92385e41daa0ba" category="paragraph">。<block ref="26ff9cf33d84624073951cbdf4a00a9f" prefix=" " category="inline-code"></block> 命令會在指定的磁碟區上啟動新的檢查磁碟區同位檢查作業。</block>
+  <block id="a748353fef9822b19d635dd205b0b714" category="paragraph"><block ref="9b586e1d58823a81abe58995347df40f" prefix="" category="inline-code"></block></block>
+  <block id="59ba2acb1d35993da825989fc8028f63" category="paragraph">開始同位元檢查掃描的 Volume 邏輯區塊位址。預設值為<block ref="cfcd208495d565ef66e7dff9f98764da" prefix=" " category="inline-code"></block>。</block>
+  <block id="426d9c081bf615e02b68ee2f9996be99" category="paragraph"><block ref="6fff50e225150b304b4fcfc4bdec99ec" prefix="" category="inline-code"></block></block>
+  <block id="17faffeb6424490ce2546081753e97de" category="paragraph">停止同位元檢查掃描的 Volume 邏輯區塊位址。預設值為<block ref="a3471a23652620565146ea6816ff1e8a" prefix=" " category="inline-code"></block>。</block>
+  <block id="3bbba301a135690bd27e353f91380d61" category="paragraph"><block ref="910171eaa7cebbceb693a7f05b7e3fa2" prefix="" category="inline-code"></block></block>
+  <block id="811b5a74b7588afc6a6f33fa9845b722" category="paragraph">同位元檢查掃描優先順序。預設值為<block ref="075a3e36a0a52dcbc568c05788e8a713" prefix=" " category="inline-code"></block></block>
+  <block id="59e446b4fd16efca7255734b1858148e" category="paragraph"><block ref="42dd52accf6a49a70daab7465cf830e4" prefix="" category="inline-code"></block></block>
+  <block id="ef5e3e26a81172762ba3b85edb6cdb1e" category="paragraph">決定是否自動嘗試修復同位元檢查掃描期間偵測到的同位元檢查錯誤。預設值為<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
+  <block id="cba0c3df6373876bbdae2cea9dd5f8c8" category="paragraph"><block ref="598f0662b3650c066aebeb6b45ddca04" prefix="" category="inline-code"></block></block>
+  <block id="ae5e9333878c081473c4e929ba4d97b5" category="paragraph">決定是否自動嘗試修復同位元檢查掃描期間偵測到的媒體錯誤。預設值為<block ref="b326b5062b2f0e69046810717534cb09" prefix=" " category="inline-code"></block>。</block>
+  <block id="9024466b5711346757a4b8d930d0bbad" category="paragraph">11.80 - 此命令已過時。</block>
+  <block id="ea34451b91444994bfc4402f792f1dd5" category="paragraph">8.10 新增<block ref="2b16831698e26c1c84d0f9576ef3e8d8" prefix=" " category="inline-code"></block> 參數</block>
+  <block id="8787ce4b8a4c03ba45431f367412472f" category="summary">停止檢查 Volume 同位檢查工作命令會停止進行中的檢查 Volume 同位檢查工作。</block>
+  <block id="28d62c9a6bee1cfdb574a22ef875004f" category="paragraph">。<block ref="e375a2dea1356a7fa1ccb75cb2608251" prefix=" " category="inline-code"></block> 命令會停止進行中的檢查磁碟區同位檢查工作。</block>
+  <block id="5b4abcaacf5de9ef06f2361d8ed99ee8" category="paragraph">對應於要停止的檢查 Volume 同位檢查工作的工作 ID 。此值為必填。</block>
+  <block id="96a29fbb29b6b974b913d1533c75e23a" category="paragraph">如果您在 E2800 、 E5700 、 EF600 和 EF300 陣列上執行命令、則用戶端類型必須設為<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果用戶端類型設為、則不會執行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
+  <block id="fc3bb4c64d686e2af46c9c6ab9cbe52c" category="paragraph"><block ref="ab1f19425d80842e646857a8f89eeecb" prefix="" category="inline-code"></block></block>
+  <block id="850782176356c5fe7366cf2f766cb110" category="paragraph">用於將傳輸連接埠設定為<block ref="7e6b20d014d1c659e4eaf20dc2dcd7eb" prefix=" " category="inline-code"></block> 而非預設值<block ref="13f3cf8c531952d72e5847c4183e6910" prefix=" " category="inline-code"></block>。</block>
+  <block id="5a726fa69132fec2b565c201f259a2b6" category="sidebar">儲存檢查磁碟區同位檢查工作同位元檢查錯誤</block>
+  <block id="892bb8e3c297dc4bbfaa485b428ef7c7" category="sidebar">顯示檢查 Volume 同位檢查工作</block>
+  <block id="26ff9cf33d84624073951cbdf4a00a9f" category="sidebar">開始檢查 Volume 同位檢查工作</block>
+  <block id="e375a2dea1356a7fa1ccb75cb2608251" category="sidebar">停止檢查 Volume 同位檢查工作</block>
 </blocks>

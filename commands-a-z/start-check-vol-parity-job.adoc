@@ -1,0 +1,84 @@
+---
+permalink: commands-a-z/start-check-vol-parity-job.html 
+sidebar: sidebar 
+keywords: start, check, volume, parity, job 
+summary: start check Volume 同位檢查工作命令會在指定的磁碟區上啟動新的檢查磁碟區同位檢查作業。 
+---
+= 開始檢查 Volume 同位檢查工作
+:allow-uri-read: 
+:icons: font
+:imagesdir: ./media/
+
+
+[role="lead"]
+。 `start check volume parity job` 命令會在指定的磁碟區上啟動新的檢查磁碟區同位檢查作業。
+
+
+
+== 支援的陣列
+
+此命令適用於任何個別儲存陣列、包括EF600和EF300陣列、只要安裝所有SMcli套件即可。
+
+
+
+== 角色
+
+若要在EF600和EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+
+
+
+== 語法
+
+[listing, subs="+macros"]
+----
+start check volume[<volume_label>] parity job
+(startingLba=<start_lba> endingLba=<end_lba> scanPriority=<scan_priority> repairParityErrors=<true | false>
+repairMediaErrors=<true | false>);
+----
+
+
+== 參數
+
+|===
+| 參數 | 說明 
+
+
+ a| 
+`startingLba`
+ a| 
+開始同位元檢查掃描的 Volume 邏輯區塊位址。預設值為 `0`。
+
+
+
+ a| 
+`endingLba`
+ a| 
+停止同位元檢查掃描的 Volume 邏輯區塊位址。預設值為 `maximum volume lba`。
+
+
+
+ a| 
+`scanPriority`
+ a| 
+同位元檢查掃描優先順序。預設值為 `medium`
+
+
+
+ a| 
+`repairParityErrors`
+ a| 
+決定是否自動嘗試修復同位元檢查掃描期間偵測到的同位元檢查錯誤。預設值為 `true`。
+
+
+
+ a| 
+`repairMediaErrors`
+ a| 
+決定是否自動嘗試修復同位元檢查掃描期間偵測到的媒體錯誤。預設值為 `true`。
+
+|===
+
+
+== 最低韌體層級
+
+11.80

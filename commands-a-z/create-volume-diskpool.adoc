@@ -67,22 +67,7 @@ capacity=_volumeCapacity_]
 [(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
 [newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
 [repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]
-[repositoryExpansionPolicy=(automatic|manual)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-----
-[listing, subs="+macros"]
-----
-create volume diskPool=pass:quotes[_"diskPoolName"_
-userLabel="_volumeName_"
-capacity=_volumeCapacity_]
-[thinProvisioned=(TRUE | FALSE)]
-[owner=(a|b)]
-[mapping=(none|default)]
-[(existingRepositoryLabel=pass:quotes[_existingRepositoryName_] |
-[newRepositoryCapacity=pass:quotes[_newRepositoryCapacityValue_] (KB | MB | GB | TB | Bytes)]
-[repositoryMaxCapacity=pass:quotes[_repositoryMaxCapacityValue_](KB|MB|GB|TB|Bytes)]
-[warningThresholdPercent=pass:quotes[_warningThresholdPercentValue_]]
+[warningThresholdPercent=pass:quotes][_warningThresholdPercentValue_]
 [repositoryExpansionPolicy=(automatic|manual)]
 [cacheReadPrefetch=(TRUE | FALSE)]
 ----
@@ -235,6 +220,8 @@ NOTE: RAID 1層級磁碟區無法使用精簡配置。
 若要在建立精簡磁碟區時獲得最佳結果、儲存庫磁碟區必須已經存在、或必須在現有的磁碟集區中建立。如果您在建立精簡磁碟區時未指定某些選用參數、儲存管理軟體將會嘗試建立儲存庫磁碟區。最理想的候選磁碟區是已存在且符合大小需求的儲存庫磁碟區。下一個最理想的候選磁碟區是在磁碟集區可用範圍中建立的新儲存庫磁碟區。
 
 無法在Volume群組中建立精簡磁碟區的儲存庫磁碟區。
+
+EF300 或 EF600 不支援精簡配置的磁碟區。
 
 
 

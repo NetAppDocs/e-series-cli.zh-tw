@@ -32,7 +32,7 @@ summary: stop storageArray iscsiSession命令會強制終止儲存陣列iSCSI工
 [listing, subs="+macros"]
 ----
 
-pass:quotes[stop storageArray iscsiSession [_essionNumber_]]
+pass:quotes[stop storageArray iscsiSession [_SessionNumber_]]
 ----
 
 

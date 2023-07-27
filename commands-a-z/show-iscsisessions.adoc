@@ -69,6 +69,31 @@ show iscsiTarget pass:quotes[["_targetName_"] | <"iqn">] iscsiSessions
 |===
 
 
+== 範例
+
+[listing]
+----
+Retrieve initiator:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiSessions;"
+
+Initiator information:
+    Host user label:               bbb000b00b0
+    Host port user label:          bbb000b00b0b0
+    Name:                          iqn.0b0b-0b.com:b0b0b0b0b0b0
+    Alias:                         None
+
+Host port user label:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiInitiator [\"bbb000b00b0b0\"] iscsiSessions;"
+
+
+IQN:
+
+SMcli -n Array1 -u admin@local -p adminPassword -k -c "show iscsiInitiator <\"iqn.0b0b-0b.com:b0b0b0b0b0b0\"> iscsiSessions;"
+----
+
+
 == 附註
 
 如果輸入此命令時未定義任何引數、此命令會傳回目前執行之所有iSCSI工作階段的相關資訊。下列命令會傳回所有目前iSCSI工作階段的相關資訊：

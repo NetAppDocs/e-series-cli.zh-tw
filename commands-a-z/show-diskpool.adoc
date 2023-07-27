@@ -31,7 +31,7 @@ summary: show diskPool命令會傳回磁碟集區的相關資訊。
 
 此命令會傳回磁碟集區的相關資訊：
 
-* 狀態（例如Optimal（最佳）、Online（線上）、offline（離線））
+* 狀態（例如 Optimal 、 Degraded 、 Failed 、 missing ）
 * 總容量
 * 保留容量、可用容量和不可用容量
 * 已用容量、可用容量和已滿百分比
