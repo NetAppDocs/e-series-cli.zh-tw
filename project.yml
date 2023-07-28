@@ -34,9 +34,9 @@ homepage:
     links:
     - title: E系列系統文件
       url: https://docs.netapp.com/us-en/e-series/index.html
-    - title: 系統管理程式11.7 SANtricity
+    - title: SANtricity 系統管理員 11.8
       url: https://docs.netapp.com/us-en/e-series-santricity/system-manager/index.html
-    - title: 統一化管理程式5. SANtricity
+    - title: SANtricity Unified Manager 6.
       url: https://docs.netapp.com/us-en/e-series-santricity/unified-manager/index.html
   - title: 工具支援
     links:

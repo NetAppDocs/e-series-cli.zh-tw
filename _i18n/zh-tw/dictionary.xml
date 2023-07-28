@@ -6884,8 +6884,6 @@
   <block id="55033cfb7ed4c9dca9e9af2a0b7f034d" category="sidebar">CLI命令結構</block>
   <block id="421eeeca306bdf1873654f04f6d8e61e" category="sidebar">E系列文件</block>
   <block id="b00771a05354ff5b2df1b388cfb6c874" category="sidebar">E系列系統文件</block>
-  <block id="e35d3866f0babedb61a0f1ba9102cafd" category="sidebar">系統管理程式11.7 SANtricity</block>
-  <block id="0ce99b430e0880d9c5b01d46d038d4dd" category="sidebar">統一化管理程式5. SANtricity</block>
   <block id="974ad78dc53c253ebfe5b2b8b376f353" category="sidebar">工具支援</block>
   <block id="bc8be72fdc9d6054f356bb2b7f80fd12" category="sidebar">NetApp 互通性對照表</block>
   <block id="668e2078ef1b1722c77cdb5c523a4463" category="sidebar">NetApp知識庫</block>
@@ -7476,8 +7474,6 @@
   <block id="026a94a62949aee5d60c432cd25ffe01" category="paragraph"><block ref="026a94a62949aee5d60c432cd25ffe01" category="inline-link-macro-rx"></block></block>
   <block id="5cc95b76fb76374efd724d73f3bc96c1" category="section-title">SANtricity 11.80</block>
   <block id="76ef75e53e9f3900484d89f765e447d8" category="paragraph">下表列出 11.80 版 CLI 和指令碼命令的變更。</block>
-  <block id="1d1b21291be65507e066fd926b610856" category="inline-xref-macro">儲存檢查磁碟區健全性工作同位檢查錯誤</block>
-  <block id="ec3e4abd08eb33f880d24807c8824890" category="paragraph"><block ref="ec3e4abd08eb33f880d24807c8824890" category="inline-xref-macro-rx"></block></block>
   <block id="1c934ca6d783f9f52ca805e994bce393" category="paragraph"><block ref="1c934ca6d783f9f52ca805e994bce393" category="inline-xref-macro-rx"></block></block>
   <block id="a8b3143da5c7097d03191bc288da4b72" category="inline-xref-macro">顯示檢查 Volume 同位檢查工作</block>
   <block id="ae69c6007e0eb7a9fe101aadf79026a2" category="paragraph"><block ref="ae69c6007e0eb7a9fe101aadf79026a2" category="inline-xref-macro-rx"></block></block>
@@ -7535,4 +7531,15 @@
   <block id="26ff9cf33d84624073951cbdf4a00a9f" category="sidebar">開始檢查 Volume 同位檢查工作</block>
   <block id="e375a2dea1356a7fa1ccb75cb2608251" category="sidebar">停止檢查 Volume 同位檢查工作</block>
   <block id="92b7fece7bb38ec7e732ddbfaadf63f3" category="paragraph">11.70.5 版沒有 CLI 和指令碼命令變更。</block>
+  <block id="2a7be06aafd526bc86e68a6c317abca7" category="paragraph"><block ref="2a7be06aafd526bc86e68a6c317abca7" category="inline-xref-macro-rx"></block></block>
+  <block id="4d73148eba8bbf93563afef1a810a39e" category="section-title">SANtricity 11.70.5</block>
+  <block id="06d2539958ee4762f25ee6e06e44b9f1" category="section-title">SANtricity 11.70.4</block>
+  <block id="e5b376b9bdbfe1612d578d30462ed6ff" category="section-title">零點11.70.3 SANtricity</block>
+  <block id="3cffe633df330392f4d88b8478c9390b" category="section-title">SANtricity 11.70.2</block>
+  <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
+  <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">2011年11月70日SANtricity</block>
+  <block id="cc1ba14f8dc9bd7ba20e2aa654cde10b" category="inline-link">E系列/EF系列SANtricity 的注意事項</block>
+  <block id="df9168fd1981b1464f7c0d38b2207c30" category="paragraph"><block ref="df9168fd1981b1464f7c0d38b2207c30" category="inline-link-rx"></block></block>
+  <block id="050910c569f1cb9044086ceee795e2f8" category="sidebar">SANtricity 系統管理員 11.8</block>
+  <block id="1cf9153cf0b1bfe4b703e41b4509763e" category="sidebar">SANtricity Unified Manager 6.</block>
 </blocks>

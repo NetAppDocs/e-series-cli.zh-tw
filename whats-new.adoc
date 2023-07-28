@@ -35,7 +35,7 @@ summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更
 
 
  a| 
-xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[儲存檢查磁碟區健全性工作同位檢查錯誤]
+xref:./commands-a-z/save-check-vol-parity-job-errors.adoc[儲存檢查磁碟區同位檢查工作同位元檢查錯誤]
  a| 
 新增命令
 
@@ -91,13 +91,13 @@ xref:./commands-a-z/check-volume-parity.adoc[檢查磁碟區同位元檢查]
 |===
 
 
-== 4d73148eba8bbf93563afef1a810a39e
+== SANtricity 11.70.5
 
 11.70.5 版沒有 CLI 和指令碼命令變更。
 
 
 
-== 06d2539958ee4762f25ee6e06e44b9f1
+== SANtricity 11.70.4
 
 下表列出11.70.4版的CLI和指令碼命令變更。
 
@@ -114,7 +114,7 @@ xref:./get-started/downloadable-smcli-parameters.adoc[Downloadble SMcli命令列
 |===
 
 
-== e5b376b9bdbfe1612d578d30462ed6ff
+== 零點11.70.3 SANtricity
 
 下表列出11.70.3版的CLI和指令碼命令變更。
 
@@ -166,7 +166,7 @@ xref:./commands-a-z/create-diskpool.html[建立磁碟集區]
 |===
 
 
-== 3cffe633df330392f4d88b8478c9390b
+== SANtricity 11.70.2
 
 下表列出11.70.2版CLI和指令碼命令的變更。
 
@@ -225,7 +225,7 @@ xref:./commands-a-z/start-snmptrapdestination.adoc[測試SNMP設陷目的地]
 |===
 
 
-== cfafd61e53ff8b90ff59654a31683d33
+== SANtricity 11.70.1
 
 下表列出11.70.1版的CLI和指令碼命令變更。
 
@@ -291,7 +291,7 @@ xref:./commands-a-z/recover-volume.adoc[恢復RAID Volume]
 |===
 
 
-== 474034f7e02f357e3878ae2514a2b3fd
+== 2011年11月70日SANtricity
 
 下表列出11.70版CLI和指令碼命令的變更。
 
