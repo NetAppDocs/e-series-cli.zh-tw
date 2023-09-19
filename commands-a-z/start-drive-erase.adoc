@@ -54,7 +54,7 @@ start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID
 
 
  a| 
-「Dive」或「Drives」
+"大"
  a| 
 對於大容量磁碟機匣、請指定磁碟機的匣ID值、藥櫃ID值及插槽ID值。對於低容量磁碟機匣、請指定磁碟機的匣ID值和插槽ID值。紙匣ID值為0至99。藥櫃ID值為1至5。
 
