@@ -6160,7 +6160,6 @@
   <block id="d27ee9db41cb355edea349ea7588c692" category="paragraph">《新容量》</block>
   <block id="8ec6fac1bb3dd6db9c73855881642036" category="paragraph">此參數可增加精簡磁碟區的虛擬容量。虛擬容量是指該磁碟區將報告給對應至該磁碟區之主機的值。小於或等於現有容量的值會導致錯誤。大小的定義單位為「位元組」、「KB」、「MB」、「GB」或「TB」。</block>
   <block id="4bd944c067cd0308263d9df1c820d71f" category="paragraph">最小虛擬容量為32 MB。</block>
-  <block id="b306bb1dc4b136b774d5f8dca7910774" category="paragraph">最大虛擬容量為63 TB。</block>
   <block id="e167788620b4089b203eb07b9e11ba76" category="paragraph">"repositoryMaxCapacity *</block>
   <block id="c25c025f154c8960a89c48b38d090c3d" category="paragraph">此參數可設定儲存庫Volume的最大容量。此值不得小於儲存庫磁碟區的實體容量。如果新值導致容量減至低於警告臨界值的層級、則命令會產生錯誤。</block>
   <block id="6e1e474416e0564ab880c5863366af19" category="paragraph">命令「repositoryMaxCapacity」可與「repositoryExpandationPolicy=automatic」搭配使用。</block>
@@ -6171,8 +6170,6 @@
   <block id="f1ab280b8906396f9d0a560168414811" category="paragraph">命令"addrepositoryCapacity（addrepositoryCapacity）"與"repositoryExpandationPolicy=manual（repositoryExpandationPolicy=manual）"一起使用</block>
   <block id="de44d9b0c50726b618b8207ce1ec73ab" category="paragraph">《主機報告政策》*</block>
   <block id="948966fb14713f2284165893e91b093c" category="paragraph">此參數會變更精簡磁碟區報告給主機的方式。有效值為「標準」或「精簡」。</block>
-  <block id="52157289efd480729928e4e0118c38e6" category="paragraph">63 TB</block>
-  <block id="c1edd650c09defc6ca8d0aaf67803ddc" category="paragraph">64 TB</block>
   <block id="8252060fadb0366cba7cd1c3d9b88cc7" category="summary">Download storageArray drive韌 體檔案命令會將韌體映像下載至儲存陣列中的所有磁碟機。</block>
   <block id="9e56a4a70a6df59a0704a6194d9f0e16" category="doc">下載儲存陣列磁碟機韌體</block>
   <block id="79d0244851982761ba330d1eb5c8b49d" category="paragraph">'download storageArray driveFirmwarefile'命令會將韌體映像下載到儲存陣列中的所有磁碟機。</block>
@@ -7546,4 +7543,5 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令適用於個別E2800、E5700、EF600或EF300陣列。它無法在 E2700 和 E5600 儲存陣列上運作。</block>
+  <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虛擬容量為 256 TB 。</block>
 </blocks>

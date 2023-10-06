@@ -93,7 +93,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
 
 最小虛擬容量為32 MB。
 
-最大虛擬容量為63 TB。
+最大虛擬容量為 256 TB 。
 
 
 
@@ -168,7 +168,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
  a| 
 最大虛擬容量
  a| 
-63 TB
+256 TB
 
 
 
@@ -182,7 +182,7 @@ volumes pass:quotes[[_volumeName1_ ... _volumeNameN_]] | volume <"wwID">)
  a| 
 最大實體容量
  a| 
-64 TB
+257TB
 
 |===
 精簡磁碟區支援標準磁碟區執行的所有作業、但有下列例外：
