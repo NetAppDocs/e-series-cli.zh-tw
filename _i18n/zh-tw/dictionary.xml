@@ -7544,4 +7544,5 @@
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令適用於個別E2800、E5700、EF600或EF300陣列。它無法在 E2700 和 E5600 儲存陣列上運作。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虛擬容量為 256 TB 。</block>
+  <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助、您可以在其中瞭解如何使用命令列介面（ CLI ）來設定、監控及調整儲存陣列。」</block>
 </blocks>
