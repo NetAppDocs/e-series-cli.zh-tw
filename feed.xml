@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>e-series-cli | NetApp Documentation</title>
+    <atom:link href="https://docs.netapp.com/zh-tw/e-series-cli/feed.xml" rel="self" type="application/rss+xml"/>
+    <link>https://docs.netapp.com/zh-tw/e-series-cli</link>
+    <description>The latest updates from NetApp Documentation</description>
+    <language>zh-tw</language>
+    <ttl>60</ttl>
+    <pubDate>Fri, 22 Mar 2024 06:49:18 +0000</pubDate>
+    <lastBuildDate>Fri, 22 Mar 2024 06:49:18 +0000</lastBuildDate>
+    
+    
+    
+    <item>
+      <title>新功能 (28 Jul 2023)</title>
+      <pubDate>Fri, 28 Jul 2023 19:46:17 +0000</pubDate>
+      <link>https://docs.netapp.com/zh-tw/e-series-cli/whats-new.html?time=1690573577</link>
+      <guid isPermaLink="false">Fri, 28 Jul 2023 19:46:17 +0000</guid>
+      <description><![CDATA[ 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更新資訊。 ]]></description>
+    </item>
+    
+    
+  </channel>
+</rss>
