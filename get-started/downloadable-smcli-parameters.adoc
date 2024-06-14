@@ -1,7 +1,7 @@
 ---
 permalink: get-started/downloadable-smcli-parameters.html 
 sidebar: sidebar 
-keywords: downloadable, smcli, command line, parameters 
+keywords: downloadable, smcli, command line, parameters, identify, devices, SAML, multifactor, authentication, https, certificate, array, 
 summary: 發行版的作業系統11.60包含直接透過「支援系統管理程式」下載及安裝http型CLI（也稱為「安全CLI」或「SMcli」）的功能。SANtricity SANtricity 
 ---
 = 可下載的SMcli命令列參數
@@ -19,7 +19,7 @@ summary: 發行版的作業系統11.60包含直接透過「支援系統管理程
 
 NOTE: 您必須在打算執行CLI命令的管理系統上提供Java執行時間環境（JRE）版本8及更新版本。
 
-如同先前版本的SMcli、可透過SANtricity 「支援系統管理程式」下載的SMcli有一組獨特的參數。如需有關使用指令行參數以利SANtricity 更新OS 11.53和舊版的資訊、請參閱 xref:./get-started/command-line-parameters.adoc[舊版命令列參數]
+如同先前版本的SMcli、可透過SANtricity 「支援系統管理程式」下載的SMcli有一組獨特的參數。如需有關使用指令行參數以利SANtricity 更新OS 11.53和舊版的資訊、請參閱 link:https://docs.netapp.com/us-en/e-series-cli/get-started/command-line-parameters.html["舊版命令列參數"]。
 
 
 
@@ -277,3 +277,65 @@ NOTE: 新增本機儲存的標籤時、SMcli不會聯絡儲存陣列。
 
 
 |===
+
+
+=== 識別裝置
+
+下列命令列參數可讓您顯示主機可見的所有適用裝置資訊。
+
+
+NOTE: 從 SANtricity 11.81 版本開始、 SMcli `identifyDevices` 參數取代先前透過 SMdevices 工具提供的功能。
+
+[cols="2*"]
+|===
+| 參數 | 定義 
+
+
+ a| 
+`identifyDevices`
+ a| 
+尋找與我們的儲存陣列相關的所有 SCSI 原生區塊裝置。針對找到的每個裝置、報告各種資訊、例如原生作業系統特定的裝置名稱、相關的儲存陣列、磁碟區名稱、 LUN 資訊等
+
+|===
+
+
+==== 範例
+
+如需範例、請參閱下列內容 `-identifyDevices` Linux 和 Windows 作業系統中的參數。
+
+.Linux
+[listing]
+----
+ICTAE11S05H01:~/osean/SMcli-01.81.00.10004/bin # ./SMcli -identifyDevices
+  <n/a> (/dev/sg2) [Storage Array ictae11s05a01, Volume 1, LUN 0, Volume ID <600a098000bbd04f00001c7365426b58>, Alternate Path (Controller-A): Non owning controller - Active/Non-optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+  /dev/sdb (/dev/sg3) [Storage Array ictae11s05a01, Volume Access, LUN 7, Volume ID <600a098000bbcdd3000002005a731d29>]
+  <n/a> (/dev/sg4) [Storage Array ictae11s05a01, Volume 1, LUN 0, Volume ID <600a098000bbd04f00001c7365426b58>, Preferred Path (Controller-B): Owning controller - Active/Optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+  /dev/sdc (/dev/sg5) [Storage Array ictae11s05a01, Volume Access, LUN 7, Volume ID <600a098000bbcdd3000002005a731d29>]
+SMcli completed successfully.
+----
+.Windows
+[listing]
+----
+PS C:\Users\Administrator\Downloads\SMcli-01.81.00.0017\bin> .\SMcli -identifyDevices
+  \\.\PHYSICALDRIVE1 [Storage Array ICTAG22S08A01, Volume Vol1, LUN 1, Volume ID <600a0980006cee060000592e6564fa6a>, Preferred Path (Controller-B): Owning controller - Active/Optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+  \\.\PHYSICALDRIVE2 [Storage Array ICTAG22S08A01, Volume Vol2, LUN 2, Volume ID <600a0980006ce727000001096564f9f5>, Preferred Path (Controller-A): Owning controller - Active/Optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+  \\.\PHYSICALDRIVE3 [Storage Array ICTAG22S08A01, Volume Vol3, LUN 3, Volume ID <600a0980006cee06000059326564fa76>, Preferred Path (Controller-B): Owning controller - Active/Optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+  \\.\PHYSICALDRIVE4 [Storage Array ICTAG22S08A01, Volume Vol4, LUN 4, Volume ID <600a0980006ce7270000010a6564fa01>, Preferred Path (Controller-A): Owning controller - Active/Optimized, Preferred Path Auto Changeable: Yes, Implicit Failback: Yes]
+SMcli completed successfully.
+----
+
+
+==== 其他附註
+
+* 相容於執行 x86-64 平台的 Linux 和 Windows 作業系統、僅限採用 SCSI 型主機介面。
++
+** 不支援 NVMe 型主機介面。
+
+
+* 。 `identifyDevices` 參數不會導致在作業系統層級重新掃描。它會反覆顯示作業系統所看到的現有裝置。
+* 您必須擁有足夠的使用者權限才能執行 `identifyDevices` 命令。
++
+** 這包括從作業系統原生區塊裝置讀取及執行 SCSI 查詢命令的能力。
+
+
+

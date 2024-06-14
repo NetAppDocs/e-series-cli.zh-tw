@@ -48,7 +48,7 @@ summary: set控制器NTPServers命令會設定控制器的NTP設定、以便控�
 [listing]
 ----
 
-set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()] [Address2 [keyIdentifier=integerLiteral() keyType=stringLiteral() passPhrase=stringLiteral()]]))
+set controller(a|b) NTPServers=(disabled|auto|(Address1 [Address2]))
 ----
 
 
@@ -99,20 +99,6 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLi
 如果指定網域名稱、則DNS伺服器也必須設定為允許控制器解析伺服器IP位址。
 
 ====
-
-
- a| 
-"KeyIdentifier"（金鑰識別碼）
-
-《通關密碼》
- a| 
-或者、這些參數會提供用於啟用NTP驗證的金鑰認證：
-
-* 「金鑰識別碼」是介於0到65535.之間的整數。
-* 「KeyType」是下列其中一項：「NONE」、「sha1」、「sh224」、「sh256」、「sh384」或「sh512」。
-* 「通關密碼」可為六進位數字（0-9、允許使用a-f）、長度恰好40位元的字串型、或長達20個位元組的英數字元字串。
-
-
 |===
 
 
@@ -122,9 +108,9 @@ set controller(a|b) NTPServers=(disabled|auto|(Address1 [keyIdentifier=integerLi
 ----
 set controller[a] NTPServers=disabled;
 set controller[a] NTPServers=auto;
-set controller[a] NTPServers=("0.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase="SomePassword1" "1.us.pool.ntp.org" keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
-set controller[b] NTPServers=(192.168.1.105 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1" "1.us.pool.ntp.org");
-set controller[b] NTPServers=(set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334 keyIdentifier=3 keyType="sha1" passPhrase=" SomePassword1");
+set controller[a] NTPServers=("0.pool.ntp.org" "1.us.pool.ntp.org");
+set controller[b] NTPServers=(192.168.1.105 "1.us.pool.ntp.org");
+set controller[b] NTPServers=(2001:0db8:85a3:0000:0000:8a2e:0370:7334);
 ----
 
 

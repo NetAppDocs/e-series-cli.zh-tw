@@ -270,7 +270,7 @@ link:../commands-a-z/recover-volume.html["恢復RAID Volume"]
 
 link:../commands-a-z/recover-sasport-miswire.html["恢復SAS連接埠連線錯誤"]
 
-link:../commands-a-z/recreate-storagearray-securitykey.adocV879933["重新建立外部安全金鑰"]
+link:../commands-a-z/recreate-storagearray-securitykey.html["重新建立外部安全金鑰"]
 
 link:../commands-a-z/recreate-storagearray-mirrorrepository.html["重新建立同步鏡射儲存庫磁碟區"]
 

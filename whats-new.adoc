@@ -25,6 +25,23 @@ summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更
 ====
 
 
+== SANtricity 11.81
+
+下表列出 11.81 版 CLI 和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[識別裝置]
+ a| 
+新增 `identifyDevices` 參數。
+
+|===
+
+
 == SANtricity 11.80
 
 下表列出 11.80 版 CLI 和指令碼命令的變更。
