@@ -5485,10 +5485,8 @@
   <block id="1097d50d308460fb1b50f829463b876f" category="summary">start IOClog命令會在主機與控制器之間產生IOC資料傳輸記錄的傾印。</block>
   <block id="919fa20b8039fd3ffcb53ad9127283b5" category="doc">啟動輸入輸出控制器（IOC）傾印</block>
   <block id="e2a4209d7a80b7a32f66acbe47207ad8" category="paragraph">「Start IOClog」命令會在主機與控制器之間產生IOC資料傳輸記錄的傾印。</block>
-  <block id="fe7eb245accdce547a982eb646ece918" category="paragraph">控制器被識別為「a」或「b」。每個控制器最多可有四個主機通道；每個通道都由1到4之間的數字唯一識別。</block>
   <block id="2f913fbc5a6df0de0781c7c00fae36a5" category="paragraph">「控制器通道識別碼」</block>
   <block id="e9d09ac70bb8b56b87f52d05d9da4a80" category="paragraph">此參數指定產生IOC傾印的控制器和主機通道。有效的控制器識別碼為「a」或「b」、其中「a」是插槽A中的控制器、而「b」是插槽B中的控制器主機通道具有數字識別碼。將控制器識別碼和主機通道識別碼括在方括弧（[]）內。</block>
-  <block id="d6fe14f8578eb7f33d338520ef786011" category="paragraph">有效的控制器識別碼和主機通道值為「A1」、「A2」、「A3」、「A4」、「B1」、 b2、b3、b4。</block>
   <block id="7946e37020b5107527be39f587dc55cc" category="paragraph">如果未指定控制器、儲存管理軟體會傳回語法錯誤。</block>
   <block id="6120a057c1cb2b10bd56b6d682b9840b" category="paragraph">"Overwrite（覆寫）"</block>
   <block id="8157bf4577dade54ef928afcd935e033" category="paragraph">此參數會導致新的IOC記錄傾印覆寫現有的傾印。若要覆寫現有的傾印、請將此參數設為「true」。預設值為「假」。</block>
@@ -7557,4 +7555,6 @@
   <block id="a92322756f07d387c173b27babcdad72" category="paragraph">下表列出 11.81 版 CLI 和指令碼命令的變更。</block>
   <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">新增<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 參數。</block>
+  <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器被識別為「a」或「b」。每個控制器最多可有四個主機通道；每個通道都由1到8之間的數字唯一識別。</block>
+  <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器識別碼和主機通道值為<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、、、<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block><block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block><block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block>、、<block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block><block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block><block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block>、、<block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
 </blocks>
