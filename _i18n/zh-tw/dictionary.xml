@@ -1397,7 +1397,6 @@
   <block id="76694dff9e3c1da79e1d9ff988db3e81" category="doc">建立非同步鏡射群組</block>
   <block id="c44dd0e3f8151fa698bb2b478c236671" category="paragraph">「create asyncdMirrorGroup」命令會在本機儲存陣列和遠端儲存陣列上建立一個新的空非同步鏡射群組。</block>
   <block id="7ea865a72caf912f877a2443ec100fcf" category="paragraph">此命令適用於任何個別儲存陣列、但有一些限制。如果您在E2700或E5600陣列上執行命令、則沒有任何限制。</block>
-  <block id="3e9fd63261e518fc6aa4b5e69f8f3834" category="paragraph">如果您在E2800或E5700陣列上執行命令、則用戶端類型必須設定為「symbol」。如果用戶端類型設定為「https」、則不會執行此命令。</block>
   <block id="23b9c3a34e5076326273d8f14df384a5" category="paragraph">若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。</block>
   <block id="44adbed47d8c3d285276ded0978c9005" category="paragraph">非同步鏡射群組是一個容器、可容納多個鏡射配對、以便將它們當成一個實體進行管理。您可以建立非同步鏡射群組、為群組中的所有鏡射配對定義同步處理設定。非同步鏡射群組中的每個鏡射配對都會共用相同的同步處理設定、主要和次要角色、以及寫入模式。</block>
   <block id="c9d558e8767f68776aa9bce24eadea9c" category="paragraph">非同步鏡射群組與用於鏡射的本機儲存陣列和遠端儲存陣列相關聯。本機儲存陣列是非同步鏡射群組的主要端點、而遠端儲存陣列則是非同步鏡射群組的次要端點。新增至本機儲存陣列之非同步鏡射群組的所有磁碟區、都會在鏡射關係中扮演主要角色。之後、新增至遠端儲存陣列非同步鏡射群組的所有磁碟區、都會在鏡射關係中擔任次要角色。</block>
@@ -7471,7 +7470,6 @@
   <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。</block>
   <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">若要在 E2800 、 E5700 、 EF600 或 EF300 儲存陣列上執行此命令、您必須具有「支援管理員」角色。</block>
   <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80 新增 EF600 和 EF300 陣列支援</block>
-  <block id="a477516db1bcb6e305b3dcf84ce294c2" category="paragraph">如果您在 E2800 、 E5700 、 EF600 或 EF300 陣列上執行命令、則用戶端類型必須設為<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果用戶端類型設為、則不會執行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
   <block id="b5686fd94e2c11d0beb5597a3520313c" category="summary">show check Volume 同位檢查工作命令會顯示指定的檢查 Volume 同位檢查工作和工作狀態。</block>
   <block id="dd6daf5faf9779e778db769f3be87c3e" category="paragraph">。<block ref="444d9d2a89ab0f7e0925c167387212b0" prefix=" " category="inline-code"></block> 命令會顯示指定的檢查磁碟區同位檢查工作和工作狀態。</block>
   <block id="26dd5ebc9516419ec6866f88343d77bc" category="paragraph"><block ref="7143244908eefa9a01f826fcd8ecb03d" prefix="" category="inline-code"></block></block>
@@ -7506,7 +7504,6 @@
   <block id="8787ce4b8a4c03ba45431f367412472f" category="summary">停止檢查 Volume 同位檢查工作命令會停止進行中的檢查 Volume 同位檢查工作。</block>
   <block id="28d62c9a6bee1cfdb574a22ef875004f" category="paragraph">。<block ref="e375a2dea1356a7fa1ccb75cb2608251" prefix=" " category="inline-code"></block> 命令會停止進行中的檢查磁碟區同位檢查工作。</block>
   <block id="5b4abcaacf5de9ef06f2361d8ed99ee8" category="paragraph">對應於要停止的檢查 Volume 同位檢查工作的工作 ID 。此值為必填。</block>
-  <block id="96a29fbb29b6b974b913d1533c75e23a" category="paragraph">如果您在 E2800 、 E5700 、 EF600 和 EF300 陣列上執行命令、則用戶端類型必須設為<block ref="97bff26855a8bfa63e05d5477e794b24" prefix=" " category="inline-code"></block>。如果用戶端類型設為、則不會執行此命令<block ref="5e056c500a1c4b6a7110b50d807bade5" prefix=" " category="inline-code"></block>。</block>
   <block id="fc3bb4c64d686e2af46c9c6ab9cbe52c" category="paragraph"><block ref="ab1f19425d80842e646857a8f89eeecb" prefix="" category="inline-code"></block></block>
   <block id="850782176356c5fe7366cf2f766cb110" category="paragraph">用於將傳輸連接埠設定為<block ref="7e6b20d014d1c659e4eaf20dc2dcd7eb" prefix=" " category="inline-code"></block> 而非預設值<block ref="13f3cf8c531952d72e5847c4183e6910" prefix=" " category="inline-code"></block>。</block>
   <block id="5a726fa69132fec2b565c201f259a2b6" category="sidebar">儲存檢查磁碟區同位檢查工作同位元檢查錯誤</block>
@@ -7557,4 +7554,5 @@
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">新增<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 參數。</block>
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器被識別為「a」或「b」。每個控制器最多可有四個主機通道；每個通道都由1到8之間的數字唯一識別。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器識別碼和主機通道值為<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、、、<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block><block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block><block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block>、、<block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block><block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block><block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block>、、<block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
+  <block id="d67b41e45a16f6e51b2d5c893efb6386" category="paragraph">E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。</block>
 </blocks>
