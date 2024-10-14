@@ -19,6 +19,11 @@ summary: activate storageArray feature命令會啟動非同步鏡射功能。
 
 此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。
 
+[NOTE]
+====
+此命令僅適用於光纖通道上的非同步鏡像。
+
+====
 
 
 == 角色
@@ -38,10 +43,6 @@ summary: activate storageArray feature命令會啟動非同步鏡射功能。
 [listing]
 ----
 activate storageArray feature=asyncRemoteMirror
-----
-[listing]
-----
-activate storageArray feature=asyncMirror
 ----
 
 
