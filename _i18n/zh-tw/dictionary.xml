@@ -7450,8 +7450,6 @@
   <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
   <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">2011年11月70日SANtricity</block>
   <block id="cc1ba14f8dc9bd7ba20e2aa654cde10b" category="inline-link">E系列/EF系列SANtricity 的注意事項</block>
-  <block id="050910c569f1cb9044086ceee795e2f8" category="sidebar">SANtricity 系統管理員 11.8</block>
-  <block id="1cf9153cf0b1bfe4b703e41b4509763e" category="sidebar">SANtricity Unified Manager 6.</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
   <block id="a1a9afcf552a769c282769271829889a" category="paragraph"><block ref="a1a9afcf552a769c282769271829889a" category="inline-link-macro-rx"></block></block>
   <block id="f99aa604031e5049799e73b5c3748a98" category="inline-link-macro"><block ref="f99aa604031e5049799e73b5c3748a98" category="inline-link-rx"></block></block>
@@ -7616,4 +7614,6 @@
   <block id="5d41ad4f145ade32f5e478932b6efea5" category="sidebar">設定 AutoSupport 派遣台大小限制</block>
   <block id="d941967741f1767955be20b5fca52617" category="sidebar">設定 AutoSupport https 傳輸方法</block>
   <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">設定電子郵件 SMTP 傳送方法</block>
+  <block id="27ed3c2f0cc271f3ffd55cef1621928d" category="sidebar">SANtricity 系統管理員 11.9</block>
+  <block id="ece14770330886bc2d41238acbfe48aa" category="sidebar">SANtricity Unified Manager 7.</block>
 </blocks>
