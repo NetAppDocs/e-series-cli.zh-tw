@@ -7,8 +7,11 @@ summary: 警示組態命令
 = 警示組態命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+以下警示組態命令清單可供 E 系列儲存系統使用。
 
 
 

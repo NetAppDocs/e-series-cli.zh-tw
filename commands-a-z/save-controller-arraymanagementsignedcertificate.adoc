@@ -1,39 +1,38 @@
 ---
 permalink: commands-a-z/save-controller-arraymanagementsignedcertificate.html 
 sidebar: sidebar 
-keywords: retrieve, installed, server, certificate 
-summary: Save Controller arrayManagementSignedCertificate命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。 
+keywords: retrieve, installed, server, certificate, sign, request, csr 
+summary: 儲存控制器 arrayManagementCSR 命令會擷取控制器的已安裝伺服器憑證簽署要求（ CSR ），以便您檢視憑證詳細資料。 
 ---
 = 擷取已安裝的伺服器憑證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
-「儲存控制器陣列管理SignedCertificate」命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。
+此命令會 `save controller arrayManagementCSR`擷取控制器的已安裝伺服器憑證簽署要求（ CSR ），以便您檢視憑證詳細資料。
 
 
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有安全管理角色。
 
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
-save controller [(a|b)] arrayManagementSignedCertificate
-     file=pass:quotes["_filename_"]
+save controller [(a|b)] arrayManagementCSR file=pass:quotes["_filename_"]
 ----
 
 
@@ -64,10 +63,10 @@ save controller [(a|b)] arrayManagementSignedCertificate
 [listing]
 ----
 
-SMcli -n Array1 -c "save controller [a] arrayManagementSignedCertificate
+SMcli -n Array1 -c "save controller [a] aarrayManagementCSR
    file="C:\controllerAcertificate.cer";"
 
-SMcli -n Array1 -c "save controller [b] arrayManagementSignedCertificate
+SMcli -n Array1 -c "save controller [b] arrayManagementCSR
    file="C:\controllerBcertificate.cer";"
 
 SMcli completed successfully.

@@ -7,7 +7,7 @@ summary: set ssdCache命令會新增更多固態磁碟（SSD）、以增加現�
 = 將磁碟機新增至SSD快取
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,18 +17,18 @@ summary: set ssdCache命令會新增更多固態磁碟（SSD）、以增加現�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 [NOTE]
 ====
-若要在 E2800 、 E5700 、 EF600 或 EF300 儲存陣列上執行此命令、您必須具有「支援管理員」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有「支援管理員」角色。
 
 ====
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[set ssdCache [_ssdCacheName_]]
 pass:quotes[addDrives=(_trayID1_,[_drawerID1_,]]pass:quotes[_slotID1 ... trayIDn_,]pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_)]

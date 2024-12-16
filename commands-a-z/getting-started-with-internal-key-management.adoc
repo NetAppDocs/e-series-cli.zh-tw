@@ -7,7 +7,7 @@ summary: 安全金鑰是一串字元、可在已啟用安全功能的磁碟機�
 = 內部金鑰管理入門
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -7,7 +7,7 @@ summary: set storageArray resourceProvisionedVolumes命令會停用DULBE功能�
 = 設定儲存陣列資源已配置的Volume
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: set storageArray resourceProvisionedVolumes命令會停用DULBE功能�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set storageArray resourceProvisionedVolumes=(enable|disable)
 ----

@@ -7,7 +7,7 @@ summary: set storageArray命令可定義儲存陣列的內容。
 = 設定儲存陣列
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set storageArray命令可定義儲存陣列的內容。
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 
 
@@ -38,7 +38,7 @@ summary: set storageArray命令可定義儲存陣列的內容。
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set storageArray
 ([autoLoadBalancingEnable=(TRUE | FALSE)]|
@@ -49,7 +49,6 @@ set storageArray
 [autoSupportRemoteDiag (enable |disable)]|
 [cacheBlockSize=cacheBlockSizeValue]|
 [cacheFlushStart=cacheFlushStartSize]|
-[cacheFlushStop=cacheFlushStopSize]|
 [cacheMirrorDataAssuranceCheckEnable=(TRUE | FALSE)]|
 [controllerHealthImageAllowOverWrite]|
 [defaultHostType=("hostTypeName" |"hostTypeIdentifier")] |
@@ -60,13 +59,13 @@ set storageArray
 [icmpPingResponse=(TRUE | FALSE)]|
 [isnsIPV4ConfigurationMethod isns IPv4 Config Method Parameters]|
 [isnsIPv6Address=ipAddress]|
-[isnsListeningPort=listeningPortIPAddress]]|
+[isnsListeningPort=listeningPortIPAddress]|
 [isnsRegistration=(TRUE | FALSE)]|
 [learnCycleDate learn cycle parameters]|
 [localUsername=local user name parameters]|
 [loginBanner file="path_to_login_banner"]|
 [managementInterface restOnly={true | false}]|
-[mediaScanRate=(disabled | 1-30)]|
+[mediaScanRate=(disabled | 1-210)]|
 [odxEnabled=(TRUE | FALSE)]|
 [password="password"]|
 [passwordLength=<INTEGER>]|
@@ -306,7 +305,7 @@ set storageArray
  a| 
 《新知》
  a| 
-執行媒體掃描的天數。有效值是關閉媒體掃描的「禁用」、或是「1」天到「30」天、其中「1」天是最快的掃描速度、而「30」天是最慢的掃描速度。除「停用」或「1」到「30」以外的值、不允許媒體掃描正常運作。
+執行媒體掃描的天數。有效值為 `disabled`，可關閉媒體掃描，或是 `1`日至 `210`日，其中 `1`日為最快的掃描速率，日為最慢的掃描速率 `210`。非或 `1`至的 `210`值 `disabled`不允許媒體掃描正常運作。
 
 
 

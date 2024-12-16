@@ -7,7 +7,7 @@ summary: set Session errorAction命令可定義您要如何執行目前的指令
 = 設定工作階段
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set Session errorAction命令可定義您要如何執行目前的指令
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須擁有「儲存管理員」、「支援管理員」、「安全管理員」或「儲存監控」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin ， Support Admin ， Security Admin 或 Storage Monitor 角色。
 
 
 
@@ -35,7 +35,7 @@ summary: set Session errorAction命令可定義您要如何執行目前的指令
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set session errorAction=(stop | continue)
 password="storageArrayPassword"

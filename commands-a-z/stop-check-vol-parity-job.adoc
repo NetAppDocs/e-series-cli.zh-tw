@@ -7,7 +7,7 @@ summary: 停止檢查 Volume 同位檢查工作命令會停止進行中的檢查
 = 停止檢查 Volume 同位檢查工作
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: 停止檢查 Volume 同位檢查工作命令會停止進行中的檢查
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 stop check volume parity job jobId=<job_id>;
 ----

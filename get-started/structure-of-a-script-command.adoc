@@ -2,13 +2,16 @@
 permalink: get-started/structure-of-a-script-command.html 
 sidebar: sidebar 
 keywords: structure, script command 
-summary: 所有指令碼命令都有下列結構。 
+summary: 為了確保成功執行，指令碼命令必須以適當的結構寫入。 
 ---
 = 指令碼命令的結構
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+為了確保成功執行，指令碼命令必須以適當的結構寫入。
 
 所有指令碼命令都有下列結構：
 

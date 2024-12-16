@@ -7,8 +7,11 @@ summary: 儲存監控人員命令
 = 儲存監控人員命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+E 系列儲存系統提供下列儲存監控人員命令清單。
 
 link:../commands-a-z/show-storagearray-usersession.html["顯示儲存陣列使用者工作階段"]
 

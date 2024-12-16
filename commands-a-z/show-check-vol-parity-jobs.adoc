@@ -7,7 +7,7 @@ summary: show check volume 同位檢查工作命令會顯示所有檢查 Volume 
 = 顯示檢查 Volume 同位檢查工作
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: show check volume 同位檢查工作命令會顯示所有檢查 Volume 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show check volume parity jobs;
 ----

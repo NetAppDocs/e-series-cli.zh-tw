@@ -7,7 +7,7 @@ summary: 驗證需要使用者以指派的登入認證來存取系統。每個�
 = 驗證入門
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

@@ -7,7 +7,7 @@ summary: SAVE storageArray loginBanner命令可讓您將登入橫幅儲存至本
 = 儲存儲存陣列登入橫幅
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SAVE storageArray loginBanner命令可讓您將登入橫幅儲存至本
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
@@ -29,7 +29,7 @@ summary: SAVE storageArray loginBanner命令可讓您將登入橫幅儲存至本
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 save storageArray loginBanner file="file_name"
 ----

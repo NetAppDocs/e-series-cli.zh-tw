@@ -132,7 +132,6 @@
   <block id="b804da49b73c928294f44e5ccc571706" category="paragraph">*斜體字詞*-命令中斜體字詞表示您需要提供的值或資訊。例如、當您遇到斜體字詞時：</block>
   <block id="64c594f5129a65d0c5b781cd23d74699" category="paragraph">將斜體字詞改為您要加入指令碼命令的磁碟機數目值。</block>
   <block id="6918f21cd845297dbffdbb53fe114dc6" category="paragraph">*分號*-指令碼命令必須以分號（「；」）結束。您可以在命令列或指令碼檔案中輸入多個指令碼命令。例如、會使用分號來分隔下列指令碼檔案中的每個指令碼命令。</block>
-  <block id="70c6fb2d6855a3bde6e8f77509cd46f3" category="summary">所有指令碼命令都有下列結構。</block>
   <block id="057a9f6979b14d39b3186b764f38dade" category="doc">指令碼命令的結構</block>
   <block id="fde555a5950c3b4a8e2eacccd0410a2f" category="paragraph">所有指令碼命令都有下列結構：</block>
   <block id="6b5a72a170b51acf167ff0bf43635ff4" category="list-text">「command」表示要執行的動作。</block>
@@ -180,7 +179,6 @@
   <block id="dfe36a8699543e28a594277f08890a95" category="list-text">參數名稱（例如「*電池安裝日期*」）</block>
   <block id="4d816980a97ddc27e81555ffdb06708b" category="list-text">作業名稱（例如「*多餘檢查*」）</block>
   <block id="1906f0c0c690d5cc786e031952f21ea5" category="paragraph">使用者定義的項目（例如使用者標籤）稱為變數。在語法中、它會以斜體顯示（例如「TrayID」或「volumeGroupName」）。</block>
-  <block id="75cb823cd5ca0a1bca40888776191bd5" category="summary">當您在Windows、Linux或Solaris作業系統上執行CLI命令和指令碼命令時、作為名稱或標籤一部分的雙引號需要特別考量。</block>
   <block id="bb0d07b5620d2e85d47a3dfc403a4ee0" category="doc">CLI命令的格式化規則</block>
   <block id="02fcb96a2220221658b695dc783c341f" category="paragraph">當您在Windows、Linux或Solaris作業系統上執行CLI命令和指令碼命令時、作為名稱或標籤一部分的雙引號（""）需要特別考量。</block>
   <block id="88f31185f3b63664c188b018aa2994d0" category="paragraph">當雙引號（""）是名稱或值的一部分時、您必須在每個雙引號字元之前插入反斜槓（\）。</block>
@@ -195,7 +193,6 @@
   <block id="0113d123180a32d636b7a88fda0ca384" category="paragraph">在命令提示字元中發出SMcli命令時、使用Windows OS時、輸入或輸出檔案的檔案路徑名稱中需要額外的反斜槓（`\）字元作為轉義字元。在安全的https模式下使用SMcli時、必須加上額外的反斜槓（`\）、方法是提供-u選項來指定角色型存取管理使用者。*範例：*</block>
   <block id="0f0c0580ded0edce199f20b947f561e0" category="summary">CLI命令的形式是命令包裝函式和內嵌在包裝函式中的元素。</block>
   <block id="5a8a6dcabe4b237ab44cc18e6346bcf8" category="doc">CLI命令的結構</block>
-  <block id="fb59cb2dc8e821d9c2c091c101fe6086" category="paragraph">CLI命令的形式是命令包裝函式和內嵌在包裝函式中的元素。CLI命令包含下列元素：</block>
   <block id="eb1d90c07ee11d08251a5d743cf30635" category="list-text">用術語「Mcli」識別的命令包裝函式</block>
   <block id="a2cb2c8630500fa717555ea7e8ecd83d" category="list-text">儲存陣列識別碼</block>
   <block id="af8130d7d4ac9d981245dfeab40e7be9" category="list-text">定義要執行之作業的終端機</block>
@@ -228,7 +225,6 @@
   <block id="87af3705302719c8461683fbfb64f57a" category="paragraph">在以下範例中、也使用唯讀作業、但在「* https *」用戶端模式中、使用者名稱和密碼都是必要的、並提供「-k」來接受自我簽署的憑證。「* https *」用戶端模式即使是唯讀作業也需要密碼。</block>
   <block id="d8095207a4a2e2a642c0fec2e59ed6d8" category="summary">指令碼引擎會尋找特定字元或命令來顯示註解。您可以透過三種方式將註解新增至指令碼檔案。</block>
   <block id="9c7ddf7ade8d60b11271928432e9ddc8" category="doc">新增註解至指令碼檔案</block>
-  <block id="6e9f19fc4668940ba8f4d08fa9d8693a" category="paragraph">指令碼引擎會尋找特定字元或命令來顯示註解。您可以透過三種方式將註解新增至指令碼檔案：</block>
   <block id="545944d3ed6b702648d0cff3bdddb3a9" category="list-text">在兩個正斜槓（`//'）後新增文字做為註解、直到達到行尾字元為止。如果指令碼引擎在處理註解之後、在指令碼中找不到行尾字元、就會出現錯誤訊息、而且指令碼作業會終止。此錯誤通常發生在指令碼結尾處放置註解、但您忘記按下* Enter鍵時。</block>
   <block id="60b3f8c24959c89262e2b343157442cb" category="list-text">在「/*」和「*/」之間新增文字做為註解。如果指令碼引擎找不到起始註解標記和結束註解標記、就會出現錯誤訊息、而且指令碼作業會終止。</block>
   <block id="e782805f580a9e1271f7ace0eef0b6d1" category="list-text">使用「show」陳述式、將註解內嵌到指令碼檔案中、以便在指令碼檔案執行時顯示。請使用雙引號（""）括住要顯示的文字。</block>
@@ -376,17 +372,14 @@
   <block id="328ce1e7b08cc5e66a5ab81f4b53d470" category="paragraph">如果您要設定「*安全性類型=已啟用*」、則必須為儲存陣列建立儲存陣列安全金鑰。（若要建立儲存陣列安全金鑰、請使用「create storageArray securityKey」命令。）</block>
   <block id="1a7fe2603f72d881bd3957f529d643c1" category="summary">如果您輸入「Mcli」和儲存陣列名稱、但未指定CLI參數、指令碼命令或指令碼檔案、則命令列介面會以互動模式執行。</block>
   <block id="c66f19bf3e23bb1d8f53417edec7a608" category="doc">互動模式</block>
-  <block id="b4c81425b278c15f09d39f40c52604f1" category="paragraph">如果您輸入「Mcli」和儲存陣列名稱、但未指定CLI參數、指令碼命令或指令碼檔案、則命令列介面會以互動模式執行。互動模式可讓您執行個別命令、而無需使用「Mcli」預先修正命令。</block>
   <block id="d52e106dfae71aa8fe55bd08be1ee7a1" category="paragraph">在互動模式中、您可以輸入單一命令、檢視結果、然後輸入下一個命令、而無需輸入完整的「Mcli」字串。互動模式有助於判斷組態錯誤、並快速測試組態變更。</block>
   <block id="d84642a0fa127291d74836c8f51b74d2" category="paragraph">若要結束互動模式工作階段、請輸入作業系統專屬的命令。對於Linux、此組合鍵為* Ctrl-D*。對於Windows、此按鍵組合為* Ctrl-Z + Enter *。</block>
   <block id="d5a07a929adbc3f8e1dccfa24e88da4b" category="summary">命令列介面（CLI）是一種軟體應用程式、可用來設定及監控儲存陣列。</block>
   <block id="e469e58c2e81413c1d3a4e14f355fb8f" category="doc">CLI總覽</block>
-  <block id="e83cc2dd74c6dba773792359624042d0" category="paragraph">命令列介面（CLI）是一種軟體應用程式、可用來設定及監控儲存陣列。使用CLI時、您可以從作業系統提示字元執行命令、例如DOS「C：」提示字元、Linux作業系統路徑或Solaris作業系統路徑。</block>
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">CLI可讓您直接存取指令碼引擎、此指令碼引擎是儲存管理軟體中的公用程式。指令碼引擎會執行命令來設定及管理儲存陣列。指令碼引擎可透過指令碼檔案或直接從命令列讀取命令、並執行命令指示的作業。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">指令碼命令可設定及管理儲存陣列。指令碼命令與CLI命令不同。您可以輸入個別指令碼命令、也可以執行指令碼命令檔案。當您輸入個別指令碼命令時、會在CLI命令中內嵌指令碼命令。當您執行指令碼命令檔案時、會在CLI命令中內嵌檔案名稱。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">您的E系列儲存系統可能無法使用本文件所述的部分軟體功能。如對可用功能有任何疑問、請聯絡您的客戶代表。</block>
   <block id="ab2307dc857f6a7ccdbed0391d1f8d0a" category="paragraph">CLI是SANtricity 功能齊全的功能。</block>
-  <block id="16d9a06da671d438622dc19d0b30efcf" category="summary">此清單提供在命令列上寫入指令碼命令的準則。</block>
   <block id="a756bcc5185086b47d7c3f4c343e3b89" category="doc">指令碼命令準則</block>
   <block id="80e9d60e2926365dfd876497329f1728" category="paragraph">此清單提供在命令列上寫入指令碼命令的準則：</block>
   <block id="1fdcd0e53c86070c975139e3c6ff054d" category="list-text">您必須以分號（`；）結束所有命令。</block>
@@ -396,7 +389,6 @@
   <block id="48d6a884d8f37b555371265c2dee9fd0" category="inline-link-macro">新增註解至指令碼檔案</block>
   <block id="4282b173d7baf6116764c5bdd1cc00cb" category="list-text">在指令碼中新增註解、讓您和未來的使用者更容易瞭解指令碼命令的用途。（如需如何新增註解的資訊、請參閱 <block ref="f149c8102c078f2eb4ed2b611dbaebea" category="inline-link-macro-rx"></block>）</block>
   <block id="e9e024d3832155ada0ed8abccf96672b" category="paragraph">雖然CLI命令和指令碼命令不區分大小寫、但使用者標籤（例如磁碟區、主機或主機連接埠）會區分大小寫。如果您嘗試對應至使用者標籤所識別的物件、則必須輸入與定義完全相同的使用者標籤、否則CLI命令和指令碼命令將會失敗。</block>
-  <block id="9ce1523eff5e72a292ed6464a99b08b9" category="summary">此表列出可能傳回的結束狀態、以及每個狀態的意義。</block>
   <block id="7cad7a53c4b37e36efac96e7af6321b2" category="doc">結束狀態</block>
   <block id="3bdf0e76fb5a7a78d72a6a0680c1093f" category="cell">狀態值</block>
   <block id="a07bb1950747b5b0cf4b6797cc9f9937" category="cell">錯誤名稱</block>
@@ -606,7 +598,6 @@
   <block id="4415f88f8516743ac7ab25e136f3173b" category="paragraph">找不到密碼檔案或無法讀取。</block>
   <block id="39ac26f7b921944e6ea0de06a02c4ad4" category="summary">從CLI遇到的錯誤中收集的資料會寫入檔案。</block>
   <block id="074df3c52a910f3969fbc1f14e1fbefc" category="doc">詳細的錯誤報告</block>
-  <block id="167a6c4027f992573b4d775e28eafdfd" category="paragraph">從CLI遇到的錯誤中收集的資料會寫入檔案。CLI下的詳細錯誤報告功能如下：</block>
   <block id="2c50e0694d15c2512d9a42a2536a4fff" category="list-text">如果CLI必須異常結束執行CLI命令和指令碼命令、則會在CLI完成之前收集並儲存錯誤資料。</block>
   <block id="958fbecc69c740fa980b7085a41a2cce" category="list-text">CLI會將資料寫入標準檔案名稱、以儲存錯誤資料。</block>
   <block id="5ef3285bd89f678aed3cc79938cf8247" category="list-text">CLI會自動將資料儲存至檔案。儲存錯誤資料不需要特殊命令列選項。</block>
@@ -682,9 +673,7 @@
   <block id="3341b6c89b9c18a8abcaeece1a347742" category="list-text">「1\」</block>
   <block id="9c388eb7536c83f18dfbd3217a56330b" category="list-text">「1Disk」</block>
   <block id="95142d41b600843560db694fa152c5c2" category="paragraph">如果您對名稱的有效性有任何疑問、請同時使用雙引號和方括弧。使用這兩種方法可確保名稱正常運作、而且不會造成任何處理問題。</block>
-  <block id="ba72f16b241252f7f1aca2bf704942d9" category="summary">指令碼命令和命令參數不會在控制器韌體的所有版本下執行。</block>
   <block id="7c4dc74c16d2654cc3a92740adf5ff8e" category="doc">韌體相容性層級</block>
-  <block id="b5ae4dc34424ad0e2619845eacbbcfc2" category="paragraph">指令碼命令和命令參數不會在控制器韌體的所有版本下執行。以下各節中的指令碼命令會列出指令碼命令可執行的最低韌體層級。在指令碼命令中、韌體層級會列在標題「韌體層級最低」下。 此清單說明如何解讀韌體層級的相關資訊。</block>
   <block id="1bcc576b82fed619415d4157046a7fad" category="list-text">如果指令碼命令未列出最低控制器韌體層級、則指令碼命令和與該指令碼命令相關的所有參數都可在任何層級的控制器韌體下執行。</block>
   <block id="90f468710db30c16b02a8b002e1af686" category="list-text">控制器韌體編號若無任何說明資訊、即表示控制器韌體層級適用於整個指令碼命令及該指令碼命令的所有參數。</block>
   <block id="f2a446829158644357aab7a7d67017cc" category="list-text">與參數相關聯的控制器韌體編號會指出可執行參數的控制器韌體層級下限。</block>
@@ -700,7 +689,6 @@
   <block id="d5c71011e72512445dc6f7650a967d6e" category="paragraph">這些符號表示指令碼命令和所有參數（「*安全性類型*」除外）都是在最低控制器韌體版本7.84下執行。「*安全性類型*」參數會在控制器韌體版本8.20_M3的最小值下執行。</block>
   <block id="832c4bddc90301ed87414e7217d12a80" category="summary">由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。</block>
   <block id="9ab03979fb14b675494053f695a63b30" category="doc">指令碼命令摘要</block>
-  <block id="31ad42a7159183494415ade9a05bd59b" category="paragraph">由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。不過、這些命令屬於一般類別、當您套用命令來設定或維護儲存陣列時、就會重複使用這些命令。下表列出指令碼命令的一般格式及每個命令的定義。</block>
   <block id="92e9d6227d5534e7afc27a11179c808e" category="cell">語法</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
   <block id="622d27cd104889791f5af80d64bd606f" category="paragraph">執行擱置的作業。</block>
@@ -819,7 +807,6 @@
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">顯示陣列標籤</block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。</block>
   <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShell中CLI命令的格式化規則</block>
-  <block id="decd8a350cdf754c968c86ee87e30c6c" category="paragraph">Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。Windows PowerShell在Windows命令提示字元上提供更強大的命令和指令碼功能集、使其更為完善。您可以在Windows PowerShell中執行所有的CLI和指令碼命令、不過Windows PowerShell有一些獨特的格式設定需求。這些要求如下：</block>
   <block id="50d9f3447707fa32e9c0df1880bba9e0" category="list-text">以句點和正斜槓（./）開始所有SMcli命令。</block>
   <block id="caa5d9328bfc806fa16f762ba7bdcb27" category="list-text">SMcli包裝函式必須識別為副檔名為.exe的執行檔命令（SMcli．exe）</block>
   <block id="a2957c139a7a919a4f46836dd373b576" category="list-text">將指令碼命令包含在單引號中（''）</block>
@@ -831,7 +818,6 @@
   <block id="2ae51e93697811b3c5fb306ba137bddf" category="doc">儲存儲存陣列登入橫幅</block>
   <block id="f58d6ae76b26b1f9514f08ed78dc70a2" category="paragraph">「儲存陣列loginbanner」命令可讓您將登入橫幅儲存到本機機器。橫幅文字可以包含建議事項通知和同意訊息、在使用者建立工作階段之前、會先向他們顯示。</block>
   <block id="6a21deb5d5cefe85b0876b69bb5e25f7" category="section-title">支援的陣列</block>
-  <block id="66942dd539d913f5aa0651dbb640b206" category="paragraph">此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。</block>
   <block id="a5cd3ed116608dac017f14c046ea56bf" category="section-title">角色</block>
   <block id="056c823c0ac1f7e29306ef5582a42a0b" category="paragraph">具有任何角色的使用者可以執行此命令。</block>
   <block id="3225a10b07f1580f10dee4abc3779e6c" category="section-title">參數</block>
@@ -842,7 +828,6 @@
   <block id="ad20cd1d88bf85548fc7f4aad8b2ff3f" category="summary">create ssdCache命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。</block>
   <block id="7a8ba517b2b0f774908c695321c7c150" category="doc">建立SSD快取</block>
   <block id="c56514971eec0f014ec1b676aab5b36f" category="paragraph">「create ssdCache」命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。</block>
-  <block id="c967c152924962a32a94352f0b12487e" category="paragraph">此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、</block>
   <block id="ad4e206408c1c59bfb8a057ba7857446" category="section-title">背景</block>
   <block id="5af36353908bc330d9b5fb13a131f0f6" category="paragraph">使用高效能SSD快取讀取資料、可改善應用程式I/O效能和回應時間、並在不同的工作負載之間持續提升效能、尤其是高IOP工作負載。SSD快取可充分運用昂貴的快速SSD。SSD快取除了控制器DRAM中的主要快取外、也能運作。使用控制器快取時、資料會在主機讀取後儲存在DRAM中。有了SSD快取、資料會從使用者指定的基礎磁碟區複製、然後快取到SSD。</block>
   <block id="3a5d58c890db51012b65be2246beb6e4" category="paragraph">「userLabel」</block>
@@ -866,7 +851,6 @@
   <block id="bfa9dd21b33e030016582bb542fcbe38" category="summary">清除syslog組態命令會清除syslog警示資訊。</block>
   <block id="9244f91c6b3e2a9d6ac651198714807b" category="doc">清除系統記錄組態</block>
   <block id="9586f74eb24a2488626237b7a6418250" category="paragraph">「清除syslog組態」命令會清除syslog警示資訊。</block>
-  <block id="53c3be6b58503440f9123aa4fc5ea614" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。</block>
   <block id="983e45d9f14c8e4b92b207877e7cabb0" category="paragraph">無。</block>
   <block id="ff7c0fcd6a31e735a61c001f75426961" category="section-title">範例</block>
   <block id="1a2e5a82588de3119624b0d7cbca73cc" category="paragraph">8.40</block>
@@ -972,7 +956,6 @@
   <block id="fffd69d2853f1f107b133558c768aaf0" category="summary">ClearasyncdMirrorFault命令可從一或多個非同步鏡射群組、以及一個或多個非同步鏡射群組成員磁碟區、清除非同步鏡射「ticky」故障。</block>
   <block id="4e6da33ae880f7e07fcfd4639f861180" category="doc">清除非同步鏡射故障</block>
   <block id="ad4a20ee721e029ee751bbb42cf04b43" category="paragraph">「ClearasyncdMirrorFault」命令可從一或多個非同步鏡像群組和一或多個非同步鏡射群組成員磁碟區、清除非同步鏡射「sticky」故障。</block>
-  <block id="273a21cd07c16b799cb77535e713e261" category="paragraph">若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。</block>
   <block id="f9432e6a00dc11ee6a94106ef6c14c77" category="paragraph">非同步鏡射群組及其成員磁碟區可能會遇到非同步鏡射「黏著」故障、這種故障發生在單一時間點、但不會影響鏡射的功能。必須審查這些類型的故障、但可能不需要變更組態。</block>
   <block id="c9ccbbf2b9465b9a7caeee860cd1b259" category="paragraph">非同步鏡射群組及其成員磁碟區可能有或可能有多個相關的Sticky Fault。此命令會清除與非同步鏡射群組及其成員磁碟區相關的所有故障。但是、如果非同步鏡射群組發生故障、且其中一個成員磁碟區發生故障、則清除非同步鏡射群組上的故障並不會清除其成員磁碟區上的故障。</block>
   <block id="8a608645da754a8fe766ffb5924b5e1b" category="paragraph">全部</block>
@@ -991,7 +974,6 @@
   <block id="642b2e611a6c15b2f5fb455d24b6edb1" category="summary">set storageArray directoryServer命令會更新目錄伺服器組態。</block>
   <block id="5c6c0aa02ba6ba06faa440d5a3048f04" category="doc">設定儲存陣列目錄伺服器</block>
   <block id="75a066b4c3aa3ea609eb16d1f5601cb1" category="paragraph">「show storageArray directoryServer」命令會更新目錄伺服器組態。</block>
-  <block id="25fa160cee7d75f60d44ec70c633094c" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。</block>
   <block id="4e388bc029eb72bc6e88f63d5a071ba2" category="paragraph">"DirecdirectoryServer"</block>
   <block id="ca4742f71cd010920d1b2a53b053b948" category="paragraph">可讓您指定網域ID來更新設定。</block>
   <block id="f345ed2c5afee70e8fdb4ed024a0e826" category="paragraph">《DomainNames》</block>
@@ -1019,7 +1001,6 @@
   <block id="18d25ac4e1abbe5bc0643c27231178cf" category="summary">匯出storageArray SECURITY Key命令會將磁碟機安全金鑰儲存至檔案。</block>
   <block id="95fc98a15ab6c4bb300a1a053dffedac" category="doc">匯出儲存陣列安全金鑰</block>
   <block id="118d5bbc4ed27615895f09f58be206b9" category="paragraph">「匯出storageArray SECURITY Key」命令會將磁碟機安全金鑰儲存至檔案。</block>
-  <block id="6ebc391412b3ac382d9abb2aaa4fb8a8" category="paragraph">如果啟用外部金鑰管理、則此命令僅適用於E2800、E5700、EF600及EF300陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
   <block id="59abeb230f23914068920f58b01cf787" category="paragraph">當金鑰檔從一個儲存陣列匯出時、該金鑰可匯入另一個儲存陣列。這可讓您在儲存陣列之間移動具有安全功能的磁碟機。</block>
   <block id="e0d2814cb7c67330fdfb68cd711796c2" category="paragraph">此命令同時適用於內部和外部金鑰管理。</block>
   <block id="676e9ec8d343c95a4afb8ac0c83a5112" category="paragraph">《通關密碼》</block>
@@ -1242,12 +1223,10 @@
   <block id="0a971bdaf647eec5727bb73b4fdaf62a" category="summary">set storageArray cacheMirrorDataAssuranceChecksEnable命令可讓您啟用或停用快取鏡射資料保證檢查。</block>
   <block id="4f856a887e5732ed9116694218089f06" category="doc">設定儲存陣列以啟用或停用快取鏡射資料保證檢查</block>
   <block id="a2f3cff920191a1785038eb770af11ac" category="paragraph">使用「set storageArray cacheMirrorDataAssuranceChecksEnable」命令、您可以啟用或停用快取鏡射資料保證檢查。</block>
-  <block id="0bdfae42fe218bd7d08ff2660ab19323" category="paragraph">此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。</block>
   <block id="ecd8f68d5c8a073ab5f744175bcfc48d" category="paragraph">8.41新命令參數。</block>
   <block id="330d0697424450147c0224569020bf9b" category="summary">set target命令會變更iSCSI/iSER目標的內容、包括驗證方法和別名。</block>
   <block id="c73e9b4ae3ed8b8ba0a635de95d8208d" category="doc">設定目標內容</block>
   <block id="1c1edc6454d7105c004699665c83b2d7" category="paragraph">「設置目標」命令可變更iSCSI/iSER目標的內容、包括驗證方法和別名。</block>
-  <block id="54e516e39febe2ebcc5f3bffd2df256f" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。</block>
   <block id="b2ccf370a09daf06ddd9630f27982611" category="inline-xref-macro">設定iSER目標</block>
   <block id="319e65d371a6fe6e523ea6a09e56af7f" category="inline-xref-macro">設定iSCSI目標內容</block>
   <block id="cb6e80c3adb58fd64bff9ec885ec2873" category="paragraph">此命令會取代過時的 <block ref="c3a474d57787ed83563f94d3d201793a" category="inline-xref-macro-rx"></block> 和 <block ref="588dcf26deb00109d89fe86c8089b2a3" category="inline-xref-macro-rx"></block> 命令。</block>
@@ -1609,7 +1588,6 @@
   <block id="8fb2868eed8d88530d8f58844179ebc4" category="paragraph">可讓您刪除收件者地址。將電子郵件地址括在方括弧（[]）內。</block>
   <block id="b6d01d3fed2ae70f1ab68fa1c953ca86" category="summary">set emailAlert命令可設定電子郵件、將電子郵件傳送至指定的技術支援或組織。電子郵件警示包含事件摘要、受影響儲存設備的詳細資訊、以及客戶聯絡資訊。</block>
   <block id="77e64cab1c5aeff0d6ff879bc39b2a78" category="paragraph">「電子郵件警示」命令可設定電子郵件傳送電子郵件給指定的技術支援或組織。電子郵件警示包含事件摘要、受影響儲存設備的詳細資訊、以及客戶聯絡資訊。</block>
-  <block id="5e2276c06dc9839b2244a1615f313cee" category="paragraph">此命令適用於E2800、E5700、EF600及EF300儲存陣列。不過、您可以將命令當成SMcli命令、而非指令碼命令、用於E2700或E5600陣列。在此情況下、命令會套用至管理網域中的所有陣列。</block>
   <block id="37dadb3bd1509e2e5c8dc4210b5f4175" category="paragraph">可讓您設定電子郵件伺服器位址。電子郵件伺服器位址可以是完整網域名稱、IPv4位址或IPv6位址。</block>
   <block id="26f7eecdf5941d85272c9177d1862ce6" category="paragraph">「erverEncryption」</block>
   <block id="28d9c2bb47c0e47c85d8126cc9e27639" category="paragraph">用於與伺服器通訊的加密。此值可能為下列其中一項：</block>
@@ -1881,7 +1859,6 @@
   <block id="ecaf030c24638713fe94abe0ca535a48" category="summary">set Session errorAction命令可定義您要如何執行目前的指令碼引擎工作階段。</block>
   <block id="3b0dc5fce18b99ece74fdfb5a5a313f6" category="doc">設定工作階段</block>
   <block id="1723c0a7383bfc685e3779b3853765ec" category="paragraph">「set工作階段errorAction」命令會定義您要如何執行目前的指令碼引擎工作階段。</block>
-  <block id="456383683c5088f07d792544fc457ea8" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須擁有「儲存管理員」、「支援管理員」、「安全管理員」或「儲存監控」角色。</block>
   <block id="0e1fdce28381353c30c42bbb5dd6b1ab" category="paragraph">就本命令而言、工作階段是命令執行的持續時間。此命令不會永久設定儲存陣列的參數。</block>
   <block id="7ad0e6dd25358f967fc7ce521669868a" category="paragraph">《錯誤行動》</block>
   <block id="5b8b77d01a8aba074b63718bc49e6ac2" category="paragraph">處理期間發生錯誤時、工作階段的回應方式。您可以選擇在發生錯誤時停止工作階段、或是在發生錯誤後繼續工作階段。預設值為「shtop」。（此參數定義執行錯誤的動作、而非語法錯誤。某些錯誤情況可能會覆寫「Continue（繼續）」值。）</block>
@@ -1902,7 +1879,6 @@
   <block id="07f48b115daa521420831c0136a7e56d" category="paragraph">「set storageArray AutoSupport feliveryMethods」命令可設定傳送方式、將AutoSupport 資訊傳送至電子郵件（SMTP）。</block>
   <block id="470b59d3367ed05a01d0c74b04a67967" category="paragraph">《DeliveryMethod》</block>
   <block id="33f9ca954ea5513b2c784e2fcab0a1bc" category="paragraph">可讓使用者指定AutoSupport 進行不收集資訊的交付方法。有效選項包括：</block>
-  <block id="293c9ea246ff9985dc6f62a650f78986" category="list-text">HTTP</block>
   <block id="0e8433f9a404f1f3ba601c14b026d321" category="list-text">HTTPS</block>
   <block id="8a46dd7e06af963d90ed64259683cef0" category="paragraph">如果已設定電子郵件方法、AutoSupport 則會停用「僅此即用功能」和「遠端診斷」。</block>
   <block id="75db12693721b1850aa4adb8cc6939a9" category="paragraph">《每日伺服器》</block>
@@ -2029,7 +2005,6 @@
   <block id="553ebae9cd1dfc9315e4c6dc90bfa01a" category="summary">Set asyncdMirrorGroup命令會變更同步處理設定和警告臨界值、而非同步鏡射群組主要端的控制器擁有者會在執行初始同步或重新同步時使用這些設定和臨界值。</block>
   <block id="fc9b044768c82d7fb685f79ee8b827a2" category="doc">設定非同步鏡射群組</block>
   <block id="fd705ac66897df77a0026265c8b5f8ad" category="paragraph">「set asyncdMirrorGroup」命令會變更同步處理設定和警告臨界值、而非同步鏡射群組主要端的控制器擁有者會在執行初始同步或重新同步時使用這些設定和臨界值。</block>
-  <block id="e68c89351e1337529a69bcee3f8df562" category="paragraph">若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員或支援管理員角色。</block>
   <block id="d8d0c2507b31034e9a365f04cd0ab47a" category="paragraph">變更同步設定會影響非同步鏡射群組中所有鏡射配對的同步作業。</block>
   <block id="4c44d5e494b32bb29e49e4b2f180be32" category="paragraph">您要修改的非同步鏡射群組名稱。將非同步鏡射群組名稱括在方括弧（[]）內。如果非同步鏡射群組名稱包含特殊字元或數字、則必須在方括弧內以雙引號（""）括住名稱。</block>
   <block id="20d9e8f9f907ee1e7ee9c50bb0c26970" category="paragraph">您想要增加容量的非同步鏡射群組儲存庫磁碟區名稱。</block>
@@ -2476,7 +2451,6 @@
   <block id="1e3183fa9c4768ba6ea8c56138b2b0d7" category="summary">show allSnmpCommunities命令會傳回針對儲存陣列定義的簡單網路管理傳輸協定（SNMP）社群相關資訊。SNMP社群是裝置的集合、例如路由器、交換器、印表機、儲存設備、 集中管理及監控裝置。</block>
   <block id="0975f98624d38f4913a00dc3f8ddf5ec" category="doc">顯示SNMP社群</block>
   <block id="0f685797b01aaf0dfa71b1350a8336ef" category="paragraph">「show allSnmpcommunity」命令會傳回針對儲存陣列定義的簡單網路管理傳輸協定（SNMP）社群資訊。SNMP社群是裝置的集合、例如路由器、交換器、印表機、儲存設備、 集中管理及監控裝置。</block>
-  <block id="a39c61ebdd787f81d2ef2651ba656be6" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」或「儲存監控」角色。</block>
   <block id="e5dc820cd982e6a7faeea301825ed9dc" category="paragraph">傳回的資訊包括：</block>
   <block id="23f36d51bf3aedc99882833b5dc5bdd0" category="list-text">社群總數</block>
   <block id="f8786e8fa8475e7edd68eca42e9f1a36" category="list-text">設陷目的地總數</block>
@@ -2527,9 +2501,7 @@
   <block id="0f962521b49d47dcf9c4b9d6c884617e" category="paragraph">230.000 GB</block>
   <block id="ccbfcbba27ab12bc619c38927a800ab4" category="paragraph">700.000 GB</block>
   <block id="25dd1706a75f78cc0900750063b589db" category="paragraph">46%</block>
-  <block id="54f8d92440fdb8680638422c5aeb5222" category="summary">Save Controller arrayManagementSignedCertificate命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。</block>
   <block id="6350cf44b8bafeee9673a59ff31baec3" category="doc">擷取已安裝的伺服器憑證</block>
-  <block id="2c236ba971a663a09a2b6391a3ad104d" category="paragraph">「儲存控制器陣列管理SignedCertificate」命令會擷取控制器的已安裝伺服器憑證、以便您檢視憑證詳細資料。</block>
   <block id="ca16722c9a4e4f39f5a7cff99cf1e3a9" category="paragraph">可讓您指定要從中下載簽署憑證的控制器。有效的控制器識別碼為a或b、其中a是插槽A中的控制器、b是插槽B中的控制器將控制器識別碼括在方括弧（[]）內。</block>
   <block id="bb89b1a0dde078e7c8f13c62720f07c3" category="paragraph">可讓您指定儲存控制器簽署憑證檔案的檔案。</block>
   <block id="baf7f4c21406a048b4615ec7054b53a8" category="summary">set snapVolume mediaScannEnabled命令會在快照磁碟區所使用的磁碟機上執行媒體掃描。</block>
@@ -2988,7 +2960,6 @@
   <block id="42213289fc7ae803ab9239664c70b88f" category="paragraph">使用「Mcli -autosupSupportConfig show」命令查看您是否已啟用此功能。顯示輸出的初始行顯示啟用狀態：</block>
   <block id="5d7129f3e09d67ecf581cfd912b0c837" category="summary">「顯示憑證」命令可讓您檢視安裝在CLI套件信任存放區上的憑證。</block>
   <block id="5d58364fb87c53af866b649e5b47a41d" category="paragraph">「How certificates」命令可讓您檢視安裝在CLI套件信任存放區上的憑證。</block>
-  <block id="8a42f0c79144717ab490ae2d4198bc3a" category="paragraph">此命令適用於EF600儲存陣列。</block>
   <block id="786a0f81dadc771f8db9930de349475e" category="paragraph">可讓您透過使用者定義的別名來指定憑證。</block>
   <block id="b9e83fd1503a2dd7bab92efbfd5f7768" category="summary">set storageArray autosupSupportRemoteDiag命令會開啟或關閉AutoSupport 《支援不需更新的遠端診斷》功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。</block>
   <block id="dc3a6dee0b5355fcb3d1e9765eb81ec2" category="doc">啟用或停用AutoSupport 「停止遠端診斷」功能</block>
@@ -3079,7 +3050,6 @@
   <block id="ee262571ba548fbe81c1aa97ef4f2f86" category="paragraph">《馬納加達介面》</block>
   <block id="ac8f3839a5773a065b3414ce6bebb08d" category="paragraph">變更控制器的管理介面。變更管理介面類型、以在儲存陣列與其管理軟體之間強制執行機密性、或存取外部工具。</block>
   <block id="e357d892ac66c8d6d5e523ad580e9e81" category="paragraph">《新知》</block>
-  <block id="50162660a4c7641854ffdc02f97a5c51" category="paragraph">執行媒體掃描的天數。有效值是關閉媒體掃描的「禁用」、或是「1」天到「30」天、其中「1」天是最快的掃描速度、而「30」天是最慢的掃描速度。除「停用」或「1」到「30」以外的值、不允許媒體掃描正常運作。</block>
   <block id="637b982f91aba1b702abb9f163d52922" category="paragraph">「odxEnabled」</block>
   <block id="befcb849719f94c30e38a64c21226d79" category="paragraph">開啟或關閉儲存陣列的卸載資料傳輸（ODX）。</block>
   <block id="eabf26cd0c33eca2b95cab5d030534b4" category="paragraph">在8.40版本中、此參數已過時。改用「localUsername」或符號「symbol」參數、以及「password」或「adminpassword」參數。</block>
@@ -3241,7 +3211,6 @@
   <block id="ff5885e71dace62d588bad77aea93830" category="summary">重設storageArray iserStatsBaseline.命令會將儲存陣列的iSER基準重設為0。</block>
   <block id="7c4e811eda812cbcfa0928f4903c2de5" category="doc">重設儲存陣列iSER基準</block>
   <block id="1848890ead65ea5acda8fff79a63d9f5" category="paragraph">"REset storageArray iserStatsBaseline"命令會將儲存陣列的iSER基準重設為0。</block>
-  <block id="0206e2ff1e70dfcbdbfefb1d515301c8" category="paragraph">此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、只要安裝所有SMcli套件即可。</block>
   <block id="9998c84ac6caade1ad4c4e5ac82282bf" category="inline-xref-macro">重設儲存陣列主機連接埠統計資料基準</block>
   <block id="2f26c8583d350771962b95babaa285ae" category="paragraph">此命令已過時、並由取代 <block ref="fea32d7d32837f58caf1422010242705" category="inline-xref-macro-rx"></block> 命令。</block>
   <block id="2042653060057154e4a699f8ffd4e34a" category="paragraph">此命令並不會實際重設硬體和韌體中所維護的原始計數。相反地、韌體會建立目前計數器值的快照、並使用這些值來報告擷取統計資料時計數的差異。新的基準時間會套用至兩個控制器、以便控制器計數彼此同步。如果一個控制器在未重設其他控制器的情況下重設、則計數器將不再同步。用戶端發現控制器並未同步、因為兩個控制器所報告的時間戳記資料與統計資料不同。</block>
@@ -3385,7 +3354,6 @@
   <block id="3a67810abc8da793d40e0d9c714d2958" category="summary">show storageArray AutoSupport flexection命令會顯示AutoSupport 儲存陣列的「flexbund產品 組合」集合設定。</block>
   <block id="b9a29215603a15544fa6c897c678da0a" category="doc">顯示AutoSupport 錶面組態</block>
   <block id="019fa4ba5e1d588b0e5c8dd094fde7d5" category="paragraph">「show storageArray AutoSupport fit2」命令會顯示AutoSupport 儲存陣列的「還原套裝組合」集合設定。</block>
-  <block id="7aa6059582dab6043ba0684c6b46d222" category="paragraph">此命令適用於E2800、E5700、EF600及EF300儲存陣列。</block>
   <block id="d999a9c760b0f5e1d68715c95898430c" category="list-text">傳送方法為電子郵件（SMTP）：顯示目的地電子郵件地址、郵件轉送伺服器和寄件者電子郵件地址</block>
   <block id="12e80b12563c6f7b86f4a49dc6ab595f" category="list-text">每日和每週偏好的時間範圍AutoSupport</block>
   <block id="6cb7573099ab06421673f2c94e6cb330" category="list-text">有關ASUP功能、機箱序號、以及已設定的每日和每週排程的資訊</block>
@@ -3946,7 +3914,6 @@
   <block id="5097bc8fbff28c2f4afa7476a604bdc3" category="summary">show SyncMirror flex候 選命令會傳回遠端儲存陣列上候選磁碟區的相關資訊、以便在同步鏡射組態中作為次要磁碟區使用。</block>
   <block id="a8e17accd53dd340f01e40847de30d62" category="doc">顯示同步鏡射磁碟區候選項目</block>
   <block id="930e04129225117b7c5a0eb5ad942c41" category="paragraph">「show SyncMirror fit候選人」命令會傳回遠端儲存陣列上候選磁碟區的相關資訊、以便在同步鏡射組態中作為次要磁碟區使用。</block>
-  <block id="6b2f4787f46eed5521ed0bacaae0e49a" category="paragraph">若要在E2800或E5700儲存陣列上執行此命令、您必須擁有Storage Admin或Storage Monitor角色。</block>
   <block id="48ab786b5b5040ccb0e2c0cd87a481bf" category="paragraph">遠端鏡射配對中主要Volume所需的本機Volume名稱。請以雙引號（""）括住主磁碟區名稱。</block>
   <block id="fc706cee637f27d302720d92793d7179" category="paragraph">遠端儲存陣列、其中包含次要Volume的可能磁碟區。如果遠端儲存陣列名稱含有特殊字元、您也必須以雙引號（""）括住遠端儲存陣列名稱。</block>
   <block id="85fa9a30d7ee3fdcf94bd2162f2ae6a6" category="summary">show volumeCopy來源的targetCandidate命令會傳回候選磁碟區的相關資訊、您可以將這些候選磁碟區做為磁碟區複製作業的目標。此命令適用於Snapshot Volume複製配對。</block>
@@ -4111,7 +4078,6 @@
   <block id="844e115c06b70319729828aa4c6d56fe" category="paragraph">例如、如果您想要停止快照映像12345在名稱為snapGroup1的快照群組中的復原作業、請使用下列命令：</block>
   <block id="7f913228bd889f3f12728be531fa8341" category="paragraph">若要停止快照群組中名稱為snapGroup1的最新快照映像的復原作業、請使用下列命令：</block>
   <block id="8b46193971f20ebdc16ce2d4064d1dae" category="summary">set storageArray autosupSupportMaintenanceWindows命令會開啟或關閉AutoSupport 「還原維護所需時間」功能。</block>
-  <block id="acd961e5451a3ccd475d54650c2ae25b" category="doc">啟用或停用AutoSupport 「還原維護」視窗（適用於個別E2800或E5700陣列）</block>
   <block id="a0a0faefb77fa57036e29458886ee6a6" category="paragraph">「set storageArray autosupSupportMaintenanceWindow」命令會開啟或關閉AutoSupport 「還原維護時間」功能。</block>
   <block id="24b8427b4e70b8b26378cbd782dfe262" category="paragraph">使用維護視窗來禁止在錯誤事件上自動建立問題單。在正常操作模式下、如果AutoSupport 發生問題、儲存陣列會使用支援中心來開啟案例。當將物件放入維護視窗時AutoSupport 、此功能會被抑制。</block>
   <block id="c7ae4920d8fe2ccd0f8d3c390a30c3df" category="paragraph">《電子郵件地址》</block>
@@ -4354,7 +4320,6 @@
   <block id="f52aecf0776faaef4e3e7b1792bf10db" category="list-text">狀態</block>
   <block id="74739b819e7e946ab0e4d50e101a32d6" category="list-text">資料傳輸率</block>
   <block id="2b744d319838b4a36538148e1431f379" category="list-text">韌體層級</block>
-  <block id="16e69abc3aaf761d2ea7bc0f880ca35b" category="list-text">SSD磁碟機的耗損壽命資訊（此資訊僅適用於E2800和E57B/EF570、如果陣列不含SSD磁碟機、則不會顯示）：</block>
   <block id="66b8d84c12d6e8ce50edb846cfee502c" category="list-text">平均清除數。</block>
   <block id="45a0f5d5d07e686083afb281fe1f91ee" category="list-text">剩餘的備用區塊。</block>
   <block id="89b430980ba2de7fe91a9ea8f7bf879a" category="list-text">使用的耐受度百分比（11.41版本中的新功能）。「使用的持久度百分比」是指迄今寫入SSD磁碟機的資料量、除以磁碟機的理論寫入總限制。</block>
@@ -4482,7 +4447,6 @@
   <block id="546ec301b169abe769308bdcfaa856bf" category="paragraph">可讓您指定本機位置以儲存控制器的根/中繼憑證。</block>
   <block id="d7a3a52083e5c68118974beeeec2de99" category="summary">Import storageArray securityKey file命令可解除鎖定已從一個儲存陣列移至另一個儲存陣列的一或多個完整磁碟加密（FDE）磁碟機。</block>
   <block id="065910adcc06b080e3793d7744d86d88" category="paragraph">「Import storageArray securityKey file」（匯入storageArray安全金鑰檔案）命令可解除鎖定您從一個儲存陣列移至另一個儲存陣列的一或多個完整磁碟加密（FDE）磁碟機。</block>
-  <block id="0f5e1305e8b34920cb18e64db1ad1240" category="paragraph">如果啟用外部金鑰管理、則此命令僅適用於E2800、E5700、EF600或EF300陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
   <block id="2c6e388c7397d396aa8a67e31de9f708" category="paragraph">只有具有相符安全金鑰的磁碟機才會解除鎖定。解除鎖定之後、就會套用新儲存陣列的安全金鑰。</block>
   <block id="fc0d1749f2422b74bdb55bf17391f0b1" category="paragraph">具有匯入FDE磁碟機原始安全金鑰的檔案路徑和檔案名稱。例如：</block>
   <block id="f8341fc661bfb8ca199262da01e8dc70" category="paragraph">提供安全金鑰驗證的字元字串。</block>
@@ -4496,7 +4460,6 @@
   <block id="2920c0d169038ec0d967eb9940f11f4e" category="paragraph">「Set磁碟機作業狀態」命令會將磁碟機設定為「故障」狀態。</block>
   <block id="ca34edbbfb4d63e2f49a5f8fea4e42e8" category="paragraph">若要將磁碟機恢復至最佳狀態、請使用「移轉磁碟機」命令。</block>
   <block id="a19424436ff5a8c20a18ffbd066deca7" category="summary">重設storageArray AutoSupport somesfschedule命令會重設AutoSupport 每日和每週時間、以及每週將資訊傳回管理軟體所產生的隨機值的天數。</block>
-  <block id="3d13704ad1c7a981cf21e6f8d0778a04" category="doc">重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）</block>
   <block id="42bb67454d2d38ca36a82f5b6b0559c9" category="paragraph">「RESset storageArray AutoSupport Sesfschedule」命令會重設AutoSupport 一週中每日和每週時間、以及將資訊傳回管理軟體所產生的隨機值的天數。</block>
   <block id="b349684735406339111877f12c790cea" category="list-text">管理軟體會隨機選取每日和每週訊息的時間、以及每週訊息的一天。</block>
   <block id="eca6d01389ba3951d9e44a4d6a67d9eb" category="list-text">管理軟體會嘗試確保管理網域內沒有兩個儲存陣列AutoSupport 同時傳送排程的更新訊息。</block>
@@ -4555,7 +4518,6 @@
   <block id="5050ed8384d9b863b09472bcb61b2629" category="paragraph">當控制器處於鎖定模式時、此命令將不會執行。</block>
   <block id="f2400c6d98c11df02cbcad1bce2de5be" category="summary">SAVE storageArray hostPortStatistics命令可儲存儲存陣列主機連接埠統計資料。</block>
   <block id="b728b39dd8719e0aa99ad692fd41d7fe" category="paragraph">「儲存陣列hostPortStatistics」命令可儲存儲存陣列主機連接埠統計資料。</block>
-  <block id="23f2b3d774e4f254918d4c8fdee41588" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員或安全管理員角色。</block>
   <block id="36eb75b5172fc10f30e25c5e87cd0771" category="inline-xref-macro">儲存儲存陣列iSCSI統計資料</block>
   <block id="faaa4a3d4ca79522f0bcdd45bbf1fea0" category="paragraph">此命令會取代過時的 <block ref="de2440a23bd95bf670dd35d1959ef77e" category="inline-xref-macro-rx"></block>、 <block ref="d07eb11322e1e56de080266d666873c1" category="inline-xref-macro-rx"></block>和 <block ref="ef21bb1b6552b1c21201ce27295ef971" category="inline-xref-macro-rx"></block> 命令。</block>
   <block id="e0082d07bc980cfab795a0b8d33f0a9f" category="paragraph">可讓您從一天開始擷取收集的統計資料。將參數括在方括弧中（[]）。</block>
@@ -5209,7 +5171,6 @@
   <block id="288c747beb9ea02441918c10be0f0835" category="summary">validate storageArray SECURITY Key命令會驗證具有安全功能磁碟機的儲存陣列的安全金鑰、以確保備份安全金鑰檔案未毀損。</block>
   <block id="0997de78a2c4c3c3fb8d0bbf36292876" category="doc">驗證儲存陣列安全金鑰</block>
   <block id="040f96a185fb9e278945b3035413ef98" category="paragraph">「validate storageArray SECURITY Key」命令會驗證具有安全功能磁碟機的儲存陣列的安全金鑰、以確保備份安全金鑰檔案未毀損。</block>
-  <block id="8375b2e9dc5948fae1425a8f80381409" category="paragraph">如果啟用外部金鑰管理、則此命令僅適用於E2800和E5700陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
   <block id="a60102cf893cafd152ff949443e539aa" category="paragraph">安全性金鑰驗證會使用密碼來產生檔案以解密金鑰、並將其與控制器記憶體（內部金鑰）或外部伺服器（外部金鑰）中所保留的值配對。</block>
   <block id="be77a29583b243db0d24b4ccb834859e" category="paragraph">具有安全金鑰的檔案路徑和檔案名稱。請以雙引號（""）括住檔案路徑和檔案名稱。例如：</block>
   <block id="aecdedf00e18a13fd6dba7cf8aa45196" category="summary">儲存storageArray AutoSupport flexlog命令可讓您檢視AutoSupport 一份flexlog檔案。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。</block>
@@ -5456,7 +5417,6 @@
   <block id="c150cf10f9c24b3ae1712d9b340f9b68" category="summary">儲存storageArray組態命令會建立指令碼檔案、您可以使用該檔案來重新建立目前的儲存陣列Volume組態。</block>
   <block id="22bc35cee3b727163050cc44b096050c" category="doc">儲存儲存陣列組態</block>
   <block id="b76ed73bf33bc149b56bfcb72828ed9e" category="paragraph">「儲存陣列組態」命令會建立指令碼檔案、供您用來重新建立目前的儲存陣列磁碟區組態。</block>
-  <block id="58e6d6373e7b375f5f4cda1a6d3d57ec" category="paragraph">若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。不過、此命令搭配LDAP參數的使用僅限於具有安全性管理角色的使用者。</block>
   <block id="c1c3a56e1ceca488340db853c4392d01" category="paragraph">此命令不會將目前儲存陣列上的遠端鏡像或磁碟區複製組態資料儲存到檔案中。</block>
   <block id="76f07b9b7c624b078c63894fcbc57b79" category="paragraph">您要儲存組態設定的檔案路徑和檔案名稱。將檔案名稱括在雙引號（""）內。例如：</block>
   <block id="cba05d40aab0daa948254107ad8de574" category="paragraph">「file="C:\Program Files\CLI/logs\saconf.cf"」</block>
@@ -5829,7 +5789,6 @@
   <block id="c33f4dd7cba462d4973823e2b1a0f1d1" category="summary">create storageArray securityKey命令可為具有完整磁碟加密（FDE）磁碟機的儲存陣列建立或變更新的安全金鑰。</block>
   <block id="589358dbff1a589613308187d87d0307" category="doc">建立儲存陣列安全金鑰</block>
   <block id="16b8756bee5437e27cf5846c5cfd3750" category="paragraph">「create storageArray SECURITY Key」命令可為具有完整磁碟加密（FDE）磁碟機的儲存陣列建立或變更新的安全金鑰。</block>
-  <block id="9a72b7800754129aaac262fd17574f77" category="paragraph">如果啟用外部金鑰管理、則此命令僅適用於E2800、E5700、EF600及EF300陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
   <block id="a3e6ee2823bad8a4c789d06eea837cd4" category="paragraph">對於內部金鑰管理、此命令可啟用內部金鑰管理功能並建立安全金鑰。建立金鑰之後、請使用「show storageArray securityKey」命令來使用金鑰。此命令也可用於變更安全性金鑰。</block>
   <block id="ac377e9234144193984246221664a133" category="paragraph">對於外部金鑰管理、此命令會建立不同的金鑰、以取代您啟用此功能時最初建立的金鑰。使用「enable storageArray externalKeyManagement」命令來啟用外部金鑰管理功能、並建立初始安全金鑰。此命令也可用於變更安全性金鑰。</block>
   <block id="4026ec9a53cfa291ca88fe7ecf92271f" category="paragraph">「KeyIdentifier」-僅適用於內部金鑰管理</block>
@@ -6034,7 +5993,6 @@
   <block id="1a2705cf89cd2220c74c548d31d8637f" category="summary">create SyncMirror 過程不只是建立主磁碟區、也會建立同步遠端鏡射配對的次要磁碟區。此命令也會設定寫入模式（同步寫入模式或非同步寫入模式）和同步處理優先順序。</block>
   <block id="72816bb9383ae0ee07aa13ba46996d7e" category="doc">建立同步鏡射</block>
   <block id="52a24030d55704eb53281edf7f86ae57" category="paragraph">「create SyncMirror 流通」命令可同時建立主要磁碟區和次要磁碟區、以供同步遠端鏡射配對使用。此命令也會設定寫入模式（同步寫入模式或非同步寫入模式）和同步處理優先順序。</block>
-  <block id="03ddafa678ecdce3682b4cec2e1901c1" category="paragraph">若要在E2800或E5700storage陣列上執行此命令、您必須具有Storage Admin角色。</block>
   <block id="4e6f20d94d9e42e80e6300e61c9556e3" category="paragraph">您要用於主要磁碟區之本機儲存陣列上現有磁碟區的名稱。請以雙引號（""）括住主磁碟區名稱。</block>
   <block id="329ee9c730f0db06dc70767f13c32063" category="paragraph">《第二年》</block>
   <block id="a11bdf6632ac28dcb833c3b98862f77e" category="paragraph">您要用於次要Volume的遠端儲存陣列上現有磁碟區名稱。請以雙引號（""）括住次要Volume名稱。</block>
@@ -6246,7 +6204,6 @@
   <block id="e16c2d45985db7c2f3461f64f3562508" category="paragraph">如果要刪除整個Volume群組、也可以使用「刪除volumeGroup」命令。</block>
   <block id="836e087fc9f8e0c89c31602c36ec4195" category="paragraph">7.10新增了「移至Volume Group」參數。</block>
   <block id="0418acfe7f172be60f641a4dee74583b" category="summary">set storageArray AutoSupport SesfeliveryMethods命令可設定傳送方法、將AutoSupport 資訊傳送至HTTP（S）。</block>
-  <block id="b63d4a8fce6b86dfe0bd873d51df2e44" category="doc">指定AutoSupport 功能完善的HTTP（S）交付方法（適用於個別E2800或E5700陣列）</block>
   <block id="b5f0f32e672745bd998c7baae84009c2" category="paragraph">「set storageArray AutoSupport SesfeliveryMethods」命令可設定傳送方式、將AutoSupport 不實訊息傳送至HTTP（S）。</block>
   <block id="a6b0c9dd751c30a74c1d6ab885b938c1" category="paragraph">可讓使用者使用HTTP或HTTPS傳輸協定直接連線至目的地技術支援系統。</block>
   <block id="99c3d37edba75cd649292a42965ed08a" category="paragraph">可讓使用者指定Proxy自動組態（PAC）指令碼檔案的位置</block>
@@ -6479,17 +6436,12 @@
   <block id="526ea19b5b10d32080045d2bf02a001f" category="paragraph"><block ref="526ea19b5b10d32080045d2bf02a001f" category="inline-link-macro-rx"></block></block>
   <block id="40b5e794e0c5d66ba76dbffd4936cdf2" category="inline-link-macro">在AutoSupport EMW管理網域層級啟用或停用支援功能...</block>
   <block id="d1d7e051cbfd58b90c0b20e58bd50caf" category="paragraph"><block ref="d1d7e051cbfd58b90c0b20e58bd50caf" category="inline-link-macro-rx"></block></block>
-  <block id="0d27d2d91cb54a5542603e0ac7441bf2" category="paragraph"><block ref="0d27d2d91cb54a5542603e0ac7441bf2" category="inline-link-macro-rx"></block></block>
   <block id="28acfac866a292ab1f1f2e9ff56a5f37" category="paragraph"><block ref="28acfac866a292ab1f1f2e9ff56a5f37" category="inline-link-macro-rx"></block></block>
   <block id="4ef8a44db31e99109be90a9f8a47ef4b" category="paragraph"><block ref="4ef8a44db31e99109be90a9f8a47ef4b" category="inline-link-macro-rx"></block></block>
-  <block id="8b34f939922724f8ca1a0c2fce89bd2e" category="inline-link-macro">啟用或停用AutoSupport 「根據需求提供支援」功能（適用於個別E2800或E5700陣列）</block>
-  <block id="eceb9e9ae30bee53654d1037dcbc3a5c" category="paragraph"><block ref="eceb9e9ae30bee53654d1037dcbc3a5c" category="inline-link-macro-rx"></block></block>
   <block id="9193a3a6d6eae0966fd3e95f00327e58" category="inline-link-macro">在AutoSupport EMW啟用或停用「僅需支援的功能...」</block>
   <block id="5a4b5b6c09b76fd9a6e234cc5c8f02a1" category="paragraph"><block ref="5a4b5b6c09b76fd9a6e234cc5c8f02a1" category="inline-link-macro-rx"></block></block>
   <block id="e5799e751ba6a43582452605535ec6d9" category="inline-link-macro">啟用或停用AutoSupport 位於...的「更新」功能。</block>
   <block id="7f64e02de9bac52f6624004ce966c7bf" category="paragraph"><block ref="7f64e02de9bac52f6624004ce966c7bf" category="inline-link-macro-rx"></block></block>
-  <block id="de042c6e9339ad5e11dbef3eba62d68f" category="inline-link-macro">啟用或停用AutoSupport 「停止執行」遠端診斷功能（適用於個別E2800或E5700陣列）</block>
-  <block id="89b91b07adb5a3dcfb3ec3c5ceeb9d68" category="paragraph"><block ref="89b91b07adb5a3dcfb3ec3c5ceeb9d68" category="inline-link-macro-rx"></block></block>
   <block id="027f6fa25e8c6cb1dd4a84d3a6b4d3a2" category="paragraph"><block ref="027f6fa25e8c6cb1dd4a84d3a6b4d3a2" category="inline-link-macro-rx"></block></block>
   <block id="7ea19a28141d90151f591add5d5f4c23" category="paragraph"><block ref="7ea19a28141d90151f591add5d5f4c23" category="inline-link-macro-rx"></block></block>
   <block id="48da82b563c762c75c4472c5b3850ce0" category="paragraph"><block ref="48da82b563c762c75c4472c5b3850ce0" category="inline-link-macro-rx"></block></block>
@@ -6533,7 +6485,6 @@
   <block id="1c3cbf4675cd02c340c87cbf971b2757" category="paragraph"><block ref="1c3cbf4675cd02c340c87cbf971b2757" category="inline-link-macro-rx"></block></block>
   <block id="188959659c3c9598d3d7f3bbb214d9b9" category="paragraph"><block ref="188959659c3c9598d3d7f3bbb214d9b9" category="inline-link-macro-rx"></block></block>
   <block id="6821c52aa4b7edbcd583dfe534852fc5" category="paragraph"><block ref="6821c52aa4b7edbcd583dfe534852fc5" category="inline-link-macro-rx"></block></block>
-  <block id="1031ed2106e047126b3e17b6a0feb0b3" category="paragraph"><block ref="1031ed2106e047126b3e17b6a0feb0b3" category="inline-link-macro-rx"></block></block>
   <block id="8a487f9c730e86bf79dc7bff0f2a85b9" category="paragraph"><block ref="8a487f9c730e86bf79dc7bff0f2a85b9" category="inline-link-macro-rx"></block></block>
   <block id="9fcb1c693c81e749004e0d42c529a734" category="paragraph"><block ref="9fcb1c693c81e749004e0d42c529a734" category="inline-link-macro-rx"></block></block>
   <block id="b108eaaa22a288fb82dc88d1223317c1" category="paragraph"><block ref="b108eaaa22a288fb82dc88d1223317c1" category="inline-link-macro-rx"></block></block>
@@ -6553,8 +6504,6 @@
   <block id="a5597aaf9e765269137e95d6e2faed3f" category="paragraph"><block ref="a5597aaf9e765269137e95d6e2faed3f" category="inline-link-macro-rx"></block></block>
   <block id="72cbaa931863e75532e0237a06ea9846" category="paragraph"><block ref="72cbaa931863e75532e0237a06ea9846" category="inline-link-macro-rx"></block></block>
   <block id="f4d1acccaa71a7d3dc823feed3999987" category="paragraph"><block ref="f4d1acccaa71a7d3dc823feed3999987" category="inline-link-macro-rx"></block></block>
-  <block id="fc8179a226cf4b490f680b11e570fda9" category="inline-link-macro">擷取AutoSupport 一份資料檔（適用於個別E2800或E5700陣列）</block>
-  <block id="ab6622d0616a5f2108306aa06557813b" category="paragraph"><block ref="ab6622d0616a5f2108306aa06557813b" category="inline-link-macro-rx"></block></block>
   <block id="7e5d2a73d9fad2c697230c2bb77c960c" category="paragraph"><block ref="7e5d2a73d9fad2c697230c2bb77c960c" category="inline-link-macro-rx"></block></block>
   <block id="775f5c208cbffc0851ce86d9965083f6" category="paragraph"><block ref="775f5c208cbffc0851ce86d9965083f6" category="inline-link-macro-rx"></block></block>
   <block id="4591c32e678bc31f823e5fb526568477" category="inline-link-macro">擷取已安裝的金鑰管理CSR要求</block>
@@ -6593,8 +6542,6 @@
   <block id="2d7d86d8aea74f95da1eed2c998c4938" category="paragraph"><block ref="2d7d86d8aea74f95da1eed2c998c4938" category="inline-link-macro-rx"></block></block>
   <block id="c67fcc2f0be461ed1869274c654a9f53" category="paragraph"><block ref="c67fcc2f0be461ed1869274c654a9f53" category="inline-link-macro-rx"></block></block>
   <block id="bb180ca165fe397ea77e56cc2e1727b2" category="paragraph"><block ref="bb180ca165fe397ea77e56cc2e1727b2" category="inline-link-macro-rx"></block></block>
-  <block id="b8b2944d59a8e32a06d69a1329c85d45" category="inline-link-macro">設定AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）</block>
-  <block id="9224081ddb2ebba35e092b9609ce41fa" category="paragraph"><block ref="9224081ddb2ebba35e092b9609ce41fa" category="inline-link-macro-rx"></block></block>
   <block id="58890bed2475e6e4a359116264f81b8e" category="paragraph"><block ref="58890bed2475e6e4a359116264f81b8e" category="inline-link-macro-rx"></block></block>
   <block id="d4f3e4f054f57657aacd266c88cf5a81" category="paragraph"><block ref="d4f3e4f054f57657aacd266c88cf5a81" category="inline-link-macro-rx"></block></block>
   <block id="87bcb060142c34bae4a50640104b7a81" category="paragraph"><block ref="87bcb060142c34bae4a50640104b7a81" category="inline-link-macro-rx"></block></block>
@@ -6683,10 +6630,7 @@
   <block id="8548e484e63f491339db974a0be1ad71" category="paragraph"><block ref="8548e484e63f491339db974a0be1ad71" category="inline-link-macro-rx"></block></block>
   <block id="70a851ae23cb2205bba1d632176590d7" category="paragraph"><block ref="70a851ae23cb2205bba1d632176590d7" category="inline-link-macro-rx"></block></block>
   <block id="f475da827ca5146d63e88c48fcce1009" category="paragraph"><block ref="f475da827ca5146d63e88c48fcce1009" category="inline-link-macro-rx"></block></block>
-  <block id="fcbe986fac160291e6d85c180a85317a" category="paragraph"><block ref="fcbe986fac160291e6d85c180a85317a" category="inline-link-macro-rx"></block></block>
   <block id="dedaab469c9719a939b1dd88ac01e25b" category="paragraph"><block ref="dedaab469c9719a939b1dd88ac01e25b" category="inline-link-macro-rx"></block></block>
-  <block id="d6d27704e9eefa567371004ccc2c9d4a" category="inline-link-macro">指定電子郵件（SMTP）交付方法（適用於個別E2800或E5700陣列）</block>
-  <block id="5f8aa3aa9bd012520927b5a1357f8ff1" category="paragraph"><block ref="5f8aa3aa9bd012520927b5a1357f8ff1" category="inline-link-macro-rx"></block></block>
   <block id="24464dadd1eefb1caa57d072993683ba" category="paragraph"><block ref="24464dadd1eefb1caa57d072993683ba" category="inline-link-macro-rx"></block></block>
   <block id="5abda05a4e4fb9a02a5e16fab5dbe3f6" category="paragraph"><block ref="5abda05a4e4fb9a02a5e16fab5dbe3f6" category="inline-link-macro-rx"></block></block>
   <block id="0e9e5b87fd61749a7ef177c2c3d95f8c" category="paragraph"><block ref="0e9e5b87fd61749a7ef177c2c3d95f8c" category="inline-link-macro-rx"></block></block>
@@ -6743,8 +6687,6 @@
   <block id="17b83b9735339f97820c25fad60b1553" category="paragraph"><block ref="17b83b9735339f97820c25fad60b1553" category="inline-link-macro-rx"></block></block>
   <block id="edbea3131a774ced865d5b090b23c6f5" category="paragraph"><block ref="edbea3131a774ced865d5b090b23c6f5" category="inline-link-macro-rx"></block></block>
   <block id="d265072c730a2db4ebb7ae032b3dd8b6" category="paragraph"><block ref="d265072c730a2db4ebb7ae032b3dd8b6" category="inline-link-macro-rx"></block></block>
-  <block id="ed8ff3e3e935d1f01db69b1edb27583f" category="inline-link-macro">測試AutoSupport 供應設定（適用於個別E2800或E5700陣列）</block>
-  <block id="25e35f8e194692fa821197447d509a7a" category="paragraph"><block ref="25e35f8e194692fa821197447d509a7a" category="inline-link-macro-rx"></block></block>
   <block id="3e9df718ef4cb4579cbb566abb3797ba" category="paragraph"><block ref="3e9df718ef4cb4579cbb566abb3797ba" category="inline-link-macro-rx"></block></block>
   <block id="59f7868c8dd882a0fc44709e9ede6cac" category="paragraph"><block ref="59f7868c8dd882a0fc44709e9ede6cac" category="inline-link-macro-rx"></block></block>
   <block id="a67128b93abe8a7db88a9450c83f8b6c" category="paragraph"><block ref="a67128b93abe8a7db88a9450c83f8b6c" category="inline-link-macro-rx"></block></block>
@@ -6804,9 +6746,6 @@
   <block id="15c050a6a9859238d1500e30a3507f10" category="section-title">所有儲存陣列的指令AutoSupport</block>
   <block id="e4b1a19d81413c02cbff8dc83cf04445" category="inline-link-macro">啟用或停用AutoSupport 功能（僅適用於E2800、E5700陣列的個別陣列）</block>
   <block id="f08f0edf758a95b8fc4b6cbefc244dd6" category="paragraph"><block ref="f08f0edf758a95b8fc4b6cbefc244dd6" category="inline-link-macro-rx"></block></block>
-  <block id="1424867a14c9a2cc6892547d4dbda4df" category="section-title">E2800、E5700的指令AutoSupport</block>
-  <block id="19b9c937ff30bddaf295e386473f62d1" category="inline-link-macro">啟用或停用AutoSupport 「停止執行功能」（適用於個別E2800或E5700陣列）</block>
-  <block id="bd5a4e5c160e7e2886150485e8b7ce59" category="paragraph"><block ref="bd5a4e5c160e7e2886150485e8b7ce59" category="inline-link-macro-rx"></block></block>
   <block id="75d0cfb68b71d4c1551f137d574c98e2" category="summary">E2700和E5600命令</block>
   <block id="8530f14ba8e3bcb3452132e3bd4d090f" category="inline-link-macro">啟動同步鏡射</block>
   <block id="666e69d8a1bbdaada561e5e80709030a" category="paragraph"><block ref="666e69d8a1bbdaada561e5e80709030a" category="inline-link-macro-rx"></block></block>
@@ -6857,7 +6796,6 @@
   <block id="fbeb1d72f27a56ff21cdced83b4aa7c0" category="section-title">自動負載平衡命令</block>
   <block id="3fd189c2e587458713eb634145bec876" category="inline-link-macro">設定儲存陣列以啟用或停用自動負載平衡</block>
   <block id="598a1b95e8b521f17974886964f9cbcc" category="paragraph"><block ref="598a1b95e8b521f17974886964f9cbcc" category="inline-link-macro-rx"></block></block>
-  <block id="fb832e8292b69e05ca19a3ac025cb97b" category="summary">E2800、E5700、EF600和EF300命令</block>
   <block id="31c2f685d4833664806d295f3c7b4bc6" category="summary">說明SANtricity 語法和使用方面的指令。</block>
   <block id="9692ef191259605d058276292b4075e0" category="doc">系統管理程式命令SANtricity</block>
   <block id="eba4a8577f6ea49ab0d9329cade5c5db" category="sidebar">CLI文件SANtricity</block>
@@ -7082,7 +7020,6 @@
   <block id="96b59f808698df6864754108a4c5ddbd" category="sidebar">設定...</block>
   <block id="ffacf3d692457ebf1248300f2834f31b" category="sidebar">設定asyncdmirorgroup</block>
   <block id="d38d98bd152cc610b8b378e8e1c7c8fd" category="sidebar">設定稽核記錄</block>
-  <block id="0e75666e368c3133391e3e9b9523ef23" category="sidebar">設定AutoSupport 以E2800或e5700傳送的功能</block>
   <block id="9655870dc43c3f8521bf40f7ef9153fb" category="sidebar">設定cgrsnapvolume</block>
   <block id="16df982c84fa9faf95f5cfe511a88da3" category="sidebar">設定一致性群組屬性</block>
   <block id="a36757c06c3eb71232d4624d16fc5074" category="sidebar">設定ConsistencyGroup addcmemervolume</block>
@@ -7100,7 +7037,6 @@
   <block id="2af930af4da672ba35dfaf2943daa92e" category="sidebar">設定磁碟機安全性ID</block>
   <block id="df357b9536918c73b72fa718340518fc" category="sidebar">設定磁碟機服務分配指示</block>
   <block id="dfd87893d597527d913aa918cda6183d" category="sidebar">設定系統力學</block>
-  <block id="fc658572d597be0a6ae14e8e5bb211aa" category="sidebar">設定電子郵件的SMTP傳送方法e2800或e5700</block>
   <block id="74e78c646a8c24344aeb3dee04a792e9" category="sidebar">設定電子郵件警示</block>
   <block id="73ca504fee965cead780f40fe6a32275" category="sidebar">設定事件警示</block>
   <block id="4d9a2591bb8801345b9a59696f18cfc3" category="sidebar">設定主機</block>
@@ -7326,10 +7262,8 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">命令（依類別）</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">請勿在未執行中所列步驟的情況下執行這些步驟 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
-  <block id="e0180366a7542136793eb497779f0039" category="summary">發行版的作業系統11.60包含直接透過「支援系統管理程式」下載及安裝http型CLI（也稱為「安全CLI」或「SMcli」）的功能。SANtricity SANtricity</block>
   <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">可下載的SMcli命令列參數</block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60及更新版本的可下載SMcli命令列參數</block>
-  <block id="b6c9cb32de0a61002f039efec80a465c" category="paragraph">支援此作業系統11.60版本的功能、可直接透過《支援系統管理程式》下載及安裝http版本的CLI（也稱為「安全CLI」或SMcli）SANtricity SANtricity 。可下載的SMcli版本可在EF600、EF300、E5700、EF570、E2800、 和EF280控制器。要在SANtricity 《S161eSystem Manager》中下載SMcli、請選擇*設定*&gt;*系統*和*附加元件*&gt;*命令列介面*。</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">您必須在打算執行CLI命令的管理系統上提供Java執行時間環境（JRE）版本8及更新版本。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">舊版命令列參數</block>
   <block id="1a98f49f191845835d6fd3e13eb29812" category="section-title">多因素驗證</block>
@@ -7389,7 +7323,6 @@
   <block id="bcf0c6816d00842bd216f56545da7e12" category="list-text">為了達到最高的安全性、應使用取得檔案的信任命令來確保憑證不會在使用者驗證和執行此命令之間變更</block>
   <block id="6e560cf6c527d4c279a89d40d90f0f5f" category="summary">推出的《支援E2800與E5700控制器的支援嵌入式Web服務的支援功能、可透過安全的HTTPS傳輸協定、在命令列上互動。SANtricity這些控制器可以選用符號傳輸協定來進行命令列互動。</block>
   <block id="fcd00ec6de7f196ccf5dd2134ec8c2eb" category="section-title">11.53和舊版命令列參數</block>
-  <block id="7f350558fa31543d0376cb3d9a59b5a6" category="paragraph">推出的《支援E2800與E5700控制器的支援嵌入式Web服務的支援功能、可透過安全的HTTPS傳輸協定、在命令列上互動。SANtricity這些控制器可以選用符號傳輸協定來進行命令列互動。SYMBOL傳輸協定是唯一支援E2700和E5600控制器的傳輸協定。為了保留現有的指令碼並將轉換時間減至最短、CLI選項和語法會盡可能保留。但是、E2800和E5700控制器在安全性、驗證、AutoSupport 可靠性和警示訊息等方面的功能有一些差異、使這些控制器的某些CLI語法變得過時。不過、在某些情況下、只有在使用新https傳輸協定時、E2800或E5700上的語法才會過時。</block>
   <block id="992fcf8487a5a376d1da947a5fa72b2b" category="admonition">RAID 1層級磁碟區無法使用精簡配置。</block>
   <block id="57a99d03719693273aad8c6972e18af2" category="paragraph">此參數可設定所建立Volume的區塊大小。的值<block ref="cfcd208495d565ef66e7dff9f98764da" prefix=" " category="inline-code"></block> 或者、未設定的參數會使用預設區塊大小。</block>
   <block id="a5c016ef7bdfc21e730e1ca6061742d6" category="paragraph">8.70新增<block ref="ac82d3d2e40087720415657115e05003" prefix=" " category="inline-code"></block> 和<block ref="1feb883ec49856bbc2f127143c719ed0" prefix=" " category="inline-code"></block> 參數。</block>
@@ -7467,8 +7400,6 @@
   <block id="84b6254e1011f96e6fb4b9cee656d730" category="paragraph">新增<block ref="ab1f19425d80842e646857a8f89eeecb" prefix=" " category="inline-code"></block> 參數。</block>
   <block id="a74eb5af8064272ba51d646a8d151084" category="paragraph"><block ref="a74eb5af8064272ba51d646a8d151084" category="inline-xref-macro-rx"></block></block>
   <block id="138fadba8fa114a89807217041227cdc" category="paragraph">過時的命令。</block>
-  <block id="962d9ad1b8030cfc38372c70a910a150" category="paragraph">此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。</block>
-  <block id="620a3709ded9e8d65119f943b821804a" category="paragraph">若要在 E2800 、 E5700 、 EF600 或 EF300 儲存陣列上執行此命令、您必須具有「支援管理員」角色。</block>
   <block id="1bbe4f0d1be16abbdd83a481a65ca5a4" category="paragraph">11.80 新增 EF600 和 EF300 陣列支援</block>
   <block id="b5686fd94e2c11d0beb5597a3520313c" category="summary">show check Volume 同位檢查工作命令會顯示指定的檢查 Volume 同位檢查工作和工作狀態。</block>
   <block id="dd6daf5faf9779e778db769f3be87c3e" category="paragraph">。<block ref="444d9d2a89ab0f7e0925c167387212b0" prefix=" " category="inline-code"></block> 命令會顯示指定的檢查磁碟區同位檢查工作和工作狀態。</block>
@@ -7519,7 +7450,6 @@
   <block id="cfafd61e53ff8b90ff59654a31683d33" category="section-title">SANtricity 11.70.1</block>
   <block id="474034f7e02f357e3878ae2514a2b3fd" category="section-title">2011年11月70日SANtricity</block>
   <block id="cc1ba14f8dc9bd7ba20e2aa654cde10b" category="inline-link">E系列/EF系列SANtricity 的注意事項</block>
-  <block id="df9168fd1981b1464f7c0d38b2207c30" category="paragraph"><block ref="df9168fd1981b1464f7c0d38b2207c30" category="inline-link-rx"></block></block>
   <block id="050910c569f1cb9044086ceee795e2f8" category="sidebar">SANtricity 系統管理員 11.8</block>
   <block id="1cf9153cf0b1bfe4b703e41b4509763e" category="sidebar">SANtricity Unified Manager 6.</block>
   <block id="52009bb7ee17227f566cd26a02caee56" category="inline-link-macro"><block ref="52009bb7ee17227f566cd26a02caee56" category="inline-link-rx"></block></block>
@@ -7530,7 +7460,6 @@
   <block id="dd38f906b37d412de7d1c1dcf4cbf31c" category="paragraph"><block ref="dd38f906b37d412de7d1c1dcf4cbf31c" category="inline-link-macro-rx"></block></block>
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
-  <block id="f31b4701e236492b39f4226355cb1d49" category="paragraph">此命令適用於個別E2800、E5700、EF600或EF300陣列。它無法在 E2700 和 E5600 儲存陣列上運作。</block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虛擬容量為 256 TB 。</block>
   <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助、您可以在其中瞭解如何使用命令列介面（ CLI ）來設定、監控及調整儲存陣列。」</block>
   <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">如同先前版本的SMcli、可透過SANtricity 「支援系統管理程式」下載的SMcli有一組獨特的參數。如需有關使用指令行參數以利SANtricity 更新OS 11.53和舊版的資訊、請參閱 <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>。</block>
@@ -7550,10 +7479,141 @@
   <block id="dbb8d2fd09a59e1ab8494de138ceffdb" category="list-text">這包括從作業系統原生區塊裝置讀取及執行 SCSI 查詢命令的能力。</block>
   <block id="5b1cc65d11915b727018c6056792dcef" category="section-title">SANtricity 11.81</block>
   <block id="a92322756f07d387c173b27babcdad72" category="paragraph">下表列出 11.81 版 CLI 和指令碼命令的變更。</block>
-  <block id="559b1de3f22ee41aed01495562ee7836" category="paragraph"><block ref="559b1de3f22ee41aed01495562ee7836" category="inline-xref-macro-rx"></block></block>
   <block id="5fe9c86e85a56fcbfe366c1ef482deb0" category="paragraph">新增<block ref="35d5ed698aa483d3174ea619db10c0ac" prefix=" " category="inline-code"></block> 參數。</block>
   <block id="8d3df8e4a86e0915f0d07f8e7a26b030" category="paragraph">控制器被識別為「a」或「b」。每個控制器最多可有四個主機通道；每個通道都由1到8之間的數字唯一識別。</block>
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器識別碼和主機通道值為<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、、、<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block><block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block><block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block>、、<block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block><block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block><block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block>、、<block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
-  <block id="d67b41e45a16f6e51b2d5c893efb6386" category="paragraph">E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。</block>
   <block id="2bc4f5f65d530be66960542e14f46660" category="paragraph">此命令僅適用於光纖通道上的非同步鏡像。</block>
+  <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。</block>
+  <block id="a354034e1792cd00f19c11de116a69f4" category="paragraph">若要在 E400 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 角色。</block>
+  <block id="4818a1577bb873e9a1bea01f94e168fb" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 和 E5700 陣列，只要安裝了所有 SMCLI 套件即可。</block>
+  <block id="4ec343cf7b1916cb714cf2eed7cc2a56" category="paragraph">若要在 E4000 ， E2800 或 E5700 儲存陣列上執行此命令，您必須具備儲存管理員角色。</block>
+  <block id="076b233b5a4449b721cbb8368f8fb958" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有「支援管理員」角色。</block>
+  <block id="0a5727fb9e4cceadd91fbb0916297759" category="paragraph">E4000 ， E2800 ， E5700 ， EF600 和 EF300 平台不支援此命令。</block>
+  <block id="4cd285c149380629899b809a1fcfca80" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。</block>
+  <block id="fa3f8ed858d04e74dad152ab5070b1ec" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。</block>
+  <block id="d28f85e4921c2290b1849d9ca24381a1" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。</block>
+  <block id="4808830345a823114a0ff2909f8a5d34" category="paragraph">此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。</block>
+  <block id="2ef945e8385c3b3383dd40b9f20b81c9" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有安全管理角色。</block>
+  <block id="5a55cb40d8562db2ade7e87c8407da61" category="paragraph">如果啟用外部金鑰管理，則此命令僅適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
+  <block id="b4089211682b23edd69e88a53d0dea73" category="paragraph">若要在 E4000 ， E2800 或 E5700 儲存陣列上執行此命令，您必須具有儲存管理員或支援管理員角色。</block>
+  <block id="96fbedb8e23ee770715d64868d91f512" category="paragraph"><block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix="" category="inline-code"></block></block>
+  <block id="8f786c6665f112a9ec42e4921247dfaf" category="paragraph">可讓您在簽署的憑證旁邊下載私密金鑰。<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>參數必須與值一起使用<block ref="71cc3f1d4dc205619a9d8134cb1e6c5d" prefix=" " category="inline-code"></block>。</block>
+  <block id="5c12358ddfa7bc3dbacf8a9e26ff15f7" category="paragraph">如果啟用外部金鑰管理，則此命令僅適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
+  <block id="c65db51b73509a7f00c37eaba7ab2a29" category="paragraph">如果啟用外部金鑰管理，則此命令僅適用於 E4000 ， E2800 ， E5700 ， EF600 或 EF300 陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
+  <block id="f46b3f4800a69abecf156a53124b25a1" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Storage Monitor 角色。</block>
+  <block id="672bddf25a5148ad89f2d0de107bf704" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 和 E5700 陣列，只要安裝了所有 SMCLI 套件即可。</block>
+  <block id="e127d5ca4333d5b79c57c2b351704e07" category="paragraph"><block ref="2496da2f393859299e91ec0dcf920087" prefix="" category="inline-code"></block></block>
+  <block id="4b2b7d34e1c9c58df14d668116c7e27a" category="paragraph">可讓您指定，<block ref="be767243ca8f574c740fb4c26cc6dceb" prefix=" " category="inline-code"></block>或<block ref="f7efa4f864ae9b88d43527f4b14f750f" prefix=" " category="inline-code"></block>伺服器金鑰大小的值<block ref="051928341be67dcba03f0e04104d9047" prefix=" " category="inline-code"></block>。如果未選取金鑰大小，則預設金鑰大小為 3072 。</block>
+  <block id="2f16a4e1f295aafddbecc5b08af16dfa" category="summary">儲存控制器 arrayManagementCSR 命令會擷取控制器的已安裝伺服器憑證簽署要求（ CSR ），以便您檢視憑證詳細資料。</block>
+  <block id="41f378e1ae526513ccf1b18f5ef2e8cd" category="paragraph">此命令會<block ref="1de7a3761ee490eb69b0d5dd1bc9f0c5" prefix=" " category="inline-code"></block>擷取控制器的已安裝伺服器憑證簽署要求（ CSR ），以便您檢視憑證詳細資料。</block>
+  <block id="7f838bc9deec658242ceadefd99b3992" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。不過、此命令搭配LDAP參數的使用僅限於具有安全性管理角色的使用者。</block>
+  <block id="f0e9f8c4af25d5525e5279cfcef7f2f1" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員或安全管理員角色。</block>
+  <block id="52907868d469a177418995e68ae532d1" category="summary">針對不同的交付類型，設定 AutoSupport 套裝組合和派單的最大大小。</block>
+  <block id="da0a49824cfffdf78423229085d4c3e9" category="doc">設定 AutoSupport 派遣台大小限制</block>
+  <block id="8827ec62bb9ef8459dad00c458fbe0a7" category="paragraph"><block ref="2da3a20c3f29f91772c0863129cf682b" prefix=" " category="inline-code"></block>設定不同交付類型的 AutoSupport 套裝組合和派單數量上限。</block>
+  <block id="85b16c4ca5bf32600a6b672e3acfe5ba" category="paragraph">透過此命令，使用者可以根據電子郵件伺服器支援的內容來設定電子郵件大小。較大的尺寸可降低支援套件遭截斷的機率。</block>
+  <block id="a766435b022362f5648e0c4e8f4fc086" category="admonition">除非 NetApp 支援部門指示，否則使用者通常不應設定 HTTPS 大小。</block>
+  <block id="0b003c45e2bea82dff19436ed2914393" category="paragraph"><block ref="5e056c500a1c4b6a7110b50d807bade5" prefix="" category="inline-code"></block></block>
+  <block id="e44f9cdc3f5de3ef655d78ea6ea1063c" category="paragraph">HTTPS 分派大小上限（位元組）。如果未設定最大大小，則預設值為 50 MIB 。值為「 unun限量 」或 0 ，不允許任何大小限制。允許的最小大小為 2 個 MIB 。</block>
+  <block id="ae1bde34794270bb273f407db5974619" category="paragraph"><block ref="0c83f57c786a0b4a39efab23731c7ebc" prefix="" category="inline-code"></block></block>
+  <block id="f03f94e81f0ba8cdc5f1bbeae4398791" category="paragraph">最大電子郵件（ SMTP ）傳送大小（位元組）。如果未設定最大大小，則預設值為 5 MIB 。值為「 unun限量 」或 0 ，不允許任何大小限制。允許的最小大小為 2 個 MIB 。</block>
+  <block id="1cb7e72b12a0a45d204da26fb8f1d92e" category="paragraph">8.90</block>
+  <block id="98df893211013e4bedd978a6731f31a9" category="doc">指定 AutoSupport HTTP(S) 交付方法</block>
+  <block id="245aed6426acccf934bd6a10b9ad9de7" category="paragraph"><block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix="" category="inline-code"></block></block>
+  <block id="88210d391247e39637e08468431d164c" category="paragraph">傳送 AutoSupport 分派的電子郵件地址。此參數可能會多次提供，以允許將派單傳送至多個位址。</block>
+  <block id="162df76e61114a9bc1095cea2e1e989f" category="paragraph">此命令適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 儲存陣列。不過、您可以將命令當成SMcli命令、而非指令碼命令、用於E2700或E5600陣列。在此情況下、命令會套用至管理網域中的所有陣列。</block>
+  <block id="43c3a57d07f46965c77984bf6d190860" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin ， Support Admin ， Security Admin 或 Storage Monitor 角色。</block>
+  <block id="980650206e421df11ba972784e263d5e" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， 2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。</block>
+  <block id="f67115ecdc36bb812b11a0ffbd6afb0c" category="doc">啟用或停用 AutoSupport 維護時段</block>
+  <block id="9f3cf5bf61b5f1c707c6850bc8b41cd9" category="paragraph">此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。</block>
+  <block id="0963d08ec539961ce732d53f279fde56" category="paragraph">若要在 E4000 ， 2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 角色。</block>
+  <block id="904d825f949c4d18e91d96fe2b4cccb7" category="paragraph">執行媒體掃描的天數。有效值為<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>，可關閉媒體掃描，或是<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>日至<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>日，其中<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>日為最快的掃描速率，日為最慢的掃描速率<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>。非或<block ref="c4ca4238a0b923820dcc509a6f75849b" prefix=" " category="inline-code"></block>至的<block ref="6f3ef77ac0e3619e98159e9b6febf557" prefix=" " category="inline-code"></block>值<block ref="075ae3d2fc31640504f814f60e5ef713" prefix=" " category="inline-code"></block>不允許媒體掃描正常運作。</block>
+  <block id="2fe5dde43e76b44ed3412b7f72a2ec67" category="list-text">SSD 磁碟機的使用壽命相關資訊（如果陣列不包含 SSD 磁碟機，則不會顯示此資訊）：</block>
+  <block id="fd979bea5528b4b653c26b7095b2585b" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 或 Storage Monitor 角色。</block>
+  <block id="5b07c4793f70ad68331f8bbc6375b6a2" category="paragraph">此命令適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 儲存陣列。</block>
+  <block id="e0edf8f3e094504eb3aad1bcfa63b7a4" category="paragraph">若要在 E4000 ， E2800 或 E5700 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Storage Monitor 角色。</block>
+  <block id="2ddf6adc2ffbbed684ed33c230aba7a4" category="paragraph">此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於 E4000 ， E2800 或 E5700 儲存陣列。</block>
+  <block id="c0af9350de0f363c5a29eca79351e85f" category="paragraph">此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於 E4000 ， E2800 或 E5700 儲存陣列。</block>
+  <block id="53678d9fc91d730898effc66afed440c" category="paragraph">此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 陣列。它無法在 E2700 和 E5600 儲存陣列上運作。</block>
+  <block id="8e5de270187b60f585a76292f4955771" category="paragraph">如果啟用外部金鑰管理，則此命令僅適用於 E4000 ， E2800 和 E5700 陣列。如果已啟用內部金鑰管理、則只要安裝所有SMcli套件、該命令就會套用至任何個別的儲存陣列。</block>
+  <block id="e0e0f1fd1b2a76e36519194e58e6a746" category="paragraph">您的 E 系列儲存系統可使用下列系統管理員命令清單。</block>
+  <block id="a0a6d235683f3b056cb81207a953a70a" category="inline-link-macro">啟用或停用 AutoSupport 維護時段</block>
+  <block id="136305f16eda9c995d0dafe2ae33afa5" category="paragraph"><block ref="136305f16eda9c995d0dafe2ae33afa5" category="inline-link-macro-rx"></block></block>
+  <block id="4337e1e9ae1833f743a6ecf1e1d2cc16" category="inline-link-macro">啟用或停用AutoSupport 「根據需求提供支援」功能</block>
+  <block id="fbcc665052e7eece7504d9b0fa7e1fbc" category="paragraph"><block ref="fbcc665052e7eece7504d9b0fa7e1fbc" category="inline-link-macro-rx"></block></block>
+  <block id="dd265fc010ca9aeeda8af3ed045c143f" category="paragraph"><block ref="dd265fc010ca9aeeda8af3ed045c143f" category="inline-link-macro-rx"></block></block>
+  <block id="4388180ba8bee32fe0d5da2825a6ab8e" category="paragraph"><block ref="4388180ba8bee32fe0d5da2825a6ab8e" category="inline-link-macro-rx"></block></block>
+  <block id="c8bcea5e4e09a4efacf56501abebf738" category="paragraph"><block ref="c8bcea5e4e09a4efacf56501abebf738" category="inline-link-macro-rx"></block></block>
+  <block id="81272e11e04b2aab3ed70229486cd9a8" category="paragraph"><block ref="81272e11e04b2aab3ed70229486cd9a8" category="inline-link-macro-rx"></block></block>
+  <block id="1c29596e76fddad4525d647ab1ce71da" category="inline-link-macro">設定AutoSupport 資訊收集排程</block>
+  <block id="1c94f20da8d04fd6812183af204b7ad0" category="paragraph"><block ref="1c94f20da8d04fd6812183af204b7ad0" category="inline-link-macro-rx"></block></block>
+  <block id="ad9ea75e27f49501cd9f1cbce1d4aa94" category="paragraph"><block ref="ad9ea75e27f49501cd9f1cbce1d4aa94" category="inline-link-macro-rx"></block></block>
+  <block id="667929bcd97aee938187018944e42c7d" category="paragraph"><block ref="667929bcd97aee938187018944e42c7d" category="inline-link-macro-rx"></block></block>
+  <block id="0520ab41af41ebec72b058bb70369c2c" category="paragraph"><block ref="0520ab41af41ebec72b058bb70369c2c" category="inline-link-macro-rx"></block></block>
+  <block id="c8e27990f9b14e5758d740da8c613fb4" category="paragraph"><block ref="c8e27990f9b14e5758d740da8c613fb4" category="inline-link-macro-rx"></block></block>
+  <block id="b4145d0681d490a7d2e0e89a3c70fbf1" category="inline-link-macro">顯示AutoSupport 錶面組態</block>
+  <block id="78cd161b32c70a39191c00ca15dfc73d" category="paragraph"><block ref="78cd161b32c70a39191c00ca15dfc73d" category="inline-link-macro-rx"></block></block>
+  <block id="282a66aa79bdcd790e54ba76f725ae71" category="inline-link-macro">測試AutoSupport 供應設定</block>
+  <block id="59ed469f8c0fb1e7540b9c5e0e274379" category="paragraph"><block ref="59ed469f8c0fb1e7540b9c5e0e274379" category="inline-link-macro-rx"></block></block>
+  <block id="ca611b7f5b98899a7abee91397e031fa" category="paragraph">以下警示組態命令清單可供 E 系列儲存系統使用。</block>
+  <block id="478f3d35dcc84bea1a78b7ac21781c63" category="paragraph">E 系列儲存系統可使用下列陣列組態命令清單。</block>
+  <block id="27a16d7fcbdb2e5222cbb08871982f58" category="paragraph">E 系列儲存系統可使用下列自動支援命令清單。</block>
+  <block id="3debeae67dbeb507c3cb1a41e3d15efe" category="section-title">適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令</block>
+  <block id="b9aa6488935866e17a533f7cb9907f95" category="paragraph"><block ref="b9aa6488935866e17a533f7cb9907f95" category="inline-link-macro-rx"></block></block>
+  <block id="48dd72449a509b862d1dbc2e5df66c1d" category="paragraph"><block ref="48dd72449a509b862d1dbc2e5df66c1d" category="inline-link-macro-rx"></block></block>
+  <block id="91791fe8747c000ea0ee9806ad0b2697" category="paragraph">以下是 E 系列儲存系統可用的完整命令清單。</block>
+  <block id="c71942c4a8b171695841ba7046fc3eca" category="inline-link-macro">啟用或停用 AutoSupport 遠端診斷功能</block>
+  <block id="2fa9ab72f6f5ccc0cf969e1a230ce942" category="paragraph"><block ref="2fa9ab72f6f5ccc0cf969e1a230ce942" category="inline-link-macro-rx"></block></block>
+  <block id="fb10773226243f93cf4024b28436d09c" category="paragraph">E2700 和 E5600 系統可使用下列命令清單。</block>
+  <block id="365f3ca0540bf35310ae0332b69b7733" category="summary">E4000 ， E2800 ， E5700 ， EF600 和 EF300 命令</block>
+  <block id="d98c52acb3963aab4c26465735d8ccd1" category="paragraph">下列命令清單適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 系統。</block>
+  <block id="a7e37cb158c978c104225254d414a1d2" category="paragraph">下列鏡射命令清單可用於 E 系列儲存系統。</block>
+  <block id="3c987a7895df93dcf7095d41701a10a9" category="paragraph">E 系列儲存系統提供下列效能調校命令清單。</block>
+  <block id="273c6d6b2b49f1a011b0804803e8c061" category="paragraph">下列複寫命令清單可供 E 系列儲存系統使用。</block>
+  <block id="cb7623073f82d3677db1ad1bb88781e9" category="paragraph">您的 E 系列儲存系統可使用下列安全命令清單。</block>
+  <block id="cda0a54617eafd4a642b731508c46594" category="paragraph">E 系列儲存系統提供下列儲存監控人員命令清單。</block>
+  <block id="e6758e83fedb51f643c556959edf8316" category="paragraph">E 系列儲存系統可使用下列 Volume 組態命令清單。</block>
+  <block id="32ab50a97e637694ca3f82a504b945c5" category="section-title">將註解新增至指令碼檔案的方法</block>
+  <block id="ec6f7bfaf6737c1c0275c9a2144a4d8d" category="section-title">CLI 命令包裝函式語法慣例</block>
+  <block id="4051b543eb82d06a3875bc1d2c902524" category="paragraph">SYMBOL傳輸協定是唯一支援E2700和E5600控制器的傳輸協定。為了保留現有的指令碼並將轉換時間減至最短、CLI選項和語法會盡可能保留。但是、E2800和E5700控制器在安全性、驗證、AutoSupport 可靠性和警示訊息等方面的功能有一些差異、使這些控制器的某些CLI語法變得過時。不過、在某些情況下、只有在使用新https傳輸協定時、E2800或E5700上的語法才會過時。</block>
+  <block id="0c691b598eb5dcf4dbe4aee57abd7fce" category="paragraph">CLI下的詳細錯誤報告功能如下：</block>
+  <block id="7ab16c582be12bf2ea6a9bcbf26ef849" category="summary">SANtricity OS 11.60 及更新版本可直接透過 SANtricity 系統管理員下載及安裝 http 型版本的 CLI （也稱為 Secure CLI 或 SMCLI ）。</block>
+  <block id="3bcaed463dcace2a5d7df8ac788e2faa" category="paragraph">SANtricity OS 11.60 及更新版本可直接透過 SANtricity 系統管理員下載及安裝 http 型版本的 CLI （也稱為「 Secure CLI 」或 SMCLI ）。</block>
+  <block id="326cbd85dc5f285361de38f20d31c9df" category="paragraph">SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 和 EF280 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。</block>
+  <block id="afbe36b824d95e989a52e9001491c721" category="summary">已執行命令會傳回結束狀態。此表列出可能傳回的結束狀態、以及每個狀態的意義。</block>
+  <block id="4e0440694d3b4fa172c69a3cac707e21" category="paragraph">已執行命令會傳回結束狀態。下表列出可能會傳回的結束狀態，以及每個狀態的意義。</block>
+  <block id="20b10ae58c66c5b5927a513b2111c0c0" category="section-title">結束狀態定義</block>
+  <block id="6fde9e35cfbe9b570c98b18c68aa40b2" category="summary">以下各節中的指令碼命令會列出指令碼命令可執行的最低韌體層級。</block>
+  <block id="94077f6f150325fb211db641c09ce314" category="paragraph">指令碼命令和命令參數不會在控制器韌體的所有版本下執行。在指令碼命令中、韌體層級會列在標題「韌體層級最低」下。 此清單說明如何解讀韌體層級的相關資訊。</block>
+  <block id="1e49df5be0b19054e9c0c14af53a4b02" category="paragraph">Windows PowerShell在Windows命令提示字元上提供更強大的命令和指令碼功能集、使其更為完善。您可以在Windows PowerShell中執行所有的CLI和指令碼命令、不過Windows PowerShell有一些獨特的格式設定需求。這些要求如下：</block>
+  <block id="94bb5b961b405d7b81426727ccc3745a" category="summary">根據輸入的值或名稱， CLI 命令會強制執行某些格式規則。</block>
+  <block id="ad6459132a0e9d663a3740bfbcd40e30" category="section-title">CLI 格式規則</block>
+  <block id="ef4148f48307b8c9275628c89160b45e" category="summary">互動模式可讓您執行個別命令，而不需使用預先修正命令<block ref="6c1c8c9ef027362a508a3965a2e7831b" prefix=" " category="inline-code"></block>。</block>
+  <block id="1ebdd2ce41d7ee389eba398f485abca0" category="summary">CLI 命令中使用的名稱必須遵守特定規則。</block>
+  <block id="1f112336dfafee86bd5edd7429ea6243" category="paragraph">使用 CLI ，您可以從作業系統提示字元執行命令，例如 DOS<block ref="d7aa32b0c582222819b91c8e0ccca765" prefix=" " category="inline-code"></block> 提示字元， Linux 作業系統路徑或 Solaris 作業系統路徑。</block>
+  <block id="85aeffdc26f30cd5e36a41f6c2599ecb" category="paragraph">CLI 命令包含下列元素：</block>
+  <block id="d7219d378ce621ad5593ef3541fe98c9" category="summary">為了確保成功執行，指令碼命令必須以適當的結構寫入。</block>
+  <block id="9206a3c52cc374d2c4bcd4c2435f0a4c" category="paragraph">為了確保成功執行，指令碼命令必須以適當的結構寫入。</block>
+  <block id="969c9aafd3ad326a73ec93408a332797" category="paragraph">這些命令屬於一般類別，在您套用命令來設定或維護儲存陣列時，會重複使用這些類別。下表列出指令碼命令的一般格式及每個命令的定義。</block>
+  <block id="9f83268e1b8fb56b39b289fd0b017d6d" category="summary">撰寫指令碼命令時，請遵循下列準則。</block>
+  <block id="5e40a8e83b3a3f822534bef7faa8799b" category="paragraph"><block ref="5e40a8e83b3a3f822534bef7faa8799b" category="inline-link-rx"></block></block>
+  <block id="11b408e3275d65fef594050a844c8104" category="section-title">SANtricity 11.90</block>
+  <block id="bb368ace2c104ebc1936c99e46744a7d" category="paragraph">下表列出 11.90 版 CLI 和指令碼命令的變更。</block>
+  <block id="277f6129cc659f62a7535c5645940126" category="paragraph"><block ref="277f6129cc659f62a7535c5645940126" category="inline-link-rx"></block></block>
+  <block id="cf7e9e105e18990ba410e1edfb66d617" category="inline-link">儲存控制器 ArrayManagementCSR</block>
+  <block id="7c2ee57c55f996ae9a0c1a10ddaeaa6e" category="paragraph"><block ref="7c2ee57c55f996ae9a0c1a10ddaeaa6e" category="inline-link-rx"></block></block>
+  <block id="bc5a1792a55da7335139be566f27d0fc" category="paragraph">新增<block ref="74375e3e560ea0ccb01ea5e27866909a" prefix=" " category="inline-code"></block>參數。</block>
+  <block id="eba005731b64cdceb716385f6b0ab248" category="inline-link">設定電子郵件（ SMTP ）傳送方法</block>
+  <block id="2a1fee9f320df717c9070db7c760a0fc" category="paragraph"><block ref="2a1fee9f320df717c9070db7c760a0fc" category="inline-link-rx"></block></block>
+  <block id="2fec64df4b8f4cad94037197121f99b0" category="paragraph">新增<block ref="5c1ab9389f47f48fe5b3f7e85e114264" prefix=" " category="inline-code"></block>參數。</block>
+  <block id="f428d3f8fa259d23b94a6fdc0a8dc32a" category="inline-link">顯示 AutoSupport 設定</block>
+  <block id="77d8b5d953985ae2992c2ac0a2b2280d" category="paragraph"><block ref="77d8b5d953985ae2992c2ac0a2b2280d" category="inline-link-rx"></block></block>
+  <block id="79f5e5b1e1fbcae8b3d82e2c774aa0ba" category="paragraph">新增派遣台大小限制和目的地電子郵件地址，以做為命令輸出的範例。</block>
+  <block id="e873b0fb20d6ee2e171d5efa1a635264" category="inline-link">下載 storageArray keyManagementCertificate</block>
+  <block id="49dc8933ffa823c7e0c676d71b74060a" category="paragraph"><block ref="49dc8933ffa823c7e0c676d71b74060a" category="inline-link-rx"></block></block>
+  <block id="2c6896158f13229becb081b45d1be339" category="paragraph">新增<block ref="3a1fe391cfcf9c718d5bc02bf3a7ff87" prefix=" " category="inline-code"></block>參數。</block>
+  <block id="4a8ad30f5e47d5591e164cfbf74f1d7a" category="paragraph"><block ref="4a8ad30f5e47d5591e164cfbf74f1d7a" category="inline-link-rx"></block></block>
+  <block id="5d41ad4f145ade32f5e478932b6efea5" category="sidebar">設定 AutoSupport 派遣台大小限制</block>
+  <block id="d941967741f1767955be20b5fca52617" category="sidebar">設定 AutoSupport https 傳輸方法</block>
+  <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">設定電子郵件 SMTP 傳送方法</block>
 </blocks>

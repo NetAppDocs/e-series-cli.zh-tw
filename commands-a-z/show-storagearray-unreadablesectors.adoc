@@ -7,7 +7,7 @@ summary: show storageArray unreadableSecors命令會傳回儲存陣列中無法�
 = 顯示儲存陣列無法讀取的磁區
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: show storageArray unreadableSecors命令會傳回儲存陣列中無法�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
@@ -47,7 +47,7 @@ summary: show storageArray unreadableSecors命令會傳回儲存陣列中無法�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 show storageArray unreadableSectors
 ----

@@ -7,8 +7,11 @@ summary: 安全命令
 = 安全命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+您的 E 系列儲存系統可使用下列安全命令清單。
 
 
 

@@ -7,7 +7,7 @@ summary: SMcli alertTest命令會傳送測試警示給Windows事件記錄和所�
 = 測試警示
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ summary: SMcli alertTest命令會傳送測試警示給Windows事件記錄和所�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 SMcli -alertTest
 ----

@@ -2,15 +2,20 @@
 permalink: get-started/exit-status.html 
 sidebar: sidebar 
 keywords: exit, status 
-summary: 此表列出可能傳回的結束狀態、以及每個狀態的意義。 
+summary: 已執行命令會傳回結束狀態。此表列出可能傳回的結束狀態、以及每個狀態的意義。 
 ---
 = 結束狀態
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-此表列出可能傳回的結束狀態、以及每個狀態的意義。
+[role="lead"]
+已執行命令會傳回結束狀態。下表列出可能會傳回的結束狀態，以及每個狀態的意義。
+
+
+
+== 結束狀態定義
 
 [cols="3*"]
 |===

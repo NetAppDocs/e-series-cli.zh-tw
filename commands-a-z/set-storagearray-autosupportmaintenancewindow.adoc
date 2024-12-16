@@ -4,10 +4,10 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autosupSupportMaintenanceWindows命令會開啟或關閉AutoSupport 「還原維護所需時間」功能。 
 ---
-= 啟用或停用AutoSupport 「還原維護」視窗（適用於個別E2800或E5700陣列）
+= 啟用或停用 AutoSupport 維護時段
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -19,19 +19,19 @@ summary: set storageArray autosupSupportMaintenanceWindows命令會開啟或關�
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。
 
 
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set storageArray autoSupportMaintenanceWindow (enable | disable)
     emailAddresses=("emailAddress1" "emailAddress2" ...)

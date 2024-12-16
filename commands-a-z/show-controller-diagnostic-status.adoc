@@ -7,7 +7,7 @@ summary: show controller命令會傳回以start控制器診斷命令啟動的控
 = 顯示控制器診斷狀態
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -19,7 +19,7 @@ summary: show controller命令會傳回以start控制器診斷命令啟動的控
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show controller [(a| b)] diagnosticStatus pass:quotes[[file=_filename_]]
 ----

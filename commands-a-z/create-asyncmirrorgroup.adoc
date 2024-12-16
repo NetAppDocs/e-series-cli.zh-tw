@@ -7,7 +7,7 @@ summary: create asyncdMirrorGroup命令會在本機儲存陣列和遠端儲存�
 = 建立非同步鏡射群組
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ summary: create asyncdMirrorGroup命令會在本機儲存陣列和遠端儲存�
 
 [NOTE]
 ====
-E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。
+E4000 ， E2800 ， E5700 ， EF600 和 EF300 平台不支援此命令。
 
 ====
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+不適用
 
 
 
@@ -44,7 +44,7 @@ E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create asyncMirrorGroup userLabel=pass:quotes[_"asyncMirrorGroupName"_]
 (remoteStorageArrayName=pass:quotes[_"storageArrayName"_] | remoteStorageArrayWWN=pass:quotes[_"wwID"_])

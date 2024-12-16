@@ -7,7 +7,7 @@ summary: DELETE asyncdMirrorGroup命令會從本機儲存陣列和遠端儲存�
 = 刪除非同步鏡射群組
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: DELETE asyncdMirrorGroup命令會從本機儲存陣列和遠端儲存�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 
 
@@ -35,7 +35,7 @@ summary: DELETE asyncdMirrorGroup命令會從本機儲存陣列和遠端儲存�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete (allAsyncMirrorGroups | asyncMirrorGrouppass:quotes[[_"asyncMirrorGroupName"_] |
 asyncMirrorGroups pass:quotes[[_"asyncMirrorGroupName_1" ... "asyncMirrorGroupName_n"_]])

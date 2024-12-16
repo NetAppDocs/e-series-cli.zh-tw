@@ -7,7 +7,7 @@ summary: show storageArray unconfiguredInitiator命令會傳回儲存陣列偵�
 = 顯示未設定的啟動器
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: show storageArray unconfiguredInitiator命令會傳回儲存陣列偵�
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Storage Monitor 角色。
 
 此命令會取代 link:show-storagearray-unconfigurediscsiinitiators.html["show storageArray unconfiguredIscsiInitiator"] 命令。
 
@@ -31,7 +31,7 @@ summary: show storageArray unconfiguredInitiator命令會傳回儲存陣列偵�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 show storageArray unconfiguredInitiators
 ----

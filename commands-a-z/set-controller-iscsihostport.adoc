@@ -7,7 +7,7 @@ summary: set控制器iscsiHostPort命令會變更主機連接埠的網路內容�
 = 設定iSCSI主機連接埠網路內容
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set控制器iscsiHostPort命令會變更主機連接埠的網路內容�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 [NOTE]
 ====
@@ -34,94 +34,94 @@ summary: set控制器iscsiHostPort命令會變更主機連接埠的網路內容�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set controller [(a|b)]
 iscsiHostPort [portLabel]
 ----
-[listing]
+[source, cli]
 ----
 ([IPv4Address=(0-255).(0-255).(0-255).(0-255) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6LocalAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6RoutableAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6RouterAddress=(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF): (0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) ]|
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4=(TRUE | FALSE) | enableIPv6=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4Vlan=(TRUE | FALSE) | enableIPv6Vlan=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [enableIPv4Priority=(TRUE | FALSE) | enableIPv6Priority=(TRUE | FALSE) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4ConfigurationMethod=(static | dhcp) ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6ConfigurationMethod=(static | auto)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv4GatewayIP=(TRUE | FALSE)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6HopLimit=[0-255] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdDetectDuplicateAddress=[0-256] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdReachableTime=[0-65535] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdRetransmitTime=[0-65535]] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv6NdTimeOut=[0-65535] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4Priority=[0-7] | IPv6Priority=[0-7] ]|
 ----
-[listing]
+[source, cli]
 ----
 [IPv4SubnetMask=(0-255).(0-255).(0-255).(0-255)] |
 ----
-[listing]
+[source, cli]
 ----
 [IPv4VlanId=[1-4094] | IPv6VlanId=[1-4094]] |
 ----
-[listing]
+[source, cli]
 ----
 [maxFramePayload=[*frameSize*]] |
 ----
-[listing]
+[source, cli]
 ----
 [tcpListeningPort=[3260, 49152-65536] ]|
 ----
-[listing]
+[source, cli]
 ----
-[portSpeed=[(10 | 25)])
+[portSpeed=[(10 | 25)]])
 ----
 
 

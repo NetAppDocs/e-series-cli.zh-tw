@@ -7,7 +7,7 @@ summary: SMcli -autosupSupportLog命令可讓您檢視AutoSupport 一個資訊�
 = 擷AutoSupport 取或檢視一份資訊記錄
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli -autosupSupportLog命令可讓您檢視AutoSupport 一個資訊�
 
 == 支援的陣列
 
-此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於 E4000 ， E2800 或 E5700 儲存陣列。
 
 
 
@@ -38,7 +38,7 @@ summary: SMcli -autosupSupportLog命令可讓您檢視AutoSupport 一個資訊�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -autoSupportLog pass:quotes[(all|-n "_storageArrayName_" | -w "_wwID_")]
 pass:quotes[inputArchive=_n_] pass:quotes[outputLog=_filename_]

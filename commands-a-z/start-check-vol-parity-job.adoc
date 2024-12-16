@@ -7,7 +7,7 @@ summary: start check Volume 同位檢查工作命令會在指定的磁碟區上�
 = 開始檢查 Volume 同位檢查工作
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: start check Volume 同位檢查工作命令會在指定的磁碟區上�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start check volume[<volume_label>] parity job
 (startingLba=<start_lba> endingLba=<end_lba> scanPriority=<scan_priority> repairParityErrors=<true | false>

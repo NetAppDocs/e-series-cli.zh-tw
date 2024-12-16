@@ -7,7 +7,7 @@ summary: 「儲存檢查磁碟區同位檢查工作同位檢查錯誤」命令�
 = 儲存檢查磁碟區同位檢查工作同位元檢查錯誤
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -29,7 +29,7 @@ summary: 「儲存檢查磁碟區同位檢查工作同位檢查錯誤」命令�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 save check volume parity job parityErrors jobId=<job_id> parityErrorFile=<parity_error_file>;
 ----

@@ -7,7 +7,7 @@ summary: SMcli -supportBundle排程命令可建立或移除將支援服務組合
 = 排程自動支援服務組合集合組態
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ summary: SMcli -supportBundle排程命令可建立或移除將支援服務組合
 
 == 建立每日/每週排程的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -42,7 +42,7 @@ pass:quotes[data=_pathName_]
 
 == 建立每月/每年排程的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule enable
 pass:quotes[(all | _storageArrayName_)]
@@ -65,7 +65,7 @@ pass:quotes[data=_pathName_]
 此命令會完全移除儲存陣列的排程。若要再次儲存支援服務組合資訊、您需要建立新的排程。
 
 ====
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 SMcli -supportBundle schedule disable
 pass:quotes[(all|_storageArrayName_)]

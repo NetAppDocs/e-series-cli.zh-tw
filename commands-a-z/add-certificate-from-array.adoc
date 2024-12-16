@@ -7,7 +7,7 @@ summary: Add Certificate from Array命令可讓您從陣列取得憑證、並將
 = 從陣列新增憑證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: Add Certificate from Array命令可讓您從陣列取得憑證、並將
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[_ipAddress1 ipAddress2_  trust localCertificate]

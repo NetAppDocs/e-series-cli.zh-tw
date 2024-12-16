@@ -7,7 +7,7 @@ summary: Add Array label命令可讓您使用使用者定義的標籤、將儲�
 = 新增陣列標籤
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -28,7 +28,7 @@ summary: Add Array label命令可讓您使用使用者定義的標籤、將儲�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 
 pass:quotes[ _Address1 Address2_ add storageArrayLabel label _userDefinedString_]

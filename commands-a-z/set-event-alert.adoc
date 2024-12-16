@@ -7,7 +7,7 @@ summary: 設定事件警示命令可停用或啟用與特定警示事件相關�
 = 設定事件警示篩選
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -55,7 +55,7 @@ Set事件警示CLI命令可在單一儲存陣列上運作。當您在儲存陣�
 
 == 封鎖事件警示的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set blockEventAlert pass:quotes[_eventType_]
 ----
@@ -63,7 +63,7 @@ set blockEventAlert pass:quotes[_eventType_]
 
 == 解鎖事件警示的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set unBlockEventAlert pass:quotes[_eventType_]
 ----

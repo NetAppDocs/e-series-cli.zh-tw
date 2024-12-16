@@ -7,7 +7,7 @@ summary: start volumeGroup FullProvisioning命令會在磁碟集區中的所有�
 = 啟動Volume Group完整資源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: start volumeGroup FullProvisioning命令會在磁碟集區中的所有�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 start volumeGroup[volumeGroupName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

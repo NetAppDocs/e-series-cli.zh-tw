@@ -7,7 +7,7 @@ summary: recovering sasPort miswire命令會告知控制器已採取修正行動
 = 恢復SAS連接埠連線錯誤
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: recovering sasPort miswire命令會告知控制器已採取修正行動
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。
 
 
 
@@ -43,7 +43,7 @@ SAS有線錯誤狀況可能是下列其中一項：
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 recover sasPort miswire
 ----

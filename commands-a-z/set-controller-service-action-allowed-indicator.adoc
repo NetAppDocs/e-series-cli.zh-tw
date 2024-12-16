@@ -7,7 +7,7 @@ summary: Set控制器命令會開啟或關閉控制器匣或控制器磁碟機�
 = 設定允許控制器服務動作指示符號
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -34,7 +34,7 @@ summary: Set控制器命令會開啟或關閉控制器匣或控制器磁碟機�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set controller [(a| b)]
 serviceAllowedIndicator=(on | off)

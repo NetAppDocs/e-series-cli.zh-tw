@@ -2,13 +2,16 @@
 permalink: get-started/naming-conventions.html 
 sidebar: sidebar 
 keywords: name, conventions 
-summary: 名稱最多可包含30個字元。 
+summary: CLI 命令中使用的名稱必須遵守特定規則。 
 ---
 = 命名慣例
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+CLI 命令中使用的名稱必須遵守特定規則。
 
 * 名稱最多可包含30個字元。
 * 您可以使用字母數字字元、連字號和底線的任意組合來命名下列元件：

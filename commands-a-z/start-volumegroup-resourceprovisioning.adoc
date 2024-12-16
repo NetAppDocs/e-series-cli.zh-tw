@@ -7,7 +7,7 @@ summary: start volumeGroup resourceProvisioning命令可在指定的Volume群組
 = 啟動Volume群組資源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ summary: start volumeGroup resourceProvisioning命令可在指定的Volume群組
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[start volumeGroup[_volumeGroupName_]] resourceProvisioning
 ----

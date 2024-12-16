@@ -7,7 +7,7 @@ summary: 使用SMcli -autosupSupportConfig測試命令AutoSupport 、傳送測�
 = 測試AutoSupport 該組態
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -37,7 +37,7 @@ summary: 使用SMcli -autosupSupportConfig測試命令AutoSupport 、傳送測�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportConfig test reply-toEmail<address>
 ----

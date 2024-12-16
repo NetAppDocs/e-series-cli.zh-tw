@@ -7,7 +7,7 @@ summary: show blockedEventAlertList命令會傳回目前被set blockEventAlert�
 = 顯示封鎖的事件
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -32,7 +32,7 @@ summary: show blockedEventAlertList命令會傳回目前被set blockEventAlert�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 show blockedEventAlertList
 ----

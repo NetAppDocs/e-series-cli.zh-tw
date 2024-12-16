@@ -7,9 +7,10 @@ summary: 循環語法元素是可在指令碼命令中使用的一般參數和�
 = 循環語法元素
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 循環語法元素是可在指令碼命令中使用的一般參數和選項類別。下表列出週期性語法元素所使用的慣例。
 
 [cols="2*"]

@@ -7,7 +7,7 @@ summary: Check storageArray Connectivity命令可驗證本機儲存陣列和遠�
 = 檢查儲存陣列連線能力
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -21,14 +21,14 @@ Check storageArray connection效 命令用於驗證本地儲存陣列和遠端�
 
 [NOTE]
 ====
-E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。
+E4000 ， E2800 ， E5700 ， EF600 和 EF300 平台不支援此命令。
 
 ====
 
 
 == 角色
 
-若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+不適用
 
 
 
@@ -45,7 +45,7 @@ E2800 、 E5700 、 EF600 和 EF300 平台不支援此命令。
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 check storageArray connectivity
 (remoteStorageArrayName=pass:quotes[_"storageArrayName"_]|

@@ -7,8 +7,11 @@ summary: 自動支援命令
 = 自動支援命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+E 系列儲存系統可使用下列自動支援命令清單。
 
 
 
@@ -44,24 +47,26 @@ link:../commands-a-z/save-storagearray-supportdata.html["儲存儲存陣列支�
 
 
 
-== E2800、E5700的指令AutoSupport
+== 適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["啟用或停用AutoSupport 「還原維護」視窗（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["設定 AutoSupport 派遣台大小限制"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["啟用或停用AutoSupport 「根據需求提供支援」功能（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["啟用或停用 AutoSupport 維護時段"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["啟用或停用AutoSupport 「停止執行功能」（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["啟用或停用AutoSupport 「根據需求提供支援」功能"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["擷取AutoSupport 一份資料檔（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["啟用或停用AutoSupport 「停止遠端診斷」功能"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["擷AutoSupport 取一份資訊記錄"]
+
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程"]
 
 link:../commands-a-z/show-storagearray-autosupport.html["顯示AutoSupport 僅供E2800或E5700儲存陣列使用的組態"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["設定AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["設定AutoSupport 資訊收集排程"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["指定AutoSupport 功能完善的HTTP（S）交付方法（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["指定 AutoSupport HTTP(S) 交付方法"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["指定電子郵件（SMTP）交付方法（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["指定電子郵件（SMTP）傳送方法"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["測試AutoSupport 供應設定（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["測試AutoSupport 供應設定"]

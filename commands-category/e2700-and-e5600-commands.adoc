@@ -6,9 +6,14 @@ summary: E2700和E5600命令
 ---
 = E2700和E5600命令
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+[role="lead"]
+E2700 和 E5600 系統可使用下列命令清單。
+
+
+
+= E2700和E5600命令
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["啟動非同步鏡射"]
 

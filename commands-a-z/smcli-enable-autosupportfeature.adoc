@@ -7,7 +7,7 @@ summary: SMcli enable autosupport功能命令可開啟AutoSupport 所有託管�
 = 在AutoSupport EMW管理網域層級啟用或停用支援功能（僅限SMcli）
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli enable autosupport功能命令可開啟AutoSupport 所有託管�
 
 == 支援的陣列
 
-此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於 E4000 ， E2800 或 E5700 儲存陣列。
 
 
 
@@ -53,7 +53,7 @@ summary: SMcli enable autosupport功能命令可開啟AutoSupport 所有託管�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 SMcli enable|disable autoSupportFeature
 ----

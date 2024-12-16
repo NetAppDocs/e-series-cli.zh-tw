@@ -7,7 +7,7 @@ summary: show asyncdMirrorGroup同步處理程序命令會顯示本機與遠端�
 = 顯示非同步鏡射群組同步處理進度
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: show asyncdMirrorGroup同步處理程序命令會顯示本機與遠端�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括 E2700 、 E5600 、 E2800 、 E5700 、 EF600 和 EF300 陣列、只要安裝了所有 SMcli 套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 
 
@@ -40,7 +40,7 @@ summary: show asyncdMirrorGroup同步處理程序命令會顯示本機與遠端�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 show asyncMirrorGroup pass:quotes[[_asyncMirrorGroupName_]]
 [synchronizationProgress]

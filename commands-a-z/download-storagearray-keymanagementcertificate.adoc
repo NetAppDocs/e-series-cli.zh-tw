@@ -7,7 +7,7 @@ summary: download/storageArray keyManagementCertificate命令會在儲存陣列�
 = 安裝儲存陣列外部金鑰管理憑證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: download/storageArray keyManagementCertificate命令會在儲存陣列�
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有安全管理角色。
 
 
 
@@ -38,10 +38,9 @@ summary: download/storageArray keyManagementCertificate命令會在儲存陣列�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
-pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_"]
+pass:quotes[download storageArray keyManagementClientCertificate certificateType=(client|server) file="_filename_" [privateKeyFile = "keyFileName"]]
 ----
 
 
@@ -63,6 +62,13 @@ pass:quotes[download storageArray keyManagementClientCertificate certificateType
 檔案
  a| 
 可讓您指定用戶端簽署的憑證或伺服器根/中繼CA憑證。檔案必須為PEM/NER格式。
+
+
+
+ a| 
+`privateKeyFile`
+ a| 
+可讓您在簽署的憑證旁邊下載私密金鑰。 `privateKeyFile`參數必須與值一起使用 `certificateType=client`。
 
 |===
 

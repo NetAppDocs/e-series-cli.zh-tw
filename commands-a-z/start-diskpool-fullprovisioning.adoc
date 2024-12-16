@@ -7,7 +7,7 @@ summary: start diskPool FullProvisioning命令會在磁碟集區中的所有磁�
 = 啟動磁碟集區完整資源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -39,7 +39,7 @@ summary: start diskPool FullProvisioning命令會在磁碟集區中的所有磁�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 start diskPool[diskPoolName] fullProvisioning [disableResourceProvisioning=(TRUE | FALSE)]
 ----

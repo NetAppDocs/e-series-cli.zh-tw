@@ -7,7 +7,7 @@ summary: 使用「移除陣列標籤」命令、您可以移除儲存陣列的�
 = 移除陣列標籤
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 使用「移除陣列標籤」命令、您可以移除儲存陣列的�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete storageArrayLabel label pass:quotes[_userDefinedString_]
 delete storageArrayLabel all

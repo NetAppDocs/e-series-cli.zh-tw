@@ -420,8 +420,10 @@ entries:
       url: "/commands-a-z/set-asyncmirrorgroup.html"
     - title: 設定稽核記錄
       url: "/commands-a-z/set-auditlog.html"
-    - title: 設定AutoSupport 以E2800或e5700傳送的功能
-      url: "/commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html"
+    - title: 設定 AutoSupport 派遣台大小限制
+      url: "/commands-a-z/set-autosupport-dispatch-limit.html"
+    - title: 設定 AutoSupport https 傳輸方法
+      url: "/commands-a-z/set-autosupport-https-delivery-method.html"
     - title: 設定cgrsnapvolume
       url: "/commands-a-z/set-cgsnapvolume.html"
     - title: 設定一致性群組屬性
@@ -456,8 +458,8 @@ entries:
       url: "/commands-a-z/set-drive-serviceallowedindicator.html"
     - title: 設定系統力學
       url: "/commands-a-z/set-drivechannel.html"
-    - title: 設定電子郵件的SMTP傳送方法e2800或e5700
-      url: "/commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html"
+    - title: 設定電子郵件 SMTP 傳送方法
+      url: "/commands-a-z/set-email-smtp-delivery-method.html"
     - title: 設定電子郵件警示
       url: "/commands-a-z/set-emailalert.html"
     - title: 設定事件警示

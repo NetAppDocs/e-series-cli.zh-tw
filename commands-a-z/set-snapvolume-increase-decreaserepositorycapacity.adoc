@@ -7,7 +7,7 @@ summary: set snapVolume增加/減少eRegitoryCapacity命令可增加或減少快
 = 設定Snapshot Volume儲存庫Volume容量
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,30 +17,30 @@ summary: set snapVolume增加/減少eRegitoryCapacity命令可增加或減少快
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 
 
 == 增加容量的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume[“snapVolumeName”] increaseRepositoryCapacity
 (repositoryVolumes="repos_xxxx" |
-repositoryVolumes=pass:quotes[(_volumeGroupName_] [capacity=pass:quotes[_capacityValue_]] |
-repositoryVolumes=pass:quotes[(_diskPoolName_] [capacity=pass:quotes[_capacityValue_]])
+repositoryVolumes=pass:quotes[(_volumeGroupName_)] [capacity=pass:quotes[_capacityValue_]] |
+repositoryVolumes=pass:quotes[(_diskPoolName_)] [capacity=pass:quotes[_capacityValue_]])
 ----
 
 
 == 降低容量的語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set snapVolume pass:quotes[["_snapVolumeName_"]] decreaseRepositoryCapacity
 count=pass:quotes[_numberOfVolumes_]

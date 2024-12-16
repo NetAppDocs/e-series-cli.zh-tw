@@ -2,13 +2,16 @@
 permalink: get-started/usage-guidelines.html 
 sidebar: sidebar 
 keywords: script command, guidelines 
-summary: 此清單提供在命令列上寫入指令碼命令的準則。 
+summary: 撰寫指令碼命令時，請遵循下列準則。 
 ---
 = 指令碼命令準則
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+撰寫指令碼命令時，請遵循下列準則。
 
 此清單提供在命令列上寫入指令碼命令的準則：
 

@@ -7,7 +7,7 @@ summary: set控制器hostPort命令會變更下列類型主機連接埠的網路
 = 設定控制器主機連接埠內容
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set控制器hostPort命令會變更下列類型主機連接埠的網路
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。
 
 
 
@@ -38,9 +38,8 @@ summary: set控制器hostPort命令會變更下列類型主機連接埠的網路
 
 == 語法
 
-[listing]
+[source, cli]
 ----
-
 set controller [(a|b)] hostPort ["portLabel"[, "physical"|"virtual"]]
     (IPV4Address=(0-255).(0-255).(0-255).(0-255) |
     IPv6LocalAddress=(FE80):(0000):(0000):(0000):(0-FFFF):(0-FFFF):(0-FFFF):(0-FFFF) |

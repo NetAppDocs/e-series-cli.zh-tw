@@ -1,0 +1,68 @@
+---
+permalink: commands-a-z/set-autosupport-dispatch-limit.html 
+sidebar: sidebar 
+keywords: Autosupport, bundle, dispatch, delivery type, size 
+summary: 針對不同的交付類型，設定 AutoSupport 套裝組合和派單的最大大小。 
+---
+= 設定 AutoSupport 派遣台大小限制
+:allow-uri-read: 
+:icons: font
+:imagesdir: ../media/
+
+
+[role="lead"]
+ `set storageArray autoSupport dispatchSizeLimit`設定不同交付類型的 AutoSupport 套裝組合和派單數量上限。
+
+透過此命令，使用者可以根據電子郵件伺服器支援的內容來設定電子郵件大小。較大的尺寸可降低支援套件遭截斷的機率。
+
+
+NOTE: 除非 NetApp 支援部門指示，否則使用者通常不應設定 HTTPS 大小。
+
+
+
+== 支援的陣列
+
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+
+
+
+== 角色
+
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。
+
+
+
+== 語法
+
+[source, cli, subs="+macros"]
+----
+
+set storageArray autoSupport dispatchSizeLimit (https=(<sizeInBytes>|unlimited)|email=(<sizeInBytes>|unlimited));
+----
+
+
+== 參數
+
+[cols="2*"]
+|===
+| 參數 | 說明 
+
+
+ a| 
+`https`
+ a| 
+HTTPS 分派大小上限（位元組）。如果未設定最大大小，則預設值為 50 MIB 。值為「 unun限量 」或 0 ，不允許任何大小限制。允許的最小大小為 2 個 MIB 。
+
+
+
+ a| 
+`email`
+ a| 
+最大電子郵件（ SMTP ）傳送大小（位元組）。如果未設定最大大小，則預設值為 5 MIB 。值為「 unun限量 」或 0 ，不允許任何大小限制。允許的最小大小為 2 個 MIB 。
+
+|===
+
+
+== 最低韌體層級
+
+8.90

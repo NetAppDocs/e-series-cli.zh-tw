@@ -2,15 +2,18 @@
 permalink: get-started/interactive-mode.html 
 sidebar: sidebar 
 keywords: interactive mode 
-summary: 如果您輸入「Mcli」和儲存陣列名稱、但未指定CLI參數、指令碼命令或指令碼檔案、則命令列介面會以互動模式執行。 
+summary: '互動模式可讓您執行個別命令，而不需使用預先修正命令 `SMcli`。' 
 ---
 = 互動模式
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-如果您輸入「Mcli」和儲存陣列名稱、但未指定CLI參數、指令碼命令或指令碼檔案、則命令列介面會以互動模式執行。互動模式可讓您執行個別命令、而無需使用「Mcli」預先修正命令。
+[role="lead"]
+互動模式可讓您執行個別命令，而不需使用預先修正命令 `SMcli`。
+
+如果您輸入「Mcli」和儲存陣列名稱、但未指定CLI參數、指令碼命令或指令碼檔案、則命令列介面會以互動模式執行。
 
 在互動模式中、您可以輸入單一命令、檢視結果、然後輸入下一個命令、而無需輸入完整的「Mcli」字串。互動模式有助於判斷組態錯誤、並快速測試組態變更。
 

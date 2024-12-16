@@ -7,7 +7,7 @@ summary: SMcli autosupport排程重設命令會重設AutoSupport 一週中每日
 = 重設AutoSupport 資訊收集排程
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: SMcli autosupport排程重設命令會重設AutoSupport 一週中每日
 
 == 支援的陣列
 
-此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於E2800或E5700儲存陣列。
+此命令一次適用於管理網域中的所有E2700和E5600儲存陣列。不適用於 E4000 ， E2800 或 E5700 儲存陣列。
 
 
 
@@ -38,7 +38,7 @@ summary: SMcli autosupport排程重設命令會重設AutoSupport 一週中每日
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 SMcli -autoSupportSchedule reset | (dailyTime=<startTime>-<endTime>
    dayOfWeek=[Sunday Monday Tuesday Wednesday Thursday Friday Saturday]

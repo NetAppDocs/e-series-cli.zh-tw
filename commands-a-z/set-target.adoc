@@ -7,7 +7,7 @@ summary: set target命令會變更iSCSI/iSER目標的內容、包括驗證方法
 = 設定目標內容
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set target命令會變更iSCSI/iSER目標的內容、包括驗證方法
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具備Storage Admin或Storage Monitor角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Storage Monitor 角色。
 
 
 
@@ -38,9 +38,8 @@ summary: set target命令會變更iSCSI/iSER目標的內容、包括驗證方法
 
 == 語法
 
-[listing]
+[source, cli]
 ----
-
 set target (["targetAliasName"] | <"targetQualifiedName">) (authenticationMethod=(none | chap chapSecret="newSecurityKey") | targetAlias="newAliasName")
 ----
 

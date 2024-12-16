@@ -7,7 +7,7 @@ summary: 「刪除憑證」命令可讓您從CLI套件信任存放區刪除憑�
 = 刪除憑證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: 「刪除憑證」命令可讓您從CLI套件信任存放區刪除憑�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 delete localCertificate all | alias pass:quotes[_alias_]
 ----

@@ -7,7 +7,7 @@ summary: create volume命令會建立新的Volume群組和Volume、並可讓您�
 = 建立RAID Volume（手動選取磁碟機）
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,44 +17,23 @@ summary: create volume命令會建立新的Volume群組和Volume、並可讓您�
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800、E5700、 EF600和EF300陣列、只要安裝所有SMcli套件即可。
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有儲存管理員角色。
 
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 create volume drives=pass:quotes[(_trayID1_],pass:quotes[[_drawerID1,_]]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_)]
 [volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
 raidLevel=(0 | 1 | 3 | 5 | 6)
-userLabel=pass:quotes[_"volumeName"_]
-[capacity=pass:quotes[_volumeCapacity_]]
-[owner=(a|b)]
-[mapping=(none | default)]
-[cacheReadPrefetch=(TRUE | FALSE)]
-[segmentSize=pass:quotes[_segmentSizeValue_]]
-[usageHint=(fileSystem | dataBase | multiMedia)]
-[trayLossProtect=(TRUE | FALSE)]
-[drawerLossProtect=(TRUE | FALSE)]
-[dssPreAllocate=(TRUE | FALSE)]
-[securityType=(none | capable | enabled )]
-[dataAssurance=(none | enabled)]
-[resourceProvisioningCapable=(TRUE | FALSE)]
-[blockSize=blockSizeValue]
-
-----
-[listing, subs="+macros"]
-----
-create volume drives=pass:quotes[_(trayID1,_]pass:quotes[[_drawerID1,_]pass:quotes[_slotID1 ... trayIDn_],pass:quotes[[_drawerIDn,_]]pass:quotes[_slotIDn_)]
-[volumeGroupUserLabel=pass:quotes[_"volumeGroupName"_]]
-raidLevel=(0 | 1 | 5 | 6)
 userLabel=pass:quotes[_"volumeName"_]
 [capacity=pass:quotes[_volumeCapacity_]]
 [owner=(a|b)]

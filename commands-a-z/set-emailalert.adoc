@@ -7,7 +7,7 @@ summary: set emailAlert命令可設定電子郵件、將電子郵件傳送至指
 = 設定電子郵件警示設定
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,15 +17,14 @@ summary: set emailAlert命令可設定電子郵件、將電子郵件傳送至指
 
 == 支援的陣列
 
-此命令適用於E2800、E5700、EF600及EF300儲存陣列。不過、您可以將命令當成SMcli命令、而非指令碼命令、用於E2700或E5600陣列。在此情況下、命令會套用至管理網域中的所有陣列。
+此命令適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 儲存陣列。不過、您可以將命令當成SMcli命令、而非指令碼命令、用於E2700或E5600陣列。在此情況下、命令會套用至管理網域中的所有陣列。
 
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
-
 set emailAlert
     serverAddress=pass:quotes["_serverAddress_"] |
     serverEncryption=pass:quotes[_none_ | _smtps_ | _starttls_ |]

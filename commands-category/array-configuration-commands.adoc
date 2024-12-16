@@ -7,8 +7,11 @@ summary: 陣列組態命令
 = 陣列組態命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+E 系列儲存系統可使用下列陣列組態命令清單。
 
 
 

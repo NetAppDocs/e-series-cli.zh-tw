@@ -7,7 +7,7 @@ summary: Set tray命令可設定紙匣的使用者定義屬性
 = 設定紙匣屬性
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: Set tray命令可設定紙匣的使用者定義屬性
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set tray pass:quotes[[_trayID_]] (chassisName | assetTag)=pass:quotes["_userID_"]
 ----

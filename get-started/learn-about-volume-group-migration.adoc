@@ -2,21 +2,22 @@
 permalink: get-started/learn-about-volume-group-migration.html 
 sidebar: sidebar 
 keywords: volume, group, migration, learn, data, access, export, import, component 
-summary: 深入瞭解Volume群組移轉 
+summary: Volume群組移轉可讓您匯出Volume群組、以便將Volume群組匯入不同的儲存陣列。您也可以匯出Volume群組、以便離線儲存資料。 
 ---
 = 深入瞭解Volume群組移轉
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+Volume群組移轉可讓您匯出Volume群組、以便將Volume群組匯入不同的儲存陣列。您也可以匯出Volume群組、以便離線儲存資料。
 
 [CAUTION]
 ====
 如果磁碟區群組包含支援NVMe或FIPS的磁碟機、則必須從來源陣列記錄/儲存安全金鑰和密碼、以便在開始移轉至目標陣列之前解除鎖定磁碟機。如果不知道安全金鑰和密碼、而且/或不需要資料完整性、則可以執行安全性清除。E系列儲存系統不支援混合使用不同的加密安全磁碟機。如需如何使用安全金鑰解除磁碟機鎖定、清除FIPS磁碟機、以及解除鎖定或重設鎖定NVMe磁碟機的詳細資訊、請參閱SANtricity 《支援系統管理程式》的線上說明。
 
 ====
-Volume群組移轉可讓您匯出Volume群組、以便將Volume群組匯入不同的儲存陣列。您也可以匯出Volume群組、以便離線儲存資料。
-
 [NOTE]
 ====
 *可能會遺失資料存取*：您必須先匯出磁碟區群組、才能移動磁碟區群組或匯入磁碟區群組。

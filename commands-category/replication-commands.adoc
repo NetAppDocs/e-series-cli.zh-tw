@@ -7,8 +7,11 @@ summary: 複寫命令
 = 複寫命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+下列複寫命令清單可供 E 系列儲存系統使用。
 
 
 

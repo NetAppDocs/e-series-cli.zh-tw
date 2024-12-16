@@ -7,7 +7,7 @@ summary: set storageArray pqValidateOnReconstructt命令可在重建時設定儲
 = 在重建時設定儲存陣列PQ驗證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: set storageArray pqValidateOnReconstructt命令可在重建時設定儲
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有儲存管理員角色。
+若要在 E4000 ， 2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 角色。
 
 
 
@@ -37,7 +37,7 @@ summary: set storageArray pqValidateOnReconstructt命令可在重建時設定儲
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 set storageArray pqValidateOnReconstruct (enable | disable) driveMediaType=(hdd | ssd | allMedia)
 ----

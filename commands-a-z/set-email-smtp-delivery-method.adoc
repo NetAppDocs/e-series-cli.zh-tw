@@ -1,5 +1,5 @@
 ---
-permalink: commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html 
+permalink: commands-a-z/set-email-smtp-delivery-method.html 
 sidebar: sidebar 
 keywords: specify, email, smtp, delivery method, individual, E2800, E5700, arrays 
 summary: set storageArray AutoSupport ferreseliveryMethods命令可設定傳送方法、以便將AutoSupport 不實訊息傳送至電子郵件（SMTP）。 
@@ -7,7 +7,7 @@ summary: set storageArray AutoSupport ferreseliveryMethods命令可設定傳送�
 = 指定電子郵件（SMTP）傳送方法
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,22 +17,22 @@ summary: set storageArray AutoSupport ferreseliveryMethods命令可設定傳送�
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「儲存管理員」或「支援管理員」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 或 Support Admin 角色。
 
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 set storageArray autoSupport deliveryMethod=email
-mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
+mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"] destinationAddress="destination1@example.com" destinationAddress="destination2@example.com";
 ----
 
 
@@ -49,7 +49,6 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
 可讓使用者指定AutoSupport 進行不收集資訊的交付方法。有效選項包括：
 
 * 電子郵件
-* HTTP
 * HTTPS
 
 
@@ -71,6 +70,13 @@ mailRelayServer=pass:quotes["_serverAddress_" senderEmail="_emailAddress_"]
 「電子郵件」
  a| 
 可讓使用者為AutoSupport 該功能集指定傳送電子郵件地址。
+
+
+
+ a| 
+`destinationAddress`
+ a| 
+傳送 AutoSupport 分派的電子郵件地址。此參數可能會多次提供，以允許將派單傳送至多個位址。
 
 |===
 

@@ -7,7 +7,7 @@ summary: start SyncMirror flexprimary sSynchronize命令會啟動同步鏡射同
 = 啟動同步鏡射同步
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: start SyncMirror flexprimary sSynchronize命令會啟動同步鏡射同
 
 == 支援的陣列
 
-此命令適用於任何個別儲存陣列、包括E2700、E5600、E2800及E5700陣列、 只要安裝所有SMcli套件、
+此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 和 E5700 陣列，只要安裝了所有 SMCLI 套件即可。
 
 
 
 == 角色
 
-若要在E2800或E5700儲存陣列上執行此命令、您必須擁有儲存管理員角色。
+若要在 E4000 ， E2800 或 E5700 儲存陣列上執行此命令，您必須具備儲存管理員角色。
 
 
 
@@ -38,7 +38,7 @@ summary: start SyncMirror flexprimary sSynchronize命令會啟動同步鏡射同
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[start syncMirror primary ["_volumeName_"]] synchronize
 ----

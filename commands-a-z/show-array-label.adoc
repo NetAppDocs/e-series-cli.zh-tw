@@ -7,7 +7,7 @@ summary: Show Array label命令會傳回儲存陣列標籤已定義或所有現�
 = 顯示陣列標籤
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,13 +17,13 @@ summary: Show Array label命令會傳回儲存陣列標籤已定義或所有現�
 
 == 支援的陣列
 
-此命令適用於EF600儲存陣列。
+此命令適用於EF600和EF300儲存陣列。
 
 
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[show storageArrayLabel label _userDefinedString_]
 show storageArrayLabel all

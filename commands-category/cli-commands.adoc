@@ -6,9 +6,14 @@ summary: CLI命令（依字母順序排列的清單）
 ---
 = CLI命令（依字母順序排列的清單）
 :allow-uri-read: 
-:icons: font
-:imagesdir: ./media/
 
+
+[role="lead"]
+以下是 E 系列儲存系統可用的完整命令清單。
+
+
+
+= CLI命令（依字母順序排列的清單）
 
 link:../commands-a-z/activate-asynchronous-mirroring.html["啟動非同步鏡射"]
 
@@ -218,19 +223,19 @@ link:../commands-a-z/enable-or-disable-autosupport-individual-arrays.html["啟�
 
 link:../commands-a-z/smcli-enable-autosupportfeature.html["在AutoSupport EMW管理網域層級啟用或停用支援功能..."]
 
-link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["啟用或停用AutoSupport 「還原維護」視窗（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportmaintenancewindow.html["啟用或停用 AutoSupport 維護時段"]
 
 link:../commands-a-z/set-storagearray-hostconnectivityreporting.html["啟用或停用主機連線報告"]
 
 link:../commands-a-z/set-storagearray-odxenabled.html["啟用或停用ODX"]
 
-link:../commands-a-z/set-storagearray-autosupportondemand.html["啟用或停用AutoSupport 「根據需求提供支援」功能（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportondemand.html["啟用或停用AutoSupport 「根據需求提供支援」功能"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportondemand.html["在AutoSupport EMW啟用或停用「僅需支援的功能...」"]
 
 link:../commands-a-z/smcli-enable-disable-autosupportremotediag.html["啟用或停用AutoSupport 位於...的「更新」功能。"]
 
-link:../commands-a-z/set-storagearray-autosupportremotediag.html["啟用或停用AutoSupport 「停止執行」遠端診斷功能（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-storagearray-autosupportremotediag.html["啟用或停用 AutoSupport 遠端診斷功能"]
 
 link:../commands-a-z/set-storagearray-vaaienabled.html["啟用或停用VAAI"]
 
@@ -318,7 +323,7 @@ link:../commands-a-z/reset-storagearray-arvmstats-asyncmirrorgroup.html["重設�
 
 link:../commands-a-z/smcli-autosupportschedule-reset.html["重設AutoSupport 資訊收集排程"]
 
-link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/reset-storagearray-autosupport-schedule.html["重設AutoSupport 資訊收集排程"]
 
 link:../commands-a-z/reset-controller.html["重設控制器"]
 
@@ -358,7 +363,7 @@ link:../commands-a-z/resume-ssdcache.html["恢復SSD快取"]
 
 link:../commands-a-z/resume-syncmirror.html["恢復同步鏡射"]
 
-link:../commands-a-z/save-storagearray-autosupport-log.html["擷取AutoSupport 一份資料檔（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/save-storagearray-autosupport-log.html["擷AutoSupport 取一份資訊記錄"]
 
 link:../commands-a-z/save-controller-cacertificate.html["擷取已安裝的CA憑證"]
 
@@ -436,7 +441,9 @@ link:../commands-a-z/set-asyncmirrorgroup.html["設定非同步鏡射群組"]
 
 link:../commands-a-z/set-auditlog.html["設定稽核日誌設定"]
 
-link:../commands-a-z/set-storagearray-autosupport-schedule.html["設定AutoSupport 資訊收集排程（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-autosupport-dispatch-limit.html["設定 AutoSupport 派遣台大小限制"]
+
+link:../commands-a-z/set-storagearray-autosupport-schedule.html["設定AutoSupport 資訊收集排程"]
 
 link:../commands-a-z/set-storagearray-revocationchecksettings.html["設定憑證撤銷檢查設定"]
 
@@ -712,11 +719,11 @@ link:../commands-a-z/show-volume-performancestats.html["顯示Volume效能統計
 
 link:../commands-a-z/show-volume-reservations.html["顯示Volume保留"]
 
-link:../commands-a-z/set-autosupport-https-delivery-method-e2800-e5700.html["指定AutoSupport 功能完善的HTTP（S）交付方法（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-autosupport-https-delivery-method.html["指定 AutoSupport HTTP(S) 交付方法"]
 
 link:../commands-a-z/smcli-autosupportconfig.html["指定AutoSupport 供應功能"]
 
-link:../commands-a-z/set-email-smtp-delivery-method-e2800-e5700.html["指定電子郵件（SMTP）交付方法（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/set-email-smtp-delivery-method.html["指定電子郵件（SMTP）傳送方法"]
 
 link:../commands-a-z/start-asyncmirrorgroup-synchronize.html["啟動非同步鏡射同步"]
 
@@ -830,7 +837,7 @@ link:../commands-a-z/smcli-alerttest.html["測試警示"]
 
 link:../commands-a-z/diagnose-asyncmirrorgroup.html["測試非同步鏡射群組連線能力"]
 
-link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["測試AutoSupport 供應設定（適用於個別E2800或E5700陣列）"]
+link:../commands-a-z/start-storagearray-autosupport-deliverytest.html["測試AutoSupport 供應設定"]
 
 link:../commands-a-z/start-emailalert-test.html["測試電子郵件警示組態"]
 

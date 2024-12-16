@@ -7,7 +7,7 @@ summary: start diskPool resourceProvisioning命令可在指定的磁碟集區上
 = 啟動磁碟資源池資源配置
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -35,7 +35,7 @@ summary: start diskPool resourceProvisioning命令可在指定的磁碟集區上
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 start diskPoolpass:quotes[[_diskPoolName_]] resourceProvisioning
 ----

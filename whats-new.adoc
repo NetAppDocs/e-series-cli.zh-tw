@@ -25,6 +25,51 @@ summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更
 ====
 
 
+== SANtricity 11.90
+
+下表列出 11.90 版 CLI 和指令碼命令的變更。
+
+[cols="2*"]
+|===
+| 命令 | 變更說明 
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-autosupport-dispatch-limit.html["設定 AutoSupport 派遣台大小限制"]
+ a| 
+新增命令
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/save-controller-arraymanagementcsr.html["儲存控制器 ArrayManagementCSR"]
+ a| 
+新增 `KeySize`參數。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/set-email-smtp-delivery-method.html["設定電子郵件（ SMTP ）傳送方法"]
+ a| 
+新增 `destinationAddress`參數。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/show-storagearray-autosupport.html#examples["顯示 AutoSupport 設定"]
+ a| 
+新增派遣台大小限制和目的地電子郵件地址，以做為命令輸出的範例。
+
+
+
+ a| 
+https://docs.netapp.com/us-en/e-series-cli/commands-a-z/download-storagearray-keymanagementcertificate.html["下載 storageArray keyManagementCertificate"]
+ a| 
+新增 `privateKeyFile`參數。
+
+|===
+
+
 == SANtricity 11.81
 
 下表列出 11.81 版 CLI 和指令碼命令的變更。
@@ -35,7 +80,7 @@ summary: 本主題列出SANtricity 最新版的CLI命令和指令碼指令的更
 
 
  a| 
-xref:./get-started/downloadable-smcli-parameters.adoc#identify-Devices[識別裝置]
+https://docs.netapp.com/us-en/e-series-cli/get-started/downloadable-smcli-parameters.html#identify-devices["識別裝置"]
  a| 
 新增 `identifyDevices` 參數。
 

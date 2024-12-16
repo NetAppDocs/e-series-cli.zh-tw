@@ -7,7 +7,7 @@ summary: show storageArray directoryServices摘要命令會顯示目錄服務組
 = 顯示儲存陣列目錄服務摘要
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,21 +17,20 @@ summary: show storageArray directoryServices摘要命令會顯示目錄服務組
 
 == 支援的陣列
 
-此命令適用於個別E2800、E5700、EF600或EF300儲存陣列。它無法在E2700或E5600儲存陣列上運作。
+此命令適用於個別的 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列。它無法在E2700或E5600儲存陣列上運作。
 
 
 
 == 角色
 
-若要在E2800、E5700、EF600或EF300儲存陣列上執行此命令、您必須具有「安全性管理」角色。
+若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有安全管理角色。
 
 
 
 == 語法
 
-[listing]
+[source, cli]
 ----
-
 show storageArray directoryServices summary
 ----
 

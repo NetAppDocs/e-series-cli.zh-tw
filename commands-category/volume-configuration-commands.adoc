@@ -7,8 +7,11 @@ summary: Volume組態命令
 = Volume組態命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+E 系列儲存系統可使用下列 Volume 組態命令清單。
 
 
 

@@ -7,8 +7,11 @@ summary: 效能調校命令
 = 效能調校命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+E 系列儲存系統提供下列效能調校命令清單。
 
 
 

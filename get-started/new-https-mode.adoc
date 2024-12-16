@@ -7,7 +7,7 @@ summary: 新的SMcli可在https模式下運作、提供額外的安全功能。
 = SMcli https模式
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]

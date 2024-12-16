@@ -7,7 +7,7 @@ summary: activate storageArray韌體命令會啟動您先前下載至儲存陣�
 = 啟動儲存陣列韌體
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -17,7 +17,7 @@ summary: activate storageArray韌體命令會啟動您先前下載至儲存陣�
 
 == 語法
 
-[listing]
+[source, cli]
 ----
 activate storageArray firmware
 [healthCheckMelOverride=(TRUE | FALSE)]

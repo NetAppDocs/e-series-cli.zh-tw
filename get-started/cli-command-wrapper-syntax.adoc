@@ -7,10 +7,15 @@ summary: 本節列出CLI命令摘要的一般語法形式。
 = CLI命令包裝程式語法
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
+[role="lead"]
 本節列出CLI命令摘要的一般語法形式。下表列出了CLI命令包裝程式語法中使用的慣例。
+
+
+
+== CLI 命令包裝函式語法慣例
 
 [cols="2*"]
 |===

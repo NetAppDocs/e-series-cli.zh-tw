@@ -7,7 +7,7 @@ summary: Add Certificate from file命令可讓您從檔案取得憑證、並將�
 = 從檔案新增憑證
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
 [role="lead"]
@@ -23,7 +23,7 @@ summary: Add Certificate from file命令可讓您從檔案取得憑證、並將�
 
 == 語法
 
-[listing, subs="+macros"]
+[source, cli, subs="+macros"]
 ----
 pass:quotes[trust localCertificate file _filename_ alias user _specified alias_]
 ----

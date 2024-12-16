@@ -7,10 +7,13 @@ summary: Windows PowerShell是一種互動式指令碼Shell、可讓您存取命
 = Windows PowerShell中CLI命令的格式化規則
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
 
-Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。Windows PowerShell在Windows命令提示字元上提供更強大的命令和指令碼功能集、使其更為完善。您可以在Windows PowerShell中執行所有的CLI和指令碼命令、不過Windows PowerShell有一些獨特的格式設定需求。這些要求如下：
+[role="lead"]
+Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。
+
+Windows PowerShell在Windows命令提示字元上提供更強大的命令和指令碼功能集、使其更為完善。您可以在Windows PowerShell中執行所有的CLI和指令碼命令、不過Windows PowerShell有一些獨特的格式設定需求。這些要求如下：
 
 * 以句點和正斜槓（./）開始所有SMcli命令。
 * SMcli包裝函式必須識別為副檔名為.exe的執行檔命令（SMcli．exe）

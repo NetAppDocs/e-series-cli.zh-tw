@@ -7,8 +7,11 @@ summary: 鏡射命令
 = 鏡射命令
 :allow-uri-read: 
 :icons: font
-:imagesdir: ./media/
+:imagesdir: ../media/
 
+
+[role="lead"]
+下列鏡射命令清單可用於 E 系列儲存系統。
 
 
 
