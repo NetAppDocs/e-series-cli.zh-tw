@@ -436,7 +436,7 @@ set storageArray
 
 
 
-== 自動支援資料
+== AutoSupport 資料
 
 [NOTE]
 ====

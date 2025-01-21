@@ -8,7 +8,7 @@ entries:
   url: "/commands-category/alert-configuration-commands.html"
 - title: 陣列組態命令
   url: "/commands-category/array-configuration-commands.html"
-- title: 自動支援命令
+- title: AutoSupport 命令
   url: "/commands-category/auto-support-commands.html"
 - title: 鏡射命令
   url: "/commands-category/mirroring-commands.html"

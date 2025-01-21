@@ -2,16 +2,16 @@
 permalink: commands-category/auto-support-commands.html 
 sidebar: sidebar 
 keywords: support, commands, bundle, collection, autosupport 
-summary: 自動支援命令 
+summary: AutoSupport 命令 
 ---
-= 自動支援命令
+= AutoSupport 命令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
 
 
 [role="lead"]
-E 系列儲存系統可使用下列自動支援命令清單。
+下列 AutoSupport 命令清單可供 E 系列儲存系統使用。
 
 
 

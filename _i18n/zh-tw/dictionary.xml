@@ -3076,7 +3076,6 @@
   <block id="393e0e962c18bb9902a7b505f4795d88" category="paragraph">可讓您在System Manager中設定逾時時間、以便在指定時間後中斷使用者的非作用中工作階段連線。</block>
   <block id="9cd2c4a736609c872b659ec8f0f81c17" category="paragraph">開啟或關閉儲存陣列的VMware vStorage API Array Architecture（VAAI）</block>
   <block id="d088930721693a65d59f92b69b7a1a65" category="paragraph">除了「isnRegistration」之外、使用此命令時、您可以指定一或多個選用參數。</block>
-  <block id="b8a27435b63207164489e175a608261a" category="section-title">自動支援資料</block>
   <block id="6fbf4b60b0cd4dd67ba1febddba8dee6" category="paragraph">啟用時、「set storageArray autosupSupportConfig」命令會在每次偵測到重大事件記錄（MEL）事件時、傳回儲存陣列的所有組態和狀態資訊。組態和狀態資訊會以物件圖表的形式傳回。物件圖表包含儲存陣列的所有相關邏輯和實體物件及其相關狀態資訊。</block>
   <block id="7cf3236cfa030bb0624e61dedbe4115c" category="paragraph">「set storageArray autoSupportConfig」命令會以下列方式收集組態和狀態資訊：</block>
   <block id="f5a46ee44f2a39219ad0cb7b3b8cb232" category="list-text">每72小時會自動收集組態和狀態資訊。組態和狀態資訊會儲存至儲存陣列壓縮歸檔檔案。歸檔檔檔案有一個時間戳記、可用來管理歸檔檔案。</block>
@@ -6738,7 +6737,6 @@
   <block id="3062f0a6ca05824bc819258606821f49" category="paragraph"><block ref="3062f0a6ca05824bc819258606821f49" category="inline-link-macro-rx"></block></block>
   <block id="baac6899c2f24ea5d0bdd61aea74c4e6" category="section-title">與憑證相關的外部金鑰管理命令</block>
   <block id="8491937ed3d0194167968b9cad3209d1" category="paragraph"><block ref="8491937ed3d0194167968b9cad3209d1" category="inline-link-macro-rx"></block></block>
-  <block id="7aa544bbf9280961acfdcfa2d71984cb" category="summary">自動支援命令</block>
   <block id="788a0a0737156f6df5e8987a7fb89831" category="section-title">E2700和E5600的套裝組合集合命令AutoSupport</block>
   <block id="e9d7f9c9ee1489e3f615c622c9279f50" category="paragraph"><block ref="e9d7f9c9ee1489e3f615c622c9279f50" category="inline-link-macro-rx"></block></block>
   <block id="174de654995d2038f77ba29a971d3a08" category="inline-link-macro">啟用或停用AutoSupport 位於...的「支援不支援不支援的」遠端診斷功能。</block>
@@ -7555,8 +7553,6 @@
   <block id="59ed469f8c0fb1e7540b9c5e0e274379" category="paragraph"><block ref="59ed469f8c0fb1e7540b9c5e0e274379" category="inline-link-macro-rx"></block></block>
   <block id="ca611b7f5b98899a7abee91397e031fa" category="paragraph">以下警示組態命令清單可供 E 系列儲存系統使用。</block>
   <block id="478f3d35dcc84bea1a78b7ac21781c63" category="paragraph">E 系列儲存系統可使用下列陣列組態命令清單。</block>
-  <block id="27a16d7fcbdb2e5222cbb08871982f58" category="paragraph">E 系列儲存系統可使用下列自動支援命令清單。</block>
-  <block id="3debeae67dbeb507c3cb1a41e3d15efe" category="section-title">適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令</block>
   <block id="b9aa6488935866e17a533f7cb9907f95" category="paragraph"><block ref="b9aa6488935866e17a533f7cb9907f95" category="inline-link-macro-rx"></block></block>
   <block id="48dd72449a509b862d1dbc2e5df66c1d" category="paragraph"><block ref="48dd72449a509b862d1dbc2e5df66c1d" category="inline-link-macro-rx"></block></block>
   <block id="91791fe8747c000ea0ee9806ad0b2697" category="paragraph">以下是 E 系列儲存系統可用的完整命令清單。</block>
@@ -7616,4 +7612,8 @@
   <block id="d8e44ec6283b9e1b03ebe13f2b9bf377" category="sidebar">設定電子郵件 SMTP 傳送方法</block>
   <block id="27ed3c2f0cc271f3ffd55cef1621928d" category="sidebar">SANtricity 系統管理員 11.9</block>
   <block id="ece14770330886bc2d41238acbfe48aa" category="sidebar">SANtricity Unified Manager 7.</block>
+  <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport 資料</block>
+  <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport 命令</block>
+  <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">下列 AutoSupport 命令清單可供 E 系列儲存系統使用。</block>
+  <block id="3668b2be3ec33e7453152c010b5ad26a" category="section-title">適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令</block>
 </blocks>
