@@ -7573,7 +7573,6 @@
   <block id="0c691b598eb5dcf4dbe4aee57abd7fce" category="paragraph">CLI下的詳細錯誤報告功能如下：</block>
   <block id="7ab16c582be12bf2ea6a9bcbf26ef849" category="summary">SANtricity OS 11.60 及更新版本可直接透過 SANtricity 系統管理員下載及安裝 http 型版本的 CLI （也稱為 Secure CLI 或 SMCLI ）。</block>
   <block id="3bcaed463dcace2a5d7df8ac788e2faa" category="paragraph">SANtricity OS 11.60 及更新版本可直接透過 SANtricity 系統管理員下載及安裝 http 型版本的 CLI （也稱為「 Secure CLI 」或 SMCLI ）。</block>
-  <block id="326cbd85dc5f285361de38f20d31c9df" category="paragraph">SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 和 EF280 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。</block>
   <block id="afbe36b824d95e989a52e9001491c721" category="summary">已執行命令會傳回結束狀態。此表列出可能傳回的結束狀態、以及每個狀態的意義。</block>
   <block id="4e0440694d3b4fa172c69a3cac707e21" category="paragraph">已執行命令會傳回結束狀態。下表列出可能會傳回的結束狀態，以及每個狀態的意義。</block>
   <block id="20b10ae58c66c5b5927a513b2111c0c0" category="section-title">結束狀態定義</block>
@@ -7615,5 +7614,6 @@
   <block id="d0a774826d0463e72211475dbf19c749" category="section-title">AutoSupport 資料</block>
   <block id="e12f84520db4494b5d41a3376aaf2efe" category="summary">AutoSupport 命令</block>
   <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">下列 AutoSupport 命令清單可供 E 系列儲存系統使用。</block>
-  <block id="3668b2be3ec33e7453152c010b5ad26a" category="section-title">適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令</block>
+  <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">適用於 E4000 ， EF300 ， EF600 ， E2800 ， E5700 的 AutoSupport 命令</block>
+  <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 ， EF280 ， EF300C 和 EF600C 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。</block>
 </blocks>

@@ -47,7 +47,7 @@ link:../commands-a-z/save-storagearray-supportdata.html["儲存儲存陣列支�
 
 
 
-== 適用於 E4000 ， EF300 ， EF400 ， E2800 ， E5700 的 AutoSupport 命令
+== 適用於 E4000 ， EF300 ， EF600 ， E2800 ， E5700 的 AutoSupport 命令
 
 link:../commands-a-z/set-autosupport-dispatch-limit.html["設定 AutoSupport 派遣台大小限制"]
 

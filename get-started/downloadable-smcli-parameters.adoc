@@ -17,7 +17,7 @@ SANtricity OS 11.60 及更新版本可直接透過 SANtricity 系統管理員下
 
 == 11.60及更新版本的可下載SMcli命令列參數
 
-SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 和 EF280 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。
+SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 ， EF280 ， EF300C 和 EF600C 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。
 
 
 NOTE: 您必須在打算執行CLI命令的管理系統上提供Java執行時間環境（JRE）版本8及更新版本。
