@@ -3,7 +3,7 @@ indexpage:
   title: 系統管理程式命令SANtricity
   summary: 說明SANtricity 語法和使用方面的指令。
   keywords: santricity, syntax, commands, user assistance
-  lead: 歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助、您可以在其中瞭解如何使用命令列介面（ CLI ）來設定、監控及調整儲存陣列。」
+  lead: 歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助，您可以在其中使用命令列介面（ CLI ），瞭解如何設定，監控及調整儲存陣列。
   tiles:
   - title: 開始使用
     links:

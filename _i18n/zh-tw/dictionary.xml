@@ -6744,7 +6744,6 @@
   <block id="15c050a6a9859238d1500e30a3507f10" category="section-title">所有儲存陣列的指令AutoSupport</block>
   <block id="e4b1a19d81413c02cbff8dc83cf04445" category="inline-link-macro">啟用或停用AutoSupport 功能（僅適用於E2800、E5700陣列的個別陣列）</block>
   <block id="f08f0edf758a95b8fc4b6cbefc244dd6" category="paragraph"><block ref="f08f0edf758a95b8fc4b6cbefc244dd6" category="inline-link-macro-rx"></block></block>
-  <block id="75d0cfb68b71d4c1551f137d574c98e2" category="summary">E2700和E5600命令</block>
   <block id="8530f14ba8e3bcb3452132e3bd4d090f" category="inline-link-macro">啟動同步鏡射</block>
   <block id="666e69d8a1bbdaada561e5e80709030a" category="paragraph"><block ref="666e69d8a1bbdaada561e5e80709030a" category="inline-link-macro-rx"></block></block>
   <block id="f1d30742e45c732a9b780da88d3719bd" category="summary">警示組態命令</block>
@@ -7457,7 +7456,6 @@
   <block id="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-macro"><block ref="8acb58cbd50ef1b468a020ee0bd351d3" category="inline-link-rx"></block></block>
   <block id="2352c4e1f4d0024ade0869e00e6243f4" category="paragraph"><block ref="2352c4e1f4d0024ade0869e00e6243f4" category="inline-link-macro-rx"></block></block>
   <block id="9c224ec894ababac5f928548e584eb45" category="paragraph">最大虛擬容量為 256 TB 。</block>
-  <block id="85e8092ad24869d134ad6af40b479c96" category="sidebar">歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助、您可以在其中瞭解如何使用命令列介面（ CLI ）來設定、監控及調整儲存陣列。」</block>
   <block id="c4f2e9f91e3e5a0d9fb8f8728ed63376" category="paragraph">如同先前版本的SMcli、可透過SANtricity 「支援系統管理程式」下載的SMcli有一組獨特的參數。如需有關使用指令行參數以利SANtricity 更新OS 11.53和舊版的資訊、請參閱 <block ref="f6644819b412d8968161178a2ccec029" category="inline-link-macro-rx"></block>。</block>
   <block id="2115a9072c5575f3300b4b18e5722de6" category="section-title">識別裝置</block>
   <block id="90f4cf9a1fcd3d43e57768f9bb55bbfb" category="paragraph">下列命令列參數可讓您顯示主機可見的所有適用裝置資訊。</block>
@@ -7480,7 +7478,6 @@
   <block id="f6d06651df499131aa8d5acf7a129e3f" category="paragraph">有效的控制器識別碼和主機通道值為<block ref="8a8bb7cd343aa2ad99b7d762030857a2" prefix=" " category="inline-code"></block>、<block ref="693a9fdd4c2fd0700968fba0d07ff3c0" prefix=" " category="inline-code"></block><block ref="9d607a663f3e9b0a90c3c8d4426640dc" prefix=" " category="inline-code"></block><block ref="894f782a148b33af1e39a0efed952d69" prefix=" " category="inline-code"></block><block ref="32cfe6c19200b67afb7c3d0e1c43eadb" prefix=" " category="inline-code"></block>、、、、<block ref="f74dd50cfec0f8549406fee6191d2f8d" prefix=" " category="inline-code"></block><block ref="c692562238d8c12c32434c50b96d56ae" prefix=" " category="inline-code"></block>、、<block ref="68c42382c8b93fc29c2fcb6a444aeda5" prefix=" " category="inline-code"></block><block ref="edbab45572c72a5d9440b40bcc0500c0" prefix=" " category="inline-code"></block><block ref="fbfba2e45c2045dc5cab22a5afe83d9d" prefix=" " category="inline-code"></block>、、<block ref="7a6f150b83091ce20c89368641f9a137" prefix=" " category="inline-code"></block><block ref="3dfe563103ab11bec75bb5081e7a1dbe" prefix=" " category="inline-code"></block>、、<block ref="2283335d8d12b21001439091e74f5028" prefix=" " category="inline-code"></block><block ref="528953727ef3a4e1c441c6078534c39b" prefix=" " category="inline-code"></block><block ref="d8708ecb9a1e7ba172c83d8360c57e7d" prefix=" " category="inline-code"></block>、、<block ref="75d99404a02e2bc993a6bac34c60d679" prefix=" " category="inline-code"></block>或。</block>
   <block id="2bc4f5f65d530be66960542e14f46660" category="paragraph">此命令僅適用於光纖通道上的非同步鏡像。</block>
   <block id="761f226704fa8b9a2ea64701b36a66e1" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 ， E5700 ， EF600 和 EF300 陣列，只要安裝了所有 SMCLI 套件即可。</block>
-  <block id="a354034e1792cd00f19c11de116a69f4" category="paragraph">若要在 E400 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有 Storage Admin 角色。</block>
   <block id="4818a1577bb873e9a1bea01f94e168fb" category="paragraph">此命令適用於任何個別儲存陣列，包括 E4000 ， E2700 ， E5600 ， E2800 和 E5700 陣列，只要安裝了所有 SMCLI 套件即可。</block>
   <block id="4ec343cf7b1916cb714cf2eed7cc2a56" category="paragraph">若要在 E4000 ， E2800 或 E5700 儲存陣列上執行此命令，您必須具備儲存管理員角色。</block>
   <block id="076b233b5a4449b721cbb8368f8fb958" category="paragraph">若要在 E4000 ， E2800 ， E5700 ， EF600 或 EF300 儲存陣列上執行此命令，您必須具有「支援管理員」角色。</block>
@@ -7558,9 +7555,6 @@
   <block id="91791fe8747c000ea0ee9806ad0b2697" category="paragraph">以下是 E 系列儲存系統可用的完整命令清單。</block>
   <block id="c71942c4a8b171695841ba7046fc3eca" category="inline-link-macro">啟用或停用 AutoSupport 遠端診斷功能</block>
   <block id="2fa9ab72f6f5ccc0cf969e1a230ce942" category="paragraph"><block ref="2fa9ab72f6f5ccc0cf969e1a230ce942" category="inline-link-macro-rx"></block></block>
-  <block id="fb10773226243f93cf4024b28436d09c" category="paragraph">E2700 和 E5600 系統可使用下列命令清單。</block>
-  <block id="365f3ca0540bf35310ae0332b69b7733" category="summary">E4000 ， E2800 ， E5700 ， EF600 和 EF300 命令</block>
-  <block id="d98c52acb3963aab4c26465735d8ccd1" category="paragraph">下列命令清單適用於 E4000 ， E2800 ， E5700 ， EF600 和 EF300 系統。</block>
   <block id="a7e37cb158c978c104225254d414a1d2" category="paragraph">下列鏡射命令清單可用於 E 系列儲存系統。</block>
   <block id="3c987a7895df93dcf7095d41701a10a9" category="paragraph">E 系列儲存系統提供下列效能調校命令清單。</block>
   <block id="273c6d6b2b49f1a011b0804803e8c061" category="paragraph">下列複寫命令清單可供 E 系列儲存系統使用。</block>
@@ -7616,4 +7610,5 @@
   <block id="f92f6d9fbe12679709b79badc45794e4" category="paragraph">下列 AutoSupport 命令清單可供 E 系列儲存系統使用。</block>
   <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">適用於 E4000 ， EF300 ， EF600 ， E2800 ， E5700 的 AutoSupport 命令</block>
   <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 ， EF280 ， EF300C 和 EF600C 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。</block>
+  <block id="d14e73691bb33d04604da5d4d66f9630" category="sidebar">歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助，您可以在其中使用命令列介面（ CLI ），瞭解如何設定，監控及調整儲存陣列。</block>
 </blocks>
