@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, synchronous, mirror 
 summary: set SyncMirror flexpcommand定義遠端鏡射配對的屬性。 
 ---
-= 設定同步鏡射
+= 設定同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delte, snapvolume, command, snapshot, consistency, group, optionally, repository, members 
 summary: 刪除sgSnapVolume命令會刪除一致性群組的快照磁碟區。或者、您也可以刪除儲存庫成員。 
 ---
-= 刪除一致性群組快照磁碟區
+= 刪除一致性群組快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

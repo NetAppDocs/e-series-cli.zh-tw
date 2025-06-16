@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, syncmirror, command, test, connection, specified, primary, volumes, mirror, storage, array, synchronous, feature, enabled 
 summary: 診斷SyncMirror 功能支援同步鏡射功能、可測試儲存陣列上指定的主要磁碟區與鏡射磁碟區之間的連線。 
 ---
-= 診斷同步鏡射
+= 診斷同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

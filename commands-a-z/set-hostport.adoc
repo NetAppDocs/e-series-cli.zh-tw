@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, port 
 summary: set hostPort命令會變更主機連接埠的內容。 
 ---
-= 設定主機連接埠
+= 設定主機連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

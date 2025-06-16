@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, email, alert, recipient 
 summary: 刪除emailAlert命令會從電子郵件警示組態中刪除收件者電子郵件地址。 
 ---
-= 刪除電子郵件警示收件者
+= 刪除電子郵件警報收件者 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

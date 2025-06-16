@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostport, command, host, port, identification 
 summary: 刪除hostPort命令會刪除主機連接埠識別碼。 
 ---
-= 刪除主機連接埠
+= 刪除主機連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

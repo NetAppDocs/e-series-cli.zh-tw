@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, syslog, test 
 summary: start storageArray syslog測試命令可讓您測試儲存陣列與syslog伺服器之間的通訊。 
 ---
-= 開始儲存陣列系統記錄測試
+= 啟動儲存陣列系統日誌測試 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

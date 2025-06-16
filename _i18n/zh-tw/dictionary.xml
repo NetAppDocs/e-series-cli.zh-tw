@@ -115,7 +115,6 @@
   <block id="82d033b1d0a54aad1b2252562f056446" category="paragraph">」</block>
   <block id="f7b4ebdf47caf37f65695390e300edf8" category="paragraph">顯示有關CLI命令的使用資訊。</block>
   <block id="9ffd32c9234d40afa0a6b642e854507f" category="summary">每個指令碼命令說明結尾的「附註」區段會說明特定指令碼命令的專屬語法。</block>
-  <block id="a34f8e9b3e8c0a5db5363d6ba9f8d58b" category="doc">指令碼命令的格式化規則</block>
   <block id="16239040ff489b7b750a9f4319c180ea" category="paragraph">*區分大小寫*-指令碼命令不區分大小寫。您可以用大小寫、大寫或混合大小寫輸入指令碼命令。（在下列命令說明中、混合大小寫可用來協助讀取命令名稱並瞭解命令用途。）</block>
   <block id="89691c5fe7e61ba9d8ec5ee5055f6f85" category="paragraph">* Spaces *：您必須在指令碼命令中輸入空格、如命令說明所示。</block>
   <block id="34acea0cfbd046edcc6eae6cd380f6bc" category="paragraph">*方括弧*-方括弧有兩種使用方式：</block>
@@ -179,7 +178,6 @@
   <block id="dfe36a8699543e28a594277f08890a95" category="list-text">參數名稱（例如「*電池安裝日期*」）</block>
   <block id="4d816980a97ddc27e81555ffdb06708b" category="list-text">作業名稱（例如「*多餘檢查*」）</block>
   <block id="1906f0c0c690d5cc786e031952f21ea5" category="paragraph">使用者定義的項目（例如使用者標籤）稱為變數。在語法中、它會以斜體顯示（例如「TrayID」或「volumeGroupName」）。</block>
-  <block id="bb0d07b5620d2e85d47a3dfc403a4ee0" category="doc">CLI命令的格式化規則</block>
   <block id="02fcb96a2220221658b695dc783c341f" category="paragraph">當您在Windows、Linux或Solaris作業系統上執行CLI命令和指令碼命令時、作為名稱或標籤一部分的雙引號（""）需要特別考量。</block>
   <block id="88f31185f3b63664c188b018aa2994d0" category="paragraph">當雙引號（""）是名稱或值的一部分時、您必須在每個雙引號字元之前插入反斜槓（\）。</block>
   <block id="506c2c0c7f5b70af3df68c45c46f45a7" category="paragraph">例如：</block>
@@ -375,7 +373,6 @@
   <block id="d52e106dfae71aa8fe55bd08be1ee7a1" category="paragraph">在互動模式中、您可以輸入單一命令、檢視結果、然後輸入下一個命令、而無需輸入完整的「Mcli」字串。互動模式有助於判斷組態錯誤、並快速測試組態變更。</block>
   <block id="d84642a0fa127291d74836c8f51b74d2" category="paragraph">若要結束互動模式工作階段、請輸入作業系統專屬的命令。對於Linux、此組合鍵為* Ctrl-D*。對於Windows、此按鍵組合為* Ctrl-Z + Enter *。</block>
   <block id="d5a07a929adbc3f8e1dccfa24e88da4b" category="summary">命令列介面（CLI）是一種軟體應用程式、可用來設定及監控儲存陣列。</block>
-  <block id="e469e58c2e81413c1d3a4e14f355fb8f" category="doc">CLI總覽</block>
   <block id="43fc05846dc9a6463afd1a669e1e6af3" category="paragraph">CLI可讓您直接存取指令碼引擎、此指令碼引擎是儲存管理軟體中的公用程式。指令碼引擎會執行命令來設定及管理儲存陣列。指令碼引擎可透過指令碼檔案或直接從命令列讀取命令、並執行命令指示的作業。</block>
   <block id="3ab8d5bf5932f687f0670270fa3cf437" category="paragraph">指令碼命令可設定及管理儲存陣列。指令碼命令與CLI命令不同。您可以輸入個別指令碼命令、也可以執行指令碼命令檔案。當您輸入個別指令碼命令時、會在CLI命令中內嵌指令碼命令。當您執行指令碼命令檔案時、會在CLI命令中內嵌檔案名稱。</block>
   <block id="155d01e6206b0910227f88561d2675bf" category="paragraph">您的E系列儲存系統可能無法使用本文件所述的部分軟體功能。如對可用功能有任何疑問、請聯絡您的客戶代表。</block>
@@ -609,7 +606,6 @@
   <block id="b7cdd34e0764c77268f1dabd94633e4c" category="paragraph">當CLI遇到任一種錯誤時、CLI會將描述錯誤的資訊直接寫入命令列、並設定傳回碼。根據傳回碼的不同、CLI也可能會寫入有關導致錯誤的終端機的其他資訊。CLI也會在命令語法中寫入有關預期的資訊、以協助您識別可能輸入的任何語法錯誤。</block>
   <block id="e7e70f1a42f0385a3b7f20bcca7c725d" category="paragraph">當命令執行時發生例外狀況時、CLI會擷取錯誤。命令處理結束時（將命令處理資訊寫入命令列之後）、CLI會自動將錯誤資訊儲存至檔案。</block>
   <block id="958918e69b48e0d9846a5f4e4fc3e64c" category="paragraph">儲存錯誤資訊的檔案名稱為「cprpt.txt」。CLI會嘗試將「prpt.txt"檔案放在系統屬性「devmgr.datadir」指定的目錄中。如果由於某種原因CLI無法將檔案放在由「devmgr.datadir」指定的目錄中、CLI會將「prpt.txt"檔案儲存在執行CLI的相同目錄中。您無法變更檔案名稱或位置。每次發生例外狀況時、都會覆寫「cprpt.txt」檔案。如果您想要將資訊儲存在「cprpt.txt」檔案中、您必須將資訊複製到新檔案或新目錄。</block>
-  <block id="225df3023bbec8bcdc760941a198bdcc" category="summary">深入瞭解Volume群組移轉</block>
   <block id="a51bd146136c0effef8bf09de49de95a" category="paragraph">如果磁碟區群組包含支援NVMe或FIPS的磁碟機、則必須從來源陣列記錄/儲存安全金鑰和密碼、以便在開始移轉至目標陣列之前解除鎖定磁碟機。如果不知道安全金鑰和密碼、而且/或不需要資料完整性、則可以執行安全性清除。E系列儲存系統不支援混合使用不同的加密安全磁碟機。如需如何使用安全金鑰解除磁碟機鎖定、清除FIPS磁碟機、以及解除鎖定或重設鎖定NVMe磁碟機的詳細資訊、請參閱SANtricity 《支援系統管理程式》的線上說明。</block>
   <block id="b675c1a78d8533024a8878b054c013a6" category="paragraph">Volume群組移轉可讓您匯出Volume群組、以便將Volume群組匯入不同的儲存陣列。您也可以匯出Volume群組、以便離線儲存資料。</block>
   <block id="331aca7f6d2f21d3d59fcbafe29ac125" category="paragraph">*可能會遺失資料存取*：您必須先匯出磁碟區群組、才能移動磁碟區群組或匯入磁碟區群組。</block>
@@ -688,7 +684,6 @@
   <block id="d418c21758873351ac7110c6230d39fa" category="paragraph">8.20.11 -新增「*安全性類型*」參數。</block>
   <block id="d5c71011e72512445dc6f7650a967d6e" category="paragraph">這些符號表示指令碼命令和所有參數（「*安全性類型*」除外）都是在最低控制器韌體版本7.84下執行。「*安全性類型*」參數會在控制器韌體版本8.20_M3的最小值下執行。</block>
   <block id="832c4bddc90301ed87414e7217d12a80" category="summary">由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。</block>
-  <block id="9ab03979fb14b675494053f695a63b30" category="doc">指令碼命令摘要</block>
   <block id="92e9d6227d5534e7afc27a11179c808e" category="cell">語法</block>
   <block id="b5a7adde1af5c87d7fd797b6245c2a39" category="cell">說明</block>
   <block id="622d27cd104889791f5af80d64bd606f" category="paragraph">執行擱置的作業。</block>
@@ -720,7 +715,6 @@
   <block id="eb194bd624b79c01462f026fcc16a669" category="paragraph">停止作業。然後您可以重新啟動暫停的作業、並從暫停點繼續執行。</block>
   <block id="2a6889fd51daa4adf5e849a64d54890a" category="paragraph">驗證安全金鑰。</block>
   <block id="11f48f6028fc13ed8d31867639998d8e" category="summary">本節列出CLI命令摘要的一般語法形式。</block>
-  <block id="53e4bf7c03a168dc39f408a2e59f4b84" category="doc">CLI命令包裝程式語法</block>
   <block id="c558c32077e3c358acaec2447b67b869" category="paragraph">本節列出CLI命令摘要的一般語法形式。下表列出了CLI命令包裝程式語法中使用的慣例。</block>
   <block id="7df65e857e3ee61a91e73f3afc266725" category="paragraph">「A | b」</block>
   <block id="dbeaf36a6fb1ac5f367bf849475e568a" category="paragraph">「斜體字_」</block>
@@ -797,7 +791,6 @@
   <block id="bf6829a2035da1ee3f5c0ae93652732c" category="inline-xref-macro">顯示儲存陣列自動組態</block>
   <block id="e0a196896c0583bda51daf508bf2e9b3" category="inline-xref-macro">自動設定儲存陣列</block>
   <block id="724ce6411c4e487216d71dfe6ca49cdf" category="inline-xref-macro">儲存自動負載平衡統計資料</block>
-  <block id="799587ec57d3ccaff63b5aeba6541ba1" category="inline-xref-macro">設定儲存陣列以啟用或停用自動負載平衡</block>
   <block id="a524a99cfdf07f411dee8bf72266b7e5" category="inline-xref-macro">從陣列新增憑證</block>
   <block id="901711e6beac98bf77c83f0abcd06cc7" category="inline-xref-macro">從檔案新增憑證</block>
   <block id="98c9f4fd330bc6425238005018128760" category="inline-xref-macro">刪除憑證</block>
@@ -806,7 +799,6 @@
   <block id="88e4ef4e75f71281d90069877b8a1847" category="inline-xref-macro">移除陣列標籤</block>
   <block id="a8dddcb0378a5adc0ec4222faa73aebe" category="inline-xref-macro">顯示陣列標籤</block>
   <block id="94536b08c149b401c1e3d4aa164b853c" category="summary">Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。</block>
-  <block id="0a6760c3056dd4237b647943d44dae70" category="doc">Windows PowerShell中CLI命令的格式化規則</block>
   <block id="50d9f3447707fa32e9c0df1880bba9e0" category="list-text">以句點和正斜槓（./）開始所有SMcli命令。</block>
   <block id="caa5d9328bfc806fa16f762ba7bdcb27" category="list-text">SMcli包裝函式必須識別為副檔名為.exe的執行檔命令（SMcli．exe）</block>
   <block id="a2957c139a7a919a4f46836dd373b576" category="list-text">將指令碼命令包含在單引號中（''）</block>
@@ -1221,7 +1213,6 @@
   <block id="a76786ff93a54df9ac472f1227017018" category="paragraph">此參數會開啟或關閉傳送驗證失敗訊息給SNMP管理程式。若要傳送驗證失敗訊息、請將參數設為「true」。若要防止傳送驗證失敗訊息、請將參數設為「假」。預設值為「true」。</block>
   <block id="65ad459f04e8c52b262b01040adb2da1" category="paragraph">8.30</block>
   <block id="0a971bdaf647eec5727bb73b4fdaf62a" category="summary">set storageArray cacheMirrorDataAssuranceChecksEnable命令可讓您啟用或停用快取鏡射資料保證檢查。</block>
-  <block id="4f856a887e5732ed9116694218089f06" category="doc">設定儲存陣列以啟用或停用快取鏡射資料保證檢查</block>
   <block id="a2f3cff920191a1785038eb770af11ac" category="paragraph">使用「set storageArray cacheMirrorDataAssuranceChecksEnable」命令、您可以啟用或停用快取鏡射資料保證檢查。</block>
   <block id="ecd8f68d5c8a073ab5f744175bcfc48d" category="paragraph">8.41新命令參數。</block>
   <block id="330d0697424450147c0224569020bf9b" category="summary">set target命令會變更iSCSI/iSER目標的內容、包括驗證方法和別名。</block>
@@ -1422,7 +1413,6 @@
   <block id="3d139976c1c55c3b2339037a0d3064ee" category="paragraph">「file="C:\Program Files\CLI/logs/sasphe.csv"」</block>
   <block id="006de594d826fba6c0735756bd2ba8df" category="paragraph">包含SAS實體層錯誤統計資料的檔案預設名稱為「sas-phy-error-log.csv"。您可以使用任何檔案名稱、但必須使用「.csv"副檔名。</block>
   <block id="60229ca5c99f5f79f718787dae6e6bd8" category="summary">set volume命令可定義磁碟集區中磁碟區的內容。</block>
-  <block id="12e44abaed4e25a729a846c77e446e73" category="doc">設定磁碟集區中某個磁碟區的Volume屬性</block>
   <block id="bf06c203cdd9cc13c223c1d55e86a3f0" category="paragraph">「設置磁碟區」命令可定義磁碟集區中磁碟區的內容。</block>
   <block id="1c38ffc45b9eed61dc4f59ea613d7bbe" category="paragraph">在磁碟集區包含超過32個磁碟區的組態中、此作業可能會導致主機I/O錯誤或內部控制器重新開機、因為在作業完成之前的逾時期間已到期。如果發生主機I/O錯誤或內部控制器重新開機、請將主機設為靜止狀態、然後再試一次作業。</block>
   <block id="a6b1cb7a50e60750de85cca4514e6b9a" category="paragraph">《allVolumes》</block>
@@ -2055,7 +2045,6 @@
   <block id="3a353a73ba5a318e8908e15d0ffa7770" category="list-text">拔下纜線或將纜線移至正確位置後、請執行「機箱蓋sasPort miswire」命令。控制器會嘗試重新啟用偵測到連線錯誤時停用的任何SAS連接埠。</block>
   <block id="cabd0b41212389ef83363860bc8885d0" category="list-text">如果您移除或移動的纜線已修正錯誤的配線、但控制器只能存取停用的連接埠、則控制器將無法重新啟用已停用的SAS連接埠。若要完成恢復、您必須重新啟動儲存陣列中的磁碟匣。</block>
   <block id="86f8ad5baca5c765cbae20b60fc051b7" category="summary">「增加磁碟容量」命令可增加磁碟集區或磁碟區群組中標準磁碟區或儲存庫磁碟區的容量。</block>
-  <block id="92925efe9ea6338363bb32d12325a085" category="doc">增加磁碟集區或磁碟區群組中的磁碟區容量</block>
   <block id="eb0eb459c4b030d19a12632181b31657" category="paragraph">「最大容量Volume」命令可增加磁碟集區或磁碟區群組中標準磁碟區或儲存庫磁碟區的容量。</block>
   <block id="06161399e996c50a2080df16e4f78c24" category="paragraph">在此命令中、標準Volume也稱為厚Volume。</block>
   <block id="27a7c6652ea41a703a6f5cffbe53deec" category="paragraph">您無法使用此命令來增加精簡磁碟區的容量。</block>
@@ -2520,7 +2509,6 @@
   <block id="1aec6c8ca08708b38dfdbe2d9937df18" category="paragraph">包含您要移除之成員磁碟區的非同步鏡射群組名稱。將非同步鏡射群組名稱括在雙引號（""）內。</block>
   <block id="147c46e10fa709bdd898d82545ca48a9" category="paragraph">決定是否從非同步鏡射群組中移除所有儲存庫成員。</block>
   <block id="eb898012b2c7229201036dae959b6f4c" category="summary">set volume命令可定義Volume群組中磁碟區的內容。</block>
-  <block id="0ce231527ebd6152c54062aca57f49bf" category="doc">設定Volume群組中某個Volume的Volume屬性</block>
   <block id="e09985b1b214254d8a7d853c6502babc" category="paragraph">「設置Volume」命令可定義Volume群組中磁碟區的內容。</block>
   <block id="ed0d9147c134f6026e18fae4ef807490" category="paragraph">您可以使用大多數參數來定義一個或多個磁碟區的內容。您也可以使用某些參數來定義一個Volume的內容。語法定義是分開的、以顯示哪些參數適用於多個Volume、哪些只適用於一個Volume。</block>
   <block id="a1596d4bec10e80dcf7cb002340b0680" category="paragraph">在磁碟區群組包含超過32個磁碟區的組態中、此作業可能會導致主機I/O錯誤、或是由於作業完成前的逾時期間已到期而導致內部控制器重新開機。如果發生主機I/O錯誤或內部控制器重新開機、請停止主機I/O、然後再試一次作業。</block>
@@ -2639,7 +2627,6 @@
   <block id="0b96ebb6bc2c17931297bb42ae92fdd6" category="paragraph">您可以使用字母數字字元、事件和底線的任意組合來命名。名稱最多可包含30個字元。</block>
   <block id="8c30d2438c1439840bac4ad622fb913b" category="paragraph">複製優先順序定義用於在來源Volume與Volume複製配對的目標Volume之間複製資料的系統資源量。如果您選取最高優先順序層級、則Volume複本會使用最多的系統資源來執行Volume複製、進而降低主機資料傳輸的效能。</block>
   <block id="fef563ac437ffe92676ddb5f4870b392" category="summary">SMcli enable |停用autosupportRemoteDiag命令會開啟或關閉AutoSupport 「支援遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。</block>
-  <block id="5985e51532f00463ea0d009e35d3f730" category="doc">在AutoSupport EMW管理網域層級啟用或停用「支援不支援功能」（僅限SMcli）</block>
   <block id="d696d59ee6929514ea1ab9ef31828954" category="paragraph">「啟用Mcli |停用AutoSupportRemoteDiag」命令會開啟或關閉AutoSupport 「支援遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。</block>
   <block id="a7dcc0992cb74c432e1e0f6a766c5185" category="paragraph">此命令會影響管理網域中所有具備ASUP功能的儲存陣列。</block>
   <block id="0d9ea4e8fdd29724752b9a7c688f0e2a" category="paragraph">啟用此功能之前、請先啟用AutoSupport 管理AutoSupport 網域上的「支援功能」、然後再啟用「支援功能」。</block>
@@ -2950,7 +2937,6 @@
   <block id="b2cb7cf614d982961d50df5bacc1c1c2" category="paragraph">可讓您指定別名來代表信任的CA憑證。此別名可用來查詢信任的CA憑證相關資訊、或是刪除這些憑證。別名與信任的憑證相關聯、且必須是唯一的。</block>
   <block id="a0f8751dc93934b48b0842a50e8633e4" category="paragraph">可讓您指定包含受信任CA憑證的檔案。可接受的副檔名為.pem、.cer、.crt和.der。</block>
   <block id="cf3eb43ecfe9ff5a2482d314a0d46897" category="summary">SMcli enable autosupport功能命令可開啟AutoSupport 所有託管儲存陣列的支援功能（ASUP）、並可將訊息傳輸至技術支援網站。啟用ASUP功能之後、任何具備ASUP功能的儲存陣列都會自動準備好收集支援相關資料、並將其傳送給技術支援部門。然後、這些資料可用於遠端疑難排解和問題分析。</block>
-  <block id="e3fc1c8c9213c6bd73399d183b9c4a81" category="doc">在AutoSupport EMW管理網域層級啟用或停用支援功能（僅限SMcli）</block>
   <block id="58b00cb497eb36843198cdc1d641b3f5" category="paragraph">「Mcli啟用AutoSupportFeature」命令可開啟AutoSupport 所有託管儲存陣列的功能（ASUP）、並可將訊息傳輸至技術支援網站。啟用ASUP功能之後、任何具備ASUP功能的儲存陣列都會自動準備好收集支援相關資料、並將其傳送給技術支援部門。然後、這些資料可用於遠端疑難排解和問題分析。</block>
   <block id="69dd35336eecdbd6a8324e4a1772268a" category="paragraph">必須啟用持續監控、AutoSupport 才能使用「支援功能」功能。</block>
   <block id="ccb66471af2d0622802b493378f06311" category="paragraph">從未將客戶資料傳輸至技術支援網站。</block>
@@ -3351,7 +3337,6 @@
   <block id="138f0c144b2c2d77c8cd30a209e42160" category="doc">停止磁碟集區定位</block>
   <block id="5a8257139eee41d81db432bb93df7899" category="paragraph">使用「shtop diskPool locate」命令可關閉使用「Start diskPool locate」命令開啟之磁碟機上的指示燈。</block>
   <block id="3a67810abc8da793d40e0d9c714d2958" category="summary">show storageArray AutoSupport flexection命令會顯示AutoSupport 儲存陣列的「flexbund產品 組合」集合設定。</block>
-  <block id="b9a29215603a15544fa6c897c678da0a" category="doc">顯示AutoSupport 錶面組態</block>
   <block id="019fa4ba5e1d588b0e5c8dd094fde7d5" category="paragraph">「show storageArray AutoSupport fit2」命令會顯示AutoSupport 儲存陣列的「還原套裝組合」集合設定。</block>
   <block id="d999a9c760b0f5e1d68715c95898430c" category="list-text">傳送方法為電子郵件（SMTP）：顯示目的地電子郵件地址、郵件轉送伺服器和寄件者電子郵件地址</block>
   <block id="12e80b12563c6f7b86f4a49dc6ab595f" category="list-text">每日和每週偏好的時間範圍AutoSupport</block>
@@ -7259,7 +7244,6 @@
   <block id="6039cb24203c113782f6f93ef729fb48" category="sidebar">命令（依類別）</block>
   <block id="5857ef178f3851723d1a670392ade42a" category="paragraph">請勿在未執行中所列步驟的情況下執行這些步驟 <block ref="a894c729763686e5823ef858a3aa8302" category="inline-xref-macro-rx"></block></block>
   <block id="9effc9edc3686486aaacfb6caa40aee6" category="paragraph"><block ref="9effc9edc3686486aaacfb6caa40aee6" category="inline-link-macro-rx"></block></block>
-  <block id="2b21cb9530a6c7704a66108d45c196a1" category="doc">可下載的SMcli命令列參數</block>
   <block id="ab21a9218cf2507b606b474a8958d92d" category="section-title">11.60及更新版本的可下載SMcli命令列參數</block>
   <block id="75842716a65060950b20cba161cbac95" category="admonition">您必須在打算執行CLI命令的管理系統上提供Java執行時間環境（JRE）版本8及更新版本。</block>
   <block id="c3369045597873cd151e0a9b94edab23" category="inline-xref-macro">舊版命令列參數</block>
@@ -7611,4 +7595,461 @@
   <block id="7cfe927cc93acde3fd26ff2626d6a30c" category="section-title">適用於 E4000 ， EF300 ， EF600 ， E2800 ， E5700 的 AutoSupport 命令</block>
   <block id="4446202efb248928e4f489743b194e56" category="paragraph">SMCLI 的可下載版本可在 E4000 ， EF600 ， EF300 ， E5700 ， EF570 ， E2800 ， EF280 ， EF300C 和 EF600C 控制器上取得。要在 SANtricity 系統管理器中下載 SMCLI ，請選擇 *Settings* *System* 和 *Add-ons* * Command Line Interface* 。</block>
   <block id="d14e73691bb33d04604da5d4d66f9630" category="sidebar">歡迎使用 SANtricity 系統管理員內嵌式 CLI 使用者協助，您可以在其中使用命令列介面（ CLI ），瞭解如何設定，監控及調整儲存陣列。</block>
+  <block id="005c36a73508bafe714d7c28636a6690" category="doc">啟動非同步鏡像 - SANtricity CLI</block>
+  <block id="67b8a5ea93ae643bff796aec41a595da" category="doc">啟動儲存陣列韌體 - SANtricity CLI</block>
+  <block id="bc85fa0f0fd1ceedb542c4b8b859dcee" category="doc">啟動同步鏡像 - SANtricity CLI</block>
+  <block id="12856608d68a33cbe72594a7d9540217" category="doc">新增陣列標籤 - SANtricity CLI</block>
+  <block id="0a2c65f489bae54378b7ad476a1e6424" category="doc">從陣列新增憑證 - SANtricity CLI</block>
+  <block id="f17c5d851e2596993b9afa10dfa95c13" category="doc">從檔案新增憑證 - SANtricity CLI</block>
+  <block id="61d9f0699262e7806a0950c1f566ec58" category="doc">將磁碟機新增至 SSD 快取 - SANtricity CLI</block>
+  <block id="ea6f10db24a0158f856705e05eef4fd5" category="doc">將磁碟區新增至非同步鏡像群組 - SANtricity CLI</block>
+  <block id="a58246e032eb943bf69df48455b3219b" category="doc">自動配置儲存陣列熱備援 - SANtricity CLI</block>
+  <block id="5fd3f8ef44dc5d5c2c2fca274b5ff380" category="doc">自動配置儲存陣列 - SANtricity CLI</block>
+  <block id="51edd45492d71c667f8acd41fbe0c605" category="doc">更改 SSD 快取應用程式類型 - SANtricity CLI</block>
+  <block id="78b392a667c853bce601d347536fd664" category="doc">檢查非同步鏡像組一致性 - SANtricity CLI</block>
+  <block id="d2a16adfad6f5941743ac184f2138079" category="doc">檢查儲存庫一致性 - SANtricity CLI</block>
+  <block id="2c4f8c6cdbed7998a3c085f8def49c45" category="doc">檢查儲存陣列連接 - SANtricity CLI</block>
+  <block id="c832da0a07ea055b89ac0b59d81f8789" category="doc">檢查同步鏡像狀態 - SANtricity CLI</block>
+  <block id="2e6ffa6e35abba4ff76780c1d8c5e110" category="doc">檢查卷奇偶校驗 - SANtricity CLI</block>
+  <block id="6b4e700a3d15e87bb7cd9142f5fe8b0e" category="doc">清除磁碟機通道統計資料 - SANtricity CLI</block>
+  <block id="d9a6f9fe601f15e2754e4a0a652d5aae" category="doc">清除非同步鏡像故障 - SANtricity CLI</block>
+  <block id="b69da91c13a58517a6086fb7419b47ea" category="doc">清除電子郵件警報配置 - SANtricity CLI</block>
+  <block id="34e1ebf4a111d468ce79bff328a168f6" category="doc">清除儲存陣列配置 - SANtricity CLI</block>
+  <block id="504c1e0ecb45485f7e19d0b5ef7d2cf3" category="doc">清除儲存陣列事件日誌 - SANtricity CLI</block>
+  <block id="981b6d5deadf650da1b8ee0ddbb5f0e2" category="doc">清除儲存陣列韌體待處理區域 - SANtricity CLI</block>
+  <block id="76399c915900c3c8dd213d25b9b95547" category="doc">清除儲存陣列復原模式 - SANtricity CLI</block>
+  <block id="ce87c774d43a3cf3a7ee89d9e37b7643" category="doc">清除系統日誌配置 - SANtricity CLI</block>
+  <block id="4166852febc547b38535cde1aa1cfb4d" category="doc">清除卷預留 - SANtricity CLI</block>
+  <block id="ab5405013880a50b2bf4fc87dff0bfb1" category="doc">清除卷不可讀扇區 - SANtricity CLI</block>
+  <block id="fd466847736d39467f51f37882f49fb4" category="doc">建立非同步鏡像群組 - SANtricity CLI</block>
+  <block id="5c1fa9251daae5f4f16e5cb4cddd5934" category="doc">建立一致性群組快照映像 - SANtricity CLI</block>
+  <block id="9cc46ec6c5eefdabc7808151718da5e7" category="doc">建立一致性組快照磁碟區 - SANtricity CLI</block>
+  <block id="5dfbb4542d2252a24a76bd6f97d2b2e2" category="doc">建立一致性組 - SANtricity CLI</block>
+  <block id="9a377d0e408d40006fafad85f3957463" category="doc">建立磁碟池 - SANtricity CLI</block>
+  <block id="f10014b5f811ffe9cf0e7881ab83dae3" category="doc">建立主機 - SANtricity CLI</block>
+  <block id="d67d4367ad6facb674da5e01f150f4a2" category="doc">建立主機群組 - SANtricity CLI</block>
+  <block id="77d49c2db36bfc03f960f878d4c8b3b8" category="doc">建立主機連接埠 - SANtricity CLI</block>
+  <block id="f066c8c7718a3c91c03f107027645a4c" category="doc">建立啟動器-SANtricity CLI</block>
+  <block id="8c86ae314150ab12a7efab9b93640dd0" category="doc">建立 iSCSI 啟動器 - SANtricity CLI</block>
+  <block id="9b3b3b16d6c729c53e59bfbe6ac37e44" category="doc">建立一致性群組快照磁碟區映射 - SANtricity CLI</block>
+  <block id="99adeb2827528130fab9af8c94eee13e" category="doc">建立卷宗映射 - SANtricity CLI</block>
+  <block id="95171ca1a47ff9ab7693c06b1f145267" category="doc">建立 RAID 磁碟區（自動磁碟機選擇）- SANtricity CLI</block>
+  <block id="435014f1fe7ebef616b8e5374a499aa0" category="doc">建立 RAID 磁碟區（基於可用範圍的選擇）- SANtricity CLI</block>
+  <block id="200cc04eea595957b6251663e069f4cb" category="doc">建立 RAID 磁碟區（手動選擇磁碟機）- SANtricity CLI</block>
+  <block id="739fc0d96ced269d45916544bef28248" category="doc">建立唯讀快照磁碟區 - SANtricity CLI</block>
+  <block id="70a1bd6a6ce94a09b03a24806c05ebf1" category="doc">建立快照群組 - SANtricity CLI</block>
+  <block id="1908e5347445b6efc1c90aef4831f9a4" category="doc">建立快照映像 - SANtricity CLI</block>
+  <block id="757a750e63ed93b105b005a12062e1ea" category="doc">建立快照磁碟區 - SANtricity CLI</block>
+  <block id="dba94d66d62939236aa8b6128cb273e2" category="doc">註冊 SNMP 社群 - SANtricity CLI</block>
+  <block id="d198df8d0f6cbc517ccb18b6d064da1b" category="doc">註冊 SNMP 陷阱目標 - SANtricity CLI</block>
+  <block id="a1ebd51b31899a01b342b87710ed0fb2" category="doc">註冊 SNMPv3 USM 用戶 - SANtricity CLI</block>
+  <block id="75d6a06bc2227a83b9563b5cbe662a8a" category="doc">建立 SSD 快取 - SANtricity CLI</block>
+  <block id="49d054e1a2bed6805cd18a14be0f6112" category="doc">建立儲存陣列目錄伺服器 - SANtricity CLI</block>
+  <block id="afd02d7abdcccc4a275fd78dc612db65" category="doc">建立儲存陣列安全密鑰 - SANtricity CLI</block>
+  <block id="76a6f138246872859dd77201e509ccdc" category="doc">建立儲存陣列 syslog 配置 - SANtricity CLI</block>
+  <block id="18eb4664e11a6e36e89a3315b00802e6" category="doc">建立同步鏡像 - SANtricity CLI</block>
+  <block id="5c524efe873e996a554466592021106a" category="doc">在磁碟池中建立磁碟區 - SANtricity CLI</block>
+  <block id="51f0fca898df8c84c9744436064d6f7b" category="doc">建立卷宗副本 - SANtricity CLI</block>
+  <block id="2e9378d750fba1571722e5f01a103270" category="doc">建立卷宗組 - SANtricity CLI</block>
+  <block id="79e371c41d54e1a109f28bba4972d4aa" category="doc">停用同步鏡像 - SANtricity CLI</block>
+  <block id="5b13848f40804b92df92e8b2e74c9e82" category="doc">停用非同步鏡像 - SANtricity CLI</block>
+  <block id="d546d72f18a1b35f8696f239e488672d" category="doc">刪除非同步鏡像群組 - SANtricity CLI</block>
+  <block id="5b5fa8789c276a542c8658fbca52595c" category="doc">刪除審計日誌記錄 - SANtricity CLI</block>
+  <block id="1ebf49384a50774c6f8e8e89fe176b23" category="doc">刪除憑證 - SANtricity CLI</block>
+  <block id="67dc5d816c2ca55e9793f2fbbbe38c0f" category="doc">刪除一致性群組快照映像 - SANtricity CLI</block>
+  <block id="32303290bec027f492c8973f34bdc216" category="doc">刪除一致性群組 - SANtricity CLI</block>
+  <block id="e5536d6ffbe7ddca21b1a54c5c4f715e" category="doc">刪除已安裝的根 / 中間 CA 憑證 - SANtricity CLI</block>
+  <block id="d95639af01814d0b6c146c322ff5146a" category="doc">刪除磁碟池 - SANtricity CLI</block>
+  <block id="d1afca45100a598b7c7b718ec68f9ff3" category="doc">刪除電子郵件警報收件者 - SANtricity CLI</block>
+  <block id="d1bd38dad03a2c484e36e8d1f1d0872b" category="doc">刪除主機 - SANtricity CLI</block>
+  <block id="4efc7a016782872bb388c0663575ae41" category="doc">刪除主機群組 - SANtricity CLI</block>
+  <block id="09c32cca573c42f8d3f39c7eb8d506e6" category="doc">刪除主機連接埠 - SANtricity CLI</block>
+  <block id="b9742886d59e4570de017efb62495929" category="doc">刪除啟動器 - SANtricity CLI</block>
+  <block id="1a11ebb7be6909943af16c1da78a4478" category="doc">刪除 iSCSI 啟動器 - SANtricity CLI</block>
+  <block id="daab452e282cd2f6e00cff75fc2e3f3d" category="doc">刪除一致性群組快照磁碟區 - SANtricity CLI</block>
+  <block id="8abcd08a894cf444a59dbf3ec1e23fb0" category="doc">刪除快照群組 - SANtricity CLI</block>
+  <block id="e14211f312568fdf5f4e1fd12261bed9" category="doc">刪除快照映像 - SANtricity CLI</block>
+  <block id="6d55e12d9f38b85eee691f192f5369ed" category="doc">刪除快照磁碟區 - SANtricity CLI</block>
+  <block id="23fb0d56da68f02e699a743e8486a7c2" category="doc">取消註冊 SNMP 社群 - SANtricity CLI</block>
+  <block id="02f6e21729b6f7de09d0c95c0903409f" category="doc">取消註冊 SNMP 陷阱目標 - SANtricity CLI</block>
+  <block id="ff4cbdbcb944197627eb3fb92999dc2b" category="doc">取消註冊 SNMPv3 USM 用戶 - SANtricity CLI</block>
+  <block id="68cf89bc4032166f0abce517503e748a" category="doc">刪除 SSD 快取 - SANtricity CLI</block>
+  <block id="6bcfd69c50b85b6d7209b08c0bc8cd5c" category="doc">刪除儲存陣列目錄伺服器 - SANtricity CLI</block>
+  <block id="eccf4b307574a066e9a7407be2013403" category="doc">刪除已安裝的外部金鑰管理憑證 - SANtricity CLI</block>
+  <block id="11e9df45f9680456b5e05bcbfaf42a0c" category="doc">刪除儲存陣列登入橫幅 - SANtricity CLI</block>
+  <block id="af693cd1594d36107e2e0c0eccdc6270" category="doc">刪除儲存陣列 syslog 配置 - SANtricity CLI</block>
+  <block id="b64177d18b6eaae65b73ae923fb26e01" category="doc">刪除已安裝的受信任 CA 憑證 - SANtricity CLI</block>
+  <block id="765d919c0ea4455bc7292a0dc11114db" category="doc">刪除系統日誌伺服器 - SANtricity CLI</block>
+  <block id="a928fef7533ee74e5f9335e21f078682" category="doc">從磁碟池中刪除磁碟區 - SANtricity CLI</block>
+  <block id="52359be666efea0125b9a390dd4d85fe" category="doc">刪除卷 - SANtricity CLI</block>
+  <block id="803335491ded8016c6407a2004805598" category="doc">刪除卷組 - SANtricity CLI</block>
+  <block id="a1f60f07d97338cef902b19dc1714dbd" category="doc">測試非同步鏡像組連線 - SANtricity CLI</block>
+  <block id="5f32e53bf65b2e40976d277e1958406a" category="doc">診斷控制器 iSCSI 主機電纜 - SANtricity CLI</block>
+  <block id="9faddec54c85a84e6e7a28b27fcf8b4c" category="doc">診斷控制器 - SANtricity CLI</block>
+  <block id="b2fa3386eac5b6ef940c476e6c5d25ec" category="doc">診斷同步鏡像 - SANtricity CLI</block>
+  <block id="b1ffb3cc12fd837ecdf15bab0b234bae" category="doc">停用外部安全性金鑰管理 - SANtricity CLI</block>
+  <block id="4c391819f753ade397beb393cc2c4b41" category="doc">停用儲存陣列功能 - SANtricity CLI</block>
+  <block id="a61b1c53f2d43943ab17d9d494fb75d2" category="doc">安裝伺服器簽章憑證 - SANtricity CLI</block>
+  <block id="f7cd70d640ba0c8ee23df61079602c92" category="doc">安裝根/中間 CA 憑證 - SANtricity CLI</block>
+  <block id="972e5cb40d309028b90323979004ffba" category="doc">安裝受信任的 CA 憑證 - SANtricity CLI</block>
+  <block id="d4279fc2897988f3bc961ad411389edf" category="doc">下載磁碟機韌體 - SANtricity CLI</block>
+  <block id="ad9e6d206a5f5d5de772574852df7485" category="doc">下載儲存陣列磁碟機韌體 - SANtricity CLI</block>
+  <block id="f8ee46e7a752cb9b016d7e341a1ff56c" category="doc">下載儲存陣列韌體/NVSRAM - SANtricity CLI</block>
+  <block id="463378cd4a0dbea8865f6760eeb386a4" category="doc">安裝儲存陣列外部金鑰管理憑證 - SANtricity CLI</block>
+  <block id="3b6e76802bce9c7d171fdf50c1c5a95f" category="doc">下載儲存陣列 NVSRAM - SANtricity CLI</block>
+  <block id="4f9e074522bffb74884234f2d91b5c05" category="doc">下載托盤配置設定 - SANtricity CLI</block>
+  <block id="f70ab1d30e2967330625eb62c69f6a73" category="doc">下載環境卡韌體 - SANtricity CLI</block>
+  <block id="355944a3c5691270ea0d65bcb5a8d25d" category="doc">啟用控制器資料傳輸 - SANtricity CLI</block>
+  <block id="0b9e5db02f4eb038f75e41a1605c98d8" category="doc">啟用磁碟池安全 - SANtricity CLI</block>
+  <block id="3f4555c80245327da09edd0903ebd62a" category="doc">啟用或停用 AutoSupport（所有單一陣列）- SANtricity CLI</block>
+  <block id="04607e3a40db92f548b95f8c34c5f5c7" category="doc">啟用外部安全性金鑰管理 - SANtricity CLI</block>
+  <block id="dc54a2fb9cfa8f4785c762cca5e5012f" category="doc">啟用儲存陣列功能 - SANtricity CLI</block>
+  <block id="a3ae0f16af3632dfbb3f21e49956fd5c" category="doc">啟用磁碟區組安全性 - SANtricity CLI</block>
+  <block id="4954c5bb5ce5141a5ce68b31e60c0359" category="doc">建立非同步鏡像對 - SANtricity CLI</block>
+  <block id="8f1a4d873b35d3a53dbc2b0cd0045722" category="doc">匯出儲存陣列安全性金鑰 - SANtricity CLI</block>
+  <block id="a31b32c2e30c19a34f066ce0ccde56da" category="doc">身份驗證入門 - SANtricity CLI</block>
+  <block id="388523294499aaa99d2963caaa332317" category="doc">外部金鑰管理入門 - SANtricity CLI</block>
+  <block id="fbf45569efeef51447cf89ed71471302" category="doc">內部金鑰管理入門 - SANtricity CLI</block>
+  <block id="90f9604feaf4f1f2a54500ae0b92f857" category="doc">導入儲存陣列安全密鑰 - SANtricity CLI</block>
+  <block id="63a45e49456d076aa0458b90927e5a7b" category="doc">載入儲存陣列 DBM 資料庫 - SANtricity CLI</block>
+  <block id="06b3d91daee6cf90e3b5387b4d2e85ae" category="doc">重新複製卷副本 - SANtricity CLI</block>
+  <block id="f618268c4a19fad794d36f52f88b02b9" category="doc">恢復禁用的驅動器連接埠 - SANtricity CLI</block>
+  <block id="304b8d2dae6f61d70597de843ebc44ed" category="doc">恢復 SAS 連接埠錯誤接線 - SANtricity CLI</block>
+  <block id="c84c059779fe7c0eab8554e8930fd80b" category="doc">恢復 RAID 磁碟區 - SANtricity CLI</block>
+  <block id="dc537bb4fb9bfd9c176c91c02ca95670" category="doc">重新建立同步鏡像儲存庫磁碟區 - SANtricity CLI</block>
+  <block id="26d497c7d257284f04d33abd6f6084df" category="doc">重新建立外部安全性金鑰 - SANtricity CLI</block>
+  <block id="32c99d9fefc74348447dce4dd5aa87c4" category="doc">減少磁碟池容量 - SANtricity CLI</block>
+  <block id="1bec119991bc1bc67e04feefb1ebf419" category="doc">刪除陣列標籤 - SANtricity CLI</block>
+  <block id="14c43e1fa0759f4def1d78387dac9cfa" category="doc">從非同步鏡像群組中刪除不完整的非同步鏡像對 - SANtricity CLI</block>
+  <block id="633c055b85ef35662cc7ebb31dd2049c" category="doc">從 SSD 快取中刪除磁碟機 - SANtricity CLI</block>
+  <block id="6de87b1e584d49bc16946d3c583ee20c" category="doc">刪除卷 LUN 映射 - SANtricity CLI</block>
+  <block id="73202d1c153f833dab44324bb84dc4ae" category="doc">從一致性群組中刪除成員磁碟區 - SANtricity CLI</block>
+  <block id="3537b7d3550903d4ed9d6e17b9542d82" category="doc">移除同步鏡像 - SANtricity CLI</block>
+  <block id="2c4bb3df5f623c1af83bf67a2c2822dc" category="doc">從非同步鏡像組中刪除磁碟區 - SANtricity CLI</block>
+  <block id="32269b89fc242f40c3937f757140c7cf" category="doc">刪除卷副本 - SANtricity CLI</block>
+  <block id="7092c5382562f3434e89a4b5bcf58192" category="doc">重新命名 SSD 快取 - SANtricity CLI</block>
+  <block id="9f7743669b46bf031392ae6716e6b5eb" category="doc">修復資料奇偶校驗 - SANtricity CLI</block>
+  <block id="3960aa443e97a4a1ad410200dff0e1e2" category="doc">修復卷奇偶校驗 - SANtricity CLI</block>
+  <block id="4629971ecc3de16ef5af44ecd76f6754" category="doc">更換驅動器 - SANtricity CLI</block>
+  <block id="037e6c2e767dc44baed4727886fe3e8f" category="doc">重置已安裝的簽章憑證 - SANtricity CLI</block>
+  <block id="8da276164b6d727f2b88e501130a1e5a" category="doc">重置控制器 - SANtricity CLI</block>
+  <block id="f2ec599c8bb98c0b338441f654e19b8e" category="doc">重置驅動器 - SANtricity CLI</block>
+  <block id="9b4417e12876d7dd6c7977c22b93b5d1" category="doc">重置 iSCSI IP 位址 - SANtricity CLI</block>
+  <block id="5a8f008fef7e030693b4f6c585aeb52e" category="doc">重置非同步鏡像組統計資料 - SANtricity CLI</block>
+  <block id="fe0b5e35ace9fa1455de90f22ce2fbd4" category="doc">重置 AutoSupport 訊息收集計劃 - SANtricity CLI</block>
+  <block id="8b1b8f6218b9aa4d453bec8ba351cbda" category="doc">重置儲存陣列診斷資料 - SANtricity CLI</block>
+  <block id="1cf2d0a90c4423e1df27926a42ea683b" category="doc">重置儲存陣列主機連接埠統計資訊基線 - SANtricity CLI</block>
+  <block id="6c0a34b1edd67a92d3b143795d071608" category="doc">重置儲存陣列 InfiniBand 統計資訊基線 - SANtricity CLI</block>
+  <block id="194641d3bdbc65d577eba6daa3f18aca" category="doc">重置儲存陣列 iSCSI 基線 - SANtricity CLI</block>
+  <block id="7c7da0c10f5f52e4974265f1fc71b8e0" category="doc">重置儲存陣列 iSER 基線 - SANtricity CLI</block>
+  <block id="f10adae9c9ec7630895b659121457c0f" category="doc">重置儲存陣列 RLS 基線 - SANtricity CLI</block>
+  <block id="88875befa5b4b70618a12bb3e447da27" category="doc">重置儲存陣列 SAS PHY 基線 - SANtricity CLI</block>
+  <block id="ac3ac283e395fd0476d4573e98b18e25" category="doc">重置儲存陣列 SOC 基線 - SANtricity CLI</block>
+  <block id="7db0a37b97d6e8362a2f20a0467c8a62" category="doc">重置儲存陣列磁碟區分佈 - SANtricity CLI</block>
+  <block id="8e9ad1e274101cdd92c4c6221e37597d" category="doc">復原非同步鏡像群組 - SANtricity CLI</block>
+  <block id="096dde05acee64bdf4eabcbaf6427e51" category="doc">復原一致性群組快照磁碟區 - SANtricity CLI</block>
+  <block id="12617a1ac0195150de7705d93b69628c" category="doc">復原快照映像回滾 - SANtricity CLI</block>
+  <block id="01a86595cc3246cc1f444a6559b13020" category="doc">復原快照磁碟區 - SANtricity CLI</block>
+  <block id="9226199421ef829a6bb020a8e8ee484a" category="doc">恢復 SSD 快取 - SANtricity CLI</block>
+  <block id="35eaa23a93da910998167f6943ddf89f" category="doc">復原同步鏡像 - SANtricity CLI</block>
+  <block id="de04ce9fa7b4502f461a1ad3242b3977" category="doc">復原驅動器 - SANtricity CLI</block>
+  <block id="6304f749130a21f67d9848cfb65ace45" category="doc">恢復快照群組 - SANtricity CLI</block>
+  <block id="762c01be118edba6d6658b1a85a03686" category="doc">復原快照磁碟區 - SANtricity CLI</block>
+  <block id="755672f1b7dbf66fdfbc396f102c7ece" category="doc">恢復卷組 - SANtricity CLI</block>
+  <block id="bf0ba9deb78dd3845474d7a5de958275" category="doc">儲存磁碟機日誌 - SANtricity CLI</block>
+  <block id="0bcef94a1383a489c21b411ffdd24f9f" category="doc">儲存託盤日誌 - SANtricity CLI</block>
+  <block id="9f5454ee6517de84f16ee904543b9891" category="doc">儲存審計日誌記錄 - SANtricity CLI</block>
+  <block id="f9794eaac133b5e1c988f8dd3fc7b5df" category="doc">儲存檢查卷奇偶校驗作業奇偶校驗錯誤 - SANtricity CLI</block>
+  <block id="ae659fcd0c293bddd2a71a94e9655883" category="doc">產生 Web 伺服器憑證簽章要求 (CSR) - SANtricity CLI</block>
+  <block id="6e8c9b377a579d5daf18c1be6552a409" category="doc">檢索已安裝的伺服器憑證 - SANtricity CLI</block>
+  <block id="721e7047643e338ac5dff894203bd79c" category="doc">檢索已安裝的 CA 憑證 - SANtricity CLI</block>
+  <block id="f38175190c66ea116f172e39e30b79cb" category="doc">儲存控制器 NVSRAM - SANtricity CLI</block>
+  <block id="2a442c8309fa985c6b7aa20442cd6f56" category="doc">儲存磁碟機通道故障隔離診斷狀態 - SANtricity CLI</block>
+  <block id="5da81cd8162b4040a145a3a5cfa237f5" category="doc">儲存輸入輸出控制器 (IOC) 轉儲 - SANtricity CLI</block>
+  <block id="067a6f6bb2ae93f05fbab6fb8b93619d" category="doc">儲存儲存陣列診斷資料 - SANtricity CLI</block>
+  <block id="1a0dac721c6d3af2560591671d2b001e" category="doc">保存非同步鏡像組統計資料 - SANtricity CLI</block>
+  <block id="5bd98adb3f2df21219d86b306bb82960" category="doc">儲存自動負載平衡統計資料 - SANtricity CLI</block>
+  <block id="d90059470c5e1244c241e56e6868eb26" category="doc">儲存儲存陣列配置 - SANtricity CLI</block>
+  <block id="e43ad0fac31d13d5394a08c80b0b8c42" category="doc">儲存儲存陣列控制器運作狀況映像 - SANtricity CLI</block>
+  <block id="fe2233031dbd20ed9fd1c07c38246875" category="doc">保存儲存陣列 DBM 資料庫 - SANtricity CLI</block>
+  <block id="e2a2217398369d77276c34b6832875ba" category="doc">保存儲存陣列 DBM 驗證器資訊檔案 - SANtricity CLI</block>
+  <block id="bf97fb0b070850aa66f7efe9ec671282" category="doc">儲存儲存陣列韌體清單 - SANtricity CLI</block>
+  <block id="d48c4b89c53c73b79a4c88a6bb122a77" category="doc">儲存儲存陣列主機連接埠統計資料 - SANtricity CLI</block>
+  <block id="bee3faa5a56c1c13b10a012f82949a5a" category="doc">儲存儲存陣列 InfiniBand 統計資料 - SANtricity CLI</block>
+  <block id="1a765a60404f641d5a67e6d9d9c7b26b" category="doc">儲存儲存陣列 iSCSI 統計資料 - SANtricity CLI</block>
+  <block id="8426d510817a097e1e10da3d2299044b" category="doc">儲存儲存陣列 iSER 統計資料 - SANtricity CLI</block>
+  <block id="ab8217d44a62df6672e2ca6856140397" category="doc">檢索已安裝的外部金鑰管理憑證 - SANtricity CLI</block>
+  <block id="1148a42a3f1391e7eab0603bbabf0520" category="doc">產生金鑰管理憑證簽章要求 (CSR) - SANtricity CLI</block>
+  <block id="9e8e7893290ddf96429aa5fb05fac032" category="doc">儲存儲存陣列登入橫幅 - SANtricity CLI</block>
+  <block id="10530ea7c5bd786c382bb911b6c9061c" category="doc">保存儲存陣列效能統計資料 - SANtricity CLI</block>
+  <block id="7c00547a628c15ecc02e009e50f8ff1b" category="doc">保存儲存陣列 RLS 計數 - SANtricity CLI</block>
+  <block id="4206788d80d091984bc0d5fc7d2c02bb" category="doc">保存儲存陣列 SAS PHY 計數 - SANtricity CLI</block>
+  <block id="df3c47b086fbbac244ffe5e1fc77aa75" category="doc">保存儲存陣列 SOC 計數 - SANtricity CLI</block>
+  <block id="c19b19bc223d129f4b0dbb1245a78dd0" category="doc">保存儲存陣列狀態擷取 - SANtricity CLI</block>
+  <block id="d16868325b64d0e6256c31e0e533924a" category="doc">保存儲存陣列支援資料 - SANtricity CLI</block>
+  <block id="5d64950dd0451ea71081746a33de8eca" category="doc">檢索已安裝的受信任 CA 憑證 - SANtricity CLI</block>
+  <block id="06d26ba3410497773dbac1234e938ed6" category="doc">保存儲存陣列事件 - SANtricity CLI</block>
+  <block id="f9f150185a89e8938527928fe24a52ed" category="doc">設定非同步鏡像組 - SANtricity CLI</block>
+  <block id="5d95bcd120557e8c909e608efc732fd4" category="doc">設定審核日誌設定 - SANtricity CLI</block>
+  <block id="44d7108588ea51888a62f82fb116ab75" category="doc">設定 AutoSupport 調度大小限制 - SANtricity CLI</block>
+  <block id="6e9dc202d9e85baa28d3a21188bea8ff" category="doc">指定 AutoSupport http(s) 交付方法 - SANtricity CLI</block>
+  <block id="2585a88518bfe31b2670bc0218a27105" category="doc">設定一致性群組快照磁碟區 - SANtricity CLI</block>
+  <block id="fbd42244a4f577a763f78f027323b789" category="doc">設定一致性組屬性 - SANtricity CLI</block>
+  <block id="da26e055c75810ad029bd7614cb3c676" category="doc">為一致性群組新增成員 - SANtricity CLI</block>
+  <block id="066afee1df17dacac8f9fd525f2b7360" category="doc">設定控制器 DNS 設定 - SANtricity CLI</block>
+  <block id="ba18bb20fdac2c9e862d63b3f46eaab1" category="doc">設定控制器主機連接埠屬性 - SANtricity CLI</block>
+  <block id="be9a09269b77c56a957853a08c2edf42" category="doc">設定 iSCSI 主機連接埠網路屬性 - SANtricity CLI</block>
+  <block id="5f5f80b5e8b5e8c7ebb8f026d403a5f7" category="doc">設定控制器 NTP 設定 - SANtricity CLI</block>
+  <block id="930e2aaf7f874c62860302fc466048c2" category="doc">設定控制器服務操作允許指示器 - SANtricity CLI</block>
+  <block id="0e4110d6d92a405f4523cb3f17f7752a" category="doc">設定控制器 - SANtricity CLI</block>
+  <block id="66791453231d01b5fffe467da4812471" category="doc">設定磁碟池（修改磁碟區）- SANtricity CLI</block>
+  <block id="80b800ff645d8b6eb9b4ada4e4fe1ef3" category="doc">設定磁碟池 - SANtricity CLI</block>
+  <block id="dc708b2fc26550ca482f3f39121f29e4" category="doc">設定驅動器熱備用 - SANtricity CLI</block>
+  <block id="411c2bc6575767f7be683052a4ca92b1" category="doc">將外部磁碟機設定為本機磁碟機 - SANtricity CLI</block>
+  <block id="e6d4014d3ab0bf11681d73268d3d78c0" category="doc">設定驅動器狀態 - SANtricity CLI</block>
+  <block id="1c61d59dbca80ebdd9d23133098f5301" category="doc">設定 FIPS 驅動器安全標識符 - SANtricity CLI</block>
+  <block id="04f32a1288fac994ed8ee12fb33d346f" category="doc">設定驅動器服務操作允許指示器 - SANtricity CLI</block>
+  <block id="6ea93b330d7ae35a3308b49d8a204d24" category="doc">設定驅動器通道狀態 - SANtricity CLI</block>
+  <block id="343eafa07e9aa11d1648a4536826ae09" category="doc">設定電子郵件警報設定 - SANtricity CLI</block>
+  <block id="becc8365179e28b5fd4adf0073638027" category="doc">設定事件警報過濾 - SANtricity CLI</block>
+  <block id="cb9963d672c1181e3aea11b618a751a2" category="doc">設定主機 - SANtricity CLI</block>
+  <block id="6c3e96a78384e25e2b3f678909c20056" category="doc">設定主機通道 - SANtricity CLI</block>
+  <block id="d516470ba9c729582e8b81783509f555" category="doc">設定主機組 - SANtricity CLI</block>
+  <block id="48cdf48a8fb13e394cd244d3d9e3a5ea" category="doc">設定主機連接埠 - SANtricity CLI</block>
+  <block id="f2eb0540675fe32930d441ed62102e76" category="doc">設定啟動器 - SANtricity CLI</block>
+  <block id="645c27ba780d75659b9cc30e89240268" category="doc">設定 iSCSI 啟動器 - SANtricity CLI</block>
+  <block id="1bbf6b77c960b65dd59db30158aed599" category="doc">設定 iSCSI 目標屬性 - SANtricity CLI</block>
+  <block id="396dae48263cc1a6acccb7761df52c94" category="doc">設定 iSER 目標 - SANtricity CLI</block>
+  <block id="2b6788a3478449663072c884314d993e" category="doc">設定會話 - SANtricity CLI</block>
+  <block id="837aae416e7f9e42612b784b7c3e96b8" category="doc">設定快照群組計劃 - SANtricity CLI</block>
+  <block id="7fece1dcfb939bf9e5eee63dbd2bdd89" category="doc">設定快照群組儲存庫磁碟區容量 - SANtricity CLI</block>
+  <block id="da0f1a9cef203bf0f7b927c385f974c6" category="doc">設定快照群組媒體掃描 - SANtricity CLI</block>
+  <block id="3d64e0ee5ea0d706a8595a4346a9aa90" category="doc">設定快照組屬性 - SANtricity CLI</block>
+  <block id="be3d6ccf283e840d7d4af6f999243384" category="doc">將只讀快照卷設定為讀/寫卷 - SANtricity CLI</block>
+  <block id="59b144ce58219e65bf805525e2cb87be" category="doc">設定快照磁碟區儲存庫磁碟區容量 - SANtricity CLI</block>
+  <block id="8ba2129582acdd8aeca3e22e183c5539" category="doc">設定快照磁碟區媒體掃描 - SANtricity CLI</block>
+  <block id="2e543614285939d3382ea5895110b803" category="doc">重新命名快照磁碟區 - SANtricity CLI</block>
+  <block id="4295a4cbe69adaafe94535bae4759ec3" category="doc">更新 SNMP 社群 - SANtricity CLI</block>
+  <block id="e3ebcf74988ef36a1dd1a20651bf3227" category="doc">更新 SNMP MIB II 系統組變數 - SANtricity CLI</block>
+  <block id="b0d7bcc4d4422f63f870be646218859e" category="doc">更新 SNMP 陷阱目標 - SANtricity CLI</block>
+  <block id="a27059a0bde02160f2af815a235ea2d5" category="doc">更新 SNMPv3 USM 用戶 - SANtricity CLI</block>
+  <block id="478d9eac74f211a6e4508c495b89cc50" category="doc">設定儲存陣列以啟用或停用自動負載平衡 - SANtricity CLI</block>
+  <block id="7cf360bea3336524dc26770dd53bb19d" category="doc">啟用或停用 AutoSupport 維護視窗 - SANtricity CLI</block>
+  <block id="aec0ea19527546f885748f34c8e84dc3" category="doc">設定儲存陣列以啟用或停用快取鏡像資料保證檢查 - SANtricity CLI</block>
+  <block id="2896a57542dbfa813cf8ca9efd08302f" category="doc">設定儲存陣列控制器運行狀況映像允許覆蓋 - SANtricity CLI</block>
+  <block id="25d2b46b426ff50bb7dbf6dcd72275c9" category="doc">設定儲存陣列目錄伺服器角色映射 - SANtricity CLI</block>
+  <block id="b882bffdea9863d283f7f5e1bfd07c6b" category="doc">設定外部金鑰管理設定 - SANtricity CLI</block>
+  <block id="8728af0bddcba152623eb6e4ae69fc6d" category="doc">啟用或停用主機連線報告 - SANtricity CLI</block>
+  <block id="16bf2b7c9cda5762d10edbeec1977a01" category="doc">設定儲存陣列 ICMP 回應 - SANtricity CLI</block>
+  <block id="31236f8be341ba04c1278a8b21bc8e0f" category="doc">設定儲存陣列 iSNS 伺服器 IPv4 位址 - SANtricity CLI</block>
+  <block id="85f6064b9997b9e6e12e9129557b3f20" category="doc">設定儲存陣列 iSNS 伺服器 IPv6 位址 - SANtricity CLI</block>
+  <block id="65ebff496bec0f12f091b4171a2c78d8" category="doc">設定儲存陣列 iSNS 伺服器偵聽連接埠 - SANtricity CLI</block>
+  <block id="c48556b73aa71b26fbdf7ef082c0660e" category="doc">設定儲存陣列 iSNS 註冊 - SANtricity CLI</block>
+  <block id="922181eed729d70f5e1ba9580cc65836" category="doc">設定儲存陣列 iSNS 伺服器刷新 - SANtricity CLI</block>
+  <block id="e9fa65b64bdc96d546c6f5bbb53137f4" category="doc">設定儲存陣列控制器電池學習週期 - SANtricity CLI</block>
+  <block id="e80e39e9d1abb8f9d0e0e9e3a5b0da20" category="doc">設定儲存陣列本機使用者密碼或 SYMbol 密碼 - SANtricity CLI</block>
+  <block id="55fb77acf8993d37e668139d365d4cca" category="doc">設定儲存陣列登入橫幅 - SANtricity CLI</block>
+  <block id="587197a04dfac2e0be72d0094d64c863" category="doc">啟用或停用 ODX - SANtricity CLI</block>
+  <block id="91aaa6a96fb60808b7fd9597535e0796" category="doc">設定儲存陣列密碼長度 - SANtricity CLI</block>
+  <block id="85a46ed663704a7fe2d4a1fa32c91fea" category="doc">設定儲存陣列冗餘模式 - SANtricity CLI</block>
+  <block id="434db8fd853c9aabfc8681c41244482e" category="doc">設定儲存陣列資源配置磁碟區 - SANtricity CLI</block>
+  <block id="6431aaba0e797f0ffab144f38413d673" category="doc">設定憑證撤銷檢查設定 - SANtricity CLI</block>
+  <block id="e6f70a57061ad31ee2b5ce4a2eed5e13" category="doc">設定內部儲存陣列安全密鑰 - SANtricity CLI</block>
+  <block id="4ac9e1a945eaafb353c2a61993ca086a" category="doc">更新儲存陣列 syslog 配置 - SANtricity CLI</block>
+  <block id="85bdffb1bf4856b76ad133dda8633bff" category="doc">設定儲存陣列時間 - SANtricity CLI</block>
+  <block id="b7d1fda9defa85bcc496c7d235e4b8db" category="doc">設定儲存陣列托盤位置 - SANtricity CLI</block>
+  <block id="8b0483e5e4d2e976495bd4388f823488" category="doc">設定儲存陣列未命名發現會話 - SANtricity CLI</block>
+  <block id="4b49f9c3e0da2db04840a0e9e2b929dc" category="doc">設定儲存陣列使用者會話 - SANtricity CLI</block>
+  <block id="23d4f6cae16b2c4ca5d65a01deae432a" category="doc">啟用或停用 VAAI - SANtricity CLI</block>
+  <block id="06b6b8855566a62a467552c032c88f85" category="doc">設定儲存陣列 - SANtricity CLI</block>
+  <block id="17013e984c9adc55ab6d4e0959626814" category="doc">設定同步鏡像 - SANtricity CLI</block>
+  <block id="b3beae2e002662a954fd1e4c7bee5186" category="doc">設定係統日誌設定 - SANtricity CLI</block>
+  <block id="6b6255e14f0d98eedf32603c4df22770" category="doc">設定目標屬性 - SANtricity CLI</block>
+  <block id="8bda48dc32e378642f84b2a07070d462" category="doc">設定精簡卷屬性 - SANtricity CLI</block>
+  <block id="38a1a96cc2807ce0a8cfa2644c504e1f" category="doc">設定托盤屬性 - SANtricity CLI</block>
+  <block id="4ce44084e9a8be6d56a9deab94c3e3b6" category="doc">設定抽屜服務操作允許指示器 - SANtricity CLI</block>
+  <block id="984d9575a17cdfc26d5c647ce95bf2fc" category="doc">設定托盤識別 - SANtricity CLI</block>
+  <block id="b72f83bf254d1d872fb8b629fa6d5661" category="doc">設定托盤服務操作允許指示器 - SANtricity CLI</block>
+  <block id="82ff34f626191648b36a2067c0303068" category="doc">設定卷組中卷的捲屬性 - SANtricity CLI</block>
+  <block id="0e66b159e1b56411f2acaccf22bd8cb2" category="doc">設定卷映射 - SANtricity CLI</block>
+  <block id="6013576e9e6ff479cad964b6d6cb1452" category="doc">為磁碟區設定 SSD 快取 - SANtricity CLI</block>
+  <block id="d8bd72b502dd260cc3ba2eda5cfde836" category="doc">設定卷副本 - SANtricity CLI</block>
+  <block id="5bd426e378d19a0539f18cd0c6aabce5" category="doc">設定卷組強制狀態 - SANtricity CLI</block>
+  <block id="e27ec150e65c0367ae2919834c3a961b" category="doc">設定卷組 - SANtricity CLI</block>
+  <block id="91af049778cfffe2bba2149317a9e776" category="doc">設定磁碟池中磁碟區的磁碟區屬性 - SANtricity CLI</block>
+  <block id="2778b5e2b1249bec76b59a8fd3d516aa" category="doc">顯示器驅動器下載進度 - SANtricity CLI</block>
+  <block id="76317680fbc5d6c38790d18a587c0a20" category="doc">顯示磁碟機效能統計資料 - SANtricity CLI</block>
+  <block id="c6cb87fe259e9c27b1e9ecde61e21f9b" category="doc">顯示驅動器 - SANtricity CLI</block>
+  <block id="14688c179ab5b91923d24656238a7acb" category="doc">顯示主機連接埠 - SANtricity CLI</block>
+  <block id="f30804f385685028d8661aea49090f86" category="doc">顯示 SNMP 社群 - SANtricity CLI</block>
+  <block id="038f3a219ee3f3c8fbdd50622b03b889" category="doc">顯示 SNMPv3 USM 使用者 - SANtricity CLI</block>
+  <block id="1c72ce74bf32b2a5ad925620b58999c8" category="doc">顯示陣列標籤 - SANtricity CLI</block>
+  <block id="2cc51b23237c746b1cf6182bd8303990" category="doc">顯示非同步鏡像群組 - SANtricity CLI</block>
+  <block id="a09126bb24ddc3e2c30f4388b0025b61" category="doc">顯示非同步鏡像組同步進度 - SANtricity CLI</block>
+  <block id="ae745d43c18044df8c50b058ef7cc21b" category="doc">顯示審計日誌配置 - SANtricity CLI</block>
+  <block id="1467fef0d9976dcc6a32eafa797ae992" category="doc">顯示審核日誌摘要 - SANtricity CLI</block>
+  <block id="6ea261bb3289353475aaf3a6e5ce5bb2" category="doc">顯示封鎖的事件 - SANtricity CLI</block>
+  <block id="29409043b5a9f59f616bcc1f5d5369d0" category="doc">顯示憑證 - SANtricity CLI</block>
+  <block id="18e4e4f541b1270c710c3e978cc9763a" category="doc">顯示一致性群組快照映像 - SANtricity CLI</block>
+  <block id="87807c6900003719eff87f81e6cab952" category="doc">顯示檢查卷奇偶校驗作業 - SANtricity CLI</block>
+  <block id="ccfb24184ef22ca50eaa8bdcc8637da1" category="doc">顯示檢查卷奇偶校驗作業 - SANtricity CLI</block>
+  <block id="6bcbb1208daf54ff6891bd6695cc540b" category="doc">顯示一致性組 - SANtricity CLI</block>
+  <block id="60aebe2e4caf925f6162adf4e98e0608" category="doc">顯示簽章憑證 - SANtricity CLI</block>
+  <block id="5a064aceaedc8db34187ce7ef5a81dbd" category="doc">顯示已安裝的根 / 中間 CA 憑證摘要 - SANtricity CLI</block>
+  <block id="95b7224f997dc9ff3129125730546303" category="doc">顯示控制器診斷狀態 - SANtricity CLI</block>
+  <block id="bc21b1258ce8b69a931d8d8af3901dcc" category="doc">顯示器控制器 NVSRAM - SANtricity CLI</block>
+  <block id="466687f57ce48ea4f75e61a9ab88f1da" category="doc">顯示控制器 - SANtricity CLI</block>
+  <block id="19cad3d5ad56ca89bcda791d8582bd70" category="doc">顯示磁碟池 - SANtricity CLI</block>
+  <block id="7d4223c5f5e9b2ed343220ab679d6241" category="doc">顯示驅動器通道統計資訊 - SANtricity CLI</block>
+  <block id="d0a8058a87025c025fc40bf3fcade90c" category="doc">顯示電子郵件警報配置 - SANtricity CLI</block>
+  <block id="b5e08dd56ef5f41a307807bf30b45f74" category="doc">顯示目前 iSCSI 會話 - SANtricity CLI</block>
+  <block id="20b502229fc8b5b0f8c26a5965e8d7a5" category="doc">顯示可更換磁碟機 - SANtricity CLI</block>
+  <block id="0ac4d28222354e00f9071f3584f66291" category="doc">顯示快照群組 - SANtricity CLI</block>
+  <block id="adb4d61083a0c9e666805d56c43a2f5d" category="doc">顯示快照影像 - SANtricity CLI</block>
+  <block id="e5241c2f11fca1315326aa3aa8f26f81" category="doc">顯示快照磁碟區 - SANtricity CLI</block>
+  <block id="0ca1fa8aafb076c8f32f2b7aaa960792" category="doc">顯示 SNMP MIB II 系統組變數 - SANtricity CLI</block>
+  <block id="30e98ad1e8c888115c1ed450f133b98c" category="doc">顯示 SSD 快取統計資料 - SANtricity CLI</block>
+  <block id="f8cbdaa67d64ff906ef16f5ab73c6918" category="doc">顯示 SSD 快取 - SANtricity CLI</block>
+  <block id="7e4e5050e51f14a471034225a2f7393b" category="doc">顯示儲存陣列自動配置 - SANtricity CLI</block>
+  <block id="156c227b1314532667a4a69c67d76b8d" category="doc">顯示 AutoSupport 配置 - SANtricity CLI</block>
+  <block id="d3e04af0773bdfa9f8258a51278c4536" category="doc">顯示儲存陣列快取鏡像資料保證檢查啟用 - SANtricity CLI</block>
+  <block id="79190a5edbc92c9ff4c1d735d31fe23f" category="doc">顯示儲存陣列控制器運作狀況影像 - SANtricity CLI</block>
+  <block id="f5d6b1a4a6ab287674f474408df3b267" category="doc">顯示儲存陣列 DBM 資料庫 - SANtricity CLI</block>
+  <block id="e7c3d46e54ead3976bbedcd4b77be862" category="doc">顯示儲存陣列主機連線報告 - SANtricity CLI</block>
+  <block id="270d635fa44995d158df73f2dc7eb459" category="doc">顯示儲存陣列主機拓撲 - SANtricity CLI</block>
+  <block id="3c7b9c328520a30aa221cf3afff3f0a7" category="doc">顯示儲存陣列協商預設值 - SANtricity CLI</block>
+  <block id="f2b84f20203e7d9132bba6063bfd64f2" category="doc">顯示儲存陣列 LUN 映射 - SANtricity CLI</block>
+  <block id="511b96a9e7d64a9f0b3fb6a19e780473" category="doc">顯示儲存陣列 ODX 設定 - SANtricity CLI</block>
+  <block id="a039ad73ad9bc51937687a0f9848b0c8" category="doc">顯示儲存陣列電源資訊 - SANtricity CLI</block>
+  <block id="8d13be50cd7b996ee90bf818af584f7f" category="doc">顯示憑證撤銷檢查設定 - SANtricity CLI</block>
+  <block id="8a287d2b29f8de8bdefa3d7392db8c75" category="doc">顯示儲存陣列 syslog 配置 - SANtricity CLI</block>
+  <block id="a154887df888e3565a3be73d4dd5fb1f" category="doc">顯示已安裝的受信任 CA 憑證摘要 - SANtricity CLI</block>
+  <block id="7f17c8e8281c30457bd5acff4b4441b7" category="doc">顯示未配置的啟動器 - SANtricity CLI</block>
+  <block id="649d10a695d17256ecc6438c49c8c447" category="doc">顯示儲存陣列未配置的 iSCSI 啟動器 - SANtricity CLI</block>
+  <block id="6f0b63e19f8eecd41eb9496aca4b10f2" category="doc">顯示儲存陣列不可讀磁區 - SANtricity CLI</block>
+  <block id="84fe8f54db8c5504e4020cfbd89d57ef" category="doc">顯示儲存陣列使用者會話 - SANtricity CLI</block>
+  <block id="5e12bd1119c477648df0260c272fcdc3" category="doc">顯示儲存陣列 - SANtricity CLI</block>
+  <block id="369ea0b080e29dbc409c9ffef2442ad7" category="doc">顯示同步鏡像磁碟區候選 - SANtricity CLI</block>
+  <block id="e1b17122217e83bb1149cde954c258ae" category="doc">顯示同步鏡像磁碟區同步進度 - SANtricity CLI</block>
+  <block id="bd998bc8c6f04c61ec1c1f68244f1cfb" category="doc">顯示系統日誌配置 - SANtricity CLI</block>
+  <block id="18f7b88846694a89d4c3a86bc5b322b6" category="doc">顯示字串 - SANtricity CLI</block>
+  <block id="d21ef43f00b20d3f7ad7ea6c4aa34afd" category="doc">顯示磁碟區操作進度 - SANtricity CLI</block>
+  <block id="9a5ec6fd73df1bb587a19b433782d480" category="doc">顯示磁碟區效能統計資料 - SANtricity CLI</block>
+  <block id="b569df116891dad2e089a31a2ab6b5a2" category="doc">顯示卷預留 - SANtricity CLI</block>
+  <block id="92155f1fec3da835a3ff77c3954c35af" category="doc">顯示音量 - SANtricity CLI</block>
+  <block id="4b1ec08d27d4f418875cc92ea259f791" category="doc">顯示精簡卷 - SANtricity CLI</block>
+  <block id="ec03be41ebcb38bee3170cfa1ca2a758" category="doc">顯示卷宗複製目標候選 - SANtricity CLI</block>
+  <block id="fcb8b1ad2a3ecb59c2ab476b83180daa" category="doc">顯示磁碟區複製來源候選 - SANtricity CLI</block>
+  <block id="d0fc1ff6f879860cbcd9c2bef7f95063" category="doc">顯示卷副本 - SANtricity CLI</block>
+  <block id="fad6ead6a919ca47ed1ae7233fce3729" category="doc">顯示卷宗組匯出相依性 - SANtricity CLI</block>
+  <block id="baa8a6db36d040c8d18802e763a40b6d" category="doc">顯示卷宗組導入相依性 - SANtricity CLI</block>
+  <block id="90724c8ab8050f88c30fc61ebe7fe05d" category="doc">顯示卷組 - SANtricity CLI</block>
+  <block id="b49fa608a47c52f72f0860abdce3a30b" category="doc">測試警報 - SANtricity CLI</block>
+  <block id="26da5db3100d0a756599f439585ff54d" category="doc">顯示 AutoSupport 捆綁包收集設定 - SANtricity CLI</block>
+  <block id="be37096a862fa43d8a97c4e0e5d4be7b" category="doc">測試 AutoSupport 配置 - SANtricity CLI</block>
+  <block id="41acb7360e0876145ebf042564444be1" category="doc">指定 AutoSupport 交付方法 - SANtricity CLI</block>
+  <block id="219a6c2f737547c7d67241a03a7e1703" category="doc">捕獲或查看 AutoSupport 日誌 - SANtricity CLI</block>
+  <block id="4ab7a8f8c53824d6516ed5bc0f7dfe7b" category="doc">顯示 AutoSupport 訊息收集計劃 - SANtricity CLI</block>
+  <block id="691334917d58b68cc7b056e568b4c780" category="doc">在 EMW 管理域層級啟用或停用 AutoSupport (僅限 SMcli) - SANtricity CLI</block>
+  <block id="dbaacd5578eb5e1a85f8f5f391585dff" category="doc">在 EMW 管理域層級啟用或停用 AutoSupport OnDemand 功能（僅限 SMcli）- SANtricity CLI</block>
+  <block id="1b9bb5091eb9ce2891761f72b9af647f" category="doc">在 EMW 管理域層級啟用或停用 AutoSupport 遠端診斷功能（僅限 SMcli）- SANtricity CLI</block>
+  <block id="6689cc8ff757357e80263aac4f0bd24d" category="doc">安排自動支援包收集配置 - SANtricity CLI</block>
+  <block id="0a97a5582e066eec0e75b202decd2324" category="doc">啟動非同步鏡像同步 - SANtricity CLI</block>
+  <block id="9a61477e71e421dd419c085c559f38e4" category="doc">啟動一致性群組快照回滾 - SANtricity CLI</block>
+  <block id="c5255e793a811946f82b332eda96a439" category="doc">啟動檢查卷奇偶校驗作業 - SANtricity CLI</block>
+  <block id="0c40fb12565993f4e408cc8bb339b0ec" category="doc">啟動 iSCSI DHCP 刷新-SANtricity CLI</block>
+  <block id="a318607b3e2c5ae507bb0510233a397f" category="doc">啟動控制器追蹤 - SANtricity CLI</block>
+  <block id="118173c4342d86355b19d5e1239c78a2" category="doc">啟動磁碟池完整配置 - SANtricity CLI</block>
+  <block id="8cbf9e70bcf23228b716f1132f56272d" category="doc">啟動磁碟池定位 - SANtricity CLI</block>
+  <block id="aaac61e3e42f26d128242c4786e36902" category="doc">啟動磁碟池資源配置 - SANtricity CLI</block>
+  <block id="fa757da2c9ccc225a51504228aaa391d" category="doc">開始驅動器擦除 - SANtricity CLI</block>
+  <block id="f9a3e71b3625251694b22941504665c5" category="doc">啟動驅動器初始化 - SANtricity CLI</block>
+  <block id="2c5d04d07e48a6fc90fc0f47e2a2907d" category="doc">啟動磁碟機定位 - SANtricity CLI</block>
+  <block id="efb55d86b508c494720d4b1630d12028" category="doc">開始驅動器重建 - SANtricity CLI</block>
+  <block id="675d002fa4194958f2347fb0c9365a60" category="doc">啟動磁碟機通道故障隔離診斷 - SANtricity CLI</block>
+  <block id="cfb0f6e7ccd025a568622b470ef666ff" category="doc">啟動驅動器通道定位 - SANtricity CLI</block>
+  <block id="913f18421fa0a29e968979742e51dc8f" category="doc">測試電子郵件警報配置 - SANtricity CLI</block>
+  <block id="529d2221aae9db9ace9fdc47cfcf1447" category="doc">增加磁碟池或磁碟區組中磁碟區的容量 - SANtricity CLI</block>
+  <block id="0dae4d0d0b1ead46a5847f8501d3a308" category="doc">啟動輸入輸出控制器 (IOC) 轉儲 - SANtricity CLI</block>
+  <block id="919c16d8699218d2d0f666b97a41ded3" category="doc">啟動 FDE 安全驅動器擦除 - SANtricity CLI</block>
+  <block id="d0214b63d84f565ed92f39fd4038094c" category="doc">啟動快照映像回溯 - SANtricity CLI</block>
+  <block id="5cc193e166f328bdf99edd3e8178cab8" category="doc">測試 SNMP 陷阱目標 - SANtricity CLI</block>
+  <block id="f298945068838945662c8b8965a8b7ed" category="doc">啟動 SSD 快取定位 - SANtricity CLI</block>
+  <block id="ec724d3e650b5bfa66d84fd93f4f46fd" category="doc">啟動 SSD 快取效能建模 - SANtricity CLI</block>
+  <block id="93c20d650760be804d5843c701dcdbfe" category="doc">測試 AutoSupport 交付設定 - SANtricity CLI</block>
+  <block id="11a86c832efec296ba2fadbd4dedc6e6" category="doc">啟動儲存陣列 AutoSupport 手動調度 - SANtricity CLI</block>
+  <block id="70148fcc7fbd0e053017f2602a39e861" category="doc">啟動儲存陣列配置資料庫診斷 - SANtricity CLI</block>
+  <block id="220aff0b746d64227c6277f85a5b6a25" category="doc">啟動儲存陣列控制器運行狀況映像 - SANtricity CLI</block>
+  <block id="e81e42e2f544782fd8bcc78e9cba96a4" category="doc">測試外部金鑰管理通訊 - SANtricity CLI</block>
+  <block id="3dfe7c7eacdb7ed25de385a373d7d835" category="doc">啟動儲存陣列 iSNS 伺服器刷新 - SANtricity CLI</block>
+  <block id="6606b7355a3cad5245fb64e92205fa91" category="doc">啟動儲存陣列定位 - SANtricity CLI</block>
+  <block id="61eb6e6c9f19f6ff1c9577a5f20dbb62" category="doc">啟動 OCSP 伺服器 URL 測試 - SANtricity CLI</block>
+  <block id="2c80ae6b7347ef6563ab968298df1b18" category="doc">啟動儲存陣列系統日誌測試 - SANtricity CLI</block>
+  <block id="dcda764fd3602bf66eff50785e76bd4e" category="doc">啟動同步鏡像同步 - SANtricity CLI</block>
+  <block id="246c272dee9b7e00ee57d0817a8ffbdb" category="doc">測試系統日誌配置 - SANtricity CLI</block>
+  <block id="c826e2c84eaa823bc7413cd99a58f29d" category="doc">啟動托盤定位 - SANtricity CLI</block>
+  <block id="439c20f74478b8d1e1a478583ccc547e" category="doc">開始卷初始化 - SANtricity CLI</block>
+  <block id="050119e21368e0439a456980eb29f276" category="doc">初始化精簡卷 - SANtricity CLI</block>
+  <block id="9d71a4467008c08ff27949408b0de45a" category="doc">啟動卷組碎片整理 - SANtricity CLI</block>
+  <block id="1588bf269dbd549d8ca6ab8c79e4c0b1" category="doc">啟動磁碟區組匯出 - SANtricity CLI</block>
+  <block id="24f614469b689fc9b8c13914c5f4027f" category="doc">啟動磁碟區組完全配置 - SANtricity CLI</block>
+  <block id="07072175b6b88030c4108bc2112119a4" category="doc">啟動磁碟區組導入 - SANtricity CLI</block>
+  <block id="596ed5aa438be8938af0f7f3b28792ae" category="doc">啟動磁碟區組定位 - SANtricity CLI</block>
+  <block id="c5f949582278d06b6e1b9411a5c1cd83" category="doc">啟動磁碟區組資源配置 - SANtricity CLI</block>
+  <block id="e44ef18583f4eb5f3e36be336a0e7436" category="doc">取消非同步鏡像組角色逆轉 - SANtricity CLI</block>
+  <block id="0758c7ef4554bf77d8c3fbc63aa02bb0" category="doc">停止一致性群組快照回滾 - SANtricity CLI</block>
+  <block id="ea93de0d08823edd2ffcbfa6fbf3f99d" category="doc">停止一致性群組快照磁碟區 - SANtricity CLI</block>
+  <block id="5677591e686d39249525d2354a13f975" category="doc">停止檢查卷奇偶校驗作業 - SANtricity CLI</block>
+  <block id="4c57d4e1ec387c37451ef856a800944b" category="doc">停止一致性群組上的待處理快照映像 - SANtricity CLI</block>
+  <block id="6d7b2551f7130ef61938c67f0fa483a2" category="doc">停止磁碟池定位 - SANtricity CLI</block>
+  <block id="647ba943a65085d3bbafb7a8a9a55960" category="doc">停止驅動器定位 - SANtricity CLI</block>
+  <block id="254aa707e54c4207b387262f493b620a" category="doc">停止驅動器更換 - SANtricity CLI</block>
+  <block id="5babf79e80b24b238ee38ff325444b44" category="doc">停止驅動器通道故障隔離診斷 - SANtricity CLI</block>
+  <block id="7facb591c907c430d873c8bb048b635b" category="doc">停止驅動器通道定位 - SANtricity CLI</block>
+  <block id="8fd5a424cbc9f4dccc0fddb6c84b9dd6" category="doc">停止快照群組待處理的快照映像 - SANtricity CLI</block>
+  <block id="1ceb1f08560dbfd519a1f5350de52d63" category="doc">停止快照映像回溯 - SANtricity CLI</block>
+  <block id="c887f843cfaa5207f21ded2ede3d6f71" category="doc">停止快照磁碟區 - SANtricity CLI</block>
+  <block id="bfdb284d77fa91a0bf339b12213d5a31" category="doc">停止 SSD 快取定位 - SANtricity CLI</block>
+  <block id="6e931c73733d9634b41d0d993b34e388" category="doc">停止 SSD 快取效能建模 - SANtricity CLI</block>
+  <block id="75ca73164eb487a9ba43e1aa643e3a83" category="doc">停止儲存陣列配置資料庫診斷 - SANtricity CLI</block>
+  <block id="a2825719e6486700d326b40509b80bf6" category="doc">停止儲存陣列驅動器韌體下載 - SANtricity CLI</block>
+  <block id="3d045609db70d0f1ffd3aed5039d0501" category="doc">停止儲存陣列 iSCSI 會話 - SANtricity CLI</block>
+  <block id="cf37c5a2c78e3b2891f4f76b52726940" category="doc">停止儲存陣列定位 - SANtricity CLI</block>
+  <block id="813093623fc6bb5ee57455c32949cf8a" category="doc">停止托盤定位 - SANtricity CLI</block>
+  <block id="3b680e4806ba89aa469667f4896def10" category="doc">停止卷複製 - SANtricity CLI</block>
+  <block id="e8896ca4203c5c16c4013b9cbeaadacf" category="doc">停止卷組定位 - SANtricity CLI</block>
+  <block id="f778cc83e7fd8fe1ff4739e4c0d160d5" category="doc">暫停非同步鏡像組 - SANtricity CLI</block>
+  <block id="001582ee94dbe257db1029cee650f07a" category="doc">暫停 SSD 快取 - SANtricity CLI</block>
+  <block id="26a1c1c6efefa05d44fc590320e04217" category="doc">暫停同步鏡像 - SANtricity CLI</block>
+  <block id="8a4d07e71e7d36a85ccb3beb4f17924d" category="doc">驗證儲存陣列安全密鑰 - SANtricity CLI</block>
+  <block id="afd514e0104d1ebc0c51f118206391fe" category="doc">SANtricity CLI 管理員指令</block>
+  <block id="1d39e1ed63f4f5905396b2928de848c9" category="doc">SANtricity CLI 警報設定指令</block>
+  <block id="04c1682362235c55241753a26ea4c427" category="doc">SANtricity CLI 陣列設定指令</block>
+  <block id="6ecada277de3cc0d76c13a8e475fabf0" category="doc">SANtricity AutoSupport 指令</block>
+  <block id="3eda0abcfa6adf76c8b2be3b51ac6b7a" category="doc">SANtricity CLI 鏡像指令</block>
+  <block id="c2f5aba26d8fa2e0c603290e9fb99435" category="doc">SANtricity CLI 效能調整指令</block>
+  <block id="5d0559a132eeaa537a7b5d90994c97a6" category="doc">SANtricity CLI 複製指令</block>
+  <block id="b6bebc197ba6d8954245ee93f9c804bb" category="doc">SANtricity CLI 安全性指令</block>
+  <block id="73c9b363ff629a14cd1693e3b6e69e40" category="doc">SANtricity CLI 儲存監控人員指令</block>
+  <block id="331d33d7a7238617ac154486f8e55c4e" category="doc">SANtricity CLI 磁碟區設定指令</block>
+  <block id="5e27e1b49d97c8a06e053d6d6f49c0c8" category="doc">在 SANtricity CLI 腳本檔案中新增註釋</block>
+  <block id="287858dfcc22764b472503cc1e1f5d94" category="doc">了解 SANtricity CLI 命令包裝器語法</block>
+  <block id="e8ad2b3afd03143023d6840c982be5e6" category="doc">了解舊版 SANtricity CLI 命令列參數</block>
+  <block id="937ae65b4e52d36785cddb3c12ea7499" category="doc">了解 SANtricity CLI 詳細錯誤報告</block>
+  <block id="3145754e4855858cb1cc89fa2376188f" category="doc">了解可下載的 SANtricity Secure CLI (SMcli) 參數</block>
+  <block id="563fb6ef5de7d13e640b5ffc7953d14e" category="doc">了解 SANtricity CLI 退出狀態</block>
+  <block id="3c08eb24645fa240624a6f91f93f90c4" category="doc">了解 SANtricity CLI 韌體相容性級別</block>
+  <block id="5ac7dea127bec6e62c95983c7736669d" category="doc">Windows PowerShell 中 SANtricity CLI 指令的格式規則</block>
+  <block id="5f53dbe6abe408d8a86aa6d580709bf2" category="doc">SANtricity CLI 指令的格式規則</block>
+  <block id="2c34dbebc71bf04eec35a11b1d9cbfac" category="doc">SANtricity CLI 腳本指令的格式規則</block>
+  <block id="a400145c3b8b870b8c5a6c644eabbf29" category="doc">了解 SANtricity CLI 互動模式</block>
+  <block id="30aabd0f3fb1d9aed3b4df1edd801136" category="doc">了解 SANtricity 軟體中的捲組遷移</block>
+  <block id="9ab52d49eae6fe9c13882fef1d3e6158" category="doc">了解 SANtricity CLI 命名約定</block>
+  <block id="e77479d03e13e5457b5143e09aaef40b" category="doc">了解 https 模式下的 SANtricity Secure CLI (SMcli)</block>
+  <block id="6922805ac8c399933f9a380b55dc8685" category="doc">了解 SANtricity CLI</block>
+  <block id="72620124ac6533d0b7b4563bfd1db676" category="doc">了解重複的 SANtricity CLI 語法元素</block>
+  <block id="466342d4ceed605fc65275c81c79450c" category="doc">了解 SANtricity CLI 指令的結構</block>
+  <block id="912cc2f8fec83a8f0f502fa5d8213432" category="doc">了解 SANtricity CLI 腳本命令的結構</block>
+  <block id="7749a7749c067a57803053149311ba25" category="doc">了解 SANtricity CLI 腳本命令</block>
+  <block id="7aa1a554fa97ed75a945661977f56a71" category="doc">了解 SANtricity CLI 腳本命令指南</block>
 </blocks>

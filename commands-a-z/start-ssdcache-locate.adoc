@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ssd, cache, locate 
 summary: start ssdCache locate命令會在SSD上的指示燈閃亮時、識別以邏輯方式群組在一起的固態磁碟（SSD）、以形成SSD快取。 
 ---
-= 啟動SSD快取定位
+= 啟動 SSD 快取定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

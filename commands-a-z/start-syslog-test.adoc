@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, syslog, configuration 
 summary: start syslog測試命令會傳送範例訊息來測試syslog組態。 
 ---
-= 測試syslog組態
+= 測試系統日誌配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

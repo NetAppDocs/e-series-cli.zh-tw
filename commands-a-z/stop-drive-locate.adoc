@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, locate 
 summary: stop磁碟機locate命令會關閉以start磁碟機locate命令開啟之磁碟機上的指示燈。 
 ---
-= 停止磁碟機定位
+= 停止驅動器定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

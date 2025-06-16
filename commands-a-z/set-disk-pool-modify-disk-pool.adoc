@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool, modify 
 summary: set diskPool命令會將容量新增至磁碟集區（動態容量擴充或DCE）、或變更整個磁碟集區的控制器擁有權。 
 ---
-= 設定磁碟集區（修改磁碟集區）
+= 設定磁碟池（修改磁碟區）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, firmware, command, downloads, optionally, values, controllers, role, context, parameter 
 summary: Download storageArray韌體命令會下載儲存陣列控制器的韌體和（可選）NVSRAMs值。 
 ---
-= 下載儲存陣列韌體/NVSRAM
+= 下載儲存陣列韌體/NVSRAM - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

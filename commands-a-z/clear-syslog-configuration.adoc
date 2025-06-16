@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, syslog, configuration 
 summary: 清除syslog組態命令會清除syslog警示資訊。 
 ---
-= 清除系統記錄組態
+= 清除系統日誌配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

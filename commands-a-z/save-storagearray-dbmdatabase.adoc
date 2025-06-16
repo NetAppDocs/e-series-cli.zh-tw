@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, dbm, database 
 summary: SAVE storageArray dbmDatabase命令會將RAID組態資料或所有資料備份至主機上的檔案。您可以指定多個資料位置和控制器。 
 ---
-= 儲存儲存陣列DBM資料庫
+= 保存儲存陣列 DBM 資料庫 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

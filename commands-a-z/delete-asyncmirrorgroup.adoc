@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, asynchronous, mirror group 
 summary: DELETE asyncdMirrorGroup命令會從本機儲存陣列和遠端儲存陣列刪除一或多個非同步鏡射群組。 
 ---
-= 刪除非同步鏡射群組
+= 刪除非同步鏡像群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

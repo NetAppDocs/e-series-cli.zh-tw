@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, ca, certificates 
 summary: 「儲存控制器caCertificate」命令會從指定的控制器擷取已安裝的CA憑證。擷取的憑證中包含控制器Web伺服器所要求的任何CA憑證。 
 ---
-= 擷取已安裝的CA憑證
+= 檢索已安裝的 CA 憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

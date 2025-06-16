@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, host, port, statistics, baseline 
 summary: 重設storageArray hostPortStatisticsBaselisticsBaseline命令會重設儲存陣列主機連接埠統計資料基準。 
 ---
-= 重設儲存陣列主機連接埠統計資料基準
+= 重置儲存陣列主機連接埠統計資訊基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

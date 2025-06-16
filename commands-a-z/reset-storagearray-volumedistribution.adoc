@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, volume, distribution 
 summary: 重設storageArray volumeDistribution命令會將所有磁碟區重新分配（移動）至其偏好的控制器。 
 ---
-= 重設儲存陣列磁碟區發佈
+= 重置儲存陣列磁碟區分佈 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

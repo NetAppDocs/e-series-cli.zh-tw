@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, group 
 summary: create snapGroup命令會建立新的快照群組及相關的儲存庫Volume。 
 ---
-= 建立Snapshot群組
+= 建立快照群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

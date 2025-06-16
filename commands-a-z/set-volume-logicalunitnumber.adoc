@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, map 
 summary: set volume logicalunitNumber命令可定義磁碟區與主機或主機群組之間的邏輯單元編號（LUN）或命名空間ID（NSID）對應。 
 ---
-= 設定Volume對應
+= 設定卷映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

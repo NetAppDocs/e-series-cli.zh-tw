@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, group 
 summary: revive snapGroup命令會強制指定的快照群組達到最佳狀態。 
 ---
-= 恢復快照群組
+= 恢復快照群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

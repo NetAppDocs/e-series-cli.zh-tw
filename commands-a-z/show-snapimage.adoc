@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, image 
 summary: show SnapImage命令會傳回使用者先前建立的快照映像相關資訊。 
 ---
-= 顯示快照映像
+= 顯示快照影像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

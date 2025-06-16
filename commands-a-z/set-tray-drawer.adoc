@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drawer, service, action, allowed, indicator 
 summary: 「Set tray t抽屜」命令會開啟或關閉裝有磁碟機的藥櫃上的「Service Action允許的服務動作」指示燈。 
 ---
-= 設定允許藥櫃服務動作指示
+= 設定抽屜服務操作允許指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: import, storage, array, security, file, command, unlock, disk, encryption, context, syntax, firmware level, role, context 
 summary: Import storageArray securityKey file命令可解除鎖定已從一個儲存陣列移至另一個儲存陣列的一或多個完整磁碟加密（FDE）磁碟機。 
 ---
-= 匯入儲存陣列安全金鑰
+= 導入儲存陣列安全密鑰 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, defragment 
 summary: start volumeGroup重組命令會在指定的Volume群組上啟動重組作業。 
 ---
-= 啟動Volume群組重組
+= 啟動卷組碎片整理 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

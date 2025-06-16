@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rename, ssd, cache 
 summary: set ssdCache命令會變更SSD快取的名稱。 
 ---
-= 重新命名SSD快取
+= 重新命名 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

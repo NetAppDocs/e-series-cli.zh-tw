@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, foreign, drive, native 
 summary: set磁碟機nativeState命令會將遺失的（外部）磁碟機新增回原始磁碟區群組、並將其納入新儲存陣列的磁碟區群組。 
 ---
-= 將外部磁碟機設定為原生磁碟機
+= 將外部磁碟機設定為本機磁碟機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

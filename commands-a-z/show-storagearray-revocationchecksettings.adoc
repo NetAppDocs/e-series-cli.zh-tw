@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, certificate, revocation, check, set 
 summary: show storageArray revocation Checking Settings命令可讓您檢視儲存陣列的憑證撤銷設定。 
 ---
-= 顯示憑證撤銷檢查設定
+= 顯示憑證撤銷檢查設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

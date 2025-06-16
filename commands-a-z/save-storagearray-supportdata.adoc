@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, support, data 
 summary: SAVE storageArray supportData命令會將儲存陣列的支援相關資訊儲存到檔案中。 
 ---
-= 儲存儲存陣列支援資料
+= 保存儲存陣列支援資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

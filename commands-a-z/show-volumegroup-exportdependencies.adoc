@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group, export, dependencies 
 summary: show volumeGroup exportDependencies命令會顯示您要從一個儲存陣列移至另一個儲存陣列之磁碟區群組中磁碟機的相依性清單。 
 ---
-= 顯示Volume群組匯出相依性
+= 顯示卷宗組匯出相依性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

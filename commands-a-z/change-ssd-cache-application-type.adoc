@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: ssd cache application type 
 summary: set ssdCache命令會變更與SSD快取相關聯的應用程式類型。應用程式類型可以是Web伺服器、資料庫或多媒體。變更應用程式類型會變更區塊大小、子區塊大小、在讀取臨界值時填入資料、以及在SSD快取基礎的磁碟區寫入臨界值時填入資料。 
 ---
-= 變更SSD快取應用程式類型
+= 更改 SSD 快取應用程式類型 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

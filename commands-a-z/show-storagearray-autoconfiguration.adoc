@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, auto, configuration 
 summary: show storageArray autoconfiguration命令會顯示儲存陣列在執行autodConfigure storageArray命令時所建立的預設自動組態。 
 ---
-= 顯示儲存陣列自動組態
+= 顯示儲存陣列自動配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

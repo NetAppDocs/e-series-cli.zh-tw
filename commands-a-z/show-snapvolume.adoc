@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, volumes 
 summary: show snapVolume命令會傳回一或多個Snapshot Volume的相關資訊。 
 ---
-= 顯示快照磁碟區
+= 顯示快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

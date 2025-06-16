@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, event, alert, filter 
 summary: 設定事件警示命令可停用或啟用與特定警示事件相關的通知、以管理警示事件通知。若要防止特定警示事件的通知、請封鎖該事件。若要啟用有關特定警示事件的通知、請解除封鎖該事件。 
 ---
-= 設定事件警示篩選
+= 設定事件警報過濾 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, identification 
 summary: Set tray命令可設定儲存陣列中控制器匣、控制器磁碟機匣或磁碟機匣的匣ID。 
 ---
-= 設定紙匣識別
+= 設定托盤識別 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

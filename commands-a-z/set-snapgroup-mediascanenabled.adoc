@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, media, scan 
 summary: set snapGroup mediaScannEnabled命令會在快照群組上執行媒體掃描。 
 ---
-= 設定Snapshot群組媒體掃描
+= 設定快照群組媒體掃描 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

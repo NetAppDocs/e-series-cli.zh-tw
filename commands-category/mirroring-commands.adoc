@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: commands, mirroring, asynchronous, synchronous, command 
 summary: 鏡射命令 
 ---
-= 鏡射命令
+= SANtricity CLI 鏡像指令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

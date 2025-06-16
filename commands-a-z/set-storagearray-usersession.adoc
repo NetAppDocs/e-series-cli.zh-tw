@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, user, session 
 summary: set storageArray userSession命令可讓您在System Manager中設定逾時時間、以便在指定時間後中斷使用者的非作用中工作階段連線。 
 ---
-= 設定儲存陣列使用者工作階段
+= 設定儲存陣列使用者會話 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

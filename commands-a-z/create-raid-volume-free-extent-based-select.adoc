@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, free, extent, based, select 
 summary: create volume命令會在Volume群組的可用空間中建立磁碟區。 
 ---
-= 建立RAID Volume（自由區型選擇）
+= 建立 RAID 磁碟區（基於可用範圍的選擇）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

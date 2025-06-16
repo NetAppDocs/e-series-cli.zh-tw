@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, asynchronous, mirror, group 
 summary: 移除Volume asyncdMirrorGroup命令會從現有的非同步鏡像群組移除成員Volume。 
 ---
-= 從非同步鏡射群組移除Volume
+= 從非同步鏡像組中刪除磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

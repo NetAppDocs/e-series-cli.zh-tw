@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, iscsi, dhcp, refresh 
 summary: start控制器iscsiHostPort DhcpRefresh命令會重新整理iSCSI介面的DHCP參數。 
 ---
-= 啟動iSCSI DHCP重新整理
+= 啟動 iSCSI DHCP 刷新-SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

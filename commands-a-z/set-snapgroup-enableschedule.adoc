@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, schedule 
 summary: set snapGroup enableschedule命令可定義快照群組的快照映像拍攝排程。 
 ---
-= 設定快照群組排程
+= 設定快照群組計劃 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

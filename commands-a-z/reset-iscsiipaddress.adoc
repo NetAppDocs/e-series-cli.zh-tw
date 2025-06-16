@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, iscsi, ip address 
 summary: 重設iscsiIpAddress命令會重設遠端儲存陣列的IP位址、以重新建立與本機儲存陣列的連線。 
 ---
-= 重設iSCSI IP位址
+= 重置 iSCSI IP 位址 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

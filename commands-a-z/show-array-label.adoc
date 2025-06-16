@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, array, label 
 summary: Show Array label命令會傳回儲存陣列標籤已定義或所有現有儲存陣列標籤的相關資訊。 
 ---
-= 顯示陣列標籤
+= 顯示陣列標籤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

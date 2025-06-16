@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume 
 summary: show volume Summary命令會傳回磁碟區的相關資訊。 
 ---
-= 顯示Volume
+= 顯示音量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

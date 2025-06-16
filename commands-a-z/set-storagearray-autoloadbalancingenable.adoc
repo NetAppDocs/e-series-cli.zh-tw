@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, enable, disable, automatic, load, balance 
 summary: set storageArray autoLoadBalancingEnable命令可啟用或停用自動負載平衡功能。 
 ---
-= 設定儲存陣列以啟用或停用自動負載平衡
+= 設定儲存陣列以啟用或停用自動負載平衡 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

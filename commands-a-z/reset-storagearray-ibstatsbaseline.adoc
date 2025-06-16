@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, infiniband, statistics, baseline 
 summary: 重設storageArray ibStatsBaseline.命令會將儲存陣列的InfiniBand統計資料基準重設為0。 
 ---
-= 重設儲存陣列InfiniBand統計資料基準
+= 重置儲存陣列 InfiniBand 統計資訊基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

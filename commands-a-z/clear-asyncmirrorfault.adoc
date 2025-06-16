@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, asynchronous mirroring, fault 
 summary: ClearasyncdMirrorFault命令可從一或多個非同步鏡射群組、以及一個或多個非同步鏡射群組成員磁碟區、清除非同步鏡射「ticky」故障。 
 ---
-= 清除非同步鏡射故障
+= 清除非同步鏡像故障 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, syslog, set 
 summary: set syslog命令可設定syslog警示資訊。您可以設定事件監視器、以便在發生警示事件時、將警示傳送至syslog伺服器。 
 ---
-= 設定syslog設定
+= 設定係統日誌設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

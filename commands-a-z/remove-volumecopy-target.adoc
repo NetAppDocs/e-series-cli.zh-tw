@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, copy 
 summary: 移除volumeCopy target命令會移除Volume複製配對。 
 ---
-= 移除Volume複本
+= 刪除卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, command, storage, feature 
 summary: disablestorageArray命令會停用儲存陣列功能。 
 ---
-= 停用儲存陣列功能
+= 停用儲存陣列功能 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, controller, health, image 
 summary: start storageArray controllerHealthImage控制器命令可在支援控制器健全狀況映像功能的儲存陣列上、產生儲存陣列控制器健全狀況映像。 
 ---
-= 啟動儲存陣列控制器健全狀況映像
+= 啟動儲存陣列控制器運行狀況映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

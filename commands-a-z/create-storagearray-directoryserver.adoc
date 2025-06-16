@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, directory server 
 summary: create storageArray directoryServer命令可讓您新增目錄伺服器、用於驗證及授權使用者。 
 ---
-= 建立儲存陣列目錄伺服器
+= 建立儲存陣列目錄伺服器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

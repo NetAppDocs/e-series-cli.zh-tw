@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, connectivity, report 
 summary: show storageArray hostConnectivityReporting命令會傳回主機連線報告功能的啟用狀態。 
 ---
-= 顯示儲存陣列主機連線報告
+= 顯示儲存陣列主機連線報告 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

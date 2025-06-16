@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: load, storage array, database, command, management 
 summary: load storageArray dbmDatabase命令可從檔案或快取中擷取映像、藉此還原資料庫管理（DBM）資料庫映像。 
 ---
-= 載入儲存陣列DBM資料庫
+= 載入儲存陣列 DBM 資料庫 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

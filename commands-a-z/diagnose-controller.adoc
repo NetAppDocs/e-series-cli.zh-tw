@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, controller, command, run, diagnostic, tests, arrays, roles, context 
 summary: 診斷控制器命令會在控制器上執行診斷測試。 
 ---
-= 診斷控制器
+= 診斷控制器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, sas, phy, counts 
 summary: SAVE storageArray SASPHYCounts命令可將SAS實體層（SAS實體層）計數器儲存至檔案。 
 ---
-= 儲存陣列SAS實體層數
+= 保存儲存陣列 SAS PHY 計數 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

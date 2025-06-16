@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, delivery, set, individual, E2800, E5700, arrays 
 summary: start storageArray AutoSupport riveryTest命令會傳送範例AutoSupport 消息以供您使用指定的交付參數來測試與目的地技術支援系統的連線。 
 ---
-= 測試AutoSupport 供應設定
+= 測試 AutoSupport 交付設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

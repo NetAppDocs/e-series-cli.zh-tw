@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, locate 
 summary: start storageArray locate命令會開啟儲存陣列的指示燈、以尋找儲存陣列。 
 ---
-= 啟動儲存陣列定位
+= 啟動儲存陣列定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

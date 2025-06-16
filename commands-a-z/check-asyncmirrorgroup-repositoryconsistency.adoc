@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, asynchronous mirror group, consistency 
 summary: Check asyncdMirrorGroup repositoryConsistency命令會根據對指定非同步鏡射鏡射群組基礎儲存庫Volume中資料的分析、產生報告。 
 ---
-= 檢查非同步鏡射群組一致性
+= 檢查非同步鏡像組一致性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

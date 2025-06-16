@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, audit log 
 summary: 「設定稽核記錄」命令會設定稽核記錄設定。 
 ---
-= 設定稽核日誌設定
+= 設定審核日誌設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

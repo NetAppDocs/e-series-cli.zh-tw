@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, odx 
 summary: set storageArray odxEnabled命令可開啟或關閉儲存陣列的卸載資料傳輸（ODX）。 
 ---
-= 啟用或停用ODX
+= 啟用或停用 ODX - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

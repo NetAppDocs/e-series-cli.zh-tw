@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volume, group, migration, learn, data, access, export, import, component 
 summary: Volume群組移轉可讓您匯出Volume群組、以便將Volume群組匯入不同的儲存陣列。您也可以匯出Volume群組、以便離線儲存資料。 
 ---
-= 深入瞭解Volume群組移轉
+= 了解 SANtricity 軟體中的捲組遷移
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

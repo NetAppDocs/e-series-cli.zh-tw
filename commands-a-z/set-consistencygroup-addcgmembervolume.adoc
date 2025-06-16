@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, member, consistency, group 
 summary: Set Consistency Group addCGMemberVolume命令會將新的基礎磁碟區新增為現有一致性群組的成員。 
 ---
-= 新增成員至一致性群組
+= 為一致性群組新增成員 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

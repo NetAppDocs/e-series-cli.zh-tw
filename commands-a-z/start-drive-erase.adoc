@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, erase 
 summary: start磁碟機清除命令會清除一或多個磁碟機中的所有資料。 
 ---
-= 開始磁碟機清除
+= 開始驅動器擦除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -42,7 +42,7 @@ summary: start磁碟機清除命令會清除一或多個磁碟機中的所有資
 
 [source, cli, subs="+macros"]
 ----
-start drive pass:quotes[[_trayID_],pass:quotes[[_drawerID_,]]pass:quotes[_slotID_]] | drivespass:quotes[[_trayID1_],pass:quotes[[_drawerID1_,]]pass:quotes[_slotID1_] ... pass:quotes[_trayIDn_],pass:quotes[[_drawerIDn_,]]pass:quotes[_slotIDn_]] erase
+start (drive [trayID,[drawerID,]slotID] | drives[trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn]) erase
 ----
 
 

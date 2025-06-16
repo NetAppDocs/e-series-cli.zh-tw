@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, check, volume, parity, job 
 summary: start check Volume 同位檢查工作命令會在指定的磁碟區上啟動新的檢查磁碟區同位檢查作業。 
 ---
-= 開始檢查 Volume 同位檢查工作
+= 啟動檢查卷奇偶校驗作業 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

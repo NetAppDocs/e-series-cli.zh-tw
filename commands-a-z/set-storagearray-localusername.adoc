@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, local, user, password, symbol 
 summary: 您可以使用set storageArray localUsername命令和set storageArray symbol命令、為特定角色設定本機使用者名稱密碼或符號密碼。 
 ---
-= 設定儲存陣列本機使用者密碼或符號密碼
+= 設定儲存陣列本機使用者密碼或 SYMbol 密碼 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

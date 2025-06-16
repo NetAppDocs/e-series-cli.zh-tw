@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, drive 
 summary: 重生磁碟機命令會強制指定的磁碟機進入最佳狀態。 
 ---
-= 恢復磁碟機
+= 復原驅動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

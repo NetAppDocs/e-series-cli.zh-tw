@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, diagnostic, data 
 summary: SAVE storageArray診斷資料命令可將儲存陣列診斷資料從控制器或環境服務模組（ESSM）儲存至檔案。 
 ---
-= 儲存儲存陣列診斷資料
+= 儲存儲存陣列診斷資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

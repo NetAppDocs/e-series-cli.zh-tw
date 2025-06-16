@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, array, management, server, certificate, command, install 
 summary: 下載控制器arrayManagementServerCertificate命令會在控制器上安裝伺服器憑證。 
 ---
-= 安裝伺服器簽署的憑證
+= 安裝伺服器簽章憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

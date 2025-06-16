@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, server, certificate, sign, request, csr 
 summary: 儲存控制器 arrayManagementCSR 命令會擷取控制器的已安裝伺服器憑證簽署要求（ CSR ），以便您檢視憑證詳細資料。 
 ---
-= 擷取已安裝的伺服器憑證
+= 檢索已安裝的伺服器憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

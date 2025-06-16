@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replace, drive 
 summary: 更換磁碟機更換磁碟機命令會取代磁碟區群組中的磁碟機。 
 ---
-= 更換磁碟機
+= 更換驅動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

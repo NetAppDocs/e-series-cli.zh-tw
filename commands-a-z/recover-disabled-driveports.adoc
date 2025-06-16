@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, disable, drive ports 
 summary: 「恢復停用的磁碟機連接埠」命令可恢復停用的磁碟機連接埠。 
 ---
-= 恢復停用的磁碟機連接埠
+= 恢復禁用的驅動器連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

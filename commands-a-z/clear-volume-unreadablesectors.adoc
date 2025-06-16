@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, unreadable, sectors 
 summary: 清除Volume unreadableSecors命令會清除一或多個磁碟區中無法讀取的磁碟區資訊。 
 ---
-= 清除無法讀取的Volume磁碟區
+= 清除卷不可讀扇區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

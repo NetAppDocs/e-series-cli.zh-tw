@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, thin, volume, attributes 
 summary: set volume命令可定義精簡磁碟區的內容。 
 ---
-= 設定精簡磁碟區屬性
+= 設定精簡卷屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

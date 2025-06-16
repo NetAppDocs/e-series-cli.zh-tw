@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add array label, supported, syntax, parameters, minimum firmware level 
 summary: Add Array label命令可讓您使用使用者定義的標籤、將儲存陣列新增至組態。這可讓稍後的命令依照使用者定義的標籤、而非IP位址或主機名稱來位址儲存陣列。 
 ---
-= 新增陣列標籤
+= 新增陣列標籤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

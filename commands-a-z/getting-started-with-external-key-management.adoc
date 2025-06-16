@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security, key, string, characters, shared, secure, drives, controllers, storage, array, external, management, maintain, server 
 summary: 安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用外部金鑰管理時、您可以在金鑰管理伺服器上建立及維護安全金鑰 
 ---
-= 外部金鑰管理入門
+= 外部金鑰管理入門 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

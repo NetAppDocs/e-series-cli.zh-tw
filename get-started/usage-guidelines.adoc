@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: script command, guidelines 
 summary: 撰寫指令碼命令時，請遵循下列準則。 
 ---
-= 指令碼命令準則
+= 了解 SANtricity CLI 腳本命令指南
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

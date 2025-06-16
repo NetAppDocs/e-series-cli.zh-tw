@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, internal, storage, array, security key 
 summary: set storageArray securityKey命令可設定整個儲存陣列用來實作磁碟機安全功能的安全金鑰。 
 ---
-= 設定內部儲存陣列安全金鑰
+= 設定內部儲存陣列安全密鑰 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, replaceable, drives 
 summary: show replaceableDrives命令會顯示儲存陣列中的所有可更換磁碟機。 
 ---
-= 顯示可更換的磁碟機
+= 顯示可更換磁碟機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, state, capture 
 summary: SAVE storageArray stateCapture命令會將儲存陣列的狀態擷取儲存到檔案中。 
 ---
-= 儲存陣列狀態擷取
+= 保存儲存陣列狀態擷取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

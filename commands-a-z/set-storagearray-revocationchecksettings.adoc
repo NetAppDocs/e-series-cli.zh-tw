@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, certificate, revocation, check, set 
 summary: set storageArray revocation Checking Settings命令可讓您啟用或停用撤銷檢查、以及設定線上憑證狀態傳輸協定（OCSP）伺服器。 
 ---
-= 設定憑證撤銷檢查設定
+= 設定憑證撤銷檢查設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, candidates 
 summary: show SyncMirror flex候 選命令會傳回遠端儲存陣列上候選磁碟區的相關資訊、以便在同步鏡射組態中作為次要磁碟區使用。 
 ---
-= 顯示同步鏡射磁碟區候選項目
+= 顯示同步鏡像磁碟區候選 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, copy 
 summary: set volumeCopy target命令可定義Volume複製配對的內容。 
 ---
-= 設定Volume複本
+= 設定卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

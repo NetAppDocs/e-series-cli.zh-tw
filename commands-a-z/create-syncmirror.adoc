@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, synchronous, mirroring 
 summary: create SyncMirror 過程不只是建立主磁碟區、也會建立同步遠端鏡射配對的次要磁碟區。此命令也會設定寫入模式（同步寫入模式或非同步寫入模式）和同步處理優先順序。 
 ---
-= 建立同步鏡射
+= 建立同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

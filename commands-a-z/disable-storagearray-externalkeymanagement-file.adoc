@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: disable, storage, array, external, management, file, command, disable, security, key, full, disk, encryption, drives 
 summary: 停用storageArray externalKeyManagement檔案命令會停用具有完整磁碟加密磁碟機之儲存陣列的外部安全金鑰管理。 
 ---
-= 停用外部安全金鑰管理
+= 停用外部安全性金鑰管理 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

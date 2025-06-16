@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, storage, array, user, session 
 summary: show storageArray userSession命令可讓您檢視System Manager的工作階段逾時期間。 
 ---
-= 顯示儲存陣列使用者工作階段
+= 顯示儲存陣列使用者會話 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

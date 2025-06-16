@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, drive 
 summary: 重設磁碟機命令會重新啟動磁碟區群組或磁碟集區中的磁碟機、以協助恢復出現不一致或非最佳行為的磁碟機。 
 ---
-= 重設磁碟機
+= 重置驅動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

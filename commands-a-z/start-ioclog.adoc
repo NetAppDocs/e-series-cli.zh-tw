@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, input, output, controller, ioc, dump 
 summary: start IOClog命令會在主機與控制器之間產生IOC資料傳輸記錄的傾印。 
 ---
-= 啟動輸入輸出控制器（IOC）傾印
+= 啟動輸入輸出控制器 (IOC) 轉儲 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

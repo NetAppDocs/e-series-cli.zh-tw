@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, external, security key 
 summary: recurflexurestorageArray securityKey命令會重新產生儲存陣列安全金鑰、以搭配外部安全金鑰管理功能使用。 
 ---
-= 重新建立外部安全金鑰
+= 重新建立外部安全性金鑰 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

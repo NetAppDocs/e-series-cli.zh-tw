@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot, volume 
 summary: create cgrSnapVolume命令會在一致性群組的基礎磁碟區中、建立特定映像的快照磁碟區。 
 ---
-= 建立一致性群組快照磁碟區
+= 建立一致性組快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

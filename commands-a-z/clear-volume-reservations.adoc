@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, volume, reservations 
 summary: 「清除Volume保留」命令會清除持續的Volume保留。 
 ---
-= 清除Volume保留
+= 清除卷預留 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

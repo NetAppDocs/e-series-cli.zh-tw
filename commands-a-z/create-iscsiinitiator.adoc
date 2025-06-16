@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, iscsi, initiator 
 summary: create iscsiInitiator命令會建立新的iSCSI啟動器物件。 
 ---
-= 建立iSCSI啟動器
+= 建立 iSCSI 啟動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

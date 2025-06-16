@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, consistency, group, snapshot, image 
 summary: show CGSnapImage命令會顯示一個或多個快照一致性群組中的快照映像或多個快照映像。 
 ---
-= 顯示一致性群組快照映像
+= 顯示一致性群組快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

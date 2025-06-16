@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, storage array, firmware, syntax, parameter, minimum, level 
 summary: activate storageArray韌體命令會啟動您先前下載至儲存陣列控制器之擱置組態區域的韌體。 
 ---
-= 啟動儲存陣列韌體
+= 啟動儲存陣列韌體 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

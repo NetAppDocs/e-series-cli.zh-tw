@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, snapshot, image, rollback 
 summary: 停止SnapImage復原命令會停止由start SnapImage復原命令所啟動的快照映像復原作業。 
 ---
-= 停止Snapshot映像復原
+= 停止快照映像回溯 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

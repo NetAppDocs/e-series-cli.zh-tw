@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, fde, secure, drive, erase 
 summary: start secureErase磁碟機命令會清除一或多個完整磁碟加密（FDE）磁碟機中的所有資料、以便重新使用為FDE磁碟機。 
 ---
-= 啟動FDE安全磁碟機清除
+= 啟動 FDE 安全驅動器擦除 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

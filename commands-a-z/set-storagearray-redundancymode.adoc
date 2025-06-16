@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, redundancy, mode 
 summary: set storageArray命令會將儲存陣列的備援模式設定為單工或雙工。 
 ---
-= 設定儲存陣列備援模式
+= 設定儲存陣列冗餘模式 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

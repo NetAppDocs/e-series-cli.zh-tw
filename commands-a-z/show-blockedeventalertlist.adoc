@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, blocked, events 
 summary: show blockedEventAlertList命令會傳回目前被set blockEventAlert命令封鎖的事件清單。此清單中的事件是不會傳送您使用警示終端機和參數設定的任何通知的事件、也就是電子郵件、系統記錄和陷阱通知。 
 ---
-= 顯示封鎖的事件
+= 顯示封鎖的事件 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

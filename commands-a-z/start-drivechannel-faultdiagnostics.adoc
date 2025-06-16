@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive channel, fault, isolation, diagnostics 
 summary: start driveChannel faultDiagnostics命令會執行磁碟機通道故障隔離診斷、並儲存結果。 
 ---
-= 啟動磁碟機通道故障隔離診斷
+= 啟動磁碟機通道故障隔離診斷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

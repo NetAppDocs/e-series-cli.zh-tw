@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, drive channel, statistics 
 summary: 清除allDriveChannel stats命令會重設所有磁碟機通道的統計資料。 
 ---
-= 清除磁碟機通道統計資料
+= 清除磁碟機通道統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

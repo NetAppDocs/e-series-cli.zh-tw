@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, str 
 summary: show text字串命令會顯示指令碼檔案中的字串。此命令類似於MS－DOS和UNIX中的回顯命令。 
 ---
-= 顯示字串
+= 顯示字串 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

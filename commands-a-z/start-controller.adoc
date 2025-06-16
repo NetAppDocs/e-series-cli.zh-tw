@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, controller, trace 
 summary: start控制器命令會啟動一項作業、將偵錯追蹤資訊儲存至壓縮檔。 
 ---
-= 啟動控制器追蹤
+= 啟動控制器追蹤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

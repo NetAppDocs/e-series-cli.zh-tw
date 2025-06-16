@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cli, command, wrapper, syntax 
 summary: 本節列出CLI命令摘要的一般語法形式。 
 ---
-= CLI命令包裝程式語法
+= 了解 SANtricity CLI 命令包裝器語法
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

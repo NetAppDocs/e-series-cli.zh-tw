@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, recovery, mode 
 summary: ClearstorageArray recoveryMode命令會強制儲存陣列退出恢復模式。 
 ---
-= 清除儲存陣列恢復模式
+= 清除儲存陣列復原模式 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

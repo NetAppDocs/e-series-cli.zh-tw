@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, directory, servers, command, allow, directory, role 
 summary: 刪除storageArray directoryServers命令可讓您刪除一或多個目錄伺服器。 
 ---
-= 刪除儲存陣列目錄伺服器
+= 刪除儲存陣列目錄伺服器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

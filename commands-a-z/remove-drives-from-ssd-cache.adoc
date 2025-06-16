@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, drives, ssd, cache 
 summary: set ssdCache命令會移除固態磁碟（SSD）、以減少SSD快取的容量。 
 ---
-= 從SSD快取中移除磁碟機
+= 從 SSD 快取中刪除磁碟機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

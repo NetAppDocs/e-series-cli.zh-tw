@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: format, rules, cli, commands, windows, powershell 
 summary: Windows PowerShell是一種互動式指令碼Shell、可讓您存取命令列工具。 
 ---
-= Windows PowerShell中CLI命令的格式化規則
+= Windows PowerShell 中 SANtricity CLI 指令的格式規則
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, storage, array, syslog, configuration 
 summary: show storageArray syslog命令可讓您檢視用於儲存稽核記錄的syslog伺服器組態。組態資訊包括伺服器ID及其位址、傳輸協定和連接埠號碼。 
 ---
-= 顯示儲存陣列系統記錄組態
+= 顯示儲存陣列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

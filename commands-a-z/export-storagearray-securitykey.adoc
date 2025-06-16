@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: export, storage, array, security, key, command, save, drive, securitykey, file, context, role 
 summary: 匯出storageArray SECURITY Key命令會將磁碟機安全金鑰儲存至檔案。 
 ---
-= 匯出儲存陣列安全金鑰
+= 匯出儲存陣列安全性金鑰 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, initiator, command, object, supported, array, role 
 summary: 刪除啟動器命令會刪除啟動器物件。 
 ---
-= 刪除啟動器
+= 刪除啟動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

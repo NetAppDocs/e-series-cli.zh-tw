@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: volumecopy, target, command, operation, volume, copy, pair, reinitiate, array, role, context 
 summary: Recopy volumeCopy target命令會使用現有的Volume複製配對、重新啟動Volume複製作業。 
 ---
-= 重新複製Volume複本
+= 重新複製卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, sas, port, mis-wire 
 summary: recovering sasPort miswire命令會告知控制器已採取修正行動、從錯誤的線路狀況中恢復。 
 ---
-= 恢復SAS連接埠連線錯誤
+= 恢復 SAS 連接埠錯誤接線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

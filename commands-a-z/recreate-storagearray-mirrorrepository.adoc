@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recreate, synchronous, mirror, repository, volume 
 summary: 使用先前鏡射儲存庫磁碟區所定義的參數、「recrerecre創作storageArray mirror儲存庫」命令可建立新的同步鏡射儲存庫磁碟區（也稱為鏡射儲存庫磁碟區）。 
 ---
-= 重新建立同步鏡射儲存庫磁碟區
+= 重新建立同步鏡像儲存庫磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

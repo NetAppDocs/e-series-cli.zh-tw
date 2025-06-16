@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, storage, array, feature, file, command, permanent, upgrade, trial period 
 summary: enable storageArray feature file命令可讓您永久升級至儲存陣列或試用期間。 
 ---
-= 啟用儲存陣列功能
+= 啟用儲存陣列功能 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

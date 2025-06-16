@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, session 
 summary: set Session errorAction命令可定義您要如何執行目前的指令碼引擎工作階段。 
 ---
-= 設定工作階段
+= 設定會話 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

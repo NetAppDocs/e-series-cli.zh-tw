@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array 
 summary: set storageArray命令可定義儲存陣列的內容。 
 ---
-= 設定儲存陣列
+= 設定儲存陣列 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

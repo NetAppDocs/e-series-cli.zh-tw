@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, synchronous, mirror, synchronization 
 summary: start SyncMirror flexprimary sSynchronize命令會啟動同步鏡射同步。 
 ---
-= 啟動同步鏡射同步
+= 啟動同步鏡像同步 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

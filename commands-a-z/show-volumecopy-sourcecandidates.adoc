@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, source, candidates 
 summary: show volumeCopy sourceCandides命令會傳回候選磁碟區的相關資訊、您可以將這些磁碟區做為磁碟區複製作業的來源。此命令適用於Snapshot Volume複製配對。 
 ---
-= 顯示Volume複製來源候選項目
+= 顯示磁碟區複製來源候選 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

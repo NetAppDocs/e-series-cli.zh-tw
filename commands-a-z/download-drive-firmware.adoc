@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, drive, firmware, array, support, role, context, level 
 summary: 下載磁碟機韌體命令會將韌體映像下載至磁碟機。 
 ---
-= 下載磁碟機韌體
+= 下載磁碟機韌體 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
@@ -47,8 +47,8 @@ summary: 下載磁碟機韌體命令會將韌體映像下載至磁碟機。
 
 [source, cli, subs="+macros"]
 ----
-pass:quotes[download (drive \[_trayID_,[_drawerID,_]pass:quotes[_slotID_] \| drives\ pass:quotes[[_trayID1_,[_drawerID1_,]slotID1 ... trayIDn,[drawerIDn,]slotIDn\])
- [online|offline] firmware file="filename"
+download (drive [trayID,[drawerID,]slotID] | drives [trayID1,[drawerID1,]slotID1 ... trayIDn,[drawerIDn,]slotIDn])
+[online|offline] firmware file="filename"
 ----
 
 

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, member, volume, consistency group 
 summary: Set Consistency Group命令會從現有的Snapshot一致性群組中移除成員磁碟區。 
 ---
-= 從一致性群組中移除成員磁碟區
+= 從一致性群組中刪除成員磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

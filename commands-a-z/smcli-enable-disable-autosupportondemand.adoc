@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, ondemand, feature, emw, management, domain, level, smcli 
 summary: SMcli enable |停用autosupportOnDemand命令會開啟或關閉AutoSupport 《支援不需再需求的功能」。此功能可讓技術支援人員協調AutoSupport 不必要的資料傳輸、並可要求重新傳輸遺失的支援資料。 
 ---
-= 在AutoSupport EMW管理網域層級啟用或停用「僅限SMcli」功能。
+= 在 EMW 管理域層級啟用或停用 AutoSupport OnDemand 功能（僅限 SMcli）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

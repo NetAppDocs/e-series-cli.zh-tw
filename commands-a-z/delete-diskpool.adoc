@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, disk pool 
 summary: 刪除diskPool命令會刪除磁碟集區。 
 ---
-= 刪除磁碟集區
+= 刪除磁碟池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

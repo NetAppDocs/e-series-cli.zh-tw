@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, odx, set 
 summary: show storageArray odxset命令會傳回儲存陣列上卸載資料傳輸（ODX）和VMware vStorage API Array Architecture（VAAI）的目前設定。 
 ---
-= 顯示儲存陣列ODX設定
+= 顯示儲存陣列 ODX 設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

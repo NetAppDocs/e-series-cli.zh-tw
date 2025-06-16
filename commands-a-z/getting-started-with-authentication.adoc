@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: authentication, users, access, system, assign, login credentials, associated, profile, include, specific, role, access, permissions, start 
 summary: 驗證需要使用者以指派的登入認證來存取系統。每個使用者登入都會與包含特定角色和存取權限的使用者設定檔建立關聯。 
 ---
-= 驗證入門
+= 身份驗證入門 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

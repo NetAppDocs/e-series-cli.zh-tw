@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, attributes 
 summary: set snapGroup命令可定義快照群組的內容。 
 ---
-= 設定快照群組屬性
+= 設定快照組屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

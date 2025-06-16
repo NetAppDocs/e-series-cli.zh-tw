@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, email, alert, configuration 
 summary: 使用start emailAlert測試命令、您可以傳送範例電子郵件訊息來測試警示組態。 
 ---
-= 測試電子郵件警示組態
+= 測試電子郵件警報配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

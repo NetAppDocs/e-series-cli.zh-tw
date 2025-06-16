@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapgroup, command, entire, snapshot, group, option, associate, repository, volume 
 summary: 刪除snapGroup命令整個快照群組、以及相關的儲存庫磁碟區（可選）。 
 ---
-= 刪除快照群組
+= 刪除快照群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

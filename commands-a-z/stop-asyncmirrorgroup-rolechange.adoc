@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: cancel, asynchronous, mirror, group, role, reversal 
 summary: stop asyncdMirrorGroup rolechge命令會取消非同步鏡射群組之間的擱置角色反轉作業。 
 ---
-= 取消非同步鏡射群組角色反轉
+= 取消非同步鏡像組角色逆轉 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

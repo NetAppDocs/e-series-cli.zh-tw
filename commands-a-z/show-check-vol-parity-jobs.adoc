@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, check, volume, parity, jobs, 
 summary: show check volume 同位檢查工作命令會顯示所有檢查 Volume 同位檢查工作及其狀態。 
 ---
-= 顯示檢查 Volume 同位檢查工作
+= 顯示檢查卷奇偶校驗作業 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, snmp, trap, destination 
 summary: start snmpTrap目的地 命令會測試特定簡單網路管理傳輸協定（SNMP）社群或使用者的陷阱接收器連線和識別。此命令會傳送設陷訊息給設陷接收器、以測試設陷目的地。 
 ---
-= 測試SNMP設陷目的地
+= 測試 SNMP 陷阱目標 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

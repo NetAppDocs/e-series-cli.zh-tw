@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snapshot, group 
 summary: show snapGroup命令會傳回一或多個快照映像群組的相關資訊。 
 ---
-= 顯示Snapshot群組
+= 顯示快照群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

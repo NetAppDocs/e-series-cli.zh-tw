@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, one, standard, volume, supported, array, role 
 summary: 刪除Volume命令會刪除一或多個標準Volume。 
 ---
-= 刪除Volume
+= 刪除卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, web server, certificate, sign, request, csr 
 summary: SAVE控制器arrayManagementCSR命令會為控制器產生憑證簽署要求（CSR）。 
 ---
-= 產生Web伺服器憑證簽署要求（CSR）
+= 產生 Web 伺服器憑證簽章要求 (CSR) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

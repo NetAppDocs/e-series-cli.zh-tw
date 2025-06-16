@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, storage, array, drive, firmware, command, images, roles, supported 
 summary: Download storageArray drive韌 體檔案命令會將韌體映像下載至儲存陣列中的所有磁碟機。 
 ---
-= 下載儲存陣列磁碟機韌體
+= 下載儲存陣列磁碟機韌體 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

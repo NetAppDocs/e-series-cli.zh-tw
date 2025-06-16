@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: establish, asynmirror, volume, asynchronous, mirrored, remote, storage, array, secondary, existing 
 summary: 透過將次要Volume新增至現有的非同步鏡射鏡射群組、「建立同步鏡射Volume」命令可在遠端儲存陣列上完成非同步鏡射配對。 
 ---
-= 建立非同步鏡射配對
+= 建立非同步鏡像對 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

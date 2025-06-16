@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, synchronous, mirror, volume, synchronization, progress 
 summary: show SyncMirror risSynchronizationProgress命令會在同步鏡射組態中、傳回主要Volume與次要Volume之間的資料同步進度。 
 ---
-= 顯示同步鏡射Volume同步進度
+= 顯示同步鏡像磁碟區同步進度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

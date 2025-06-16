@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, configuration 
 summary: 命令ClearstorageArray會清除整個儲存陣列組態或儲存陣列組態的一部分、或僅清除Volume群組和Volume組態。 
 ---
-= 清除儲存陣列組態
+= 清除儲存陣列配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

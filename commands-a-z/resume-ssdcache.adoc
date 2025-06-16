@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, ssd, cache 
 summary: resume ssdCache命令會使用SSD快取重新啟動所有磁碟區的快取、而該快取是使用suspend ssdCache命令暫時停止的。 
 ---
-= 恢復SSD快取
+= 恢復 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

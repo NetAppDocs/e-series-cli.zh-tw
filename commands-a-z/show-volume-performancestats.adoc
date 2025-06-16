@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, performance, statistics 
 summary: show volume performanceStats命令會傳回磁碟區效能的相關資訊。 
 ---
-= 顯示Volume效能統計資料
+= 顯示磁碟區效能統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

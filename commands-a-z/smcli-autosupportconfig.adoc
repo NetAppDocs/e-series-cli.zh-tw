@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: specify, autosupport, delivery, method 
 summary: SMcli -autosupSupportConfig命令可設定傳送AutoSupport 功能、以傳送各種資訊。 
 ---
-= 指定AutoSupport 供應功能
+= 指定 AutoSupport 交付方法 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

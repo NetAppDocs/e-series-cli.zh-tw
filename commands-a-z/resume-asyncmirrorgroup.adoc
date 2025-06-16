@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, asynchronous, mirror, group 
 summary: resume asynMirrorGroup命令會在非同步鏡射群組中的所有鏡射配對之間恢復資料傳輸。 
 ---
-= 恢復非同步鏡射群組
+= 復原非同步鏡像群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

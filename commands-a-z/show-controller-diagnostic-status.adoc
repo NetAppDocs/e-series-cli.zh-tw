@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, controller, diagnostic, status 
 summary: show controller命令會傳回以start控制器診斷命令啟動的控制器診斷狀態。 
 ---
-= 顯示控制器診斷狀態
+= 顯示控制器診斷狀態 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

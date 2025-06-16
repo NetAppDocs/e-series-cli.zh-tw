@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, firmware, file, command, environmental, service, module, array, role, context 
 summary: 下載匣韌體檔案命令會下載環境服務模組（ESM）韌體。 
 ---
-= 下載環境卡韌體
+= 下載環境卡韌體 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

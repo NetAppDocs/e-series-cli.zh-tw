@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, cache, command, data, purged, array, support, role, parameter 
 summary: 刪除ssdCache命令會刪除SSD快取。SSD快取中的所有資料都會被清除。 
 ---
-= 刪除SSD快取
+= 刪除 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, storage, array, locate 
 summary: stop storageArray locate命令會關閉已由start storageArray locate命令開啟的儲存陣列上的指示燈。 
 ---
-= 停止儲存陣列定位
+= 停止儲存陣列定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

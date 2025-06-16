@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configuration, commands, array, controller, health, image, hostport, feature, management 
 summary: 陣列組態命令 
 ---
-= 陣列組態命令
+= SANtricity CLI 陣列設定指令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

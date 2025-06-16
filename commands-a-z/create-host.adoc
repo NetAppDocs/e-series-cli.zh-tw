@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host 
 summary: create host命令會建立新的主機。 
 ---
-= 建立主機
+= 建立主機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

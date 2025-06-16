@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, registration 
 summary: set storageArray isnslRegistration命令可讓您在IPv4或IPv6網際網路儲存名稱服務（SNSSNS>）伺服器上列出儲存陣列。 
 ---
-= 設定儲存陣列iSNS登錄
+= 設定儲存陣列 iSNS 註冊 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

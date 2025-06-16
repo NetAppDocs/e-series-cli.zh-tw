@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add drives ssd cache, supported arrays, syntax, parameters, minimum firmware level 
 summary: set ssdCache命令會新增更多固態磁碟（SSD）、以增加現有SSD快取的容量。 
 ---
-= 將磁碟機新增至SSD快取
+= 將磁碟機新增至 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

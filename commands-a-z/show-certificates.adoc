@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, certificates 
 summary: 「顯示憑證」命令可讓您檢視安裝在CLI套件信任存放區上的憑證。 
 ---
-= 顯示憑證
+= 顯示憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, configuration 
 summary: 儲存storageArray組態命令會建立指令碼檔案、您可以使用該檔案來重新建立目前的儲存陣列Volume組態。 
 ---
-= 儲存儲存陣列組態
+= 儲存儲存陣列配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

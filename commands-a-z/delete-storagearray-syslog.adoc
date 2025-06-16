@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, storage, array, syslog, command, allow, delete, specified, configuration, storing, audit, logs, role 
 summary: 刪除storageArray syslog命令可讓您刪除用於儲存稽核記錄的指定syslog組態。 
 ---
-= 刪除儲存陣列syslog組態
+= 刪除儲存陣列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

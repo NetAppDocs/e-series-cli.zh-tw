@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, consistency, group 
 summary: show Consistency Group命令會傳回一或多個一致性群組的相關資訊。 
 ---
-= 顯示一致性群組
+= 顯示一致性組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, installed, trusted, ca, certificates, summary 
 summary: show storageArray trustedCertificate摘要命令會顯示陣列中受信任的已安裝CA憑證摘要。在執行DELETE storageArray trustedCertificate命令之前、此命令非常實用、可讓您知道要刪除的憑證別名。 
 ---
-= 顯示已安裝的信任CA憑證摘要
+= 顯示已安裝的受信任 CA 憑證摘要 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

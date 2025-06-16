@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, storage, array, security, key 
 summary: create storageArray securityKey命令可為具有完整磁碟加密（FDE）磁碟機的儲存陣列建立或變更新的安全金鑰。 
 ---
-= 建立儲存陣列安全金鑰
+= 建立儲存陣列安全密鑰 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

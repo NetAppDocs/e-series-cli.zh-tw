@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, group, repository, volume, capacity 
 summary: set snapGroup repositoryCapacity命令會增加或減少快照群組儲存庫磁碟區的容量。 
 ---
-= 設定Snapshot群組儲存庫Volume容量
+= 設定快照群組儲存庫磁碟區容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

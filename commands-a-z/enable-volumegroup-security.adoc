@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, volumegroup, security, command, non secure, volume, group 
 summary: 啟用volumeGroup安全性命令會將非安全的Volume群組轉換成安全的Volume群組。 
 ---
-= 啟用Volume群組安全性
+= 啟用磁碟區組安全性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

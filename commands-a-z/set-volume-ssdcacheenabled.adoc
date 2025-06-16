@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, ssd, cache, volume 
 summary: 使用特定磁碟區的SSD快取功能、「Set Volume ssdCacheEnabled」命令可開啟或關閉快取。 
 ---
-= 設定磁碟區的SSD快取
+= 為磁碟區設定 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

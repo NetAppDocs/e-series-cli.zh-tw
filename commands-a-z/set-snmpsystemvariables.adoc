@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, mib, system, group, variables 
 summary: Set SNMP變數命令會變更簡易網路管理傳輸協定（SNMP）的系統變數。 
 ---
-= 更新SNMP mib II系統群組變數
+= 更新 SNMP MIB II 系統組變數 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, cache, mirror, data, assurance, check, enable 
 summary: show storageArray cacheMirrorDataAssuranceChecksEnable命令會傳回快取鏡射資料保證檢查功能的啟用狀態。 
 ---
-= 啟用顯示儲存陣列快取鏡射資料保證檢查
+= 顯示儲存陣列快取鏡像資料保證檢查啟用 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

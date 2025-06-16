@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, listen, port 
 summary: set storageArray isnslisteningPort命令可設定iSNS伺服器接聽連接埠。 
 ---
-= 設定儲存陣列iSNS伺服器接聽連接埠
+= 設定儲存陣列 iSNS 伺服器偵聽連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

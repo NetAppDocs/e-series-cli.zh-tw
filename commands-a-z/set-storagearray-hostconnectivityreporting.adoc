@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, host, connectivity, report 
 summary: set storageArray hostConnectivityReporting命令可啟用或停用控制器上的主機連線報告功能。 
 ---
-= 啟用或停用主機連線報告
+= 啟用或停用主機連線報告 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

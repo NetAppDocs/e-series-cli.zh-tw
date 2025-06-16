@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, group 
 summary: show volumeGroup命令會傳回磁碟區群組的相關資訊。 
 ---
-= 顯示Volume群組
+= 顯示卷組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

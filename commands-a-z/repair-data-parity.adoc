@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, data, parity 
 summary: 「修復資料同位元檢查」命令可修復資料同位元檢查錯誤。 
 ---
-= 修復資料同位元檢查
+= 修復資料奇偶校驗 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

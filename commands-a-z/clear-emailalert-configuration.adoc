@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear email, alert, configuration 
 summary: 清除emailAlert組態命令會將電子郵件警示組態清除為預設值。 
 ---
-= 清除電子郵件警示組態
+= 清除電子郵件警報配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

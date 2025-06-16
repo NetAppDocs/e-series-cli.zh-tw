@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, reconstruction 
 summary: start磁碟機重建命令會開始重新建構磁碟機。 
 ---
-= 開始磁碟機重建
+= 開始驅動器重建 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

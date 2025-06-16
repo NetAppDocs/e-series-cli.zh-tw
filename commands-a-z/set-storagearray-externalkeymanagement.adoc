@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, external, key, management, set 
 summary: set storageArray externalKeyManagement命令可設定外部金鑰管理伺服器位址和連接埠號碼。 
 ---
-= 設定外部金鑰管理設定
+= 設定外部金鑰管理設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

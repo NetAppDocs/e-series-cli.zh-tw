@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reduce, disk pool, capacity 
 summary: set diskPool命令會從資源池邏輯移除磁碟機、藉此減少磁碟資源池的容量。 
 ---
-= 減少磁碟集區容量
+= 減少磁碟池容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

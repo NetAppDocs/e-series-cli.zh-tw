@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, fips, drive, security, identifier 
 summary: Set磁碟機安全性ID命令用於將FIPS磁碟機重設回原始製造商設定。 
 ---
-= 設定FIPS磁碟機安全性識別碼
+= 設定 FIPS 驅動器安全標識符 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

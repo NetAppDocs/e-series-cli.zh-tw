@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, maintenance, window, individual, E2800, E5700, arrays 
 summary: set storageArray autosupSupportMaintenanceWindows命令會開啟或關閉AutoSupport 「還原維護所需時間」功能。 
 ---
-= 啟用或停用 AutoSupport 維護時段
+= 啟用或停用 AutoSupport 維護視窗 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, group, command, entire, associated, support, role 
 summary: 刪除volumeGroup命令會刪除整個Volume群組及其相關的Volume。 
 ---
-= 刪除Volume群組
+= 刪除卷組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

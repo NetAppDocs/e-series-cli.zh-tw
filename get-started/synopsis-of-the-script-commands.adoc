@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: synopsis, script commands 
 summary: 由於您可以使用指令碼命令來定義及管理儲存陣列的不同層面（例如主機拓撲、磁碟機組態、控制器組態、磁碟區定義及磁碟區群組定義）、因此實際的命令數量相當龐大。 
 ---
-= 指令碼命令摘要
+= 了解 SANtricity CLI 腳本命令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

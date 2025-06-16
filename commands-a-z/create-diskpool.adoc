@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, disk pool 
 summary: create diskPool命令會根據指定的參數建立新的磁碟集區。 
 ---
-= 建立磁碟集區
+= 建立磁碟池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: increase, capacity, volume, disk pool, volume, group 
 summary: 「增加磁碟容量」命令可增加磁碟集區或磁碟區群組中標準磁碟區或儲存庫磁碟區的容量。 
 ---
-= 增加磁碟集區或磁碟區群組中的磁碟區容量
+= 增加磁碟池或磁碟區組中磁碟區的容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

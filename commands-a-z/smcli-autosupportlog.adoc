@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: capture, view, autosupport, log 
 summary: SMcli -autosupSupportLog命令可讓您檢視AutoSupport 一個資訊記錄檔。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。 
 ---
-= 擷AutoSupport 取或檢視一份資訊記錄
+= 捕獲或查看 AutoSupport 日誌 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

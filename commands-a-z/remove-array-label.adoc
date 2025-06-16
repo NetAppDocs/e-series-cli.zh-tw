@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, array, label 
 summary: 使用「移除陣列標籤」命令、您可以移除儲存陣列的使用者定義標籤。 
 ---
-= 移除陣列標籤
+= 刪除陣列標籤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, snapshot, image, rollback 
 summary: 「Start SnapImage復原」命令會針對一組快照映像啟動復原作業。 
 ---
-= 開始Snapshot映像復原
+= 啟動快照映像回溯 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

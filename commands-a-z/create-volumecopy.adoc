@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, copy 
 summary: create volumeCopy命令會建立Volume複本、並啟動Volume複製作業。此命令適用於快照映像磁碟區複本配對。 
 ---
-= 建立Volume複本
+= 建立卷宗副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

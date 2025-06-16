@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, repository, consistency 
 summary: Check repositoryConsistency命令會根據指定物件基礎儲存庫Volume中的資料分析、產生報告。 
 ---
-= 檢查儲存庫一致性
+= 檢查儲存庫一致性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iscsi, host, port, network, properties 
 summary: set控制器iscsiHostPort命令會變更主機連接埠的網路內容、包括IPv4和IPv6內容、連接埠速度和最大框架有效負載。 
 ---
-= 設定iSCSI主機連接埠網路內容
+= 設定 iSCSI 主機連接埠網路屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

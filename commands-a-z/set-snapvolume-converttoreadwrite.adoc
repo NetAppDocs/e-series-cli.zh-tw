@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, read-only, snapshot, volume, read/write, volume 
 summary: set snapVolume convertToReadWrite命令會將唯讀磁碟區的快照磁碟區變更為讀取/寫入磁碟區的快照磁碟區。 
 ---
-= 將唯讀快照磁碟區設定為讀取/寫入磁碟區
+= 將只讀快照卷設定為讀/寫卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

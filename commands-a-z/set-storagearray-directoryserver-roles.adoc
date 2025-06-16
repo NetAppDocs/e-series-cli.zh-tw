@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, directory, server, role, map 
 summary: set storageArray directoryServer role命令可讓您定義指定目錄伺服器的角色對應。這些角色對應用於驗證嘗試執行各種SMcli命令的使用者。 
 ---
-= 設定儲存陣列目錄伺服器角色對應
+= 設定儲存陣列目錄伺服器角色映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

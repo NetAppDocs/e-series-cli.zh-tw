@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, map 
 summary: create mapping volume命令會建立從磁碟區到主機或主機群組的邏輯對應。 
 ---
-= 建立Volume對應
+= 建立卷宗映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

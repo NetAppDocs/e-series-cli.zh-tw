@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, communities 
 summary: show allSnmpCommunities命令會傳回針對儲存陣列定義的簡單網路管理傳輸協定（SNMP）社群相關資訊。SNMP社群是裝置的集合、例如路由器、交換器、印表機、儲存設備、 集中管理及監控裝置。 
 ---
-= 顯示SNMP社群
+= 顯示 SNMP 社群 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

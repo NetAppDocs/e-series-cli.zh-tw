@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: firmware, compatibility, levels 
 summary: 以下各節中的指令碼命令會列出指令碼命令可執行的最低韌體層級。 
 ---
-= 韌體相容性層級
+= 了解 SANtricity CLI 韌體相容性級別
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

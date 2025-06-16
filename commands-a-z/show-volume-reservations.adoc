@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, reservations 
 summary: show volume Reservations命令會傳回具有持續保留之磁碟區的相關資訊。 
 ---
-= 顯示Volume保留
+= 顯示卷預留 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, consistency, group, snapshot, volume 
 summary: set cgrSnapVolume命令會為一致性群組的快照磁碟區建立唯一名稱。 
 ---
-= 設定一致性群組快照磁碟區
+= 設定一致性群組快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

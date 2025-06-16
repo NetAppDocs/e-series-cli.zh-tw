@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, audit, log, summary 
 summary: show Auditlog摘要命令會顯示稽核記錄摘要資訊。 
 ---
-= 顯示稽核記錄摘要
+= 顯示審核日誌摘要 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

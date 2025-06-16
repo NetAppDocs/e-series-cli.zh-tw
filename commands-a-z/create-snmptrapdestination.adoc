@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmp, trap, destination 
 summary: create snmpTrap目的地 命令會建立新的簡易網路管理傳輸協定（SNMP）設陷目的地。設陷目的地是SNMP管理程式、用於接收設陷訊息。 
 ---
-= 登錄SNMP設陷目的地
+= 註冊 SNMP 陷阱目標 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, dbm, database 
 summary: show storageArray dbmDatabase命令可擷取及顯示儲存陣列內建備份位置的中繼資料。當有多個備份位置時、會顯示每個位置的中繼資料。 
 ---
-= 顯示儲存陣列DBM資料庫
+= 顯示儲存陣列 DBM 資料庫 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

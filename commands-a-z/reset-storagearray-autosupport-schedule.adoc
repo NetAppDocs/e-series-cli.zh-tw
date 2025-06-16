@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: 重設storageArray AutoSupport somesfschedule命令會重設AutoSupport 每日和每週時間、以及每週將資訊傳回管理軟體所產生的隨機值的天數。 
 ---
-= 重設AutoSupport 資訊收集排程
+= 重置 AutoSupport 訊息收集計劃 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

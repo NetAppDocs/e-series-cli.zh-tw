@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, rls, counts 
 summary: SAVE storageArray RLSCounts命令會將讀取連結狀態（RLS）計數器儲存至檔案。 
 ---
-= 儲存儲存陣列RLS計數
+= 保存儲存陣列 RLS 計數 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

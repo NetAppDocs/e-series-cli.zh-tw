@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, community 
 summary: Set SNMP社群命令會為現有的簡單網路管理傳輸協定（SNMP）社群建立新名稱。 
 ---
-= 更新SNMP社群
+= 更新 SNMP 社群 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, installed, trusted, ca, certificates 
 summary: SAVE storageArray信任憑證命令會擷取陣列已安裝的信任CA憑證。擷取的檔案中包含陣列Web伺服器所要求的任何CA憑證。 
 ---
-= 擷取已安裝的信任CA憑證
+= 檢索已安裝的受信任 CA 憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

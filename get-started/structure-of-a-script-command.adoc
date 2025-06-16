@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: structure, script command 
 summary: 為了確保成功執行，指令碼命令必須以適當的結構寫入。 
 ---
-= 指令碼命令的結構
+= 了解 SANtricity CLI 腳本命令的結構
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

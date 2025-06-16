@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, power, information 
 summary: show storageArray PowerInfo命令會傳回儲存陣列中整個儲存陣列及每個磁碟匣所耗用電量的相關資訊。 
 ---
-= 顯示儲存陣列電源資訊
+= 顯示儲存陣列電源資訊 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

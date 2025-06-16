@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, locate 
 summary: start diskPool locate命令可藉由在磁碟機上的指示燈閃亮、識別邏輯群組在一起的磁碟機、以形成指定的磁碟集區。 
 ---
-= 啟動磁碟集區定位
+= 啟動磁碟池定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

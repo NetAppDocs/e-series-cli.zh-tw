@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, snapshot, volume 
 summary: revive snapVolume命令會強制指定的快照Volume達到最佳狀態。 
 ---
-= 恢復Snapshot Volume
+= 復原快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

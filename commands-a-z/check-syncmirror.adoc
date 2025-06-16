@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, synchronous, mirroring status 
 summary: Check SyncMirror 流通命令會傳回遠端鏡射磁碟區的狀態。使用此命令可判斷遠端鏡射磁碟區的狀態何時變成最佳狀態。 
 ---
-= 檢查同步鏡射狀態
+= 檢查同步鏡像狀態 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

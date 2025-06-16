@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, autosupport, configuration 
 summary: 使用SMcli -autosupSupportConfig測試命令AutoSupport 、傳送測試訊息來測試該支援組態。此命令可在管理網域上運作。儲存管理軟體會在管理網域中選擇具有自動支援功能的陣列、以便在測試訊息中加入範例資料。 
 ---
-= 測試AutoSupport 該組態
+= 測試 AutoSupport 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

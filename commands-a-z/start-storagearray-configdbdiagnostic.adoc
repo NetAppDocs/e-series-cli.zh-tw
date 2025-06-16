@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, configuration, database, diagnostic 
 summary: start storageArray configDbDiagnostic命令會針對組態資料庫執行一致性檢查。 
 ---
-= 啟動儲存陣列組態資料庫診斷
+= 啟動儲存陣列配置資料庫診斷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

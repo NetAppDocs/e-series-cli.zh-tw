@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, synchronous, mirror 
 summary: deactivate storageArray功能命令會停用同步鏡射功能、拆解鏡射儲存庫磁碟區、並釋放次要磁碟區的控制器擁有者。 
 ---
-= 停用同步鏡射
+= 停用同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, autosupport, configuration, e2800, e5700, storage, arrays 
 summary: show storageArray AutoSupport flexection命令會顯示AutoSupport 儲存陣列的「flexbund產品 組合」集合設定。 
 ---
-= 顯示AutoSupport 錶面組態
+= 顯示 AutoSupport 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

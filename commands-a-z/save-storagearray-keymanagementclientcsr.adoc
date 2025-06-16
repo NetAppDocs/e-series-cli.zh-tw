@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: generate, key, management, certificate, sign, request, csr 
 summary: SAVE storageArray keyManagementClientCSR命令會要求儲存陣列產生CSR、以便儲存至檔案。 
 ---
-= 產生金鑰管理憑證簽署要求（CSR）
+= 產生金鑰管理憑證簽章要求 (CSR) - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

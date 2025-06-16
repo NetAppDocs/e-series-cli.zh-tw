@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: register, snmpv3 usm, user 
 summary: create SNMP使用者名稱命令會建立新的簡易網路管理傳輸協定（SNMP）使用者、並將新使用者登錄為SNMP代理程式的已知實體。任何以與現有使用者相同名稱和引擎ID登錄新使用者的嘗試都會遭到拒絕。 
 ---
-= 登錄v3 USM使用者
+= 註冊 SNMPv3 USM 用戶 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

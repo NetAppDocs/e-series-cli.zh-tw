@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, service, action, allowed, indicator 
 summary: Set tray serviceAllowedindicator命令會開啟或關閉電源風扇容器、互連電池容器或環境服務模組（ESM）容器上的「允許維修操作」指示燈。 
 ---
-= 設定允許的紙匣服務動作指示
+= 設定托盤服務操作允許指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

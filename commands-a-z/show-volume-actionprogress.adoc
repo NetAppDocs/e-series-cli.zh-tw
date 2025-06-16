@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, action, progress 
 summary: show volume actionProgress命令會傳回磁碟區動作的相關資訊、以及在磁碟區上長期執行作業所完成的長期執行作業量。 
 ---
-= 顯示Volume動作進度
+= 顯示磁碟區操作進度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

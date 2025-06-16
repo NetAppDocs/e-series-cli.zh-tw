@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, tray, configuration, settings, commands, factory, default, drive, array, specific, storage, roles, support 
 summary: 「下載匣組態設定」命令會將原廠預設設定下載至儲存陣列中的所有磁碟機匣、或儲存陣列中的特定磁碟機匣。 
 ---
-= 下載紙匣組態設定
+= 下載托盤配置設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

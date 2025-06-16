@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, download, progress 
 summary: show allDrives downloadProgress命令會傳回下載磁碟機韌體命令或downloading storageArray drive韌 體命令所針對磁碟機的韌體下載狀態。 
 ---
-= 顯示磁碟機下載進度
+= 顯示器驅動器下載進度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

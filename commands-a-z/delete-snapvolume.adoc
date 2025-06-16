@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, snapvolume, command, snapshot, volume, optionally, associate, repository, members 
 summary: 刪除snapVolume命令會刪除快照磁碟區、並選擇性地刪除相關的快照儲存庫成員。 
 ---
-= 刪除Snapshot Volume
+= 刪除快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

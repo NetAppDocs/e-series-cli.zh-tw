@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, incomplete, asynchronous, mirror, pair, group 
 summary: 移除asyncdMirrorGroup命令會移除儲存陣列上的孤立鏡射配對磁碟區。 
 ---
-= 從非同步鏡射群組移除不完整的非同步鏡射配對
+= 從非同步鏡像群組中刪除不完整的非同步鏡像對 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

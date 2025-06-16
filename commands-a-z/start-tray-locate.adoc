@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, tray, locate 
 summary: 「開始紙匣定位」命令會開啟指示燈、以定位紙匣。 
 ---
-= 開始尋找紙匣
+= 啟動托盤定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

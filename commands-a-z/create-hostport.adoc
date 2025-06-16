@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host, port 
 summary: create hostPort命令會在主機匯流排介面卡（HBA）或主機通道介面卡（HCA）上建立新的主機連接埠識別。 
 ---
-= 建立主機連接埠
+= 建立主機連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

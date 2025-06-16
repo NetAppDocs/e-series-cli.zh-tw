@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, certificate, command, install, root, intermediate, web, servers, validate, array, roles, context 
 summary: 下載控制器caCertificate命令會在控制器的Web伺服器上安裝根/中繼CA憑證、以驗證Web伺服器簽署的憑證。 
 ---
-= 安裝根/中介CA憑證
+= 安裝根/中間 CA 憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

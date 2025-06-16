@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add volume, asynchronous, mirror group, supported arrays, roles, context, syntax, parameter, minimum firmware level 
 summary: add volume asyncdMirrorGroup命令會將主磁碟區新增至非同步鏡射群組。 
 ---
-= 將Volume新增至非同步鏡射群組
+= 將磁碟區新增至非同步鏡像群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

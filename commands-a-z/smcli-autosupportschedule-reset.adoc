@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, autosupport, message, collection, schedule 
 summary: SMcli autosupport排程重設命令會重設AutoSupport 一週中每日和每週傳送此訊息的時間和天數。您可以接受管理軟體產生的預設隨機值、也可以使用此命令來指定值。 
 ---
-= 重設AutoSupport 資訊收集排程
+= 重置 AutoSupport 訊息收集計劃 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

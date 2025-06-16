@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, soc, baseline 
 summary: 重設storageArray SOCBaseline.命令會重設所有透過控制器存取之晶片上交換器（SOC）裝置的基準線。 
 ---
-= 重設儲存陣列SOC基準
+= 重置儲存陣列 SOC 基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

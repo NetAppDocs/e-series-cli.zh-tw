@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, host group 
 summary: create hostGroup命令會建立新的主機群組。 
 ---
-= 建立主機群組
+= 建立主機群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

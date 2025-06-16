@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, disk pool, locate 
 summary: stop diskPool locate命令會關閉已由start diskPool locate命令開啟之磁碟機上的指示燈。 
 ---
-= 停止磁碟集區定位
+= 停止磁碟池定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

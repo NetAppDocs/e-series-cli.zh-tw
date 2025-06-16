@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, tray, positions 
 summary: set storageArray TrayPositionions命令可定義儲存陣列中的紙匣位置。輸入此命令時、您必須在儲存陣列中包含所有的磁碟匣。 
 ---
-= 設定儲存陣列匣位置
+= 設定儲存陣列托盤位置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

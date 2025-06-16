@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: configure, email, alert, set 
 summary: set emailAlert命令可設定電子郵件、將電子郵件傳送至指定的技術支援或組織。電子郵件警示包含事件摘要、受影響儲存設備的詳細資訊、以及客戶聯絡資訊。 
 ---
-= 設定電子郵件警示設定
+= 設定電子郵件警報設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

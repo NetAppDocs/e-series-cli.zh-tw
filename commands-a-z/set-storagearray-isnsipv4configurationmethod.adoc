@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, isns, server, ipv4, address 
 summary: set storageArray isnslipv4Configuration方法命令可設定IPv4網際網路儲存名稱服務（iSNS）的組態方法和位址。 
 ---
-= 設定儲存陣列iSNS伺服器的IPv4位址
+= 設定儲存陣列 iSNS 伺服器 IPv4 位址 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

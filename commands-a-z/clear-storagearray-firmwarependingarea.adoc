@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, firmware, pending, area 
 summary: ClearstorageArray firmwarePendingArea命令會刪除先前從擱置區域緩衝區下載的韌體映像或NVSRAM數值。 
 ---
-= 清除儲存陣列韌體擱置區域
+= 清除儲存陣列韌體待處理區域 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

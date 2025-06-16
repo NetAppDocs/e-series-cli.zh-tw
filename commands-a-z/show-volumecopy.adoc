@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy 
 summary: show volumeCopy命令會傳回Volume複製作業的相關資訊。 
 ---
-= 顯示Volume複本
+= 顯示卷副本 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

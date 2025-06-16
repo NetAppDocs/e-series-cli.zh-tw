@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, host 
 summary: 刪除主機命令會刪除一或多個主機。 
 ---
-= 刪除主機
+= 刪除主機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

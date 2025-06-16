@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, asynchronous, mirror, group 
 summary: create asyncdMirrorGroup命令會在本機儲存陣列和遠端儲存陣列上建立新的空非同步鏡射群組。 
 ---
-= 建立非同步鏡射群組
+= 建立非同步鏡像群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

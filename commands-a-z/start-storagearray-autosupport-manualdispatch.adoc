@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, storage, array, autosupport, manual, dispatch 
 summary: start storageArray AutoSupport flexmanualdisch分派 命令會針對套件啟動完整的支援套件和ASUP派單。 
 ---
-= 啟動Storage Array AutoSupport 《人工派遣》
+= 啟動儲存陣列 AutoSupport 手動調度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

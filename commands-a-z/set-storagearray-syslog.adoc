@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, storage, array, syslog, configuration 
 summary: set storageArray syslog命令可讓您變更syslog伺服器位址、傳輸協定或連接埠號碼。 
 ---
-= 更新儲存陣列系統記錄組態
+= 更新儲存陣列 syslog 配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

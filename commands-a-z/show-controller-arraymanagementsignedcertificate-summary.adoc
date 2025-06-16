@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, signed, certificate 
 summary: show controller arrayManagementSignedCertificate摘要命令會顯示指定控制器目前簽署的憑證摘要。 
 ---
-= 顯示簽署的憑證
+= 顯示簽章憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recur, syntax, elements 
 summary: 循環語法元素是可在指令碼命令中使用的一般參數和選項類別。 
 ---
-= 循環語法元素
+= 了解重複的 SANtricity CLI 語法元素
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

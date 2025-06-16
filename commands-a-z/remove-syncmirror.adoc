@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, synchronous, mirror 
 summary: 「移除SyncMirror 」功能可移除遠端鏡射配對中主要Volume與次要Volume之間的鏡射關係。 
 ---
-= 移除同步鏡射
+= 移除同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

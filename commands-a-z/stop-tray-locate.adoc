@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, tray, locate 
 summary: Stop tray locate命令會關閉以start tray locate命令開啟之紙匣上的指示燈。 
 ---
-= 停止紙匣定位
+= 停止托盤定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

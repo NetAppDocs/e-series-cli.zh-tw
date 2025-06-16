@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: revive, volume, group 
 summary: 「恢復磁碟區群組」命令會強制指定的磁碟區群組及其相關的故障磁碟機達到最佳狀態。 
 ---
-= 恢復Volume群組
+= 恢復卷組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

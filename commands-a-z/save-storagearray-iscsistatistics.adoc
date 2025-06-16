@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, iscsi, statistics 
 summary: SAVE storageArray iscsiStatistics命令會將儲存陣列的iSCSI效能統計資料儲存至檔案。 
 ---
-= 儲存儲存陣列iSCSI統計資料
+= 儲存儲存陣列 iSCSI 統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

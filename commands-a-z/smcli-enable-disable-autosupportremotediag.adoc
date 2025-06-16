@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, remote, diagnostics, feature, emw, management, domain, level, smcli 
 summary: SMcli enable |停用autosupportRemoteDiag命令會開啟或關閉AutoSupport 「支援遠端診斷」功能。這項功能可讓技術支援人員要求支援資料、以便從遠端診斷問題。 
 ---
-= 在AutoSupport EMW管理網域層級啟用或停用「支援不支援功能」（僅限SMcli）
+= 在 EMW 管理域層級啟用或停用 AutoSupport 遠端診斷功能（僅限 SMcli）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

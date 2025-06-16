@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, service, action, allowed, indicator 
 summary: Set磁碟機服務Allowedindicator命令會開啟或關閉磁碟機匣中支援「允許服務動作」指示燈功能的磁碟機或磁碟機上的「允許服務動作」指示燈。 
 ---
-= 設定允許的磁碟機服務動作指示燈
+= 設定驅動器服務操作允許指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

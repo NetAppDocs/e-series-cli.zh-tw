@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, media, scan 
 summary: set snapVolume mediaScannEnabled命令會在快照磁碟區所使用的磁碟機上執行媒體掃描。 
 ---
-= 設定Snapshot Volume媒體掃描
+= 設定快照磁碟區媒體掃描 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

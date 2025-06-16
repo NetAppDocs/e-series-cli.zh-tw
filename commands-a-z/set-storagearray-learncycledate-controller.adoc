@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, controller, battery, learn, cycle 
 summary: set storageArray learnCyleDate控制器命令可設定控制器電池記憶週期。 
 ---
-= 設定儲存陣列控制器電池記憶週期
+= 設定儲存陣列控制器電池學習週期 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

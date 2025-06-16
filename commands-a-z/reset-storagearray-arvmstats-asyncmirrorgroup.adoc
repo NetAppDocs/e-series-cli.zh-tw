@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, asynchronous, mirror group, statistics 
 summary: 「重設storageArray arvmStats asyncdMirrorGroup」命令會將非同步鏡像群組中一或多個成員磁碟區的同步統計資料重設為相對0。 
 ---
-= 重設非同步鏡射群組統計資料
+= 重置非同步鏡像組統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

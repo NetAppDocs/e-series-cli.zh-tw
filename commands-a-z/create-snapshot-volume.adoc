@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, snapshot, volume 
 summary: create snapVolume命令可建立具有讀寫功能的快照磁碟區、以供基礎磁碟區的快照映像使用。 
 ---
-= 建立Snapshot Volume
+= 建立快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

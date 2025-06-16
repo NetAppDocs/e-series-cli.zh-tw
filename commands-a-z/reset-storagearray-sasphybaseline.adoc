@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, sas, phy, baseline 
 summary: 重設storageArray SASPHYBasel命令會重設所有裝置的SAS實體層（SAS實體層）基準、並從.csv檔案中移除錯誤清單。 
 ---
-= 重設儲存陣列SAS實體層基準
+= 重置儲存陣列 SAS PHY 基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

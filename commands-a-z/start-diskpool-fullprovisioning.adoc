@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, disk pool, full, provision 
 summary: start diskPool FullProvisioning命令會在磁碟集區中的所有磁碟區上啟動完整資源配置作業、並選擇性地停用磁碟集區上的資源配置。 
 ---
-= 啟動磁碟集區完整資源配置
+= 啟動磁碟池完整配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

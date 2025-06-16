@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, volume, lun map 
 summary: 移除lunMapping命令 會從一個或多個磁碟區移除邏輯單元編號（LUN）或命名空間ID（NSID）對應。 
 ---
-= 移除Volume LUN對應
+= 刪除卷 LUN 映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

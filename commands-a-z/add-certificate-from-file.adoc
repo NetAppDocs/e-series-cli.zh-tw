@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add certificate file, supported arrays, syntax, parameters, minimum firmware level 
 summary: Add Certificate from file命令可讓您從檔案取得憑證、並將其新增至CLI套件的信任存放區。新增的憑證僅會由CLI套件使用。 
 ---
-= 從檔案新增憑證
+= 從檔案新增憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

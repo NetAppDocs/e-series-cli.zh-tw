@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: add, comments, script file 
 summary: 指令碼引擎會尋找特定字元或命令來顯示註解。您可以透過三種方式將註解新增至指令碼檔案。 
 ---
-= 新增註解至指令碼檔案
+= 在 SANtricity CLI 腳本檔案中新增註釋
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

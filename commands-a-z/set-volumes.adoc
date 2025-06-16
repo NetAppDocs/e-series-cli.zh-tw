@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, disk pool 
 summary: set volume命令可定義磁碟集區中磁碟區的內容。 
 ---
-= 設定磁碟集區中某個磁碟區的Volume屬性
+= 設定磁碟池中磁碟區的磁碟區屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

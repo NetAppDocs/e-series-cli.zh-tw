@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, asynchronous, mirroring 
 summary: activate storageArray feature命令會啟動非同步鏡射功能。 
 ---
-= 啟動非同步鏡射
+= 啟動非同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

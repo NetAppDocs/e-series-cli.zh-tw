@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmp, mib ii, system, group, variables 
 summary: show snmpSystemvariablesp命令會傳回簡單網路管理傳輸協定（SNMP）系統變數的相關資訊。系統變數會保留在管理資訊基礎II（MIB-II）資料庫中。 
 ---
-= 顯示SNMP mib II系統群組變數
+= 顯示 SNMP MIB II 系統組變數 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

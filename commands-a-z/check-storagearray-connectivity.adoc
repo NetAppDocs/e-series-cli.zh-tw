@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: check, storage array, connectivity 
 summary: Check storageArray Connectivity命令可驗證本機儲存陣列和遠端儲存陣列是否有通訊路徑、並顯示本機與遠端儲存陣列之間的連線詳細資料。 
 ---
-= 檢查儲存陣列連線能力
+= 檢查儲存陣列連接 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

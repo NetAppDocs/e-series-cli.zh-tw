@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: 'Specify AutoSupport HTTP(S) delivery method' 
 summary: set storageArray AutoSupport SesfeliveryMethods命令可設定傳送方法、將AutoSupport 資訊傳送至HTTP（S）。 
 ---
-= 指定 AutoSupport HTTP(S) 交付方法
+= 指定 AutoSupport http(s) 交付方法 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

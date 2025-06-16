@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host, group 
 summary: set hostGroup命令會重新命名主機群組。 
 ---
-= 設定主機群組
+= 設定主機組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

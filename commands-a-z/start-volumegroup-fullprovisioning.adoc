@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, full provision 
 summary: start volumeGroup FullProvisioning命令會在磁碟集區中的所有磁碟區上啟動完整資源配置作業、並選擇性地停用磁碟區群組上的資源配置。 
 ---
-= 啟動Volume Group完整資源配置
+= 啟動磁碟區組完全配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: overview, cli 
 summary: 命令列介面（CLI）是一種軟體應用程式、可用來設定及監控儲存陣列。 
 ---
-= CLI總覽
+= 了解 SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: interactive mode 
 summary: '互動模式可讓您執行個別命令，而不需使用預先修正命令 `SMcli`。' 
 ---
-= 互動模式
+= 了解 SANtricity CLI 互動模式
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

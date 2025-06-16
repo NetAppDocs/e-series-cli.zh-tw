@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, asynchronous, mirror, group 
 summary: Set asyncdMirrorGroup命令會變更同步處理設定和警告臨界值、而非同步鏡射群組主要端的控制器擁有者會在執行初始同步或重新同步時使用這些設定和臨界值。 
 ---
-= 設定非同步鏡射群組
+= 設定非同步鏡像組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

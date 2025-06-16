@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, current, iscsi, sessions 
 summary: show iscsiSessions命令會傳回iSCSI啟動器或iSCSI目標之iSCSI工作階段的相關資訊。 
 ---
-= 顯示目前的iSCSI工作階段
+= 顯示目前 iSCSI 會話 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

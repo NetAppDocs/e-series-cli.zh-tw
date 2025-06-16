@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: activate, synchronous mirroring, supported arrays, roles, context, syntax, parameters, data assurance management, minimum firmware level 
 summary: activate storageArray feature命令會啟動同步鏡射功能、並建立鏡射儲存庫磁碟區。 
 ---
-= 啟動同步鏡射
+= 啟動同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, initiator 
 summary: set啟動器命令會更新啟動器物件。 
 ---
-= 設定啟動器
+= 設定啟動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

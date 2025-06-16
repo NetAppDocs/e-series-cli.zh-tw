@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, volume 
 summary: resume snapVolume命令會恢復已停止的快照Volume作業。 
 ---
-= 恢復Snapshot Volume
+= 復原快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

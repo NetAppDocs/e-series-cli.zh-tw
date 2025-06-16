@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive 
 summary: show allDrives命令會傳回儲存陣列中磁碟機的相關資訊。 
 ---
-= 顯示磁碟機
+= 顯示驅動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

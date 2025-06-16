@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: recover, raid, volume 
 summary: 「recoverVolume」命令會建立具有指定內容的RAID Volume、而不會初始化磁碟機上的任何使用者資料區域。 
 ---
-= 恢復RAID Volume
+= 恢復 RAID 磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

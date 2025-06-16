@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, audit log, records 
 summary: 「儲存稽核記錄」命令會擷取稽核記錄。 
 ---
-= 儲存稽核記錄
+= 儲存審計日誌記錄 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

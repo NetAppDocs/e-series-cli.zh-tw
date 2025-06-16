@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, asynchronous, mirror, group, statistics 
 summary: SAVE storageArray arvmStats asyncdMirrorGroup命令會將同步統計資料儲存至非同步鏡射鏡射群組中一或多個成員磁碟區的檔案。 
 ---
-= 儲存非同步鏡射群組統計資料
+= 保存非同步鏡像組統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

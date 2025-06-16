@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, snmpv3, usm, user 
 summary: show allsnmpUsers命令會傳回針對儲存陣列定義之Simple Network Management（SNMP）USM使用者的相關資訊。 
 ---
-= 顯示v3 USM使用者
+= 顯示 SNMPv3 USM 使用者 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

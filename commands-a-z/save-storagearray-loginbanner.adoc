@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, login, banner 
 summary: SAVE storageArray loginBanner命令可讓您將登入橫幅儲存至本機機器。橫幅文字可以包含建議事項通知和同意訊息、在使用者建立工作階段之前、會先向他們顯示。 
 ---
-= 儲存儲存陣列登入橫幅
+= 儲存儲存陣列登入橫幅 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

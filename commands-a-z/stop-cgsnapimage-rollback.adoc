@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, consistency, group, snapshot, rollback 
 summary: stop cgrpSnapImage復原命令會停止復原作業、使快照一致性群組中的成員基礎磁碟區復原。 
 ---
-= 停止一致性群組快照復原
+= 停止一致性群組快照回滾 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

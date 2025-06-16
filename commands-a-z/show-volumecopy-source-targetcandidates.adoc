@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, volume, copy, target, candidates 
 summary: show volumeCopy來源的targetCandidate命令會傳回候選磁碟區的相關資訊、您可以將這些候選磁碟區做為磁碟區複製作業的目標。此命令適用於Snapshot Volume複製配對。 
 ---
-= 顯示Volume複製目標候選對象
+= 顯示卷宗複製目標候選 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

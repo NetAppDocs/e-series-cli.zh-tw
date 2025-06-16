@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache 
 summary: show ssdCache命令會顯示SSD快取的相關資訊。 
 ---
-= 顯示SSD快取
+= 顯示 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

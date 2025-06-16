@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: download, controller, trusted, certificate, command, install, web, servers, validate, array, roles, context 
 summary: 下載控制器信任憑證命令會在控制器的Web伺服器上安裝信任的CA憑證、以驗證LDAP伺服器簽署的憑證。 
 ---
-= 安裝信任的CA憑證
+= 安裝受信任的 CA 憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, ssd, cache 
 summary: create ssdCache命令會使用固態磁碟（SSD）、為儲存陣列建立讀取快取。 
 ---
-= 建立SSD快取
+= 建立 SSD 快取 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

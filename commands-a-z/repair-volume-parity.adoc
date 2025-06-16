@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: repair, volume, parity 
 summary: 修復Volume同位元檢查命令可修復磁碟區上的同位元檢查錯誤。 
 ---
-= 修復磁碟區同位元檢查
+= 修復卷奇偶校驗 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

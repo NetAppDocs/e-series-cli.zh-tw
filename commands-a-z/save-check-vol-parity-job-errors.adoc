@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, check, volume, parity, job, errors 
 summary: 「儲存檢查磁碟區同位檢查工作同位檢查錯誤」命令會將檢查磁碟區同位檢查工作所記錄的同位檢查錯誤儲存至指定的檔案。 
 ---
-= 儲存檢查磁碟區同位檢查工作同位元檢查錯誤
+= 儲存檢查卷奇偶校驗作業奇偶校驗錯誤 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

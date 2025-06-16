@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, syslog, command, servers, configuration, alerts, array, support, role 
 summary: 刪除syslog命令會從syslog組態中刪除一或多部伺服器、使其不再收到警示。 
 ---
-= 刪除syslog伺服器
+= 刪除系統日誌伺服器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, hot spare 
 summary: set磁碟機熱備援命令會將一或多個磁碟機指派或取消指派為熱備援磁碟機。 
 ---
-= 設定磁碟機熱備援
+= 設定驅動器熱備用 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

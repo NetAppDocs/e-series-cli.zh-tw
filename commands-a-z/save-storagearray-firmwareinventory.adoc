@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, firmware, inventory 
 summary: SAVE storageArray firmwareInventory命令會將報告儲存至儲存陣列上目前執行之所有韌體的檔案。 
 ---
-= 儲存儲存陣列韌體庫存
+= 儲存儲存陣列韌體清單 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

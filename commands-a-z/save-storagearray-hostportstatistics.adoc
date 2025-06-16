@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, host, port, statistics 
 summary: SAVE storageArray hostPortStatistics命令可儲存儲存陣列主機連接埠統計資料。 
 ---
-= 儲存儲存陣列主機連接埠統計資料
+= 儲存儲存陣列主機連接埠統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

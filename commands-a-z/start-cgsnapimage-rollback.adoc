@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, consistency, group, snapshot, rollback 
 summary: start cgrpSnapImage復原命令會啟動對快照一致性群組中成員基礎磁碟區的復原作業。 
 ---
-= 啟動一致性群組快照復原
+= 啟動一致性群組快照回滾 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

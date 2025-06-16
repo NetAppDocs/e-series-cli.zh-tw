@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: remove, install, root, intermediate, ca, certificates 
 summary: 刪除控制器caCertificate命令會從指定的控制器移除已安裝的根或中繼CA憑證。 
 ---
-= 移除已安裝的根/中介CA憑證
+= 刪除已安裝的根 / 中間 CA 憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

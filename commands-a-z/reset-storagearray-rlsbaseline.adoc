@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, rls, baseline 
 summary: 重設storageArray RLSBaseleline命令會將所有RLS計數設為0、以重設所有裝置的讀取連結狀態（RLS）基準。 
 ---
-= 重設儲存陣列RLS基準
+= 重置儲存陣列 RLS 基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

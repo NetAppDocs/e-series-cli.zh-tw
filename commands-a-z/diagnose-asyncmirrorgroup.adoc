@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: diagnose, command, tests, possible, communication, problems, local, storage, array, remote, asynchronous, mirror, group 
 summary: 「診斷同步鏡射群組」命令可測試本機儲存陣列與與非同步鏡射群組相關的遠端儲存陣列之間可能發生的通訊問題。 
 ---
-= 測試非同步鏡射群組連線能力
+= 測試非同步鏡像組連線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

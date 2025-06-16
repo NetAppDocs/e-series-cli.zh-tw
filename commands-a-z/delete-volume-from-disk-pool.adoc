@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, volume, command, normal, thin, disk pool, roles, support 
 summary: 刪除Volume命令會從磁碟集區刪除一般或精簡磁碟區。 
 ---
-= 從磁碟集區刪除磁碟區
+= 從磁碟池中刪除磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

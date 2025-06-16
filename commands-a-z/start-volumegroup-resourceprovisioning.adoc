@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, resource, provision 
 summary: start volumeGroup resourceProvisioning命令可在指定的Volume群組上啟用資源資源資源配置、並在Volume群組中的每個Volume上啟動資源配置啟用非同步作業。資源資源配置需要磁碟區群組中的所有磁碟機都支援NVMe的DULBE功能。 
 ---
-= 啟動Volume群組資源配置
+= 啟動磁碟區組資源配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

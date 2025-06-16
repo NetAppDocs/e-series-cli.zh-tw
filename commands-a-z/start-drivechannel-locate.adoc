@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, channel, locate 
 summary: start driveChannel locate命令可開啟連接至磁碟機通道之磁碟機匣的指示燈、以識別連接至特定磁碟機通道的磁碟機匣。 
 ---
-= 啟動磁碟機通道定位
+= 啟動驅動器通道定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

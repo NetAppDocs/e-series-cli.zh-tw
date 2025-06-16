@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, state 
 summary: set磁碟機作業alState命令會將磁碟機設定為「故障」狀態。 
 ---
-= 設定磁碟機狀態
+= 設定驅動器狀態 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

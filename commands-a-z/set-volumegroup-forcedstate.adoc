@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group, forced, state 
 summary: set volumeGroup forcedState命令可將Volume群組移至強制狀態。 
 ---
-= 設定Volume群組強制狀態
+= 設定卷組強制狀態 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

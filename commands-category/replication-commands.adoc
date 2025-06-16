@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: replication, commands, consistency group, command, repository volume, 
 summary: 複寫命令 
 ---
-= 複寫命令
+= SANtricity CLI 複製指令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

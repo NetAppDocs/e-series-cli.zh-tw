@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, drive, performance, statistics 
 summary: show allDrives performanceStats命令會傳回磁碟機效能的相關資訊。 
 ---
-= 顯示磁碟機效能統計資料
+= 顯示磁碟機效能統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

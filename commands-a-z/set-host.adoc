@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, host 
 summary: set host命令會將主機指派給主機群組、或將主機移至其他主機群組。 
 ---
-= 設定主機
+= 設定主機 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

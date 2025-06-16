@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, locate 
 summary: start磁碟機定位命令會開啟磁碟機上的指示燈、以定位磁碟機。 
 ---
-= 啟動磁碟機定位
+= 啟動磁碟機定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

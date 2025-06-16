@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, replace 
 summary: 停止磁碟機置換命令會停止以set磁碟機命令或以copyDrive使用者輸入取代磁碟機命令啟動的資料複製作業。 
 ---
-= 停止更換磁碟機
+= 停止驅動器更換 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

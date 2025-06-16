@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, host, ports 
 summary: show allHostPortes命令會傳回已設定主機連接埠的相關資訊。 
 ---
-= 顯示主機連接埠
+= 顯示主機連接埠 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, email, alert, configuration 
 summary: show emailAlert摘要命令會顯示電子郵件警示組態資訊。 
 ---
-= 顯示電子郵件警示組態
+= 顯示電子郵件警報配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

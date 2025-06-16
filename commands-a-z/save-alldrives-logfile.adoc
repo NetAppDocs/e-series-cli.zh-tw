@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, drive log 
 summary: Save allDrives logfile命令會將磁碟機記錄儲存至檔案。 
 ---
-= 儲存磁碟機記錄
+= 儲存磁碟機日誌 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

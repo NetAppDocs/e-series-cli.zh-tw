@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, hostgroup, command, support, role 
 summary: 刪除hostGroup命令會刪除主機群組。 
 ---
-= 刪除主機群組
+= 刪除主機群組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

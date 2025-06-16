@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, drive, initialize 
 summary: start磁碟機初始化命令會啟動磁碟機初始化。 
 ---
-= 啟動磁碟機初始化
+= 啟動驅動器初始化 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

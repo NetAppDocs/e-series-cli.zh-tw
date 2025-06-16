@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, thin, volume 
 summary: show volume命令會傳回指定精簡磁碟區或磁碟區的擴充歷程記錄或耗用容量。 
 ---
-= 顯示精簡Volume
+= 顯示精簡卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

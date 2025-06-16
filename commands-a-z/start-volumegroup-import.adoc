@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, import 
 summary: start volumeGroup匯入命令會將磁碟區群組移至完整狀態、使新推出的磁碟區群組可供新的儲存陣列使用。 
 ---
-= 開始匯入Volume群組
+= 啟動磁碟區組導入 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

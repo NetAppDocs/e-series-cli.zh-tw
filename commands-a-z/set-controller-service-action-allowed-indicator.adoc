@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, service, action, allowed, indicator 
 summary: Set控制器命令會開啟或關閉控制器匣或控制器磁碟機匣中控制器上的「允許維修操作」指示燈 
 ---
-= 設定允許控制器服務動作指示符號
+= 設定控制器服務操作允許指示器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

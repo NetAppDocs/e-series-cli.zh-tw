@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, asynchronous, mirror, synchronization 
 summary: start asyncdMirrorGroup Synchronize命令會啟動非同步鏡射同步。 
 ---
-= 啟動非同步鏡射同步
+= 啟動非同步鏡像同步 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

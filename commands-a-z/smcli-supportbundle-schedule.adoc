@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: schedule, automatic, support, bundle, collection, configuration 
 summary: SMcli -supportBundle排程命令可建立或移除將支援服務組合儲存在一或多個儲存陣列上的排程。您會收集支援套裝組合中的系統與組態資訊、將資訊傳送給技術支援部門以進行分析與診斷。 
 ---
-= 排程自動支援服務組合集合組態
+= 安排自動支援包收集配置 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

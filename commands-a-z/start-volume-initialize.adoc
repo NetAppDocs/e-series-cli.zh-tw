@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: initialize, thin volume 
 summary: start volume initialize命令可初始化或重新初始化精簡磁碟區。 
 ---
-= 初始化精簡磁碟區
+= 初始化精簡卷 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

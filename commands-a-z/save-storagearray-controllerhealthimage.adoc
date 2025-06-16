@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, controller, health, image 
 summary: SAVE storageArray controllerHealthImage命令可將控制器健全狀況映像儲存至主機上的指定檔案、以供支援控制器健全狀況映像功能的儲存陣列使用。 
 ---
-= 儲存儲存陣列控制器健全狀況映像
+= 儲存儲存陣列控制器運作狀況映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

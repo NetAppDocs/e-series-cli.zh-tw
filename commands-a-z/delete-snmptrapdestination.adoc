@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, command, snmptrapdestination, existing, simple, network, management, protocol, trap, destination, previous, create, registered 
 summary: DELETE SNMP Trap目的地 命令會刪除您先前使用create snmpTrap目的地 命令所建立及註冊的現有Simple Network Management Protocol（SNMP）陷阱目的地。 
 ---
-= 取消登錄SNMP設陷目的地
+= 取消註冊 SNMP 陷阱目標 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

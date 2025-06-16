@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, input, output, controller, ioc, dump 
 summary: SAVE IOClog命令會將IOC傾印從儲存陣列中的控制器儲存至主機上的檔案。 
 ---
-= 儲存輸入輸出控制器（IOC）傾印
+= 儲存輸入輸出控制器 (IOC) 轉儲 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

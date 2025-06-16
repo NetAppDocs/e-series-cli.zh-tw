@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, iser, target 
 summary: Set iserTarget命令可定義iSER目標的內容。 
 ---
-= 設定iSER目標
+= 設定 iSER 目標 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

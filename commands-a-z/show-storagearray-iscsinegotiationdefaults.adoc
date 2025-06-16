@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, negotiation, defaults 
 summary: show storageArray iscsiNegotiationDefaults命令會傳回受啟動器目標交涉規範之連線層級設定的相關資訊。 
 ---
-= 顯示儲存陣列交涉預設值
+= 顯示儲存陣列協商預設值 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

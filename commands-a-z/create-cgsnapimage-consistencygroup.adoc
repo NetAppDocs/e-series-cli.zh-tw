@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency group, snapshot image 
 summary: 他建立了cgrSnapImage Consistency Group命令、為每個基礎磁碟區建立一個新的快照映像、該磁碟區是Snapshot一致性群組的成員。 
 ---
-= 建立一致性群組快照映像
+= 建立一致性群組快照映像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

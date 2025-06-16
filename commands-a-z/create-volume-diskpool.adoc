@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, disk pool 
 summary: create volume diskPool命令會在現有磁碟集區中建立新的標準RAID Volume或精簡磁碟區。 
 ---
-= 在磁碟集區中建立磁碟區
+= 在磁碟池中建立磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

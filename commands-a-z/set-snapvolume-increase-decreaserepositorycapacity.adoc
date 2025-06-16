@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, snapshot, volume, repository, capacity 
 summary: set snapVolume增加/減少eRegitoryCapacity命令可增加或減少快照Volume儲存庫Volume的容量。 
 ---
-= 設定Snapshot Volume儲存庫Volume容量
+= 設定快照磁碟區儲存庫磁碟區容量 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

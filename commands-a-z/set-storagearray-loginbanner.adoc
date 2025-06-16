@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, login, banner 
 summary: set storageArray loginBanner命令可讓您上傳要用作登入橫幅的文字檔。橫幅文字可以包含建議事項通知和同意訊息、在使用SANtricity 者在執行命令之前、先向使用者顯示通知和同意訊息。 
 ---
-= 設定儲存陣列登入橫幅
+= 設定儲存陣列登入橫幅 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

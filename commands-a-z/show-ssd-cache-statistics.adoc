@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, ssd, cache, statistics 
 summary: show ssdCache命令會顯示SSD快取使用量的相關資料。 
 ---
-= 顯示SSD快取統計資料
+= 顯示 SSD 快取統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

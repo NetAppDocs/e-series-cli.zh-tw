@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, asynchronous, mirror, group, synchronization, progress 
 summary: show asyncdMirrorGroup同步處理程序命令會顯示本機與遠端儲存陣列之間的非同步鏡射群組定期同步處理進度。 
 ---
-= 顯示非同步鏡射群組同步處理進度
+= 顯示非同步鏡像組同步進度 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

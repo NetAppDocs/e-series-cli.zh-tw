@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, tray log 
 summary: SAVE allTrays logfile命令會將記錄感應資料儲存至檔案。 
 ---
-= 儲存紙匣記錄
+= 儲存託盤日誌 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

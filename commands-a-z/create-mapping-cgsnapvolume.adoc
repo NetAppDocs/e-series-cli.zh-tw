@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group, snapshot, volume, map 
 summary: create mapping cgrSnapVolume命令會建立從一致性群組快照磁碟區到主機或主機群組的邏輯對應。 
 ---
-= 建立一致性群組快照磁碟區對應
+= 建立一致性群組快照磁碟區映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

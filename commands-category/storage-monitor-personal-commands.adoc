@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: storage, monitor, personnel, commands, asynchronous, autosupport, cache, array, synchronous 
 summary: 儲存監控人員命令 
 ---
-= 儲存監控人員命令
+= SANtricity CLI 儲存監控人員指令
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

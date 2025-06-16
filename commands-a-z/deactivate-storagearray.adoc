@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: deactivate, asynchronous, mirroring 
 summary: 停用storageArray功能會停用非同步鏡射功能。 
 ---
-= 停用非同步鏡射
+= 停用非同步鏡像 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

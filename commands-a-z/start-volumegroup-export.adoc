@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, export 
 summary: start volumeGroup匯出命令會將Volume群組移至匯出狀態。 
 ---
-= 開始Volume群組匯出
+= 啟動磁碟區組匯出 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

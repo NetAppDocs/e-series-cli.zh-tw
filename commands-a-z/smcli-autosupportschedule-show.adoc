@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, message, collection, schedule 
 summary: SMcli -autosupport排程show命令會顯示每日AutoSupport 和每週收集及處理各種資訊訊息的排程。 
 ---
-= 顯示AutoSupport 資訊收集排程
+= 顯示 AutoSupport 訊息收集計劃 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

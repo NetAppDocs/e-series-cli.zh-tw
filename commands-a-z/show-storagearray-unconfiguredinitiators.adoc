@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, unconfigured, initiators 
 summary: show storageArray unconfiguredInitiator命令會傳回儲存陣列偵測到但尚未設定至儲存陣列拓撲的啟動器清單。 
 ---
-= 顯示未設定的啟動器
+= 顯示未配置的啟動器 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

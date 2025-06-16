@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, drive, channel, locate 
 summary: stop driviveChannel locate命令會關閉以start driveChannel locate命令開啟之磁碟機匣上的指示燈。 
 ---
-= 停止磁碟機通道定位
+= 停止驅動器通道定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

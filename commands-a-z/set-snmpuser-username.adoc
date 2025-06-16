@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmpv3, usm, user 
 summary: Set SNMP使用者名稱命令會更新現有的Simple Network Management Protocol（SNMP）USM使用者。如果只有一位使用者擁有使用者名稱、就會使用使用者名稱來識別要變更的USM使用者。如果有多個使用者具有相同的使用者名稱和不同的引擎ID、則使用者名稱和引擎ID來識別使用者。 
 ---
-= 更新v3 USM使用者
+= 更新 SNMPv3 USM 用戶 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

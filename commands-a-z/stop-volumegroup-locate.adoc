@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: stop, volume, group, locate 
 summary: stop volumeGroup locate命令會關閉已由start volumeGroup locate命令開啟之磁碟機上的指示燈。 
 ---
-= 停止Volume群組定位
+= 停止卷組定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

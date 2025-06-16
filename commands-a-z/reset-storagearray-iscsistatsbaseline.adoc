@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, storage array, iscsi, baseline 
 summary: 重設storageArray iscsiStatsBaseleline命令會將儲存陣列的iSCSI基準重設為0。 
 ---
-= 重設儲存陣列iSCSI基準
+= 重置儲存陣列 iSCSI 基線 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

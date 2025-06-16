@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, automatic, drive, select 
 summary: create volume命令可在儲存陣列中的磁碟機之間建立Volume群組、並在Volume群組中建立新的Volume。儲存陣列控制器會選擇要包含在磁碟區中的磁碟機。 
 ---
-= 建立RAID Volume（自動選取磁碟機）
+= 建立 RAID 磁碟區（自動磁碟機選擇）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, lun, map 
 summary: show storageArray lunMappings命令會從儲存陣列設定檔傳回有關儲存陣列中邏輯單元編號（LUN）或命名空間ID（NSID）對應的資訊。 
 ---
-= 顯示儲存陣列LUN對應
+= 顯示儲存陣列 LUN 映射 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

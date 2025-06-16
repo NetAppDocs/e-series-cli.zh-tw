@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, storage, array, external, key, management, file, command, security, disk, encryption, initial, roles, context, support 
 summary: enable storageArray externalKeyManagement file命令可為具有完整磁碟加密磁碟機的儲存陣列、啟用外部安全金鑰管理、並建立初始磁碟機安全金鑰。 
 ---
-= 啟用外部安全金鑰管理
+= 啟用外部安全性金鑰管理 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: reset, installed, signed, certificate 
 summary: 「重設控制器陣列管理簽署憑證」命令會重設控制器上已安裝的簽署憑證和根/中繼憑證。所有的根和中繼憑證以及任何簽署的憑證都會被單一自我簽署的憑證所取代。 
 ---
-= 重設已安裝的簽署憑證
+= 重置已安裝的簽章憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

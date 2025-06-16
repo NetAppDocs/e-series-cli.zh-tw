@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, controller, nvsram 
 summary: SAVE控制器NVSRAM/檔案命令會將選定的控制器NVSRAM-區域儲存至檔案。 
 ---
-= 儲存控制器的NVSRAM
+= 儲存控制器 NVSRAM - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

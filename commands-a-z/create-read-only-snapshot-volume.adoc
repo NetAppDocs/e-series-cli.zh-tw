@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, read only, snapshot, volume 
 summary: create snapVolume命令會為基礎Volume的快照映像建立唯讀快照磁碟區。若要將唯讀快照磁碟區變更為讀寫磁碟區、請使用set snapVolume convertToReadWrite命令。 
 ---
-= 建立唯讀快照磁碟區
+= 建立唯讀快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

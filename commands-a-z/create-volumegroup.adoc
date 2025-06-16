@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, volume, group 
 summary: 當您輸入一組未指派的磁碟機時、create volumeGroup命令會建立可用容量磁碟區群組、或是一個具有一個磁碟區的磁碟區群組。 
 ---
-= 建立Volume群組
+= 建立卷宗組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: clear, storage array, event log 
 summary: 命令ClearstorageArray事件記錄會刪除事件記錄緩衝區中的資料、以清除儲存陣列中的事件記錄。 
 ---
-= 清除儲存陣列事件記錄
+= 清除儲存陣列事件日誌 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

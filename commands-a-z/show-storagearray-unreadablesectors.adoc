@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, unreadable, sectors 
 summary: show storageArray unreadableSecors命令會傳回儲存陣列中無法讀取之所有磁區位址的表格。 
 ---
-= 顯示儲存陣列無法讀取的磁區
+= 顯示儲存陣列不可讀磁區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

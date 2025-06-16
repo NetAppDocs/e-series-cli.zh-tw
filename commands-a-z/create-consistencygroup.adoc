@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, consistency, group 
 summary: create Consistency Group命令會建立一個新的空白一致性群組、該群組可包含快照群組。您必須使用Set ConsistencyGroup addCGMember命令新增快照群組。 
 ---
-= 建立一致性群組
+= 建立一致性組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

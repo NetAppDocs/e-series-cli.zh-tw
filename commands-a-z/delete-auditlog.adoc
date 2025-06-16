@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, audit, log, records 
 summary: 刪除稽核記錄命令會刪除稽核記錄中的部分或全部記錄。 
 ---
-= 刪除稽核記錄
+= 刪除審計日誌記錄 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

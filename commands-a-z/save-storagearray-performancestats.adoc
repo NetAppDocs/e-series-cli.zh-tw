@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, performance, statistics 
 summary: SAVE storageArray performanceStats命令可將效能統計資料儲存至檔案。 
 ---
-= 儲存儲存陣列效能統計資料
+= 保存儲存陣列效能統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

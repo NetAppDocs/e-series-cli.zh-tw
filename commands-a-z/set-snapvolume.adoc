@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: rename, snapshot, volume 
 summary: set snapVolume命令會重新命名現有的Snapshot Volume。 
 ---
-= 重新命名Snapshot Volume
+= 重新命名快照磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

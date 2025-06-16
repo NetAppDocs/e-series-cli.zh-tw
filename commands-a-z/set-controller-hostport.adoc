@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, controller, host, port, properties 
 summary: set控制器hostPort命令會變更下列類型主機連接埠的網路內容：iSCSI、iSER、InfiniBand上的NVMe、以及RoCE。內容變更包括：IPv4和IPv6內容、連接埠速度和最大框架有效負載。 
 ---
-= 設定控制器主機連接埠內容
+= 設定控制器主機連接埠屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

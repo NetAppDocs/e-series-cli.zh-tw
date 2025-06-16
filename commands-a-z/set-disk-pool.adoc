@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, disk pool 
 summary: set diskPool命令會根據指定的參數、設定與磁碟集區相關的屬性。 
 ---
-= 設定磁碟集區
+= 設定磁碟池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

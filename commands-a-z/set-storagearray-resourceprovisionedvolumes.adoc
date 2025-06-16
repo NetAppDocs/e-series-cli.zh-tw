@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, resource, provisioned, volumes 
 summary: set storageArray resourceProvisionedVolumes命令會停用DULBE功能。 
 ---
-= 設定儲存陣列資源已配置的Volume
+= 設定儲存陣列資源配置磁碟區 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

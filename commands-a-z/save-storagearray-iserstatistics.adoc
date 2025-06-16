@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: save, storage, array, iser, statistics 
 summary: SAVE storageArray iserStatistics命令會將儲存陣列的iSER效能統計資料儲存至檔案。 
 ---
-= 儲存儲存陣列iSER統計資料
+= 儲存儲存陣列 iSER 統計資料 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

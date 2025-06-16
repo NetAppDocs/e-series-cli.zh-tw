@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: test, alerts 
 summary: SMcli alertTest命令會傳送測試警示給Windows事件記錄和所有已設定的syslog接收器。 
 ---
-= 測試警示
+= 測試警報 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

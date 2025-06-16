@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: create, raid, volume, manual, drive, select 
 summary: create volume命令會建立新的Volume群組和Volume、並可讓您指定磁碟區的磁碟機。 
 ---
-= 建立RAID Volume（手動選取磁碟機）
+= 建立 RAID 磁碟區（手動選擇磁碟機）- SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

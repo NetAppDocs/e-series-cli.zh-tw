@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: resume, snapshot, image, rollback 
 summary: resume SnapImage復原命令會恢復已進入暫停狀態的復原作業。 
 ---
-= 恢復Snapshot映像復原
+= 復原快照映像回滾 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

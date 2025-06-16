@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, tray, attribute 
 summary: Set tray命令可設定紙匣的使用者定義屬性 
 ---
-= 設定紙匣屬性
+= 設定托盤屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

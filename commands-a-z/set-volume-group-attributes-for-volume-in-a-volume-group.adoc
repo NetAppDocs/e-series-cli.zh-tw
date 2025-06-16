@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, attributes, group 
 summary: set volume命令可定義Volume群組中磁碟區的內容。 
 ---
-= 設定Volume群組中某個Volume的Volume屬性
+= 設定卷組中卷的捲屬性 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

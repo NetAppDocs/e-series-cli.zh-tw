@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ssd, cache, performance, model 
 summary: start ssdCache performanceModeling命令會啟動SSD快取的效能建模。 
 ---
-= 開始建立SSD快取效能建模
+= 啟動 SSD 快取效能建模 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

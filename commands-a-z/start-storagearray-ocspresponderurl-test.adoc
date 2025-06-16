@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, ocsp, server, url, test 
 summary: start storageArray ocspponderUrl測試命令會檢查連線至線上憑證狀態傳輸協定（OCSP）伺服器之指定URL的開放連線。 
 ---
-= 啟動OCSP伺服器URL測試
+= 啟動 OCSP 伺服器 URL 測試 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

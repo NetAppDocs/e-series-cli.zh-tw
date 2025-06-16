@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: update, snmp, trap, destination 
 summary: Set SNMP Trap目的地trapReceiverIP命令會開啟或關閉傳送SNMP設陷目的地的驗證失敗訊息。當SNMP代理程式收到來自SNMP管理程式的訊息、但訊息包含無效的社群名稱或使用者名稱時、就會發生故障。 
 ---
-= 更新SNMP設陷目的地
+= 更新 SNMP 陷阱目標 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

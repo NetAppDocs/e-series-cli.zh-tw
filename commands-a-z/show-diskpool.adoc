@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, disk pool 
 summary: show diskPool命令會傳回磁碟集區的相關資訊。 
 ---
-= 顯示磁碟集區
+= 顯示磁碟池 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

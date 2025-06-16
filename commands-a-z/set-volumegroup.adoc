@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, volume, group 
 summary: set volumeGroup命令可定義Volume群組的內容。 
 ---
-= 設定Volume群組
+= 設定卷組 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

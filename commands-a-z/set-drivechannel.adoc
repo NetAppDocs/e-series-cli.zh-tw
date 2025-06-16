@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, drive, channel, status 
 summary: set driveChannel命令定義了磁碟機通道的執行方式。 
 ---
-= 設定磁碟機通道狀態
+= 設定驅動器通道狀態 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

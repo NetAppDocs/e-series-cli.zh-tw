@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: show, storage, array, host, topology 
 summary: show storageArray hosttopology命令會傳回儲存分割區拓撲、主機類型標籤及主機儲存陣列的主機類型索引。 
 ---
-= 顯示儲存陣列主機拓撲
+= 顯示儲存陣列主機拓撲 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

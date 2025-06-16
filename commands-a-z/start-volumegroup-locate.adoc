@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: start, volume, group, locate 
 summary: start volumeGroup locate命令可藉由在磁碟機上的指示燈閃亮、識別邏輯群組在一起的磁碟機、以形成指定的磁碟區群組。 
 ---
-= 啟動Volume群組定位
+= 啟動磁碟區組定位 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

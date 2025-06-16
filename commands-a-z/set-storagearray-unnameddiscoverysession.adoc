@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, unnamed, discovery, session 
 summary: set storageArray unnamedDiscoverySession命令可讓儲存陣列參與未命名的探索工作階段。 
 ---
-= 設定未命名的儲存陣列探索工作階段
+= 設定儲存陣列未命名發現會話 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, certificates 
 summary: 「刪除憑證」命令可讓您從CLI套件信任存放區刪除憑證。 
 ---
-= 刪除憑證
+= 刪除憑證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

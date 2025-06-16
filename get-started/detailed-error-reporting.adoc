@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: detailed, error, report 
 summary: 從CLI遇到的錯誤中收集的資料會寫入檔案。 
 ---
-= 詳細的錯誤報告
+= 了解 SANtricity CLI 詳細錯誤報告
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

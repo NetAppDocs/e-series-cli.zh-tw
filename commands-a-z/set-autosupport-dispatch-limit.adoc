@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: Autosupport, bundle, dispatch, delivery type, size 
 summary: 針對不同的交付類型，設定 AutoSupport 套裝組合和派單的最大大小。 
 ---
-= 設定 AutoSupport 派遣台大小限制
+= 設定 AutoSupport 調度大小限制 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

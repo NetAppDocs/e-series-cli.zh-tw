@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: delete, user, name, command, simple, network, management, protocol, create, register, effective, unregister, trap, destination, associate, remove 
 summary: 刪除snmpUser使用者名稱命令會刪除您先前使用「create snmpUser」命令建立及註冊的現有Simple Network Management Protocol（SNMP）USM使用者。刪除SNMP使用者可有效取消登錄使用者。也會移除與該使用者相關的任何設陷目的地。 
 ---
-= 取消登錄v3 USM使用者
+= 取消註冊 SNMPv3 USM 用戶 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

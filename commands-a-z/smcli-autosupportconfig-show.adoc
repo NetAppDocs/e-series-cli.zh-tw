@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: display, autosupport, bundle, collection, set 
 summary: SMcli -autosupSupportConfig show命令會顯示AutoSupport 管理網域的「套裝組合」集合設定。這些設定適用於管理網域中已啟用AutoSupport 此功能的所有儲存陣列。 
 ---
-= 顯示AutoSupport 套裝組合集合設定
+= 顯示 AutoSupport 捆綁包收集設定 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

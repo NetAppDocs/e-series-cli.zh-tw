@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, vaai 
 summary: set storageArray vaaiEnabled命令會開啟或關閉儲存陣列的VMware vStorage API Array Architecture（VAAI）。 
 ---
-= 啟用或停用VAAI
+= 啟用或停用 VAAI - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

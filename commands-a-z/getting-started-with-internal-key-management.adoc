@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: security key, string, characters, secure enabled, drive, controllers, storage, array, internal, key, management, create, maintain, persistent, memory 
 summary: 安全金鑰是一串字元、可在已啟用安全功能的磁碟機和儲存陣列中的控制器之間共用。使用內部金鑰管理時、您可以在控制器的持續記憶體上建立及維護安全金鑰。 
 ---
-= 內部金鑰管理入門
+= 內部金鑰管理入門 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
