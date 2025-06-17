@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, management, interface 
 summary: set storageArray managementInterface命令可變更控制器的管理介面。變更管理介面類型、以在儲存陣列與其管理軟體之間強制執行機密性、或存取外部工具。 
 ---
-= 設定儲存陣列管理介面
+= 設定儲存陣列管理介面 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

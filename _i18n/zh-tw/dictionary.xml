@@ -8052,4 +8052,15 @@
   <block id="912cc2f8fec83a8f0f502fa5d8213432" category="doc">了解 SANtricity CLI 腳本命令的結構</block>
   <block id="7749a7749c067a57803053149311ba25" category="doc">了解 SANtricity CLI 腳本命令</block>
   <block id="7aa1a554fa97ed75a945661977f56a71" category="doc">了解 SANtricity CLI 腳本命令指南</block>
+  <block id="1058acabad7d380a159f7b360e998541" category="doc">刪除儲存陣列目錄伺服器角色映射 - SANtricity CLI</block>
+  <block id="750f2015aa86d9041032b6e31b016ffc" category="doc">檢索 AutoSupport 日誌 - SANtricity CLI</block>
+  <block id="e909f921f058925e1cabf0382134a409" category="doc">指定電子郵件 (SMTP) 傳送方法 - SANtricity CLI</block>
+  <block id="13b29b369627a8762d659707e2c88c98" category="doc">設定 AutoSupport 訊息收集計劃 - SANtricity CLI</block>
+  <block id="79c21ee853268bd1efb1f43b08cd1fbb" category="doc">啟用或停用 AutoSupport OnDemand 功能 - SANtricity CLI</block>
+  <block id="f66c4f8f0cfa6e1e6f26f715e81f5256" category="doc">啟用或停用 AutoSupport 遠端診斷功能 - SANtricity CLI</block>
+  <block id="ed9c4e8c83c471f9760e56566de86f3b" category="doc">設定儲存陣列目錄伺服器 - SANtricity CLI</block>
+  <block id="6d088a164106b426d7a263dc45b921e5" category="doc">設定儲存陣列管理介面 - SANtricity CLI</block>
+  <block id="689cb466298a6f4a3ed62c1390e5efa5" category="doc">在重建時設定儲存陣列 PQ 驗證 - SANtricity CLI</block>
+  <block id="e35c8154d8766fae2d703fd86691dd17" category="doc">顯示儲存陣列目錄服務摘要 - SANtricity CLI</block>
+  <block id="9c2c5321d557134684387393df84bc13" category="doc">測試儲存陣列目錄伺服器 - SANtricity CLI</block>
 </blocks>

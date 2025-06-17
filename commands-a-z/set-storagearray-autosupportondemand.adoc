@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: enable, disable, autosupport, ondemand, feature, individual, E2800, E5700, arrays 
 summary: set storageArray autosupSupportOnDemand命令會開啟或關閉AutoSupport 「只需支援即可」功能。此功能可讓技術支援人員協調AutoSupport 不必要的資料傳輸、並可要求重新傳輸遺失的支援資料。 
 ---
-= 啟用或停用AutoSupport 「根據需求提供支援」功能
+= 啟用或停用 AutoSupport OnDemand 功能 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: retrieve, autosupport, log, individual, E2800, E5700, arrays 
 summary: 儲存storageArray AutoSupport flexlog命令可讓您檢視AutoSupport 一份flexlog檔案。此檔案提供有關狀態、傳輸活動記錄、以及在傳遞AutoSupport 消息期間發生的任何錯誤的資訊。此記錄適用於所有支援AutoSupport和AutoSupport的儲存陣列。 
 ---
-= 擷AutoSupport 取一份資訊記錄
+= 檢索 AutoSupport 日誌 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/

@@ -4,7 +4,7 @@ sidebar: sidebar
 keywords: set, storage, array, pq validation, reconstruct 
 summary: set storageArray pqValidateOnReconstructt命令可在重建時設定儲存陣列P/Q驗證狀態。啟用此功能時、會使用data+P和data+Q來重建資料、並檢查結果是否一致、然後再決定如何繼續進行。 
 ---
-= 在重建時設定儲存陣列PQ驗證
+= 在重建時設定儲存陣列 PQ 驗證 - SANtricity CLI
 :allow-uri-read: 
 :icons: font
 :imagesdir: ../media/
